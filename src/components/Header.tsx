@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const WHATSAPP = "https://wa.me/447000000000?text=Merhaba%2C%20depo%20teklifi%20almak%20istiyorum.";
 const TEL = "tel:+447000000000";
 
@@ -5,11 +7,11 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-[#0b2545] shadow-lg">
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
-        <a href="/" className="flex items-center gap-2 flex-shrink-0">
+        <Link href="/" className="flex items-center gap-2 flex-shrink-0">
           <span className="text-white font-bold text-xl tracking-tight">
             Londra<span className="text-red-400">Depo</span>.com
           </span>
-        </a>
+        </Link>
 
         <nav className="hidden md:flex items-center gap-6 text-sm text-slate-200">
           <a href="#hizmetler" className="hover:text-white transition">Hizmetler</a>

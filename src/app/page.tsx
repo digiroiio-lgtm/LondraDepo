@@ -1,0 +1,31 @@
+import Header from "@/components/Header";
+import HeroSection from "@/components/HeroSection";
+import TrustBar from "@/components/TrustBar";
+import ServicesSection from "@/components/ServicesSection";
+import WhyUsSection from "@/components/WhyUsSection";
+import ProcessSection from "@/components/ProcessSection";
+import IndustriesSection from "@/components/IndustriesSection";
+import LocationsSeoSection from "@/components/LocationsSeoSection";
+import FaqSection from "@/components/FaqSection";
+import Footer from "@/components/Footer";
+import StickyWhatsappCta from "@/components/StickyWhatsappCta";
+
+export default function Home() {
+  return (
+    <>
+      <Header />
+      <main>
+        <HeroSection />
+        <TrustBar />
+        <ServicesSection />
+        <WhyUsSection />
+        <ProcessSection />
+        <IndustriesSection />
+        <LocationsSeoSection />
+        <FaqSection />
+      </main>
+      <Footer />
+      <StickyWhatsappCta />
+    </>
+  );
+}

@@ -3,16 +3,6 @@ const nextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
   compress: true,
-  async redirects() {
-    return [
-      {
-        source: "/(.*)",
-        has: [{ type: "host", value: "londradepo.com" }],
-        destination: "https://www.londradepo.com/$1",
-        permanent: true,
-      },
-    ];
-  },
   async headers() {
     return [
       {

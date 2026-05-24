@@ -10,14 +10,14 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20operasyon%20danis
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Başarı Hikayeleri | UK Operasyon Case Study'leri | LondraDepo.com",
+  title: "Başarı Hikayeleri | İngiltere Operasyon Başarı Hikayeleri | LondraDepo.com",
   description:
-    "LondraDepo.com ile İngiltere operasyonu kuran markaların gerçek hikayeleri. Moda, otomotiv ve B2B dağıtım operasyonlarından somut örnekler.",
+    "LondraDepo.com ile İngiltere depo altyapısı kuran markaların gerçek hikayeleri. İngiltere fulfillment, dağıtım operasyonu ve e-ticaret altyapısı örnekleri.",
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: "Başarı Hikayeleri — UK Operasyon Case Study'leri | LondraDepo.com",
+    title: "Başarı Hikayeleri — İngiltere Operasyon Başarı Hikayeleri | LondraDepo.com",
     description:
-      "İngiltere'de depolama, fulfillment ve dağıtım operasyonu kuran markaların başarı hikayeleri.",
+      "İngiltere'de depo altyapısı, fulfillment ve dağıtım operasyonu kuran markaların gerçek büyüme hikayeleri.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
     locale: "tr_TR",
@@ -41,7 +41,7 @@ const jsonLd = {
       name: "Başarı Hikayeleri — LondraDepo.com",
       url: PAGE_URL,
       description:
-        "İngiltere'de depolama, fulfillment ve dağıtım operasyonu kuran markaların gerçek case study'leri.",
+        "İngiltere'de depo altyapısı, fulfillment (sipariş hazırlama) ve dağıtım operasyonu kuran markaların gerçek büyüme hikayeleri.",
     },
   ],
 };
@@ -53,44 +53,44 @@ const cases = [
     industryBg: "bg-amber-50 text-amber-700",
     title: "Tortilla Markası — İngiltere Depo & Dağıtım Operasyonu",
     summary:
-      "Ankara merkezli tortilla ve flatbread üreticisinin 1 paletten aylık 6 x 40HC konteynere uzanan İngiltere pazar girişi ve ölçeklenme hikayesi.",
-    keywords: ["İngiltere tortilla deposu", "FMCG UK fulfillment", "İngiltere gıda lojistiği"],
+      "Ankara merkezli tortilla ve flatbread üreticisinin İngiltere operasyonuna küçük hacimle başlayıp yüksek hacimli dağıtım modeline dönüşen büyüme hikayesi.",
+    keywords: ["İngiltere tortilla deposu", "İngiltere FMCG fulfillment operasyonu", "İngiltere gıda depo & dağıtım operasyonu"],
   },
   {
     slug: "uk-walking-treadmill-distribution",
-    industry: "Healthcare / Ecommerce",
+    industry: "Sağlık & E-Ticaret",
     industryBg: "bg-teal-50 text-teal-700",
-    title: "Walking Treadmill — İngiltere Depo & Satış Operasyonu",
+    title: "Walking Treadmill — İngiltere Depo, Fulfillment & Dağıtım Operasyonu",
     summary:
-      "Yaşlı ve rehabilitasyon kullanıcılarına yönelik walking treadmill ürünlerinin İngiltere depo, online fulfillment ve discount store dağıtım operasyonu.",
-    keywords: ["UK bulky fulfillment", "walking treadmill warehouse UK", "UK ecommerce fulfillment"],
+      "Yaşlı ve rehabilitasyon kullanıcılarına yönelik walking treadmill ürünlerinin İngiltere depo altyapısı, online fulfillment ve discount store dağıtım operasyonu.",
+    keywords: ["Büyük hacimli ürün fulfillment operasyonu", "walking treadmill İngiltere deposu", "İngiltere e-ticaret fulfillment altyapısı"],
   },
   {
     slug: "cruyff-uk-fulfillment",
-    industry: "Moda & Premium Apparel",
+    industry: "Moda & Premium Giyim",
     industryBg: "bg-pink-50 text-pink-700",
-    title: "Cruyff — UK Moda & Fashion Fulfillment Operasyonu",
+    title: "Cruyff — İngiltere Moda & Fulfillment Operasyonu",
     summary:
-      "Johan Cruyff markasının Hollanda'dan İngiltere fulfillment operasyonuna geçişi: UK warehouse, repackaging, ecommerce fulfillment ve dağıtım.",
-    keywords: ["UK fashion fulfillment", "fashion warehouse UK", "apparel ecommerce UK"],
+      "Johan Cruyff markasının Hollanda'dan İngiltere fulfillment operasyonuna geçişi: İngiltere depo altyapısı, yeniden paketleme, e-ticaret fulfillment ve dağıtım.",
+    keywords: ["İngiltere moda fulfillment operasyonu", "İngiltere depo altyapısı", "İngiltere moda e-ticaret operasyonu"],
   },
   {
     slug: "uk-auto-parts-warehouse",
     industry: "Otomotiv",
     industryBg: "bg-blue-50 text-blue-700",
-    title: "OEM & Yan Sanayi — Yedek Parça İngiltere Depolama",
+    title: "OEM & Yan Sanayi — İngiltere Yedek Parça Depo Operasyonu",
     summary:
-      "Lüks araç OEM ve aftermarket yedek parçalarının İngiltere'de stok yönetimi, hasar kontrollü depolama ve UK dağıtım operasyonu.",
-    keywords: ["UK auto parts warehouse", "automotive fulfillment UK"],
+      "Lüks araç OEM ve aftermarket yedek parçalarının İngiltere'de stok yönetimi, hasar kontrollü depolama ve dağıtım operasyonu.",
+    keywords: ["İngiltere yedek parça deposu", "İngiltere otomotiv fulfillment operasyonu"],
   },
   {
     slug: "pizza-box-distribution-uk",
     industry: "B2B Dağıtım",
     industryBg: "bg-amber-50 text-amber-700",
-    title: "Pizza Kutusu — İngiltere B2B Dağıtım Operasyonu",
+    title: "Pizza Kutusu — İngiltere B2B Depo & Dağıtım Operasyonu",
     summary:
-      "Restoranlara toptan pizza kutusu tedarikçisinin İngiltere'de palet bazlı depolama ve düzenli B2B dağıtım sürecinin kurulumu.",
-    keywords: ["pizza box warehouse UK", "packaging distribution UK"],
+      "Restoranlara toptan pizza kutusu tedarikçisinin İngiltere'de palet bazlı depolama ve düzenli B2B dağıtım operasyonunun kurulumu.",
+    keywords: ["pizza kutusu İngiltere deposu", "İngiltere ambalaj dağıtım operasyonu"],
   },
 ];
 
@@ -111,14 +111,15 @@ export default function CaseStudiesIndexPage() {
         <section className="bg-[#0b2545] text-white py-16 px-4">
           <div className="max-w-4xl mx-auto">
             <span className="text-xs font-bold px-3 py-1 rounded-full bg-white/10 text-white/80 mb-4 inline-block">
-              Case Studies
+              Başarı Hikayeleri
             </span>
             <h1 className="text-3xl md:text-4xl font-extrabold mb-4 text-balance">
               İngiltere Operasyonu Kuran Markalar
             </h1>
             <p className="text-white/70 text-lg leading-relaxed max-w-2xl">
-              Türkiye'den İngiltere'ye taşınan gerçek operasyon örnekleri. Depolama, fulfillment ve
-              dağıtım süreçlerini İngiltere'de nasıl kurduklarını keşfedin.
+              Türkiye&apos;den İngiltere&apos;ye açılan markaların gerçek operasyon hikayeleri.
+              Depolama, fulfillment (sipariş hazırlama), dağıtım ve İngiltere operasyon
+              altyapısının nasıl kurulduğunu keşfedin.
             </p>
           </div>
         </section>
@@ -126,10 +127,10 @@ export default function CaseStudiesIndexPage() {
         {/* Trust bar */}
         <section className="bg-white border-b border-slate-200 py-4 px-4">
           <div className="max-w-4xl mx-auto flex flex-wrap gap-6 text-sm text-slate-600 justify-center md:justify-start">
-            <span className="flex items-center gap-2">✅ Essex merkezli UK depo</span>
+            <span className="flex items-center gap-2">✅ Essex merkezli İngiltere depo altyapısı</span>
             <span className="flex items-center gap-2">✅ Türkçe operasyon iletişimi</span>
-            <span className="flex items-center gap-2">✅ Hızlı kurulum</span>
-            <span className="flex items-center gap-2">✅ Esnek fulfillment modeli</span>
+            <span className="flex items-center gap-2">✅ Hızlı operasyon kurulumu</span>
+            <span className="flex items-center gap-2">✅ Esnek depo &amp; sipariş operasyon modeli</span>
           </div>
         </section>
 
@@ -152,6 +153,13 @@ export default function CaseStudiesIndexPage() {
                       <span className={`text-xs font-bold px-3 py-1 rounded-full ${c.industryBg}`}>
                         {c.industry}
                       </span>
+                      <span className="text-xs font-bold px-3 py-1 rounded-full bg-[#0b2545]/5 text-[#0b2545]">
+                        Başarı Hikayesi
+                      </span>
+                      <span className="text-xs font-semibold px-2 py-1 rounded-full bg-green-50 text-green-700 flex items-center gap-1">
+                        <span className="w-1.5 h-1.5 rounded-full bg-green-500 inline-block" />
+                        Aktif UK operasyonu
+                      </span>
                     </div>
                     <h2 className="text-xl font-extrabold text-[#0b2545] mb-3 group-hover:underline">
                       {c.title}
@@ -168,7 +176,7 @@ export default function CaseStudiesIndexPage() {
                       ))}
                     </div>
                     <span className="inline-flex items-center gap-1 text-sm font-semibold text-[#e63946]">
-                      Operasyon detaylarını gör →
+                      Başarı hikayesini incele →
                     </span>
                   </div>
                 </Link>
@@ -178,20 +186,28 @@ export default function CaseStudiesIndexPage() {
             {/* CTA */}
             <div className="mt-14 bg-[#0b2545] rounded-2xl p-8 text-center">
               <h2 className="text-2xl font-extrabold text-white mb-3">
-                Markanız için operasyon modeli oluşturun
+                İngiltere&apos;de depo, fulfillment ve dağıtım operasyonu mu kuruyorsunuz?
               </h2>
-              <p className="text-white/70 mb-6 leading-relaxed">
-                Depolama, fulfillment veya dağıtım ihtiyacınızı paylaşın — size özel bir operasyon
-                planı hazırlayalım.
+              <p className="text-white/70 mb-6 leading-relaxed max-w-2xl mx-auto">
+                Operasyon modelinizi paylaşın, size özel İngiltere depo altyapısı ve lojistik
+                planlamasını birlikte oluşturalım.
               </p>
-              <a
-                href={WHATSAPP}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold px-8 py-4 rounded-full transition"
-              >
-                Operasyon danışmanı ile görüşün
-              </a>
+              <div className="flex flex-wrap gap-3 justify-center">
+                <a
+                  href={WHATSAPP}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold px-8 py-4 rounded-full transition"
+                >
+                  WhatsApp&apos;tan Hızlı Bilgi Alın
+                </a>
+                <Link
+                  href="/iletisim"
+                  className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-full transition"
+                >
+                  İngiltere operasyon danışmanı ile görüşün
+                </Link>
+              </div>
             </div>
 
             {/* Internal links */}

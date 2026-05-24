@@ -3,6 +3,7 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
+import CtaCards from "@/components/CtaCards";
 
 const SITE_URL = "https://www.londradepo.com";
 const PAGE_URL = `${SITE_URL}/ingiltere-fulfillment`;
@@ -119,6 +120,8 @@ export default function FulfillmentPage() {
               Türkiye'den İngiltere'ye gelen ürünlerinizin sipariş bazında hazırlanması, paketlenmesi ve müşterilerinize ulaştırılması süreçlerini Essex merkezli UK operasyonumuzdan yönetiyoruz.
             </p>
 
+            <CtaCards />
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
               {[
                 { title: "Sipariş Toplama (Picking)", desc: "Gelen her sipariş depo raflarından doğru şekilde toplanır." },
@@ -143,7 +146,7 @@ export default function FulfillmentPage() {
                 href={WHATSAPP}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold px-8 py-4 rounded-full transition"
+                className="inline-flex items-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
               >
                 WhatsApp ile Teklif Al
               </a>

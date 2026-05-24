@@ -3,6 +3,8 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
+import ArticleHero from "@/components/ArticleHero";
+import CtaCards from "@/components/CtaCards";
 
 const SITE_URL = "https://www.londradepo.com";
 const PAGE_URL = `${SITE_URL}/blog/ingiltere-depo-rehberi`;
@@ -62,35 +64,52 @@ export default function DepoRehberiPage() {
           </div>
         </nav>
 
-        <article className="py-16 px-4 bg-white">
+        <article className="py-10 px-4 bg-white">
           <div className="max-w-3xl mx-auto">
-            <span className="text-xs font-semibold text-green-600 bg-green-50 px-3 py-1 rounded-full">Depolama</span>
-            <h1 className="text-3xl md:text-4xl font-extrabold text-[#0b2545] mt-4 mb-4">
-              İngiltere Depo Hizmeti: Kapsamlı Rehber
-            </h1>
-            <p className="text-slate-500 text-sm mb-8">⏱ 6 dakika okuma · LondraDepo.com</p>
+            <ArticleHero
+              category="Depolama"
+              categoryColor="text-green-700 bg-green-50"
+              title="İngiltere Depo Hizmeti: Kapsamlı Rehber"
+              readTime="6 dakika"
+              date="2025"
+            />
 
-            <div className="prose max-w-none text-slate-700 space-y-6">
-              <p className="text-lg leading-relaxed">
-                Türkiye'den İngiltere'ye ihracat yapıyorsanız, ürünlerinizi İngiltere'de depolamak için güvenilir bir UK warehouse partneri bulmak operasyonunuzun temel taşlarından biridir. Bu rehberde İngiltere depo hizmetinin ne olduğunu, nasıl çalıştığını ve doğru partneri nasıl seçeceğinizi ele alıyoruz.
-              </p>
+            <p className="text-lg leading-relaxed text-slate-600 mb-8">
+              Türkiye&apos;den İngiltere&apos;ye ihracat yapıyorsanız, ürünlerinizi
+              İngiltere&apos;de depolamak için güvenilir bir UK warehouse partneri bulmak
+              operasyonunuzun temel taşlarından biridir. Bu rehberde İngiltere depo
+              hizmetinin ne olduğunu, nasıl çalıştığını ve doğru partneri nasıl
+              seçeceğinizi ele alıyoruz.
+            </p>
 
-              <h2 className="text-2xl font-extrabold text-[#0b2545] mt-8">İngiltere Depo Hizmeti Nedir?</h2>
+            <CtaCards />
+
+            <div className="article-body">
+              <h2>İngiltere Depo Hizmeti Nedir?</h2>
               <p>
-                UK depo hizmeti, ürünlerinizin İngiltere'ye geldiğinde güvenli şekilde depolandığı, gerektiğinde hazırlanıp müşterilere veya satış noktalarına sevk edildiği lojistik altyapısını ifade eder. İngiltere'de fiziksel stok tutmak; müşteri teslimat sürelerini kısaltır, gümrük süreçlerini basitleştirir ve Amazon, Etsy gibi platformlardaki satışları hızlandırır.
+                UK depo hizmeti, ürünlerinizin İngiltere&apos;ye geldiğinde güvenli şekilde
+                depolandığı, gerektiğinde hazırlanıp müşterilere veya satış noktalarına
+                sevk edildiği lojistik altyapısını ifade eder. İngiltere&apos;de fiziksel
+                stok tutmak; müşteri teslimat sürelerini kısaltır, gümrük süreçlerini
+                basitleştirir ve Amazon, Etsy gibi platformlardaki satışları hızlandırır.
               </p>
 
-              <h2 className="text-2xl font-extrabold text-[#0b2545] mt-8">Hangi İşletmeler UK Depo Hizmetine İhtiyaç Duyar?</h2>
-              <ul className="space-y-2 list-disc pl-5">
+              <blockquote>
+                İngiltere&apos;de stok tutmak sadece bir lojistik tercih değil, UK
+                pazarında rekabet edebilmenin önkoşuludur.
+              </blockquote>
+
+              <h2>Hangi İşletmeler UK Depo Hizmetine İhtiyaç Duyar?</h2>
+              <ul>
                 <li>Türkiye&apos;den İngiltere&apos;ye düzenli konteyner gönderen markalar</li>
                 <li>Amazon UK, Etsy veya Shopify&apos;da satış yapan e-ticaret satıcıları</li>
                 <li>İngiltere&apos;de toptancı veya perakende müşterilere satış yapan ithalatçılar</li>
-                <li>Gıda, tekstil, ev & dekorasyon ve elektronik kategorilerinde ihracat yapan üreticiler</li>
+                <li>Gıda, tekstil, ev &amp; dekorasyon ve elektronik kategorilerinde ihracat yapan üreticiler</li>
                 <li>İngiltere pazar testleri yapmak isteyen KOBİ&apos;ler</li>
               </ul>
 
-              <h2 className="text-2xl font-extrabold text-[#0b2545] mt-8">İngiltere Depolama Süreci Nasıl İşler?</h2>
-              <ol className="space-y-3 list-decimal pl-5">
+              <h2>İngiltere Depolama Süreci Nasıl İşler?</h2>
+              <ol>
                 <li><strong>Türkiye&apos;den sevkiyat:</strong> Ürünleriniz FCL veya LCL konteynerle İngiltere&apos;ye gönderilir.</li>
                 <li><strong>Gümrük ve ithalat:</strong> Ürünler İngiltere gümrüğünden geçer, gerekli GTIP ve ithalat işlemleri tamamlanır.</li>
                 <li><strong>Depoya kabul:</strong> Essex depomuza ulaşan ürünler sayılır, kontrol edilir ve stoka alınır.</li>
@@ -99,13 +118,16 @@ export default function DepoRehberiPage() {
                 <li><strong>Dağıtım:</strong> Siparişler müşterilere veya Amazon/Etsy gibi platforma teslim edilir.</li>
               </ol>
 
-              <h2 className="text-2xl font-extrabold text-[#0b2545] mt-8">İngiltere&apos;de Depo Lokasyonu Neden Önemlidir?</h2>
+              <h2>İngiltere&apos;de Depo Lokasyonu Neden Önemlidir?</h2>
               <p>
-                Essex, Londra&apos;ya yakınlığı ve Felixstowe ile Tilbury limanlarına erişimiyle İngiltere&apos;nin en stratejik depolama bölgelerinden biridir. Essex&apos;ten İngiltere&apos;nin her yerine 24-48 saat içinde teslimat mümkündür. Amazon UK deposuna da kolayca erişim sağlanır.
+                Essex, Londra&apos;ya yakınlığı ve Felixstowe ile Tilbury limanlarına erişimiyle
+                İngiltere&apos;nin en stratejik depolama bölgelerinden biridir. Essex&apos;ten
+                İngiltere&apos;nin her yerine 24-48 saat içinde teslimat mümkündür. Amazon UK
+                deposuna da kolayca erişim sağlanır.
               </p>
 
-              <h2 className="text-2xl font-extrabold text-[#0b2545] mt-8">Doğru UK Depo Partnerini Nasıl Seçersiniz?</h2>
-              <ul className="space-y-2 list-disc pl-5">
+              <h2>Doğru UK Depo Partnerini Nasıl Seçersiniz?</h2>
+              <ul>
                 <li>Türkçe iletişim imkânı — Özellikle ilk aşamada kritik</li>
                 <li>Palet bazlı esnek depolama seçenekleri</li>
                 <li>Fulfillment ve Amazon prep kapasitesi</li>
@@ -113,17 +135,37 @@ export default function DepoRehberiPage() {
                 <li>Stok takibi ve raporlama sistemi</li>
                 <li>Konteyner kabulü yapabilme kapasitesi</li>
               </ul>
+
+              <h2>Sık Sorulan Sorular</h2>
+
+              <h3>İngiltere depo hizmetiniz hangi firmalar için uygun?</h3>
+              <p>
+                Türkiye&apos;den İngiltere&apos;ye ihracat yapan markalar, e-ticaret satıcıları,
+                toptancılar, gıda üreticileri ve ithalatçılar için uygundur.
+              </p>
+
+              <h3>Paletli ürün kabul ediyor musunuz?</h3>
+              <p>
+                Evet. İngiltere palet depolama ihtiyacı olan işletmelere uygun
+                çözümler sağlıyoruz.
+              </p>
+
+              <h3>Sadece depo mu, dağıtım da sağlıyor musunuz?</h3>
+              <p>
+                Depolama ile birlikte dağıtım hazırlığı ve operasyon desteği de sunuyoruz.
+              </p>
             </div>
 
-            <div className="bg-[#f6f8fb] rounded-2xl p-8 my-10 text-center">
-              <p className="text-[#0b2545] font-semibold text-lg mb-4">
-                İngiltere depo ihtiyacınız için hızlı teklif alın
+            <div className="bg-[#0b2545] text-white rounded-2xl p-8 my-10 text-center">
+              <p className="font-bold text-xl mb-2">İngiltere depo ihtiyacınız için hızlı teklif alın</p>
+              <p className="text-slate-300 text-sm mb-6">
+                Ürün türünüzü ve hacminizi belirtin, size özel fiyat sunalım.
               </p>
               <a
                 href={WHATSAPP}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold px-8 py-4 rounded-full transition"
+                className="inline-flex items-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white font-bold px-8 py-3.5 rounded-full transition"
               >
                 WhatsApp ile Yazın
               </a>

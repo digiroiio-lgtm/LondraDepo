@@ -32,6 +32,7 @@ const posts = [
     href: "/blog/ingiltere-depo-rehberi",
     category: "Depolama",
     readTime: "6 dk",
+    icon: "🏭",
   },
   {
     title: "İngiltere Fulfillment Nedir? Nasıl Çalışır?",
@@ -39,6 +40,7 @@ const posts = [
     href: "/blog/ingiltere-fulfillment-nedir",
     category: "Fulfillment",
     readTime: "5 dk",
+    icon: "📬",
   },
   {
     title: "Amazon Prep UK: Adım Adım Rehber",
@@ -46,6 +48,7 @@ const posts = [
     href: "/blog/amazon-prep-uk-rehberi",
     category: "Amazon",
     readTime: "7 dk",
+    icon: "📦",
   },
 ];
 
@@ -64,12 +67,13 @@ export default function BlogPage() {
 
         <section className="py-16 px-4 bg-white">
           <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-12">
+            <div className="mb-12">
               <h1 className="text-3xl md:text-4xl font-extrabold text-[#0b2545] mb-4">
-                İngiltere Depo & Lojistik Rehberleri
+                İngiltere Depo &amp; Lojistik Rehberleri
               </h1>
-              <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-                Türkiye'den İngiltere'ye ihracat yapanlar için UK depo, fulfillment ve Amazon operasyonu hakkında kapsamlı bilgi kaynakları.
+              <p className="text-lg text-slate-600 max-w-2xl">
+                Türkiye&apos;den İngiltere&apos;ye ihracat yapanlar için UK depo, fulfillment
+                ve Amazon operasyonu hakkında kapsamlı bilgi kaynakları.
               </p>
             </div>
 
@@ -78,16 +82,29 @@ export default function BlogPage() {
                 <Link
                   key={post.href}
                   href={post.href}
-                  className="border border-slate-200 rounded-2xl p-6 hover:shadow-lg transition flex flex-col"
+                  className="border border-slate-200 rounded-2xl overflow-hidden hover:shadow-lg transition flex flex-col group"
                 >
-                  <span className="text-xs font-semibold text-green-600 bg-green-50 px-3 py-1 rounded-full w-fit mb-3">
-                    {post.category}
-                  </span>
-                  <h2 className="font-bold text-[#0b2545] text-lg mb-2 flex-1">{post.title}</h2>
-                  <p className="text-slate-500 text-sm mb-4 leading-relaxed">{post.desc}</p>
-                  <div className="flex items-center justify-between text-xs text-slate-400">
-                    <span>⏱ {post.readTime} okuma</span>
-                    <span className="text-[#0b2545] font-semibold">Okumaya devam →</span>
+                  {/* Mini hero */}
+                  <div
+                    className="h-32 flex items-center justify-center text-3xl"
+                    style={{
+                      background: "linear-gradient(135deg, #0b2545 0%, #1e3a5f 100%)",
+                    }}
+                  >
+                    <span>{post.icon}</span>
+                  </div>
+                  <div className="p-5 flex flex-col flex-1">
+                    <span className="text-xs font-semibold text-[#e63946] mb-2 uppercase tracking-wide">
+                      {post.category}
+                    </span>
+                    <h2 className="font-bold text-[#0b2545] text-base mb-2 flex-1 group-hover:text-[#1e3a5f] transition">
+                      {post.title}
+                    </h2>
+                    <p className="text-slate-500 text-sm mb-4 leading-relaxed line-clamp-3">{post.desc}</p>
+                    <div className="flex items-center justify-between text-xs text-slate-400">
+                      <span>⏱ {post.readTime} okuma</span>
+                      <span className="text-[#0b2545] font-semibold">Okumaya devam →</span>
+                    </div>
                   </div>
                 </Link>
               ))}
@@ -102,7 +119,7 @@ export default function BlogPage() {
                 href={WHATSAPP}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold px-8 py-4 rounded-full transition"
+                className="inline-flex items-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
               >
                 WhatsApp ile Teklif Al
               </a>

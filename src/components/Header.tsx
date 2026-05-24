@@ -13,12 +13,13 @@ export default function Header() {
           </span>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-6 text-sm text-slate-200">
-          <a href="#hizmetler" className="hover:text-white transition">Hizmetler</a>
-          <a href="#neden-biz" className="hover:text-white transition">Neden Biz?</a>
-          <a href="#surec" className="hover:text-white transition">Süreç</a>
-          <a href="#faq" className="hover:text-white transition">SSS</a>
-          <a href="#iletisim" className="hover:text-white transition">İletişim</a>
+        <nav className="hidden md:flex items-center gap-5 text-sm text-slate-200">
+          <Link href="/#hizmetler" className="hover:text-white transition">Hizmetler</Link>
+          <Link href="/ingiltere-fulfillment" className="hover:text-white transition">Fulfillment</Link>
+          <Link href="/palet-depolama" className="hover:text-white transition">Palet Depo</Link>
+          <Link href="/amazon-prep-uk" className="hover:text-white transition">Amazon Prep</Link>
+          <Link href="/blog" className="hover:text-white transition">Blog</Link>
+          <Link href="/iletisim" className="hover:text-white transition">İletişim</Link>
         </nav>
 
         <div className="flex items-center gap-2 flex-shrink-0">

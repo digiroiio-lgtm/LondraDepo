@@ -7,15 +7,6 @@ import type { CookiePrefs } from "./CookieConsent";
 const GA_ID = "G-MTYWY5LWCW";
 const STORAGE_KEY = "londradepo_cookie_consent";
 
-function readConsent(): CookiePrefs | null {
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    return raw ? (JSON.parse(raw) as CookiePrefs) : null;
-  } catch {
-    return null;
-  }
-}
-
 declare global {
   interface Window {
     dataLayer: unknown[];
@@ -24,40 +15,39 @@ declare global {
 }
 
 export default function GoogleAnalytics() {
+  // Handle live consent changes (user clicks Accept/Reject on the banner during this session)
   useEffect(() => {
-    // On mount, update consent based on previously saved preference
-    const prefs = readConsent();
-    if (prefs?.decided && prefs.analytics) {
-      window.gtag?.("consent", "update", { analytics_storage: "granted" });
-    }
-
     const handleConsentChange = (e: Event) => {
       const detail = (e as CustomEvent<CookiePrefs>).detail;
       window.gtag?.("consent", "update", {
         analytics_storage: detail.analytics ? "granted" : "denied",
+        ad_storage: "denied",
       });
     };
-
     window.addEventListener("consentChange", handleConsentChange);
     return () => window.removeEventListener("consentChange", handleConsentChange);
   }, []);
 
-  // Scripts always render so Google can detect the tag in view-source.
-  // Consent Mode v2 defaults analytics_storage to "denied" until user accepts.
   return (
     <>
-      <Script
-        id="ga4-consent-default"
-        strategy="afterInteractive"
-      >
+      {/*
+       * Consent Mode v2 — MUST run before gtag.js loads.
+       * Reads localStorage so returning visitors who already accepted start
+       * with analytics_storage:'granted' and don't lose pageview hits.
+       */}
+      <Script id="ga4-consent-default" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
-          gtag('consent', 'default', {
-            analytics_storage: 'denied',
-            ad_storage: 'denied',
-            wait_for_update: 500
-          });
+          var _gaConsent = 'denied';
+          try {
+            var _stored = localStorage.getItem('${STORAGE_KEY}');
+            if (_stored) {
+              var _prefs = JSON.parse(_stored);
+              if (_prefs && _prefs.decided && _prefs.analytics) { _gaConsent = 'granted'; }
+            }
+          } catch(e) {}
+          gtag('consent', 'default', { analytics_storage: _gaConsent, ad_storage: 'denied' });
         `}
       </Script>
       <Script

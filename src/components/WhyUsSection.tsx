@@ -14,7 +14,7 @@ const reasons = [
   {
     icon: "🗺️",
     title: "Londra & Essex Konum Avantajı",
-    desc: "Londra depo konumumuz sayesinde İngiltere dağıtım ağına hızlı erişim sağlıyoruz.",
+    desc: "Londra depo konumumuz sayesinde İngiltere dağıtım ağına hızlı erişim sağlıyoruz. İngiltere'nin en aktif ve navlun ücreti uygun limanı Port of Felixstowe'a yakın konumumuz, Türkiye çıkışlı ithalatlarda gümrükleme ve ürün kabul süreçlerinde kritik maliyet ve zaman avantajı sunar.",
   },
   {
     icon: "🤝",

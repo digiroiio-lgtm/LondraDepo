@@ -5,7 +5,7 @@ const locations = [
   { name: "Essex", desc: "Depolama ve dağıtım için stratejik konum", icon: "🏭" },
   { name: "Birmingham", desc: "İç dağıtım planlaması için önemli merkez", icon: "🔗" },
   { name: "Manchester", desc: "Kuzey bölge sevkleri için avantaj", icon: "📦" },
-  { name: "Felixstowe", desc: "Liman girişi ve ürün kabul noktası", icon: "⚓" },
+  { name: "Port of Felixstowe", desc: "İngiltere'nin en aktif ve navlun ücreti uygun limanı. Türkiye çıkışlı konteynerlerde hızlı gümrükleme ve ürün kabul avantajı.", icon: "⚓" },
   { name: "Heathrow", desc: "Hava kargo teslim ve yönlendirme", icon: "✈️" },
   { name: "London Gateway", desc: "Lojistik hub'a yakın konumlama", icon: "🚢" },
 ];

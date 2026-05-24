@@ -5,6 +5,8 @@ import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 import ArticleHero from "@/components/ArticleHero";
 import CtaCards from "@/components/CtaCards";
+import AuthorBox from "@/components/AuthorBox";
+import RelatedArticles from "@/components/RelatedArticles";
 
 const SITE_URL = "https://www.londradepo.com";
 const PAGE_URL = `${SITE_URL}/blog/ingiltere-depo-rehberi`;
@@ -48,6 +50,13 @@ const jsonLd = {
     },
   ],
 };
+
+const relatedArticles = [
+  { href: "/blog/ingiltere-depo-fiyatlari-2026", title: "İngiltere Depo Fiyatları 2026", category: "Depolama", readTime: "7 dk", categoryColor: "bg-green-50 text-green-700" },
+  { href: "/blog/ingiltere-ara-depo-nedir", title: "İngiltere Ara Depo Nedir?", category: "Depolama", readTime: "5 dk", categoryColor: "bg-green-50 text-green-700" },
+  { href: "/blog/ingiltere-fulfillment-nedir", title: "İngiltere Fulfillment Nedir?", category: "Fulfillment", readTime: "5 dk", categoryColor: "bg-blue-50 text-blue-700" },
+  { href: "/blog/turkiyeden-ingiltereye-ihracat-rehberi", title: "Türkiye'den İngiltere'ye İhracat Rehberi", category: "İhracat", readTime: "10 dk", categoryColor: "bg-purple-50 text-purple-700" },
+];
 
 export default function DepoRehberiPage() {
   return (
@@ -161,18 +170,30 @@ export default function DepoRehberiPage() {
               <p className="text-slate-300 text-sm mb-6">
                 Ürün türünüzü ve hacminizi belirtin, size özel fiyat sunalım.
               </p>
-              <a
-                href={WHATSAPP}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white font-bold px-8 py-3.5 rounded-full transition"
-              >
-                WhatsApp ile Yazın
-              </a>
+              <div className="flex flex-wrap gap-3 justify-center">
+                <a
+                  href={WHATSAPP}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold px-7 py-3.5 rounded-full transition"
+                >
+                  WhatsApp&apos;tan hızlı bilgi alın
+                </a>
+                <Link
+                  href="/iletisim"
+                  className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-7 py-3.5 rounded-full transition"
+                >
+                  Operasyon danışmanı ile görüşün
+                </Link>
+              </div>
             </div>
 
+            <AuthorBox updatedDate="Ocak 2026" />
+
+            <RelatedArticles articles={relatedArticles} />
+
             <div className="pt-8 border-t border-slate-200">
-              <p className="text-slate-500 text-sm mb-3">İlgili içerikler:</p>
+              <p className="text-slate-500 text-sm mb-3">İlgili hizmetler:</p>
               <div className="flex flex-wrap gap-3">
                 <Link href="/blog/ingiltere-fulfillment-nedir" className="text-sm text-[#0b2545] hover:underline">→ İngiltere Fulfillment Nedir?</Link>
                 <Link href="/blog/amazon-prep-uk-rehberi" className="text-sm text-[#0b2545] hover:underline">→ Amazon Prep UK Rehberi</Link>

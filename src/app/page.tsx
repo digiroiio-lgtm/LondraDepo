@@ -7,6 +7,7 @@ import ProcessSection from "@/components/ProcessSection";
 import IndustriesSection from "@/components/IndustriesSection";
 import LocationsSeoSection from "@/components/LocationsSeoSection";
 import FaqSection from "@/components/FaqSection";
+import BlogInsightsSection from "@/components/BlogInsightsSection";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 
@@ -22,6 +23,7 @@ export default function Home() {
         <ProcessSection />
         <IndustriesSection />
         <LocationsSeoSection />
+        <BlogInsightsSection />
         <FaqSection />
       </main>
       <Footer />

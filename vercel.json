@@ -4,14 +4,6 @@
   "devCommand": "npm run dev",
   "installCommand": "npm install",
   "regions": ["lhr1"],
-  "redirects": [
-    {
-      "source": "/(.*)",
-      "has": [{ "type": "host", "value": "londradepo.com" }],
-      "destination": "https://www.londradepo.com/$1",
-      "permanent": true
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",

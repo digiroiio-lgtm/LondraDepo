@@ -57,6 +57,15 @@ const cases = [
     keywords: ["İngiltere tortilla deposu", "FMCG UK fulfillment", "İngiltere gıda lojistiği"],
   },
   {
+    slug: "uk-walking-treadmill-distribution",
+    industry: "Healthcare / Ecommerce",
+    industryBg: "bg-teal-50 text-teal-700",
+    title: "Walking Treadmill — İngiltere Depo & Satış Operasyonu",
+    summary:
+      "Yaşlı ve rehabilitasyon kullanıcılarına yönelik walking treadmill ürünlerinin İngiltere depo, online fulfillment ve discount store dağıtım operasyonu.",
+    keywords: ["UK bulky fulfillment", "walking treadmill warehouse UK", "UK ecommerce fulfillment"],
+  },
+  {
     slug: "cruyff-uk-fulfillment",
     industry: "Moda & Premium Apparel",
     industryBg: "bg-pink-50 text-pink-700",

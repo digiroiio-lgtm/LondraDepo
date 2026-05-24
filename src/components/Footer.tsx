@@ -1,3 +1,5 @@
+import CookieSettingsButton from "./CookieSettingsButton";
+
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20depo%20teklifi%20almak%20istiyorum.";
 const TEL = "tel:+447554195190";
 
@@ -59,9 +61,16 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-white/10 pt-6 text-center text-xs text-slate-500">
-        © {new Date().getFullYear()} LondraDepo.com — Londra depo, İngiltere
-        warehouse ve İngiltere fulfillment çözümleri. Tüm hakları saklıdır.
+      <div className="border-t border-white/10 pt-6 text-center text-xs text-slate-500 space-y-2">
+        <p>
+          © {new Date().getFullYear()} LondraDepo.com — Londra depo, İngiltere
+          warehouse ve İngiltere fulfillment çözümleri. Tüm hakları saklıdır.
+        </p>
+        <div className="flex flex-wrap items-center justify-center gap-4">
+          <a href="/privacy-policy" className="hover:text-white transition">Gizlilik Politikası</a>
+          <a href="/cookie-policy" className="hover:text-white transition">Çerez Politikası</a>
+          <CookieSettingsButton />
+        </div>
       </div>
     </footer>
   );

@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
-import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import CookieConsent from "@/components/CookieConsent";
+import ConditionalAnalytics from "@/components/ConditionalAnalytics";
 import "./globals.css";
 
 const geist = localFont({
@@ -175,8 +175,8 @@ export default function RootLayout({
       </head>
       <body className="antialiased">
         {children}
-        <Analytics />
-        <SpeedInsights />
+        <CookieConsent />
+        <ConditionalAnalytics />
       </body>
     </html>
   );

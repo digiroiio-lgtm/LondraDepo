@@ -48,13 +48,13 @@ const jsonLd = {
 
 const cases = [
   {
-    slug: "krufy-uk-fashion-fulfillment",
-    industry: "Moda & Apparel",
+    slug: "cruyff-uk-fulfillment",
+    industry: "Moda & Premium Apparel",
     industryBg: "bg-pink-50 text-pink-700",
-    title: "Krufy — UK Moda Fulfillment Operasyonu",
+    title: "Cruyff — UK Moda & Fashion Fulfillment Operasyonu",
     summary:
-      "İngiltere piyasasına giren apparel markasının depolama, yeniden paketleme ve sipariş hazırlama süreçlerinin kurulumu.",
-    keywords: ["UK fashion fulfillment", "apparel warehouse UK"],
+      "Johan Cruyff markasının Hollanda'dan İngiltere fulfillment operasyonuna geçişi: UK warehouse, repackaging, ecommerce fulfillment ve dağıtım.",
+    keywords: ["UK fashion fulfillment", "fashion warehouse UK", "apparel ecommerce UK"],
   },
   {
     slug: "uk-auto-parts-warehouse",

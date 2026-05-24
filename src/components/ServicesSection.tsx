@@ -1,4 +1,4 @@
-const WHATSAPP = "https://wa.me/447000000000?text=Merhaba%2C%20depo%20teklifi%20almak%20istiyorum.";
+const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20depo%20teklifi%20almak%20istiyorum.";
 
 const services = [
   {

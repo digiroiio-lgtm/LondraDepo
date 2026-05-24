@@ -11,7 +11,7 @@ const geist = localFont({
   weight: "100 900",
 });
 
-const SITE_URL = "https://www.londradepo.com";
+const SITE_URL = "https://londradepo.com";
 
 export const viewport: Viewport = {
   width: "device-width",

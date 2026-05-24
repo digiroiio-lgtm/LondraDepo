@@ -92,6 +92,24 @@ const cases = [
       "Restoranlara toptan pizza kutusu tedarikçisinin İngiltere'de palet bazlı depolama ve düzenli B2B dağıtım operasyonunun kurulumu.",
     keywords: ["pizza kutusu İngiltere deposu", "İngiltere ambalaj dağıtım operasyonu"],
   },
+  {
+    slug: "arac-koltuk-kaplama-ingiltere-depo",
+    industry: "Otomotiv & Döşeme",
+    industryBg: "bg-blue-50 text-blue-700",
+    title: "Araç Koltuk Kaplama & Suni Deri — İngiltere Depo & Satış Operasyonu",
+    summary:
+      "Otomotiv döşeme malzemeleri üreticisinin İngiltere depo altyapısı, online sipariş fulfillment ve B2B atölye dağıtım operasyonu.",
+    keywords: ["İngiltere otomotiv deposu", "suni deri İngiltere fulfillment operasyonu", "İngiltere otomotiv döşeme lojistiği"],
+  },
+  {
+    slug: "tasinabilir-sarj-istasyonu-ingiltere-operasyonu",
+    industry: "Elektronik & Smart Device",
+    industryBg: "bg-teal-50 text-teal-700",
+    title: "Taşınabilir Şarj İstasyonu — İngiltere Operasyon Yönetimi",
+    summary:
+      "Taşınabilir şarj istasyonu ürünlerinin İngiltere depo altyapısı, SIM kart aktivasyonu, şarj kontrolü ve son kullanıcı sevkiyat operasyonu.",
+    keywords: ["elektronik fulfillment İngiltere", "taşınabilir şarj istasyonu İngiltere operasyonu", "SIM aktivasyon operasyonu"],
+  },
 ];
 
 export default function CaseStudiesIndexPage() {

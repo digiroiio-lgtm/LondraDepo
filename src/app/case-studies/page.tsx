@@ -48,6 +48,15 @@ const jsonLd = {
 
 const cases = [
   {
+    slug: "tortilla-uk-distribution",
+    industry: "Gıda / FMCG",
+    industryBg: "bg-amber-50 text-amber-700",
+    title: "Tortilla Markası — İngiltere Depo & Dağıtım Operasyonu",
+    summary:
+      "Ankara merkezli tortilla ve flatbread üreticisinin 1 paletten aylık 6 x 40HC konteynere uzanan İngiltere pazar girişi ve ölçeklenme hikayesi.",
+    keywords: ["İngiltere tortilla deposu", "FMCG UK fulfillment", "İngiltere gıda lojistiği"],
+  },
+  {
     slug: "cruyff-uk-fulfillment",
     industry: "Moda & Premium Apparel",
     industryBg: "bg-pink-50 text-pink-700",

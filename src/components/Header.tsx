@@ -17,6 +17,7 @@ export default function Header() {
           <Link href="/ingiltere-fulfillment" className="hover:text-[#0b2545] transition">Fulfillment</Link>
           <Link href="/palet-depolama" className="hover:text-[#0b2545] transition">Palet Depo</Link>
           <Link href="/amazon-prep-uk" className="hover:text-[#0b2545] transition">Amazon Prep</Link>
+          <Link href="/case-studies" className="hover:text-[#0b2545] transition">Case Studies</Link>
           <Link href="/blog" className="hover:text-[#0b2545] transition">Blog</Link>
           <Link href="/iletisim" className="hover:text-[#0b2545] transition">İletişim</Link>
         </nav>

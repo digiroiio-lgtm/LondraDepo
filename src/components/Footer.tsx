@@ -31,6 +31,7 @@ export default function Footer() {
           <div className="text-white font-semibold mb-3">Kurumsal</div>
           <ul className="space-y-2 text-sm">
             <li><a href="/hakkimizda" className="hover:text-white transition">Hakkımızda</a></li>
+            <li><a href="/case-studies" className="hover:text-white transition">Başarı Hikayeleri</a></li>
             <li><a href="/iletisim" className="hover:text-white transition">İletişim</a></li>
             <li><a href="/blog" className="hover:text-white transition">Blog & Rehberler</a></li>
           </ul>

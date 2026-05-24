@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import CookieConsent from "@/components/CookieConsent";
 import ConditionalAnalytics from "@/components/ConditionalAnalytics";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import "./globals.css";
 
 const geist = localFont({
@@ -177,6 +178,7 @@ export default function RootLayout({
         {children}
         <CookieConsent />
         <ConditionalAnalytics />
+        <GoogleAnalytics />
       </body>
     </html>
   );

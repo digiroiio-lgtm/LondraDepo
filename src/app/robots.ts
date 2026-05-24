@@ -1,10 +1,16 @@
 import { MetadataRoute } from "next";
 
-const SITE_URL = "https://londradepo.com";
+const SITE_URL = "https://www.londradepo.com";
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: { userAgent: "*", allow: "/" },
+    rules: [
+      {
+        userAgent: "*",
+        allow: "/",
+        disallow: ["/_next/", "/static/", "/api/"],
+      },
+    ],
     sitemap: `${SITE_URL}/sitemap.xml`,
   };
 }

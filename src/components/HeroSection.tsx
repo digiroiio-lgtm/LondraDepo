@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20depo%20teklifi%20almak%20istiyorum.";
 const TEL = "tel:+447554195190";
 
@@ -60,6 +62,17 @@ export default function HeroSection() {
           >
             📞 Hemen Arayın
           </a>
+        </div>
+
+        <div className="mt-12 rounded-2xl overflow-hidden shadow-2xl">
+          <Image
+            src="/londradepo.jpeg"
+            alt="LondraDepo – İngiltere'de depo ve fulfillment merkezi"
+            width={2158}
+            height={1260}
+            className="w-full h-auto object-cover"
+            priority
+          />
         </div>
       </div>
     </section>

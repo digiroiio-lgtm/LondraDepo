@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20depo%20teklifi%20almak%20istiyorum.";
 
 const steps = [
@@ -10,23 +12,31 @@ const steps = [
     num: "02",
     title: "Ürün Kabul Planı",
     desc: "Türkiye'den çıkış ve İngiltere varış sürecinizi birlikte netleştiriyoruz.",
+    image: { src: "/essex-warehouse-exterior.jpeg", alt: "Essex warehouse exterior — ürün kabul operasyonu UK" },
   },
   {
     num: "03",
     title: "Depolama & Yerleşim",
     desc: "Ürünleriniz uygun alanlarda güvenle depolanıyor.",
+    image: { src: "/uk-pallet-storage.jpeg", alt: "UK pallet storage — İngiltere palet depolama ve raf yerleşimi" },
   },
   {
     num: "04",
     title: "Sipariş / Dağıtım Operasyonu",
     desc: "Siparişler hazırlanıyor, sevk planı yapılıyor ve yola çıkıyor.",
+    image: { src: "/uk-warehouse-essex.jpeg", alt: "UK warehouse Essex — fulfillment ve paketleme operasyonu" },
   },
   {
     num: "05",
     title: "Süreç Takibi",
     desc: "Operasyonunuzu sürdürülebilir şekilde birlikte yönetiyoruz.",
   },
-];
+] as {
+  num: string;
+  title: string;
+  desc: string;
+  image?: { src: string; alt: string };
+}[];
 
 export default function ProcessSection() {
   return (
@@ -45,14 +55,30 @@ export default function ProcessSection() {
           <div className="hidden md:block absolute left-8 top-0 bottom-0 w-px bg-slate-200" />
           <div className="space-y-8">
             {steps.map((step) => (
-              <div key={step.num} className="flex gap-6 items-start">
-                <div className="flex-shrink-0 w-16 h-16 rounded-full bg-[#0b2545] text-white flex items-center justify-center font-extrabold text-lg shadow-md">
-                  {step.num}
+              <div key={step.num}>
+                <div className="flex gap-6 items-start">
+                  <div className="flex-shrink-0 w-16 h-16 rounded-full bg-[#0b2545] text-white flex items-center justify-center font-extrabold text-lg shadow-md">
+                    {step.num}
+                  </div>
+                  <div className="bg-[#f6f8fb] rounded-2xl p-5 flex-1">
+                    <h3 className="font-bold text-[#0b2545] text-lg mb-1">{step.title}</h3>
+                    <p className="text-slate-600 text-sm">{step.desc}</p>
+                  </div>
                 </div>
-                <div className="bg-[#f6f8fb] rounded-2xl p-5 flex-1">
-                  <h3 className="font-bold text-[#0b2545] text-lg mb-1">{step.title}</h3>
-                  <p className="text-slate-600 text-sm">{step.desc}</p>
-                </div>
+                {step.image && (
+                  <div className="ml-22 mt-3 pl-[88px]">
+                    <div className="relative h-48 rounded-xl overflow-hidden">
+                      <Image
+                        src={step.image.src}
+                        alt={step.image.alt}
+                        fill
+                        sizes="(max-width: 1024px) 100vw, 800px"
+                        className="object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                )}
               </div>
             ))}
           </div>

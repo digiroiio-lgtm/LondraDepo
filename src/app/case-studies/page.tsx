@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
@@ -149,6 +150,34 @@ export default function CaseStudiesIndexPage() {
             <span className="flex items-center gap-2">✅ Türkçe operasyon iletişimi</span>
             <span className="flex items-center gap-2">✅ Hızlı operasyon kurulumu</span>
             <span className="flex items-center gap-2">✅ Esnek depo &amp; sipariş operasyon modeli</span>
+          </div>
+        </section>
+
+        {/* Warehouse gallery */}
+        <section className="py-12 px-4 bg-[#f6f8fb]">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-xl font-extrabold text-[#0b2545] mb-6 text-center">
+              Operasyonun Gerçekleştiği Yer: Essex Depo Altyapımız
+            </h2>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+              {[
+                { src: "/uk-warehouse-essex.jpeg", alt: "UK warehouse Essex interior — fulfillment operasyonu" },
+                { src: "/uk-pallet-storage.jpeg", alt: "UK pallet storage — İngiltere palet depolama" },
+                { src: "/essex-warehouse-exterior.jpeg", alt: "Essex warehouse exterior — konteyner kabul alanı" },
+                { src: "/london-fulfillment-center.jpeg", alt: "London fulfillment center — İngiltere koli hazırlama" },
+              ].map((img) => (
+                <div key={img.src} className="relative aspect-square rounded-xl overflow-hidden group">
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    sizes="(max-width: 640px) 50vw, 25vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 

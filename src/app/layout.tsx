@@ -1,9 +1,29 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import CookieConsent from "@/components/CookieConsent";
 import ConditionalAnalytics from "@/components/ConditionalAnalytics";
-import GoogleAnalytics from "@/components/GoogleAnalytics";
+import GaConsentListener from "@/components/GoogleAnalytics";
 import "./globals.css";
+
+const GA_ID = "G-MTYWY5LWCW";
+const STORAGE_KEY = "londradepo_cookie_consent";
+
+/**
+ * Consent Mode v2 default — runs synchronously before gtag.js loads.
+ * Must live in <head> so it executes before any afterInteractive scripts.
+ * Reads localStorage to restore consent for returning visitors who already accepted.
+ */
+const GA_CONSENT_SCRIPT = `
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+var _gac = 'denied';
+try {
+  var _s = localStorage.getItem('${STORAGE_KEY}');
+  if (_s) { var _p = JSON.parse(_s); if (_p && _p.decided && _p.analytics) { _gac = 'granted'; } }
+} catch(e) {}
+gtag('consent', 'default', { analytics_storage: _gac, ad_storage: 'denied' });
+`;
 
 const geist = localFont({
   src: "./fonts/GeistVF.woff",
@@ -169,6 +189,8 @@ export default function RootLayout({
   return (
     <html lang="tr" className={geist.variable}>
       <head>
+        {/* Consent Mode v2 default — must run before gtag.js (afterInteractive) */}
+        <script dangerouslySetInnerHTML={{ __html: GA_CONSENT_SCRIPT }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -178,8 +200,10 @@ export default function RootLayout({
         {children}
         <CookieConsent />
         <ConditionalAnalytics />
-        <GoogleAnalytics />
+        <GaConsentListener />
       </body>
+      {/* Load gtag.js via @next/third-parties — strategy="afterInteractive", Server Component */}
+      <GoogleAnalytics gaId={GA_ID} />
     </html>
   );
 }

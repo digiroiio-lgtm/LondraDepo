@@ -66,6 +66,16 @@ export const metadata: Metadata = {
     "İngiltere Türk deposu",
   ],
   alternates: { canonical: SITE_URL },
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "48x48", type: "image/x-icon" },
+      { url: "/icon.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
   openGraph: {
     title: "İngiltere Depo ve Fulfillment Çözümleri | LondraDepo.com",
     description:

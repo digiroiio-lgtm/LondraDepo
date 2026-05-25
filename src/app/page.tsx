@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
+import WarehouseGallery from "@/components/WarehouseGallery";
 import TrustBar from "@/components/TrustBar";
 import ServicesSection from "@/components/ServicesSection";
 import WhyUsSection from "@/components/WhyUsSection";
@@ -17,6 +18,7 @@ export default function Home() {
       <Header />
       <main>
         <HeroSection />
+        <WarehouseGallery />
         <TrustBar />
         <ServicesSection />
         <WhyUsSection />

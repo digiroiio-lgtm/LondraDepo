@@ -176,7 +176,7 @@ export default function BlogPage() {
             </h1>
             <p className="text-white/70 text-lg leading-relaxed max-w-2xl">
               Türkiye&apos;den İngiltere&apos;ye satış yapan firmalar için UK depo, fulfillment ve
-              ihracat operasyonu hakkında derinlemesine rehberler. E-E-A-T güçlü, operasyon odaklı.
+              ihracat operasyonu hakkında derinlemesine rehberler. Essex'teki gerçek depo operasyonumuzdan edindiğimiz deneyimle, Türkiye'den İngiltere'ye satış yapan firmalar için depolama, fulfillment, Amazon ve ihracat süreçlerini açıklıyoruz.
             </p>
           </div>
         </section>

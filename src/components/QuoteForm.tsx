@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, FormEvent } from "react";
+import { trackQuoteSubmit } from "@/lib/gtag";
 
 const WA_NUMBER = "447554195190";
 
@@ -99,6 +100,7 @@ export default function QuoteForm() {
       .join("\n");
 
     const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(lines)}`;
+    trackQuoteSubmit();
     window.open(url, "_blank", "noopener,noreferrer");
   }
 

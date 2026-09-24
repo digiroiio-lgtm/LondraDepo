@@ -7,12 +7,12 @@ const TEL = "tel:+447554195190";
 
 const navLinks = [
   { href: "/#hizmetler", label: "Hizmetler" },
-  { href: "/ingiltere-fulfillment", label: "Fulfillment" },
-  { href: "/palet-depolama", label: "Palet Depo" },
-  { href: "/amazon-prep-uk", label: "Amazon Prep" },
+  { href: "/e-ticaret-fulfillment", label: "Fulfillment" },
+  { href: "/depolama", label: "Depolama" },
+  { href: "/gumrukleme", label: "Gümrükleme" },
   { href: "/case-studies", label: "Case Studies" },
   { href: "/blog", label: "Blog" },
-  { href: "/iletisim", label: "İletişim" },
+  { href: "/#teklif", label: "Teklif Al" },
 ];
 
 export default function Header() {

@@ -14,6 +14,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/ingiltere-fulfillment`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${SITE_URL}/palet-depolama`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${SITE_URL}/amazon-prep-uk`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    // Yeni servis sayfaları
+    { url: `${SITE_URL}/depolama`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${SITE_URL}/gumrukleme`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${SITE_URL}/ellecleme`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${SITE_URL}/nakliye-dagitim`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${SITE_URL}/e-ticaret-fulfillment`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${SITE_URL}/shopify-fulfillment`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${SITE_URL}/amazon-fulfillment`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    // Landing sayfaları
+    { url: `${SITE_URL}/turkiyeden-ingiltereye-depolama`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${SITE_URL}/uk-warehousing-fulfilment`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     // Lokasyon sayfaları
     { url: `${SITE_URL}/essex-depo`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     // Blog / içerik cluster

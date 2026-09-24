@@ -12,20 +12,24 @@ export default function Footer() {
             Londra<span className="text-red-400">Depo</span>.com
           </div>
           <p className="text-sm leading-relaxed">
-            İngiltere depo, İngiltere fulfillment, İngiltere lojistik, İngiltere
-            ürün deposu ve İngiltere dağıtım merkezi çözümleri. Türkiye'den
-            İngiltere'ye ihracat yapan işletmeler için UK lojistik partneri.
+            UK depolama, gümrükleme desteği, fulfillment ve dağıtım çözümleri.
+            İngiltere'de kendi operasyonunuzu kurmadan UK pazarına satış yapmak
+            isteyen işletmeler için tek noktadan lojistik partneri.
           </p>
         </div>
 
         <div>
           <div className="text-white font-semibold mb-3">Hizmetler</div>
           <ul className="space-y-2 text-sm">
-            <li><a href="/ingiltere-depo-avantajlari" className="hover:text-white transition">İngiltere Depo Avantajları</a></li>
-            <li><a href="/ingiltere-fulfillment" className="hover:text-white transition">İngiltere Fulfillment</a></li>
+            <li><a href="/depolama" className="hover:text-white transition">Depolama & Stoklama</a></li>
+            <li><a href="/gumrukleme" className="hover:text-white transition">Gümrükleme Desteği</a></li>
+            <li><a href="/ellecleme" className="hover:text-white transition">Elleçleme Hizmetleri</a></li>
+            <li><a href="/nakliye-dagitim" className="hover:text-white transition">Nakliye & Dağıtım</a></li>
+            <li><a href="/e-ticaret-fulfillment" className="hover:text-white transition">E-Ticaret Fulfillment</a></li>
+            <li><a href="/shopify-fulfillment" className="hover:text-white transition">Shopify Fulfillment</a></li>
+            <li><a href="/amazon-fulfillment" className="hover:text-white transition">Amazon Fulfillment</a></li>
             <li><a href="/palet-depolama" className="hover:text-white transition">Palet Depolama</a></li>
             <li><a href="/amazon-prep-uk" className="hover:text-white transition">Amazon Prep UK</a></li>
-            <li><a href="/essex-depo" className="hover:text-white transition">Essex Depo</a></li>
           </ul>
         </div>
 

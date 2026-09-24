@@ -150,10 +150,10 @@ const faqs = [
 
 const relatedCases = [
   {
-    slug: "krufy-uk-fashion-fulfillment",
-    industry: "Moda & Apparel",
-    title: "Krufy — UK Fashion Fulfillment Operasyonu",
-    summary: "Apparel markasının İngiltere fulfillment ve yeniden paketleme süreci.",
+    slug: "cruyff-uk-fulfillment",
+    industry: "Moda & Premium Giyim",
+    title: "Cruyff — İngiltere Moda & Fulfillment Operasyonu",
+    summary: "Cruyff markasının İngiltere fulfillment ve yeniden paketleme süreci.",
   },
   {
     slug: "pizza-box-distribution-uk",

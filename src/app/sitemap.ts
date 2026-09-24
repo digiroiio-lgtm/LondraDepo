@@ -44,7 +44,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Case studies
     { url: `${SITE_URL}/case-studies`, lastModified: PHASE1, changeFrequency: "monthly", priority: 0.7 },
     { url: `${SITE_URL}/case-studies/cruyff-uk-fulfillment`, lastModified: PHASE1, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${SITE_URL}/case-studies/krufy-uk-fashion-fulfillment`, lastModified: PHASE1, changeFrequency: "monthly", priority: 0.6 },
     { url: `${SITE_URL}/case-studies/pizza-box-distribution-uk`, lastModified: PHASE1, changeFrequency: "monthly", priority: 0.6 },
     { url: `${SITE_URL}/case-studies/tortilla-uk-distribution`, lastModified: PHASE1, changeFrequency: "monthly", priority: 0.6 },
     { url: `${SITE_URL}/case-studies/uk-auto-parts-warehouse`, lastModified: PHASE1, changeFrequency: "monthly", priority: 0.6 },

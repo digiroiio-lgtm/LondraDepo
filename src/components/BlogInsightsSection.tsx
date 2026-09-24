@@ -33,9 +33,9 @@ const featuredPosts = [
 ];
 
 const caseStudy = {
-  title: "Krufy Moda Fulfillment: UK E-Ticaret Operasyonu",
-  excerpt: "Ünlü futbolcunun koleksiyonunun İngiltere fulfillment ve depolama operasyonu nasıl kuruldu?",
-  href: "/case-studies/krufy-uk-fashion-fulfillment",
+  title: "Cruyff — İngiltere Moda & Fulfillment Operasyonu",
+  excerpt: "Johan Cruyff markasının Hollanda'dan İngiltere fulfillment ve depolama operasyonuna geçişi nasıl kuruldu?",
+  href: "/case-studies/cruyff-uk-fulfillment",
 };
 
 const faq = [

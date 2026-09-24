@@ -12,7 +12,8 @@ interface RelatedCasesProps {
 }
 
 const INDUSTRY_COLORS: Record<string, string> = {
-  "Moda & Apparel": "bg-pink-50 text-pink-700",
+  "Moda & Premium Giyim": "bg-pink-50 text-pink-700",
+  "Moda & Premium Apparel": "bg-pink-50 text-pink-700",
   "Otomotiv": "bg-blue-50 text-blue-700",
   "B2B Dağıtım": "bg-amber-50 text-amber-700",
 };

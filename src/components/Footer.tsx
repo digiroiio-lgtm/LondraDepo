@@ -27,6 +27,7 @@ export default function Footer() {
             <li><a href="/siparis-toplama-paketleme" className="hover:text-white transition">Sipariş Toplama & Paketleme</a></li>
             <li><a href="/ingiltere-depo-fiyatlari" className="hover:text-white transition">İngiltere Depo Fiyatları</a></li>
             <li><a href="/turkiyeden-ingiltereye-satis" className="hover:text-white transition">Türkiye&apos;den İngiltere&apos;ye Satış</a></li>
+            <li><a href="/turkiye-ingiltere-lojistik" className="hover:text-white transition">Türkiye İngiltere Lojistik</a></li>
             <li><a href="/depolama" className="hover:text-white transition">Depolama & Stoklama</a></li>
             <li><a href="/gumrukleme" className="hover:text-white transition">Gümrükleme Desteği</a></li>
             <li><a href="/e-ticaret-fulfillment" className="hover:text-white transition">E-Ticaret Fulfillment</a></li>
@@ -74,6 +75,7 @@ export default function Footer() {
           warehouse ve İngiltere fulfillment çözümleri. Tüm hakları saklıdır.
         </p>
         <div className="flex flex-wrap items-center justify-center gap-4">
+          <a href="/uk-warehousing-fulfilment" hrefLang="en-GB" lang="en" className="hover:text-white transition">English — UK Warehousing &amp; Fulfilment</a>
           <a href="/privacy-policy" className="hover:text-white transition">Gizlilik Politikası</a>
           <a href="/cookie-policy" className="hover:text-white transition">Çerez Politikası</a>
           <CookieSettingsButton />

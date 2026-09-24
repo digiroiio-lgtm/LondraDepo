@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { trackWhatsappClick, trackPhoneClick } from "@/lib/gtag";
 
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20depo%20teklifi%20almak%20istiyorum.";
 const TEL = "tel:+447554195190";
@@ -36,6 +39,7 @@ export default function HeroSection() {
             href={WHATSAPP}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackWhatsappClick("hero")}
             className="inline-flex items-center justify-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full text-base transition shadow-lg"
           >
             <svg className="w-5 h-5 fill-white flex-shrink-0" viewBox="0 0 24 24" aria-hidden="true">
@@ -45,6 +49,7 @@ export default function HeroSection() {
           </a>
           <a
             href={TEL}
+            onClick={() => trackPhoneClick("hero")}
             className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold px-8 py-4 rounded-full text-base transition"
           >
             📞 Ekibimizle Konuşun

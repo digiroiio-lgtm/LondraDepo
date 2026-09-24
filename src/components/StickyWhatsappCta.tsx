@@ -1,3 +1,7 @@
+"use client";
+
+import { trackWhatsappClick } from "@/lib/gtag";
+
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20depo%20teklifi%20almak%20istiyorum.";
 
 export default function StickyWhatsappCta() {
@@ -7,6 +11,7 @@ export default function StickyWhatsappCta() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="WhatsApp'tan yazın"
+      onClick={() => trackWhatsappClick("sticky_cta")}
       className="fixed bottom-6 right-5 z-50 flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold text-sm px-4 py-3 rounded-full shadow-xl transition"
     >
       <svg

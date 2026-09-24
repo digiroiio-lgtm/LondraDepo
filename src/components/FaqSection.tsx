@@ -6,28 +6,52 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20depo%20teklifi%20
 
 const faqs = [
   {
-    q: "İngiltere'de depo hizmetiniz hangi firmalar için uygun?",
-    a: "Türkiye'den İngiltere'ye ihracat yapan markalar, e-ticaret satıcıları, toptancılar, gıda üreticileri ve ithalatçılar için uygundur.",
+    q: "Türkiye'den ürünlerimi doğrudan deponuza gönderebilir miyim?",
+    a: "Evet. Türkiye'deki tedarikçinizden veya üretim noktanızdan ürünlerinizi depo adresimize gönderebilirsiniz. Ürün kabulü, sayımı ve depoya alınması operasyonumuz tarafından gerçekleştirilir.",
   },
   {
-    q: "İngiltere fulfillment hizmeti veriyor musunuz?",
-    a: "Evet. Sipariş hazırlama, paketleme ve sevk süreçlerine uygun fulfillment desteği sunuyoruz.",
+    q: "UK gümrükleme sürecinde destek sağlıyor musunuz?",
+    a: "İngiltere'ye yapılan ithalatlarda gümrükleme süreci koordinasyonunda destek sağlıyoruz. Gümrük işlemleri doğası gereği uzman gümrükçüler gerektirdiğinden, bu alanda koordinasyon desteği ve yönlendirme sunuyoruz.",
   },
   {
-    q: "Paletli ürün kabul ediyor musunuz?",
-    a: "Evet. İngiltere palet depolama ihtiyacı olan işletmelere uygun çözümler sağlıyoruz.",
+    q: "Paletli ve kolili ürün kabul ediyor musunuz?",
+    a: "Evet. Paletli ve kolili ürünlerin her ikisini de kabul ediyoruz. Kısa ve uzun vadeli depolama seçenekleri mevcuttur.",
   },
   {
-    q: "Amazon, Etsy ve Shopify satıcıları için uygun musunuz?",
-    a: "Evet. İngiltere Amazon prep, sipariş hazırlama ve dağıtım operasyonlarına uygun yapı sunuyoruz.",
+    q: "Shopify siparişlerini fulfill edebilir misiniz?",
+    a: "Evet. Shopify üzerinden satış yapan işletmeler için fulfillment desteği sunuyoruz. Sipariş sisteminizle koordineli çalışarak ürünleri toplayıp, paketleyip müşterilerinize sevk ediyoruz.",
   },
   {
-    q: "Ürünler Türkiye'den İngiltere'ye geldikten sonra ne oluyor?",
-    a: "Ürünleriniz teslim alınır, kontrol edilir, depolanır ve planlanan dağıtım sürecine alınır.",
+    q: "Amazon siparişlerini fulfill edebilir misiniz?",
+    a: "Evet. Amazon üzerinden satış yapan işletmeler için stok depolama ve sipariş fulfillment desteği sunuyoruz. Amazon FBA hazırlık hizmetimiz de ayrıca mevcuttur.",
   },
   {
-    q: "Sadece depo mu, dağıtım da sağlıyor musunuz?",
-    a: "Depolama ile birlikte dağıtım hazırlığı ve operasyon desteği de sunuyoruz.",
+    q: "Pick and pack nasıl çalışıyor?",
+    a: "Müşteri siparişi alındığında, sipariş depo sistemimuze girer. Depo ekibi ilgili ürünleri stoktan toplar (pick), ardından uygun şekilde paketler (pack), kargo etiketi oluşturulur ve sevk edilir.",
+  },
+  {
+    q: "Sevkiyat öncesi ürünleri etiketleyebilir misiniz?",
+    a: "Evet. Sevkiyat öncesi ürün etiketleme ve yeniden etiketleme hizmeti sunuyoruz. Etiketleme gereksinimlerinizi önceden paylaşmanız yeterlidir.",
+  },
+  {
+    q: "Başka bir UK konumundan ürün toplayabilir misiniz?",
+    a: "Evet. Başka bir UK konumundan ürün toplama (collection) hizmetimiz bulunmaktadır. Detaylar ve koşullar için bizimle iletişime geçin.",
+  },
+  {
+    q: "Tüm İngiltere'ye dağıtım yapıyor musunuz?",
+    a: "Evet. Essex merkezli operasyonumuzdan UK geneline dağıtım koordinasyonu sağlıyoruz. Londra ve çevresi başta olmak üzere İngiltere'nin farklı bölgelerine sevkiyat yapılmaktadır.",
+  },
+  {
+    q: "Stok nasıl yönetiliyor?",
+    a: "Depomuz Mintsoft depo yönetim yazılımı (WMS) kullanmaktadır. Bu sistem sayesinde stok seviyeleri, ürün giriş/çıkışları ve sipariş durumları kayıt altında tutulmaktadır.",
+  },
+  {
+    q: "Teklif için ne tür bilgi gerekiyor?",
+    a: "Ürün türü, tahmini stok hacmi (palet veya koli sayısı), aylık sipariş tahmini ve ihtiyaç duyduğunuz hizmetler (depolama, fulfillment, dağıtım vb.) yeterlidir. Bu bilgilerle size uygun bir teklif hazırlayabiliriz.",
+  },
+  {
+    q: "Mintsoft nedir ve ne işe yarıyor?",
+    a: "Mintsoft, bir depo yönetim yazılımıdır (WMS). Operasyonumuzda stok ve fulfillment süreçlerini yönetmek için bu sistemi kullanıyoruz. Mintsoft, LondraDepo'ya ait değildir; üçüncü taraf bir yazılımdır.",
   },
 ];
 
@@ -38,11 +62,14 @@ export default function FaqSection() {
     <section id="faq" className="py-20 px-4 bg-white">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-12">
+          <p className="text-[#e63946] text-sm font-semibold uppercase tracking-widest mb-3">
+            SSS
+          </p>
           <h2 className="text-3xl font-extrabold text-[#0b2545] mb-3">
             Sık Sorulan Sorular
           </h2>
           <p className="text-slate-600">
-            İngiltere depo ve fulfillment hizmetimiz hakkında merak edilenler.
+            UK depolama, gümrükleme ve fulfillment hizmetleri hakkında merak edilenler.
           </p>
         </div>
 

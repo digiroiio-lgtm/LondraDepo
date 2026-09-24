@@ -12,20 +12,27 @@ export default function Footer() {
             Londra<span className="text-red-400">Depo</span>.com
           </div>
           <p className="text-sm leading-relaxed">
-            İngiltere depo, İngiltere fulfillment, İngiltere lojistik, İngiltere
-            ürün deposu ve İngiltere dağıtım merkezi çözümleri. Türkiye'den
-            İngiltere'ye ihracat yapan işletmeler için UK lojistik partneri.
+            UK depolama, gümrükleme desteği, fulfillment ve dağıtım çözümleri.
+            İngiltere'de kendi operasyonunuzu kurmadan UK pazarına satış yapmak
+            isteyen işletmeler için tek noktadan lojistik partneri.
           </p>
         </div>
 
         <div>
           <div className="text-white font-semibold mb-3">Hizmetler</div>
           <ul className="space-y-2 text-sm">
-            <li><a href="/ingiltere-depo-avantajlari" className="hover:text-white transition">İngiltere Depo Avantajları</a></li>
-            <li><a href="/ingiltere-fulfillment" className="hover:text-white transition">İngiltere Fulfillment</a></li>
-            <li><a href="/palet-depolama" className="hover:text-white transition">Palet Depolama</a></li>
+            <li><a href="/ingiltere-depo" className="hover:text-white transition">İngiltere Depo</a></li>
+            <li><a href="/londra-depo" className="hover:text-white transition">Londra Depo</a></li>
+            <li><a href="/ingiltere-e-ticaret-lojistigi" className="hover:text-white transition">İngiltere E-Ticaret Lojistiği</a></li>
+            <li><a href="/siparis-toplama-paketleme" className="hover:text-white transition">Sipariş Toplama & Paketleme</a></li>
+            <li><a href="/ingiltere-depo-fiyatlari" className="hover:text-white transition">İngiltere Depo Fiyatları</a></li>
+            <li><a href="/turkiyeden-ingiltereye-satis" className="hover:text-white transition">Türkiye&apos;den İngiltere&apos;ye Satış</a></li>
+            <li><a href="/depolama" className="hover:text-white transition">Depolama & Stoklama</a></li>
+            <li><a href="/gumrukleme" className="hover:text-white transition">Gümrükleme Desteği</a></li>
+            <li><a href="/e-ticaret-fulfillment" className="hover:text-white transition">E-Ticaret Fulfillment</a></li>
+            <li><a href="/shopify-fulfillment" className="hover:text-white transition">Shopify Fulfillment</a></li>
+            <li><a href="/amazon-fulfillment" className="hover:text-white transition">Amazon Fulfillment</a></li>
             <li><a href="/amazon-prep-uk" className="hover:text-white transition">Amazon Prep UK</a></li>
-            <li><a href="/essex-depo" className="hover:text-white transition">Essex Depo</a></li>
           </ul>
         </div>
 
@@ -33,7 +40,7 @@ export default function Footer() {
           <div className="text-white font-semibold mb-3">Kurumsal</div>
           <ul className="space-y-2 text-sm">
             <li><a href="/hakkimizda" className="hover:text-white transition">Hakkımızda</a></li>
-            <li><a href="/case-studies" className="hover:text-white transition">Başarı Hikayeleri</a></li>
+            <li><a href="/case-studies" className="hover:text-white transition">Vaka Çalışmaları</a></li>
             <li><a href="/iletisim" className="hover:text-white transition">İletişim</a></li>
             <li><a href="/blog" className="hover:text-white transition">Blog & Rehberler</a></li>
           </ul>

@@ -2,11 +2,14 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import WarehouseGallery from "@/components/WarehouseGallery";
 import TrustBar from "@/components/TrustBar";
+import ValuePropositionSection from "@/components/ValuePropositionSection";
 import ServicesSection from "@/components/ServicesSection";
-import WhyUsSection from "@/components/WhyUsSection";
-import ProcessSection from "@/components/ProcessSection";
-import IndustriesSection from "@/components/IndustriesSection";
-import LocationsSeoSection from "@/components/LocationsSeoSection";
+import CustomerJourneySection from "@/components/CustomerJourneySection";
+import EcommerceFulfilmentSection from "@/components/EcommerceFulfilmentSection";
+import ShopifyAmazonSection from "@/components/ShopifyAmazonSection";
+import MintSoftSection from "@/components/MintSoftSection";
+import WhoWeWorkWithSection from "@/components/WhoWeWorkWithSection";
+import QuoteForm from "@/components/QuoteForm";
 import FaqSection from "@/components/FaqSection";
 import BlogInsightsSection from "@/components/BlogInsightsSection";
 import Footer from "@/components/Footer";
@@ -20,13 +23,16 @@ export default function Home() {
         <HeroSection />
         <WarehouseGallery />
         <TrustBar />
+        <ValuePropositionSection />
         <ServicesSection />
-        <WhyUsSection />
-        <ProcessSection />
-        <IndustriesSection />
-        <LocationsSeoSection />
-        <BlogInsightsSection />
+        <CustomerJourneySection />
+        <EcommerceFulfilmentSection />
+        <ShopifyAmazonSection />
+        <MintSoftSection />
+        <WhoWeWorkWithSection />
+        <QuoteForm />
         <FaqSection />
+        <BlogInsightsSection />
       </main>
       <Footer />
       <StickyWhatsappCta />

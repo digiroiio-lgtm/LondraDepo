@@ -6,13 +6,12 @@ import { useState } from "react";
 const TEL = "tel:+447554195190";
 
 const navLinks = [
-  { href: "/#hizmetler", label: "Hizmetler" },
-  { href: "/ingiltere-fulfillment", label: "Fulfillment" },
-  { href: "/palet-depolama", label: "Palet Depo" },
-  { href: "/amazon-prep-uk", label: "Amazon Prep" },
-  { href: "/case-studies", label: "Case Studies" },
+  { href: "/ingiltere-depo", label: "İngiltere Depo" },
+  { href: "/ingiltere-e-ticaret-lojistigi", label: "E-Ticaret Lojistiği" },
+  { href: "/turkiyeden-ingiltereye-satis", label: "TR → UK" },
+  { href: "/case-studies", label: "Vaka Çalışmaları" },
   { href: "/blog", label: "Blog" },
-  { href: "/iletisim", label: "İletişim" },
+  { href: "/#teklif", label: "Teklif Al" },
 ];
 
 export default function Header() {

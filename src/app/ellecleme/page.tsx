@@ -23,6 +23,25 @@ export const metadata: Metadata = {
   },
 };
 
+const faqs = [
+  {
+    q: "Elleçleme hizmeti kapsamında hangi işlemler yer alıyor?",
+    a: "Araç boşaltma ve yükleme, palet ve koli elleçleme, ürün kabul ve kontrol, sıralama, yeniden paketleme, etiketleme ve sevkiyat hazırlama işlemleri kapsamdadır.",
+  },
+  {
+    q: "Hasarlı veya yanlış etiketlenmiş ürünler için yeniden paketleme yapıyor musunuz?",
+    a: "Evet. Hasarlı ambalajların yenilenmesi, yanlış etiketlerin değiştirilmesi ve satış gereksinimlerine uygun yeniden paketleme operasyonlarını gerçekleştiriyoruz.",
+  },
+  {
+    q: "Amazon veya Shopify siparişleri için elleçleme desteği veriyor musunuz?",
+    a: "Evet. E-ticaret platformlarına yönelik ürün hazırlama, etiketleme ve sevkiyat hazırlama süreçlerini fulfillment operasyonumuzla birlikte yürütüyoruz.",
+  },
+  {
+    q: "Elleçleme hizmetinin fiyatlandırması nasıl işliyor?",
+    a: "Fiyatlandırma işlem türüne, ürün hacmine ve hizmet kapsamına göre belirlenir. Operasyonunuza özel teklif için WhatsApp üzerinden bize ulaşın.",
+  },
+];
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
@@ -42,6 +61,14 @@ const jsonLd = {
         "İngiltere'de araç boşaltma, yükleme, palet ve koli elleçleme, ürün kabul, sıralama, yeniden paketleme, etiketleme ve sevkiyat hazırlama.",
       areaServed: { "@type": "Country", name: "United Kingdom" },
       url: `${SITE_URL}/ellecleme`,
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: faqs.map(({ q, a }) => ({
+        "@type": "Question",
+        name: q,
+        acceptedAnswer: { "@type": "Answer", text: a },
+      })),
     },
   ],
 };
@@ -107,6 +134,21 @@ export default function EllecelermePage() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="py-16 px-4 bg-slate-50">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-extrabold text-[#0b2545] mb-8 text-center">Sık Sorulan Sorular</h2>
+            <dl className="space-y-4">
+              {faqs.map(({ q, a }) => (
+                <div key={q} className="bg-white rounded-2xl p-6 border border-slate-200">
+                  <dt className="font-bold text-[#0b2545] mb-2">{q}</dt>
+                  <dd className="text-slate-600 text-sm leading-relaxed">{a}</dd>
+                </div>
+              ))}
+            </dl>
           </div>
         </section>
 

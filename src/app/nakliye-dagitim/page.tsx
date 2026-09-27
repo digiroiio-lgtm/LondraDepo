@@ -23,6 +23,25 @@ export const metadata: Metadata = {
   },
 };
 
+const faqs = [
+  {
+    q: "Başka bir UK konumundan ürün toplayabilir misiniz?",
+    a: "Evet. UK içindeki farklı konumlardan ürün toplama ve Essex depomuza getirme operasyonlarını koordine edebiliyoruz. Detaylar için WhatsApp üzerinden bilgi alın.",
+  },
+  {
+    q: "İngiltere'nin tüm bölgelerine dağıtım yapıyor musunuz?",
+    a: "Evet. Essex merkezli operasyonumuzdan Londra, Birmingham, Manchester ve İngiltere geneline teslimat koordinasyonu sağlıyoruz.",
+  },
+  {
+    q: "UK içi dağıtım için minimum sevkiyat hacmi var mı?",
+    a: "Sabit bir minimum yoktur. Küçük ölçekli koliden büyük palet sevkiyatına kadar farklı hacimlerde koordinasyon sağlıyoruz.",
+  },
+  {
+    q: "Nakliye ve dağıtım fiyatlandırması nasıl belirleniyor?",
+    a: "Fiyatlandırma sevkiyat hacmine, mesafeye ve hizmet kapsamına göre belirlenir. Bespoke fiyat teklifi için WhatsApp'tan yazın.",
+  },
+];
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
@@ -42,6 +61,14 @@ const jsonLd = {
         "İngiltere içi nakliye ve dağıtım hizmetleri. Ürün toplama, depo transferleri, yerel dağıtım ve UK geneli teslimat koordinasyonu.",
       areaServed: { "@type": "Country", name: "United Kingdom" },
       url: `${SITE_URL}/nakliye-dagitim`,
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: faqs.map(({ q, a }) => ({
+        "@type": "Question",
+        name: q,
+        acceptedAnswer: { "@type": "Answer", text: a },
+      })),
     },
   ],
 };
@@ -103,6 +130,21 @@ export default function NakliyeDagitimPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="py-16 px-4 bg-slate-50">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-extrabold text-[#0b2545] mb-8 text-center">Sık Sorulan Sorular</h2>
+            <dl className="space-y-4">
+              {faqs.map(({ q, a }) => (
+                <div key={q} className="bg-white rounded-2xl p-6 border border-slate-200">
+                  <dt className="font-bold text-[#0b2545] mb-2">{q}</dt>
+                  <dd className="text-slate-600 text-sm leading-relaxed">{a}</dd>
+                </div>
+              ))}
+            </dl>
           </div>
         </section>
 

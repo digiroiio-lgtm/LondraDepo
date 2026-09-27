@@ -112,6 +112,9 @@ const jsonLd = {
       sameAs: [
         "https://find-and-update.company-information.service.gov.uk/company/13247691",
         "https://www.linkedin.com/company/arcatradegroup/",
+        "https://bifa.org/members/arca-trade-group-ltd/",
+        "https://in.kompass.com/c/arca-trade-group-ltd/gbcs13970309/",
+        "https://open.endole.co.uk/insight/company/13247691-arca-trade-group-ltd",
       ],
     },
     {

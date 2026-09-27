@@ -38,7 +38,7 @@ const jsonLd = {
     {
       "@type": "Service",
       name: "Amazon Prep UK",
-      provider: { "@type": "Organization", name: "LondraDepo.com", url: SITE_URL },
+      provider: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
       serviceType: "Amazon FBA Preparation",
       description: "Amazon UK FBA uyumlu ürün hazırlama, etiketleme ve sevk hizmeti. İngiltere'de Amazon prep partneri.",
       areaServed: { "@type": "Country", name: "United Kingdom" },

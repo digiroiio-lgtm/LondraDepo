@@ -61,5 +61,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/blog/ingiltere-palet-depolama-maliyetleri`, lastModified: PHASE1, changeFrequency: "monthly", priority: 0.7 },
     { url: `${SITE_URL}/blog/amazon-fba-vs-uk-fulfillment`, lastModified: PHASE1, changeFrequency: "monthly", priority: 0.7 },
     { url: `${SITE_URL}/blog/turkiyeden-ingiltereye-ihracat-rehberi`, lastModified: PHASE1, changeFrequency: "monthly", priority: 0.7 },
+    // Yasal sayfalar
+    { url: `${SITE_URL}/privacy-policy`, lastModified: PHASE1, changeFrequency: "yearly", priority: 0.4 },
+    { url: `${SITE_URL}/cookie-policy`, lastModified: PHASE1, changeFrequency: "yearly", priority: 0.4 },
+    { url: `${SITE_URL}/sozlesme-kosullari`, lastModified: PHASE2, changeFrequency: "yearly", priority: 0.5 },
   ];
 }

@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Walking Treadmill UK Depo & Fulfillment Case Study | LondraDepo.com",
+    title: "Walking Treadmill UK Depo & Fulfillment Operasyonu | LondraDepo.com",
     description:
       "Yaşlı ve rehabilitasyon kullanıcıları için walking treadmill ürünlerinin İngiltere depo, online satış ve retail dağıtım operasyonu.",
   },
@@ -46,7 +46,7 @@ const jsonLd = {
         {
           "@type": "ListItem",
           position: 2,
-          name: "Başarı Hikayeleri",
+          name: "Operasyon Örnekleri",
           item: `${SITE_URL}/case-studies`,
         },
         {
@@ -68,27 +68,14 @@ const jsonLd = {
       dateModified: "2026-05-24",
       author: {
         "@type": "Person",
-        name: "Sertaç Y.",
+        name: "Sertaç Yılmaz",
       },
-      reviewedBy: {
-        "@type": "Person",
-        name: "Yusuf B.",
-      },
-      publisher: {
-        "@type": "Organization",
-        name: "LondraDepo.com",
-        url: SITE_URL,
-      },
+      contributor: { "@type": "Person", name: "Yusuf Barış" },
+      publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
+      image: { "@type": "ImageObject", url: `${SITE_URL}/logo.png`, width: 512, height: 512 },
       mainEntityOfPage: PAGE_URL,
     },
-    {
-      "@type": "Organization",
-      "@id": `${SITE_URL}#organization`,
-      name: "LondraDepo.com",
-      url: SITE_URL,
-      description:
-        "Büyük hacimli ürünler dahil İngiltere depo, fulfillment ve online + retail dağıtım operasyonu.",
-    },
+    { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
     {
       "@type": "FAQPage",
       mainEntity: [
@@ -247,7 +234,7 @@ export default function WalkingTreadmillCaseStudyPage() {
             </Link>
             <span>/</span>
             <Link href="/case-studies" className="hover:text-[#0b2545] transition">
-              Başarı Hikayeleri
+              Operasyon Örnekleri
             </Link>
             <span>/</span>
             <span className="text-[#0b2545] font-medium">Walking Treadmill İngiltere Operasyonu</span>
@@ -569,7 +556,7 @@ export default function WalkingTreadmillCaseStudyPage() {
                 SY
               </div>
               <div>
-                <p className="font-bold text-[#0b2545] text-sm">Sertaç Y.</p>
+                <p className="font-bold text-[#0b2545] text-sm">Sertaç Yılmaz</p>
                 <p className="text-slate-500 text-xs mb-1">
                   UK Warehouse Operations Specialist — LondraDepo.com
                 </p>
@@ -579,7 +566,7 @@ export default function WalkingTreadmillCaseStudyPage() {
                 </p>
                 <p className="text-slate-400 text-xs mt-1">
                   İncelendi:{" "}
-                  <span className="font-medium text-slate-500">Yusuf B.</span> — Operations Manager
+                  <span className="font-medium text-slate-500">Yusuf Barış</span> — Operations Manager
                 </p>
               </div>
             </div>

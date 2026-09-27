@@ -35,38 +35,7 @@ const jsonLd = {
         { "@type": "ListItem", position: 2, name: "Hakkımızda", item: PAGE_URL },
       ],
     },
-    {
-      "@type": ["Organization", "LocalBusiness"],
-      "@id": `${SITE_URL}/#organization`,
-      name: "LondraDepo.com",
-      url: SITE_URL,
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "Unit 19 Arterial Park, Arterial Road",
-        addressLocality: "Rayleigh",
-        addressRegion: "Essex",
-        postalCode: "SS6 7FY",
-        addressCountry: "GB",
-      },
-      description:
-        "İngiltere depo, fulfillment ve dağıtım çözümleri sunan Essex merkezli UK operasyon partneri.",
-      foundingLocation: { "@type": "Place", name: "Essex, United Kingdom" },
-      areaServed: ["London", "Essex", "Birmingham", "Manchester", "United Kingdom"],
-      knowsAbout: [
-        "UK Warehousing",
-        "Fulfillment",
-        "Pallet Storage",
-        "Amazon Prep",
-        "UK Distribution",
-        "Turkish Export to UK",
-      ],
-      contactPoint: {
-        "@type": "ContactPoint",
-        contactType: "customer service",
-        availableLanguage: ["Turkish", "English"],
-        url: WHATSAPP,
-      },
-    },
+    { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
     {
       "@type": "AboutPage",
       "@id": `${PAGE_URL}/#webpage`,
@@ -75,7 +44,7 @@ const jsonLd = {
       description:
         "Essex merkezli İngiltere depo, fulfillment ve UK lojistik operasyonumuz. Türkiye'den İngiltere'ye ihracat yapan markaların UK lojistik partneri.",
       about: { "@id": `${SITE_URL}/#organization` },
-      isPartOf: { "@id": SITE_URL },
+      isPartOf: { "@id": `${SITE_URL}/#website` },
       inLanguage: "tr",
     },
   ],
@@ -105,7 +74,7 @@ export default function HakkimizdaPage() {
 
             <div className="prose max-w-none text-slate-600 mb-10 space-y-4">
               <p>
-                LondraDepo.com, Türkiye'den İngiltere'ye ihracat yapan markalar için fiziksel bir UK lojistik altyapısı sunar. Essex'teki depo operasyonumuz; ürünlerin İngiltere'ye gelişinden müşteriye teslimatına kadar tüm süreci tek noktadan yönetir.
+                LondraDepo.com, Türkiye'den İngiltere'ye ihracat yapan markalar için fiziksel bir UK lojistik altyapısı sunar. <strong>Arca Trade Group Ltd</strong> çatısı altında 2021'den beri faaliyet gösteren Essex depo operasyonumuz; ürünlerin İngiltere'ye gelişinden müşteriye teslimatına kadar tüm süreci tek noktadan yönetir.
               </p>
               <p>
                 Depomuz Rayleigh, Essex'teki Arterial Park sanayi bölgesinde yer alıyor: <strong>Unit 19 Arterial Park, Arterial Road, Rayleigh SS6 7FY</strong>. Bu konum, Londra'ya ~40 dakika, Felixstowe Limanı'na ~1 saat, Tilbury Limanı'na ~30 dakika mesafede. Türkiye'den gelen FCL konteynerlerin doğrudan teslim alındığı bu nokta; M25 üzerinden İngiltere'nin tamamına dağıtım yapabilmemizi sağlıyor.
@@ -150,6 +119,27 @@ export default function HakkimizdaPage() {
                   <span className="text-slate-400">→</span>
                 </Link>
               ))}
+            </div>
+
+            <div className="bg-[#f6f8fb] border border-slate-200 rounded-2xl p-6 mb-8">
+              <h2 className="text-lg font-bold text-[#0b2545] mb-3">Sektör Bağlantıları</h2>
+              <ul className="space-y-2 text-sm text-slate-600">
+                <li>
+                  🌐 <strong>GLA (Global Logistics Alliance)</strong> — Kurucumuz Sertaç Yılmaz, uluslararası yük taşımacılığı ağı GLA&apos;nın konferanslarına katılım sağlamaktadır. GLA üyesi olan kurucumuz, 15. GLA Global Lojistik Konferansı&apos;na (Bangkok, 2026) katılım sağlamaktadır.
+                </li>
+                <li>
+                  🏢 <strong>LinkedIn:</strong>{" "}
+                  <a href="https://www.linkedin.com/company/arcatradegroup/" target="_blank" rel="noopener noreferrer" className="text-[#0b2545] underline">
+                    linkedin.com/company/arcatradegroup
+                  </a>
+                </li>
+                <li>
+                  🏛️ <strong>Companies House:</strong>{" "}
+                  <a href="https://find-and-update.company-information.service.gov.uk/company/13247691" target="_blank" rel="noopener noreferrer" className="text-[#0b2545] underline">
+                    Arca Trade Group Ltd · No: 13247691
+                  </a>
+                </li>
+              </ul>
             </div>
 
             <div className="bg-[#0b2545] text-white rounded-2xl p-8 text-center">

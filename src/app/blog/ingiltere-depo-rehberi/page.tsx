@@ -45,7 +45,11 @@ const jsonLd = {
       headline: "İngiltere Depo Hizmeti: Kapsamlı Rehber 2025",
       description: "Türkiye'den İngiltere'ye ihracat yapan markalar için UK depolama süreçleri, maliyetler ve partner seçimi.",
       url: PAGE_URL,
-      publisher: { "@type": "Organization", name: "LondraDepo.com", url: SITE_URL },
+      datePublished: "2025-06-01",
+      dateModified: "2026-01-15",
+      author: { "@type": "Person", name: "Sertaç Yılmaz" },
+      publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
+      image: { "@type": "ImageObject", url: `${SITE_URL}/logo.png`, width: 512, height: 512 },
       inLanguage: "tr-TR",
     },
     {
@@ -100,7 +104,7 @@ export default function DepoRehberiPage() {
               categoryColor="text-green-700 bg-green-50"
               title="İngiltere Depo Hizmeti: Kapsamlı Rehber"
               readTime="6 dakika"
-              date="2025"
+              date="Ocak 2026"
             />
 
             <p className="text-lg leading-relaxed text-slate-600 mb-8">
@@ -140,7 +144,8 @@ export default function DepoRehberiPage() {
               <h2>İngiltere Depolama Süreci Nasıl İşler?</h2>
               <ol>
                 <li><strong>Türkiye&apos;den sevkiyat:</strong> Ürünleriniz FCL veya LCL konteynerle İngiltere&apos;ye gönderilir.</li>
-                <li><strong>Gümrük ve ithalat:</strong> Ürünler İngiltere gümrüğünden geçer, gerekli GTIP ve ithalat işlemleri tamamlanır.</li>
+                <li><strong>Gümrük ve ithalat:</strong> Ürünler İngiltere gümrüğünden geçer, gerekli GTIP ve{" "}
+                  <a href="https://www.gov.uk/import-goods-into-uk" target="_blank" rel="noopener noreferrer" className="text-[#0b2545] underline">ithalat beyanı işlemleri</a> tamamlanır.</li>
                 <li><strong>Depoya kabul:</strong> Essex depomuza ulaşan ürünler sayılır, kontrol edilir ve stoka alınır.</li>
                 <li><strong>Depolama:</strong> Ürünler ihtiyaca göre palet veya raf sisteminde depolanır.</li>
                 <li><strong>Sipariş hazırlama:</strong> Gelen siparişler doğrultusunda ürünler toplanır, paketlenir ve sevke hazırlanır.</li>

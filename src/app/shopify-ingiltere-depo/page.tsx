@@ -48,7 +48,7 @@ const jsonLd = {
     {
       "@type": "Service",
       name: "Shopify İçin İngiltere Depo ve Sipariş Karşılama",
-      provider: { "@type": "Organization", name: "LondraDepo.com", url: SITE_URL },
+      provider: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
       serviceType: "Shopify Warehousing and Fulfilment",
       description:
         "Shopify mağazaları için İngiltere'de stok depolama ve sipariş karşılama. Ürünler Essex depomuzda; sipariş geldiğinde depo ekibi pick, pack ve sevk eder.",

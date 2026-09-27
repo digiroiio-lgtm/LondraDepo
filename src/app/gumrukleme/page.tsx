@@ -36,7 +36,7 @@ const jsonLd = {
     {
       "@type": "Service",
       name: "İngiltere Gümrükleme Süreci Koordinasyonu",
-      provider: { "@type": "Organization", name: "LondraDepo.com", url: SITE_URL },
+      provider: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
       serviceType: "Customs Clearance Coordination",
       description:
         "İngiltere'ye ithalat için gümrükleme süreci koordinasyonu ve desteği. UK gümrük belgesi koordinasyonu ve sevkiyat-depo operasyonu.",

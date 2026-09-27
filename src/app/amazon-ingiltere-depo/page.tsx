@@ -48,7 +48,7 @@ const jsonLd = {
     {
       "@type": "Service",
       name: "Amazon İçin İngiltere Depo ve Sipariş Karşılama (FBM)",
-      provider: { "@type": "Organization", name: "LondraDepo.com", url: SITE_URL },
+      provider: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
       serviceType: "Amazon FBM Warehousing and Fulfilment",
       description:
         "Amazon FBM (Fulfilled by Merchant) modeliyle UK'de satış yapan işletmeler için Essex depomuzdan sipariş karşılama hizmeti.",

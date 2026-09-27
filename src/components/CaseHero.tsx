@@ -46,7 +46,7 @@ export default function CaseHero({
           <span className={`text-xs font-bold px-3 py-1 rounded-full ${industryColor}`}>
             {industry}
           </span>
-          <span className="text-white/60 text-sm">Case Study — {brand}</span>
+          <span className="text-white/60 text-sm">Operasyon Örneği — {brand}</span>
         </div>
 
         {/* Middle: headline */}

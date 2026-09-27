@@ -54,7 +54,7 @@ const jsonLd = {
     {
       "@type": "Service",
       name: "UK Warehousing & Fulfilment",
-      provider: { "@type": "Organization", name: "LondraDepo.com", url: SITE_URL },
+      provider: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
       serviceType: "Warehousing and Fulfilment",
       description:
         "UK warehousing, customs clearance coordination, goods handling, pick & pack, e-commerce fulfilment, Shopify fulfilment, Amazon fulfilment and UK distribution from Essex.",

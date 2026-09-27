@@ -55,7 +55,7 @@ const jsonLd = {
     {
       "@type": "Service",
       name: "İngiltere Elleçleme Hizmeti",
-      provider: { "@type": "Organization", name: "LondraDepo.com", url: SITE_URL },
+      provider: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
       serviceType: "Goods Handling",
       description:
         "İngiltere'de araç boşaltma, yükleme, palet ve koli elleçleme, ürün kabul, sıralama, yeniden paketleme, etiketleme ve sevkiyat hazırlama.",

@@ -36,7 +36,7 @@ const jsonLd = {
     {
       "@type": "Service",
       name: "Amazon İngiltere Fulfillment",
-      provider: { "@type": "Organization", name: "LondraDepo.com", url: SITE_URL },
+      provider: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
       serviceType: "Amazon Fulfillment",
       description:
         "Amazon üzerinden satış yapan işletmeler için İngiltere fulfillment hizmeti. Stok depolama, sipariş yönetimi, pick & pack ve UK teslimat desteği.",

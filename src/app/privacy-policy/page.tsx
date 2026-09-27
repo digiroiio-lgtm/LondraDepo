@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-const LAST_UPDATED = "24 Mayıs 2025";
+const LAST_UPDATED = "Eylül 2026";
 
 export default function PrivacyPolicyPage() {
   return (
@@ -40,7 +40,9 @@ export default function PrivacyPolicyPage() {
               <h2 className="text-xl font-bold text-[#0b2545] mb-3">1. Veri Sorumlusu</h2>
               <p className="text-slate-600 leading-relaxed">
                 Bu gizlilik politikası, İngiltere merkezli lojistik ve depolama hizmetleri sunan
-                <strong> LondraDepo.com</strong> tarafından hazırlanmıştır. Kişisel verilerinizin
+                <strong> LondraDepo.com</strong> tarafından hazırlanmıştır. LondraDepo.com,
+                <strong> Arca Trade Group Ltd</strong> (şirket no: 13247691) adına faaliyet
+                göstermekte olup İngiltere&apos;de kayıtlı bir şirkettir. Kişisel verilerinizin
                 işlenmesinden sorumlu veri işleyici olarak UK GDPR ve PECR kapsamındaki
                 yükümlülüklere uymaktayız.
               </p>

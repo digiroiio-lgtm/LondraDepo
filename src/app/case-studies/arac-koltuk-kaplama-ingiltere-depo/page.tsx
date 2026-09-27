@@ -42,7 +42,7 @@ const jsonLd = {
         {
           "@type": "ListItem",
           position: 2,
-          name: "Başarı Hikayeleri",
+          name: "Operasyon Örnekleri",
           item: `${SITE_URL}/case-studies`,
         },
         {
@@ -61,11 +61,8 @@ const jsonLd = {
       description:
         "Araç koltuk kaplama ve suni deri malzemelerinin İngiltere depo altyapısı, stok yönetimi, online fulfillment ve B2B dağıtım operasyonu.",
       url: PAGE_URL,
-      publisher: {
-        "@type": "Organization",
-        name: "LondraDepo.com",
-        url: SITE_URL,
-      },
+      publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
+      image: { "@type": "ImageObject", url: `${SITE_URL}/logo.png`, width: 512, height: 512 },
       mainEntityOfPage: PAGE_URL,
     },
     {
@@ -200,7 +197,7 @@ export default function AracKoltukKaplamaCaseStudyPage() {
             </Link>
             <span>/</span>
             <Link href="/case-studies" className="hover:text-[#0b2545] transition">
-              Başarı Hikayeleri
+              Operasyon Örnekleri
             </Link>
             <span>/</span>
             <span className="text-[#0b2545] font-medium">

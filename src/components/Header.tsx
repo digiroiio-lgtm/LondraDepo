@@ -9,7 +9,7 @@ const navLinks = [
   { href: "/ingiltere-depo", label: "İngiltere Depo" },
   { href: "/ingiltere-e-ticaret-lojistigi", label: "E-Ticaret Lojistiği" },
   { href: "/turkiyeden-ingiltereye-satis", label: "TR → UK" },
-  { href: "/case-studies", label: "Vaka Çalışmaları" },
+  { href: "/case-studies", label: "Operasyon Örnekleri" },
   { href: "/blog", label: "Blog" },
   { href: "/#teklif", label: "Teklif Al" },
 ];

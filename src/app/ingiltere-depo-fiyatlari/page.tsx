@@ -49,7 +49,7 @@ const jsonLd = {
     {
       "@type": "Service",
       name: "İngiltere Depo ve Fulfillment Fiyatları",
-      provider: { "@type": "Organization", name: "LondraDepo.com", url: SITE_URL },
+      provider: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
       serviceType: "Warehousing Pricing",
       description:
         "İngiltere depo ve fulfillment hizmet fiyatları. Mal kabul, depolama, pick & pack, kargo ve iade için maliyet kalemleri.",

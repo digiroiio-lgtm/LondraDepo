@@ -15,7 +15,7 @@ const WHATSAPP =
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title:
-    "Cruyff UK Fulfillment & Fashion Warehouse Case Study | LondraDepo.com",
+    "Cruyff UK Fulfillment & Fashion Warehouse Operasyonu | LondraDepo.com",
   description:
     "Johan Cruyff'a ait Cruyff markasının Hollanda'dan İngiltere fulfillment operasyonuna geçiş süreci. UK warehouse, repackaging, ecommerce fulfillment ve dağıtım operasyonu.",
   alternates: { canonical: PAGE_URL },
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cruyff UK Fulfillment Case Study | LondraDepo.com",
+    title: "Cruyff UK Fulfillment Operasyonu | LondraDepo.com",
     description:
       "Cruyff markasının Hollanda'dan UK fulfillment altyapısına geçiş operasyonu.",
   },
@@ -48,7 +48,7 @@ const jsonLd = {
         {
           "@type": "ListItem",
           position: 2,
-          name: "Başarı Hikayeleri",
+          name: "Operasyon Örnekleri",
           item: `${SITE_URL}/case-studies`,
         },
         {
@@ -70,27 +70,14 @@ const jsonLd = {
       dateModified: "2026-05-24",
       author: {
         "@type": "Person",
-        name: "Sertaç Y.",
+        name: "Sertaç Yılmaz",
       },
-      reviewedBy: {
-        "@type": "Person",
-        name: "Yusuf B.",
-      },
-      publisher: {
-        "@type": "Organization",
-        name: "LondraDepo.com",
-        url: SITE_URL,
-      },
+      contributor: { "@type": "Person", name: "Yusuf Barış" },
+      publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
+      image: { "@type": "ImageObject", url: `${SITE_URL}/logo.png`, width: 512, height: 512 },
       mainEntityOfPage: PAGE_URL,
     },
-    {
-      "@type": "Organization",
-      "@id": `${SITE_URL}#organization`,
-      name: "LondraDepo.com",
-      url: SITE_URL,
-      description:
-        "Türkiye'den İngiltere'ye satış yapan firmalar için UK warehouse, fulfillment ve lojistik altyapısı.",
-    },
+    { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
     {
       "@type": "FAQPage",
       mainEntity: [
@@ -243,7 +230,7 @@ export default function CruyffCaseStudyPage() {
             </Link>
             <span>/</span>
             <Link href="/case-studies" className="hover:text-[#0b2545] transition">
-              Başarı Hikayeleri
+              Operasyon Örnekleri
             </Link>
             <span>/</span>
             <span className="text-[#0b2545] font-medium">Cruyff UK Fashion Fulfillment</span>
@@ -519,7 +506,7 @@ export default function CruyffCaseStudyPage() {
                 SY
               </div>
               <div>
-                <p className="font-bold text-[#0b2545] text-sm">Sertaç Y.</p>
+                <p className="font-bold text-[#0b2545] text-sm">Sertaç Yılmaz</p>
                 <p className="text-slate-500 text-xs mb-1">
                   UK Warehouse Operations Specialist — LondraDepo.com
                 </p>
@@ -529,7 +516,7 @@ export default function CruyffCaseStudyPage() {
                 </p>
                 <p className="text-slate-400 text-xs mt-1">
                   İncelendi:{" "}
-                  <span className="font-medium text-slate-500">Yusuf B.</span> — Operations Manager
+                  <span className="font-medium text-slate-500">Yusuf Barış</span> — Operations Manager
                 </p>
               </div>
             </div>

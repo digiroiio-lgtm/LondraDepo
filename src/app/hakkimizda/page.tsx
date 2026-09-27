@@ -128,6 +128,12 @@ export default function HakkimizdaPage() {
                   🌐 <strong>GLA (Global Logistics Alliance)</strong> — Kurucumuz Sertaç Yılmaz, uluslararası yük taşımacılığı ağı GLA&apos;nın konferanslarına katılım sağlamaktadır. GLA üyesi olan kurucumuz, 15. GLA Global Lojistik Konferansı&apos;na (Bangkok, 2026) katılım sağlamaktadır.
                 </li>
                 <li>
+                  🏛️ <strong>BIFA (British International Freight Association):</strong>{" "}
+                  <a href="https://bifa.org/members/arca-trade-group-ltd/" target="_blank" rel="noopener noreferrer" className="text-[#0b2545] underline">
+                    Arca Trade Group Ltd — Kayıtlı BIFA Üyesi
+                  </a>
+                </li>
+                <li>
                   🏢 <strong>LinkedIn:</strong>{" "}
                   <a href="https://www.linkedin.com/company/arcatradegroup/" target="_blank" rel="noopener noreferrer" className="text-[#0b2545] underline">
                     linkedin.com/company/arcatradegroup

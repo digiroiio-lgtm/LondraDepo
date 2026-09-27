@@ -74,7 +74,7 @@ export default function Footer() {
           warehouse ve İngiltere fulfillment çözümleri. Tüm hakları saklıdır.
         </p>
         <p className="text-slate-400">
-          Arca Trade Group Ltd · Registered in England &amp; Wales · Company No: 13247691
+          Arca Trade Group Ltd · Registered in England &amp; Wales · Company No: 13247691 · VAT: GB353315322
         </p>
         <div className="flex flex-wrap items-center justify-center gap-4">
           <a href="/privacy-policy" className="hover:text-white transition">Gizlilik Politikası</a>
@@ -83,6 +83,7 @@ export default function Footer() {
           {/* TODO: confirm email — replace YOUR_EMAIL with actual address */}
           {/* <a href="mailto:YOUR_EMAIL" className="hover:text-white transition">E-posta</a> */}
           <a href="https://www.linkedin.com/company/arcatradegroup/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">LinkedIn</a>
+          <a href="https://bifa.org/members/arca-trade-group-ltd/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">BIFA Üyesi</a>
           <CookieSettingsButton />
         </div>
       </div>

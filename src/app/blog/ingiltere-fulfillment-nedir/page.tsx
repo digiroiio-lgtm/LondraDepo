@@ -48,6 +48,26 @@ const jsonLd = {
       publisher: { "@type": "Organization", name: "LondraDepo.com", url: SITE_URL },
       inLanguage: "tr-TR",
     },
+    {
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "İngiltere fulfillment hizmeti nedir?",
+          acceptedAnswer: { "@type": "Answer", text: "Fulfillment, müşteri siparişlerinin depodan toplanması, paketlenmesi ve gönderilmesi sürecidir. UK depomuzdaki ürünlerinizi stoklar, siparişleri hazırlayarak müşterilerinize gönderiyoruz." },
+        },
+        {
+          "@type": "Question",
+          name: "Amazon FBA için UK fulfillment desteği veriyor musunuz?",
+          acceptedAnswer: { "@type": "Answer", text: "Evet. Amazon prep hizmetimiz kapsamında ürünlerinizi FBA uyumlu hale getiriyor, etiketliyor ve Amazon deposuna sevk ediyoruz." },
+        },
+        {
+          "@type": "Question",
+          name: "Shopify ve Etsy siparişlerini de karşılıyor musunuz?",
+          acceptedAnswer: { "@type": "Answer", text: "Evet. Shopify, Etsy ve diğer e-ticaret platformlarından gelen siparişleri operasyon sürecimize dahil ediyoruz." },
+        },
+      ],
+    },
   ],
 };
 

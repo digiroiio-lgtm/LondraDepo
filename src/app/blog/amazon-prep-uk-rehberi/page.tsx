@@ -48,6 +48,26 @@ const jsonLd = {
       publisher: { "@type": "Organization", name: "LondraDepo.com", url: SITE_URL },
       inLanguage: "tr-TR",
     },
+    {
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Amazon prep için Türkiye'den mi göndermeliyim?",
+          acceptedAnswer: { "@type": "Answer", text: "Ürünlerinizi doğrudan Türkiye'den İngiltere'deki depomuza gönderebilirsiniz. Biz oradan prep işlemlerini yapıp Amazon'a sevk ediyoruz." },
+        },
+        {
+          "@type": "Question",
+          name: "Shipment plan oluşturmaya yardım ediyor musunuz?",
+          acceptedAnswer: { "@type": "Answer", text: "Evet. Amazon Seller Central üzerindeki shipment plan oluşturma sürecinde rehberlik ediyoruz." },
+        },
+        {
+          "@type": "Question",
+          name: "Kaç adet ürün için minimum sipariş var mı?",
+          acceptedAnswer: { "@type": "Answer", text: "Sabit bir minimum yoktur. İhtiyacınıza göre esneklik sunuyoruz — hem küçük batch'ler hem büyük konteyner operasyonları için çalışıyoruz." },
+        },
+      ],
+    },
   ],
 };
 

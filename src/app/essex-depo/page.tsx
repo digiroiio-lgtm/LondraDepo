@@ -97,15 +97,47 @@ export default function EssexDepoPage() {
               Essex merkezli depomuz, Türkiye'den İngiltere'ye ihracat yapan markalar için stratejik bir konumda yer alıyor. Londra'ya yakınlığı sayesinde İngiltere genelinde hızlı dağıtım imkânı sunan operasyonumuz, palet depolama, fulfillment ve Amazon prep hizmetlerini tek çatı altında sağlıyor.
             </p>
 
+            {/* Address card */}
+            <div className="border border-slate-200 rounded-2xl p-6 mb-8 flex flex-col sm:flex-row gap-4 items-start">
+              <div className="text-3xl">📍</div>
+              <div>
+                <p className="font-bold text-[#0b2545] mb-1">Depo Adresi</p>
+                <p className="text-slate-700 text-sm leading-relaxed">
+                  Unit 19 Arterial Park, Arterial Road<br />
+                  Rayleigh, Essex SS6 7FY<br />
+                  United Kingdom
+                </p>
+                <a
+                  href="https://maps.google.com/?q=Unit+19+Arterial+Park+Arterial+Road+Rayleigh+Essex+SS6+7FY"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-3 text-xs text-[#0b2545] font-semibold hover:underline"
+                >
+                  Google Maps&apos;te Gör →
+                </a>
+              </div>
+            </div>
+
             <div className="bg-[#0b2545] text-white rounded-2xl p-8 mb-10">
               <h2 className="text-xl font-bold mb-4">Neden Essex?</h2>
               <ul className="space-y-2 text-sm text-slate-200">
-                <li>✓ Londra'ya yakın stratejik konum</li>
-                <li>✓ Felixstowe ve Tilbury limanlarına yakın erişim</li>
-                <li>✓ İngiltere kuzey ve güneye kolay dağıtım</li>
-                <li>✓ Amazon UK depolarına hızlı teslimat</li>
-                <li>✓ Türkiye'den gelen konteyner ve parsiyel yük kabulü</li>
+                <li>✓ Londra&apos;ya ~40 dakika (A127/M25 güzergahı)</li>
+                <li>✓ Felixstowe Limanı&apos;na ~1 saat — İngiltere&apos;nin en büyük konteyner limanı</li>
+                <li>✓ Tilbury Limanı&apos;na ~30 dakika — Türkiye&apos;den gelen ro-ro ve konteyner hatları</li>
+                <li>✓ M25 çevre yolu üzerinden İngiltere kuzeyine ve güneyine kolay dağıtım</li>
+                <li>✓ Amazon UK depolarına (Tilbury, Dartford) hızlı teslimat</li>
+                <li>✓ Türkiye&apos;den gelen FCL ve LCL konteynerlerin doğrudan kabulü</li>
               </ul>
+            </div>
+
+            <div className="mb-10">
+              <h2 className="text-2xl font-extrabold text-[#0b2545] mb-4">Depo Konumu ve Ulaşım</h2>
+              <p className="text-slate-600 leading-relaxed mb-4">
+                Depomuz, Rayleigh'deki Arterial Park sanayi bölgesinde yer alıyor. A127 Arterial Road üzerindeki konumu, M25 otoyoluna ve Londra&apos;ya doğrudan erişim sağlıyor. Felixstowe&apos;dan gelen konteynerlerin rota üzerinde duraksız teslim alabileceği stratejik bir nokta.
+              </p>
+              <p className="text-slate-600 leading-relaxed">
+                Rayleigh, Essex&apos;in Rochford ilçesinde, Southend-on-Sea&apos;ya ~10 km uzaklıkta. Tır ve konteyner taşıyıcıları için geniş giriş kapısı ve yükleme rampasıyla donatılmış depo alanımız, FCL boşaltma ve paletli yük kabulü için uygundur.
+              </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">

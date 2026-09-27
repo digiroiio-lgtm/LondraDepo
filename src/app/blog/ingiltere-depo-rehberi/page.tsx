@@ -48,6 +48,26 @@ const jsonLd = {
       publisher: { "@type": "Organization", name: "LondraDepo.com", url: SITE_URL },
       inLanguage: "tr-TR",
     },
+    {
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "İngiltere depo hizmetiniz hangi firmalar için uygun?",
+          acceptedAnswer: { "@type": "Answer", text: "Türkiye'den İngiltere'ye ihracat yapan markalar, e-ticaret satıcıları, toptancılar, gıda üreticileri ve ithalatçılar için uygundur." },
+        },
+        {
+          "@type": "Question",
+          name: "Paletli ürün kabul ediyor musunuz?",
+          acceptedAnswer: { "@type": "Answer", text: "Evet. İngiltere palet depolama ihtiyacı olan işletmelere uygun çözümler sağlıyoruz." },
+        },
+        {
+          "@type": "Question",
+          name: "Sadece depo mu, dağıtım da sağlıyor musunuz?",
+          acceptedAnswer: { "@type": "Answer", text: "Depolama ile birlikte dağıtım hazırlığı ve operasyon desteği de sunuyoruz." },
+        },
+      ],
+    },
   ],
 };
 

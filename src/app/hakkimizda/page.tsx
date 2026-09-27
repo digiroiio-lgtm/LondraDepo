@@ -105,13 +105,16 @@ export default function HakkimizdaPage() {
 
             <div className="prose max-w-none text-slate-600 mb-10 space-y-4">
               <p>
-                İngiltere'de fiziksel operasyon yürüten bir yapı olarak; ürünlerinizin İngiltere'ye gümrüksüz girişinden itibaren depolanması, siparişlerinizin hazırlanması ve dağıtımınızın sağlanması süreçlerini tek noktadan yönetiyoruz.
+                LondraDepo.com, Türkiye'den İngiltere'ye ihracat yapan markalar için fiziksel bir UK lojistik altyapısı sunar. Essex'teki depo operasyonumuz; ürünlerin İngiltere'ye gelişinden müşteriye teslimatına kadar tüm süreci tek noktadan yönetir.
               </p>
               <p>
-                Essex konumumuz, Londra'ya yakınlığı ve liman erişimiyle stratejik bir üs görevi görüyor. Felixstowe ve Tilbury limanlarından gelen konteyner yükleri doğrudan depomuzda karşılanıyor.
+                Depomuz Rayleigh, Essex'teki Arterial Park sanayi bölgesinde yer alıyor: <strong>Unit 19 Arterial Park, Arterial Road, Rayleigh SS6 7FY</strong>. Bu konum, Londra'ya ~40 dakika, Felixstowe Limanı'na ~1 saat, Tilbury Limanı'na ~30 dakika mesafede. Türkiye'den gelen FCL konteynerlerin doğrudan teslim alındığı bu nokta; M25 üzerinden İngiltere'nin tamamına dağıtım yapabilmemizi sağlıyor.
               </p>
               <p>
-                Türk ihracatçılarına, e-ticaret satıcılarına, toptancılara ve ithalatçılara UK'da güvenilir bir lojistik partner sunuyoruz. Amazon, Etsy, Shopify satıcıları ile perakende markaları için özelleştirilmiş operasyon modelleri geliştiriyoruz.
+                Operasyonumuz Mintsoft WMS üzerinde çalışıyor. Stok seviyeleri, gelen ve çıkan sevkiyatlar, sipariş durumları gerçek zamanlı takip edilebiliyor. Bu altyapı, hem Amazon FBA prep hem Shopify/e-ticaret fulfillment hem de B2B toptancı dağıtım modellerini destekliyor.
+              </p>
+              <p>
+                Türkçe operasyon iletişimi sunuyoruz. İhracat belgelerinden gümrük koordinasyonuna, ürün kabulünden stok raporlamasına kadar her adımda Türkçe destek sağlanıyor. Bu, İngiltere'de ilk kez operasyon kuran Türk markaları için kritik bir farklılaştırıcı.
               </p>
             </div>
 

@@ -112,13 +112,28 @@ export default function IletisimPage() {
             </div>
 
             <div className="bg-[#f6f8fb] rounded-2xl p-8 mb-10">
-              <h2 className="text-xl font-bold text-[#0b2545] mb-4">Operasyon Bölgesi</h2>
-              <ul className="space-y-2 text-slate-600 text-sm">
-                <li>📍 <strong>Merkez:</strong> Essex, İngiltere</li>
+              <h2 className="text-xl font-bold text-[#0b2545] mb-4">Depo Adresi & Operasyon Bölgesi</h2>
+              <ul className="space-y-3 text-slate-600 text-sm">
+                <li className="flex gap-2">
+                  <span>📍</span>
+                  <span>
+                    <strong>Depo Adresi:</strong><br />
+                    Unit 19 Arterial Park, Arterial Road<br />
+                    Rayleigh, Essex SS6 7FY, United Kingdom
+                  </span>
+                </li>
                 <li>🚚 <strong>Dağıtım Bölgesi:</strong> Tüm İngiltere (Londra, Birmingham, Manchester, Leeds ve çevresi)</li>
                 <li>🌍 <strong>Kaynak:</strong> Türkiye ve diğer ülkelerden ihracat</li>
                 <li>🗣️ <strong>Diller:</strong> Türkçe ve İngilizce</li>
               </ul>
+              <a
+                href="https://maps.google.com/?q=Unit+19+Arterial+Park+Arterial+Road+Rayleigh+Essex+SS6+7FY"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-4 text-xs text-[#0b2545] font-semibold hover:underline"
+              >
+                Google Maps&apos;te Aç →
+              </a>
             </div>
 
             <div className="bg-[#0b2545] text-white rounded-2xl p-8 text-center">

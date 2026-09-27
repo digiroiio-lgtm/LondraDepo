@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-const LAST_UPDATED = "24 Mayıs 2025";
+const LAST_UPDATED = "Eylül 2026";
 
 export default function PrivacyPolicyPage() {
   return (

@@ -48,6 +48,7 @@ const jsonLd = {
       author: { "@type": "Person", name: "Sertaç Y." },
       publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
       image: { "@type": "ImageObject", url: `${SITE_URL}/logo.png`, width: 512, height: 512 },
+      datePublished: "2025-06-01",
       dateModified: "2026-01-01",
       inLanguage: "tr-TR",
     },

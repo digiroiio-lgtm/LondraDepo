@@ -39,7 +39,7 @@ const jsonLd = {
     {
       "@type": "Service",
       name: "İngiltere Palet Depolama",
-      provider: { "@type": "Organization", name: "LondraDepo.com", url: SITE_URL },
+      provider: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
       serviceType: "Pallet Storage",
       description: "UK'da palet bazında depolama hizmeti. Toptancı, ithalatçı ve üreticiler için maliyet kontrollü pallet storage.",
       areaServed: { "@type": "Country", name: "United Kingdom" },

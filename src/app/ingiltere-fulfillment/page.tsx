@@ -40,7 +40,7 @@ const jsonLd = {
     {
       "@type": "Service",
       name: "İngiltere Fulfillment Hizmeti",
-      provider: { "@type": "Organization", name: "LondraDepo.com", url: SITE_URL },
+      provider: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
       serviceType: "Fulfillment",
       description:
         "Sipariş toplama, paketleme ve sevk süreçlerinizi UK'dan yönetin. Amazon, Etsy ve Shopify uyumlu fulfillment operasyonu.",

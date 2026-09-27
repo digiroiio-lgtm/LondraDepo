@@ -45,7 +45,11 @@ const jsonLd = {
       headline: "Amazon Prep UK: Adım Adım Rehber 2025",
       description: "Amazon FBA için İngiltere prep hizmeti rehberi. FNSKU etiketleme, FBA hazırlık ve sevk süreçleri.",
       url: PAGE_URL,
-      publisher: { "@type": "Organization", name: "LondraDepo.com", url: SITE_URL },
+      datePublished: "2025-06-01",
+      dateModified: "2026-01-15",
+      author: { "@type": "Person", name: "Sertaç Y." },
+      publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
+      image: { "@type": "ImageObject", url: `${SITE_URL}/logo.png`, width: 512, height: 512 },
       inLanguage: "tr-TR",
     },
     {
@@ -100,7 +104,7 @@ export default function AmazonPrepRehberiPage() {
               categoryColor="text-orange-700 bg-orange-50"
               title="Amazon Prep UK: Adım Adım Rehber"
               readTime="7 dakika"
-              date="2025"
+              date="Ocak 2026"
             />
 
             <p className="text-lg leading-relaxed text-slate-600 mb-8">

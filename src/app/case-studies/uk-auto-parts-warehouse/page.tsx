@@ -47,11 +47,8 @@ const jsonLd = {
       description:
         "Lüks araç OEM ve aftermarket yedek parçalarının İngiltere'de hasar kontrollü depolanması ve UK dağıtım ağına entegrasyonu.",
       url: PAGE_URL,
-      publisher: {
-        "@type": "Organization",
-        name: "LondraDepo.com",
-        url: SITE_URL,
-      },
+      publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
+      image: { "@type": "ImageObject", url: `${SITE_URL}/logo.png`, width: 512, height: 512 },
       mainEntityOfPage: PAGE_URL,
     },
     {

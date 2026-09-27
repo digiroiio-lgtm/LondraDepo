@@ -101,13 +101,17 @@ const jsonLd = {
         postalCode: "SS6 7FY",
         addressCountry: "GB",
       },
+      telephone: "+447554195190",
+      knowsAbout: ["UK Warehousing", "Fulfillment", "Pallet Storage", "Amazon Prep", "UK Distribution", "Turkish Export to UK"],
       contactPoint: {
         "@type": "ContactPoint",
         contactType: "customer service",
         availableLanguage: ["Turkish", "English"],
         url: "https://wa.me/447554195190?text=Merhaba%2C%20depo%20teklifi%20almak%20istiyorum.",
       },
-      sameAs: [],
+      sameAs: [
+        "https://find-and-update.company-information.service.gov.uk/company/13247691",
+      ],
     },
     {
       "@type": "WebSite",

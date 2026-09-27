@@ -45,7 +45,11 @@ const jsonLd = {
       headline: "İngiltere Fulfillment Nedir? Nasıl Çalışır?",
       description: "UK fulfillment hizmeti rehberi — e-ticaret satıcıları için sipariş hazırlama ve sevk süreçleri.",
       url: PAGE_URL,
-      publisher: { "@type": "Organization", name: "LondraDepo.com", url: SITE_URL },
+      datePublished: "2025-06-01",
+      dateModified: "2026-01-15",
+      author: { "@type": "Person", name: "Sertaç Y." },
+      publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
+      image: { "@type": "ImageObject", url: `${SITE_URL}/logo.png`, width: 512, height: 512 },
       inLanguage: "tr-TR",
     },
     {
@@ -100,7 +104,7 @@ export default function FulfillmentNedirPage() {
               categoryColor="text-blue-700 bg-blue-50"
               title="İngiltere Fulfillment Nedir? Nasıl Çalışır?"
               readTime="5 dakika"
-              date="2025"
+              date="Ocak 2026"
             />
 
             <p className="text-lg leading-relaxed text-slate-600 mb-8">

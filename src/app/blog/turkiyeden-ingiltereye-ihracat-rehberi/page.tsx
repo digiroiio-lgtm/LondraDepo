@@ -46,7 +46,8 @@ const jsonLd = {
       description: "Türk ihracatçılar için UK ihracat süreçleri, gümrük ve operasyon rehberi.",
       url: PAGE_URL,
       author: { "@type": "Person", name: "Sertaç Y." },
-      publisher: { "@type": "Organization", name: "LondraDepo.com", url: SITE_URL },
+      publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
+      image: { "@type": "ImageObject", url: `${SITE_URL}/logo.png`, width: 512, height: 512 },
       dateModified: "2026-01-01",
       inLanguage: "tr-TR",
     },
@@ -198,8 +199,16 @@ export default function IhracatRehberiPage() {
               <h3>Brexit sonrası Türkiye&apos;den İngiltere&apos;ye ihracat nasıl etkilendi?</h3>
               <p>
                 Brexit sonrası AB gümrük birliği geçerli olmadığından UK&apos;ya ayrı gümrük
-                beyanı gereklidir. Türkiye-UK serbest ticaret anlaşması 2021&apos;de yürürlüğe
-                girdi; bu anlaşma kapsamındaki ürünler için gümrük vergisinden muafiyet
+                beyanı gereklidir.{" "}
+                <a
+                  href="https://www.gov.uk/guidance/uk-turkey-trade-agreement"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#0b2545] underline"
+                >
+                  Türkiye-UK serbest ticaret anlaşması 2021&apos;de yürürlüğe girdi
+                </a>
+                ; bu anlaşma kapsamındaki ürünler için gümrük vergisinden muafiyet
                 veya indirim uygulanabilir.
               </p>
 

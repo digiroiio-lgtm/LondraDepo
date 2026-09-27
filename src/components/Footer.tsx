@@ -73,9 +73,17 @@ export default function Footer() {
           © {new Date().getFullYear()} LondraDepo.com — Londra depo, İngiltere
           warehouse ve İngiltere fulfillment çözümleri. Tüm hakları saklıdır.
         </p>
+        <p className="text-slate-400">
+          Arca Trade Group Ltd · Registered in England &amp; Wales · Company No: 13247691
+        </p>
         <div className="flex flex-wrap items-center justify-center gap-4">
           <a href="/privacy-policy" className="hover:text-white transition">Gizlilik Politikası</a>
           <a href="/cookie-policy" className="hover:text-white transition">Çerez Politikası</a>
+          <a href="/sozlesme-kosullari" className="hover:text-white transition">Sözleşme Koşulları</a>
+          {/* TODO: confirm email — replace YOUR_EMAIL with actual address */}
+          {/* <a href="mailto:YOUR_EMAIL" className="hover:text-white transition">E-posta</a> */}
+          {/* TODO: confirm LinkedIn — replace YOUR_LINKEDIN_URL with actual URL */}
+          {/* <a href="YOUR_LINKEDIN_URL" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">LinkedIn</a> */}
           <CookieSettingsButton />
         </div>
       </div>

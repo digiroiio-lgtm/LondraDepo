@@ -35,38 +35,7 @@ const jsonLd = {
         { "@type": "ListItem", position: 2, name: "Hakkımızda", item: PAGE_URL },
       ],
     },
-    {
-      "@type": ["Organization", "LocalBusiness"],
-      "@id": `${SITE_URL}/#organization`,
-      name: "LondraDepo.com",
-      url: SITE_URL,
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "Unit 19 Arterial Park, Arterial Road",
-        addressLocality: "Rayleigh",
-        addressRegion: "Essex",
-        postalCode: "SS6 7FY",
-        addressCountry: "GB",
-      },
-      description:
-        "İngiltere depo, fulfillment ve dağıtım çözümleri sunan Essex merkezli UK operasyon partneri.",
-      foundingLocation: { "@type": "Place", name: "Essex, United Kingdom" },
-      areaServed: ["London", "Essex", "Birmingham", "Manchester", "United Kingdom"],
-      knowsAbout: [
-        "UK Warehousing",
-        "Fulfillment",
-        "Pallet Storage",
-        "Amazon Prep",
-        "UK Distribution",
-        "Turkish Export to UK",
-      ],
-      contactPoint: {
-        "@type": "ContactPoint",
-        contactType: "customer service",
-        availableLanguage: ["Turkish", "English"],
-        url: WHATSAPP,
-      },
-    },
+    { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
     {
       "@type": "AboutPage",
       "@id": `${PAGE_URL}/#webpage`,
@@ -75,7 +44,7 @@ const jsonLd = {
       description:
         "Essex merkezli İngiltere depo, fulfillment ve UK lojistik operasyonumuz. Türkiye'den İngiltere'ye ihracat yapan markaların UK lojistik partneri.",
       about: { "@id": `${SITE_URL}/#organization` },
-      isPartOf: { "@id": SITE_URL },
+      isPartOf: { "@id": `${SITE_URL}/#website` },
       inLanguage: "tr",
     },
   ],

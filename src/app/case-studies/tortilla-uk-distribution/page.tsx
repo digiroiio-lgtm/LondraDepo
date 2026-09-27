@@ -70,24 +70,14 @@ const jsonLd = {
         "@type": "Person",
         name: "Sertaç Y.",
       },
-      reviewedBy: {
-        "@type": "Person",
-        name: "Yusuf B.",
-      },
-      publisher: {
-        "@type": "Organization",
-        name: "LondraDepo.com",
-        url: SITE_URL,
-      },
+      contributor: { "@type": "Person", name: "Yusuf B." },
+      publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
+      image: { "@type": "ImageObject", url: `${SITE_URL}/logo.png`, width: 512, height: 512 },
       mainEntityOfPage: PAGE_URL,
     },
     {
       "@type": "Organization",
-      "@id": `${SITE_URL}#organization`,
-      name: "LondraDepo.com",
-      url: SITE_URL,
-      description:
-        "Türkiye'den İngiltere'ye satış yapan firmalar için UK warehouse, fulfillment ve lojistik altyapısı.",
+      "@id": `${SITE_URL}/#organization`,
     },
     {
       "@type": "FAQPage",

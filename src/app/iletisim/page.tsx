@@ -40,26 +40,13 @@ const jsonLd = {
       "@type": "ContactPage",
       name: "LondraDepo.com İletişim",
       url: PAGE_URL,
-      mainEntity: {
-        "@type": "Organization",
-        name: "LondraDepo.com",
-        url: SITE_URL,
-        contactPoint: [
-          {
-            "@type": "ContactPoint",
-            contactType: "customer service",
-            availableLanguage: ["Turkish", "English"],
-            url: WHATSAPP,
-          },
-        ],
-        address: {
-          "@type": "PostalAddress",
-          streetAddress: "Unit 19 Arterial Park, Arterial Road",
-          addressLocality: "Rayleigh",
-          addressRegion: "Essex",
-          postalCode: "SS6 7FY",
-          addressCountry: "GB",
-        },
+      mainEntity: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "customer service",
+        telephone: "+447554195190",
+        availableLanguage: ["Turkish", "English"],
+        url: WHATSAPP,
       },
     },
   ],

@@ -43,6 +43,21 @@ const jsonLd = {
       description:
         "İngiltere'de depo altyapısı, fulfillment (sipariş hazırlama) ve dağıtım operasyonu kuran markaların gerçek büyüme hikayeleri.",
     },
+    {
+      "@type": "ItemList",
+      name: "LondraDepo.com Operasyon Örnekleri",
+      url: PAGE_URL,
+      numberOfItems: 7,
+      itemListElement: [
+        { "@type": "ListItem", position: 1, url: `${SITE_URL}/case-studies/tortilla-uk-distribution` },
+        { "@type": "ListItem", position: 2, url: `${SITE_URL}/case-studies/uk-walking-treadmill-distribution` },
+        { "@type": "ListItem", position: 3, url: `${SITE_URL}/case-studies/cruyff-uk-fulfillment` },
+        { "@type": "ListItem", position: 4, url: `${SITE_URL}/case-studies/uk-auto-parts-warehouse` },
+        { "@type": "ListItem", position: 5, url: `${SITE_URL}/case-studies/pizza-box-distribution-uk` },
+        { "@type": "ListItem", position: 6, url: `${SITE_URL}/case-studies/arac-koltuk-kaplama-ingiltere-depo` },
+        { "@type": "ListItem", position: 7, url: `${SITE_URL}/case-studies/tasinabilir-sarj-istasyonu-ingiltere-operasyonu` },
+      ],
+    },
   ],
 };
 

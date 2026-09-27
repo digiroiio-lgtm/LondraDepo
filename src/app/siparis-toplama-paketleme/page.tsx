@@ -49,7 +49,7 @@ const jsonLd = {
     {
       "@type": "Service",
       name: "Sipariş Toplama ve Paketleme (Pick & Pack) Hizmeti",
-      provider: { "@type": "Organization", name: "LondraDepo.com", url: SITE_URL },
+      provider: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
       serviceType: "Pick and Pack Fulfilment",
       description:
         "İngiltere'de sipariş toplama ve paketleme (pick & pack) hizmeti. Online mağaza siparişleri için stoktan ürün toplama, paketleme, kargo etiketleme ve sevkiyat.",

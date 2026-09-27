@@ -58,7 +58,7 @@ export default function ArticleHero({
 
       {/* Author line */}
       <p className="text-[#e63946] text-sm font-medium mb-4">
-        LondraDepo.com Editörü
+        Sertaç Y. — UK Lojistik Uzmanı
       </p>
 
       {/* Category badge + title */}

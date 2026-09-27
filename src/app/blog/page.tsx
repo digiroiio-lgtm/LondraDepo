@@ -278,7 +278,7 @@ export default function BlogPage() {
                 href="/case-studies"
                 className="inline-flex items-center gap-2 bg-[#0b2545] hover:bg-[#1e3a5f] text-white font-semibold px-6 py-3 rounded-full transition flex-shrink-0"
               >
-                Başarı Hikayelerini Gör →
+                Operasyon Örneklerine Bak →
               </Link>
             </div>
 
@@ -316,7 +316,7 @@ export default function BlogPage() {
                 <Link href="/palet-depolama" className="text-sm text-[#0b2545] hover:underline">→ Palet Depolama</Link>
                 <Link href="/amazon-prep-uk" className="text-sm text-[#0b2545] hover:underline">→ Amazon Prep UK</Link>
                 <Link href="/ingiltere-depo-avantajlari" className="text-sm text-[#0b2545] hover:underline">→ Depo Avantajları</Link>
-                <Link href="/case-studies" className="text-sm text-[#0b2545] hover:underline">→ Başarı Hikayeleri</Link>
+                <Link href="/case-studies" className="text-sm text-[#0b2545] hover:underline">→ Operasyon Örnekleri</Link>
               </div>
             </div>
           </div>

@@ -107,7 +107,7 @@ export default function BlogInsightsSection() {
             className="group bg-[#0b2545] text-white rounded-2xl p-6 hover:bg-[#1e3a5f] transition flex flex-col"
           >
             <span className="text-xs font-bold uppercase tracking-widest text-white/50 mb-3">
-              Case Study
+              Operasyon Örneği
             </span>
             <h3 className="font-extrabold text-lg leading-snug mb-2 group-hover:underline">
               {caseStudy.title}

@@ -42,7 +42,7 @@ const jsonLd = {
         {
           "@type": "ListItem",
           position: 2,
-          name: "Başarı Hikayeleri",
+          name: "Operasyon Örnekleri",
           item: `${SITE_URL}/case-studies`,
         },
         {
@@ -200,7 +200,7 @@ export default function AracKoltukKaplamaCaseStudyPage() {
             </Link>
             <span>/</span>
             <Link href="/case-studies" className="hover:text-[#0b2545] transition">
-              Başarı Hikayeleri
+              Operasyon Örnekleri
             </Link>
             <span>/</span>
             <span className="text-[#0b2545] font-medium">

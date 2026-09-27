@@ -10,14 +10,14 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20operasyon%20danis
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Başarı Hikayeleri | İngiltere Operasyon Başarı Hikayeleri | LondraDepo.com",
+  title: "Operasyon Örnekleri | İngiltere Gerçek Müşteri Operasyonları | LondraDepo.com",
   description:
-    "LondraDepo.com ile İngiltere depo altyapısı kuran markaların gerçek hikayeleri. İngiltere fulfillment, dağıtım operasyonu ve e-ticaret altyapısı örnekleri.",
+    "LondraDepo.com ile İngiltere depo altyapısı kuran markaların gerçek operasyon örnekleri. Fulfillment, dağıtım ve e-ticaret altyapısı vaka analizleri.",
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: "Başarı Hikayeleri — İngiltere Operasyon Başarı Hikayeleri | LondraDepo.com",
+    title: "Operasyon Örnekleri — LondraDepo.com",
     description:
-      "İngiltere'de depo altyapısı, fulfillment ve dağıtım operasyonu kuran markaların gerçek büyüme hikayeleri.",
+      "İngiltere'de depo altyapısı, fulfillment ve dağıtım operasyonu kuran markaların gerçek operasyon örnekleri.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
     locale: "tr_TR",
@@ -33,12 +33,12 @@ const jsonLd = {
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Ana Sayfa", item: SITE_URL },
-        { "@type": "ListItem", position: 2, name: "Başarı Hikayeleri", item: PAGE_URL },
+        { "@type": "ListItem", position: 2, name: "Operasyon Örnekleri", item: PAGE_URL },
       ],
     },
     {
       "@type": "CollectionPage",
-      name: "Başarı Hikayeleri — LondraDepo.com",
+      name: "Operasyon Örnekleri — LondraDepo.com",
       url: PAGE_URL,
       description:
         "İngiltere'de depo altyapısı, fulfillment (sipariş hazırlama) ve dağıtım operasyonu kuran markaların gerçek büyüme hikayeleri.",
@@ -121,7 +121,7 @@ export default function CaseStudiesIndexPage() {
           <div className="max-w-6xl mx-auto px-4 py-2 text-sm text-slate-500 flex gap-2">
             <Link href="/" className="hover:text-[#0b2545] transition">Ana Sayfa</Link>
             <span>/</span>
-            <span className="text-[#0b2545] font-medium">Başarı Hikayeleri</span>
+            <span className="text-[#0b2545] font-medium">Operasyon Örnekleri</span>
           </div>
         </nav>
 
@@ -129,10 +129,10 @@ export default function CaseStudiesIndexPage() {
         <section className="bg-[#0b2545] text-white py-16 px-4">
           <div className="max-w-4xl mx-auto">
             <span className="text-xs font-bold px-3 py-1 rounded-full bg-white/10 text-white/80 mb-4 inline-block">
-              Başarı Hikayeleri
+              Gerçek Operasyonlar
             </span>
             <h1 className="text-3xl md:text-4xl font-extrabold mb-4 text-balance">
-              İngiltere Operasyonu Kuran Markalar
+              İngiltere&apos;de Yürüttüğümüz Operasyonlar
             </h1>
             <p className="text-white/70 text-lg leading-relaxed max-w-2xl">
               Türkiye&apos;den İngiltere&apos;ye açılan markaların gerçek operasyon hikayeleri.
@@ -172,7 +172,7 @@ export default function CaseStudiesIndexPage() {
                         {c.industry}
                       </span>
                       <span className="text-xs font-bold px-3 py-1 rounded-full bg-[#0b2545]/5 text-[#0b2545]">
-                        Başarı Hikayesi
+                        Operasyon Örneği
                       </span>
                       <span className="text-xs font-semibold px-2 py-1 rounded-full bg-green-50 text-green-700 flex items-center gap-1">
                         <span className="w-1.5 h-1.5 rounded-full bg-green-500 inline-block" />
@@ -194,7 +194,7 @@ export default function CaseStudiesIndexPage() {
                       ))}
                     </div>
                     <span className="inline-flex items-center gap-1 text-sm font-semibold text-[#e63946]">
-                      Başarı hikayesini incele →
+                      Operasyonu incele →
                     </span>
                   </div>
                 </Link>

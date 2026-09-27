@@ -245,7 +245,7 @@ export default function IhracatRehberiPage() {
                 <Link href="/ingiltere-fulfillment" className="text-sm text-[#0b2545] hover:underline">→ İngiltere Fulfillment</Link>
                 <Link href="/palet-depolama" className="text-sm text-[#0b2545] hover:underline">→ Palet Depolama</Link>
                 <Link href="/amazon-prep-uk" className="text-sm text-[#0b2545] hover:underline">→ Amazon Prep UK</Link>
-                <Link href="/case-studies" className="text-sm text-[#0b2545] hover:underline">→ Başarı Hikayeleri</Link>
+                <Link href="/case-studies" className="text-sm text-[#0b2545] hover:underline">→ Operasyon Örnekleri</Link>
               </div>
             </div>
           </div>

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "OEM Yedek Parça UK Depo | Automotive Fulfillment İngiltere | LondraDepo.com",
   description:
-    "Lüks araç OEM ve aftermarket yedek parçalarının İngiltere'de depolanması, stok yönetimi ve UK dağıtım operasyonu. Automotive fulfillment UK case study.",
+    "Lüks araç OEM ve aftermarket yedek parçalarının İngiltere'de depolanması, stok yönetimi ve UK dağıtım operasyonu. Automotive fulfillment UK operasyon örneği.",
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: "OEM Yedek Parça — UK Automotive Fulfillment | LondraDepo.com",
@@ -36,7 +36,7 @@ const jsonLd = {
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Ana Sayfa", item: SITE_URL },
-        { "@type": "ListItem", position: 2, name: "Başarı Hikayeleri", item: `${SITE_URL}/case-studies` },
+        { "@type": "ListItem", position: 2, name: "Operasyon Örnekleri", item: `${SITE_URL}/case-studies` },
         { "@type": "ListItem", position: 3, name: "OEM Yedek Parça UK Depo", item: PAGE_URL },
       ],
     },
@@ -173,7 +173,7 @@ export default function AutoPartsCaseStudyPage() {
           <div className="max-w-4xl mx-auto px-4 py-2 text-sm text-slate-500 flex flex-wrap gap-2">
             <Link href="/" className="hover:text-[#0b2545] transition">Ana Sayfa</Link>
             <span>/</span>
-            <Link href="/case-studies" className="hover:text-[#0b2545] transition">Başarı Hikayeleri</Link>
+            <Link href="/case-studies" className="hover:text-[#0b2545] transition">Operasyon Örnekleri</Link>
             <span>/</span>
             <span className="text-[#0b2545] font-medium">OEM Yedek Parça UK Depo</span>
           </div>

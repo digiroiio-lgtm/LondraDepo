@@ -42,7 +42,7 @@ const jsonLd = {
         {
           "@type": "ListItem",
           position: 2,
-          name: "Başarı Hikayeleri",
+          name: "Operasyon Örnekleri",
           item: `${SITE_URL}/case-studies`,
         },
         {
@@ -182,7 +182,7 @@ const relatedCases = [
     industry: "Sağlık & E-Ticaret",
     title: "Walking Treadmill — İngiltere Depo, Fulfillment & Dağıtım Operasyonu",
     summary:
-      "Büyük hacimli sağlık ürünlerinin İngiltere depo altyapısı, online fulfillment ve dağıtım sürecindeki başarı hikayesi.",
+      "Büyük hacimli sağlık ürünlerinin İngiltere depo altyapısı, online fulfillment ve dağıtım operasyon örneği.",
   },
   {
     slug: "cruyff-uk-fulfillment",
@@ -206,7 +206,7 @@ export default function SarjIstasyonuCaseStudyPage() {
             </Link>
             <span>/</span>
             <Link href="/case-studies" className="hover:text-[#0b2545] transition">
-              Başarı Hikayeleri
+              Operasyon Örnekleri
             </Link>
             <span>/</span>
             <span className="text-[#0b2545] font-medium">

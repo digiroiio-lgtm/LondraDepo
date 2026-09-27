@@ -19,7 +19,7 @@ export default function AuthorBox({ updatedDate }: AuthorBoxProps) {
               <a href="https://www.linkedin.com/company/arcatradegroup/" target="_blank" rel="noopener noreferrer" className="hover:underline">Sertaç Yılmaz</a>
             </p>
             <p className="text-slate-500 text-xs leading-relaxed">
-              Arca Trade Group Kurucu Ortağı. UK Warehouse Operations & İhracat Lojistiği Uzmanı. Türkiye&apos;den UK&apos;ya ihracat süreçleri, depolama ve fulfillment alanında uzman.
+              Arca Trade Group Kurucu Ortağı. 18 yıl lojistik sektörü deneyimi. Türkiye&apos;den UK&apos;ya ihracat süreçleri, depolama ve fulfillment alanında uzman.
             </p>
           </div>
         </div>
@@ -30,7 +30,7 @@ export default function AuthorBox({ updatedDate }: AuthorBoxProps) {
           </div>
           <div>
             <p className="font-bold text-[#0b2545] text-sm">
-              Yusuf B. <span className="font-normal text-slate-400 text-xs">— Review</span>
+              Yusuf Barış <span className="font-normal text-slate-400 text-xs">— Review</span>
             </p>
             <p className="text-slate-500 text-xs leading-relaxed">
               LondraDepo.com Operasyon Direktörü. Essex merkezli UK depo ve lojistik operasyonlarının yöneticisi.

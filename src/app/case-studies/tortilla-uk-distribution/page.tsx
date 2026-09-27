@@ -68,9 +68,9 @@ const jsonLd = {
       dateModified: "2026-05-24",
       author: {
         "@type": "Person",
-        name: "Sertaç Y.",
+        name: "Sertaç Yılmaz",
       },
-      contributor: { "@type": "Person", name: "Yusuf B." },
+      contributor: { "@type": "Person", name: "Yusuf Barış" },
       publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
       image: { "@type": "ImageObject", url: `${SITE_URL}/logo.png`, width: 512, height: 512 },
       mainEntityOfPage: PAGE_URL,
@@ -540,7 +540,7 @@ export default function TortillaCaseStudyPage() {
                 SY
               </div>
               <div>
-                <p className="font-bold text-[#0b2545] text-sm">Sertaç Y.</p>
+                <p className="font-bold text-[#0b2545] text-sm">Sertaç Yılmaz</p>
                 <p className="text-slate-500 text-xs mb-1">
                   UK Warehouse Operations Specialist — LondraDepo.com
                 </p>
@@ -550,7 +550,7 @@ export default function TortillaCaseStudyPage() {
                 </p>
                 <p className="text-slate-400 text-xs mt-1">
                   İncelendi:{" "}
-                  <span className="font-medium text-slate-500">Yusuf B.</span> — Operations Manager
+                  <span className="font-medium text-slate-500">Yusuf Barış</span> — Operations Manager
                 </p>
               </div>
             </div>

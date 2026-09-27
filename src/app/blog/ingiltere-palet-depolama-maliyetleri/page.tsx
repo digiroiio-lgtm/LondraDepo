@@ -45,7 +45,7 @@ const jsonLd = {
       headline: "İngiltere Palet Depolama Maliyetleri 2026",
       description: "UK palet depolama ücretleri, fiyatı etkileyen faktörler ve bütçe planlaması.",
       url: PAGE_URL,
-      author: { "@type": "Person", name: "Sertaç Y." },
+      author: { "@type": "Person", name: "Sertaç Yılmaz" },
       publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
       image: { "@type": "ImageObject", url: `${SITE_URL}/logo.png`, width: 512, height: 512 },
       dateModified: "2026-01-01",

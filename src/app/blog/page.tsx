@@ -186,7 +186,7 @@ export default function BlogPage() {
           <div className="max-w-5xl mx-auto flex flex-wrap gap-6 text-sm text-slate-600 justify-center md:justify-start">
             <span>✅ Essex merkezli UK depo</span>
             <span>✅ Türkçe operasyon iletişimi</span>
-            <span>✅ 8+ yıl UK lojistik deneyimi</span>
+            <span>✅ 18 yıl lojistik sektörü deneyimi</span>
             <span>✅ Gerçek operasyon örnekleri</span>
           </div>
         </section>

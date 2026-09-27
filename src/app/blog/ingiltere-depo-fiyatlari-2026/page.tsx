@@ -46,7 +46,7 @@ const jsonLd = {
       headline: "İngiltere Depo Fiyatları 2026: Tam Maliyet Rehberi",
       description: "UK palet depolama, fulfillment ve Amazon prep maliyetleri. İngiltere depo ücret yapısı.",
       url: PAGE_URL,
-      author: { "@type": "Person", name: "Sertaç Y." },
+      author: { "@type": "Person", name: "Sertaç Yılmaz" },
       publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
       image: { "@type": "ImageObject", url: `${SITE_URL}/logo.png`, width: 512, height: 512 },
       dateModified: "2026-01-01",

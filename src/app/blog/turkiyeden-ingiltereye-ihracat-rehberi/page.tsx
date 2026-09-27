@@ -45,7 +45,7 @@ const jsonLd = {
       headline: "Türkiye'den İngiltere'ye İhracat Rehberi 2026",
       description: "Türk ihracatçılar için UK ihracat süreçleri, gümrük ve operasyon rehberi.",
       url: PAGE_URL,
-      author: { "@type": "Person", name: "Sertaç Y." },
+      author: { "@type": "Person", name: "Sertaç Yılmaz" },
       publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
       image: { "@type": "ImageObject", url: `${SITE_URL}/logo.png`, width: 512, height: 512 },
       datePublished: "2025-06-01",

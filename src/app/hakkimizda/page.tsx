@@ -125,7 +125,7 @@ export default function HakkimizdaPage() {
               <h2 className="text-lg font-bold text-[#0b2545] mb-3">Sektör Bağlantıları</h2>
               <ul className="space-y-2 text-sm text-slate-600">
                 <li>
-                  🌐 <strong>GLA (Global Logistics Alliance)</strong> — Kurucumuz Sertaç Yılmaz, uluslararası yük taşımacılığı ağı GLA&apos;nın konferanslarına katılım sağlamaktadır.
+                  🌐 <strong>GLA (Global Logistics Alliance)</strong> — Kurucumuz Sertaç Yılmaz, uluslararası yük taşımacılığı ağı GLA&apos;nın konferanslarına katılım sağlamaktadır. GLA üyesi olan kurucumuz, 15. GLA Global Lojistik Konferansı&apos;na (Bangkok, 2026) katılım sağlamaktadır.
                 </li>
                 <li>
                   🏢 <strong>LinkedIn:</strong>{" "}

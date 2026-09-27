@@ -47,7 +47,7 @@ const jsonLd = {
       url: PAGE_URL,
       datePublished: "2025-06-01",
       dateModified: "2026-01-15",
-      author: { "@type": "Person", name: "Sertaç Y." },
+      author: { "@type": "Person", name: "Sertaç Yılmaz" },
       publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
       image: { "@type": "ImageObject", url: `${SITE_URL}/logo.png`, width: 512, height: 512 },
       inLanguage: "tr-TR",

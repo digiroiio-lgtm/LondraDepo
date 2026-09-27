@@ -59,6 +59,17 @@ const jsonLd = {
         url: WHATSAPP,
       },
     },
+    {
+      "@type": "AboutPage",
+      "@id": `${PAGE_URL}/#webpage`,
+      name: "LondraDepo.com Hakkında",
+      url: PAGE_URL,
+      description:
+        "Essex merkezli İngiltere depo, fulfillment ve UK lojistik operasyonumuz. Türkiye'den İngiltere'ye ihracat yapan markaların UK lojistik partneri.",
+      about: { "@id": `${SITE_URL}/#organization` },
+      isPartOf: { "@id": SITE_URL },
+      inLanguage: "tr",
+    },
   ],
 };
 

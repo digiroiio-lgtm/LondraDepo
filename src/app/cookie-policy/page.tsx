@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-const LAST_UPDATED = "24 Mayıs 2025";
+const LAST_UPDATED = "27 Eylül 2026";
 
 export default function CookiePolicyPage() {
   return (
@@ -78,7 +78,7 @@ export default function CookiePolicyPage() {
                   </p>
                   <div className="mt-3 text-sm">
                     <strong className="text-slate-700">Sağlayıcı:</strong>{" "}
-                    <span className="text-slate-500">Vercel Analytics (anonim veri)</span>
+                    <span className="text-slate-500">Google Analytics 4 ve Vercel Analytics</span>
                   </div>
                   <div className="mt-1 text-sm">
                     <strong className="text-slate-700">Saklama süresi:</strong>{" "}

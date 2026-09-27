@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Analytics } from "@vercel/analytics/next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { CookiePrefs } from "./CookieConsent";
 
@@ -16,7 +17,7 @@ function readConsent(): CookiePrefs | null {
   }
 }
 
-export default function ConditionalAnalytics() {
+export default function ConditionalAnalytics({ gaId }: { gaId: string }) {
   const [analyticsEnabled, setAnalyticsEnabled] = useState(false);
 
   useEffect(() => {
@@ -29,7 +30,7 @@ export default function ConditionalAnalytics() {
     // Listen for consent changes
     const handleConsentChange = (e: Event) => {
       const detail = (e as CustomEvent<CookiePrefs>).detail;
-      setAnalyticsEnabled(detail.analytics);
+      setAnalyticsEnabled(detail.decided && detail.analytics);
     };
 
     window.addEventListener("consentChange", handleConsentChange);
@@ -40,6 +41,7 @@ export default function ConditionalAnalytics() {
 
   return (
     <>
+      <GoogleAnalytics gaId={gaId} />
       <Analytics />
       <SpeedInsights />
     </>

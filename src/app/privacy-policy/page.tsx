@@ -67,11 +67,12 @@ export default function PrivacyPolicyPage() {
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-slate-800 mb-1">b) Anonim Site Analitikleri</h3>
+                  <h3 className="font-semibold text-slate-800 mb-1">b) Site Analitikleri</h3>
                   <p className="text-slate-600 text-sm leading-relaxed">
-                    Analitik çerezlere onay vermeniz halinde, hangi sayfaları ziyaret ettiğinize
-                    dair anonim veriler toplanır. Bu veriler kişisel kimliğinizi belirlemez ve
-                    yalnızca site performansını iyileştirmek için kullanılır.
+                    Analitik çerezlere onay vermeniz halinde, Google Analytics 4 ve Vercel
+                    Analytics üzerinden ziyaret ettiğiniz sayfalar ve site içi etkileşimler gibi
+                    kullanım verileri işlenebilir. Bu verileri site performansını anlamak ve
+                    geliştirmek için kullanırız.
                   </p>
                 </div>
                 <div>

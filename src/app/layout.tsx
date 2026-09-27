@@ -95,8 +95,11 @@ const jsonLd = {
       areaServed: ["London", "Essex", "Birmingham", "Manchester", "United Kingdom"],
       address: {
         "@type": "PostalAddress",
-        addressCountry: "GB",
+        streetAddress: "Unit 19 Arterial Park, Arterial Road",
+        addressLocality: "Rayleigh",
         addressRegion: "Essex",
+        postalCode: "SS6 7FY",
+        addressCountry: "GB",
       },
       contactPoint: {
         "@type": "ContactPoint",

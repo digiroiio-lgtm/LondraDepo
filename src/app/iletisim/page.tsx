@@ -54,7 +54,10 @@ const jsonLd = {
         ],
         address: {
           "@type": "PostalAddress",
+          streetAddress: "Unit 19 Arterial Park, Arterial Road",
+          addressLocality: "Rayleigh",
           addressRegion: "Essex",
+          postalCode: "SS6 7FY",
           addressCountry: "GB",
         },
       },

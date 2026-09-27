@@ -76,7 +76,7 @@ const jsonLd = {
           name: "Depo konumu nerede?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Depo adresimiz: Arterial Park, Arterial Road, Rayleigh, Essex. Bu konum Londra'ya yakın olmakla birlikte UK lojistik güzergahlarına uygun, ulaşımı kolay bir noktadadır.",
+            text: "Depo adresimiz: Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY. Bu konum Londra'ya yakın olmakla birlikte UK lojistik güzergahlarına uygun, ulaşımı kolay bir noktadadır.",
           },
         },
         {
@@ -133,7 +133,7 @@ const faqs = [
   },
   {
     q: "Depo konumu nerede?",
-    a: "Depo adresimiz: Arterial Park, Arterial Road, Rayleigh, Essex. Bu konum Londra'ya yakın olmakla birlikte UK lojistik güzergahlarına uygun, ulaşımı kolay bir noktadadır.",
+    a: "Depo adresimiz: Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY. Bu konum Londra'ya yakın olmakla birlikte UK lojistik güzergahlarına uygun, ulaşımı kolay bir noktadadır.",
   },
   {
     q: "Londra deposuna ürünlerimi nasıl gönderebilirim?",
@@ -180,7 +180,7 @@ export default function LondraDepoPage() {
               İngiltere geneli dağıtım hizmetinden yararlanın.
             </p>
             <p className="text-slate-400 text-sm mb-8">
-              Depo konumu: Arterial Park, Arterial Road, Rayleigh, Essex
+              Depo konumu: Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a

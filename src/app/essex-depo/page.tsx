@@ -42,7 +42,10 @@ const jsonLd = {
       description: "Essex merkezli UK depo ve lojistik operasyonu. Türkiye'den gelen yükler için İngiltere depolama ve dağıtım.",
       address: {
         "@type": "PostalAddress",
+        streetAddress: "Unit 19 Arterial Park, Arterial Road",
+        addressLocality: "Rayleigh",
         addressRegion: "Essex",
+        postalCode: "SS6 7FY",
         addressCountry: "GB",
       },
       areaServed: ["Essex", "London", "United Kingdom"],

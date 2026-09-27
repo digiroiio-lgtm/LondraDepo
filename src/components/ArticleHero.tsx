@@ -58,7 +58,7 @@ export default function ArticleHero({
 
       {/* Author line */}
       <p className="text-[#e63946] text-sm font-medium mb-4">
-        Sertaç Y. — UK Lojistik Uzmanı
+        Sertaç Yılmaz — Arca Trade Group Kurucu Ortağı
       </p>
 
       {/* Category badge + title */}

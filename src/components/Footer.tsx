@@ -82,8 +82,7 @@ export default function Footer() {
           <a href="/sozlesme-kosullari" className="hover:text-white transition">Sözleşme Koşulları</a>
           {/* TODO: confirm email — replace YOUR_EMAIL with actual address */}
           {/* <a href="mailto:YOUR_EMAIL" className="hover:text-white transition">E-posta</a> */}
-          {/* TODO: confirm LinkedIn — replace YOUR_LINKEDIN_URL with actual URL */}
-          {/* <a href="YOUR_LINKEDIN_URL" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">LinkedIn</a> */}
+          <a href="https://www.linkedin.com/company/arcatradegroup/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">LinkedIn</a>
           <CookieSettingsButton />
         </div>
       </div>

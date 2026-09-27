@@ -111,6 +111,7 @@ const jsonLd = {
       },
       sameAs: [
         "https://find-and-update.company-information.service.gov.uk/company/13247691",
+        "https://www.linkedin.com/company/arcatradegroup/",
       ],
     },
     {

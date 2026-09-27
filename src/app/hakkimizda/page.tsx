@@ -121,6 +121,27 @@ export default function HakkimizdaPage() {
               ))}
             </div>
 
+            <div className="bg-[#f6f8fb] border border-slate-200 rounded-2xl p-6 mb-8">
+              <h2 className="text-lg font-bold text-[#0b2545] mb-3">Sektör Bağlantıları</h2>
+              <ul className="space-y-2 text-sm text-slate-600">
+                <li>
+                  🌐 <strong>GLA (Global Logistics Alliance)</strong> — Kurucumuz Sertaç Yılmaz, uluslararası yük taşımacılığı ağı GLA&apos;nın konferanslarına katılım sağlamaktadır.
+                </li>
+                <li>
+                  🏢 <strong>LinkedIn:</strong>{" "}
+                  <a href="https://www.linkedin.com/company/arcatradegroup/" target="_blank" rel="noopener noreferrer" className="text-[#0b2545] underline">
+                    linkedin.com/company/arcatradegroup
+                  </a>
+                </li>
+                <li>
+                  🏛️ <strong>Companies House:</strong>{" "}
+                  <a href="https://find-and-update.company-information.service.gov.uk/company/13247691" target="_blank" rel="noopener noreferrer" className="text-[#0b2545] underline">
+                    Arca Trade Group Ltd · No: 13247691
+                  </a>
+                </li>
+              </ul>
+            </div>
+
             <div className="bg-[#0b2545] text-white rounded-2xl p-8 text-center">
               <h2 className="text-xl font-bold mb-3">Operasyonunuzu birlikte planlayalım</h2>
               <p className="text-slate-300 text-sm mb-6">

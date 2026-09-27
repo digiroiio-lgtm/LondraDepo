@@ -40,6 +40,14 @@ const jsonLd = {
       "@id": `${SITE_URL}/#organization`,
       name: "LondraDepo.com",
       url: SITE_URL,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Unit 19 Arterial Park, Arterial Road",
+        addressLocality: "Rayleigh",
+        addressRegion: "Essex",
+        postalCode: "SS6 7FY",
+        addressCountry: "GB",
+      },
       description:
         "İngiltere depo, fulfillment ve dağıtım çözümleri sunan Essex merkezli UK operasyon partneri.",
       foundingLocation: { "@type": "Place", name: "Essex, United Kingdom" },

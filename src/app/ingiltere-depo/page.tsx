@@ -193,6 +193,35 @@ export default function IngiltereDepoPage() {
           </div>
         </section>
 
+        {/* Warehouse Photos */}
+        <section className="py-10 px-4 bg-[#f6f8fb]">
+          <div className="max-w-6xl mx-auto">
+            <p className="text-center text-sm font-semibold text-slate-500 uppercase tracking-widest mb-6">
+              Essex Depo — Unit 19 Arterial Park, Rayleigh
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <img
+                src="/arterial-park-arterial-road-rayleigh_depoici.jpeg"
+                alt="LondraDepo.com — Unit 19 Arterial Park Rayleigh Essex depo içi"
+                className="rounded-2xl object-cover w-full h-52 sm:h-60"
+                loading="lazy"
+              />
+              <img
+                src="/arterial-park-arterial-road-rayleigh_2ncioutdoor.jpeg"
+                alt="LondraDepo.com — Unit 19 Arterial Park Rayleigh Essex dış cephe"
+                className="rounded-2xl object-cover w-full h-52 sm:h-60"
+                loading="lazy"
+              />
+              <img
+                src="/arterial-park-arterial-road-rayleigh_kusbakisi.jpeg"
+                alt="LondraDepo.com — Unit 19 Arterial Park Rayleigh Essex kuş bakışı"
+                className="rounded-2xl object-cover w-full h-52 sm:h-60"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </section>
+
         {/* Services */}
         <section className="py-20 px-4 bg-white">
           <div className="max-w-6xl mx-auto">

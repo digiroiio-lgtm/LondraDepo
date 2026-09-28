@@ -100,6 +100,32 @@ export default function HakkimizdaPage() {
               ))}
             </div>
 
+            <div className="mb-12">
+              <p className="text-sm font-semibold text-slate-500 uppercase tracking-widest mb-4">
+                Depo Tesisimiz — Unit 19 Arterial Park, Rayleigh, Essex
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <img
+                  src="/arterial-park-arterial-road-rayleigh_depoici.jpeg"
+                  alt="LondraDepo.com — Arterial Park Rayleigh Essex depo içi"
+                  className="rounded-xl object-cover w-full h-48"
+                  loading="lazy"
+                />
+                <img
+                  src="/arterial-park-arterial-road-rayleigh_distankosecekimi.jpeg"
+                  alt="LondraDepo.com — Arterial Park Rayleigh Essex depo uzak çekim"
+                  className="rounded-xl object-cover w-full h-48"
+                  loading="lazy"
+                />
+                <img
+                  src="/arterial-park-arterial-road-rayleigh_officespace.jpeg"
+                  alt="LondraDepo.com — Arterial Park Rayleigh Essex ofis alanı"
+                  className="rounded-xl object-cover w-full h-48"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+
             <h2 className="text-2xl font-extrabold text-[#0b2545] mb-6">Hizmet Alanlarımız</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
               {[

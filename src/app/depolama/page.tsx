@@ -9,9 +9,9 @@ const SITE_URL = "https://www.londradepo.com";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20depolama%20hizmeti%20hakkında%20bilgi%20almak%20istiyorum.";
 
 export const metadata: Metadata = {
-  title: "İngiltere Depolama Hizmeti | UK Stok Depolama | LondraDepo.com",
+  title: "İngiltere Depolama Hizmeti | Palet & Koli Depolama, Mintsoft WMS | LondraDepo.com",
   description:
-    "İngiltere'de kısa ve uzun vadeli depolama hizmeti. Palet ve koli kabulü, ürün teslim alma, stok yönetimi. Londra yakınında Essex'te güvenli UK depo operasyonu.",
+    "UK depolama hizmetinin teknik detayları: palet ve koli kabulü, Mintsoft WMS ile gerçek zamanlı stok takibi, FCL konteyner boşaltma, kısa ve uzun vadeli depo kapasitesi. Essex, İngiltere.",
   alternates: { canonical: `${SITE_URL}/depolama` },
   openGraph: {
     title: "İngiltere Depolama Hizmeti | LondraDepo.com",
@@ -113,11 +113,13 @@ export default function DepolamaPage() {
               <span className="text-white">Depolama Hizmeti</span>
             </nav>
             <h1 className="text-3xl sm:text-4xl font-extrabold mb-4 leading-tight">
-              İngiltere Depolama Hizmeti
+              İngiltere Depolama: Palet, Koli ve{" "}
+              <span className="text-[#4fc3f7]">Mintsoft WMS</span>
             </h1>
             <p className="text-slate-300 text-lg leading-relaxed max-w-3xl mb-8">
-              İngiltere pazarındaki ürünleriniz için güvenli, düzenli ve ölçeklenebilir depolama
-              çözümleri. Kısa veya uzun vadeli ihtiyaçlarınıza göre esnek depo kapasitesi.
+              Palet ve koli bazında mal kabul, Mintsoft WMS üzerinde gerçek zamanlı stok takibi,
+              FCL konteyner boşaltma ve kısa/uzun vadeli depo kapasitesi. İngiltere depolama
+              operasyonunun teknik altyapısı.
             </p>
             <a
               href={WHATSAPP}

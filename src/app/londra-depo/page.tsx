@@ -9,9 +9,9 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20Londra%20depo%20h
 const TEL = "tel:+447554195190";
 
 export const metadata: Metadata = {
-  title: "Londra Depo Hizmeti | Londra Depolama | LondraDepo.com",
+  title: "Londra Depo Hizmeti | Londra'ya 40 Dakika Essex Warehouse | LondraDepo.com",
   description:
-    "Londra yakınında depo hizmeti. Essex'teki UK depomuza ürünlerinizi gönderin, depolama, stok yönetimi ve sipariş karşılama hizmeti alın. İngiltere'de kendi deponuzu kurmadan operasyon yürütün.",
+    "Londra'ya 40 dakika mesafede Essex depo. M25 çıkışı, Tilbury Limanı'na 30 dakika. Londra merkezli müşterilerinize hızlı gönderim için stratejik konum. Mal kabul, depolama, sipariş karşılama.",
   keywords: [
     "londra depo",
     "londra depo hizmeti",
@@ -170,14 +170,14 @@ export default function LondraDepoPage() {
               📍 Londra yakını Essex, İngiltere
             </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4 leading-tight">
-              Londra Depo ve{" "}
-              <span className="text-[#e63946]">Ürün Depolama</span>{" "}
-              Hizmeti
+              Londra Depo:{" "}
+              <span className="text-[#e63946]">M25 Üzerinden</span>{" "}
+              UK Dağıtım
             </h1>
             <p className="text-slate-300 text-lg leading-relaxed max-w-3xl mb-4">
-              Londra'ya yakın Essex depomuzda ürünlerinizi güvenle saklayın.
-              Kendi UK deponuzu kurmadan stok yönetimi, sipariş karşılama ve
-              İngiltere geneli dağıtım hizmetinden yararlanın.
+              Essex depomuz Londra'ya 40 dakika, Tilbury Limanı'na 30 dakika mesafede.
+              M25 güzergâhı üzerindeki stratejik konumumuz sayesinde Londra ve güneydoğu
+              İngiltere'ye hızlı sevkiyat yapıyoruz.
             </p>
             <p className="text-slate-400 text-sm mb-8">
               Depo konumu: Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY

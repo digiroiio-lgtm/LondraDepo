@@ -78,13 +78,7 @@ const jsonLd = {
       offers: {
         "@type": "Offer",
         priceCurrency: "GBP",
-        priceSpecification: {
-          "@type": "UnitPriceSpecification",
-          price: "5",
-          priceCurrency: "GBP",
-          unitText: "haftalık palet başına (+ KDV)",
-        },
-        description: "Haftalık palet bazlı depolama — yaklaşık £5 + KDV'den başlayan maliyetler",
+        description: "Haftalık palet bazlı depolama — fiyatlar ürün tipi ve hacme göre talep bazlı belirlenir",
       },
     },
     {
@@ -95,7 +89,7 @@ const jsonLd = {
           name: "İngiltere'de depo maliyetleri ne kadar?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Palet bazlı depolama maliyetleri ürün tipi ve hacme göre değişmekle birlikte haftalık yaklaşık £5 + KDV'den başlayabilir.",
+            text: "Palet bazlı depolama maliyetleri ürün tipi ve hacme göre değişmektedir. UK piyasasında haftalık palet depolama genellikle £8–£15 aralığında seyreder; LondraDepo fiyatları talep bazlı belirlenmektedir.",
           },
         },
         {
@@ -103,7 +97,7 @@ const jsonLd = {
           name: "Türkiye'den İngiltere'ye konteyner organizasyonu sağlıyor musunuz?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Evet. İstanbul, İzmir, Mersin ve İskenderun çıkışlı düzenli konteyner organizasyonu ve operasyon koordinasyonu konusunda destek sağlanabilir.",
+            text: "LondraDepo uluslararası nakliye hizmeti sunmamaktadır. Ürünlerinizin UK'ye taşınması için bir nakliyeci firmayla çalışmanız gerekir. LondraDepo'nun hizmet alanı, ürünlerin UK'ye varışından sonra başlar: mal kabul, depolama, sipariş karşılama ve UK dağıtımı.",
           },
         },
         {
@@ -144,9 +138,9 @@ const advantages = [
     body: (
       <>
         <p className="text-slate-600 text-sm leading-relaxed mb-3">
-          Haftalık palet depolama maliyetleri yaklaşık{" "}
-          <strong className="text-[#0b2545]">£5 + KDV</strong>'den başlamaktadır
-          (güncel kur ile yaklaşık 300 TL seviyeleri).
+          UK piyasasında haftalık palet depolama maliyetleri genellikle{" "}
+          <strong className="text-[#0b2545]">£8–£15</strong> aralığında seyreder.
+          LondraDepo fiyatları ürün tipi, hacim ve ihtiyaç duyulan hizmetlere göre talep bazlı belirlenmektedir.
         </p>
         <p className="text-slate-600 text-sm leading-relaxed">
           Küçük hacimli girişler için düşük riskli başlangıç imkânı sağlar.
@@ -298,11 +292,11 @@ const advantages = [
 const faqs = [
   {
     q: "İngiltere'de depo maliyetleri ne kadar?",
-    a: "Palet bazlı depolama maliyetleri ürün tipi ve hacme göre değişmekle birlikte haftalık yaklaşık £5 + KDV'den başlayabilir.",
+    a: "UK piyasasında haftalık palet depolama genellikle £8–£15 aralığında seyreder. LondraDepo fiyatları ürün tipi, hacim ve ihtiyaç duyulan hizmetlere göre talep bazlı belirlenmektedir. Detaylı fiyat bilgisi için WhatsApp'tan yazabilirsiniz.",
   },
   {
     q: "Türkiye'den İngiltere'ye konteyner organizasyonu sağlıyor musunuz?",
-    a: "Evet. İstanbul, İzmir, Mersin ve İskenderun çıkışlı düzenli konteyner organizasyonu ve operasyon koordinasyonu konusunda destek sağlanabilir.",
+    a: "LondraDepo uluslararası nakliye hizmeti sunmamaktadır. Ürünlerinizin UK'ye taşınması için bir nakliyeci firmayla çalışmanız gerekir. LondraDepo'nun hizmet alanı, ürünlerin UK'ye varışından sonra başlar: mal kabul, depolama, sipariş karşılama ve UK dağıtımı.",
   },
   {
     q: "Küçük hacimli ürün gönderebilir miyim?",

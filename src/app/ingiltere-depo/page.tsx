@@ -11,7 +11,7 @@ const TEL = "tel:+447554195190";
 export const metadata: Metadata = {
   title: "İngiltere Depo Hizmeti | UK Depolama | LondraDepo.com",
   description:
-    "İngiltere'de güvenli depo hizmeti. Ürünlerinizi Essex merkezli UK depomuza gönderin; mal kabul, palet ve koli depolama, stok yönetimi, sipariş karşılama ve UK dağıtım. Teklif için WhatsApp'tan yazın.",
+    "İngiltere depo hizmeti — Essex merkezli tam operasyon altyapısı. Mal kabul, palet/koli depolama, Mintsoft WMS stok yönetimi, sipariş karşılama, pick & pack ve UK dağıtım. Teklif için WhatsApp'tan yazın.",
   keywords: [
     "ingiltere depo",
     "ingiltere depo hizmeti",
@@ -190,6 +190,35 @@ export default function IngiltereDepoPage() {
             <p className="text-slate-400 text-sm">
               Mal Kabul • Palet Depolama • Stok Yönetimi • Sipariş Karşılama • UK Dağıtım
             </p>
+          </div>
+        </section>
+
+        {/* Warehouse Photos */}
+        <section className="py-10 px-4 bg-[#f6f8fb]">
+          <div className="max-w-6xl mx-auto">
+            <p className="text-center text-sm font-semibold text-slate-500 uppercase tracking-widest mb-6">
+              Essex Depo — Unit 19 Arterial Park, Rayleigh
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <img
+                src="/arterial-park-arterial-road-rayleigh_depoici.jpeg"
+                alt="LondraDepo.com — Unit 19 Arterial Park Rayleigh Essex depo içi"
+                className="rounded-2xl object-cover w-full h-52 sm:h-60"
+                loading="lazy"
+              />
+              <img
+                src="/arterial-park-arterial-road-rayleigh_2ncioutdoor.jpeg"
+                alt="LondraDepo.com — Unit 19 Arterial Park Rayleigh Essex dış cephe"
+                className="rounded-2xl object-cover w-full h-52 sm:h-60"
+                loading="lazy"
+              />
+              <img
+                src="/arterial-park-arterial-road-rayleigh_kusbakisi.jpeg"
+                alt="LondraDepo.com — Unit 19 Arterial Park Rayleigh Essex kuş bakışı"
+                className="rounded-2xl object-cover w-full h-52 sm:h-60"
+                loading="lazy"
+              />
+            </div>
           </div>
         </section>
 

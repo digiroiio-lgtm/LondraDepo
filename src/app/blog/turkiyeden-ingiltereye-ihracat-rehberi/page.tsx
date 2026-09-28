@@ -60,7 +60,7 @@ const jsonLd = {
           name: "Türkiye'den İngiltere'ye ihracat nasıl yapılır?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Türkiye'den İngiltere'ye ihracat için: ürün GTIP kodunu belirleyin, ihracat belgelerini hazırlayın (invoice, packing list, EUR.1 veya A.TR), nakliyeci ile İngiltere'ye sevkiyat yapın, İngiltere gümrüğünde ürünleri beyan edin ve İngiltere deposuna teslim ettirin.",
+            text: "Türkiye'den İngiltere'ye ihracat için: ürün GTIP kodunu belirleyin, ihracat belgelerini hazırlayın (invoice, packing list, menşe beyanı / declaration of origin), nakliyeci ile İngiltere'ye sevkiyat yapın, İngiltere gümrüğünde HMRC CDS sistemine import declaration yapın ve İngiltere deposuna teslim ettirin.",
           },
         },
         {
@@ -121,9 +121,9 @@ export default function IhracatRehberiPage() {
               <h2>Türkiye&apos;den İngiltere&apos;ye İhracat: Temel Adımlar</h2>
               <ol>
                 <li><strong>GTIP kodu belirleme:</strong> Ürününüzün Türkiye gümrük tarifesi ve UK tarife kodu (HS code) belirlenir.</li>
-                <li><strong>İhracat belgeleri:</strong> Ticari fatura (invoice), ambalaj listesi (packing list), menşe belgesi (EUR.1 veya A.TR), varsa analiz raporları.</li>
+                <li><strong>İhracat belgeleri:</strong> Ticari fatura (invoice), ambalaj listesi (packing list), menşe beyanı (declaration of origin — UK-Türkiye STA kapsamında tercihli tarife için), varsa analiz raporları.</li>
                 <li><strong>Nakliyat:</strong> FCL konteyner, LCL parsiyel yük veya hava kargo seçeneklerinden biri tercih edilir.</li>
-                <li><strong>UK gümrük beyanı:</strong> İngiltere gümrüğünde import declaration yapılır (CHIEF veya CDS sistemi).</li>
+                <li><strong>UK gümrük beyanı:</strong> İngiltere gümrüğünde import declaration yapılır (HMRC Customs Declaration Service – CDS).</li>
                 <li><strong>Teslim ve depolama:</strong> Ürünler UK deposuna (Essex vb.) ulaştırılır, sayılır ve stoka alınır.</li>
                 <li><strong>Dağıtım veya fulfillment:</strong> UK&apos;daki müşterilere veya Amazon&apos;a dağıtım başlar.</li>
               </ol>
@@ -137,7 +137,7 @@ export default function IhracatRehberiPage() {
               </p>
               <p>
                 Önemli nokta: Serbest ticaret anlaşmasından yararlanmak için ürünün Türkiye
-                menşeili olduğunu kanıtlayan <strong>menşe beyanı</strong> veya EUR.1 belgesi
+                menşeili olduğunu kanıtlayan <strong>menşe beyanı (statement on origin / declaration of origin)</strong>
                 sunulmalıdır.
               </p>
 
@@ -215,8 +215,7 @@ export default function IhracatRehberiPage() {
 
               <h3>İngiltere&apos;ye ihracat için hangi belgeler gereklidir?</h3>
               <p>
-                Ticari fatura, ambalaj listesi, konşimento, menşe belgesi (EUR.1 veya menşe
-                beyanı) ve varsa özel ürün belgeleri (CE, gıda analizi vb.) gereklidir.
+                Ticari fatura, ambalaj listesi, konşimento, menşe beyanı (declaration of origin — UK-Türkiye STA kapsamında tercihli tarife uygulaması için) ve varsa özel ürün belgeleri (CE, gıda analizi vb.) gereklidir.
               </p>
             </div>
 

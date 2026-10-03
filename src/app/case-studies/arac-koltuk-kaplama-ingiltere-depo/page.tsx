@@ -26,6 +26,7 @@ export const metadata: Metadata = {
       "Otomotiv döşeme malzemelerinin İngiltere deposunda stok yönetimi, online fulfillment ve B2B dağıtım operasyonu.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
+    images: [{ url: "/og-default.jpg", width: 1200, height: 630, alt: "LondraDepo.com — İngiltere depo ve fulfillment (Rayleigh, Essex)" }],
     locale: "tr_TR",
     type: "article",
   },

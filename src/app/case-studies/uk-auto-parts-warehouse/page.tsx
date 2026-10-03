@@ -23,6 +23,7 @@ export const metadata: Metadata = {
       "Lüks araç yedek parçalarının İngiltere'de hasar kontrollü depolanması ve UK dağıtım operasyonu.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
+    images: [{ url: "/og-default.jpg", width: 1200, height: 630, alt: "LondraDepo.com — İngiltere depo ve fulfillment (Rayleigh, Essex)" }],
     locale: "tr_TR",
     type: "article",
   },
@@ -147,9 +148,9 @@ const faqs = [
 
 const relatedCases = [
   {
-    slug: "krufy-uk-fashion-fulfillment",
+    slug: "cruyff-uk-fulfillment",
     industry: "Moda & Apparel",
-    title: "Krufy — UK Fashion Fulfillment Operasyonu",
+    title: "Cruyff — UK Fashion Fulfillment Operasyonu",
     summary: "Apparel markasının İngiltere fulfillment ve yeniden paketleme süreci.",
   },
   {

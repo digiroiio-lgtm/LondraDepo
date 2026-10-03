@@ -31,6 +31,7 @@ export const metadata: Metadata = {
     description: "UK depolama ve fulfillment maliyet kalemleri. Özel teklif için iletişime geçin.",
     url: `${SITE_URL}/ingiltere-depo-fiyatlari`,
     siteName: "LondraDepo.com",
+    images: [{ url: "/og-default.jpg", width: 1200, height: 630, alt: "LondraDepo.com — İngiltere depo ve fulfillment (Rayleigh, Essex)" }],
     locale: "tr_TR",
     type: "website",
   },

@@ -21,6 +21,7 @@ export const metadata: Metadata = {
       "Amazon, Etsy ve Shopify satıcıları için İngiltere fulfillment ve sipariş hazırlama. Essex merkezli UK operasyon.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
+    images: [{ url: "/og-default.jpg", width: 1200, height: 630, alt: "LondraDepo.com — İngiltere depo ve fulfillment (Rayleigh, Essex)" }],
     locale: "tr_TR",
     type: "website",
   },

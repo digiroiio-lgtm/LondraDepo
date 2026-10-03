@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
@@ -28,12 +29,19 @@ export const metadata: Metadata = {
     "ingiltere 3pl",
     "ingilterede depo kiralama",
   ],
-  alternates: { canonical: `${SITE_URL}/ingiltere-depo` },
+  alternates: {
+    canonical: `${SITE_URL}/ingiltere-depo`,
+    languages: {
+      "tr-TR": `${SITE_URL}/ingiltere-depo`,
+      "en-GB": `${SITE_URL}/uk-warehousing-fulfilment`,
+    },
+  },
   openGraph: {
     title: "İngiltere Depo Hizmeti | LondraDepo.com",
     description: "UK depolama, mal kabul, stok yönetimi ve sipariş karşılama. Essex merkezli İngiltere depo hizmeti.",
     url: `${SITE_URL}/ingiltere-depo`,
     siteName: "LondraDepo.com",
+    images: [{ url: "/og-default.jpg", width: 1200, height: 630, alt: "LondraDepo.com — İngiltere depo ve fulfillment (Rayleigh, Essex)" }],
     locale: "tr_TR",
     type: "website",
   },
@@ -200,23 +208,29 @@ export default function IngiltereDepoPage() {
               Essex Depo — Unit 19 Arterial Park, Rayleigh
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <img
+              <Image
                 src="/arterial-park-arterial-road-rayleigh_depoici.jpeg"
                 alt="LondraDepo.com — Unit 19 Arterial Park Rayleigh Essex depo içi"
+                width={2500}
+                height={1436}
+                sizes="(min-width: 768px) 33vw, 100vw"
                 className="rounded-2xl object-cover w-full h-52 sm:h-60"
-                loading="lazy"
               />
-              <img
+              <Image
                 src="/arterial-park-arterial-road-rayleigh_2ncioutdoor.jpeg"
                 alt="LondraDepo.com — Unit 19 Arterial Park Rayleigh Essex dış cephe"
+                width={764}
+                height={516}
+                sizes="(min-width: 768px) 33vw, 100vw"
                 className="rounded-2xl object-cover w-full h-52 sm:h-60"
-                loading="lazy"
               />
-              <img
+              <Image
                 src="/arterial-park-arterial-road-rayleigh_kusbakisi.jpeg"
                 alt="LondraDepo.com — Unit 19 Arterial Park Rayleigh Essex kuş bakışı"
+                width={2500}
+                height={1436}
+                sizes="(min-width: 768px) 33vw, 100vw"
                 className="rounded-2xl object-cover w-full h-52 sm:h-60"
-                loading="lazy"
               />
             </div>
           </div>

@@ -26,6 +26,7 @@ export const metadata: Metadata = {
       "Elektronik ürün fulfillment İngiltere: SIM aktivasyonu, şarj kontrolü, teknik hazırlık ve son kullanıcı sevkiyatı tek merkezden.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
+    images: [{ url: "/og-default.jpg", width: 1200, height: 630, alt: "LondraDepo.com — İngiltere depo ve fulfillment (Rayleigh, Essex)" }],
     locale: "tr_TR",
     type: "article",
   },

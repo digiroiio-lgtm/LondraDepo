@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     description: "UK ithalat gümrükleme koordinasyonu. Türkiye'den İngiltere'ye ihracat için destek.",
     url: `${SITE_URL}/gumrukleme`,
     siteName: "LondraDepo.com",
+    images: [{ url: "/og-default.jpg", width: 1200, height: 630, alt: "LondraDepo.com — İngiltere depo ve fulfillment (Rayleigh, Essex)" }],
     locale: "tr_TR",
     type: "website",
   },

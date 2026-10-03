@@ -31,6 +31,7 @@ export const metadata: Metadata = {
     description: "UK'de sipariş toplama ve paketleme. Pick & pack, kargo etiketleme, sevkiyat.",
     url: `${SITE_URL}/siparis-toplama-paketleme`,
     siteName: "LondraDepo.com",
+    images: [{ url: "/og-default.jpg", width: 1200, height: 630, alt: "LondraDepo.com — İngiltere depo ve fulfillment (Rayleigh, Essex)" }],
     locale: "tr_TR",
     type: "website",
   },

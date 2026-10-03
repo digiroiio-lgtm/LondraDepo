@@ -14,7 +14,7 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20Amazon%20Prep%20h
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Amazon Prep UK: Adım Adım Rehber 2025 | LondraDepo.com",
+  title: "Amazon Prep UK: Adım Adım Rehber 2026 | LondraDepo.com",
   description:
     "Amazon FBA için İngiltere'de prep hizmeti nedir, nasıl alınır, FNSKU etiketleme ve FBA hazırlık süreci. Türk ihracatçıları için kapsamlı Amazon Prep UK rehberi.",
   alternates: { canonical: PAGE_URL },
@@ -23,6 +23,7 @@ export const metadata: Metadata = {
     description: "Amazon FBA prep hizmeti nedir, nasıl çalışır? Türk ihracatçılar için UK Amazon prep rehberi.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
+    images: [{ url: "/og-default.jpg", width: 1200, height: 630, alt: "LondraDepo.com — İngiltere depo ve fulfillment (Rayleigh, Essex)" }],
     locale: "tr_TR",
     type: "article",
   },
@@ -42,12 +43,17 @@ const jsonLd = {
     },
     {
       "@type": "Article",
-      headline: "Amazon Prep UK: Adım Adım Rehber 2025",
+      headline: "Amazon Prep UK: Adım Adım Rehber 2026",
       description: "Amazon FBA için İngiltere prep hizmeti rehberi. FNSKU etiketleme, FBA hazırlık ve sevk süreçleri.",
       url: PAGE_URL,
       datePublished: "2025-06-01",
-      dateModified: "2026-01-15",
-      author: { "@type": "Person", name: "Sertaç Yılmaz" },
+      dateModified: "2026-10-03",
+      author: {
+        "@type": "Person",
+        name: "Sertaç Yılmaz",
+        jobTitle: "Kurucu Ortak, Arca Trade Group",
+        worksFor: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
+      },
       publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
       image: { "@type": "ImageObject", url: `${SITE_URL}/logo.png`, width: 512, height: 512 },
       inLanguage: "tr-TR",
@@ -104,7 +110,7 @@ export default function AmazonPrepRehberiPage() {
               categoryColor="text-orange-700 bg-orange-50"
               title="Amazon Prep UK: Adım Adım Rehber"
               readTime="7 dakika"
-              date="Ocak 2026"
+              date="Ekim 2026"
             />
 
             <p className="text-lg leading-relaxed text-slate-600 mb-8">
@@ -230,7 +236,7 @@ export default function AmazonPrepRehberiPage() {
               </div>
             </div>
 
-            <AuthorBox updatedDate="Ocak 2026" />
+            <AuthorBox updatedDate="Ekim 2026" />
 
             <RelatedArticles articles={relatedArticles} />
 

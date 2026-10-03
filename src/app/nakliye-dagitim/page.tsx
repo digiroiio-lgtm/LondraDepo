@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     description: "UK içi nakliye ve dağıtım koordinasyonu. Ürün toplama, yerel dağıtım, UK geneli teslimat.",
     url: `${SITE_URL}/nakliye-dagitim`,
     siteName: "LondraDepo.com",
+    images: [{ url: "/og-default.jpg", width: 1200, height: 630, alt: "LondraDepo.com — İngiltere depo ve fulfillment (Rayleigh, Essex)" }],
     locale: "tr_TR",
     type: "website",
   },

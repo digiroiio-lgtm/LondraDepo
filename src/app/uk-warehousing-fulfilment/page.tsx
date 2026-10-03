@@ -24,13 +24,20 @@ export const metadata: Metadata = {
     "UK storage services",
     "Essex warehouse",
   ],
-  alternates: { canonical: `${SITE_URL}/uk-warehousing-fulfilment` },
+  alternates: {
+    canonical: `${SITE_URL}/uk-warehousing-fulfilment`,
+    languages: {
+      "en-GB": `${SITE_URL}/uk-warehousing-fulfilment`,
+      "tr-TR": `${SITE_URL}/ingiltere-depo`,
+    },
+  },
   openGraph: {
     title: "UK Warehousing & Fulfilment Services | LondraDepo",
     description:
       "UK warehousing, fulfilment and distribution. Customs clearance coordination, pick & pack, Shopify and Amazon fulfilment, UK delivery.",
     url: `${SITE_URL}/uk-warehousing-fulfilment`,
     siteName: "LondraDepo.com",
+    images: [{ url: "/og-default.jpg", width: 1200, height: 630, alt: "LondraDepo.com — İngiltere depo ve fulfillment (Rayleigh, Essex)" }],
     locale: "en_GB",
     type: "website",
   },

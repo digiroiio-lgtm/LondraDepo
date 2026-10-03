@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     description: "Shopify UK fulfillment. Stok depolama, pick & pack ve İngiltere teslimat.",
     url: `${SITE_URL}/shopify-fulfillment`,
     siteName: "LondraDepo.com",
+    images: [{ url: "/og-default.jpg", width: 1200, height: 630, alt: "LondraDepo.com — İngiltere depo ve fulfillment (Rayleigh, Essex)" }],
     locale: "tr_TR",
     type: "website",
   },

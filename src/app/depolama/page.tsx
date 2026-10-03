@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     description: "UK depolama çözümleri. Kısa/uzun vadeli depo, palet ve koli kabulü, stok yönetimi.",
     url: `${SITE_URL}/depolama`,
     siteName: "LondraDepo.com",
+    images: [{ url: "/og-default.jpg", width: 1200, height: 630, alt: "LondraDepo.com — İngiltere depo ve fulfillment (Rayleigh, Essex)" }],
     locale: "tr_TR",
     type: "website",
   },

@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     description: "TR → UK lojistik zinciri: gönderim, gümrük, depolama, fulfillment.",
     url: `${SITE_URL}/turkiye-ingiltere-lojistik`,
     siteName: "LondraDepo.com",
+    images: [{ url: "/og-default.jpg", width: 1200, height: 630, alt: "LondraDepo.com — İngiltere depo ve fulfillment (Rayleigh, Essex)" }],
     locale: "tr_TR",
     type: "website",
   },

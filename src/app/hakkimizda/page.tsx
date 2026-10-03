@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
@@ -19,6 +20,7 @@ export const metadata: Metadata = {
     description: "Essex merkezli UK depo ve lojistik operasyonumuz hakkında bilgi alın.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
+    images: [{ url: "/og-default.jpg", width: 1200, height: 630, alt: "LondraDepo.com — İngiltere depo ve fulfillment (Rayleigh, Essex)" }],
     locale: "tr_TR",
     type: "website",
   },
@@ -105,23 +107,29 @@ export default function HakkimizdaPage() {
                 Depo Tesisimiz — Unit 19 Arterial Park, Rayleigh, Essex
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <img
+                <Image
                   src="/arterial-park-arterial-road-rayleigh_depoici.jpeg"
                   alt="LondraDepo.com — Arterial Park Rayleigh Essex depo içi"
+                  width={2500}
+                  height={1436}
+                  sizes="(min-width: 768px) 33vw, 100vw"
                   className="rounded-xl object-cover w-full h-48"
-                  loading="lazy"
                 />
-                <img
+                <Image
                   src="/arterial-park-arterial-road-rayleigh_distankosecekimi.jpeg"
                   alt="LondraDepo.com — Arterial Park Rayleigh Essex depo uzak çekim"
+                  width={1600}
+                  height={1300}
+                  sizes="(min-width: 768px) 33vw, 100vw"
                   className="rounded-xl object-cover w-full h-48"
-                  loading="lazy"
                 />
-                <img
+                <Image
                   src="/arterial-park-arterial-road-rayleigh_officespace.jpeg"
                   alt="LondraDepo.com — Arterial Park Rayleigh Essex ofis alanı"
+                  width={762}
+                  height={512}
+                  sizes="(min-width: 768px) 33vw, 100vw"
                   className="rounded-xl object-cover w-full h-48"
-                  loading="lazy"
                 />
               </div>
             </div>

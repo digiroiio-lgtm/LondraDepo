@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     description: "UK e-ticaret fulfillment. Sipariş yönetimi, pick & pack, kargo ve UK teslimat.",
     url: `${SITE_URL}/e-ticaret-fulfillment`,
     siteName: "LondraDepo.com",
+    images: [{ url: "/og-default.jpg", width: 1200, height: 630, alt: "LondraDepo.com — İngiltere depo ve fulfillment (Rayleigh, Essex)" }],
     locale: "tr_TR",
     type: "website",
   },

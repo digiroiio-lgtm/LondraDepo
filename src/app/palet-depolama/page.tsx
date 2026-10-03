@@ -20,6 +20,7 @@ export const metadata: Metadata = {
       "UK'da palet bazında depolama. İthalatçılar ve toptancılar için maliyet kontrollü İngiltere pallet storage.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
+    images: [{ url: "/og-default.jpg", width: 1200, height: 630, alt: "LondraDepo.com — İngiltere depo ve fulfillment (Rayleigh, Essex)" }],
     locale: "tr_TR",
     type: "website",
   },

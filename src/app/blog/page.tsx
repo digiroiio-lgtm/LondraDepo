@@ -20,6 +20,7 @@ export const metadata: Metadata = {
       "UK depo, fulfillment ve Amazon prep rehberleri. Türkiye'den İngiltere'ye ihracat bilgi merkezi.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
+    images: [{ url: "/og-default.jpg", width: 1200, height: 630, alt: "LondraDepo.com — İngiltere depo ve fulfillment (Rayleigh, Essex)" }],
     locale: "tr_TR",
     type: "website",
   },
@@ -270,7 +271,7 @@ export default function BlogPage() {
                   Gerçek Operasyon Hikayeleri
                 </h2>
                 <p className="text-slate-600 text-sm leading-relaxed">
-                  Krufy moda fulfillment, OEM yedek parça deposu ve pizza kutusu B2B dağıtımı gibi
+                  Cruyff moda fulfillment, OEM yedek parça deposu ve pizza kutusu B2B dağıtımı gibi
                   gerçek operasyonları inceleyin.
                 </p>
               </div>

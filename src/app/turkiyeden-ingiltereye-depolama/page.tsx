@@ -31,6 +31,7 @@ export const metadata: Metadata = {
       "İngiltere'de kendi deponuzu kurmadan satış yapın. Türkiye'den ürün gönderin, tüm UK operasyonunu bize bırakın.",
     url: `${SITE_URL}/turkiyeden-ingiltereye-depolama`,
     siteName: "LondraDepo.com",
+    images: [{ url: "/og-default.jpg", width: 1200, height: 630, alt: "LondraDepo.com — İngiltere depo ve fulfillment (Rayleigh, Essex)" }],
     locale: "tr_TR",
     type: "website",
   },

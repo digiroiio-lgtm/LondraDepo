@@ -32,6 +32,7 @@ export const metadata: Metadata = {
     description: "UK e-ticaret lojistiği ve sipariş karşılama. Shopify, Amazon ve online mağaza entegrasyonu.",
     url: `${SITE_URL}/ingiltere-e-ticaret-lojistigi`,
     siteName: "LondraDepo.com",
+    images: [{ url: "/og-default.jpg", width: 1200, height: 630, alt: "LondraDepo.com — İngiltere depo ve fulfillment (Rayleigh, Essex)" }],
     locale: "tr_TR",
     type: "website",
   },

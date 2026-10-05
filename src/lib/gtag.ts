@@ -17,6 +17,6 @@ export function trackPhoneClick(source: string) {
 export function trackQuoteSubmit() {
   (window as any).gtag?.("event", "generate_lead", {
     event_category: "conversion",
-    method: "whatsapp",
+    method: "form",
   });
 }

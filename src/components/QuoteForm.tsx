@@ -1,9 +1,11 @@
 "use client";
 
-import { useState, FormEvent } from "react";
+import { useState, useEffect, FormEvent } from "react";
+import { useForm } from "@formspree/react";
 import { trackQuoteSubmit } from "@/lib/gtag";
 
 const WA_NUMBER = "447554195190";
+const FORMSPREE_ID = "xoejvawy";
 
 const salesChannels = ["Shopify", "Amazon", "Toptan Satış", "Diğer"];
 const servicesNeeded = [
@@ -48,6 +50,7 @@ export default function QuoteForm() {
     message: "",
   });
   const [errors, setErrors] = useState<Partial<Record<keyof FormData, string>>>({});
+  const [state, submitToFormspree] = useForm(FORMSPREE_ID);
 
   function handleText(field: keyof FormData, value: string) {
     setForm((f) => ({ ...f, [field]: value }));
@@ -74,10 +77,32 @@ export default function QuoteForm() {
     return Object.keys(e).length === 0;
   }
 
-  function handleSubmit(ev: FormEvent) {
+  async function handleSubmit(ev: FormEvent) {
     ev.preventDefault();
     if (!validate()) return;
 
+    await submitToFormspree({
+      _subject: `Yeni teklif talebi — ${form.name}`,
+      name: form.name,
+      company: form.company,
+      email: form.email,
+      phone: form.phone,
+      country: form.country,
+      productType: form.productType,
+      stockEstimate: form.stockEstimate,
+      pallets: form.pallets,
+      monthlyOrders: form.monthlyOrders,
+      channels: form.channels.join(", "),
+      services: form.services.join(", "),
+      message: form.message,
+    });
+  }
+
+  useEffect(() => {
+    if (state.succeeded) trackQuoteSubmit();
+  }, [state.succeeded]);
+
+  function whatsappUrl(): string {
     const lines = [
       "🏭 *YENİ TEKLİF TALEBİ — LondraDepo.com*",
       "",
@@ -98,10 +123,7 @@ export default function QuoteForm() {
     ]
       .filter(Boolean)
       .join("\n");
-
-    const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(lines)}`;
-    trackQuoteSubmit();
-    window.open(url, "_blank", "noopener,noreferrer");
+    return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(lines)}`;
   }
 
   const inputCls =
@@ -123,6 +145,23 @@ export default function QuoteForm() {
           </p>
         </div>
 
+        {state.succeeded ? (
+          <div className="bg-white rounded-3xl p-6 sm:p-10 text-center space-y-4" role="status">
+            <h3 className="text-2xl font-extrabold text-[#0b2545]">Talebiniz alındı, teşekkürler!</h3>
+            <p className="text-slate-600 leading-relaxed">
+              Ekibimiz en kısa sürede <strong>{form.email}</strong> adresine veya telefonunuza dönüş yapacak.
+              Daha hızlı yanıt için aynı bilgileri WhatsApp&apos;tan da iletebilirsiniz.
+            </p>
+            <a
+              href={whatsappUrl()}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-green-500 hover:bg-green-600 text-white font-extrabold py-3 px-8 rounded-full transition shadow-lg"
+            >
+              WhatsApp&apos;tan da Yaz
+            </a>
+          </div>
+        ) : (
         <form
           onSubmit={handleSubmit}
           noValidate
@@ -333,17 +372,25 @@ export default function QuoteForm() {
             />
           </div>
 
+          {state.errors && (
+            <p className={`${errorCls} text-center`} role="alert">
+              Form gönderilemedi. Lütfen bilgileri kontrol edip tekrar deneyin veya WhatsApp&apos;tan yazın.
+            </p>
+          )}
+
           <button
             type="submit"
-            className="w-full bg-[#e63946] hover:bg-[#c1121f] text-white font-extrabold py-4 rounded-full text-base transition shadow-lg"
+            disabled={state.submitting}
+            className="w-full bg-[#e63946] hover:bg-[#c1121f] disabled:opacity-60 disabled:cursor-not-allowed text-white font-extrabold py-4 rounded-full text-base transition shadow-lg"
           >
-            Teklifimi İste →
+            {state.submitting ? "Gönderiliyor…" : "Teklifimi İste →"}
           </button>
 
           <p className="text-center text-xs text-slate-400">
-            Formu göndererek WhatsApp üzerinden ekibimizle iletişime geçmiş olursunuz.
+            Formu göndererek bilgilerinizin teklif hazırlamak amacıyla ekibimizle paylaşılmasını kabul etmiş olursunuz.
           </p>
         </form>
+        )}
       </div>
     </section>
   );

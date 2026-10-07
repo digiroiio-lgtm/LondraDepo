@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "Shopify Fulfillment İngiltere | Shopify UK Sipariş Karşılama | LondraDepo.com",
   description:
     "Shopify mağazanızdan gelen UK siparişleri için fulfillment hizmeti. Stok depolama, pick & pack, kargo ve İngiltere geneli teslimat. Shopify üzerinden satış yapan işletmeler için UK fulfillment.",
-  alternates: { canonical: `${SITE_URL}/shopify-fulfillment` },
+  alternates: { canonical: `${SITE_URL}/shopify-ingiltere-depo` },
   openGraph: {
     title: "Shopify Fulfillment İngiltere | LondraDepo.com",
     description: "Shopify UK fulfillment. Stok depolama, pick & pack ve İngiltere teslimat.",

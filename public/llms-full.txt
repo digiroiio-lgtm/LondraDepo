@@ -1,0 +1,784 @@
+# LondraDepo.com — Bilgi Dosyası (llms-full.txt)
+Oluşturulma: 2026-09-28 | Dil: Türkçe (öncelikli), İngilizce (/uk-warehousing-fulfilment)
+Web: https://www.londradepo.com
+
+
+---
+# BÖLÜM 1: KURULUŞ BİLGİLERİ
+
+## Kuruluş
+Marka: LondraDepo.com
+Şirket: Arca Trade Group Ltd
+Companies House No: 13247691
+VAT: GB353315322
+Adres: Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY
+WhatsApp: +44 7554 195190
+Kuruluş: 2021
+WMS: Mintsoft (gerçek zamanlı stok takibi)
+BIFA Üyesi: https://bifa.org/members/arca-trade-group-ltd/
+Kompass: https://in.kompass.com/c/arca-trade-group-ltd/gbcs13970309/
+Endole: https://open.endole.co.uk/insight/company/13247691-arca-trade-group-ltd
+Companies House: https://find-and-update.company-information.service.gov.uk/company/13247691
+LinkedIn: https://www.linkedin.com/company/arcatradegroup/
+
+## Konum
+Depo: Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY
+Londra'ya: ~40-50 km (~40 dakika, A127/M25)
+Tilbury Limanı: ~30 dakika (Türkiye ro-ro ve konteyner hatları)
+Felixstowe Limanı: ~1 saat (UK'nin en büyük konteyner limanı)
+Amazon UK depoları (Tilbury, Dartford): yakın erişim
+M25: kuzey-güney UK dağıtım güzergahı
+FCL ve LCL konteyner kabulü yapılıyor; büyük kapı ve HGV rampası mevcut
+
+## Hizmet Kapsamı (Özet)
+UK'ye varıştan itibaren: mal kabul, gümrük koordinasyonu, depolama (palet/koli), Mintsoft WMS stok yönetimi, sipariş toplama (pick), paketleme (pack), kargo etiketleme, UK dağıtım, iade yönetimi.
+KAPSAM DIŞI: Türkiye → UK uluslararası nakliye hizmeti sunulmamaktadır. Hizmet alanı UK'ye varıştan sonra başlar.
+
+## Hedef Müşteri
+- Türkiye'den İngiltere'ye ihracat yapan markalar ve üreticiler
+- Shopify, Amazon FBM, Etsy satıcıları
+- Toptancılar (UK perakendeciyle çalışan)
+- İthalatçılar
+- UK'de kendi deposu olmayan e-ticaret işletmeleri
+
+## Ekip
+Kurucu: Sertaç Yılmaz (18 yıl lojistik sektörü deneyimi; GLA üyesi, 15. GLA Global Lojistik Konferansı Bangkok 2026 katılımcısı)
+Operasyon Direktörü: Yusuf Barış (Rayleigh, Essex)
+Diller: Türkçe ve İngilizce
+
+## Fiyat Benchmark Verileri
+(Kaynak: /blog/ingiltere-depo-fiyatlari-2026)
+- Standart euro palet (120x80 cm) haftalık depolama: ortalama £8–£15
+- Premium/soğuk/özel racking: £20+/hafta
+- Pick & Pack: £1.50–£3.00/sipariş
+- Paketleme materyali: £0.50–£2.00/sipariş
+- Mal kabul: £5–£15/palet
+- Amazon prep (etiketleme, polybag vb.): £0.30–£0.80/ürün
+- Türkiye → UK FCL konteyner: ortalama $2,000–$4,000 USD (piyasa bağımlı)
+- Örnek senaryo: 200 sipariş/ay, 10 palet: depolama £400 + pick&pack £500 + paketleme £200 + kargo £800 = ~£1,900/ay
+Not: LondraDepo sabit fiyat listesi yayınlamaz; her müşteri için özel teklif hazırlanır.
+
+
+---
+# BÖLÜM 2: TİCARİ SAYFALAR (P0 — Ana Anahtar Kelime Sayfaları)
+
+---
+## URL: /ingiltere-depo
+# İngiltere Depo ve Depolama Hizmeti
+Essex merkezli tam operasyon altyapısı: mal kabul, palet/koli depolama, Mintsoft WMS stok yönetimi, sipariş karşılama, pick & pack ve UK dağıtım.
+
+### Hizmetler
+- Mal Kabul: gelen yüklerin sayımı, kontrolü ve Mintsoft WMS sistemine kaydı
+- Palet Depolama: kısa/uzun vadeli, anlık stok takibi
+- Koli Depolama: ürün bazlı stok yönetimi
+- Stok Yönetimi: Mintsoft WMS, düşük stok uyarısı
+- Sipariş Karşılama: toplama + paketleme + etiketleme + sevkiyat
+- UK Dağıtım: Essex'ten tüm İngiltere'ye
+
+### Kimler Yararlanıyor
+Üreticiler (TR'de üretip UK'de satan), e-ticaret markaları (Shopify/Amazon/kendi site), Amazon FBM satıcıları, toptancılar (UK perakendeciyle çalışan), ithalatçılar, Shopify mağazaları.
+
+### Sık Sorulan Sorular
+Q: Hangi bölgelere hizmet veriyor?
+A: Essex merkezli; Londra, Birmingham, Manchester ve tüm UK dağıtım.
+
+Q: Türkiye'den ürün gönderebilir miyim?
+A: Evet, depo adresine doğrudan sevkiyat + gümrükleme koordinasyonu desteği.
+
+Q: Sadece depolama mı sağlıyor?
+A: Hem depolama hem tam fulfillment: toplama, paketleme, etiketleme, sevkiyat.
+
+Q: Palet ve koli kabul ediyor musunuz?
+A: Evet, kısa ve uzun dönemli her ikisi için de.
+
+
+---
+## URL: /londra-depo
+# Londra Depo: M25 Üzerinden UK Dağıtım
+Londra'ya 40 dakika mesafede Essex deposu — M25 çıkışı, Tilbury Limanı'na 30 dakika, mal kabul, depolama, sipariş karşılama.
+
+### Temel Bilgiler
+- Adres: Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY
+- Londra'ya: ~40-50 km
+- UK lojistik güzergahlarına tam uyum
+
+### Hizmetler
+Mal kabul, palet depolama, koli depolama, stok yönetimi (Mintsoft WMS), pick & pack, UK dağıtım.
+
+### Sık Sorulan Sorular
+Q: Londra'da depo hizmeti alabilir miyim?
+A: Evet, Essex'te Londra'ya ~40-50 km, UK lojistik ağına tam entegre.
+
+Q: Ürünlerimi nasıl gönderebilirim?
+A: Türkiye'den veya başka ülkeden depo adresine sevk + gümrükleme koordinasyonu desteği.
+
+Q: Teklif nasıl alınır?
+A: WhatsApp veya telefon ile; ürün türü, hacim, tahmini palet/koli sayısı ve ihtiyaç duyulan hizmetleri belirtin.
+
+
+---
+## URL: /ingiltere-e-ticaret-lojistigi
+# İngiltere E-Ticaret Lojistiği ve Sipariş Karşılama
+İngiltere e-ticaret lojistiği ve sipariş karşılama: Shopify, Amazon ve online mağaza UK siparişleri için depolama, pick & pack ve İngiltere teslimat.
+
+### Sipariş Süreci (6 Adım)
+01. Sipariş Gelir (Shopify/Amazon)
+02. WMS'e Girer (Mintsoft)
+03. Stoktan Toplanır (Pick)
+04. Paketlenir (Pack)
+05. Etiketlenir
+06. Sevk Edilir
+
+### Desteklenen Satış Kanalları
+- Shopify: UK siparişleri Essex'ten karşılanır (resmi partner değil)
+- Amazon FBM: FBM siparişleri Essex deposundan karşılanır (resmi partner değil)
+- Diğer online kanallar: kendi web sitesi veya başka platformlar
+
+### Hizmet Kapsamı
+Ürün depolama, stok yönetimi (Mintsoft WMS), pick & pack, kargo etiketleme, UK teslimat, iade yönetimi.
+
+### Sık Sorulan Sorular
+Q: İngiltere e-ticaret lojistiği nedir?
+A: Online mağazadan gelen UK siparişlerinin depoda toplanması, paketlenmesi, teslim edilmesi sürecinin tamamı; LondraDepo Essex'ten yönetir.
+
+Q: Fulfillment ile lojistik farkı nedir?
+A: Lojistik = taşıma + depolama; fulfillment = sipariş alımından teslimata stok yönetimi + pick&pack + kargo etiketleme dahil tam süreç.
+
+Q: Stok nasıl yönetilir?
+A: Mintsoft WMS ile anlık stok takibi; mal giriş/çıkışları sisteme anlık yansır.
+
+
+---
+## URL: /siparis-toplama-paketleme
+# Sipariş Toplama ve Paketleme (Pick & Pack)
+İngiltere'de sipariş toplama ve paketleme hizmeti: pick & pack, kargo etiketleme ve UK sevkiyat, online mağaza siparişleri için depo operasyonu.
+
+### Pick & Pack Süreci (6 Adım)
+01. Sipariş Alınır
+02. Mintsoft WMS'e Girer
+03. Toplanır (Pick): depo ekibi raftan doğru kalemleri toplar
+04. Paketlenir (Pack): sevkiyata uygun ambalaj
+05. Etiketlenir: kargo barkodu + adres etiketi
+06. Sevk Edilir
+
+### Hizmet Kapsamı
+- Sipariş Toplama: çok ürünlü siparişlerde her kalem doğrulanır
+- Paketleme: ürün türüne göre uygun ambalaj
+- Kargo Etiketleme: barkod + adres
+- Sipariş Kontrolü: paketleme öncesi içerik doğrulanır
+- İade İşleme: kabul + kontrol + stoka geri alım
+- Stok Senkronizasyonu: her hareket Mintsoft WMS'de güncellenir
+
+### Sık Sorulan Sorular
+Q: Pick & Pack nedir?
+A: Sipariş gelince raftan ürün toplama (pick) + paketleyerek kargoya hazırlama (pack) sürecinin tamamı.
+
+Q: Hangi ürünler için yapılır?
+A: Tekstil, elektronik aksesuar, ev ürünleri, kozmetik; koli/palet/bireysel ürünler.
+
+Q: Paketleme malzemesi kim sağlar?
+A: Seçenekler için iletişime geçin; bazı müşteriler kendi markalı ambalajını gönderir.
+
+
+---
+## URL: /ingiltere-depo-fiyatlari
+# İngiltere Depo Fiyatları 2026
+İngiltere depo fiyatları 2026: depolama, palet depolama, pick & pack, mal kabul, kargo ve sipariş karşılama maliyetleri; özel teklif için iletişime geçin.
+
+### Maliyet Kalemleri (9 Kategori)
+1. Mal Kabul: boşaltma + sayım + WMS kaydı + yerleştirme
+2. Palet Depolama: haftalık/aylık, palet başına; uzun süreli farklı tarife; kısmi palet mümkün
+3. Koli/Raf Depolama: küçük ürünler, koli/raf başına aylık
+4. Sipariş Toplama/Pick: sipariş başına; ilk + ek kalem ücretlendirmesi
+5. Paketleme/Pack: paket boyutu/türüne göre + ambalaj malzemesi
+6. Etiketleme: kargo etiketi + ürün etiketi + özel etiketleme
+7. Kargo: UK içi koordinasyon; standart/ekspres; müşteriye yansıtılır
+8. İade/Return: kabul + kontrol + sisteme geri kayıt + stoka alma
+9. Gümrükleme Koordinasyonu: süreç koordinasyonu + belge yönlendirmesi + gümrük→depo
+
+### Örnek Müşteri Profilleri
+Küçük İşletme: 10–20 palet, aylık 100–300 sipariş (mal kabul + palet depolama + pick&pack + kargo)
+Orta Ölçekli: 50–100+ palet, aylık 500+ sipariş (tüm hizmetler + iade yönetimi + etiketleme)
+
+### Sık Sorulan Sorular
+Q: Fiyatlar nasıl hesaplanır?
+A: Palet/koli sayısı, depolama süresi, sipariş hacmi ve ek hizmetlere göre; her müşteri için özel teklif.
+
+Q: Teklif için ne tür bilgi gerekiyor?
+A: Ürün türü, tahmini palet/koli sayısı, aylık sipariş hacmi, ihtiyaç duyulan hizmetler, satış kanalı.
+
+Q: Minimum stok/sipariş şartı var mı?
+A: Operasyon ölçeğine göre değerlendirme yapılıyor; doğrudan iletişime geçin.
+
+
+---
+## URL: /turk-sirketleri-icin-ingiltere-depo
+# Türk Şirketleri İçin İngiltere Depo ve Fulfilment
+Türk şirketleri için İngiltere depo ve fulfilment: UK'de şirket veya depo kurmadan Türkiye'den İngiltere pazarına satış yapın.
+
+### Türk İşletmelerin UK'de Karşılaştığı Zorluklar
+- UK'de şirket kurmak: yüksek maliyet + yasal yükümlülükler
+- Kendi depo kiralamak: kira + personel + WMS + operasyon
+- Gümrük ve lojistik: UK ithalat kuralları + belge + taşıyıcı koordinasyonu
+- Sipariş karşılama: pick&pack + kargo entegrasyonu + iade yönetimi
+
+### LondraDepo ile Çözüm
+- UK'de şirket kurmadan: kendi Türk şirketinizle UK pazarına giriş
+- Kendi depo kurmadan: Essex depo sizin deponuz; kira/personel/WMS maliyeti yok
+- Türkçe iletişim
+- Gümrük koordinasyonu desteği
+- Mintsoft WMS ile anlık stok takibi
+- UK dağıtım altyapısı
+
+### Nasıl Başlanır (6 Adım)
+01. İletişime geçin
+02. Özel teklif alın
+03. Ürünleri gönderin
+04. Mal kabul (Essex deposu)
+05. Satış yapın (Shopify/Amazon/toptan)
+06. Fulfillment (pick + pack + sevk)
+
+### Sık Sorulan Sorular
+Q: UK'de şirket kurmadan satış yapabilir miyim?
+A: Evet; LondraDepo'da depolayıp Shopify/Amazon'dan satış yapılabilir. Vergi ve ticaret hukuku için bağımsız danışmanlık önerilir.
+
+Q: Türkçe iletişim mümkün mü?
+A: Evet. LondraDepo TR'den UK'e çalışan işletmeler için kurulmuş; Türkçe destek sunuluyor.
+
+Q: FBA mı FBM mi?
+A: LondraDepo FBM modelini destekler; ürünler Essex'te, Amazon FBM siparişleri oradan karşılanır.
+
+
+---
+## URL: /turkiye-ingiltere-lojistik
+# Türkiye'den İngiltere'ye Lojistik ve Ürün Gönderimi
+Türkiye'den İngiltere'ye lojistik ve ürün gönderimi rehberi: UK gümrük desteği, depolama ve sipariş karşılama.
+
+### Tedarik Zinciri: Sorumluluk Dağılımı
+01. Türkiye'den Gönderin → MÜŞTERİ sorumluluğu (uluslararası taşıyıcı)
+02. UK Gümrüğü → LondraDepo koordinasyon desteği sağlar
+03. Depoya Alınır → LondraDepo (gümrükten çıkış, sayım, WMS kaydı)
+04. Stoklanır → LondraDepo (Mintsoft WMS)
+05. Sipariş Gelir → LondraDepo (Shopify/Amazon/toptan)
+06. Karşılanır → LondraDepo (pick + pack + etiket + UK teslimat)
+
+ÖNEMLİ: LondraDepo uluslararası nakliye (Türkiye → UK kargo) hizmeti SUNMAMAKTADIR. Hizmet alanı UK'ye varıştan sonra başlar.
+
+### Hizmet Kapsamı
+Gümrük → Depo Koordinasyonu, Mal Kabul, Depolama (palet/koli), Stok Yönetimi (Mintsoft), Pick & Pack, UK Dağıtım.
+
+### Sık Sorulan Sorular
+Q: LondraDepo nakliye yapıyor mu?
+A: Hayır. Sadece UK'ye varıştan sonra: gümrükleme koordinasyonu, mal kabul, depolama, sipariş karşılama, UK dağıtımı.
+
+Q: UK gümrüğünde ürünleri kim geçirir?
+A: Lisanslı gümrükçüler. LondraDepo koordinasyon ve yönlendirme sağlar; doğrudan gümrük beyanı yapmaz. Gümrük sonrası depoda teslim alınır.
+
+Q: UK ithalatı için hangi belgeler gerekiyor?
+A: Ticari fatura (commercial invoice), konşimento/taşıma belgesi, ambalaj listesi (packing list), ürüne bağlı sertifikalar. Gümrük uzmanından destek önerilir.
+
+
+---
+## URL: /turkiyeden-ingiltereye-satis
+# Türkiye'den İngiltere'ye Nasıl Satış Yapılır? 2026 Rehberi
+Türkiye'den İngiltere'ye satış rehberi 2026: ürün gönderimi, gümrük, depolama, Amazon ve Shopify satışı, pick & pack, sipariş karşılama ve UK lojistik adım adım.
+
+### 1. Satış Modeli Seçin
+3 model:
+- UK depoda stok + online satış: en yaygın ve ölçeklenebilir model (LondraDepo bu modeli destekler)
+- Toptan satış: UK alıcıya direkt sevkiyat
+- Dropshipping: TR'den direkt; UK teslimat süreleri açısından dikkatli değerlendirin
+
+### 2. Ürün Gönderimi: TR'den UK'e
+Uluslararası nakliyeci/kargo firması gerekir. LondraDepo nakliye yapmaz; UK'ye varışta devralır.
+Nakliye seçenekleri: FCL (20ft/40ft konteyner), LCL (CBM bazında parsiyel), hava kargo, karayolu + deniz kombinasyonu.
+
+### 3. UK Gümrüğü
+Lisanslı gümrükçü gereklidir. Sistem: HMRC CDS (Customs Declaration Service).
+Gerekli belgeler: ticari fatura, ambalaj listesi, taşıma belgesi (B/L veya AWB), menşe beyanı (declaration of origin), ürüne bağlı sertifikalar (CE, UKCA vb.).
+UK-Türkiye STA (2021): kapsamındaki ürünlerde gümrük indirimi/muafiyeti için menşe beyanı şart.
+
+### 4. Mal Kabul
+Essex deposuna gümrük sonrası teslim. Sayım + kontrol + Mintsoft WMS kaydı + depolama konumuna yerleştirme.
+
+### 5. Stok Yönetimi
+Mintsoft WMS ile anlık stok izleme. Giriş/çıkışlar sisteme anlık yansır. Satış kanalı senkronizasyonu için kritik.
+
+### 6. Shopify ile İngiltere'de Satış
+Shopify mağaza kurulduktan sonra stok UK deposunda (LondraDepo). Sipariş gelince depo karşılar.
+
+### 7. Amazon ile İngiltere'de Satış
+FBA: ürünler Amazon deposuna gönderilir, Amazon karşılar. FBM: kendi/3PL depoda; LondraDepo FBM modelini destekler.
+
+### 8. Siparişlerin İşlenmesi
+Online mağazadan WMS'e aktarım. Mintsoft üzerinden her sipariş işlenir.
+
+### 9. Pick (Toplama)
+Siparişteki ürünler raflardan toplanır. Çok ürünlü siparişlerde her kalem doğrulanır.
+
+### 10. Pack ve Etiketleme
+Uygun ambalaj, kargo etiketi. Özel/markalı ambalaj görüşülebilir.
+
+### 11. UK'de Kargo ve Teslimat
+Essex UK geneline elverişli lojistik konumu. Standart ve ekspres taşıyıcı koordinasyonu.
+
+### 12. İade Yönetimi
+UK e-ticarette yüksek iade oranı. Depoda teslim + kontrol + sisteme geri kayıt. Hasarlı ayrıştırılır; kullanılabilir stoka geri alınır.
+
+### 13. Toplam Maliyet Yapısı (8 Kalem)
+- Uluslararası nakliye (TR→UK)
+- UK ithalat gümrüğü + KDV
+- Depolama (LondraDepo)
+- Mal kabul (LondraDepo)
+- Pick & pack (LondraDepo)
+- Kargo (UK içi; LondraDepo koordinasyonu)
+- Platform komisyonu (Shopify/Amazon)
+- İade yönetimi (LondraDepo)
+
+### 14. Türk Şirketleri İçin Özel Değerlendirmeler
+- UK KDV: eşik aşılınca UK KDV kaydı gerekir; bağımsız muhasebeci önerilir
+- Ürün uyumu: UKCA ve/veya CE işareti ürün kategorisine göre gerekebilir
+- Gümrük tarifeleri: HS koduna göre değişir; UK-TR STA faydaları menşe beyanı ile alınır
+
+### 15. Teklif Alın ve Başlayın
+Ürün türü, tahmini stok miktarı, aylık sipariş hacmi paylaşılarak WhatsApp'tan özel teklif alınır.
+
+### Sık Sorulan Sorular
+Q: Türkiye'den İngiltere'ye nasıl satış yapılır?
+A: UK depoda stok (LondraDepo) + Shopify/Amazon FBM en yaygın model. UK'de şirket veya depo kurmaya gerek yok.
+
+Q: UK'de şirket kurmadan satış yapabilir miyim?
+A: Evet, Türkiye'deki şirketinizle. Vergi konusunda bağımsız danışman önerilir.
+
+Q: Ürün gönderimi nasıl yapılır?
+A: Uluslararası nakliyeci ile UK'ye gönderilir. UK gümrüğünden geçtikten sonra LondraDepo depoda teslim alınır.
+
+
+---
+# BÖLÜM 3: HİZMET SAYFALARI
+
+---
+## URL: /ingiltere-fulfillment
+# İngiltere Fulfillment Hizmeti
+Türkiye'den İngiltere'ye ihracat yapan markalar için UK fulfillment: sipariş toplama, paketleme, Amazon FBA prep, Shopify & Etsy entegrasyonu. Essex merkezli operasyon.
+
+### Hizmet Kapsamı (6 Madde)
+- Sipariş Toplama (Picking): gelen her sipariş depo raflarından doğru şekilde toplanır
+- Paketleme (Packing): ürünler marka standartlarınıza uygun şekilde paketlenir
+- Amazon FBA Prep: FBA uyumlu etiketleme, hazırlık ve Amazon deposuna sevk
+- Shopify & Etsy Entegrasyonu: e-ticaret platformlarından gelen siparişler işlenir
+- İade Yönetimi: UK'dan gelen iadeler alınır, kontrol edilir ve raporlanır
+- Stok Takibi: depo stok seviyeleri düzenli raporlanır ve uyarılar verilir
+
+### Sık Sorulan Sorular
+Q: İngiltere fulfillment hizmeti nedir?
+A: Müşteri siparişlerinin depodan toplanması, paketlenmesi ve gönderilmesi sürecidir. UK depomuzdaki ürünleri stoklar, siparişleri hazırlayarak müşterilerinize göndeririz.
+
+Q: Amazon FBA için UK fulfillment desteği veriyor musunuz?
+A: Evet. FBA uyumlu etiketleme ve Amazon deposuna sevk yapıyoruz.
+
+Q: Fulfillment için minimum stok miktarı var mı?
+A: Sabit minimum stok zorunluluğu bulunmamaktadır; esnek çözümler sunuyoruz.
+
+
+---
+## URL: /palet-depolama
+# İngiltere Palet Depolama Hizmeti
+Toptancılar, ithalatçılar ve üreticiler için uygun maliyetli UK pallet storage. Essex merkezli operasyon, haftalık raporlama.
+
+### Hizmet Kapsamı
+- Palet Kabulü: FCL/LCL ile gelen yükler palet bazında alınır
+- Sayım & Kontrol: tüm paletler sayılır, hasar kontrolü yapılır
+- Güvenli Depolama: kilitli alan, kamera sistemi, kontrollü erişim
+- Haftalık Raporlama: stok seviyeleri düzenli raporlanır
+- Esnek Süre: haftalık faturalama; kısa veya uzun dönem
+- Dağıtıma Hazırlık: sipariş gelince paletler pick & pack'e hazırlanır
+
+### Sık Sorulan Sorular
+Q: İngiltere palet depolama ücreti nasıl hesaplanır?
+A: Palet sayısı ve depolama süresine göre haftalık hesaplanır.
+
+Q: Minimum palet miktarı nedir?
+A: Sabit minimum yok; küçük hacimden büyük hacme hizmet verilir.
+
+Q: Paletlerin güvenliği nasıl sağlanıyor?
+A: Kilitli ve kontrollü erişim sistemi; her palet numaralandırılır ve stok takibi yapılır.
+
+
+---
+## URL: /amazon-prep-uk
+# Amazon Prep UK — İngiltere Amazon FBA Hazırlık Hizmeti
+İngiltere'de Amazon FBA prep: ürün etiketleme, paketleme, FBA uyumluluk kontrolü ve Amazon UK deposuna sevk. Türk ihracatçıları için UK Amazon prep partneri.
+
+### Hizmet Kapsamı
+- FNSKU Etiketleme: Amazon'un gerektirdiği FNSKU ve barkod etiketleme
+- FBA Uyumluluk Kontrolü: Amazon standartlarına uygunluk denetimi
+- Paketleme & Hazırlık: ürünler FBA gereksinimlerine göre paketlenir
+- Shipment Plan Oluşturma: Amazon Seller Central üzerinden shipment planı hazırlanır
+- Amazon Deposuna Sevk: hazır ürünler Amazon UK deposuna gönderilir
+- Takip ve Raporlama: sevkiyat takibi ve durum raporlaması
+
+### Sık Sorulan Sorular
+Q: Amazon UK deposuna ürün göndermek ne kadar sürer?
+A: Prep tamamlandıktan sonra genellikle 2–5 iş günü.
+
+Q: Hangi Amazon marketplace'lere hizmet veriyorsunuz?
+A: Öncelikli olarak amazon.co.uk; Amazon EU'ya da destek sağlanıyor.
+
+Q: FNSKU etiketleme yapıyor musunuz?
+A: Evet, FNSKU ve barkod etiketleme servis kapsamındadır.
+
+
+---
+## URL: /depolama
+# İngiltere Depolama: Palet, Koli ve Mintsoft WMS
+UK depolama hizmetinin teknik detayları: palet ve koli kabulü, Mintsoft WMS ile gerçek zamanlı stok takibi, FCL konteyner boşaltma, kısa ve uzun vadeli depo kapasitesi. Essex, İngiltere.
+
+### Hizmet Kapsamı
+- Kısa Vadeli Depolama: dönemsel veya sezonluk stok ihtiyacı
+- Uzun Vadeli Depolama: düzenli ithalat yapan markalar için
+- Palet & Koli Depolama: her iki format için kapasiteli alan
+- Ürün Kabul & Sayım: giriş sırasında tam sayım ve kontrol
+- Stok Yönetimi: Mintsoft WMS ile gerçek zamanlı izleme
+- Stok İzleme: düşük stok uyarısı, hareket geçmişi
+
+### Sık Sorulan Sorular
+Q: Stok takibi nasıl yapılıyor?
+A: Mintsoft WMS üzerinden stok seviyeleri ve ürün hareketleri kayıt altında tutulur.
+
+Q: Türkiye'den gelen ürünleri kabul ediyor musunuz?
+A: Evet, Türkiye veya herhangi bir tedarikçiden gelen ürünleri kabul ediyoruz.
+
+
+---
+## URL: /essex-depo
+# Essex Depo Hizmeti — Londra Yakını UK Warehouse
+Essex'te depo hizmeti. Londra yakını Essex depo alanlarımızda ürünlerinizi güvenle depolayın. Türkiye'den İngiltere'ye gelen yükler için Essex warehouse çözümleri.
+
+### Konum Avantajları
+- Adres: Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY
+- Rayleigh, Rochford district; Southend-on-Sea'ye ~10 km
+- Londra: ~40 dakika (A127/M25)
+- Felixstowe: ~1 saat (UK'nin en büyük konteyner limanı)
+- Tilbury: ~30 dakika (Türk ro-ro ve konteyner hatları)
+- Amazon UK depoları (Tilbury, Dartford): hızlı erişim
+- Büyük kapı ve HGV/konteyner rampası mevcut
+
+### Hizmet Listesi
+Konteyner Kabulü, Palet Depolama, Fulfillment, Amazon Prep, Gümrük Danışmanlığı, Dağıtım Ağı.
+
+### Sık Sorulan Sorular
+Q: Essex deponuz Londra'ya ne kadar uzakta?
+A: Essex merkezli operasyonumuz Londra'ya yakın konumuyla İngiltere genelinde hızlı dağıtım imkânı sunar.
+
+Q: Essex deponuza Türkiye'den konteyner gönderebilir miyim?
+A: Evet. FCL ve LCL sevkiyatlar Essex depomuzda teslim alınıyor.
+
+
+---
+# BÖLÜM 4: BLOG MAKALELERİ
+
+---
+## URL: /blog/ingiltere-depo-rehberi
+# İngiltere Depo Hizmeti: Kapsamlı Rehber
+Türkiye'den İngiltere'ye ihracat yapan markalar için UK depolama süreçleri, maliyetler, lokasyon seçimi ve doğru partner bulma rehberi.
+Yazar: Sertaç Yılmaz | Yayın: Haziran 2025 | Güncelleme: Ocak 2026 | Okuma: 6 dk
+
+### İngiltere Depo Hizmeti Nedir?
+İngiltere'de fiziksel stok: teslimat sürelerini kısaltır, gümrük süreçlerini basitleştirir, Amazon/Etsy satışlarını hızlandırır.
+
+### Hangi İşletmeler UK Depo Hizmetine İhtiyaç Duyar?
+Düzenli konteyner gönderen TR ihracatçıları, Amazon/Etsy/Shopify satıcıları, UK B2B ithalatçıları, gıda/tekstil/ev/elektronik üreticileri, UK pazarını test eden KOBİ'ler.
+
+### İngiltere Depolama Süreci (6 Adım)
+01. Türkiye'den sevkiyat
+02. Gümrük ve ithalat beyanı
+03. Essex deposunda mal kabulü
+04. Depolama
+05. Sipariş hazırlama
+06. Dağıtım
+
+### UK Depo Lokasyonu: Essex'in Avantajı
+Essex'ten İngiltere geneline 24–48 saat teslimat. Amazon UK depolarına kolay erişim.
+
+### Doğru UK Depo Partneri Kriterleri
+Türkçe iletişim, esnek palet depolama, fulfillment + Amazon prep kapasitesi, şeffaf haftalık fiyatlandırma, stok takibi, konteyner kabulü.
+
+### Sık Sorulan Sorular
+Q: İngiltere depo hizmetiniz hangi firmalar için uygun?
+A: Türkiye'den ihracat yapan markalar, e-ticaret satıcıları, toptancılar, gıda üreticileri, ithalatçılar.
+
+Q: Sadece depo mu, dağıtım da sağlıyor musunuz?
+A: Depolama ile birlikte dağıtım hazırlığı ve operasyon desteği de sunuyoruz.
+
+
+---
+## URL: /blog/turkiyeden-ingiltereye-ihracat-rehberi
+# Türkiye'den İngiltere'ye İhracat Rehberi 2026
+Türkiye'den İngiltere'ye ihracat süreçleri, gümrük, GTIP, nakliye ve UK'da operasyon kurma rehberi. Türk ihracatçılar için kapsamlı bilgi kaynağı.
+Yazar: Sertaç Yılmaz | Yayın: Haziran 2025 | Güncelleme: Ocak 2026 | Okuma: 10 dk
+
+### Temel İhracat Adımları (6 Adım)
+01. GTIP kodu belirleme
+02. İhracat belgeleri: fatura, ambalaj listesi, menşe beyanı
+03. Nakliye: FCL/LCL/hava kargo
+04. UK gümrük beyanı (HMRC CDS)
+05. Depo teslimi (Essex)
+06. Dağıtım/fulfillment
+
+### Brexit Sonrası Türkiye-UK İhracat
+UK, AB gümrük birliğinden 2021'de çıktı. Ayrı UK gümrük beyanı gerekiyor. UK-Türkiye STA 2021'de yürürlüğe girdi; kapsamındaki ürünlerde indirim/muafiyet için menşe beyanı (declaration of origin, statement on origin) şart.
+NOT: EUR.1 veya A.TR belgeleri UK-TR ticaretinde geçerli değildir; menşe beyanı kullanılır.
+
+### UK Gümrük Süreci
+Gerekli belgeler: ticari fatura, ambalaj listesi, konşimento (B/L) veya hava konşimentosu (AWB), menşe beyanı, sigorta belgesi.
+Gümrük sistemi: HMRC CDS (CHIEF eski sistemdir, artık kullanılmıyor).
+
+### UK'da Kendi Deponuzu Kurmak mı, 3PL mi?
+Kendi depo: kira + personel + sigorta + ekipman = yüksek sabit maliyet.
+3PL: talep bazlı ödeme; büyüyen markalar için daha uygun.
+
+### Sık Sorulan Sorular
+Q: Brexit sonrası Türkiye'den İngiltere'ye ihracat nasıl etkilendi?
+A: AB gümrük birliği geçerli değil; ayrı UK gümrük beyanı gerekli. UK-TR STA 2021'de yürürlüğe girdi; kapsamındaki ürünlerde indirim/muafiyet menşe beyanı ile alınır.
+
+Q: İngiltere'ye ihracat için hangi belgeler gereklidir?
+A: Ticari fatura, ambalaj listesi, konşimento, menşe beyanı, özel ürün belgeleri (CE/UKCA, gıda analizi vb.).
+
+
+---
+## URL: /blog/ingiltere-depo-fiyatlari-2026
+# İngiltere Depo Fiyatları 2026: Tam Maliyet Rehberi
+İngiltere depo fiyatları 2026: palet depolama, fulfillment ve Amazon prep maliyetleri. UK warehouse ücret yapısı ve bütçe planlaması rehberi.
+Yazar: Sertaç Yılmaz | Yayın: Haziran 2025 | Güncelleme: Ocak 2026 | Okuma: 7 dk
+
+### Fiyat Verileri (2026 UK Piyasa Ortalamaları)
+- Standart euro palet haftalık: £8–£15
+- Premium/soğuk/özel: £20+/hafta
+- Pick & Pack: £1.50–£3.00/sipariş
+- Paketleme materyali: £0.50–£2.00/sipariş
+- Mal kabul: £5–£15/palet
+- Amazon prep (etiketleme, polybag): £0.30–£0.80/ürün
+- TR→UK FCL konteyner nakliye: ortalama $2,000–$4,000 USD
+
+### Örnek Aylık Hesap
+200 sipariş/ay, 10 palet:
+- Depolama: £400
+- Pick & Pack: £500
+- Paketleme: £200
+- UK kargo: £800
+- Toplam: ~£1,900/ay (kargo dahil)
+
+### Maliyet Optimizasyon Önerileri
+Toplu sevkiyat, yalnızca hızlı dönen ürünleri stokta tutma, fulfillment + Amazon prep'i tek operasyonda birleştirme, Türkçe konuşan partner seçimi.
+
+### Sık Sorulan Sorular
+Q: İngiltere'de 1 palet depolama maliyeti ne kadardır?
+A: Haftalık ortalama £8–£15.
+
+Q: Amazon prep ve fulfillment hizmetini birlikte alabilir miyim?
+A: Evet, tek operasyon çatısı altında, çift işlem ücreti olmadan.
+
+
+---
+## URL: /blog/amazon-fba-vs-uk-fulfillment
+# Amazon FBA mı, UK Fulfillment mı? Hangisi Daha Avantajlı?
+Amazon FBA ve 3PL UK fulfillment arasındaki farklar, maliyet karşılaştırması, esneklik ve kontrol. Türk ihracatçılar için rehber.
+Yazar: Sertaç Yılmaz | Yayın: Haziran 2025 | Güncelleme: Ocak 2026 | Okuma: 8 dk
+
+### Amazon FBA Nedir?
+Ürünler Amazon deposuna gönderilir; Amazon sipariş yönetimi, paketleme, kargo ve iadeleri yönetir. Temel avantaj: Prime rozeti ve Amazon lojistik ağı.
+
+### 3PL UK Fulfillment Nedir?
+Ürünler bağımsız UK deposunda tutulur; tüm kanallar (Amazon + Shopify + Etsy + B2B) tek merkezden yönetilir.
+
+### Karşılaştırma
+Maliyet: FBA ücretleri Amazon tarafından belirlenir; yavaş hareket eden ürünler için uzun dönem depolama bedeli yüksek. 3PL: haftalık palet ücreti + sipariş başı pick&pack = daha öngörülebilir maliyet.
+
+Kanallar: FBA = yalnızca Amazon (FBM karmaşık). 3PL = Amazon + Shopify + Etsy + web sitesi + B2B, tek depodan.
+
+Paketleme: FBA = Amazon standart ambalaj, sınırlı marka deneyimi. 3PL = özel ambalaj, teşekkür kartı, hediye paketi mümkün.
+
+Kontrol: FBA = uyumsuz ürünler reddedilebilir, stok erişimi kısıtlı. 3PL = tam stok kontrolü, anlık erişim, esnek iade.
+
+Prime: FBA = otomatik Prime. 3PL = SFP ile Prime mümkün ama performans kriterleri var.
+
+### Hangisi Daha Avantajlı?
+FBA: yalnızca Amazon büyümesi, Prime kritik, operasyon yönetimi istemiyorsanız.
+3PL: çok kanallı satış, marka deneyimi önemliyse, maliyet esnekliği gerekiyorsa, B2B müşterileri varsa.
+Hibrit model: kanala göre ayırma — her ikisini birlikte kullanmak mümkün.
+
+### Sık Sorulan Sorular
+Q: Amazon FBA yerine 3PL fulfillment kullanmanın avantajı nedir?
+A: Çok kanallı yönetim, özel ambalaj, Amazon uzun dönem depolama ücretinden kaçınma.
+
+Q: Amazon FBA ve UK 3PL fulfillment birlikte kullanılabilir mi?
+A: Evet. Hibrit model mümkün; maliyet ve erişim açısından avantajlı.
+
+
+---
+## URL: /blog/ingiltere-fulfillment-nedir
+# İngiltere Fulfillment Nedir? Türk Markalar İçin UK Operasyon Rehberi
+UK fulfillment sistemi, Türkiye'den İngiltere'ye satış yapan markalar için sipariş karşılama sürecinin nasıl çalıştığını açıklayan rehber.
+
+---
+## URL: /blog/amazon-prep-uk-rehberi
+# Amazon Prep UK Rehberi: FBA Hazırlık Süreci
+Amazon FBA için UK'daki hazırlık süreci, FNSKU etiketleme, paketleme gereksinimleri ve Amazon deposuna sevkiyat adımları.
+
+---
+## URL: /blog/ingiltere-palet-depolama-maliyetleri
+# İngiltere Palet Depolama Maliyetleri: Karşılaştırmalı Rehber
+UK palet depolama ücretleri, bölgesel karşılaştırma ve maliyet optimizasyon önerileri.
+
+---
+## URL: /blog/ingiltere-ara-depo-nedir
+# İngiltere Ara Depo Nedir? Cross-Docking ve Geçici Depolama
+UK'da ara depo (cross-docking) kavramı, geçici depolama seçenekleri ve ithalat sürecindeki rolü.
+
+
+---
+# BÖLÜM 5: VAKA ÇALIŞMALARI (Case Studies)
+
+## URL: /case-studies
+Index sayfası. 7 aktif vaka çalışması mevcut.
+
+## /case-studies/tortilla-uk-distribution
+Sektör: Gıda dağıtımı. Tortilla ürünlerinin UK'de depolama ve dağıtım operasyonu.
+
+## /case-studies/uk-walking-treadmill-distribution
+Sektör: Spor/fitness ekipmanı. UK walking treadmill ürünlerinin dağıtım operasyonu.
+
+## /case-studies/cruyff-uk-fulfillment
+Sektör: Spor giyim/tekstil. Cruyff markasının UK fulfillment operasyonu.
+
+## /case-studies/uk-auto-parts-warehouse
+Sektör: Otomotiv yedek parça. UK'de otomobil parçası depolama ve dağıtım operasyonu.
+
+## /case-studies/pizza-box-distribution-uk
+Sektör: Gıda ambalajı. Pizza kutusu UK dağıtım operasyonu.
+
+## /case-studies/arac-koltuk-kaplama-ingiltere-depo
+Sektör: Araç aksesuar. Araç koltuk kaplama ürünlerinin İngiltere depo operasyonu.
+
+## /case-studies/tasinabilir-sarj-istasyonu-ingiltere-operasyonu
+Sektör: Elektronik/enerji. Taşınabilir şarj istasyonlarının İngiltere operasyonu.
+
+
+---
+# BÖLÜM 6: KURUMSAL
+
+---
+## URL: /hakkimizda
+# LondraDepo.com Hakkında
+Essex merkezli İngiltere depo, fulfillment ve UK lojistik operasyonu. Türkiye'den İngiltere'ye ihracat yapan markaların UK lojistik partneri.
+
+### Kurum Bilgileri
+Şirket: Arca Trade Group Ltd, Companies House No: 13247691, VAT: GB353315322
+Operasyon başlangıcı: 2021
+Adres: Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY
+
+### Depo Tesisi
+Arterial Park sanayi bölgesi. FCL konteyner kabulü mümkün. M25 erişimi ile tüm UK dağıtımına uygun.
+
+### Sektör Bağlantıları
+- GLA (Global Logistics Alliance): Kurucu Sertaç Yılmaz GLA üyesi; 15. GLA Global Lojistik Konferansı Bangkok 2026
+- BIFA (British International Freight Association): Arca Trade Group Ltd kayıtlı üye
+- Companies House: https://find-and-update.company-information.service.gov.uk/company/13247691
+- LinkedIn: https://www.linkedin.com/company/arcatradegroup/
+
+
+---
+## URL: /iletisim
+# İletişim
+WhatsApp: +44 7554 195190
+Adres: Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY
+Web: https://www.londradepo.com
+
+
+---
+# BÖLÜM 7: İNGİLİZCE SAYFA
+
+---
+## URL: /uk-warehousing-fulfilment
+# UK Warehousing & Fulfilment Services
+Essex-based UK warehousing and fulfilment for businesses shipping from Turkey and beyond. Pallet storage, pick & pack, Amazon FBM, Shopify fulfilment.
+
+### Services
+Goods Receipt, Pallet Storage, Carton Storage, Stock Management (Mintsoft WMS), Pick & Pack, Kargo Labelling, UK Distribution, Returns Management, Amazon Prep (FBA).
+
+### Location
+Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY
+40 min to London, 30 min to Tilbury Port, 1 hr to Felixstowe.
+
+### FAQ
+Q: Do you accept containers from Turkey?
+A: Yes. FCL and LCL shipments accepted at Essex depot.
+
+Q: Do you offer Shopify and Amazon FBM fulfilment?
+A: Yes. Orders from Shopify and Amazon FBM are picked, packed and dispatched from Essex.
+
+Q: What is your minimum stock requirement?
+A: No fixed minimum. Contact us for a tailored quote.
+
+
+---
+# SAYFA ENDEKSİ (Tüm URL'ler)
+
+## Ana Sayfalar
+- / (Ana Sayfa)
+- /ingiltere-depo-avantajlari
+- /hakkimizda
+- /iletisim
+
+## P0 Ticari Sayfalar
+- /ingiltere-depo
+- /londra-depo
+- /ingiltere-e-ticaret-lojistigi
+- /siparis-toplama-paketleme
+- /ingiltere-depo-fiyatlari
+- /turk-sirketleri-icin-ingiltere-depo
+- /turkiye-ingiltere-lojistik
+- /turkiyeden-ingiltereye-satis
+- /shopify-ingiltere-depo
+- /amazon-ingiltere-depo
+
+## Hizmet Sayfaları
+- /ingiltere-fulfillment
+- /palet-depolama
+- /amazon-prep-uk
+- /depolama
+- /gumrukleme
+- /ellecleme
+- /nakliye-dagitim
+- /e-ticaret-fulfillment
+- /shopify-fulfillment
+- /amazon-fulfillment
+
+## Landing Sayfaları
+- /turkiyeden-ingiltereye-depolama
+- /uk-warehousing-fulfilment
+
+## Lokasyon
+- /essex-depo
+
+## Blog
+- /blog
+- /blog/ingiltere-depo-rehberi
+- /blog/ingiltere-fulfillment-nedir
+- /blog/amazon-prep-uk-rehberi
+- /blog/turkiyeden-ingiltereye-ihracat-rehberi
+- /blog/ingiltere-palet-depolama-maliyetleri
+- /blog/ingiltere-depo-fiyatlari-2026
+- /blog/ingiltere-ara-depo-nedir
+- /blog/amazon-fba-vs-uk-fulfillment
+
+## Vaka Çalışmaları
+- /case-studies
+- /case-studies/tortilla-uk-distribution
+- /case-studies/uk-walking-treadmill-distribution
+- /case-studies/cruyff-uk-fulfillment
+- /case-studies/uk-auto-parts-warehouse
+- /case-studies/pizza-box-distribution-uk
+- /case-studies/arac-koltuk-kaplama-ingiltere-depo
+- /case-studies/tasinabilir-sarj-istasyonu-ingiltere-operasyonu

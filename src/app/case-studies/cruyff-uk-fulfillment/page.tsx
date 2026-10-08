@@ -1,3 +1,4 @@
+import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -7,7 +8,7 @@ import CaseHero from "@/components/CaseHero";
 import OperationsFlow from "@/components/OperationsFlow";
 import RelatedCases from "@/components/RelatedCases";
 
-const SITE_URL = "https://www.londradepo.com";
+import { SITE_URL } from "@/lib/site";
 const PAGE_URL = `${SITE_URL}/case-studies/cruyff-uk-fulfillment`;
 const WHATSAPP =
   "https://wa.me/447554195190?text=Merhaba%2C%20moda%20fulfillment%20operasyonu%20hakkinda%20bilgi%20almak%20istiyorum.";
@@ -74,63 +75,10 @@ const jsonLd = {
       },
       contributor: { "@type": "Person", name: "Yusuf Barış" },
       publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
-      image: { "@type": "ImageObject", url: `${SITE_URL}/logo.png`, width: 512, height: 512 },
+      image: { "@type": "ImageObject", url: `${SITE_URL}/logo.svg`, width: 640, height: 160 },
       mainEntityOfPage: PAGE_URL,
     },
     { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "UK fashion fulfillment nedir?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "UK fashion fulfillment; moda ürünlerinin İngiltere içindeki bir depodan depolanması, repackaging, etiketleme ve online siparişlere göre hazırlanarak müşterilere teslim edilmesi sürecidir.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Moda markaları için UK warehouse avantajı nedir?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "İngiltere'de fiziksel stok tutmak; teslimat sürelerini kısaltır, müşteri memnuniyetini artırır, kargo maliyetlerini optimize eder ve lokalize bir marka deneyimi sunar.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Repackaging operasyonu sağlıyor musunuz?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. Markanıza özel ambalaj, hang tag ve etiket güncellemesi dahil tam repackaging ve relabeling hizmeti sunuyoruz.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Online sipariş fulfillment nasıl çalışıyor?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Web sitenizden veya marketplace kanallarınızdan gelen siparişler deposumuza iletilir; pick & pack operasyonu ile hazırlanıp UK kargo ağıyla müşteriye gönderilir.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "UK next-day delivery mümkün mü?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. Essex merkezli operasyonumuz UK genelinde next-day ve 2-day delivery seçenekleri sunmaktadır.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Moda markaları için stok yönetimi sağlıyor musunuz?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. Stok takibi, sezonluk koleksiyon yönetimi ve düzenli stok raporlaması hizmetlerini Türkçe olarak sunuyoruz.",
-          },
-        },
-      ],
-    },
   ],
 };
 
@@ -222,6 +170,7 @@ export default function CruyffCaseStudyPage() {
     <>
       <Header />
       <main>
+        <FaqJsonLd faqs={faqs} />
         {/* Breadcrumb */}
         <nav aria-label="breadcrumb" className="bg-slate-50 border-b border-slate-200">
           <div className="max-w-4xl mx-auto px-4 py-2 text-sm text-slate-500 flex flex-wrap gap-2">

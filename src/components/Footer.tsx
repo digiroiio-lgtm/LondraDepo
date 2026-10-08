@@ -42,6 +42,7 @@ export default function Footer() {
             <li><a href="/hakkimizda" className="hover:text-white transition">Hakkımızda</a></li>
             <li><a href="/case-studies" className="hover:text-white transition">Operasyon Örnekleri</a></li>
             <li><a href="/iletisim" className="hover:text-white transition">İletişim</a></li>
+            <li><a href="/uk-warehousing-fulfilment" className="hover:text-white transition" lang="en">UK Warehousing &amp; Fulfilment (English)</a></li>
             <li><a href="/blog" className="hover:text-white transition">Blog & Rehberler</a></li>
           </ul>
         </div>

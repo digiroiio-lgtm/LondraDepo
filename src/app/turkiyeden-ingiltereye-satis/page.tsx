@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 
-const SITE_URL = "https://www.londradepo.com";
+import { SITE_URL } from "@/lib/site";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20Türkiye%27den%20İngiltere%27ye%20satış%20hakkında%20bilgi%20almak%20istiyorum.";
 const TEL = "tel:+447554195190";
 
@@ -55,35 +55,6 @@ const jsonLd = {
       url: `${SITE_URL}/turkiyeden-ingiltereye-satis`,
       datePublished: "2025-01-01",
       dateModified: "2026-01-01",
-    },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "Türkiye'den İngiltere'ye nasıl satış yapılır?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Türkiye'den İngiltere'ye satış yapmanın en yaygın yolu: ürünleri UK'de bir depoda stoklamak (LondraDepo gibi) ve Shopify veya Amazon FBM üzerinden UK müşterilerine satmaktır. Bu model, İngiltere'de şirket veya depo kurmadan UK pazarına girmenizi sağlar.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "İngiltere'de şirket kurmadan satış yapabilir miyim?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet, mümkündür. Türkiye'deki şirketinizle UK pazarına girebilirsiniz. Vergi yükümlülükleri konusunda bağımsız bir danışmandan destek almanızı öneririz.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Türkiye'den İngiltere'ye ürün gönderimi nasıl yapılır?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Ürünler uluslararası bir nakliyeci veya kargo firması aracılığıyla UK'ye gönderilir. UK gümrüğünden geçtikten sonra LondraDepo depomuzda teslim alınır.",
-          },
-        },
-      ],
     },
   ],
 };
@@ -340,6 +311,7 @@ export default function TurkiyedenIngiltereye() {
             <h2 className="text-lg font-bold text-[#0b2545] mb-4">İlgili Sayfalar</h2>
             <div className="flex flex-wrap gap-3">
               {[
+                { href: "/turkiye-ingiltere-lojistik", label: "Türkiye–İngiltere Lojistik" },
                 { href: "/turkiyeden-ingiltereye-depolama", label: "Türkiye'den İngiltere'ye Depolama" },
                 { href: "/ingiltere-depo", label: "İngiltere Depo" },
                 { href: "/gumrukleme", label: "Gümrükleme Desteği" },

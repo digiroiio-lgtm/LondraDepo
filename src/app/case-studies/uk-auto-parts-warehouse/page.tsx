@@ -1,3 +1,4 @@
+import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -7,7 +8,7 @@ import CaseHero from "@/components/CaseHero";
 import OperationsFlow from "@/components/OperationsFlow";
 import RelatedCases from "@/components/RelatedCases";
 
-const SITE_URL = "https://www.londradepo.com";
+import { SITE_URL } from "@/lib/site";
 const PAGE_URL = `${SITE_URL}/case-studies/uk-auto-parts-warehouse`;
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20otomotiv%20yedek%20parca%20depolama%20hakkinda%20bilgi%20almak%20istiyorum.";
 
@@ -48,37 +49,8 @@ const jsonLd = {
         "Lüks araç OEM ve aftermarket yedek parçalarının İngiltere'de hasar kontrollü depolanması ve UK dağıtım ağına entegrasyonu.",
       url: PAGE_URL,
       publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
-      image: { "@type": "ImageObject", url: `${SITE_URL}/logo.png`, width: 512, height: 512 },
+      image: { "@type": "ImageObject", url: `${SITE_URL}/logo.svg`, width: 640, height: 160 },
       mainEntityOfPage: PAGE_URL,
-    },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "Büyük hacimli otomotiv parçaları için depolama yapıyor musunuz?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. Ön/arka tampon, kapı paneli gibi hacimli parçalar dahil tüm boyutlarda otomotiv yedek parçası depoluyoruz. Palet ve raf sistemleriyle organize stok yönetimi sağlıyoruz.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "OEM ve aftermarket parçalar için hasar kontrolü yapıyor musunuz?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. Her parça girişte görsel hasar kontrolünden geçirilir, fotoğraflanır ve sisteme kaydedilir. Hasar durumunda müşteri bilgilendirilir.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "UK genelinde otomotiv parçası dağıtımı yapabiliyor musunuz?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. Essex merkezli deposumuzdan UK'nın dört bir yanındaki bayiler, atölyeler ve online müşterilere dağıtım yapabiliyoruz.",
-          },
-        },
-      ],
     },
   ],
 };
@@ -147,7 +119,7 @@ const faqs = [
 
 const relatedCases = [
   {
-    slug: "krufy-uk-fashion-fulfillment",
+    slug: "cruyff-uk-fulfillment",
     industry: "Moda & Apparel",
     title: "Krufy — UK Fashion Fulfillment Operasyonu",
     summary: "Apparel markasının İngiltere fulfillment ve yeniden paketleme süreci.",
@@ -165,6 +137,7 @@ export default function AutoPartsCaseStudyPage() {
     <>
       <Header />
       <main>
+        <FaqJsonLd faqs={faqs} />
         {/* Breadcrumb */}
         <nav aria-label="breadcrumb" className="bg-slate-50 border-b border-slate-200">
           <div className="max-w-4xl mx-auto px-4 py-2 text-sm text-slate-500 flex flex-wrap gap-2">

@@ -1,3 +1,4 @@
+import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -7,7 +8,7 @@ import CaseHero from "@/components/CaseHero";
 import OperationsFlow from "@/components/OperationsFlow";
 import RelatedCases from "@/components/RelatedCases";
 
-const SITE_URL = "https://www.londradepo.com";
+import { SITE_URL } from "@/lib/site";
 const PAGE_URL = `${SITE_URL}/case-studies/tortilla-uk-distribution`;
 const WHATSAPP =
   "https://wa.me/447554195190?text=Merhaba%2C%20gida%20urunleri%20ingiltere%20operasyonu%20hakkinda%20bilgi%20almak%20istiyorum.";
@@ -72,65 +73,12 @@ const jsonLd = {
       },
       contributor: { "@type": "Person", name: "Yusuf Barış" },
       publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
-      image: { "@type": "ImageObject", url: `${SITE_URL}/logo.png`, width: 512, height: 512 },
+      image: { "@type": "ImageObject", url: `${SITE_URL}/logo.svg`, width: 640, height: 160 },
       mainEntityOfPage: PAGE_URL,
     },
     {
       "@type": "Organization",
       "@id": `${SITE_URL}/#organization`,
-    },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "İngiltere'ye tortilla ihracatı nasıl yapılır?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Tortilla ve flatbread ürünleri için doğru GTİP sınıflandırması yapılması, İngiltere pazarına uygun etiketleme düzenlenmesi ve İngiltere deposunda ürün kabulü organizasyonu gereklidir. LondraDepo.com bu adımların tamamında operasyonel destek sunmaktadır.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Flatbread ürünleri için İngiltere deposu gerekli mi?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. İngiltere'deki müşterilere hızlı teslimat yapabilmek, stok riskini azaltmak ve dağıtım maliyetlerini optimize etmek için İngiltere'de fiziksel depo altyapısına ihtiyaç duyulur.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "İngiltere gıda etiketleme süreçlerinde destek sağlıyor musunuz?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. İngiltere pazarına uygun etiketleme gereksinimleri konusunda yönlendirme ve operasyonel destek sağlıyoruz.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "GTİP yönlendirmesi yapıyor musunuz?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. Ürünlerinizin doğru GTİP sınıfına yerleştirilmesi için yönlendirme desteği sunuyoruz. Bu süreç, İngiltere'ye ithalat operasyonunun temelini oluşturur.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Küçük hacimle İngiltere operasyonu başlanabilir mi?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. LondraDepo.com ile 1 paletlik test operasyonuyla başlayabilir, talep ve satış hacmine göre konteyner bazlı büyüme modelini uygulayabilirsiniz.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Gıda fulfillment operasyonu sağlıyor musunuz?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. Gıda ürünleri için depolama, sipariş hazırlama, etiketleme ve İngiltere genelinde dağıtım operasyonu sunuyoruz.",
-          },
-        },
-      ],
     },
   ],
 };
@@ -229,6 +177,7 @@ export default function TortillaCaseStudyPage() {
     <>
       <Header />
       <main>
+        <FaqJsonLd faqs={faqs} />
         {/* Breadcrumb */}
         <nav aria-label="breadcrumb" className="bg-slate-50 border-b border-slate-200">
           <div className="max-w-4xl mx-auto px-4 py-2 text-sm text-slate-500 flex flex-wrap gap-2">

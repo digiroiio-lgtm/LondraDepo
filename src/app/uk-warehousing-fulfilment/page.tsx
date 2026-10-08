@@ -1,9 +1,10 @@
+import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 
-const SITE_URL = "https://www.londradepo.com";
+import { SITE_URL } from "@/lib/site";
 const WHATSAPP = "https://wa.me/447554195190?text=Hello%2C%20I%27d%20like%20to%20discuss%20UK%20warehousing%20and%20fulfilment.";
 const TEL = "tel:+447554195190";
 
@@ -60,43 +61,6 @@ const jsonLd = {
         "UK warehousing, customs clearance coordination, goods handling, pick & pack, e-commerce fulfilment, Shopify fulfilment, Amazon fulfilment and UK distribution from Essex.",
       areaServed: { "@type": "Country", name: "United Kingdom" },
       url: `${SITE_URL}/uk-warehousing-fulfilment`,
-    },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "Where is the warehouse located?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Our warehouse operation is based in Essex, near London. We serve businesses across the UK.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Do you offer Shopify fulfilment?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Yes. We support businesses selling through Shopify by storing their inventory and processing orders from our warehouse. LondraDepo is not an official Shopify partner.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Do you offer Amazon fulfilment?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Yes. We support businesses selling through Amazon by storing their inventory and processing orders. We also offer Amazon FBA prep services. LondraDepo is not an official Amazon partner.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Can you help with customs clearance for goods entering the UK?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "We provide customs clearance coordination support for goods entering the United Kingdom. Please contact us to discuss the scope of support available for your shipment.",
-          },
-        },
-      ],
     },
   ],
 };
@@ -183,6 +147,7 @@ export default function UKWarehousingPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <main>
+        <FaqJsonLd faqs={faqs} />
         {/* Hero */}
         <section className="bg-gradient-to-br from-[#0b2545] via-[#1e3a5f] to-[#0b2545] text-white py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">

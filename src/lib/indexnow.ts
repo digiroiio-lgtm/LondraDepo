@@ -1,5 +1,6 @@
 const INDEXNOW_KEY = process.env.INDEXNOW_KEY!;
-const HOST = "www.londradepo.com";
+import { SITE_URL } from "./site";
+const HOST = new URL(SITE_URL).hostname;
 
 export async function submitIndexNow(urls: string[]) {
   const response = await fetch("https://www.bing.com/indexnow", {

@@ -8,7 +8,7 @@ import CtaCards from "@/components/CtaCards";
 import AuthorBox from "@/components/AuthorBox";
 import RelatedArticles from "@/components/RelatedArticles";
 
-const SITE_URL = "https://www.londradepo.com";
+import { SITE_URL } from "@/lib/site";
 const PAGE_URL = `${SITE_URL}/blog/amazon-fba-vs-uk-fulfillment`;
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20UK%20fulfillment%20modeli%20hakkinda%20bilgi%20almak%20istiyorum.";
 
@@ -47,7 +47,7 @@ const jsonLd = {
       url: PAGE_URL,
       author: { "@type": "Person", name: "Sertaç Yılmaz" },
       publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
-      image: { "@type": "ImageObject", url: `${SITE_URL}/logo.png`, width: 512, height: 512 },
+      image: { "@type": "ImageObject", url: `${SITE_URL}/logo.svg`, width: 640, height: 160 },
       datePublished: "2025-06-01",
       dateModified: "2026-01-01",
       inLanguage: "tr-TR",

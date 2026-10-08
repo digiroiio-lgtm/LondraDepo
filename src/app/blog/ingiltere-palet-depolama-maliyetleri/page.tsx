@@ -1,3 +1,4 @@
+import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -8,7 +9,7 @@ import CtaCards from "@/components/CtaCards";
 import AuthorBox from "@/components/AuthorBox";
 import RelatedArticles from "@/components/RelatedArticles";
 
-const SITE_URL = "https://www.londradepo.com";
+import { SITE_URL } from "@/lib/site";
 const PAGE_URL = `${SITE_URL}/blog/ingiltere-palet-depolama-maliyetleri`;
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20palet%20depolama%20maliyet%20bilgisi%20almak%20istiyorum.";
 
@@ -29,6 +30,21 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
+const faqs = [
+  {
+    "q": "İngiltere'de 1 palet depolama haftalık maliyeti nedir?",
+    "a": "İngiltere'de standart euro palet (120×80 cm) depolama haftalık ortalama £8–£15 arasındadır. Yüksek yığın, iklim kontrolü veya güvenli depolama gereken ürünlerde bu ücret artabilir."
+  },
+  {
+    "q": "Palet depolama fiyatını etkileyen faktörler nelerdir?",
+    "a": "Palet boyutu ve ağırlığı, ürün tipi, stok süresi, erişim sıklığı, depo lokasyonu ve ek hizmetler fiyatı etkiler."
+  },
+  {
+    "q": "Minimum kaç palet ile çalışabilirsiniz?",
+    "a": "Sabit minimum palet gereksiniimimiz yoktur. 1 paletten başlayarak esnek depolama çözümleri sunuyoruz."
+  }
+];
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
@@ -47,31 +63,10 @@ const jsonLd = {
       url: PAGE_URL,
       author: { "@type": "Person", name: "Sertaç Yılmaz" },
       publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
-      image: { "@type": "ImageObject", url: `${SITE_URL}/logo.png`, width: 512, height: 512 },
+      image: { "@type": "ImageObject", url: `${SITE_URL}/logo.svg`, width: 640, height: 160 },
       datePublished: "2025-06-01",
       dateModified: "2026-01-01",
       inLanguage: "tr-TR",
-    },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "İngiltere'de 1 palet depolama haftalık maliyeti nedir?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "İngiltere'de standart euro palet (120×80 cm) depolama haftalık ortalama £8–£15 arasındadır. Yüksek yığın, iklim kontrolü veya güvenli depolama gereken ürünlerde bu ücret artabilir.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Palet depolama fiyatını etkileyen faktörler nelerdir?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Palet boyutu ve ağırlığı, ürün tipi (standart/hassas/soğuk), stok süresi, erişim sıklığı, depo lokasyonu ve ek hizmetler (pick&pack, repack) fiyatı etkiler.",
-          },
-        },
-      ],
     },
   ],
 };
@@ -88,6 +83,7 @@ export default function PaletDepolamaPage() {
     <>
       <Header />
       <main>
+        <FaqJsonLd faqs={faqs} />
         <nav aria-label="breadcrumb" className="bg-slate-50 border-b border-slate-200">
           <div className="max-w-6xl mx-auto px-4 py-2 text-sm text-slate-500 flex flex-wrap gap-2">
             <Link href="/" className="hover:text-[#0b2545] transition">Ana Sayfa</Link>
@@ -178,24 +174,12 @@ export default function PaletDepolamaPage() {
 
               <h2>Sık Sorulan Sorular</h2>
 
-              <h3>İngiltere&apos;de 1 palet depolama haftalık maliyeti nedir?</h3>
-              <p>
-                İngiltere&apos;de standart euro palet (120×80 cm) depolama haftalık ortalama
-                £8–£15 arasındadır. Yüksek yığın, iklim kontrolü veya güvenli depolama
-                gereken ürünlerde bu ücret artabilir.
-              </p>
-
-              <h3>Palet depolama fiyatını etkileyen faktörler nelerdir?</h3>
-              <p>
-                Palet boyutu ve ağırlığı, ürün tipi, stok süresi, erişim sıklığı, depo
-                lokasyonu ve ek hizmetler fiyatı etkiler.
-              </p>
-
-              <h3>Minimum kaç palet ile çalışabilirsiniz?</h3>
-              <p>
-                Sabit minimum palet gereksiniimimiz yoktur. 1 paletten başlayarak esnek
-                depolama çözümleri sunuyoruz.
-              </p>
+              {faqs.map(({ q, a }) => (
+                <div key={q}>
+                  <h3>{q}</h3>
+                  <p>{a}</p>
+                </div>
+              ))}
             </div>
 
             <div className="bg-[#0b2545] text-white rounded-2xl p-8 my-10 text-center">

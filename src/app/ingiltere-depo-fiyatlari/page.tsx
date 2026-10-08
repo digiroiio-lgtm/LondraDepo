@@ -1,10 +1,11 @@
+import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 
-const SITE_URL = "https://www.londradepo.com";
+import { SITE_URL } from "@/lib/site";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20İngiltere%20depo%20fiyatları%20hakkında%20bilgi%20almak%20istiyorum.";
 const TEL = "tel:+447554195190";
 
@@ -55,43 +56,6 @@ const jsonLd = {
         "İngiltere depo ve fulfillment hizmet fiyatları. Mal kabul, depolama, pick & pack, kargo ve iade için maliyet kalemleri.",
       areaServed: { "@type": "Country", name: "United Kingdom" },
       url: `${SITE_URL}/ingiltere-depo-fiyatlari`,
-    },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "İngiltere depo fiyatları nasıl hesaplanır?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "İngiltere depo fiyatları; depolanan ürün miktarı (palet/koli sayısı), depolama süresi, sipariş hacmi ve ihtiyaç duyulan ek hizmetlere (pick & pack, etiketleme, iade yönetimi) göre belirlenir. Sabit bir liste sunmak yerine her müşteri için özel teklif hazırlıyoruz.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Palet depolama İngiltere'de ne kadar?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Palet depolama ücreti; palet sayısı, depolama süresi ve gereken ek hizmetlere göre değişir. Doğru fiyat için palet sayınız, boyutlarınız ve tahmini sürenizle WhatsApp üzerinden bize ulaşın.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Pick & pack hizmeti İngiltere'de ne kadar tutar?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Pick & pack ücreti sipariş başına hesaplanır ve ürün türü, paket başına ürün sayısı ve paketleme gereksinimlerine göre değişir. Aylık sipariş hacminizle özel teklif alabilirsiniz.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Teklif almak için ne tür bilgi vermem gerekiyor?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Teklif için şu bilgileri paylaşmanız yeterlidir: ürün türü, tahmini palet veya koli sayısı, aylık sipariş hacmi, ihtiyaç duyduğunuz hizmetler (depolama, pick & pack, kargo vb.) ve satış kanalınız (Shopify, Amazon, toptan vb.).",
-          },
-        },
-      ],
     },
   ],
 };
@@ -241,6 +205,7 @@ export default function IngiltereDepoFiyatlari() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <main>
+        <FaqJsonLd faqs={faqs} />
         {/* Hero */}
         <section className="bg-gradient-to-br from-[#0b2545] via-[#1e3a5f] to-[#0b2545] text-white py-20 px-4">
           <div className="max-w-4xl mx-auto">

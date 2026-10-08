@@ -1,10 +1,11 @@
+import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 
-const SITE_URL = "https://www.londradepo.com";
+import { SITE_URL } from "@/lib/site";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20Amazon%20İngiltere%20depo%20ve%20sipariş%20karşılama%20hizmeti%20hakkında%20bilgi%20almak%20istiyorum.";
 const TEL = "tel:+447554195190";
 
@@ -54,43 +55,6 @@ const jsonLd = {
         "Amazon FBM (Fulfilled by Merchant) modeliyle UK'de satış yapan işletmeler için Essex depomuzdan sipariş karşılama hizmeti.",
       areaServed: { "@type": "Country", name: "United Kingdom" },
       url: `${SITE_URL}/amazon-ingiltere-depo`,
-    },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "FBM (Fulfilled by Merchant) nedir?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "FBM, Amazon satıcısının ürünlerini kendisinin (veya üçüncü taraf bir deponun) stokladığı ve sipariş geldiğinde bizzat sevk ettiği modeldir. FBA'da ise ürünler Amazon'un deposuna gönderilir ve Amazon karşılar. LondraDepo, FBM modelinde üçüncü taraf depo hizmeti sunar.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Amazon FBM için neden LondraDepo'yu kullanmalıyım?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Amazon FBM'de ürünlerin UK'de stoklanması ve hızlı karşılanması gerekmektedir. LondraDepo, Essex depomuzdan pick & pack ve UK teslimat koordinasyonu sağlar. Kendi deponuzu kurmadan FBM operasyonu yürütmenize olanak tanır.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "LondraDepo Amazon'un resmi partneri mi?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Hayır. LondraDepo, Amazon'un resmi partneri değildir. Amazon FBM modeliyle satış yapan işletmelere bağımsız depolama ve fulfillment desteği sunmaktayız.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Amazon FBA hazırlığı da yapıyor musunuz?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. FBA için ürün hazırlığı (FNSKU etiketleme, paketleme, Amazon merkezine sevkiyat hazırlığı) konusunda /amazon-prep-uk sayfamızı inceleyebilirsiniz.",
-          },
-        },
-      ],
     },
   ],
 };
@@ -153,6 +117,7 @@ export default function AmazonIngiltereDepo() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <main>
+        <FaqJsonLd faqs={faqs} />
         {/* Hero */}
         <section className="bg-gradient-to-br from-[#0b2545] via-[#1e3a5f] to-[#0b2545] text-white py-20 px-4">
           <div className="max-w-4xl mx-auto">

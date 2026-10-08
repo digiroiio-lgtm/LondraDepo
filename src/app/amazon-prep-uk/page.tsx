@@ -1,10 +1,11 @@
+import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 
-const SITE_URL = "https://www.londradepo.com";
+import { SITE_URL } from "@/lib/site";
 const PAGE_URL = `${SITE_URL}/amazon-prep-uk`;
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20Amazon%20Prep%20hizmeti%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.";
 
@@ -44,35 +45,6 @@ const jsonLd = {
       areaServed: { "@type": "Country", name: "United Kingdom" },
       url: PAGE_URL,
     },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "Amazon FBA prep hizmeti nedir?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Amazon FBA prep, ürünlerinizin Amazon UK deposuna kabul edilmesi için gerekli etiketleme, paketleme ve hazırlık süreçlerini kapsar.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Amazon UK deposuna ürün göndermek ne kadar sürer?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Ürünleriniz Essex depomuzda prep tamamlandıktan sonra genellikle 2-5 iş günü içinde Amazon deposuna ulaşır.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Hangi Amazon marketplace'lere hizmet veriyorsunuz?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Öncelikli olarak Amazon UK (amazon.co.uk) için prep ve sevk hizmeti veriyoruz. Amazon EU marketplace'leri için de destek sağlıyoruz.",
-          },
-        },
-      ],
-    },
   ],
 };
 
@@ -100,6 +72,7 @@ export default function AmazonPrepPage() {
     <>
       <Header />
       <main>
+        <FaqJsonLd faqs={faqs} />
         <nav aria-label="breadcrumb" className="bg-slate-50 border-b border-slate-200">
           <div className="max-w-6xl mx-auto px-4 py-2 text-sm text-slate-500 flex gap-2">
             <Link href="/" className="hover:text-[#0b2545] transition">Ana Sayfa</Link>

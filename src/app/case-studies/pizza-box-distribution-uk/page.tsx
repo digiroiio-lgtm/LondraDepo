@@ -1,3 +1,4 @@
+import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -7,7 +8,7 @@ import CaseHero from "@/components/CaseHero";
 import OperationsFlow from "@/components/OperationsFlow";
 import RelatedCases from "@/components/RelatedCases";
 
-const SITE_URL = "https://www.londradepo.com";
+import { SITE_URL } from "@/lib/site";
 const PAGE_URL = `${SITE_URL}/case-studies/pizza-box-distribution-uk`;
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20B2B%20dagitim%20operasyonu%20hakkinda%20bilgi%20almak%20istiyorum.";
 
@@ -48,37 +49,8 @@ const jsonLd = {
         "Pizza kutusu üreticisinin İngiltere restoranlarına palet bazlı stok yönetimi ve düzenli dağıtım planlaması.",
       url: PAGE_URL,
       publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
-      image: { "@type": "ImageObject", url: `${SITE_URL}/logo.png`, width: 512, height: 512 },
+      image: { "@type": "ImageObject", url: `${SITE_URL}/logo.svg`, width: 640, height: 160 },
       mainEntityOfPage: PAGE_URL,
-    },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "B2B fulfillment ile B2C fulfillment arasındaki fark nedir?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "B2B fulfillment, işletmelere yapılan toplu siparişleri kapsar; palet bazlı sevkiyat, sabit dağıtım programları ve fatura bazlı lojistik içerir. B2C ise bireysel müşterilere yapılan tekil siparişlere odaklanır.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Restoranlara düzenli dağıtım programı kurulabiliyor mu?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. Müşteri listesi ve frekansına göre haftalık veya aylık dağıtım programı oluşturuyoruz. Restoran zincirlerine sabit program avantajı sunabiliyoruz.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Palet bazlı ambalaj ürünleri depoluyor musunuz?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. Pizza kutusu, paket materyali gibi büyük hacimli ürünler palet bazında depolanıyor, stok takibi yapılıyor ve sipariş bazında hazırlanıp dağıtıma çıkıyor.",
-          },
-        },
-      ],
     },
   ],
 };
@@ -147,7 +119,7 @@ const faqs = [
 
 const relatedCases = [
   {
-    slug: "krufy-uk-fashion-fulfillment",
+    slug: "cruyff-uk-fulfillment",
     industry: "Moda & Apparel",
     title: "Krufy — UK Fashion Fulfillment Operasyonu",
     summary: "Apparel markasının İngiltere fulfillment ve yeniden paketleme süreci.",
@@ -165,6 +137,7 @@ export default function PizzaBoxCaseStudyPage() {
     <>
       <Header />
       <main>
+        <FaqJsonLd faqs={faqs} />
         {/* Breadcrumb */}
         <nav aria-label="breadcrumb" className="bg-slate-50 border-b border-slate-200">
           <div className="max-w-4xl mx-auto px-4 py-2 text-sm text-slate-500 flex flex-wrap gap-2">

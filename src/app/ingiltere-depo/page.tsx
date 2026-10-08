@@ -1,10 +1,11 @@
+import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 
-const SITE_URL = "https://www.londradepo.com";
+import { SITE_URL } from "@/lib/site";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20İngiltere%20depo%20hizmeti%20hakkında%20bilgi%20almak%20istiyorum.";
 const TEL = "tel:+447554195190";
 
@@ -59,51 +60,6 @@ const jsonLd = {
       areaServed: { "@type": "Country", name: "United Kingdom" },
       url: `${SITE_URL}/ingiltere-depo`,
     },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "İngiltere depo hizmetiniz hangi bölgelere hizmet veriyor?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Essex merkezli depomuz İngiltere geneline hizmet vermektedir. Londra başta olmak üzere Birmingham, Manchester ve tüm UK'e dağıtım koordinasyonu sağlıyoruz.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Türkiye'den İngiltere depoma ürün gönderebilir miyim?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. Türkiye'deki tedarikçinizden veya üretim noktanızdan ürünlerinizi doğrudan depo adresimize gönderebilirsiniz. UK ithalat gümrükleme sürecinde koordinasyon desteği de sağlıyoruz.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "İngiltere depo fiyatlarınız nedir?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Fiyatlar ürün türü, hacim, stok miktarı ve ihtiyaç duyulan hizmetlere göre değişmektedir. WhatsApp üzerinden bizimle iletişime geçin, size özel teklif hazırlayalım.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Sadece depolama mı yapıyorsunuz yoksa sipariş karşılama da var mı?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Hem depolama hem de tam sipariş karşılama (fulfilment) hizmeti sunuyoruz. Sipariş geldiğinde ürünü depomuzdan toplar, paketler, etiketler ve UK müşterilerinize sevk ederiz.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Palet ve koli depolama kabul ediyor musunuz?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. Hem paletli hem de kolili ürünler için depolama hizmeti sunuyoruz. Kısa ve uzun dönemli depolama seçenekleri mevcuttur.",
-          },
-        },
-      ],
-    },
   ],
 };
 
@@ -157,6 +113,7 @@ export default function IngiltereDepoPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <main>
+        <FaqJsonLd faqs={faqs} />
         {/* Hero */}
         <section className="bg-gradient-to-br from-[#0b2545] via-[#1e3a5f] to-[#0b2545] text-white py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">

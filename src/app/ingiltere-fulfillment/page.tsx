@@ -1,3 +1,4 @@
+import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -5,7 +6,7 @@ import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 import CtaCards from "@/components/CtaCards";
 
-const SITE_URL = "https://www.londradepo.com";
+import { SITE_URL } from "@/lib/site";
 const PAGE_URL = `${SITE_URL}/ingiltere-fulfillment`;
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20fulfillment%20teklifi%20almak%20istiyorum.";
 
@@ -47,35 +48,6 @@ const jsonLd = {
       areaServed: { "@type": "Country", name: "United Kingdom" },
       url: PAGE_URL,
     },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "İngiltere fulfillment hizmeti nedir?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Fulfillment, müşteri siparişlerinin depodan toplanması, paketlenmesi ve gönderilmesi sürecidir. İngiltere'deki depomuzdaürünlerinizi stoklar, siparişleri hazırlayarak müşterilerinize gönderiyoruz.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Amazon FBA için UK fulfillment desteği veriyor musunuz?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. Amazon prep hizmetimiz kapsamında ürünlerinizi FBA uyumlu hale getiriyor, etiketliyor ve Amazon deposuna sevk ediyoruz.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Shopify ve Etsy siparişlerini de karşılıyor musunuz?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. Shopify, Etsy ve diğer e-ticaret platformlarından gelen siparişleri operasyon sürecimize dahil ediyoruz.",
-          },
-        },
-      ],
-    },
   ],
 };
 
@@ -103,6 +75,7 @@ export default function FulfillmentPage() {
     <>
       <Header />
       <main>
+        <FaqJsonLd faqs={faqs} />
         <nav aria-label="breadcrumb" className="bg-slate-50 border-b border-slate-200">
           <div className="max-w-6xl mx-auto px-4 py-2 text-sm text-slate-500 flex gap-2">
             <Link href="/" className="hover:text-[#0b2545] transition">Ana Sayfa</Link>

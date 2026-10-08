@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import CtaCards from "@/components/CtaCards";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 
-const SITE_URL = "https://www.londradepo.com";
+import { SITE_URL } from "@/lib/site";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20Shopify%20fulfillment%20hizmeti%20hakkında%20bilgi%20almak%20istiyorum.";
 
 export const metadata: Metadata = {
@@ -42,27 +42,6 @@ const jsonLd = {
         "Shopify üzerinden satış yapan işletmeler için İngiltere fulfillment hizmeti. Stok depolama, pick & pack, kargo ve UK geneli teslimat.",
       areaServed: { "@type": "Country", name: "United Kingdom" },
       url: `${SITE_URL}/shopify-fulfillment`,
-    },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "Shopify mağazamla LondraDepo nasıl çalışır?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Ürün stoğunuz depomuzda saklanır. Shopify üzerinden sipariş geldiğinde, depo ekibi siparişi işler, ürünü toplar, paketler ve müşterinize sevk eder.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "LondraDepo resmi bir Shopify partneri midir?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "LondraDepo, Shopify'ın resmi partneri değildir. Shopify üzerinden satış yapan işletmelere fulfillment hizmeti sunuyoruz.",
-          },
-        },
-      ],
     },
   ],
 };

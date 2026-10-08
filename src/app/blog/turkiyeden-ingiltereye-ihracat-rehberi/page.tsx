@@ -1,3 +1,4 @@
+import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -8,7 +9,7 @@ import CtaCards from "@/components/CtaCards";
 import AuthorBox from "@/components/AuthorBox";
 import RelatedArticles from "@/components/RelatedArticles";
 
-const SITE_URL = "https://www.londradepo.com";
+import { SITE_URL } from "@/lib/site";
 const PAGE_URL = `${SITE_URL}/blog/turkiyeden-ingiltereye-ihracat-rehberi`;
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20ihracat%20operasyonu%20hakkinda%20bilgi%20almak%20istiyorum.";
 
@@ -29,6 +30,21 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
+const faqs = [
+  {
+    "q": "Türkiye'den İngiltere'ye ihracat nasıl yapılır?",
+    "a": "GTIP kodunu belirleyin, ihracat belgelerini hazırlayın, nakliyeci ile İngiltere'ye sevkiyat yapın, İngiltere gümrüğünde ürünleri beyan edin ve İngiltere deposuna teslim ettirin."
+  },
+  {
+    "q": "Brexit sonrası Türkiye'den İngiltere'ye ihracat nasıl etkilendi?",
+    "a": "Brexit sonrası AB gümrük birliği geçerli olmadığından UK'ya ayrı gümrük beyanı gereklidir. Türkiye-UK serbest ticaret anlaşması 2021'de yürürlüğe girdi; bu anlaşma kapsamındaki ürünler için gümrük vergisinden muafiyet veya indirim uygulanabilir."
+  },
+  {
+    "q": "İngiltere'ye ihracat için hangi belgeler gereklidir?",
+    "a": "Ticari fatura, ambalaj listesi, konşimento, menşe beyanı (declaration of origin — UK-Türkiye STA kapsamında tercihli tarife uygulaması için) ve varsa özel ürün belgeleri (CE, gıda analizi vb.) gereklidir."
+  }
+];
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
@@ -47,31 +63,10 @@ const jsonLd = {
       url: PAGE_URL,
       author: { "@type": "Person", name: "Sertaç Yılmaz" },
       publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
-      image: { "@type": "ImageObject", url: `${SITE_URL}/logo.png`, width: 512, height: 512 },
+      image: { "@type": "ImageObject", url: `${SITE_URL}/logo.svg`, width: 640, height: 160 },
       datePublished: "2025-06-01",
       dateModified: "2026-01-01",
       inLanguage: "tr-TR",
-    },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "Türkiye'den İngiltere'ye ihracat nasıl yapılır?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Türkiye'den İngiltere'ye ihracat için: ürün GTIP kodunu belirleyin, ihracat belgelerini hazırlayın (invoice, packing list, menşe beyanı / declaration of origin), nakliyeci ile İngiltere'ye sevkiyat yapın, İngiltere gümrüğünde HMRC CDS sistemine import declaration yapın ve İngiltere deposuna teslim ettirin.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Brexit sonrası Türkiye'den İngiltere'ye ihracat nasıl etkilendi?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Brexit sonrası AB gümrük birliği geçerli olmadığından UK'ya ayrı gümrük beyanı gereklidir. Türkiye-UK serbest ticaret anlaşması 2021'de yürürlüğe girdi; bu anlaşma kapsamındaki ürünler için UK gümrük vergisinden muafiyet veya indirim uygulanabilir.",
-          },
-        },
-      ],
     },
   ],
 };
@@ -88,6 +83,7 @@ export default function IhracatRehberiPage() {
     <>
       <Header />
       <main>
+        <FaqJsonLd faqs={faqs} />
         <nav aria-label="breadcrumb" className="bg-slate-50 border-b border-slate-200">
           <div className="max-w-6xl mx-auto px-4 py-2 text-sm text-slate-500 flex flex-wrap gap-2">
             <Link href="/" className="hover:text-[#0b2545] transition">Ana Sayfa</Link>
@@ -190,33 +186,12 @@ export default function IhracatRehberiPage() {
 
               <h2>Sık Sorulan Sorular</h2>
 
-              <h3>Türkiye&apos;den İngiltere&apos;ye ihracat nasıl yapılır?</h3>
-              <p>
-                GTIP kodunu belirleyin, ihracat belgelerini hazırlayın, nakliyeci ile
-                İngiltere&apos;ye sevkiyat yapın, İngiltere gümrüğünde ürünleri beyan edin
-                ve İngiltere deposuna teslim ettirin.
-              </p>
-
-              <h3>Brexit sonrası Türkiye&apos;den İngiltere&apos;ye ihracat nasıl etkilendi?</h3>
-              <p>
-                Brexit sonrası AB gümrük birliği geçerli olmadığından UK&apos;ya ayrı gümrük
-                beyanı gereklidir.{" "}
-                <a
-                  href="https://www.gov.uk/guidance/uk-turkey-trade-agreement"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#0b2545] underline"
-                >
-                  Türkiye-UK serbest ticaret anlaşması 2021&apos;de yürürlüğe girdi
-                </a>
-                ; bu anlaşma kapsamındaki ürünler için gümrük vergisinden muafiyet
-                veya indirim uygulanabilir.
-              </p>
-
-              <h3>İngiltere&apos;ye ihracat için hangi belgeler gereklidir?</h3>
-              <p>
-                Ticari fatura, ambalaj listesi, konşimento, menşe beyanı (declaration of origin — UK-Türkiye STA kapsamında tercihli tarife uygulaması için) ve varsa özel ürün belgeleri (CE, gıda analizi vb.) gereklidir.
-              </p>
+              {faqs.map(({ q, a }) => (
+                <div key={q}>
+                  <h3>{q}</h3>
+                  <p>{a}</p>
+                </div>
+              ))}
             </div>
 
             <div className="bg-[#0b2545] text-white rounded-2xl p-8 my-10 text-center">

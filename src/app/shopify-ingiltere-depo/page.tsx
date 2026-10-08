@@ -1,10 +1,11 @@
+import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 
-const SITE_URL = "https://www.londradepo.com";
+import { SITE_URL } from "@/lib/site";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20Shopify%20için%20İngiltere%20depo%20hizmeti%20hakkında%20bilgi%20almak%20istiyorum.";
 const TEL = "tel:+447554195190";
 
@@ -54,43 +55,6 @@ const jsonLd = {
         "Shopify mağazaları için İngiltere'de stok depolama ve sipariş karşılama. Ürünler Essex depomuzda; sipariş geldiğinde depo ekibi pick, pack ve sevk eder.",
       areaServed: { "@type": "Country", name: "United Kingdom" },
       url: `${SITE_URL}/shopify-ingiltere-depo`,
-    },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "Shopify mağazam için İngiltere'de depo bulabilir miyim?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. LondraDepo, Shopify üzerinden satış yapan işletmeler için Essex'te stok depolama ve sipariş karşılama hizmeti sunmaktadır. Sipariş geldiğinde depo ekibimiz ürünü toplar, paketler ve UK müşterinize sevk eder.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "LondraDepo Shopify'ın resmi partneri mi?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Hayır. LondraDepo, Shopify'ın resmi partneri değildir. Shopify üzerinden satış yapan işletmelere fulfillment ve depolama desteği sunmaktayız.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Shopify siparişleri otomatik olarak mı işleniyor?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Sipariş aktarma süreci ve entegrasyon seçenekleri hakkında bizimle görüşmenizi öneririz. Sipariş bilgilerinin depoya iletilmesi ve işleme alınması konusunda operasyonel süreci birlikte planlıyoruz.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "UK Shopify deposu ne kadar tutar?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Fiyat; depolanan ürün miktarı (palet/koli), aylık sipariş hacmi ve gereken hizmetlere göre belirlenir. WhatsApp üzerinden bize ulaşarak özel teklif alabilirsiniz.",
-          },
-        },
-      ],
     },
   ],
 };
@@ -145,6 +109,7 @@ export default function ShopifyIngiltereDepo() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <main>
+        <FaqJsonLd faqs={faqs} />
         {/* Hero */}
         <section className="bg-gradient-to-br from-[#0b2545] via-[#1e3a5f] to-[#0b2545] text-white py-20 px-4">
           <div className="max-w-4xl mx-auto">

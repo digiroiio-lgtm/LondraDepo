@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { submitIndexNow } from "@/lib/indexnow";
 
-const SITE_URL = "https://www.londradepo.com";
+import { SITE_URL } from "@/lib/site";
 
 const ALL_URLS = [
   // Ana sayfalar

@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 
-const SITE_URL = "https://www.londradepo.com";
+import { SITE_URL } from "@/lib/site";
 const PAGE_URL = `${SITE_URL}/essex-depo`;
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20Essex%20depo%20hizmeti%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.";
 
@@ -50,27 +50,6 @@ const jsonLd = {
       },
       areaServed: ["Essex", "London", "United Kingdom"],
       url: PAGE_URL,
-    },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "Essex deponuz Londra'ya ne kadar uzakta?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Essex merkezli operasyonumuz Londra'ya yakın konumuyla İngiltere genelinde hızlı dağıtım imkânı sunar.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Essex deponuza Türkiye'den konteyner gönderebilir miyim?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. Türkiye'den gelen FCL (tam konteyner) ve LCL (parsiyel yük) sevkiyatları Essex depomuzda teslim alıyoruz.",
-          },
-        },
-      ],
     },
   ],
 };

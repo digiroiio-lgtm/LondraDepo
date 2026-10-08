@@ -1,3 +1,4 @@
+import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -7,7 +8,7 @@ import CaseHero from "@/components/CaseHero";
 import OperationsFlow from "@/components/OperationsFlow";
 import RelatedCases from "@/components/RelatedCases";
 
-const SITE_URL = "https://www.londradepo.com";
+import { SITE_URL } from "@/lib/site";
 const PAGE_URL = `${SITE_URL}/case-studies/uk-walking-treadmill-distribution`;
 const WHATSAPP =
   "https://wa.me/447554195190?text=Merhaba%2C%20buyuk%20hacimli%20urun%20fulfillment%20operasyonu%20hakkinda%20bilgi%20almak%20istiyorum.";
@@ -72,63 +73,10 @@ const jsonLd = {
       },
       contributor: { "@type": "Person", name: "Yusuf Barış" },
       publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
-      image: { "@type": "ImageObject", url: `${SITE_URL}/logo.png`, width: 512, height: 512 },
+      image: { "@type": "ImageObject", url: `${SITE_URL}/logo.svg`, width: 640, height: 160 },
       mainEntityOfPage: PAGE_URL,
     },
     { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "Büyük hacimli ürünler için fulfillment sağlıyor musunuz?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. Walking treadmill gibi büyük hacimli ve ağır ürünler için İngiltere deposunda özel depolama alanı, ürün kabul süreçleri ve fulfillment operasyonu sunuyoruz.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Discount store dağıtımı yapıyor musunuz?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. İngiltere genelindeki discount store ve retail zincirlerine toplu sevkiyat ve dağıtım organizasyonu sağlıyoruz.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Online sipariş fulfillment desteği mevcut mu?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. E-ticaret platformlarından gelen siparişler için pick & pack, paketleme ve UK courier entegrasyonu ile hızlı fulfillment operasyonu sunuyoruz.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "İngiltere geneline dağıtım sağlıyor musunuz?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. Essex merkezli deposumuzdan İngiltere'nin tüm bölgelerine courier ve freight koordinasyonuyla dağıtım yapıyoruz.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Hassas ürün depolama operasyonu mevcut mu?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. Yürüyüş bandı gibi hassas ve mekanik bileşen içeren ürünler için uygun depolama koşulları ve dikkatli yükleme/boşaltma operasyonu sağlıyoruz.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Ecommerce fulfillment altyapısı sağlıyor musunuz?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. Online satış platformlarıyla entegrasyon, sipariş yönetimi ve UK geneli teslimat altyapısını içeren tam ecommerce fulfillment çözümü sunuyoruz.",
-          },
-        },
-      ],
-    },
   ],
 };
 
@@ -226,6 +174,7 @@ export default function WalkingTreadmillCaseStudyPage() {
     <>
       <Header />
       <main>
+        <FaqJsonLd faqs={faqs} />
         {/* Breadcrumb */}
         <nav aria-label="breadcrumb" className="bg-slate-50 border-b border-slate-200">
           <div className="max-w-4xl mx-auto px-4 py-2 text-sm text-slate-500 flex flex-wrap gap-2">

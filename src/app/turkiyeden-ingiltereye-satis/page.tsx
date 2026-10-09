@@ -53,8 +53,14 @@ const jsonLd = {
       author: { "@type": "Organization", name: "LondraDepo.com", url: SITE_URL },
       publisher: { "@type": "Organization", name: "LondraDepo.com", url: SITE_URL },
       url: `${SITE_URL}/turkiyeden-ingiltereye-satis`,
-      datePublished: "2025-01-01",
-      dateModified: "2026-01-01",
+      datePublished: "2026-01-01",
+      dateModified: "2026-09-28",
+      image: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}/logo.png`,
+        width: 512,
+        height: 512,
+      },
     },
     {
       "@type": "FAQPage",

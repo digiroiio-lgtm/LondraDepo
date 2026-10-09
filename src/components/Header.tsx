@@ -7,6 +7,7 @@ const TEL = "tel:+447554195190";
 
 const navLinks = [
   { href: "/ingiltere-depo", label: "İngiltere Depo" },
+  { href: "/londra-depo", label: "Londra Depo" },
   { href: "/ingiltere-e-ticaret-lojistigi", label: "E-Ticaret Lojistiği" },
   { href: "/turkiyeden-ingiltereye-satis", label: "TR → UK" },
   { href: "/case-studies", label: "Operasyon Örnekleri" },

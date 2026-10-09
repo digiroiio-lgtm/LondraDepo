@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -200,23 +201,26 @@ export default function IngiltereDepoPage() {
               Essex Depo — Unit 19 Arterial Park, Rayleigh
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <img
+              <Image
                 src="/arterial-park-arterial-road-rayleigh_depoici.jpeg"
                 alt="LondraDepo.com — Unit 19 Arterial Park Rayleigh Essex depo içi"
+                width={800}
+                height={600}
                 className="rounded-2xl object-cover w-full h-52 sm:h-60"
-                loading="lazy"
               />
-              <img
+              <Image
                 src="/arterial-park-arterial-road-rayleigh_2ncioutdoor.jpeg"
                 alt="LondraDepo.com — Unit 19 Arterial Park Rayleigh Essex dış cephe"
+                width={800}
+                height={600}
                 className="rounded-2xl object-cover w-full h-52 sm:h-60"
-                loading="lazy"
               />
-              <img
+              <Image
                 src="/arterial-park-arterial-road-rayleigh_kusbakisi.jpeg"
                 alt="LondraDepo.com — Unit 19 Arterial Park Rayleigh Essex kuş bakışı"
+                width={800}
+                height={600}
                 className="rounded-2xl object-cover w-full h-52 sm:h-60"
-                loading="lazy"
               />
             </div>
           </div>

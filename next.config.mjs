@@ -3,6 +3,9 @@ const nextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
   compress: true,
+  images: {
+    formats: ["image/avif", "image/webp"],
+  },
   async redirects() {
     return [
       {

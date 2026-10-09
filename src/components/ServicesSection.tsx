@@ -41,7 +41,7 @@ const services = [
     desc: "Sipariş yönetimi, stok takibi, pick & pack, kargo etiketleme, paketleme ve sevkiyat. Online mağazanızdan gelen siparişleri biz hazırlayalım.",
     cta: "Fulfillment Operasyonu Kur",
     waMsg: "E-ticaret%20fulfillment%20hizmeti%20hakkında%20bilgi%20almak%20istiyorum.",
-    href: "/e-ticaret-fulfillment",
+    href: "/ingiltere-e-ticaret-lojistigi",
   },
   {
     icon: "🛍️",
@@ -49,7 +49,7 @@ const services = [
     desc: "Shopify ve Amazon üzerinden satış yapan işletmeler için fulfillment desteği. Stok depomuzda, siparişler sistemde, teslimat bize kalıyor.",
     cta: "Platform Fulfillment Kur",
     waMsg: "Shopify%20veya%20Amazon%20fulfillment%20hakkında%20bilgi%20almak%20istiyorum.",
-    href: "/shopify-fulfillment",
+    href: "/shopify-ingiltere-depo",
   },
 ];
 

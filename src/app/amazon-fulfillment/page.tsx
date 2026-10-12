@@ -1,3 +1,4 @@
+import PageFaq from "@/components/PageFaq";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -5,7 +6,7 @@ import Footer from "@/components/Footer";
 import CtaCards from "@/components/CtaCards";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 
-const SITE_URL = "https://www.londradepo.com";
+import { SITE_URL } from "@/lib/site";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20Amazon%20fulfillment%20hizmeti%20hakkında%20bilgi%20almak%20istiyorum.";
 
 export const metadata: Metadata = {
@@ -43,29 +44,19 @@ const jsonLd = {
       areaServed: { "@type": "Country", name: "United Kingdom" },
       url: `${SITE_URL}/amazon-fulfillment`,
     },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "LondraDepo resmi bir Amazon partneri midir?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "LondraDepo, Amazon'un resmi partneri değildir. Amazon üzerinden satış yapan işletmelere stok depolama ve fulfillment desteği sunmaktayız.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Amazon FBA prep hizmetiniz de var mı?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. Amazon FBA hazırlık hizmetimiz /amazon-prep-uk sayfamızda detaylı olarak anlatılmaktadır.",
-          },
-        },
-      ],
-    },
   ],
 };
+
+const faqs = [
+  {
+    "q": "LondraDepo resmi bir Amazon partneri midir?",
+    "a": "LondraDepo, Amazon'un resmi partneri değildir. Amazon üzerinden satış yapan işletmelere stok depolama ve fulfillment desteği sunmaktayız."
+  },
+  {
+    "q": "Amazon FBA prep hizmetiniz de var mı?",
+    "a": "Evet. Amazon FBA hazırlık hizmetimiz /amazon-prep-uk sayfamızda detaylı olarak anlatılmaktadır."
+  }
+];
 
 const features = [
   { icon: "🏢", title: "Stok Depolama", desc: "Amazon satışlarınız için UK'de güvenli stok depolama." },
@@ -153,6 +144,7 @@ export default function AmazonFulfillmentPage() {
           </div>
         </section>
 
+        <PageFaq faqs={faqs} />
         <CtaCards />
       </main>
       <Footer />

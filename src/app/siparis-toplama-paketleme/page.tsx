@@ -1,10 +1,11 @@
+import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 
-const SITE_URL = "https://www.londradepo.com";
+import { SITE_URL } from "@/lib/site";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20sipariş%20toplama%20ve%20paketleme%20hizmeti%20hakkında%20bilgi%20almak%20istiyorum.";
 const TEL = "tel:+447554195190";
 
@@ -55,51 +56,6 @@ const jsonLd = {
         "İngiltere'de sipariş toplama ve paketleme (pick & pack) hizmeti. Online mağaza siparişleri için stoktan ürün toplama, paketleme, kargo etiketleme ve sevkiyat.",
       areaServed: { "@type": "Country", name: "United Kingdom" },
       url: `${SITE_URL}/siparis-toplama-paketleme`,
-    },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "Pick & Pack nedir?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Pick & Pack, bir sipariş geldiğinde depo raflarından ilgili ürünlerin toplanması (pick) ve ardından paketlenerek kargoya hazır hale getirilmesi (pack) sürecinin tamamıdır.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "İngiltere'de pick & pack hizmeti nasıl çalışır?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Ürünleriniz Essex depomuzda stoklanır. Online mağazanızdan sipariş geldiğinde depo yönetim sistemimize (Mintsoft WMS) aktarılır. Ekibimiz siparişi depoda toplar, uygun ambalaj ile paketler, kargo etiketi oluşturur ve müşteriye sevk eder.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Hangi tür ürünler için pick & pack yapılır?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Kolili, paletli veya bireysel ürünler için sipariş toplama ve paketleme yapılabilir. Tekstil, elektronik aksesuarlar, ev ürünleri, kozmetik ve benzeri ürünler için hizmet sunmaktayız. Büyük endüstriyel ekipmanlar veya tehlikeli maddeler için iletişime geçin.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Paketleme malzemesi kim sağlar?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Paketleme malzemeleri (koli, bant, köpük, bubble wrap vb.) için seçenekleri görüşmek üzere bizimle iletişime geçin. Bazı müşteriler kendi markalı ambalajlarını depoya gönderir.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Sipariş başına pick & pack ücreti nasıl hesaplanır?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Ücretlendirme sipariş hacmi, ürün türü ve paketleme gereksinimlerine göre belirlenir. Sabit fiyat listesi yayınlamıyoruz; WhatsApp üzerinden bize ulaşarak özel teklif alabilirsiniz.",
-          },
-        },
-      ],
     },
   ],
 };
@@ -184,6 +140,7 @@ export default function SiparisToplama() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <main>
+        <FaqJsonLd faqs={faqs} />
         {/* Hero */}
         <section className="bg-gradient-to-br from-[#0b2545] via-[#1e3a5f] to-[#0b2545] text-white py-20 px-4">
           <div className="max-w-4xl mx-auto">

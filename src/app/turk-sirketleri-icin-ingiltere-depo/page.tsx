@@ -1,10 +1,11 @@
+import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 
-const SITE_URL = "https://www.londradepo.com";
+import { SITE_URL } from "@/lib/site";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20Türk%20şirketi%20için%20İngiltere%20depo%20hizmeti%20hakkında%20bilgi%20almak%20istiyorum.";
 const TEL = "tel:+447554195190";
 
@@ -54,43 +55,6 @@ const jsonLd = {
         "Türk şirketleri için İngiltere depolama ve fulfilment hizmeti. UK'de şirket veya depo kurmadan, Türkiye'den İngiltere pazarına satış yapın.",
       areaServed: { "@type": "Country", name: "United Kingdom" },
       url: `${SITE_URL}/turk-sirketleri-icin-ingiltere-depo`,
-    },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "İngiltere'de şirket kurmadan satış yapabilir miyim?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet, mümkündür. LondraDepo üzerinden ürünlerinizi UK depomuzda saklayabilir, Shopify veya Amazon gibi platformlar üzerinden İngiltere'ye satış yapabilirsiniz. İngiltere'de şirket kurmak zorunlu değildir; ancak vergi ve ticaret hukuku konularında bağımsız danışmanlık almanızı öneririz.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Türkiye'den ürün gönderip İngiltere'de depolayabilir miyim?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. Türkiye'den gönderilen ürünler gümrükleme koordinasyonu desteğiyle UK'e getirilir, depomuzda stoklanır. Gümrük sürecinde koordinasyon sağlıyoruz ancak doğrudan gümrükleme beyanı yetkimiz yoktur; bu nedenle lisanslı gümrükçü ile çalışmanız gerekebilir.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Türk işletmeler için İngiltere'de operasyon kurmanın maliyeti nedir?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Kendi deponuzu ve personel ekibinizi kurmanıza kıyasla LondraDepo üzerinden çalışmak önemli ölçüde daha düşük sabit maliyet anlamına gelir. Stok ve sipariş hacminize göre özelleştirilmiş fiyat teklifi için WhatsApp üzerinden bize ulaşabilirsiniz.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "LondraDepo İngilizce iletişim kuruyor mu?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "LondraDepo Türkiye'den UK'e çalışan işletmelere özel kurulmuş bir UK depo hizmetidir. Türkçe iletişim imkânı sunmaktayız.",
-          },
-        },
-      ],
     },
   ],
 };
@@ -152,6 +116,7 @@ export default function TurkSirketleri() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <main>
+        <FaqJsonLd faqs={faqs} />
         {/* Hero */}
         <section className="bg-gradient-to-br from-[#0b2545] via-[#1e3a5f] to-[#0b2545] text-white py-20 px-4">
           <div className="max-w-4xl mx-auto">

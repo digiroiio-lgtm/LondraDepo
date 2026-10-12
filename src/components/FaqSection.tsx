@@ -1,5 +1,6 @@
 "use client";
 
+import FaqJsonLd from "./FaqJsonLd";
 import { useState } from "react";
 
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20depo%20teklifi%20almak%20istiyorum.";
@@ -60,6 +61,7 @@ export default function FaqSection() {
 
   return (
     <section id="faq" className="py-20 px-4 bg-white">
+      <FaqJsonLd faqs={faqs} />
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-12">
           <p className="text-[#e63946] text-sm font-semibold uppercase tracking-widest mb-3">
@@ -91,11 +93,9 @@ export default function FaqSection() {
                   +
                 </span>
               </button>
-              {open === i && (
-                <div className="px-5 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-3">
+              <div hidden={open !== i} className="px-5 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-3">
                   {faq.a}
                 </div>
-              )}
             </div>
           ))}
         </div>

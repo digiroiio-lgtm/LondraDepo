@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 
-const SITE_URL = "https://www.londradepo.com";
+import { SITE_URL } from "@/lib/site";
 const PAGE_URL = `${SITE_URL}/case-studies`;
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20operasyon%20danismanliği%20almak%20istiyorum.";
 

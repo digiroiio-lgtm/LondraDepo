@@ -1,10 +1,11 @@
+import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 
-const SITE_URL = "https://www.londradepo.com";
+import { SITE_URL } from "@/lib/site";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20Türkiye%20İngiltere%20lojistik%20hizmeti%20hakkında%20bilgi%20almak%20istiyorum.";
 const TEL = "tel:+447554195190";
 
@@ -54,35 +55,6 @@ const jsonLd = {
         "Türkiye'den İngiltere'ye lojistik zinciri: gümrükleme koordinasyonu, UK depolama, stok yönetimi ve sipariş karşılama. LondraDepo UK gümrük sonrası aşamayı yönetir.",
       areaServed: { "@type": "Country", name: "United Kingdom" },
       url: `${SITE_URL}/turkiye-ingiltere-lojistik`,
-    },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "Türkiye'den İngiltere'ye ürün nasıl gönderilir?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Türkiye'den UK'e ürün göndermek için uluslararası bir taşıyıcı (kargo firması veya nakliyeci) ile çalışmanız gerekir. LondraDepo uluslararası taşımacılık hizmeti vermez; ancak ürünleriniz UK'ye ulaştığında gümrükleme koordinasyonu, depoya alınma, stok yönetimi ve sipariş karşılama süreçlerini yönetiriz.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "LondraDepo Türkiye'den İngiltere'ye nakliye yapıyor mu?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Hayır, LondraDepo Türkiye'den İngiltere'ye uluslararası nakliye hizmeti sunmamaktadır. Ürünlerinizin UK'ye taşınması için uluslararası bir taşıyıcı ile çalışmanız gerekir. LondraDepo'nun hizmet alanı, ürünlerin UK'ye varışından sonra başlar: gümrükleme koordinasyonu, mal kabul, depolama, sipariş karşılama ve UK dağıtımı.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "UK gümrüğünde ürünlerimi kim geçirir?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "UK gümrük beyanı lisanslı gümrükçüler tarafından yapılır. LondraDepo gümrükleme sürecinde koordinasyon ve yönlendirme desteği sağlar; doğrudan gümrük beyanı yapmaz. Gümrük sonrasında ürünler depomuzda teslim alınır.",
-          },
-        },
-      ],
     },
   ],
 };
@@ -169,6 +141,7 @@ export default function TurkiyeIngiltere() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <main>
+        <FaqJsonLd faqs={faqs} />
         {/* Hero */}
         <section className="bg-gradient-to-br from-[#0b2545] via-[#1e3a5f] to-[#0b2545] text-white py-20 px-4">
           <div className="max-w-4xl mx-auto">

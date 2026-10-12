@@ -1,3 +1,4 @@
+import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -7,7 +8,7 @@ import CaseHero from "@/components/CaseHero";
 import OperationsFlow from "@/components/OperationsFlow";
 import RelatedCases from "@/components/RelatedCases";
 
-const SITE_URL = "https://www.londradepo.com";
+import { SITE_URL } from "@/lib/site";
 const PAGE_URL = `${SITE_URL}/case-studies/tasinabilir-sarj-istasyonu-ingiltere-operasyonu`;
 const WHATSAPP =
   "https://wa.me/447554195190?text=Merhaba%2C%20elektronik%20urun%20ingiltere%20operasyonu%20hakkinda%20bilgi%20almak%20istiyorum.";
@@ -62,45 +63,8 @@ const jsonLd = {
         "Taşınabilir şarj istasyonu ürünlerinin İngiltere depo altyapısı, SIM kart aktivasyonu, şarj kontrolü ve son kullanıcı sevkiyat operasyonu.",
       url: PAGE_URL,
       publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
-      image: { "@type": "ImageObject", url: `${SITE_URL}/logo.png`, width: 512, height: 512 },
+      image: { "@type": "ImageObject", url: `${SITE_URL}/logo.svg`, width: 640, height: 160 },
       mainEntityOfPage: PAGE_URL,
-    },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "Elektronik ürünler için teknik operasyon yapıyor musunuz?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. SIM kart aktivasyonu, cihaz şarj kontrolü ve kargo öncesi teknik hazırlık operasyonu sağlıyoruz. Her ürün sevkiyattan önce belirlenen teknik kontrolden geçirilir.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "SIM kart aktivasyonu İngiltere deposunda yapılabiliyor mu?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. İngiliz SIM kartlar için aktivasyon operasyonu depomuzda gerçekleştirilmektedir. Her aktivasyon kayıt altına alınır ve müşteriye raporlanır.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Taşınabilir şarj istasyonları için son kullanıcı teslimatı yapıyor musunuz?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. Teknik hazırlığı tamamlanan cihazlar İngiltere genelindeki son kullanıcılara next-day veya 2-day kargo seçenekleriyle gönderilmektedir.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Elektronik ürünlerin depolanması için özel koşullar sağlıyor musunuz?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. Elektronik ürünler nem ve ısıya karşı korumalı, güvenli depolama alanında muhafaza edilmektedir. Hasar oluşturacak çevresel faktörler minimize edilir.",
-          },
-        },
-      ],
     },
   ],
 };
@@ -195,6 +159,7 @@ export default function SarjIstasyonuCaseStudyPage() {
     <>
       <Header />
       <main>
+        <FaqJsonLd faqs={faqs} />
         {/* Breadcrumb */}
         <nav aria-label="breadcrumb" className="bg-slate-50 border-b border-slate-200">
           <div className="max-w-4xl mx-auto px-4 py-2 text-sm text-slate-500 flex flex-wrap gap-2">

@@ -1,9 +1,10 @@
+import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 
-const SITE_URL = "https://www.londradepo.com";
+import { SITE_URL } from "@/lib/site";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20Türkiye'den%20İngiltere'ye%20depolama%20ve%20fulfillment%20teklifi%20almak%20istiyorum.";
 const TEL = "tel:+447554195190";
 
@@ -60,35 +61,6 @@ const jsonLd = {
         "Türkiye'den İngiltere'ye ürün gönderen işletmeler için depolama, gümrükleme koordinasyonu, fulfillment ve UK dağıtım hizmetleri.",
       areaServed: { "@type": "Country", name: "United Kingdom" },
       url: `${SITE_URL}/turkiyeden-ingiltereye-depolama`,
-    },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "Türkiye'den ürünlerimi İngiltere deposuna gönderebilir miyim?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. Türkiye'deki tedarikçinizden veya üretim noktanızdan ürünlerinizi doğrudan depo adresimize gönderebilirsiniz. Ürün kabulü ve depolama operasyonumuz tarafından gerçekleştirilir.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "İngiltere'de kendi depomu kurmadan satış yapabilir miyim?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. LondraDepo aracılığıyla kendi depo yatırımı yapmadan UK depolama ve fulfillment altyapısından yararlanabilirsiniz.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Shopify ve Amazon üzerinden satış yapıyorum. Destek sağlıyor musunuz?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. Shopify ve Amazon üzerinden satış yapan işletmeler için fulfillment desteği sunuyoruz.",
-          },
-        },
-      ],
     },
   ],
 };
@@ -148,6 +120,7 @@ export default function TurkiyeILandingPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <main>
+        <FaqJsonLd faqs={faqs} />
         {/* Hero */}
         <section className="bg-gradient-to-br from-[#0b2545] via-[#1e3a5f] to-[#0b2545] text-white py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">

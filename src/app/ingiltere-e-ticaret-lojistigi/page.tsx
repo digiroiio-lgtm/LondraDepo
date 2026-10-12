@@ -1,10 +1,11 @@
+import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 
-const SITE_URL = "https://www.londradepo.com";
+import { SITE_URL } from "@/lib/site";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20İngiltere%20e-ticaret%20lojistiği%20hakkında%20bilgi%20almak%20istiyorum.";
 const TEL = "tel:+447554195190";
 
@@ -56,51 +57,6 @@ const jsonLd = {
         "İngiltere e-ticaret lojistiği: depolama, sipariş karşılama (fulfillment), pick & pack, kargo ve UK teslimat. Shopify ve Amazon satıcıları için.",
       areaServed: { "@type": "Country", name: "United Kingdom" },
       url: `${SITE_URL}/ingiltere-e-ticaret-lojistigi`,
-    },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "İngiltere e-ticaret lojistiği nedir?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "İngiltere e-ticaret lojistiği; online mağazanızdan gelen siparişlerin UK'deki bir depodan toplanması, paketlenmesi ve müşteriye teslim edilmesi sürecinin tamamıdır. LondraDepo bu süreci Essex depomuzdan yönetir.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Sipariş karşılama (fulfillment) ile lojistik arasındaki fark nedir?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Lojistik, ürünlerin taşınması ve depolanmasını kapsar. Sipariş karşılama (fulfillment) ise müşteri siparişinin alınmasından teslimata kadar tüm süreci: stok yönetimi, pick & pack, kargo etiketleme ve sevkiyatı içerir.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Shopify ve Amazon siparişlerini karşılayabilir misiniz?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. Shopify mağazanızdan ve Amazon FBM (Satıcı Tarafından Karşılama) siparişlerinizi Essex depomuzdan karşılıyoruz. Sipariş geldiğinde depo ekibi ürünü toplar, paketler ve sevk eder.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Stokum İngiltere'de nasıl yönetilir?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Stoklar Mintsoft WMS (depo yönetim sistemi) üzerinden takip edilir. Stok seviyeleri anlık olarak izlenir, mal girişi ve çıkışları sisteme yansıtılır.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "İngiltere'de e-ticaret lojistik hizmeti almak için ne yapmalıyım?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "WhatsApp veya telefon üzerinden bizimle iletişime geçin. Ürün türü, tahmini stok miktarı, aylık sipariş hacmi ve satış kanallarınız hakkında bilgi vererek fiyat teklifi alabilirsiniz.",
-          },
-        },
-      ],
     },
   ],
 };
@@ -182,6 +138,7 @@ export default function IngiltereETicaretLojistigi() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <main>
+        <FaqJsonLd faqs={faqs} />
         {/* Hero */}
         <section className="bg-gradient-to-br from-[#0b2545] via-[#1e3a5f] to-[#0b2545] text-white py-20 px-4">
           <div className="max-w-4xl mx-auto">

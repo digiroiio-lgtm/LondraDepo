@@ -1,3 +1,4 @@
+import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -5,7 +6,7 @@ import Footer from "@/components/Footer";
 import CtaCards from "@/components/CtaCards";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 
-const SITE_URL = "https://www.londradepo.com";
+import { SITE_URL } from "@/lib/site";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20depolama%20hizmeti%20hakkında%20bilgi%20almak%20istiyorum.";
 
 export const metadata: Metadata = {
@@ -42,27 +43,6 @@ const jsonLd = {
         "İngiltere'de kısa ve uzun vadeli depolama hizmeti. Palet ve koli kabulü, ürün teslim alma, stok yönetimi. Essex merkezli UK depo operasyonu.",
       areaServed: { "@type": "Country", name: "United Kingdom" },
       url: `${SITE_URL}/depolama`,
-    },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "Kısa vadeli depolama mümkün mü?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. Hem kısa hem de uzun vadeli depolama seçenekleri mevcuttur. İhtiyacınıza göre esneklik sağlıyoruz.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Palet depolama kabul ediyor musunuz?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. Hem paletli hem de kolili ürünleri kabul ediyoruz. Ayrıca ayrı palet depolama hizmetimiz de mevcuttur.",
-          },
-        },
-      ],
     },
   ],
 };
@@ -104,6 +84,7 @@ export default function DepolamaPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <main>
+        <FaqJsonLd faqs={faqs} />
         {/* Hero */}
         <section className="bg-gradient-to-br from-[#0b2545] via-[#1e3a5f] to-[#0b2545] text-white py-16 px-4">
           <div className="max-w-4xl mx-auto">

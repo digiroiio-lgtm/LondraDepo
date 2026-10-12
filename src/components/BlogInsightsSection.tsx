@@ -35,7 +35,7 @@ const featuredPosts = [
 const caseStudy = {
   title: "Krufy Moda Fulfillment: UK E-Ticaret Operasyonu",
   excerpt: "Ünlü futbolcunun koleksiyonunun İngiltere fulfillment ve depolama operasyonu nasıl kuruldu?",
-  href: "/case-studies/krufy-uk-fashion-fulfillment",
+  href: "/case-studies/cruyff-uk-fulfillment",
 };
 
 const faq = [

@@ -1,3 +1,4 @@
+import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -8,7 +9,7 @@ import CtaCards from "@/components/CtaCards";
 import AuthorBox from "@/components/AuthorBox";
 import RelatedArticles from "@/components/RelatedArticles";
 
-const SITE_URL = "https://www.londradepo.com";
+import { SITE_URL } from "@/lib/site";
 const PAGE_URL = `${SITE_URL}/blog/ingiltere-depo-fiyatlari-2026`;
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20depo%20maliyet%20bilgisi%20almak%20istiyorum.";
 
@@ -30,6 +31,21 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
+const faqs = [
+  {
+    "q": "İngiltere'de 1 palet depolama maliyeti ne kadardır?",
+    "a": "İngiltere'de standart 1 palet depolama haftalık ortalama £8–£15 arasındadır. Ürün tipi, erişim sıklığı ve stok süresi bu fiyatı etkiler."
+  },
+  {
+    "q": "İngiltere fulfillment maliyeti nasıl hesaplanır?",
+    "a": "Fulfillment maliyeti; depolama ücreti + sipariş başına pick&pack ücreti + paketleme materyali + kargo ücreti toplamından oluşur."
+  },
+  {
+    "q": "Amazon prep ve fulfillment hizmetini birlikte alabilir miyim?",
+    "a": "Evet. LondraDepo.com'da Amazon prep ve 3PL fulfillment hizmetlerini tek operasyon çatısı altında sunuyoruz. Bu yaklaşım çift işlem ücretini ortadan kaldırır."
+  }
+];
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
@@ -48,31 +64,10 @@ const jsonLd = {
       url: PAGE_URL,
       author: { "@type": "Person", name: "Sertaç Yılmaz" },
       publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
-      image: { "@type": "ImageObject", url: `${SITE_URL}/logo.png`, width: 512, height: 512 },
+      image: { "@type": "ImageObject", url: `${SITE_URL}/logo.svg`, width: 640, height: 160 },
       datePublished: "2025-06-01",
       dateModified: "2026-01-01",
       inLanguage: "tr-TR",
-    },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "İngiltere'de 1 palet depolama maliyeti ne kadardır?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "İngiltere'de standart 1 palet depolama haftalık ortalama £8-£15 arasında değişmektedir. Ürün tipi, erişim sıklığı ve stok süresi fiyatı etkiler.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "İngiltere fulfillment maliyeti nasıl hesaplanır?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Fulfillment maliyeti; depolama ücreti + sipariş başına pick&pack ücreti + paketleme materyali + kargo ücreti toplamından oluşur.",
-          },
-        },
-      ],
     },
   ],
 };
@@ -89,6 +84,7 @@ export default function DepoFiyatlariPage() {
     <>
       <Header />
       <main>
+        <FaqJsonLd faqs={faqs} />
         <nav aria-label="breadcrumb" className="bg-slate-50 border-b border-slate-200">
           <div className="max-w-6xl mx-auto px-4 py-2 text-sm text-slate-500 flex flex-wrap gap-2">
             <Link href="/" className="hover:text-[#0b2545] transition">Ana Sayfa</Link>
@@ -190,23 +186,12 @@ export default function DepoFiyatlariPage() {
 
               <h2>Sık Sorulan Sorular</h2>
 
-              <h3>İngiltere&apos;de 1 palet depolama maliyeti ne kadardır?</h3>
-              <p>
-                İngiltere&apos;de standart 1 palet depolama haftalık ortalama £8–£15 arasındadır.
-                Ürün tipi, erişim sıklığı ve stok süresi bu fiyatı etkiler.
-              </p>
-
-              <h3>İngiltere fulfillment maliyeti nasıl hesaplanır?</h3>
-              <p>
-                Fulfillment maliyeti; depolama ücreti + sipariş başına pick&amp;pack ücreti +
-                paketleme materyali + kargo ücreti toplamından oluşur.
-              </p>
-
-              <h3>Amazon prep ve fulfillment hizmetini birlikte alabilir miyim?</h3>
-              <p>
-                Evet. LondraDepo.com&apos;da Amazon prep ve 3PL fulfillment hizmetlerini tek
-                operasyon çatısı altında sunuyoruz. Bu yaklaşım çift işlem ücretini ortadan kaldırır.
-              </p>
+              {faqs.map(({ q, a }) => (
+                <div key={q}>
+                  <h3>{q}</h3>
+                  <p>{a}</p>
+                </div>
+              ))}
             </div>
 
             <div className="bg-[#0b2545] text-white rounded-2xl p-8 my-10 text-center">

@@ -32,7 +32,7 @@ const geist = localFont({
   weight: "100 900",
 });
 
-const SITE_URL = "https://www.londradepo.com";
+import { SITE_URL } from "@/lib/site";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -75,6 +75,10 @@ export const metadata: Metadata = {
     locale: "tr_TR",
     type: "website",
   },
+  icons: {
+    icon: [{ url: "/icon.svg", type: "image/svg+xml" }, { url: "/icon.png", type: "image/png", sizes: "192x192" }],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+  },
   robots: { index: true, follow: true },
 };
 
@@ -88,7 +92,7 @@ const jsonLd = {
       url: SITE_URL,
       logo: {
         "@type": "ImageObject",
-        url: `${SITE_URL}/logo.png`,
+        url: `${SITE_URL}/logo.svg`,
       },
       description:
         "UK depolama, gümrükleme koordinasyonu, elleçleme, e-ticaret fulfillment, Shopify ve Amazon fulfillment, pick & pack ve UK dağıtım hizmetleri sunan operasyon partneri. İngiltere'de kendi deponuzu kurmadan satış yapın.",
@@ -193,75 +197,6 @@ const jsonLd = {
       description: "Amazon üzerinden satış yapan işletmeler için UK fulfillment ve stok yönetimi. LondraDepo, Amazon'un resmi partneri değildir.",
       areaServed: { "@type": "Country", name: "United Kingdom" },
       url: `${SITE_URL}/amazon-fulfillment`,
-    },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "İngiltere'de depo hizmetiniz hangi firmalar için uygun?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Türkiye'den İngiltere'ye ihracat yapan markalar, e-ticaret satıcıları, toptancılar, gıda üreticileri ve ithalatçılar için uygundur.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "İngiltere fulfillment hizmeti veriyor musunuz?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. Sipariş hazırlama, paketleme ve sevk süreçlerine uygun fulfillment desteği sunuyoruz.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Paletli ürün kabul ediyor musunuz?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. İngiltere palet depolama ihtiyacı olan işletmelere uygun çözümler sağlıyoruz.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Amazon, Etsy ve Shopify satıcıları için uygun musunuz?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. İngiltere Amazon prep, sipariş hazırlama ve dağıtım operasyonlarına uygun yapı sunuyoruz.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "İngiltere deponuz hangi bölgelere hizmet veriyor?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Essex merkezli operasyonumuz Londra, Birmingham, Manchester ve tüm İngiltere'ye dağıtım yapabilmektedir.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Türkiye'den ürün gönderebilir miyim?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. Türkiye'deki tedarikçinizden veya üretim noktanızdan ürünlerinizi doğrudan depo adresimize gönderebilirsiniz. Gümrükleme sürecinde koordinasyon desteği de sağlıyoruz.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Pick and pack hizmeti sunuyor musunuz?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. Sipariş geldiğinde depo ekibimiz ürünü stoktan toplar, paketler, kargo etiketi oluşturur ve müşteriye sevk eder.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "İngiltere'de kendi depomu kurmadan satış yapabilir miyim?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. LondraDepo aracılığıyla kendi depo yatırımı yapmadan UK depolama ve fulfillment altyapısından yararlanabilirsiniz.",
-          },
-        },
-      ],
     },
   ],
 };

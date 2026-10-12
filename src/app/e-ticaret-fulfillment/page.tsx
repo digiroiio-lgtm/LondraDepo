@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import CtaCards from "@/components/CtaCards";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 
-const SITE_URL = "https://www.londradepo.com";
+import { SITE_URL } from "@/lib/site";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20e-ticaret%20fulfillment%20hizmeti%20hakkında%20bilgi%20almak%20istiyorum.";
 
 export const metadata: Metadata = {
@@ -42,19 +42,6 @@ const jsonLd = {
         "İngiltere e-ticaret fulfillment. Sipariş yönetimi, stok takibi, pick & pack, kargo etiketleme, paketleme, sevkiyat ve UK teslimat.",
       areaServed: { "@type": "Country", name: "United Kingdom" },
       url: `${SITE_URL}/e-ticaret-fulfillment`,
-    },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "E-ticaret fulfillment süreci nasıl çalışıyor?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Müşteri siparişi alındığında sipariş depo sistemine girer. Depo ekibi ürünleri stoktan toplar (pick), paketler (pack), kargo etiketi oluşturulur ve müşteriye sevk edilir.",
-          },
-        },
-      ],
     },
   ],
 };

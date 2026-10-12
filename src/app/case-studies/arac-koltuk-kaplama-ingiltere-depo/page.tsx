@@ -1,3 +1,4 @@
+import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -7,7 +8,7 @@ import CaseHero from "@/components/CaseHero";
 import OperationsFlow from "@/components/OperationsFlow";
 import RelatedCases from "@/components/RelatedCases";
 
-const SITE_URL = "https://www.londradepo.com";
+import { SITE_URL } from "@/lib/site";
 const PAGE_URL = `${SITE_URL}/case-studies/arac-koltuk-kaplama-ingiltere-depo`;
 const WHATSAPP =
   "https://wa.me/447554195190?text=Merhaba%2C%20otomotiv%20urun%20depolama%20ve%20dagitim%20hakkinda%20bilgi%20almak%20istiyorum.";
@@ -62,45 +63,8 @@ const jsonLd = {
         "Araç koltuk kaplama ve suni deri malzemelerinin İngiltere depo altyapısı, stok yönetimi, online fulfillment ve B2B dağıtım operasyonu.",
       url: PAGE_URL,
       publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
-      image: { "@type": "ImageObject", url: `${SITE_URL}/logo.png`, width: 512, height: 512 },
+      image: { "@type": "ImageObject", url: `${SITE_URL}/logo.svg`, width: 640, height: 160 },
       mainEntityOfPage: PAGE_URL,
-    },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "Araç koltuk kaplama malzemeleri için özel depolama yapıyor musunuz?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. Rulo suni deri, kaplama paneli ve döşeme malzemeleri için nem kontrollü, temiz depolama alanı sağlıyoruz. Ürünler malzeme tipine göre ayrı bölümlerde muhafaza edilir.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "İngiltere'deki otomotiv atölyelerine B2B dağıtım yapabiliyor musunuz?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. Essex merkezli deposumuzdan İngiltere genelindeki atölye, bayi ve döşeme ustalarına pallet ve parça bazında B2B dağıtım yapıyoruz.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Online satış kanallarından gelen siparişleri de yönetebiliyor musunuz?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. eBay, Amazon ve kendi e-ticaret sitenizden gelen bireysel siparişleri aynı gün veya ertesi gün sevkiyatla karşılıyoruz.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Rulo ve büyük formatlı malzemeler depolanabiliyor mu?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. Suni deri rulolar ve büyük panel malzemeler palet sisteminde düzgün istif edilerek depolanır; hasar riski minimize edilir.",
-          },
-        },
-      ],
     },
   ],
 };
@@ -189,6 +153,7 @@ export default function AracKoltukKaplamaCaseStudyPage() {
     <>
       <Header />
       <main>
+        <FaqJsonLd faqs={faqs} />
         {/* Breadcrumb */}
         <nav aria-label="breadcrumb" className="bg-slate-50 border-b border-slate-200">
           <div className="max-w-4xl mx-auto px-4 py-2 text-sm text-slate-500 flex flex-wrap gap-2">

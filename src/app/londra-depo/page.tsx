@@ -1,10 +1,11 @@
+import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 
-const SITE_URL = "https://www.londradepo.com";
+import { SITE_URL } from "@/lib/site";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20Londra%20depo%20hizmeti%20hakkında%20bilgi%20almak%20istiyorum.";
 const TEL = "tel:+447554195190";
 
@@ -60,51 +61,6 @@ const jsonLd = {
       ],
       url: `${SITE_URL}/londra-depo`,
     },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "Londra'da depo hizmeti alabilir miyim?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. Depomuz Londra'ya yakın Essex'te yer almaktadır. Londra'ya olan mesafesi yaklaşık 40-50 km olup UK lojistik ağına tam entegredir. Ürünlerinizi depomuzda saklayabilir, stok takibini yapabilir ve siparişlerinizi UK geneline karşılayabilirsiniz.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Depo konumu nerede?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Depo adresimiz: Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY. Bu konum Londra'ya yakın olmakla birlikte UK lojistik güzergahlarına uygun, ulaşımı kolay bir noktadadır.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Londra deposuna ürünlerimi nasıl gönderebilirim?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Ürünlerinizi Türkiye'den veya başka bir ülkeden depo adresimize sevk edebilirsiniz. Gümrükleme sürecinde koordinasyon desteği de sunmaktayız. Ürünler depoya ulaştığında mal kabul, sayım ve sisteme giriş işlemleri gerçekleştirilir.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Depoda hangi hizmetler sunuluyor?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Mal kabul, palet depolama, koli depolama, stok yönetimi (Mintsoft WMS), pick & pack, kargo etiketleme ve UK geneli sipariş karşılama hizmetleri sunulmaktadır.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Londra depo hizmeti için teklif nasıl alınır?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "WhatsApp veya telefon üzerinden bize ulaşabilirsiniz. Ürün türü, hacim, tahmini palet/koli sayısı ve ihtiyaç duyduğunuz hizmetler hakkında bilgi vererek fiyat teklifi alabilirsiniz.",
-          },
-        },
-      ],
-    },
   ],
 };
 
@@ -158,6 +114,7 @@ export default function LondraDepoPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <main>
+        <FaqJsonLd faqs={faqs} />
         {/* Hero */}
         <section className="bg-gradient-to-br from-[#0b2545] via-[#1e3a5f] to-[#0b2545] text-white py-20 px-4">
           <div className="max-w-4xl mx-auto">

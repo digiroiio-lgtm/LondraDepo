@@ -1,10 +1,11 @@
+import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 
-const SITE_URL = "https://www.londradepo.com";
+import { SITE_URL } from "@/lib/site";
 const PAGE_URL = `${SITE_URL}/palet-depolama`;
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20palet%20depolama%20teklifi%20almak%20istiyorum.";
 
@@ -45,35 +46,6 @@ const jsonLd = {
       areaServed: { "@type": "Country", name: "United Kingdom" },
       url: PAGE_URL,
     },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "İngiltere palet depolama ücreti nasıl hesaplanır?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Palet depolama ücretlendirmesi palet sayısı ve depolama süresine göre haftalık olarak hesaplanır. Detaylı fiyat için WhatsApp'tan bize ulaşabilirsiniz.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Minimum palet miktarı nedir?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Sabit bir minimum palet zorunluluğumuz bulunmamaktadır. Küçük hacimli işletmelerden büyük hacimli ithalatçılara kadar hizmet veriyoruz.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Paletler Türkiye'den İngiltere'ye nasıl geliyor?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Türkiye'den İngiltere'ye konteyner veya parsiyel yük ile gelen paletleriniz, Essex depomuzda teslim alınıyor.",
-          },
-        },
-      ],
-    },
   ],
 };
 
@@ -101,6 +73,7 @@ export default function PaletDepolamaPage() {
     <>
       <Header />
       <main>
+        <FaqJsonLd faqs={faqs} />
         <nav aria-label="breadcrumb" className="bg-slate-50 border-b border-slate-200">
           <div className="max-w-6xl mx-auto px-4 py-2 text-sm text-slate-500 flex gap-2">
             <Link href="/" className="hover:text-[#0b2545] transition">Ana Sayfa</Link>

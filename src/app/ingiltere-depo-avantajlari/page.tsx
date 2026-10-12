@@ -1,9 +1,10 @@
+import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 
-const SITE_URL = "https://www.londradepo.com";
+import { SITE_URL } from "@/lib/site";
 const PAGE_URL = `${SITE_URL}/ingiltere-depo-avantajlari`;
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20depo%20teklifi%20almak%20istiyorum.";
 const TEL = "tel:+447554195190";
@@ -80,51 +81,6 @@ const jsonLd = {
         priceCurrency: "GBP",
         description: "Haftalık palet bazlı depolama — fiyatlar ürün tipi ve hacme göre talep bazlı belirlenir",
       },
-    },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "İngiltere'de depo maliyetleri ne kadar?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Palet bazlı depolama maliyetleri ürün tipi ve hacme göre değişmektedir. UK piyasasında haftalık palet depolama genellikle £8–£15 aralığında seyreder; LondraDepo fiyatları talep bazlı belirlenmektedir.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Türkiye'den İngiltere'ye konteyner organizasyonu sağlıyor musunuz?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "LondraDepo uluslararası nakliye hizmeti sunmamaktadır. Ürünlerinizin UK'ye taşınması için bir nakliyeci firmayla çalışmanız gerekir. LondraDepo'nun hizmet alanı, ürünlerin UK'ye varışından sonra başlar: mal kabul, depolama, sipariş karşılama ve UK dağıtımı.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Küçük hacimli ürün gönderebilir miyim?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. Palet bazlı ve parsiyel (kısmi yük) operasyon modelleri uygundur. Tam tır yükü zorunluluğu yoktur.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "İngiltere etiket uyumluluğu konusunda destek veriyor musunuz?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Ürün gruplarına bağlı olarak İngilizce etiket kontrolü, UK market uyumu ve operasyon uygunluğu konusunda yönlendirme sağlanabilir.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Amazon UK için fulfillment desteği mevcut mu?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. Amazon, Shopify, Etsy ve diğer e-ticaret operasyonları için fulfillment ve sipariş hazırlama desteği sunulabilir.",
-          },
-        },
-      ],
     },
   ],
 };
@@ -326,6 +282,7 @@ export default function IngiltereDepoAvantajlariPage() {
       <Header />
 
       <main>
+        <FaqJsonLd faqs={faqs} />
         {/* JSON-LD */}
         <script
           type="application/ld+json"

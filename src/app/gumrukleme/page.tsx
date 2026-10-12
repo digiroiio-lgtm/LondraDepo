@@ -1,3 +1,4 @@
+import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -5,7 +6,7 @@ import Footer from "@/components/Footer";
 import CtaCards from "@/components/CtaCards";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 
-const SITE_URL = "https://www.londradepo.com";
+import { SITE_URL } from "@/lib/site";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20UK%20gümrükleme%20desteği%20hakkında%20bilgi%20almak%20istiyorum.";
 
 export const metadata: Metadata = {
@@ -43,19 +44,6 @@ const jsonLd = {
       areaServed: { "@type": "Country", name: "United Kingdom" },
       url: `${SITE_URL}/gumrukleme`,
     },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "UK gümrükleme sürecinde nasıl destek sağlıyorsunuz?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Gümrükleme sürecinde koordinasyon desteği sağlıyoruz. Gümrük işlemleri uzman gümrükçüler gerektirdiğinden, bu alanda yönlendirme ve süreç koordinasyonu sunmaktayız.",
-          },
-        },
-      ],
-    },
   ],
 };
 
@@ -90,6 +78,7 @@ export default function GumruklernePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <main>
+        <FaqJsonLd faqs={faqs} />
         {/* Hero */}
         <section className="bg-gradient-to-br from-[#0b2545] via-[#1e3a5f] to-[#0b2545] text-white py-16 px-4">
           <div className="max-w-4xl mx-auto">

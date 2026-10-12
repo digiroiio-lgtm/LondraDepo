@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
-import { GoogleAnalytics } from "@next/third-parties/google";
 import CookieConsent from "@/components/CookieConsent";
 import ConditionalAnalytics from "@/components/ConditionalAnalytics";
 import GaConsentListener from "@/components/GoogleAnalytics";
@@ -22,7 +21,8 @@ try {
   var _s = localStorage.getItem('${STORAGE_KEY}');
   if (_s) { var _p = JSON.parse(_s); if (_p && _p.decided && _p.analytics) { _gac = 'granted'; } }
 } catch(e) {}
-gtag('consent', 'default', { analytics_storage: _gac, ad_storage: 'denied' });
+window['ga-disable-${GA_ID}'] = _gac !== 'granted';
+gtag('consent', 'default', { analytics_storage: _gac, ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
 `;
 
 const geist = localFont({
@@ -284,11 +284,9 @@ export default function RootLayout({
       <body className="antialiased">
         {children}
         <CookieConsent />
-        <ConditionalAnalytics />
-        <GaConsentListener />
+        <ConditionalAnalytics gaId={GA_ID} />
+        <GaConsentListener gaId={GA_ID} />
       </body>
-      {/* Load gtag.js via @next/third-parties — strategy="afterInteractive", Server Component */}
-      <GoogleAnalytics gaId={GA_ID} />
     </html>
   );
 }

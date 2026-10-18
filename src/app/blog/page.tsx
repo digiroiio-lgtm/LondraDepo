@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "İngiltere Depo & Lojistik Rehberleri | UK İhracat Bilgi Merkezi | LondraDepo.com",
   description:
-    "İngiltere depo fiyatları, UK fulfillment, Amazon prep, palet depolama ve ihracat rehberleri. Türkiye'den İngiltere'ye satış yapan firmalar için operasyon bilgi merkezi.",
+    "İngiltere depo fiyatları, UK fulfillment, Amazon prep, palet depolama ve ihracat rehberleri. Türkiye'den İngiltere'ye satış yapanlar için bilgi merkezi.",
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: "İngiltere Depo & Lojistik Rehberleri | LondraDepo.com",

@@ -11,7 +11,7 @@ const TEL = "tel:+447554195190";
 export const metadata: Metadata = {
   title: "Türkiye'den İngiltere'ye Nasıl Satış Yapılır? 2026 Rehberi | LondraDepo.com",
   description:
-    "Türkiye'den İngiltere'ye satış rehberi 2026. Ürün gönderimi, gümrük, depolama, Amazon ve Shopify satışı, pick & pack, sipariş karşılama ve UK lojistik. Adım adım rehber.",
+    "Türkiye'den İngiltere'ye satış rehberi 2026: ürün gönderimi, gümrük, depolama, Amazon ve Shopify satışı, pick & pack ve UK lojistik. Adım adım.",
   keywords: [
     "türkiyeden ingiltereye satis",
     "türkiyeden ingiltereye nasıl satış yapılır",

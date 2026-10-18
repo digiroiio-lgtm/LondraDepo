@@ -12,7 +12,7 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20Amazon%20fulfillm
 export const metadata: Metadata = {
   title: "Amazon İngiltere Fulfillment | Amazon UK Stok & Sipariş | LondraDepo.com",
   description:
-    "Amazon üzerinden satış yapan işletmeler için İngiltere fulfillment hizmeti. Stok depolama, sipariş yönetimi, pick & pack ve UK teslimat desteği. Amazon FBA prep hizmetimiz de mevcuttur.",
+    "Amazon satıcıları için İngiltere fulfillment: stok depolama, sipariş yönetimi, pick & pack ve UK teslimat. Amazon FBA prep hizmeti de mevcut.",
   alternates: { canonical: `${SITE_URL}/amazon-fulfillment` },
   openGraph: {
     title: "Amazon İngiltere Fulfillment | LondraDepo.com",

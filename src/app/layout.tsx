@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "İngiltere Depo, Fulfillment ve Londra Lojistik Çözümleri | LondraDepo.com",
   description:
-    "Türkiye'den İngiltere'ye ihracat yapan firmalar için İngiltere depo, Londra depo, İngiltere fulfillment, palet depolama, ürün kabul ve dağıtım çözümleri. İngiltere'de fiziksel operasyon gücüyle hızlı teklif alın.",
+    "Türkiye'den İngiltere'ye ihracat yapanlar için İngiltere depo, Londra depo, fulfillment, palet depolama ve dağıtım çözümleri. Hızlı teklif alın.",
   keywords: [
     "İngiltere depo",
     "İngiltere'de depo",

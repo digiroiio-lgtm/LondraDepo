@@ -11,7 +11,7 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20e-ticaret%20fulfi
 export const metadata: Metadata = {
   title: "İngiltere E-Ticaret Fulfillment | UK Online Sipariş Karşılama | LondraDepo.com",
   description:
-    "İngiltere e-ticaret fulfillment hizmeti. Sipariş yönetimi, stok takibi, pick & pack, kargo etiketleme ve UK teslimat. Online mağazanızdan gelen siparişleri biz karşılayalım.",
+    "İngiltere e-ticaret fulfillment: sipariş yönetimi, stok takibi, pick & pack, kargo etiketleme ve UK teslimat. Online mağaza siparişlerini biz karşılayalım.",
   alternates: { canonical: `${SITE_URL}/e-ticaret-fulfillment` },
   openGraph: {
     title: "İngiltere E-Ticaret Fulfillment | LondraDepo.com",

@@ -12,7 +12,7 @@ const TEL = "tel:+447554195190";
 export const metadata: Metadata = {
   title: "Amazon İçin İngiltere Depo ve Sipariş Karşılama (FBM) | LondraDepo.com",
   description:
-    "Amazon FBM için İngiltere'de depo ve sipariş karşılama. Amazon UK siparişlerinizi Essex depomuzdan karşılayın. FBM ile kendi deponuz olmadan UK'de Amazon satışı yapın.",
+    "Amazon FBM için İngiltere'de depo ve sipariş karşılama. UK siparişlerinizi Essex depomuzdan karşılayın, kendi deponuz olmadan satış yapın.",
   keywords: [
     "ingiltere amazon depo",
     "amazon fbm ingiltere",

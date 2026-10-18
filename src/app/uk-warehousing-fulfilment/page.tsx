@@ -11,7 +11,7 @@ const TEL = "tel:+447554195190";
 export const metadata: Metadata = {
   title: "UK Warehousing & Fulfilment Services | London Storage | LondraDepo",
   description:
-    "UK warehousing, fulfilment and distribution from Essex, near London. Customs clearance coordination, pick & pack, Shopify fulfilment, Amazon fulfilment and UK-wide delivery for businesses selling in the UK.",
+    "UK warehousing, fulfilment and distribution from Essex, near London: customs coordination, pick & pack, Shopify and Amazon fulfilment, UK-wide delivery.",
   keywords: [
     "UK warehousing",
     "London warehousing",

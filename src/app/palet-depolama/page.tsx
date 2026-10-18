@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "İngiltere Palet Depolama | UK Pallet Storage | LondraDepo.com",
   description:
-    "İngiltere'de palet depolama hizmeti. Toptancılar, ithalatçılar ve üreticiler için uygun maliyetli UK pallet storage. Essex merkezli operasyon, haftalık raporlama.",
+    "İngiltere'de palet depolama: toptancı, ithalatçı ve üreticiler için uygun maliyetli UK pallet storage. Essex merkezli operasyon, haftalık raporlama.",
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: "İngiltere Palet Depolama | LondraDepo.com",

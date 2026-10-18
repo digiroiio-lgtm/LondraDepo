@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "İngiltere Depo Avantajları | LondraDepo.com",
   description:
-    "Haftalık uygun maliyetli İngiltere depo çözümleri, Türkiye'den düzenli konteyner organizasyonu, GTIP danışmanlığı, İngiltere pazar uyumu ve fulfillment operasyonları tek noktada.",
+    "Uygun maliyetli haftalık İngiltere depo çözümleri, Türkiye'den düzenli konteyner organizasyonu, GTIP danışmanlığı ve fulfillment tek noktada.",
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: "İngiltere Depo Avantajları | LondraDepo.com",

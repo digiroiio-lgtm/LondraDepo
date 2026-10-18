@@ -12,7 +12,7 @@ const TEL = "tel:+447554195190";
 export const metadata: Metadata = {
   title: "Londra Depo Hizmeti | Londra'ya 40 Dakika Essex Warehouse | LondraDepo.com",
   description:
-    "Londra'ya 40 dakika mesafede Essex depo. M25 çıkışı, Tilbury Limanı'na 30 dakika. Londra merkezli müşterilerinize hızlı gönderim için stratejik konum. Mal kabul, depolama, sipariş karşılama.",
+    "Londra'ya 40 dakika mesafede Essex depo; M25 çıkışı, Tilbury Limanı'na 30 dakika. Mal kabul, depolama ve hızlı sipariş karşılama.",
   keywords: [
     "londra depo",
     "londra depo hizmeti",

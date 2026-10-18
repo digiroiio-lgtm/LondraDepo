@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "İngiltere Fulfillment Hizmeti | Türk Markalar için UK Operasyon | LondraDepo.com",
   description:
-    "Türkiye'den İngiltere'ye ihracat yapan markalar için UK fulfillment hizmeti. Sipariş toplama, paketleme, Amazon, Etsy ve Shopify entegrasyonu. Essex merkezli operasyon.",
+    "Türkiye'den ihracat yapan markalar için UK fulfillment: sipariş toplama, paketleme, Amazon, Etsy ve Shopify entegrasyonu. Essex merkezli operasyon.",
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: "İngiltere Fulfillment Hizmeti | LondraDepo.com",

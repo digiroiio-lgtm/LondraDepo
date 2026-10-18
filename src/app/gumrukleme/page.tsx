@@ -12,7 +12,7 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20UK%20gümrükleme
 export const metadata: Metadata = {
   title: "İngiltere Gümrükleme Desteği | UK İthalat Koordinasyonu | LondraDepo.com",
   description:
-    "İngiltere'ye ithalat için gümrükleme süreci koordinasyonu. UK gümrük belgesi desteği, sevkiyat varış koordinasyonu. Türkiye'den İngiltere'ye ihracat eden işletmeler için.",
+    "İngiltere ithalatı için gümrükleme koordinasyonu: UK gümrük belgesi desteği ve sevkiyat varış koordinasyonu. Türkiye'den ihracat yapan işletmeler için.",
   alternates: { canonical: `${SITE_URL}/gumrukleme` },
   openGraph: {
     title: "İngiltere Gümrükleme Desteği | LondraDepo.com",

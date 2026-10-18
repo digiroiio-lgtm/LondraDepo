@@ -12,7 +12,7 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20elleçleme%20hizm
 export const metadata: Metadata = {
   title: "İngiltere Elleçleme Hizmeti | Yükleme, Boşaltma & Ürün Elleçleme | LondraDepo.com",
   description:
-    "İngiltere'de araç boşaltma, yükleme, palet ve koli elleçleme, ürün sıralama, yeniden paketleme, etiketleme ve sevkiyat hazırlama hizmetleri. Essex merkezli UK elleçleme operasyonu.",
+    "İngiltere'de araç boşaltma, palet ve koli elleçleme, yeniden paketleme, etiketleme ve sevkiyat hazırlama. Essex merkezli UK elleçleme operasyonu.",
   alternates: { canonical: `${SITE_URL}/ellecleme` },
   openGraph: {
     title: "İngiltere Elleçleme Hizmeti | LondraDepo.com",

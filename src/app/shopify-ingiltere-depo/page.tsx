@@ -12,7 +12,7 @@ const TEL = "tel:+447554195190";
 export const metadata: Metadata = {
   title: "Shopify İçin İngiltere Depo ve Sipariş Karşılama | LondraDepo.com",
   description:
-    "Shopify mağazanız için İngiltere'de stok depolama ve sipariş karşılama. UK depomuzda ürünlerinizi saklayın, Shopify siparişleri geldiğinde depo ekibimiz karşılasın.",
+    "Shopify mağazanız için İngiltere'de stok depolama ve sipariş karşılama. Ürünlerinizi UK depomuzda saklayın, siparişleri ekibimiz karşılasın.",
   keywords: [
     "ingiltere shopify depo",
     "shopify sipariş karşılama ingiltere",

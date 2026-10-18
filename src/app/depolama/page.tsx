@@ -12,7 +12,7 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20depolama%20hizmet
 export const metadata: Metadata = {
   title: "İngiltere Depolama Hizmeti | Palet & Koli Depolama, Mintsoft WMS | LondraDepo.com",
   description:
-    "UK depolama hizmetinin teknik detayları: palet ve koli kabulü, Mintsoft WMS ile gerçek zamanlı stok takibi, FCL konteyner boşaltma, kısa ve uzun vadeli depo kapasitesi. Essex, İngiltere.",
+    "UK depolama detayları: palet ve koli kabulü, Mintsoft WMS ile gerçek zamanlı stok takibi, FCL konteyner boşaltma, kısa ve uzun vadeli depo. Essex.",
   alternates: { canonical: `${SITE_URL}/depolama` },
   openGraph: {
     title: "İngiltere Depolama Hizmeti | LondraDepo.com",

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   title:
     "Cruyff UK Fulfillment & Fashion Warehouse Operasyonu | LondraDepo.com",
   description:
-    "Johan Cruyff'a ait Cruyff markasının Hollanda'dan İngiltere fulfillment operasyonuna geçiş süreci. UK warehouse, repackaging, ecommerce fulfillment ve dağıtım operasyonu.",
+    "Cruyff markasının Hollanda'dan İngiltere fulfillment operasyonuna geçişi: UK depo, yeniden paketleme, e-ticaret fulfillment ve dağıtım.",
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title:

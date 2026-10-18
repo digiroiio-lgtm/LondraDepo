@@ -12,7 +12,7 @@ const TEL = "tel:+447554195190";
 export const metadata: Metadata = {
   title: "Türk Şirketleri İçin İngiltere Depo ve Fulfilment | LondraDepo.com",
   description:
-    "Türk şirketleri için İngiltere depo ve fulfilment hizmeti. UK'de şirket kurmadan, kendi deponuzu kurmadan İngiltere'de satış yapın. Türkiye'den İngiltere'ye operasyon çözümü.",
+    "Türk şirketleri için İngiltere depo ve fulfilment: UK'de şirket veya depo kurmadan İngiltere'de satış yapın. Türkiye'den UK'ye operasyon çözümü.",
   keywords: [
     "türk şirketleri için ingiltere depo",
     "türkiye ingiltere depo",

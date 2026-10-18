@@ -12,7 +12,7 @@ const TEL = "tel:+447554195190";
 export const metadata: Metadata = {
   title: "Türkiye'den İngiltere'ye Lojistik | UK Ürün Gönderimi | LondraDepo.com",
   description:
-    "Türkiye'den İngiltere'ye lojistik ve ürün gönderimi. UK gümrük desteği, depolama ve sipariş karşılama. Türkiye'den UK'e ihracat yapan işletmeler için lojistik rehberi.",
+    "Türkiye'den İngiltere'ye lojistik ve ürün gönderimi: UK gümrük desteği, depolama ve sipariş karşılama. İhracat yapan işletmeler için rehber.",
   keywords: [
     "türkiye ingiltere lojistik",
     "türkiyeden ingiltereye ürün gönderme",

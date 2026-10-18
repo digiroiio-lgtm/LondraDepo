@@ -13,7 +13,7 @@ const TEL = "tel:+447554195190";
 export const metadata: Metadata = {
   title: "İngiltere Depo Hizmeti | UK Depolama | LondraDepo.com",
   description:
-    "İngiltere depo hizmeti — Essex merkezli tam operasyon altyapısı. Mal kabul, palet/koli depolama, Mintsoft WMS stok yönetimi, sipariş karşılama, pick & pack ve UK dağıtım. Teklif için WhatsApp'tan yazın.",
+    "Essex merkezli İngiltere depo hizmeti: mal kabul, palet/koli depolama, Mintsoft WMS, sipariş karşılama, pick & pack ve UK dağıtım. Teklif için WhatsApp.",
   keywords: [
     "ingiltere depo",
     "ingiltere depo hizmeti",

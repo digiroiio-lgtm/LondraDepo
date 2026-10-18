@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "Essex Depo Hizmeti | Essex Warehouse UK | LondraDepo.com",
   description:
-    "Essex'te depo hizmeti. Londra yakını Essex depo alanlarımızda ürünlerinizi güvenle depolayın. Türkiye'den İngiltere'ye gelen yükler için Essex warehouse çözümleri.",
+    "Londra yakını Essex'te depo hizmeti. Türkiye'den İngiltere'ye gelen yükler için güvenli depolama ve Essex warehouse çözümleri.",
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: "Essex Depo Hizmeti | LondraDepo.com",

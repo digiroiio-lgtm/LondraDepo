@@ -30,7 +30,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/ellecleme`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${SITE_URL}/nakliye-dagitim`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${SITE_URL}/e-ticaret-fulfillment`, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${SITE_URL}/shopify-fulfillment`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${SITE_URL}/amazon-fulfillment`, changeFrequency: "monthly", priority: 0.9 },
     // Landing sayfaları
     { url: `${SITE_URL}/turkiyeden-ingiltereye-depolama`, changeFrequency: "monthly", priority: 0.9 },

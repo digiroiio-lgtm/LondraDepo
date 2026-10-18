@@ -12,7 +12,7 @@ const TEL = "tel:+447554195190";
 export const metadata: Metadata = {
   title: "İngiltere E-Ticaret Lojistiği | Sipariş Karşılama UK | LondraDepo.com",
   description:
-    "İngiltere e-ticaret lojistiği ve sipariş karşılama hizmeti. Shopify, Amazon ve online mağazanızdan gelen UK siparişleri için depolama, pick & pack ve İngiltere teslimat.",
+    "İngiltere e-ticaret lojistiği: Shopify, Amazon ve online mağaza siparişleri için depolama, pick & pack, sipariş karşılama ve İngiltere teslimat.",
   keywords: [
     "ingiltere e ticaret lojistigi",
     "ingiltere sipariş karşılama",

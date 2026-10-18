@@ -10,7 +10,7 @@ import { SITE_URL } from "@/lib/site";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20elleçleme%20hizmeti%20hakkında%20bilgi%20almak%20istiyorum.";
 
 export const metadata: Metadata = {
-  title: "İngiltere Elleçleme Hizmeti | Yükleme, Boşaltma & Ürün Elleçleme | LondraDepo.com",
+  title: "İngiltere Elleçleme: Yükleme ve Boşaltma | LondraDepo.com",
   description:
     "İngiltere'de araç boşaltma, palet ve koli elleçleme, yeniden paketleme, etiketleme ve sevkiyat hazırlama. Essex merkezli UK elleçleme operasyonu.",
   alternates: { canonical: `${SITE_URL}/ellecleme` },

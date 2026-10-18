@@ -10,7 +10,7 @@ const WHATSAPP = "https://wa.me/447554195190?text=Hello%2C%20I%27d%20like%20to%2
 const TEL = "tel:+447554195190";
 
 export const metadata: Metadata = {
-  title: "UK Warehousing & Fulfilment Services | London Storage | LondraDepo",
+  title: "UK Warehousing & Fulfilment, Essex | LondraDepo",
   description:
     "UK warehousing, fulfilment and distribution from Essex, near London: customs coordination, pick & pack, Shopify and Amazon fulfilment, UK-wide delivery.",
   keywords: [

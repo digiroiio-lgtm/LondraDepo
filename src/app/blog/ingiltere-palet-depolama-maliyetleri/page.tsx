@@ -15,7 +15,7 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20palet%20depolama%
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "İngiltere Palet Depolama Maliyetleri 2026 | UK Pallet Storage | LondraDepo.com",
+  title: "İngiltere Palet Depolama Maliyetleri 2026 | LondraDepo.com",
   description:
     "İngiltere palet depolama maliyetleri 2026: haftalık ve aylık palet depo ücretleri, fiyatı etkileyen faktörler ve bütçe planlaması. UK pallet storage rehberi.",
   alternates: { canonical: PAGE_URL },

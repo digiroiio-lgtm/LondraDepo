@@ -15,7 +15,7 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20depo%20maliyet%20
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "İngiltere Depo Fiyatları 2026 | UK Palet Depolama Maliyeti | LondraDepo.com",
+  title: "İngiltere Depo Fiyatları 2026: Palet Maliyeti | LondraDepo.com",
   description:
     "İngiltere depo fiyatları 2026: palet depolama, fulfillment ve Amazon prep maliyetleri. UK warehouse ücret yapısı ve bütçe planlaması rehberi.",
   alternates: { canonical: PAGE_URL },

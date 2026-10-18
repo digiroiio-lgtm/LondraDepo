@@ -10,7 +10,7 @@ import { SITE_URL } from "@/lib/site";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20depolama%20hizmeti%20hakkında%20bilgi%20almak%20istiyorum.";
 
 export const metadata: Metadata = {
-  title: "İngiltere Depolama Hizmeti | Palet & Koli Depolama, Mintsoft WMS | LondraDepo.com",
+  title: "İngiltere Depolama: Palet, Koli, Mintsoft WMS | LondraDepo.com",
   description:
     "UK depolama detayları: palet ve koli kabulü, Mintsoft WMS ile gerçek zamanlı stok takibi, FCL konteyner boşaltma, kısa ve uzun vadeli depo. Essex.",
   alternates: { canonical: `${SITE_URL}/depolama` },

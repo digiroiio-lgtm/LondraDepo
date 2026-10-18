@@ -14,7 +14,7 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20B2B%20dagitim%20o
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Pizza Kutusu UK Dağıtım | B2B Fulfillment İngiltere | LondraDepo.com",
+  title: "Pizza Kutusu UK Dağıtım | B2B Fulfillment | LondraDepo.com",
   description:
     "Pizza kutusu üreticisinin İngiltere restoranlarına palet bazlı B2B dağıtım operasyonu. Packaging distribution UK, pallet storage UK operasyon örneği.",
   alternates: { canonical: PAGE_URL },

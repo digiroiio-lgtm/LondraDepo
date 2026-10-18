@@ -16,7 +16,7 @@ const WHATSAPP =
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title:
-    "Taşınabilir Şarj İstasyonu İngiltere Operasyon Yönetimi | LondraDepo.com",
+    "Taşınabilir Şarj İstasyonu İngiltere Operasyonu | LondraDepo.com",
   description:
     "Taşınabilir şarj istasyonlarının İngiltere depo altyapısı, teknik hazırlık, SIM kart aktivasyonu, şarj kontrolü ve dağıtım operasyonu.",
   alternates: { canonical: PAGE_URL },

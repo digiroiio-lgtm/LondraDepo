@@ -10,7 +10,7 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20İngiltere%20e-ti
 const TEL = "tel:+447554195190";
 
 export const metadata: Metadata = {
-  title: "İngiltere E-Ticaret Lojistiği | Sipariş Karşılama UK | LondraDepo.com",
+  title: "İngiltere E-Ticaret Lojistiği | LondraDepo.com",
   description:
     "İngiltere e-ticaret lojistiği: Shopify, Amazon ve online mağaza siparişleri için depolama, pick & pack, sipariş karşılama ve İngiltere teslimat.",
   keywords: [

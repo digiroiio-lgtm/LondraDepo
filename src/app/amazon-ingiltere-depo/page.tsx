@@ -10,7 +10,7 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20Amazon%20İngilte
 const TEL = "tel:+447554195190";
 
 export const metadata: Metadata = {
-  title: "Amazon İçin İngiltere Depo ve Sipariş Karşılama (FBM) | LondraDepo.com",
+  title: "Amazon FBM İngiltere Depo ve Sipariş Karşılama | LondraDepo.com",
   description:
     "Amazon FBM için İngiltere'de depo ve sipariş karşılama. UK siparişlerinizi Essex depomuzdan karşılayın, kendi deponuz olmadan satış yapın.",
   keywords: [

@@ -9,7 +9,7 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20Türkiye%27den%20
 const TEL = "tel:+447554195190";
 
 export const metadata: Metadata = {
-  title: "Türkiye'den İngiltere'ye Nasıl Satış Yapılır? 2026 Rehberi | LondraDepo.com",
+  title: "Türkiye'den İngiltere'ye Satış Rehberi 2026 | LondraDepo.com",
   description:
     "Türkiye'den İngiltere'ye satış rehberi 2026: ürün gönderimi, gümrük, depolama, Amazon ve Shopify satışı, pick & pack ve UK lojistik. Adım adım.",
   keywords: [

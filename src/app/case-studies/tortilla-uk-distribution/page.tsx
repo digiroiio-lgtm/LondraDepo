@@ -15,7 +15,7 @@ const WHATSAPP =
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Tortilla Markası İngiltere Depo & Dağıtım Operasyonu | LondraDepo.com",
+  title: "Tortilla Markası İngiltere Depo ve Dağıtım | LondraDepo.com",
   description:
     "Ankara merkezli tortilla ve flatbread üreticisinin İngiltere depo, fulfillment, GTİP, etiketleme ve dağıtım operasyonunun ölçeklenme hikayesi.",
   alternates: { canonical: PAGE_URL },

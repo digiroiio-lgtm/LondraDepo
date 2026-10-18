@@ -10,7 +10,7 @@ import { SITE_URL } from "@/lib/site";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20UK%20gümrükleme%20desteği%20hakkında%20bilgi%20almak%20istiyorum.";
 
 export const metadata: Metadata = {
-  title: "İngiltere Gümrükleme Desteği | UK İthalat Koordinasyonu | LondraDepo.com",
+  title: "İngiltere Gümrükleme Desteği | UK İthalat | LondraDepo.com",
   description:
     "İngiltere ithalatı için gümrükleme koordinasyonu: UK gümrük belgesi desteği ve sevkiyat varış koordinasyonu. Türkiye'den ihracat yapan işletmeler için.",
   alternates: { canonical: `${SITE_URL}/gumrukleme` },

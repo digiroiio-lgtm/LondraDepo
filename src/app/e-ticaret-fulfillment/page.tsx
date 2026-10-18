@@ -9,7 +9,7 @@ import { SITE_URL } from "@/lib/site";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20e-ticaret%20fulfillment%20hizmeti%20hakkında%20bilgi%20almak%20istiyorum.";
 
 export const metadata: Metadata = {
-  title: "İngiltere E-Ticaret Fulfillment | UK Online Sipariş Karşılama | LondraDepo.com",
+  title: "İngiltere E-Ticaret Fulfillment | LondraDepo.com",
   description:
     "İngiltere e-ticaret fulfillment: sipariş yönetimi, stok takibi, pick & pack, kargo etiketleme ve UK teslimat. Online mağaza siparişlerini biz karşılayalım.",
   alternates: { canonical: `${SITE_URL}/e-ticaret-fulfillment` },

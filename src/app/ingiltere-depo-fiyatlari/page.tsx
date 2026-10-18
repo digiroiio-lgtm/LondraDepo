@@ -10,7 +10,7 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20İngiltere%20depo
 const TEL = "tel:+447554195190";
 
 export const metadata: Metadata = {
-  title: "İngiltere Depo Fiyatları 2026 | UK Depolama Maliyeti | LondraDepo.com",
+  title: "İngiltere Depo Fiyatları 2026 | LondraDepo.com",
   description:
     "İngiltere depo fiyatları 2026: depolama, palet depolama, pick & pack, mal kabul, kargo ve sipariş karşılama maliyetleri. Teklif için WhatsApp'tan yazın.",
   keywords: [

@@ -15,7 +15,7 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20ihracat%20operasy
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Türkiye'den İngiltere'ye İhracat Rehberi 2026 | UK Operasyon Altyapısı | LondraDepo.com",
+  title: "Türkiye'den İngiltere'ye İhracat Rehberi 2026 | LondraDepo.com",
   description:
     "Türkiye'den İngiltere'ye ihracat süreçleri, gümrük, GTIP, nakliye ve UK'da operasyon kurma rehberi 2026. Türk ihracatçılar için kapsamlı bilgi kaynağı.",
   alternates: { canonical: PAGE_URL },

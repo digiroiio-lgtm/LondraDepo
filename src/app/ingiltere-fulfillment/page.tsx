@@ -12,7 +12,7 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20fulfillment%20tek
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "İngiltere Fulfillment Hizmeti | Türk Markalar için UK Operasyon | LondraDepo.com",
+  title: "İngiltere Fulfillment | Türk Markalar için UK | LondraDepo.com",
   description:
     "Türkiye'den ihracat yapan markalar için UK fulfillment: sipariş toplama, paketleme, Amazon, Etsy ve Shopify entegrasyonu. Essex merkezli operasyon.",
   alternates: { canonical: PAGE_URL },

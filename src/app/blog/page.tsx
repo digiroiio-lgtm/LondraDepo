@@ -10,7 +10,7 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20depo%20teklifi%20
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "İngiltere Depo & Lojistik Rehberleri | UK İhracat Bilgi Merkezi | LondraDepo.com",
+  title: "İngiltere Depo ve Lojistik Rehberleri | LondraDepo.com",
   description:
     "İngiltere depo fiyatları, UK fulfillment, Amazon prep, palet depolama ve ihracat rehberleri. Türkiye'den İngiltere'ye satış yapanlar için bilgi merkezi.",
   alternates: { canonical: PAGE_URL },

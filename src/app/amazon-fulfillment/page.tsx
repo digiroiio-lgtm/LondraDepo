@@ -10,7 +10,7 @@ import { SITE_URL } from "@/lib/site";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20Amazon%20fulfillment%20hizmeti%20hakkında%20bilgi%20almak%20istiyorum.";
 
 export const metadata: Metadata = {
-  title: "Amazon İngiltere Fulfillment | Amazon UK Stok & Sipariş | LondraDepo.com",
+  title: "Amazon İngiltere Fulfillment | UK Sipariş | LondraDepo.com",
   description:
     "Amazon satıcıları için İngiltere fulfillment: stok depolama, sipariş yönetimi, pick & pack ve UK teslimat. Amazon FBA prep hizmeti de mevcut.",
   alternates: { canonical: `${SITE_URL}/amazon-fulfillment` },

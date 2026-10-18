@@ -10,7 +10,7 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20Londra%20depo%20h
 const TEL = "tel:+447554195190";
 
 export const metadata: Metadata = {
-  title: "Londra Depo Hizmeti | Londra'ya 40 Dakika Essex Warehouse | LondraDepo.com",
+  title: "Londra Depo | Londra'ya 40 Dk Essex Depo | LondraDepo.com",
   description:
     "Londra'ya 40 dakika mesafede Essex depo; M25 çıkışı, Tilbury Limanı'na 30 dakika. Mal kabul, depolama ve hızlı sipariş karşılama.",
   keywords: [

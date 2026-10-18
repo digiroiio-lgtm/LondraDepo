@@ -10,7 +10,7 @@ import { SITE_URL } from "@/lib/site";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20nakliye%20ve%20dağıtım%20hizmeti%20hakkında%20bilgi%20almak%20istiyorum.";
 
 export const metadata: Metadata = {
-  title: "İngiltere Nakliye ve Dağıtım Hizmeti | UK Distribution | LondraDepo.com",
+  title: "İngiltere Nakliye ve Dağıtım | LondraDepo.com",
   description:
     "İngiltere içi nakliye ve dağıtım hizmetleri. Ürün toplama, depo transferleri, yerel dağıtım ve UK geneli teslimat koordinasyonu. Essex merkezli operasyon.",
   alternates: { canonical: `${SITE_URL}/nakliye-dagitim` },

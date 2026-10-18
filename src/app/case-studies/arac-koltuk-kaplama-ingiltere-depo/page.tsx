@@ -16,7 +16,7 @@ const WHATSAPP =
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title:
-    "Araç Koltuk Kaplama & Suni Deri İngiltere Depo Operasyonu | LondraDepo.com",
+    "Araç Koltuk Kaplama İngiltere Depo Operasyonu | LondraDepo.com",
   description:
     "Araç koltuk kaplama ve suni deri malzemelerinin İngiltere depo altyapısı, stok yönetimi, online sipariş fulfillment ve B2B dağıtım operasyonu.",
   alternates: { canonical: PAGE_URL },

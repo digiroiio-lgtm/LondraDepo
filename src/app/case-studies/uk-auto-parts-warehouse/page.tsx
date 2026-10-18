@@ -14,7 +14,7 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20otomotiv%20yedek%
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "OEM Yedek Parça UK Depo | Automotive Fulfillment İngiltere | LondraDepo.com",
+  title: "OEM Yedek Parça UK Depo ve Fulfillment | LondraDepo.com",
   description:
     "Lüks araç OEM ve aftermarket yedek parçalarının İngiltere'de depolanması, stok yönetimi ve UK dağıtım operasyonu. Automotive fulfillment UK operasyon örneği.",
   alternates: { canonical: PAGE_URL },

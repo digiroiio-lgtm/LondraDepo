@@ -21,6 +21,19 @@ const LAST_UPDATED = "27 Eylül 2026";
 export default function CookiePolicyPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Ana Sayfa", item: SITE_URL },
+              { "@type": "ListItem", position: 2, name: "Çerez Politikası", item: PAGE_URL },
+            ],
+          }),
+        }}
+      />
       <Header />
       <main>
         <nav aria-label="breadcrumb" className="bg-slate-50 border-b border-slate-200">

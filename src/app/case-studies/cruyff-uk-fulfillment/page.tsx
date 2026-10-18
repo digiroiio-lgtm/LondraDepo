@@ -16,7 +16,7 @@ const WHATSAPP =
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title:
-    "Cruyff UK Fulfillment & Fashion Warehouse Operasyonu | LondraDepo.com",
+    "Cruyff UK Fulfillment ve Depo Operasyonu | LondraDepo.com",
   description:
     "Cruyff markasının Hollanda'dan İngiltere fulfillment operasyonuna geçişi: UK depo, yeniden paketleme, e-ticaret fulfillment ve dağıtım.",
   alternates: { canonical: PAGE_URL },

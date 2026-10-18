@@ -1,5 +1,6 @@
 import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
+import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
@@ -292,6 +293,11 @@ export default function IngiltereDepoAvantajlariPage() {
         {/* HERO */}
         <section className="bg-gradient-to-br from-[#0b2545] via-[#1e3a5f] to-[#0b2545] text-white py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
+            <nav className="text-sm text-slate-400 mb-6" aria-label="Breadcrumb">
+              <Link href="/" className="hover:text-white transition">Ana Sayfa</Link>
+              <span className="mx-2">/</span>
+              <span className="text-white">İngiltere Depo Avantajları</span>
+            </nav>
             <p className="text-green-400 text-sm font-semibold uppercase tracking-widest mb-4">
               🇬🇧 İngiltere'de Fiziksel Operasyon Gücü Kazanın
             </p>

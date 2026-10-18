@@ -1,5 +1,6 @@
 import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
+import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
@@ -9,7 +10,7 @@ const WHATSAPP = "https://wa.me/447554195190?text=Hello%2C%20I%27d%20like%20to%2
 const TEL = "tel:+447554195190";
 
 export const metadata: Metadata = {
-  title: "UK Warehousing & Fulfilment Services | London Storage | LondraDepo",
+  title: "UK Warehousing & Fulfilment, Essex | LondraDepo",
   description:
     "UK warehousing, fulfilment and distribution from Essex, near London: customs coordination, pick & pack, Shopify and Amazon fulfilment, UK-wide delivery.",
   keywords: [
@@ -151,6 +152,11 @@ export default function UKWarehousingPage() {
         {/* Hero */}
         <section className="bg-gradient-to-br from-[#0b2545] via-[#1e3a5f] to-[#0b2545] text-white py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
+            <nav className="text-sm text-slate-400 mb-6" aria-label="Breadcrumb">
+              <Link href="/" className="hover:text-white transition">Home</Link>
+              <span className="mx-2">/</span>
+              <span className="text-white">UK Warehousing &amp; Fulfilment</span>
+            </nav>
             <p className="text-green-400 text-sm font-semibold uppercase tracking-widest mb-4">
               🇬🇧 UK Warehousing & Fulfilment Partner
             </p>

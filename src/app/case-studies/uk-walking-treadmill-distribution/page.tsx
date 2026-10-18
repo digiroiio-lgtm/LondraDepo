@@ -15,7 +15,7 @@ const WHATSAPP =
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Walking Treadmill İngiltere Depo & Dağıtım Operasyonu | LondraDepo.com",
+  title: "Walking Treadmill İngiltere Depo ve Dağıtım | LondraDepo.com",
   description:
     "Yaşlı ve rehabilitasyon kullanıcılarına yönelik walking treadmill ürünlerinin İngiltere depo, fulfillment ve online satış operasyonu.",
   alternates: { canonical: PAGE_URL },

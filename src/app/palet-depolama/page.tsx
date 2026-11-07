@@ -85,7 +85,7 @@ export default function PaletDepolamaPage() {
         <section className="py-16 px-4 bg-white">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-3xl md:text-4xl font-extrabold text-[#0b2545] mb-4">
-              İngiltere Palet Depolama Hizmeti
+              İngiltere Palet Depolama Hizmeti | Londra ve Essex Palet Deposu
             </h1>
             <p className="text-lg text-slate-600 mb-8 leading-relaxed">
               Türkiye'den İngiltere'ye gelen konteyner yüklerinizin palet bazında güvenli şekilde depolanmasını sağlıyoruz. Essex merkezli UK depolama altyapımız toptancı, ithalatçı ve üretici firmalar için uygun maliyetli çözümler sunuyor.

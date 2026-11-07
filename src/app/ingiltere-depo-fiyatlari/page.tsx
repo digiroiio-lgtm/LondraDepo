@@ -338,6 +338,28 @@ export default function IngiltereDepoFiyatlari() {
           </div>
         </section>
 
+        {/* Cost intent coverage */}
+        <section className="py-16 px-4 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-extrabold text-[#0b2545] mb-5">5, 10 ve 20 Palet İçin Örnek Depolama Hesabı</h2>
+            <p className="text-slate-600 leading-relaxed mb-4">
+              Standart palet başına haftalık £3,50 + KDV başlangıç fiyatıyla dört haftalık
+              yalnızca depolama örneği: 5 palet £70 + KDV, 10 palet £140 + KDV,
+              20 palet £280 + KDV. Bunlar sabit nihai teklif değil, başlangıç fiyatıyla
+              hesaplanan örneklerdir.
+            </p>
+            <p className="text-slate-600 leading-relaxed mb-4">
+              Mal kabul, konteyner boşaltma, elleçleme, yeniden paletleme, etiketleme,
+              pick &amp; pack, iade, kargo, gümrük işlemleri ve ilgili vergiler ayrıca
+              değerlendirilebilir. Toplam maliyet palet ölçüsü, ürün türü, süre ve işlem hacmine bağlıdır.
+            </p>
+            <p className="text-slate-600 leading-relaxed">
+              Karşılaştırılabilir teklif için palet sayısını, ölçüleri, yaklaşık ağırlığı,
+              depolama süresini, aylık sipariş hacmini ve ihtiyaç duyduğunuz ek hizmetleri paylaşın.
+            </p>
+          </div>
+        </section>
+
         {/* FAQ */}
         <section className="py-16 px-4 bg-white">
           <div className="max-w-3xl mx-auto">

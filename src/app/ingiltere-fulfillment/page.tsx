@@ -54,7 +54,7 @@ const jsonLd = {
 const faqs = [
   {
     q: "Shopify ve Amazon siparişlerimi İngiltere'deki tek depodan yönetebilir miyim?",
-    a: "Farklı satış kanallarının siparişleri ortak bir stok operasyonunda ele alınabilir. Entegrasyon, etiketleme ve sevkiyat koşulları kullanılan platforma ve sipariş modeline göre değerlendirilir.",
+    a: "Shopify siparişleri ve Amazon FBM gönderimleri, uygun entegrasyon ve stok yönetimi koşulları sağlandığında aynı depodan hazırlanabilir. Amazon FBA içinse ürün hazırlama, etiketleme ve Amazon deposuna sevkiyat ayrı bir süreçtir. Uygunluk, ürün ve operasyon gereksinimlerine göre teyit edilir.",
   },
   {
     q: "İngiltere fulfillment hizmeti nedir?",

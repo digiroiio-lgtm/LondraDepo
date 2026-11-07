@@ -227,7 +227,7 @@ const advantages = [
           ))}
         </ul>
         <p className="text-slate-500 text-xs">
-          Başlangıç danışmanlığı: 4 saat / £1.000 + KDV'den başlayan paketler
+          Danışmanlık kapsamı ve ücreti ihtiyaca göre özel teklif ile belirlenir.
         </p>
       </>
     ),

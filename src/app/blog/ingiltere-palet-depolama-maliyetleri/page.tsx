@@ -41,7 +41,7 @@ const faqs = [
   },
   {
     "q": "Minimum kaç palet ile çalışabilirsiniz?",
-    "a": "Sabit minimum palet gereksiniimimiz yoktur. 1 paletten başlayarak esnek depolama çözümleri sunuyoruz."
+    "a": "Minimum palet miktarı ve kabul koşulları, ürün ve operasyon ihtiyaçlarına göre teklif aşamasında teyit edilir."
   }
 ];
 

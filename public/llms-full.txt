@@ -54,7 +54,7 @@ Diller: Türkçe ve İngilizce
 - Paketleme materyali: kullanılan malzemeye göre özel teklif
 - Mal kabul, elleçleme, yükleme-boşaltma: sevkiyata özel teklif
 - Amazon prep (etiketleme, polybag vb.): işleme göre özel teklif
-- Türkiye → UK FCL konteyner: ortalama $2,000–$4,000 USD (piyasa bağımlı)
+- Türkiye → İngiltere FCL konteyner taşımacılığı: rota, konteyner tipi, tarih ve ek masraflara göre özel navlun teklifi gerekir; sabit piyasa fiyatı verilmez.
 - Örnek senaryo: 10 standart palet x 4 hafta x £3,50 = £140 + KDV yalnızca depolama başlangıç bedeli; diğer kalemler özel teklif
 Not: Standart palet depolama için haftalık £3,50 + KDV başlangıç fiyatı yayımlanır; diğer operasyonlar için özel teklif hazırlanır.
 
@@ -559,7 +559,7 @@ Yazar: Sertaç Yılmaz | Yayın: Haziran 2025 | Güncelleme: Ocak 2026 | Okuma: 
 - Paketleme materyali: kullanılan malzemeye göre özel teklif
 - Mal kabul, elleçleme, yükleme-boşaltma: sevkiyata özel teklif
 - Amazon prep (etiketleme, polybag): özel teklif
-- TR→UK FCL konteyner nakliye: ortalama $2,000–$4,000 USD
+- TR→UK FCL konteyner nakliye: güncel navlun ve toplam masraflar için sevkiyata özel teklif alınmalıdır.
 
 ### Örnek Aylık Hesap
 200 sipariş/ay, 10 palet:

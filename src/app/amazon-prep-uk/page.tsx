@@ -50,6 +50,10 @@ const jsonLd = {
 
 const faqs = [
   {
+    q: "Amazon FBA prep ücretsiz mi, nasıl fiyatlandırılır?",
+    a: "Hayır. FNSKU etiketleme, ürün kontrolü, polybag, paketleme, koli ve palet hazırlığı gibi işlemler ihtiyaca göre ücretlendirilir. İngiltere piyasasında standart hazırlık için ürün başına yaklaşık £0,30–£0,60 görülebilir; bu tutar LondraDepo fiyat teklifi değildir. LondraDepo kesin ücreti ürün tipi, adet ve işlem kapsamına göre özel teklif ile belirler.",
+  },
+  {
     q: "Amazon FBA prep hizmeti nedir?",
     a: "Amazon FBA prep, ürünlerinizin Amazon UK deposuna kabul edilmesi için gerekli etiketleme, paketleme ve hazırlık süreçlerini kapsar.",
   },

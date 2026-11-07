@@ -217,6 +217,28 @@ export default function ShopifyIngiltereDepo() {
           </div>
         </section>
 
+        {/* Search intent coverage: Shopify volume and fulfillment costs */}
+        <section className="py-16 px-4 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-extrabold text-[#0b2545] mb-5">Shopify İçin 100 veya 200 Siparişlik UK Fulfillment Planı</h2>
+            <p className="text-slate-600 leading-relaxed mb-4">
+              Aylık 100 veya 200 sipariş, tek başına sabit bir fulfillment fiyatı belirlemez.
+              Ürün boyutu, SKU sayısı, ortalama sipariş başına ürün adedi, depolanan palet veya koli miktarı,
+              paketleme ihtiyacı, iade oranı ve teslimat bölgeleri birlikte değerlendirilir.
+            </p>
+            <p className="text-slate-600 leading-relaxed mb-4">
+              Siparişler için stok kabulü, stok görünürlüğü, sipariş aktarımı, pick &amp; pack ve UK içi kargo
+              adımlarını planlarız. Shopify entegrasyonunun otomasyon kapsamı teklif öncesinde doğrulanır;
+              otomatik bağlantı veya belirli teslimat süresi taahhüdü verilmez.
+            </p>
+            <p className="text-slate-600 leading-relaxed">
+              Standart palet depolama haftalık £3,50 + KDV'den başlar; sipariş toplama, paketleme,
+              mal kabul, iade ve kargo ayrıca tekliflendirilir. Hacim bazlı teklif için aylık sipariş adedini,
+              SKU sayısını ve ürün özelliklerini paylaşın.
+            </p>
+          </div>
+        </section>
+
         {/* FAQ */}
         <section className="py-16 px-4 bg-white">
           <div className="max-w-3xl mx-auto">

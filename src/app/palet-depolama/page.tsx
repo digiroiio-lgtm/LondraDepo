@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "İngiltere Palet Depolama | UK Pallet Storage | LondraDepo.com",
   description:
-    "İngiltere'de palet depolama: toptancı, ithalatçı ve üreticiler için uygun maliyetli UK pallet storage. Essex merkezli operasyon, haftalık raporlama.",
+    "İngiltere'de standart palet depolama haftalık £3,50 + KDV'den başlar. Essex merkezli depo; elleçleme, yükleme ve gümrükleme işlemleri duruma göre fiyatlandırılır.",
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: "İngiltere Palet Depolama | LondraDepo.com",
@@ -51,8 +51,12 @@ const jsonLd = {
 
 const faqs = [
   {
+    q: "İngiltere'de 10 palet ürün için nasıl depo teklifi alabilirim?",
+    a: "Palet sayısını, palet ölçülerini ve yaklaşık ağırlıklarını, ürün türünü, depolama süresini, teslimat konumunu ve ihtiyaç duyduğunuz mal kabul veya dağıtım hizmetlerini paylaşarak teklif isteyebilirsiniz. Ücret, operasyon kapsamına göre belirlenir.",
+  },
+  {
     q: "İngiltere palet depolama ücreti nasıl hesaplanır?",
-    a: "Palet depolama ücretlendirmesi palet sayısı ve depolama süresine göre haftalık olarak hesaplanır. Detaylı fiyat için WhatsApp'tan bize ulaşabilirsiniz.",
+    a: "Standart palet depolama başlangıç fiyatımız palet başına haftalık £3,50 + KDV'dir. Palet ölçüsü, ürün özellikleri ve depolama koşullarına göre teklif değişebilir. Elleçleme, yükleme, boşaltma, yeniden paletleme ve gümrükleme ayrıca değerlendirilir.",
   },
   {
     q: "Minimum palet miktarı nedir?",
@@ -88,7 +92,7 @@ export default function PaletDepolamaPage() {
               İngiltere Palet Depolama Hizmeti | Londra ve Essex Palet Deposu
             </h1>
             <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-              Türkiye'den İngiltere'ye gelen konteyner yüklerinizin palet bazında güvenli şekilde depolanmasını sağlıyoruz. Essex merkezli UK depolama altyapımız toptancı, ithalatçı ve üretici firmalar için uygun maliyetli çözümler sunuyor.
+              Standart paletler için haftalık £3,50 + KDV'den başlayan depolama sunuyoruz. Türkiye'den İngiltere'ye gelen konteyner yüklerinizin palet bazında güvenli şekilde depolanmasını sağlıyoruz. Essex merkezli UK depolama altyapımız toptancı, ithalatçı ve üretici firmalar için uygun maliyetli çözümler sunuyor.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
@@ -106,6 +110,41 @@ export default function PaletDepolamaPage() {
                 </div>
               ))}
             </div>
+
+            <section className="mb-12" aria-labelledby="palet-planlama">
+              <h2 id="palet-planlama" className="text-2xl font-extrabold text-[#0b2545] mb-5">
+                Palet Depolama Maliyeti, Kabul Koşulları ve B2B Sevkiyat Planı
+              </h2>
+              <p className="text-slate-600 leading-relaxed mb-4">
+                Standart palet depolama haftalık palet başına £3,50 + KDV'den başlar.
+                Dört haftalık yalnızca depolama örneği olarak 5 palet £70, 10 palet £140
+                ve 20 palet £280 + KDV tutar. Bunlar başlangıç fiyatına dayalı örneklerdir;
+                nihai teklif ürün ve operasyon koşullarına göre belirlenir.
+              </p>
+              <p className="text-slate-600 leading-relaxed mb-4">
+                Palet ölçüleri (Euro palet veya UK palet), yükseklik, ağırlık, ürün türü,
+                istifleme koşulları ve depolama süresi kabul ve fiyatlandırmayı etkileyebilir.
+                Konteyner veya parsiyel yük kabulünde boşaltma, elleçleme, sayım ve yeniden
+                paletleme ihtiyacı sevkiyat öncesinde değerlendirilir.
+              </p>
+              <p className="text-slate-600 leading-relaxed mb-4">
+                Kısa süreli stok tutma, palet hareketlerinin raporlanması ve B2B dağıtıma
+                hazırlık ihtiyaçlarınızı teklif aşamasında belirtin. Dağıtım kapsamı,
+                teslimat adresleri ve taşıma ücretleri ayrıca netleştirilir.
+              </p>
+              <p className="text-slate-600 leading-relaxed">
+                Teklif için palet sayısı, ebatlar, yaklaşık ağırlık, ürün cinsi, tahmini
+                depolama haftası, varış şekli ve sevkiyat sıklığını paylaşın.
+                Mal kabul, yükleme, boşaltma, dağıtım ve gümrükleme temel depolama fiyatına dahil değildir.
+              </p>
+              <p className="text-slate-600 leading-relaxed mt-4">
+                Ayrıntılı maliyet kalemleri için{" "}
+                <Link href="/ingiltere-depo-fiyatlari" className="text-[#0b2545] underline font-semibold">
+                  İngiltere depo fiyatları
+                </Link>{" "}
+                sayfasını inceleyin.
+              </p>
+            </section>
 
             <div className="bg-[#f6f8fb] rounded-2xl p-8 mb-12 text-center">
               <p className="text-[#0b2545] font-semibold text-lg mb-4">

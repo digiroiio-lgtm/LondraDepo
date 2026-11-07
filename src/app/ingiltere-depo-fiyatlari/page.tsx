@@ -12,7 +12,7 @@ const TEL = "tel:+447554195190";
 export const metadata: Metadata = {
   title: "İngiltere Depo Fiyatları 2026 | UK Depolama Maliyeti | LondraDepo.com",
   description:
-    "İngiltere depo fiyatları 2026: depolama, palet depolama, pick & pack, mal kabul, kargo ve sipariş karşılama maliyetleri. Teklif için WhatsApp'tan yazın.",
+    "İngiltere'de standart palet depolama haftalık £3,50 + KDV'den başlar. Elleçleme, yükleme, yeniden paletleme, gümrükleme ve fulfillment için özel teklif alın.",
   keywords: [
     "ingiltere depo fiyatları",
     "uk depo fiyatı",
@@ -176,11 +176,11 @@ const scenarios = [
 const faqs = [
   {
     q: "İngiltere depo fiyatları nasıl hesaplanır?",
-    a: "İngiltere depo fiyatları; depolanan ürün miktarı (palet/koli sayısı), depolama süresi, sipariş hacmi ve ihtiyaç duyulan ek hizmetlere (pick & pack, etiketleme, iade yönetimi) göre belirlenir. Sabit bir liste sunmak yerine her müşteri için özel teklif hazırlıyoruz.",
+    a: "Standart palet depolama başlangıç ücretimiz palet başına haftalık £3,50 + KDV'dir. Palet ölçüsü, stok süresi, ürün türü ve ihtiyaç duyulan elleçleme, yükleme, yeniden paletleme, gümrükleme veya fulfillment hizmetleri toplam teklifi etkiler.",
   },
   {
     q: "Palet depolama İngiltere'de ne kadar?",
-    a: "Palet depolama ücreti; palet sayısı, depolama süresi ve gereken ek hizmetlere göre değişir. Doğru fiyat için palet sayınız, boyutlarınız ve tahmini sürenizle WhatsApp üzerinden bize ulaşın.",
+    a: "Standart palet için başlangıç depolama fiyatı haftalık £3,50 + KDV'dir. Örneğin 10 standart paletin 4 haftalık yalnızca depolama başlangıç bedeli £140 + KDV olur. Ek işlemler ayrıca tekliflendirilir.",
   },
   {
     q: "Pick & pack hizmeti İngiltere'de ne kadar tutar?",
@@ -223,10 +223,9 @@ export default function IngiltereDepoFiyatlari() {
               maliyet kalemlerini öğrenin. Her müşteri için ihtiyaca özel teklif hazırlıyoruz.
             </p>
             <div className="bg-white/10 border border-white/20 rounded-xl p-4 mb-8 text-sm text-slate-300 max-w-2xl">
-              <strong className="text-white">Not:</strong> Fiyatlar; stok miktarı, sipariş hacmi
-              ve ihtiyaç duyulan hizmetlere göre değiştiğinden kamuya açık sabit fiyat listesi
-              yayınlamıyoruz. Aşağıdaki maliyet kalemleri hakkında bilgi alarak WhatsApp veya
-              telefonla özel teklif isteyebilirsiniz.
+              <strong className="text-white">Not:</strong> Standart palet depolama <strong className="text-white">£3,50 + KDV / palet / hafta</strong> başlangıç fiyatıyla sunulur.
+              Elleçleme, indirme-bindirme, yeniden paletleme, yük sıralaması değişikliği,
+              gümrükleme ve diğer operasyonlar sevkiyata göre ayrıca fiyatlandırılır.
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
@@ -336,6 +335,28 @@ export default function IngiltereDepoFiyatlari() {
             >
               WhatsApp ile Teklif İste
             </a>
+          </div>
+        </section>
+
+        {/* Cost intent coverage */}
+        <section className="py-16 px-4 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-extrabold text-[#0b2545] mb-5">5, 10 ve 20 Palet İçin Örnek Depolama Hesabı</h2>
+            <p className="text-slate-600 leading-relaxed mb-4">
+              Standart palet başına haftalık £3,50 + KDV başlangıç fiyatıyla dört haftalık
+              yalnızca depolama örneği: 5 palet £70 + KDV, 10 palet £140 + KDV,
+              20 palet £280 + KDV. Bunlar sabit nihai teklif değil, başlangıç fiyatıyla
+              hesaplanan örneklerdir.
+            </p>
+            <p className="text-slate-600 leading-relaxed mb-4">
+              Mal kabul, konteyner boşaltma, elleçleme, yeniden paletleme, etiketleme,
+              pick &amp; pack, iade, kargo, gümrük işlemleri ve ilgili vergiler ayrıca
+              değerlendirilebilir. Toplam maliyet palet ölçüsü, ürün türü, süre ve işlem hacmine bağlıdır.
+            </p>
+            <p className="text-slate-600 leading-relaxed">
+              Karşılaştırılabilir teklif için palet sayısını, ölçüleri, yaklaşık ağırlığı,
+              depolama süresini, aylık sipariş hacmini ve ihtiyaç duyduğunuz ek hizmetleri paylaşın.
+            </p>
           </div>
         </section>
 

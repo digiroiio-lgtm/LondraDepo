@@ -23,8 +23,8 @@ export default function HeroSection() {
         </p>
 
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight text-balance mb-6">
-          UK Depolama ve{" "}
-          <span className="text-red-400">Fulfillment</span> Hizmeti
+          İngiltere Depo ve{" "}
+          <span className="text-red-400">Fulfillment</span> Hizmetleri
         </h1>
 
         <p className="text-slate-300 text-lg md:text-xl leading-relaxed mb-8 max-w-3xl mx-auto">

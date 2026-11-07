@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     "q": "İngiltere'de 1 palet depolama haftalık maliyeti nedir?",
-    "a": "İngiltere'de standart euro palet (120×80 cm) depolama haftalık ortalama £8–£15 arasındadır. Yüksek yığın, iklim kontrolü veya güvenli depolama gereken ürünlerde bu ücret artabilir."
+    "a": "LondraDepo'da standart palet depolama başlangıç bedeli haftalık £3,50 + KDV / palettir. Bu tutar yalnızca depolama içindir; elleçleme, yükleme, boşaltma, yeniden paletleme ve gümrükleme ayrı tekliflendirilir."
   },
   {
     "q": "Palet depolama fiyatını etkileyen faktörler nelerdir?",
@@ -41,7 +41,7 @@ const faqs = [
   },
   {
     "q": "Minimum kaç palet ile çalışabilirsiniz?",
-    "a": "Sabit minimum palet gereksiniimimiz yoktur. 1 paletten başlayarak esnek depolama çözümleri sunuyoruz."
+    "a": "Minimum palet miktarı ve kabul koşulları, ürün ve operasyon ihtiyaçlarına göre teklif aşamasında teyit edilir."
   }
 ];
 
@@ -116,14 +116,14 @@ export default function PaletDepolamaPage() {
             <div className="article-body">
               <h2>İngiltere&apos;de Palet Depolama Ücreti — 2026</h2>
               <p>
-                İngiltere&apos;de standart euro palet (120×80 cm, maks. 1.000 kg) için haftalık
-                depolama ücreti ortalama <strong>£8–£15</strong> arasındadır. Bu fiyat
-                aşağıdaki koşullar için geçerlidir:
+                LondraDepo&apos;da standart palet için haftalık depolama başlangıç ücreti
+                <strong>£3,50 + KDV / palet</strong> olarak uygulanır. Bu fiyat yalnızca
+                depolama başlangıç bedelidir; özel yükler ve ek operasyonlar ayrıca değerlendirilir:
               </p>
               <ul>
-                <li>Standart boyut ve ağırlık (1×1.2m taban, maks. 1.8m yükseklik)</li>
-                <li>Kuru, ısıtmalı depo</li>
-                <li>Haftalık erişim</li>
+                <li>Standart palet ölçüsü ve uygun yük koşulları (kesin kabul kriterleri teklif aşamasında teyit edilir)</li>
+                <li>Depolama koşulları ürün gereksinimlerine göre teyit edilir</li>
+                <li>Ek elleçleme ve palet hareketleri depolama ücretine dahil değildir</li>
                 <li>Pick&amp;pack dahil değil</li>
               </ul>
 
@@ -147,10 +147,10 @@ export default function PaletDepolamaPage() {
                 10 palet, 4 haftalık depolama senaryosu:
               </p>
               <ul>
-                <li>10 palet × £10/hafta × 4 hafta = <strong>£400 depolama</strong></li>
-                <li>Giriş işlemi: 10 palet × £8 = <strong>£80</strong></li>
+                <li>10 standart palet × £3,50/hafta × 4 hafta = <strong>£140 + KDV depolama başlangıç bedeli</strong></li>
+                <li>Mal kabul, indirme-bindirme ve elleçleme: sevkiyata özel teklif</li>
                 <li>Çıkış pick&amp;pack (sipariş bazlı): ayrıca hesaplanır</li>
-                <li><strong>Toplam depolama alt toplamı: ~£480</strong></li>
+                <li><strong>Yalnızca depolama başlangıç toplamı: £140 + KDV</strong> (ek işlemler hariç)</li>
               </ul>
 
               <h2>Palet Depolama Maliyetini Optimize Etme</h2>

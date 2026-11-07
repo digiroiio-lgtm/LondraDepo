@@ -251,6 +251,29 @@ export default function AmazonIngiltereDepo() {
           </div>
         </section>
 
+        {/* Amazon intent coverage */}
+        <section className="py-16 px-4 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-extrabold text-[#0b2545] mb-5">Amazon UK: FBA Prep ile FBM Sipariş Karşılama Arasındaki Fark</h2>
+            <p className="text-slate-600 leading-relaxed mb-4">
+              FBA modelinde ürünler Amazon'un fulfillment ağına gönderilir. FNSKU etiketleme,
+              ürün paketleme ve sevkiyat hazırlığı gibi prep işlemleri ürünün özelliklerine ve
+              Amazon'un güncel kabul şartlarına göre planlanır. LondraDepo'nun hazırlık kapsamı
+              ve fiyatı ürün bazında ayrıca tekliflendirilir.
+            </p>
+            <p className="text-slate-600 leading-relaxed mb-4">
+              FBM modelinde ise ürünler üçüncü taraf depoda stoklanabilir; sipariş geldiğinde
+              pick &amp; pack ve UK içi sevkiyat süreci yönetilir. Amazon'un teslimat ve satıcı
+              performans şartları geçerliliğini korur; belirli bir sonuç garanti edilmez.
+            </p>
+            <p className="text-slate-600 leading-relaxed">
+              Teklif için SKU ve ürün adedi, ölçüler, etiketleme veya paketleme ihtiyaçları,
+              palet sayısı ve FBA mı FBM mi kullanılacağını paylaşın.
+              FBA prep ücretsiz değildir; depo, hazırlık ve sevkiyat işlemleri ayrı fiyatlandırılır.
+            </p>
+          </div>
+        </section>
+
         {/* FAQ */}
         <section className="py-16 px-4 bg-white">
           <div className="max-w-3xl mx-auto">

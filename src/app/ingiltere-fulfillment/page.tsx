@@ -53,6 +53,10 @@ const jsonLd = {
 
 const faqs = [
   {
+    q: "Shopify ve Amazon siparişlerimi İngiltere'deki tek depodan yönetebilir miyim?",
+    a: "Shopify siparişleri ve Amazon FBM gönderimleri, uygun entegrasyon ve stok yönetimi koşulları sağlandığında aynı depodan hazırlanabilir. Amazon FBA içinse ürün hazırlama, etiketleme ve Amazon deposuna sevkiyat ayrı bir süreçtir. Uygunluk, ürün ve operasyon gereksinimlerine göre teyit edilir.",
+  },
+  {
     q: "İngiltere fulfillment hizmeti nedir?",
     a: "Fulfillment, müşteri siparişlerinin depodan toplanması, paketlenmesi ve gönderilmesi sürecidir. UK depomuzdaki ürünlerinizi stoklar, siparişleri hazırlayarak müşterilerinize gönderiyoruz.",
   },

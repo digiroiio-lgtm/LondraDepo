@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     "q": "İngiltere'de 1 palet depolama maliyeti ne kadardır?",
-    "a": "İngiltere'de standart 1 palet depolama haftalık ortalama £8–£15 arasındadır. Ürün tipi, erişim sıklığı ve stok süresi bu fiyatı etkiler."
+    "a": "LondraDepo standart palet depolama başlangıç fiyatı haftalık £3,50 + KDV / palettir. Elleçleme, yükleme ve gümrükleme gibi ek hizmetler ayrıca tekliflendirilir."
   },
   {
     "q": "İngiltere fulfillment maliyeti nasıl hesaplanır?",
@@ -125,10 +125,10 @@ export default function DepoFiyatlariPage() {
 
               <h2>Palet Depolama Maliyetleri — 2026 Karşılaştırması</h2>
               <p>
-                İngiltere&apos;de standart bir euro palet (120×80 cm) için haftalık depolama
-                ücreti ortalama <strong>£8 – £15</strong> arasındadır. Yüksek değerli ürünler,
-                soğutmalı depolama veya özel raf sistemleri gerektiren kategorilerde bu ücret
-                £20+&apos;ya çıkabilir.
+                LondraDepo&apos;da standart palet depolama başlangıç bedeli haftalık
+                <strong>£3,50 + KDV / palet</strong> olarak sunulur. Özel ürün koşulları,
+                elleçleme, indirme-bindirme, yeniden paletleme ve gümrükleme
+                ayrıca tekliflendirilir.
               </p>
 
               <blockquote>
@@ -142,38 +142,37 @@ export default function DepoFiyatlariPage() {
               </p>
               <ul>
                 <li><strong>Depolama ücreti:</strong> Palet veya metrekare başına haftalık ücret</li>
-                <li><strong>Pick &amp; Pack:</strong> Sipariş başına £1.50–£3.00 (ürün sayısına göre)</li>
-                <li><strong>Paketleme materyali:</strong> Koli, bant, bubble wrap — sipariş başına £0.50–£2.00</li>
+                <li><strong>Pick &amp; Pack:</strong> Sipariş hacmi, ürün sayısı ve işlem gereksinimine göre özel teklif</li>
+                <li><strong>Paketleme materyali:</strong> Kullanılan koli ve ambalaj türüne göre özel teklif</li>
                 <li><strong>Kargo ücreti:</strong> Royal Mail, DPD, DHL gibi UK kargo ağlarına göre değişir</li>
-                <li><strong>Ürün kabulü (inbound):</strong> Palet başına £5–£15 giriş işlem ücreti</li>
+                <li><strong>Ürün kabulü (inbound):</strong> Araç, yük, boşaltma ve elleçleme ihtiyacına göre özel teklif</li>
               </ul>
 
               <h2>Amazon Prep UK Maliyeti</h2>
               <p>
                 Amazon FBA&apos;ye hazırlık gerektiren ürünler için ek prep maliyeti hesaba
                 katılmalıdır. Bu maliyet; etiketleme (labeling), ambalaj güncelleme, polybag
-                ve sipariş başına işlem ücretini kapsar. Genellikle ürün başına
-                <strong> £0.30–£0.80</strong> aralığındadır.
+                ve işlem gereksinimlerini kapsar. Ücret ürün ve hazırlık kapsamına göre
+                özel olarak belirlenir.
               </p>
 
               <h2>Türkiye&apos;den İngiltere&apos;ye Nakliye Maliyeti</h2>
               <p>
-                UK deposuna ürün ulaştırma maliyeti operasyon giderlerinin önemli bir bölümünü
-                oluşturur. Türkiye&apos;den İngiltere&apos;ye 1 FCL konteyner nakliyesi ortalama
-                $2.000–$4.000 USD&apos;dir (piyasa koşullarına göre değişir). LCL gönderimde
-                metreküp başına fiyatlandırma yapılır.
+                UK deposuna ürün ulaştırma maliyeti güzergâh, taşıma modu, yükün özellikleri,
+                gümrükleme ve teslim koşullarına göre değişir. FCL ve LCL gönderimler
+                için sevkiyata özel teklif alınmalıdır.
               </p>
 
               <h2>Toplam UK Operasyon Maliyeti — Örnek Hesap</h2>
               <p>
-                Aylık 200 sipariş, 10 palet stok tutan bir senaryo için tahmini aylık maliyet:
+                10 standart palet ve 4 haftalık depolama için başlangıç hesabı (200 siparişin diğer maliyetleri ayrıca tekliflendirilir):
               </p>
               <ul>
-                <li>10 palet × £10/hafta × 4 hafta = <strong>£400 depolama</strong></li>
-                <li>200 sipariş × £2.50 = <strong>£500 pick&amp;pack</strong></li>
-                <li>200 sipariş × £1.00 = <strong>£200 paketleme materyali</strong></li>
-                <li>Kargo ortalama £4/sipariş × 200 = <strong>£800</strong></li>
-                <li><strong>Toplam: ~£1.900/ay</strong> (kargo dahil)</li>
+                <li>10 palet × £3,50/hafta × 4 hafta = <strong>£140 + KDV depolama başlangıç bedeli</strong></li>
+                <li>200 sipariş için pick&amp;pack: özel teklif</li>
+                <li>200 sipariş için paketleme materyali: özel teklif</li>
+                <li>Kargo: teslimat bölgeleri ve paket özelliklerine göre özel teklif</li>
+                <li><strong>Bilinen başlangıç kalemi: £140 + KDV depolama</strong>; toplam operasyon bedeli ek hizmetlere göre belirlenir.</li>
               </ul>
 
               <h2>Maliyet Optimizasyon Önerileri</h2>

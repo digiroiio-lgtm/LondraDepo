@@ -79,7 +79,7 @@ const jsonLd = {
       offers: {
         "@type": "Offer",
         priceCurrency: "GBP",
-        description: "Haftalık palet bazlı depolama — fiyatlar ürün tipi ve hacme göre talep bazlı belirlenir",
+        description: "Standart palet depolama £3,50 + KDV / hafta başlangıç fiyatıyla; ek operasyonlar özel teklif ile",
       },
     },
   ],
@@ -94,8 +94,8 @@ const advantages = [
     body: (
       <>
         <p className="text-slate-600 text-sm leading-relaxed mb-3">
-          UK piyasasında haftalık palet depolama maliyetleri genellikle{" "}
-          <strong className="text-[#0b2545]">£8–£15</strong> aralığında seyreder.
+          LondraDepo standart palet depolama başlangıç fiyatı haftalık{" "}
+          <strong className="text-[#0b2545]">£3,50 + KDV</strong> / palettir; ek işlemler ayrıca tekliflendirilir.
           LondraDepo fiyatları ürün tipi, hacim ve ihtiyaç duyulan hizmetlere göre talep bazlı belirlenmektedir.
         </p>
         <p className="text-slate-600 text-sm leading-relaxed">
@@ -227,7 +227,7 @@ const advantages = [
           ))}
         </ul>
         <p className="text-slate-500 text-xs">
-          Başlangıç danışmanlığı: 4 saat / £1.000 + KDV'den başlayan paketler
+          Danışmanlık kapsamı ve ücreti ihtiyaca göre özel teklif ile belirlenir.
         </p>
       </>
     ),
@@ -248,7 +248,7 @@ const advantages = [
 const faqs = [
   {
     q: "İngiltere'de depo maliyetleri ne kadar?",
-    a: "UK piyasasında haftalık palet depolama genellikle £8–£15 aralığında seyreder. LondraDepo fiyatları ürün tipi, hacim ve ihtiyaç duyulan hizmetlere göre talep bazlı belirlenmektedir. Detaylı fiyat bilgisi için WhatsApp'tan yazabilirsiniz.",
+    a: "LondraDepo standart palet depolama başlangıç ücreti haftalık £3,50 + KDV / palettir. Elleçleme, indirme-bindirme, yeniden paletleme, gümrükleme ve dağıtım için sevkiyata özel teklif verilir.",
   },
   {
     q: "Türkiye'den İngiltere'ye konteyner organizasyonu sağlıyor musunuz?",

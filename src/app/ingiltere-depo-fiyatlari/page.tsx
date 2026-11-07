@@ -251,7 +251,7 @@ export default function IngiltereDepoFiyatlari() {
         <section className="py-16 px-4 bg-[#f6f8fb]">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-2xl font-extrabold text-[#0b2545] mb-2 text-center">
-              Maliyet Kalemleri
+              İngiltere Depo ve Fulfillment Maliyet Kalemleri
             </h2>
             <p className="text-slate-500 text-center text-sm mb-10">
               Aşağıdaki hizmet kategorileri, fiyat teklifini oluşturan ana kalemlerdir.

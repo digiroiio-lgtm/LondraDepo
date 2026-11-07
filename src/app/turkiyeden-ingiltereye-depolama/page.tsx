@@ -106,6 +106,18 @@ const faqs = [
     a: "UK ithalat gümrükleme sürecinde koordinasyon desteği sağlıyoruz. Detaylar için bizimle iletişime geçin.",
   },
   {
+    q: "UK EORI numarası kimden istenir?",
+    a: "Büyük Britanya'ya ithalat için ilgili ithalatçı tarafın GB EORI numarasına ihtiyacı olabilir. Hangi işletmenin ithalatçı olarak hareket edeceği ve gerekli kayıtlar, sevkiyat yapısı ve gümrük temsilcisiyle önceden doğrulanmalıdır. Depolama hizmeti almak, EORI kaydının otomatik olarak sağlandığı anlamına gelmez.",
+  },
+  {
+    q: "Importer of record (kayıtlı ithalatçı) kim olur?",
+    a: "İthalatçı sorumluluğu satış ve sevkiyat sözleşmelerine, teslim şekline ve gümrük beyanına göre belirlenir. LondraDepo'nun depo veya koordinasyon hizmeti sunması, kendiliğinden importer of record olduğu anlamına gelmez. Tarafların sorumlulukları sevkiyat öncesinde yazılı olarak netleştirilmelidir.",
+  },
+  {
+    q: "İngiltere ithalat KDV'si ve gümrük vergisini kim öder?",
+    a: "İthalat KDV'si, olası gümrük vergileri ve bunların ödeme sorumluluğu ürün sınıflandırması, kıymet, menşe, ithalatçı statüsü ve teslim koşullarına bağlıdır. Depolama ücretine bu vergiler dahil değildir; vergi ve gümrük yükümlülükleri için yetkili danışmandan teyit alınmalıdır.",
+  },
+  {
     q: "Teklif almak için ne bilmem gerekiyor?",
     a: "Ürün türünüz, yaklaşık stok hacminiz (palet veya koli sayısı) ve ihtiyaç duyduğunuz hizmetler (depolama, fulfillment, dağıtım) hakkında bilgi yeterlidir.",
   },
@@ -227,6 +239,27 @@ export default function TurkiyeILandingPage() {
                 ))}
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Import responsibilities: informational, not legal or tax advice */}
+        <section className="py-16 px-4 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-extrabold text-[#0b2545] mb-5">İngiltere İthalatında EORI, İthalatçı ve KDV Sorumluluğu</h2>
+            <p className="text-slate-600 leading-relaxed mb-4">
+              Türkiye'den İngiltere'ye ürün gönderirken depo hizmeti ile ithalatçı sorumluluğunu ayrı değerlendirin.
+              GB EORI kaydı, gümrük beyanındaki ithalatçı, teslim şekli ve vergi yükümlülükleri sevkiyat öncesinde netleşmelidir.
+            </p>
+            <p className="text-slate-600 leading-relaxed mb-4">
+              LondraDepo depolama ve gümrükleme sürecinde koordinasyon desteği sunabilir; bu hizmet,
+              LondraDepo'nun otomatik olarak importer of record olduğu veya ithalat KDV'si ve gümrük vergilerini üstlendiği anlamına gelmez.
+              Vergiler ve gümrük işlemleri depolama başlangıç fiyatından ayrı değerlendirilir.
+            </p>
+            <p className="text-slate-600 leading-relaxed">
+              Teklif isterken ürün türünü, yaklaşık palet veya koli sayısını, gönderici ve ithalatçı bilgilerini ve teslim şeklini paylaşın.
+              Güncel resmi kurallar için <a className="underline text-[#0b2545]" href="https://www.gov.uk/eori" target="_blank" rel="noopener noreferrer">GOV.UK EORI rehberini</a> inceleyin;
+              ithalat vergileri ve sorumlulukları için gümrük müşavirinizden veya vergi danışmanınızdan teyit alın.
+            </p>
           </div>
         </section>
 

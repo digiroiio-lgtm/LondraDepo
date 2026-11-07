@@ -23,7 +23,7 @@ export default function Home() {
       <main>
         <HeroSection />
         <section aria-labelledby="key-pages-heading" className="mx-auto max-w-6xl px-4 py-10">
-          <h2 id="key-pages-heading" className="mb-5 text-2xl font-bold text-[#0b2545]">LondraDepo hizmetleri ve kurumsal bilgiler</h2>
+          <h2 id="key-pages-heading" className="mb-5 text-2xl font-bold text-[#0b2545]">İngiltere Depo, Fulfillment ve Lojistik Çözümlerimiz</h2>
           <nav aria-label="Önemli sayfalar" className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {[
               { href: "/ingiltere-depo", label: "İngiltere Depo" },

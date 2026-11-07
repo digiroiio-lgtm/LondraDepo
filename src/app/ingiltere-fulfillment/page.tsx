@@ -87,7 +87,7 @@ export default function FulfillmentPage() {
         <section className="py-16 px-4 bg-white">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-3xl md:text-4xl font-extrabold text-[#0b2545] mb-4">
-              İngiltere Fulfillment Hizmeti
+              İngiltere Fulfillment Hizmeti | E-Ticaret Depolama, Paketleme ve Kargo
             </h1>
             <p className="text-lg text-slate-600 mb-8 leading-relaxed">
               Türkiye'den İngiltere'ye gelen ürünlerinizin sipariş bazında hazırlanması, paketlenmesi ve müşterilerinize ulaştırılması süreçlerini Essex merkezli UK operasyonumuzdan yönetiyoruz.

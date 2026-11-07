@@ -52,7 +52,7 @@ const jsonLd = {
 const faqs = [
   {
     q: "İngiltere'de 10 palet ürün için nasıl depo teklifi alabilirim?",
-    a: "Palet sayısını, ölçülerini, ürün türünü, tahmini depolama süresini ve teslimat planını paylaşarak teklif isteyebilirsiniz. Mal kabul ve dağıtım gibi ek hizmetler ayrıca değerlendirilir.",
+    a: "Palet sayısını, palet ölçülerini ve yaklaşık ağırlıklarını, ürün türünü, depolama süresini, teslimat konumunu ve ihtiyaç duyduğunuz mal kabul veya dağıtım hizmetlerini paylaşarak teklif isteyebilirsiniz. Ücret, operasyon kapsamına göre belirlenir.",
   },
   {
     q: "İngiltere palet depolama ücreti nasıl hesaplanır?",

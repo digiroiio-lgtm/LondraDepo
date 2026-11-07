@@ -111,6 +111,41 @@ export default function PaletDepolamaPage() {
               ))}
             </div>
 
+            <section className="mb-12" aria-labelledby="palet-planlama">
+              <h2 id="palet-planlama" className="text-2xl font-extrabold text-[#0b2545] mb-5">
+                Palet Depolama Maliyeti, Kabul Koşulları ve B2B Sevkiyat Planı
+              </h2>
+              <p className="text-slate-600 leading-relaxed mb-4">
+                Standart palet depolama haftalık palet başına £3,50 + KDV'den başlar.
+                Dört haftalık yalnızca depolama örneği olarak 5 palet £70, 10 palet £140
+                ve 20 palet £280 + KDV tutar. Bunlar başlangıç fiyatına dayalı örneklerdir;
+                nihai teklif ürün ve operasyon koşullarına göre belirlenir.
+              </p>
+              <p className="text-slate-600 leading-relaxed mb-4">
+                Palet ölçüleri (Euro palet veya UK palet), yükseklik, ağırlık, ürün türü,
+                istifleme koşulları ve depolama süresi kabul ve fiyatlandırmayı etkileyebilir.
+                Konteyner veya parsiyel yük kabulünde boşaltma, elleçleme, sayım ve yeniden
+                paletleme ihtiyacı sevkiyat öncesinde değerlendirilir.
+              </p>
+              <p className="text-slate-600 leading-relaxed mb-4">
+                Kısa süreli stok tutma, palet hareketlerinin raporlanması ve B2B dağıtıma
+                hazırlık ihtiyaçlarınızı teklif aşamasında belirtin. Dağıtım kapsamı,
+                teslimat adresleri ve taşıma ücretleri ayrıca netleştirilir.
+              </p>
+              <p className="text-slate-600 leading-relaxed">
+                Teklif için palet sayısı, ebatlar, yaklaşık ağırlık, ürün cinsi, tahmini
+                depolama haftası, varış şekli ve sevkiyat sıklığını paylaşın.
+                Mal kabul, yükleme, boşaltma, dağıtım ve gümrükleme temel depolama fiyatına dahil değildir.
+              </p>
+              <p className="text-slate-600 leading-relaxed mt-4">
+                Ayrıntılı maliyet kalemleri için{" "}
+                <Link href="/ingiltere-depo-fiyatlari" className="text-[#0b2545] underline font-semibold">
+                  İngiltere depo fiyatları
+                </Link>{" "}
+                sayfasını inceleyin.
+              </p>
+            </section>
+
             <div className="bg-[#f6f8fb] rounded-2xl p-8 mb-12 text-center">
               <p className="text-[#0b2545] font-semibold text-lg mb-4">
                 Palet depolama kapasitesi ve fiyat için hemen yazın

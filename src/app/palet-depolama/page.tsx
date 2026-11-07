@@ -51,6 +51,10 @@ const jsonLd = {
 
 const faqs = [
   {
+    q: "İngiltere'de 10 palet ürün için nasıl depo teklifi alabilirim?",
+    a: "Palet sayısını, ölçülerini, ürün türünü, tahmini depolama süresini ve teslimat planını paylaşarak teklif isteyebilirsiniz. Mal kabul ve dağıtım gibi ek hizmetler ayrıca değerlendirilir.",
+  },
+  {
     q: "İngiltere palet depolama ücreti nasıl hesaplanır?",
     a: "Palet depolama ücretlendirmesi palet sayısı ve depolama süresine göre haftalık olarak hesaplanır. Detaylı fiyat için WhatsApp'tan bize ulaşabilirsiniz.",
   },

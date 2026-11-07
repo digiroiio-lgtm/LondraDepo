@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "İngiltere Palet Depolama | UK Pallet Storage | LondraDepo.com",
   description:
-    "İngiltere'de palet depolama: toptancı, ithalatçı ve üreticiler için uygun maliyetli UK pallet storage. Essex merkezli operasyon, haftalık raporlama.",
+    "İngiltere'de standart palet depolama haftalık £3,50 + KDV'den başlar. Essex merkezli depo; elleçleme, yükleme ve gümrükleme işlemleri duruma göre fiyatlandırılır.",
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: "İngiltere Palet Depolama | LondraDepo.com",
@@ -56,7 +56,7 @@ const faqs = [
   },
   {
     q: "İngiltere palet depolama ücreti nasıl hesaplanır?",
-    a: "Palet depolama ücretlendirmesi palet sayısı ve depolama süresine göre haftalık olarak hesaplanır. Detaylı fiyat için WhatsApp'tan bize ulaşabilirsiniz.",
+    a: "Standart palet depolama başlangıç fiyatımız palet başına haftalık £3,50 + KDV'dir. Palet ölçüsü, ürün özellikleri ve depolama koşullarına göre teklif değişebilir. Elleçleme, yükleme, boşaltma, yeniden paletleme ve gümrükleme ayrıca değerlendirilir.",
   },
   {
     q: "Minimum palet miktarı nedir?",
@@ -92,7 +92,7 @@ export default function PaletDepolamaPage() {
               İngiltere Palet Depolama Hizmeti | Londra ve Essex Palet Deposu
             </h1>
             <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-              Türkiye'den İngiltere'ye gelen konteyner yüklerinizin palet bazında güvenli şekilde depolanmasını sağlıyoruz. Essex merkezli UK depolama altyapımız toptancı, ithalatçı ve üretici firmalar için uygun maliyetli çözümler sunuyor.
+              Standart paletler için haftalık £3,50 + KDV'den başlayan depolama sunuyoruz. Türkiye'den İngiltere'ye gelen konteyner yüklerinizin palet bazında güvenli şekilde depolanmasını sağlıyoruz. Essex merkezli UK depolama altyapımız toptancı, ithalatçı ve üretici firmalar için uygun maliyetli çözümler sunuyor.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">

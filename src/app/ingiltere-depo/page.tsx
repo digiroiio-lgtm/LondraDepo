@@ -93,7 +93,7 @@ const faqs = [
   },
   {
     q: "İngiltere depo fiyatlarınız nedir?",
-    a: "Fiyatlar ürün türü, hacim, stok miktarı ve ihtiyaç duyulan hizmetlere göre değişmektedir. WhatsApp üzerinden bizimle iletişime geçin, size özel teklif hazırlayalım.",
+    a: "Standart palet depolama haftalık palet başına £3,50 + KDV'den başlar. Elleçleme, yükleme-boşaltma, yeniden paletleme, gümrükleme ve dağıtım hizmetleri operasyon kapsamına göre ayrıca tekliflendirilir.",
   },
   {
     q: "Sadece depolama mı yapıyorsunuz yoksa sipariş karşılama da var mı?",

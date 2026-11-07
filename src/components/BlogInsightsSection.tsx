@@ -39,7 +39,7 @@ const caseStudy = {
 };
 
 const faq = [
-  { q: "İngiltere'de depo maliyeti ne kadardır?", a: "Palet başına haftalık £8–£15 arasında değişir. Ürün tipi ve ek hizmetler fiyatı etkiler." },
+  { q: "İngiltere'de depo maliyeti ne kadardır?", a: "LondraDepo'da standart palet depolama haftalık £3,50 + KDV'den başlar. Elleçleme ve diğer operasyonlar ayrıca tekliflendirilir." },
   { q: "Türkçe operasyon desteği var mı?", a: "Evet. Tüm operasyon sürecini Türkçe yönetiyoruz." },
 ];
 

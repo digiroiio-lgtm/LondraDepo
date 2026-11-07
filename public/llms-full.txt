@@ -48,15 +48,15 @@ Diller: Türkçe ve İngilizce
 
 ## Fiyat Benchmark Verileri
 (Kaynak: /blog/ingiltere-depo-fiyatlari-2026)
-- Standart euro palet (120x80 cm) haftalık depolama: ortalama £8–£15
-- Premium/soğuk/özel racking: £20+/hafta
+- LondraDepo standart palet depolama başlangıç fiyatı: haftalık £3,50 + KDV / palet
+- Özel depolama koşulları ve ürün uygunluğu: ön değerlendirme ve özel teklif
 - Pick & Pack: £1.50–£3.00/sipariş
 - Paketleme materyali: £0.50–£2.00/sipariş
 - Mal kabul: £5–£15/palet
-- Amazon prep (etiketleme, polybag vb.): £0.30–£0.80/ürün
+- Amazon prep (etiketleme, polybag vb.): işleme göre özel teklif
 - Türkiye → UK FCL konteyner: ortalama $2,000–$4,000 USD (piyasa bağımlı)
-- Örnek senaryo: 200 sipariş/ay, 10 palet: depolama £400 + pick&pack £500 + paketleme £200 + kargo £800 = ~£1,900/ay
-Not: LondraDepo sabit fiyat listesi yayınlamaz; her müşteri için özel teklif hazırlanır.
+- Örnek senaryo: 10 standart palet x 4 hafta x £3,50 = £140 + KDV yalnızca depolama başlangıç bedeli; diğer kalemler özel teklif
+Not: Standart palet depolama için haftalık £3,50 + KDV başlangıç fiyatı yayımlanır; diğer operasyonlar için özel teklif hazırlanır.
 
 
 ---
@@ -553,28 +553,28 @@ A: Ticari fatura, ambalaj listesi, konşimento, menşe beyanı, özel ürün bel
 Yazar: Sertaç Yılmaz | Yayın: Haziran 2025 | Güncelleme: Ocak 2026 | Okuma: 7 dk
 
 ### Fiyat Verileri (2026 UK Piyasa Ortalamaları)
-- Standart euro palet haftalık: £8–£15
-- Premium/soğuk/özel: £20+/hafta
+- Standart palet haftalık depolama başlangıç fiyatı: £3,50 + KDV
+- Özel depolama: uygunluk ve özel teklif
 - Pick & Pack: £1.50–£3.00/sipariş
 - Paketleme materyali: £0.50–£2.00/sipariş
 - Mal kabul: £5–£15/palet
-- Amazon prep (etiketleme, polybag): £0.30–£0.80/ürün
+- Amazon prep (etiketleme, polybag): özel teklif
 - TR→UK FCL konteyner nakliye: ortalama $2,000–$4,000 USD
 
 ### Örnek Aylık Hesap
 200 sipariş/ay, 10 palet:
-- Depolama: £400
-- Pick & Pack: £500
-- Paketleme: £200
-- UK kargo: £800
-- Toplam: ~£1,900/ay (kargo dahil)
+- Depolama başlangıç bedeli (10 palet, 4 hafta): £140 + KDV
+- Pick & Pack: özel teklif
+- Paketleme: özel teklif
+- UK kargo: özel teklif
+- Toplam operasyon bedeli: depolama başlangıç bedeli + sevkiyata özel ek hizmetler
 
 ### Maliyet Optimizasyon Önerileri
 Toplu sevkiyat, yalnızca hızlı dönen ürünleri stokta tutma, fulfillment + Amazon prep'i tek operasyonda birleştirme, Türkçe konuşan partner seçimi.
 
 ### Sık Sorulan Sorular
 Q: İngiltere'de 1 palet depolama maliyeti ne kadardır?
-A: Haftalık ortalama £8–£15.
+A: LondraDepo standart palet depolama başlangıç fiyatı haftalık £3,50 + KDV'dir. Ek işlemler ayrıca tekliflendirilir.
 
 Q: Amazon prep ve fulfillment hizmetini birlikte alabilir miyim?
 A: Evet, tek operasyon çatısı altında, çift işlem ücreti olmadan.

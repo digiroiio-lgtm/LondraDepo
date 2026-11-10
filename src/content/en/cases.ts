@@ -97,7 +97,7 @@ export const casePages: EnPage[] = [
       { q: "Can you set up regular deliveries to restaurants?", a: "Yes. We build weekly or monthly delivery programmes based on the customer list and frequency." },
       { q: "Do you store palletised packaging products?", a: "Yes. Bulky products such as pizza boxes and packaging materials are stored by the pallet, tracked in stock and prepared per order for distribution." },
     ],
-    related: ["/en/pallet-storage", "/en/uk-distribution", "/en/case-studies/tortilla-uk-distribution"],
+    related: ["/en/industries/food-packaging", "/en/pallet-storage", "/en/uk-distribution", "/en/case-studies/tortilla-uk-distribution"],
   },
   {
     slug: "/en/case-studies/tortilla-uk-distribution",
@@ -140,7 +140,7 @@ export const casePages: EnPage[] = [
       { q: "Do you help with UK food labelling?", a: "Yes. We provide guidance and operational support on UK labelling requirements. Legal compliance of the label remains the producer's responsibility." },
       { q: "Do you help with commodity code classification?", a: "Yes. We offer guidance on placing products in the correct commodity code, which is the basis of the UK import operation. The final classification is the importer's responsibility." },
     ],
-    related: ["/en/pallet-storage", "/en/uk-warehousing-benefits", "/en/case-studies/pizza-box-distribution-uk"],
+    related: ["/en/uk-market-entry", "/en/container-unloading", "/en/pallet-storage", "/en/case-studies/pizza-box-distribution-uk"],
   },
   {
     slug: "/en/case-studies/uk-auto-parts-warehouse",
@@ -309,6 +309,6 @@ export const caseHub: EnPage = {
       items: casePages.map((p) => ({ href: p.slug, title: p.h1, text: p.description, tag: p.article?.section })),
     },
   ],
-  related: ["/en/uk-fulfilment", "/en/pallet-storage", "/en/amazon-prep-uk", "/en/uk-warehousing-benefits"],
+  related: ["/en/uk-market-entry", "/en/uk-import-logistics", "/en/uk-fulfilment", "/en/pallet-storage", "/en/amazon-prep-uk"],
   cta: { h2: "Setting up a UK operation?", text: "Share your operating model and we will plan the UK warehouse and logistics with you." },
 };

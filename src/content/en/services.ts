@@ -63,7 +63,7 @@ export const servicePages: EnPage[] = [
       { q: "What are your UK warehouse prices?", a: "Standard pallet storage starts from £3.50 + VAT per pallet per week. Handling, loading and unloading, re-palletising, customs coordination and distribution are quoted according to the scope of the operation." },
       { q: "Do you only store goods, or fulfil orders too?", a: "Both. We offer storage and full order fulfilment: when an order arrives we pick, pack, label and dispatch it to your UK customer." },
     ],
-    related: ["/en/storage-services", "/en/pallet-storage", "/en/uk-customs-clearance", "/en/ecommerce-fulfilment", "/en/essex-warehouse", "/en/uk-warehousing-pricing"],
+    related: ["/en/storage-services", "/en/pallet-storage", "/en/container-unloading", "/en/uk-import-logistics", "/en/ecommerce-fulfilment", "/en/essex-warehouse", "/en/uk-warehousing-pricing"],
     cta: { h2: "Sell in the UK without your own warehouse", text: "Use our ready-made warehouse and team, and focus on sales." },
   },
   {
@@ -387,7 +387,7 @@ export const servicePages: EnPage[] = [
       { q: "What is the minimum number of pallets?", a: "There is no fixed minimum. We work with everyone from small businesses to large-volume importers." },
       { q: "How are pallets kept secure?", a: "The warehouse is locked with controlled access. Every pallet is numbered and tracked in the stock system." },
     ],
-    related: ["/en/uk-warehousing-pricing", "/en/blog/uk-pallet-storage-costs", "/en/uk-fulfilment", "/en/essex-warehouse"],
+    related: ["/en/uk-warehousing-pricing", "/en/container-unloading", "/en/blog/uk-pallet-storage-costs", "/en/uk-fulfilment", "/en/essex-warehouse"],
   },
   {
     slug: "/en/amazon-prep-uk",
@@ -502,7 +502,7 @@ export const servicePages: EnPage[] = [
       { q: "Is LondraDepo a bonded or customs warehouse?", a: "No. LondraDepo is not an HMRC-authorised customs warehouse. Goods are stored after they have been cleared for free circulation in the UK." },
       { q: "How are goods received after customs?", a: "Once clearance is complete, your goods are delivered to our warehouse address, counted and booked into the warehouse system." },
     ],
-    related: ["/en/uk-warehousing", "/en/uk-warehousing-benefits", "/en/essex-warehouse"],
+    related: ["/en/uk-import-logistics", "/en/container-unloading", "/en/uk-warehousing", "/en/essex-warehouse"],
   },
   {
     slug: "/en/cargo-handling",
@@ -539,7 +539,7 @@ export const servicePages: EnPage[] = [
       { q: "Do you support handling for Amazon or Shopify orders?", a: "Yes. We carry out product preparation, labelling and shipment preparation for ecommerce platforms alongside our fulfilment operation." },
       { q: "How is handling priced?", a: "Pricing depends on the type of task, the volume of goods and the scope of the service. Contact us on WhatsApp for a quote for your operation." },
     ],
-    related: ["/en/uk-warehousing", "/en/pallet-storage", "/en/uk-distribution"],
+    related: ["/en/container-unloading", "/en/uk-warehousing", "/en/pallet-storage", "/en/uk-distribution"],
   },
   {
     slug: "/en/uk-distribution",
@@ -682,6 +682,6 @@ export const servicePages: EnPage[] = [
         ],
       },
     ],
-    related: ["/en/pallet-storage", "/en/uk-fulfilment", "/en/amazon-prep-uk", "/en/london-warehousing"],
+    related: ["/en/container-unloading", "/en/uk-import-logistics", "/en/pallet-storage", "/en/uk-fulfilment", "/en/amazon-prep-uk", "/en/london-warehousing"],
   },
 ];

@@ -9,6 +9,7 @@ const TEL = "tel:+447554195190";
 
 const navLinks = [
   { href: "/en/uk-warehousing", label: "Warehousing" },
+  { href: "/en/uk-import-logistics", label: "Import" },
   { href: "/en/london-warehousing", label: "London" },
   { href: "/en/uk-warehousing-pricing", label: "Pricing" },
   { href: "/en/ecommerce-fulfilment", label: "Fulfilment" },

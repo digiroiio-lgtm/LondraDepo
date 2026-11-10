@@ -47,7 +47,9 @@ const faqs = [
   {
     "q": "İngiltere'ye ihracat için hangi belgeler gereklidir?",
     "a": "Ticari fatura, ambalaj listesi, konşimento, menşe beyanı (declaration of origin — UK-Türkiye STA kapsamında tercihli tarife uygulaması için) ve varsa özel ürün belgeleri (CE, gıda analizi vb.) gereklidir."
-  }
+  },
+  { q: "İhracat kontrol listesini nereden indirebilirim?", a: "Bu sayfada iki sayfalık yazdırılabilir İngiltere İthalat Kontrol Listesi (PDF) var. Adınızı ve e-postanızı bırakın, indirme linki hemen açılır." },
+  { q: "LondraDepo ihracatın tamamını yönetebilir mi?", a: "Evet. LondraDepo'yu işleten Arca Trade Group Türkiye–İngiltere hattında nakliye ve UK gümrüklemesini yapar; LondraDepo ürünleri Essex'te teslim alır, depolar ve siparişleri gönderir. Kendi nakliyecinizle de çalışabilirsiniz." },
 ];
 
 const jsonLd = {

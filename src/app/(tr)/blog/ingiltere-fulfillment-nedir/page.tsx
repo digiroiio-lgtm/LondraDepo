@@ -1,3 +1,4 @@
+import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -58,26 +59,6 @@ const jsonLd = {
       image: { "@type": "ImageObject", url: `${SITE_URL}/logo.svg`, width: 640, height: 160 },
       inLanguage: "tr-TR",
     },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "İngiltere fulfillment hizmeti nedir?",
-          acceptedAnswer: { "@type": "Answer", text: "Fulfillment, müşteri siparişlerinin depodan toplanması, paketlenmesi ve gönderilmesi sürecidir. UK depomuzdaki ürünlerinizi stoklar, siparişleri hazırlayarak müşterilerinize gönderiyoruz." },
-        },
-        {
-          "@type": "Question",
-          name: "Amazon FBA için UK fulfillment desteği veriyor musunuz?",
-          acceptedAnswer: { "@type": "Answer", text: "Evet. Amazon prep hizmetimiz kapsamında ürünlerinizi FBA uyumlu hale getiriyor, etiketliyor ve Amazon deposuna sevk ediyoruz." },
-        },
-        {
-          "@type": "Question",
-          name: "Shopify ve Etsy siparişlerini de karşılıyor musunuz?",
-          acceptedAnswer: { "@type": "Answer", text: "Evet. Shopify, Etsy ve diğer e-ticaret platformlarından gelen siparişleri operasyon sürecimize dahil ediyoruz." },
-        },
-      ],
-    },
   ],
 };
 
@@ -88,11 +69,21 @@ const relatedArticles = [
   { href: "/blog/amazon-prep-uk-rehberi", title: "Amazon Prep UK Rehberi", category: "Amazon", readTime: "7 dk", categoryColor: "bg-amber-50 text-amber-700" },
 ];
 
+
+const faqs = [
+  { q: "Fulfillment nedir, basitçe nasıl çalışır?", a: "Fulfillment, bir siparişin alınmasından müşteriye teslimine kadar olan depo sürecidir: stok tutulur, sipariş gelince ürün raftan toplanır, paketlenir, etiketlenir ve kargoya verilir; iadeler de geri alınıp kontrol edilir." },
+  { q: "Fulfillment ile depolama arasındaki fark nedir?", a: "Depolama stoğun teslim alınıp saklanmasıdır. Fulfillment buna müşteri sipariş verdiğinde olanları ekler: toplama, paketleme, etiketleme, sevk ve iade. LondraDepo ikisini de aynı Essex deposundan yapar." },
+  { q: "3PL fulfillment kimler için uygun?", a: "3PL fulfillment, İngiltere'de kendi deposu olmayan ve siparişlerini UK'den göndermek isteyen markalar için uygundur; özellikle Türk ihracatçılar kendi depo ve personel yatırımı yapmadan UK müşterilerine yurt içi teslimat sunabilir." },
+  { q: "Amazon ve Shopify siparişleri aynı depodan karşılanabilir mi?", a: "Evet. Aynı UK stoğu Shopify ve diğer online mağaza siparişlerine, Amazon FBM siparişlerine ve Amazon FBA'ya gidecek hazırlanmış partilere hizmet verebilir; her kanal için ayrı stok gerekmez." },
+  { q: "İngiltere'de fulfillment maliyeti nasıl oluşur?", a: "Maliyet depolama, mal kabul, sipariş başına pick & pack, ambalaj, kargo ve iade kalemlerinden oluşur. LondraDepo'da depolama haftalık palet başına £3,50 + KDV'den başlar; diğer kalemler sipariş yapınıza göre tekliflendirilir." },
+];
+
 export default function FulfillmentNedirPage() {
   return (
     <>
       <Header />
       <main>
+        <FaqJsonLd faqs={faqs} />
         <nav aria-label="breadcrumb" className="bg-slate-50 border-b border-slate-200">
           <div className="max-w-6xl mx-auto px-4 py-2 text-sm text-slate-500 flex flex-wrap gap-2">
             <Link href="/" className="hover:text-[#0b2545] transition">Ana Sayfa</Link>
@@ -173,25 +164,12 @@ export default function FulfillmentNedirPage() {
               <ArticleSources path="/blog/ingiltere-fulfillment-nedir" />
 
               <h2>Sık Sorulan Sorular</h2>
-
-              <h3>İngiltere fulfillment hizmeti nedir?</h3>
-              <p>
-                Fulfillment, müşteri siparişlerinin depodan toplanması, paketlenmesi
-                ve gönderilmesi sürecidir. UK depomuzdaki ürünlerinizi stoklar,
-                siparişleri hazırlayarak müşterilerinize gönderiyoruz.
-              </p>
-
-              <h3>Amazon FBA için UK fulfillment desteği veriyor musunuz?</h3>
-              <p>
-                Evet. Amazon prep hizmetimiz kapsamında ürünlerinizi FBA uyumlu hale
-                getiriyor, etiketliyor ve Amazon deposuna sevk ediyoruz.
-              </p>
-
-              <h3>Shopify ve Etsy siparişlerini de karşılıyor musunuz?</h3>
-              <p>
-                Evet. Shopify, Etsy ve diğer e-ticaret platformlarından gelen
-                siparişleri operasyon sürecimize dahil ediyoruz.
-              </p>
+              {faqs.map((f) => (
+                <div key={f.q}>
+                  <h3>{f.q}</h3>
+                  <p>{f.a}</p>
+                </div>
+              ))}
             </div>
 
             <div className="bg-[#0b2545] text-white rounded-2xl p-8 my-10 text-center">

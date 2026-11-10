@@ -46,7 +46,9 @@ const faqs = [
   {
     "q": "Minimum kaç palet ile çalışabilirsiniz?",
     "a": "Minimum palet miktarı ve kabul koşulları, ürün ve operasyon ihtiyaçlarına göre teklif aşamasında teyit edilir."
-  }
+  },
+  { q: "10 palet bir ay depolamak ne kadar tutar?", a: "LondraDepo'da 10 standart palet 4 hafta için £140 + KDV'den başlar; %20 KDV dahil £168 tutar. Hesap, yayımlanmış haftalık palet başına £3,50 + KDV fiyatına dayanır." },
+  { q: "Palet depolamaya KDV ekleniyor mu?", a: "Evet. Fiyatlar KDV hariç verilir ve İngiltere standart oranı olan %20 KDV eklenir. KDV kayıtlı işletmeler genellikle bu KDV'yi geri alabilir." },
 ];
 
 const jsonLd = {

@@ -103,8 +103,9 @@ export const TR_PAGES: Record<string, TrPage> = {
     faqs: [
       { q: "Depo London Gateway'e ne kadar uzak?", a: "Karayoluyla DP World London Gateway'e yaklaşık 13 mil (21 km); trafiksiz araçla yaklaşık 20 dakika." },
       { q: "Depo Tilbury Limanı'na ne kadar uzak?", a: "Karayoluyla yaklaşık 16 mil (26 km); trafiksiz araçla yaklaşık 20 dakika. Konteyner taşıyan tırlar için süre daha uzundur." },
-      { q: "Depo antrepo (bonded warehouse) mu?", a: "Hayır. LondraDepo antrepo değildir. Ürünler İngiltere gümrüğünden çekildikten sonra Rayleigh'deki depomuzda depolanır." },
+      { q: "Depo antrepo (bonded warehouse) mu?", a: "Hayır. LondraDepo antrepo değildir. London Gateway veya Tilbury'ye gelen ürünler önce İngiltere gümrüğünden çekilir, ardından Rayleigh'deki depomuzda depolanır ve sevk edilir." },
       { q: "Konteyneri London Gateway veya Tilbury'den alabilir misiniz?", a: "Evet. LondraDepo'yu işleten Arca Trade Group her iki limandan gümrükleme ve taşımayı ayarlayabilir; dilerseniz kendi nakliyeciniz de depoya teslim edebilir." },
+      { q: "Konteyner London Gateway veya Tilbury'ye geldikten sonra ne olur?", a: "İthalat beyannamesi verilip konteyner tahliye edildikten sonra taşıyıcı onu yaklaşık 13–16 mil uzaklıktaki Rayleigh deposuna getirir. Boşaltır, ambalaj listesiyle sayar, görünür hasarı fotoğraflar ve stoğu Mintsoft WMS'e kaydederiz." },
     ],
     related: [
       { href: "/felixstowe-liman-depo", label: "Felixstowe Liman Depo" },
@@ -160,9 +161,10 @@ export const TR_PAGES: Record<string, TrPage> = {
     ],
     faqs: [
       { q: "Depo Felixstowe'a ne kadar uzak?", a: "Felixstowe Limanı'ndan Rayleigh, Essex'e karayoluyla yaklaşık 62 mil (99 km); trafiksiz araçla yaklaşık 1 saat 15 dakika. Konteyner tırları için süre daha uzundur." },
-      { q: "Deponuz Felixstowe Limanı'nda mı?", a: "Hayır. Depomuz Rayleigh, Essex'tedir. Konteynerler Felixstowe'dan boşaltma, depolama ve fulfillment için depomuza taşınır." },
-      { q: "Felixstowe konteynerleri için antrepo hizmeti veriyor musunuz?", a: "Hayır. LondraDepo antrepo değildir. Ürünler depolanmadan önce İngiltere gümrüğünden çekilir." },
+      { q: "Deponuz Felixstowe Limanı'nda mı?", a: "Hayır. Depomuz Rayleigh, Essex'te, Felixstowe Limanı'na karayoluyla yaklaşık 62 mil uzaklıktadır. Konteynerler Felixstowe'dan boşaltma, depolama ve fulfillment için depomuza taşınır." },
+      { q: "Felixstowe konteynerleri için antrepo hizmeti veriyor musunuz?", a: "Hayır. LondraDepo antrepo (bonded warehouse) değildir. Felixstowe'a gelen ürünler önce İngiltere gümrüğünden çekilir, ardından Rayleigh'deki depomuzda depolanır ve sevk edilir." },
       { q: "Felixstowe'dan taşıma ve gümrüklemeyi ayarlayabilir misiniz?", a: "Evet. LondraDepo'yu işleten Arca Trade Group Felixstowe'dan gümrükleme ve taşımayı ayarlayabilir; dilerseniz kendi nakliyeciniz de depoya teslim edebilir." },
+      { q: "Felixstowe konteynerleri için neden Essex'te depo?", a: "Aynı stok Londra ve Güneydoğu müşterilerine, e-ticaret, Amazon veya toptan siparişlere de hizmet verecekse Essex mantıklıdır: ürün Rayleigh'de bir kez boşaltılır ve Londra merkezine yaklaşık 37 mil mesafededir." },
     ],
     related: [
       { href: "/london-gateway-tilbury-depo", label: "London Gateway & Tilbury Depo" },
@@ -232,6 +234,8 @@ export const TR_PAGES: Record<string, TrPage> = {
       { q: "3PL depo nedir?", a: "3PL (üçüncü taraf lojistik) deposu stoğunuzu tutar; mal kabul, sipariş toplama, paketleme, teslimat ve iadeleri sizin yerinize yapar. Böylece kendi deponuza ve personelinize ihtiyaç kalmaz." },
       { q: "Doğru teklif için 3PL'e hangi bilgileri göndermeliyim?", a: "Ürün tipi ve ölçüleri, SKU sayısı, stoktaki palet veya koli, aylık sipariş ve sipariş başına ortalama ürün, satış kanalları, beklenen iade oranı ve teslimat bölgeleri." },
       { q: "En ucuz depolama fiyatı en iyi teklif midir?", a: "Her zaman değil. Depolama, mal kabul, pick & pack, ambalaj, teslimat ve iade genellikle ayrı fiyatlanır; kendi hacminiz için aylık toplamı karşılaştırın." },
+      { q: "3PL depoyu seçmeden önce ziyaret etmeli miyim?", a: "Mümkünse evet. Ziyaret veya görüntülü tur raf düzenini, temizliği ve güvenliği gösterir; stoğunuzla günlük olarak ilgilenecek ekibi tanımanızı sağlar." },
+      { q: "3PL ile hangi sözleşme şartlarını kontrol etmeliyim?", a: "Sözleşme süresini, fesih bildirim süresini ve ayrılırken stoğun nasıl teslim edileceğini, ayrıca aylık minimum ücret olup olmadığını ve ürünleriniz için hangi sigortanın geçerli olduğunu kontrol edin." },
     ],
     related: [
       { href: "/ingiltere-depo", label: "İngiltere Depo" },
@@ -294,6 +298,7 @@ export const TR_PAGES: Record<string, TrPage> = {
       { q: "İngiltere'de gümrük vergisi nasıl hesaplanır?", a: "Vergi, ürünün UK tarifesindeki koduna göre gümrük kıymetinin bir yüzdesidir. Bir UK ticaret anlaşmasının menşe kurallarını karşılayan ürünler, menşe belgesiyle indirimli veya %0 orandan yararlanabilir." },
       { q: "Ertelenmiş KDV muhasebesi (postponed VAT accounting) nedir?", a: "KDV kayıtlı ithalatçıların ithalat KDV'sini sınırda ödemek yerine KDV beyannamesinde beyan etmesini sağlar; nakit akışına yardımcı olur." },
       { q: "UK depolama ithalata ne kadar maliyet ekler?", a: "LondraDepo'da depolama palet başına haftalık £3,50 + KDV'den başlar. Boşaltma, mal kabul, fulfillment ve teslimat hacminize göre tekliflendirilir." },
+      { q: "Gümrük vergisi ve ithalat KDV'sini kim öder?", a: "Gümrük vergisini ödeyen ve ithalat KDV'sini beyan eden ithalatçıdır (importer of record), depo değil. LondraDepo'yu veya Arca Trade Group'un gümrük hizmetini kullanmak onları ithalatçı yapmaz." },
     ],
     related: [
       { href: "/blog/turkiyeden-ingiltereye-ihracat-rehberi", label: "Türkiye'den İngiltere'ye İhracat Rehberi" },
@@ -360,6 +365,8 @@ export const TR_PAGES: Record<string, TrPage> = {
       { q: "Amazon FBA prep nedir?", a: "Ürünlerin Amazon depolarına kabul edilmesi için gereken etiketleme, paketleme ve hazırlık işidir: FNSKU etiketleri, koruyucu ambalaj ve koli etiketleri gibi." },
       { q: "Her ürüne FNSKU etiketi gerekir mi?", a: "Genellikle evet. Ürün üretici barkodunu kullanmaya uygun değilse her üründe Amazon barkodu, normalde FNSKU olmalıdır. Ürün ayarlarını Seller Central'da kontrol edin." },
       { q: "FBA prep işini bir UK deposu yapabilir mi?", a: "Evet. LondraDepo stoğunuzu Essex'te teslim alır, Amazon kurallarına göre hazırlar ve atanan Amazon UK deposuna teslim eder." },
+      { q: "FBA prep kontrol listesini nereden indirebilirim?", a: "Bu sayfada tek sayfalık yazdırılabilir PDF sürümü var. Adınızı ve e-postanızı bırakın, indirme linki hemen açılır." },
+      { q: "Amazon'un prep kuralları değişiyor mu?", a: "Evet. Amazon prep ve ambalaj gerekliliklerini günceller; benzer stoğu daha önce göndermiş olsanız bile her ürün için sevkiyattan önce Seller Central'daki güncel kuralları kontrol edin." },
     ],
     related: [
       { href: "/amazon-prep-uk", label: "Amazon Prep UK" },
@@ -436,7 +443,7 @@ export const TR_PAGES: Record<string, TrPage> = {
       { q: "Hangi konteyner tiplerini boşaltıyorsunuz?", a: "20ft, 40ft ve 40ft high-cube FCL konteynerler ile LCL ve paletli parsiyel yükleri kabul ediyoruz. Teklif isterken konteyner tipini ve ürünlerin paletli mi dökme mi olduğunu belirtin." },
       { q: "Dökme (paletsiz) yüklenmiş konteynerleri boşaltıyor musunuz?", a: "Kolilerin dökme yüklendiğini SKU başına koli sayısıyla önceden bildirin. Elleçleme süresi, paletleme ve etiketleme konteyner gelmeden değerlendirilir ve buna göre tekliflendirilir." },
       { q: "Ürünler hasarlı veya eksik gelirse ne olur?", a: "Görünür hasar fotoğraflanır; ambalaj listesine göre eksik veya fazlalar size bildirilir, böylece tedarikçi veya taşıyıcıya talepte bulunabilirsiniz." },
-      { q: "Limandan taşımayı ayarlayabilir misiniz?", a: "Evet. LondraDepo'yu işleten Arca Trade Group limandan depoya taşımayı ayarlayabilir; dilerseniz kendi nakliyeciniz de teslim edebilir." },
+      { q: "Konteyneri limandan depoya kim getiriyor?", a: "Evet. LondraDepo'yu işleten Arca Trade Group limandan depoya taşımayı ayarlayabilir; dilerseniz kendi nakliyeciniz de teslim edebilir." },
       { q: "Boşaltılan ürünler doğrudan sevk edilebilir mi?", a: "Evet. Ürünler UK müşterilerine veya Amazon'a cross-dock edilebilir ya da depolanıp siparişler geldikçe sevk edilebilir." },
     ],
     related: [
@@ -495,6 +502,7 @@ export const TR_PAGES: Record<string, TrPage> = {
       { q: "Boyalı parçalardaki hasarı nasıl yönetiyorsunuz?", a: "Her parça mal kabulde görsel olarak kontrol edilip fotoğraflanır ve sisteme kaydedilir; sevkte köpük, balonlu naylon ve sağlam kolilerle paketlenir." },
       { q: "İngiltere genelindeki atölye ve bayilere teslimat yapabiliyor musunuz?", a: "Evet. Essex'ten İngiltere genelindeki bayi, atölye ve online müşterilere ertesi gün veya 2 gün seçenekleriyle teslimat yapıyoruz." },
       { q: "Parçaları yurt dışından bizim için getirebilir misiniz?", a: "Evet. LondraDepo'yu işleten Arca Trade Group nakliye ve gümrüklemeyi ayarlayabilir; dilerseniz kendi nakliyeciniz de depoya teslim edebilir." },
+      { q: "OEM ve yan sanayi parçaları ayrı tutuluyor mu?", a: "Evet. Parçalar palet ve raflarda SKU bazında depolanır, OEM ve yan sanayi stoğu ayrı tutulur; böylece her bayi, atölye veya online sipariş için doğru parça numarası toplanır." },
     ],
     related: [
       { href: "/palet-depolama", label: "Palet Depolama" },
@@ -575,6 +583,8 @@ export const TR_PAGES: Record<string, TrPage> = {
       { q: "LondraDepo hangi sektörlerle çalışıyor?", a: "Gıda ve FMCG, ambalaj, otomotiv yedek parça ve döşeme malzemeleri, moda ve e-ticaret, walking treadmill gibi büyük hacimli ürünler ve taşınabilir şarj istasyonu gibi tüketici elektroniğinde canlı UK operasyonlarımız var." },
       { q: "Aynı stok hem B2B hem online müşterilere hizmet verebilir mi?", a: "Evet. Aynı UK stoğu toptan ve ticari müşterilere palet teslimatlarını, online alıcılara koli siparişlerini besleyebilir; stoğu farklı firmalar arasında bölmeniz gerekmez." },
       { q: "Sektörüm listede yok, yine de yardımcı olabilir misiniz?", a: "Büyük olasılıkla evet. Ürününüzü, ambalajını, hacminizi ve satış kanallarınızı yazın; teklif vermeden önce Essex depomuzun uygun olup olmadığını teyit edelim." },
+      { q: "Sektörüm için operasyon örneği var mı?", a: "LondraDepo gıda ve FMCG, ambalaj, otomotiv yedek parça, döşeme malzemeleri, moda, büyük hacimli ürünler ve tüketici elektroniği alanlarında operasyon örnekleri yayımladı. Bu sayfadaki her sektör ilgili örneklere bağlanır." },
+      { q: "Sektörüm için nasıl teklif alırım?", a: "Bu sayfadaki formu ürün tipiniz, ambalajınız, tahmini palet veya koli sayınız, aylık siparişleriniz ve satış kanallarınızla doldurun. Ekibimiz depolama, elleçleme ve teslimat için e-postayla teklif gönderir." },
     ],
     related: [
       { href: "/ingiltere-depo", label: "İngiltere Depo" },
@@ -627,9 +637,11 @@ export const TR_PAGES: Record<string, TrPage> = {
       },
     ],
     faqs: [
-      { q: "Teklif ücretli mi?", a: "Hayır. Teklif ücretsizdir ve sizi bağlamaz." },
-      { q: "Minimum palet veya sipariş sayısı var mı?", a: "Sabit bir minimum yok; 1 deneme paletiyle başlayabilirsiniz. Hacminizi yazın, size uygun teklifi hazırlayalım." },
+      { q: "Teklif ücretli mi?", a: "Hayır. LondraDepo teklifi ücretsizdir ve sizi bağlamaz. Formu ürününüz, hacminiz ve ihtiyacınız olan hizmetlerle doldurun; ekibimiz size özel teklifle e-postayla döner." },
+      { q: "Minimum palet veya sipariş sayısı var mı?", a: "Sabit bir minimum yok; 1 deneme paletiyle başlayabilirsiniz. Operasyon örneklerimizdeki bir gıda üreticisi bu şekilde başladı. Hacminizi yazın, size uygun teklifi hazırlayalım." },
       { q: "Nakliye ve gümrüklemeyi de teklife dahil edebilir misiniz?", a: "Evet. LondraDepo'yu işleten Arca Trade Group nakliye ve UK gümrüklemesi için ayrıca teklif verebilir; dilerseniz kendi nakliyecinizle de çalışabilirsiniz." },
+      { q: "Teklif için hangi bilgileri hazırlamalıyım?", a: "Ürün tipi ve ölçüleri, tahmini palet veya koli sayısı, aylık sipariş ve sipariş başına ürün, satış kanalları ve ürünlerin hangi ülkeden geleceğini yazın. Bilgi ne kadar detaylıysa teklif o kadar isabetli olur." },
+      { q: "Form göndermeden önce biriyle konuşabilir miyim?", a: "Evet. WhatsApp'tan +44 7554 195190'a yazabilir, İngiltere saatiyle 07:45–17:30 arasında ofisi +44 1268 203 283'ten arayabilir veya 15 dakikalık bir görüşme ayarlayabilirsiniz." },
     ],
     related: [
       { href: "/ingiltere-depo-maliyet-hesaplama", label: "Depo Maliyet Hesaplama" },
@@ -700,7 +712,7 @@ export const TR_PAGES: Record<string, TrPage> = {
       { q: "Türkiye, Avrupa veya Uzak Doğu'dan nakliye ayarlayabilir misiniz?", a: "Evet. LondraDepo'yu işleten Arca Trade Group dünya genelinde deniz ve hava, UK–Avrupa arasında kara ve Uzak Doğu ile Avrupa'dan UK'ye demiryolu nakliyesi sunar." },
       { q: "UK gümrük beyannamesini kim veriyor?", a: "Arca Trade Group gümrük ekibi müşterileri adına beyanname verir. Dilerseniz kendi müşavirinizle çalışıp gümrükten çekilmiş ürünleri depomuza teslim edebilirsiniz." },
       { q: "LondraDepo ithalatçı (importer of record) oluyor mu?", a: "Hayır, otomatik olarak olmaz. Depomuzu veya grubumuzun gümrük hizmetini kullanmak LondraDepo'yu ya da Arca Trade Group'u ithalatçı yapmaz; gümrük vergisi ve ithalat KDV'si ithalatçının sorumluluğundadır." },
-      { q: "Deponuz antrepo mu?", a: "Hayır. LondraDepo HMRC onaylı bir gümrük antreposu değildir. Ürünler serbest dolaşıma girdikten sonra depolanır." },
+      { q: "Deponuz antrepo mu?", a: "Hayır. LondraDepo HMRC onaylı bir gümrük antreposu değildir. Ürünler İngiltere gümrüğünden çekilip serbest dolaşıma girdikten sonra Rayleigh'deki depomuzda depolanır ve sevk edilir." },
     ],
     related: [
       { href: "/gumrukleme", label: "Gümrükleme" },
@@ -766,10 +778,11 @@ export const TR_PAGES: Record<string, TrPage> = {
       },
     ],
     faqs: [
-      { q: "Depo Felixstowe'a ne kadar uzak?", a: "Karayoluyla yaklaşık 62 mil (99 km). Trafiksiz araçla yaklaşık 1 saat 15 dakika; konteyner tırları için daha uzun sürer." },
+      { q: "Depo üç konteyner limanına ne kadar uzak?", a: "Rayleigh, Essex'ten karayoluyla DP World London Gateway yaklaşık 13 mil, Tilbury Limanı 16 mil ve Felixstowe Limanı 62 mil uzaklıktadır. London Gateway ve Tilbury araçla yaklaşık 20 dakika, Felixstowe yaklaşık 1 saat 15 dakika sürer." },
       { q: "Depo limanda mı?", a: "Hayır. Depomuz Rayleigh, Essex'te; London Gateway'e yaklaşık 13 mil, Tilbury'ye 16 mil uzaklıkta. Konteynerler boşaltma için limandan depomuza taşınır." },
       { q: "Limandan taşımayı ayarlayabilir misiniz?", a: "Evet. LondraDepo'yu işleten Arca Trade Group gümrükleme ve limandan taşımayı ayarlayabilir; dilerseniz nakliyeciniz de bize teslim edebilir." },
-      { q: "Limanda boşaltma yapabilir misiniz?", a: "Hayır. Boşaltma Rayleigh deposunda yapılır; ürünler burada ek elleçleme olmadan depolanır ve sevk edilir." },
+      { q: "Limanda boşaltma yapabilir misiniz?", a: "Hayır. Boşaltma Rayleigh deposunda yapılır. Konteyner limandan depoya taşınır; ürünler burada sayılır, kontrol edilir ve ek elleçleme olmadan depolanır ya da sevk edilir." },
+      { q: "Depodaki teslim saatini kim ayarlıyor?", a: "Taşıyıcı veya nakliye firması, ön bildirimden sonra depomuzla teslim saatini ayarlar. Boşaltmanın önceden planlanması için konteyner numarası, ETA, ambalaj listesi ve SKU başına koli sayısını gönderin." },
     ],
     related: [
       { href: "/konteyner-bosaltma", label: "Konteyner Boşaltma" },
@@ -833,9 +846,11 @@ export const TR_PAGES: Record<string, TrPage> = {
       },
     ],
     faqs: [
-      { q: "Restoranlara sabit programla teslimat yapabilir misiniz?", a: "Evet. Müşteri listenize ve sipariş sıklığınıza göre haftalık veya aylık teslimat programları kuruyoruz." },
+      { q: "Restoranlara sabit programla teslimat yapabilir misiniz?", a: "Evet. Müşteri listenize ve sipariş sıklığınıza göre haftalık veya aylık teslimat programları kuruyoruz; ambalajlar Essex'te paletli tutulur ve her restoran ya da toptancıya belirlenen günlerde gönderilir." },
       { q: "Gıdayla temas eden ambalajları depoluyor musunuz?", a: "Evet. Pizza kutusu ve paket servis kapları gibi ambalajlar gıda dışı stok olarak paletlerde depolanır. Özel bir depolama gerekliliğiniz varsa teklif isterken belirtin." },
       { q: "Minimum hacim var mı?", a: "Sabit bir minimum yok. Palet bazlı operasyonlar tek tek değerlendirilir; tahmini palet sayınızı ve sipariş düzeninizi paylaşın." },
+      { q: "Ambalaj stoğu lot bazında takip edilebilir mi?", a: "Evet. Ambalaj stoğu Mintsoft WMS'te lot bazında kaydedilebilir; bu izlenebilirlik ve geri çağırma senaryolarını destekler, düşük stok uyarıları da restoranlar stoksuz kalmadan ikmal yapmanızı sağlar." },
+      { q: "Yurt dışında üretilen ambalajları getirebilir misiniz?", a: "Evet. LondraDepo'yu işleten Arca Trade Group yurt dışında üretilen ambalajlar için nakliye ve UK gümrüklemesini ayarlayabilir; ürünler ardından Essex'te paletli olarak depolanır." },
     ],
     related: [
       { href: "/case-studies/pizza-box-distribution-uk", label: "Pizza Kutusu Operasyonu" },

@@ -141,7 +141,7 @@ const faqs = [
   },
   {
     q: "İngiltere gıda etiketleme süreçlerinde destek sağlıyor musunuz?",
-    a: "Evet. İngiltere pazarına uygun etiketleme gereksinimleri konusunda yönlendirme ve operasyonel destek sağlıyoruz.",
+    a: "Evet. İngiltere pazarına uygun etiketleme gereksinimleri konusunda operasyonel yönlendirme veriyor ve etiketleme işlemini depoda yapıyoruz; ürüne özel resmî gereklilikler için GOV.UK'yi kontrol etmenizi öneririz.",
   },
   {
     q: "GTİP yönlendirmesi yapıyor musunuz?",
@@ -153,7 +153,7 @@ const faqs = [
   },
   {
     q: "Gıda fulfillment operasyonu sağlıyor musunuz?",
-    a: "Evet. Gıda ürünleri için depolama, sipariş hazırlama, etiketleme ve İngiltere genelinde dağıtım operasyonu sunuyoruz.",
+    a: "Evet. Gıda ürünleri için Essex'te depolama, sipariş hazırlama, etiketleme ve İngiltere genelinde dağıtım yapıyoruz; bu örnekteki tortilla üreticisi 1 paletten aylık 6 × 40HC konteynere bu altyapıyla büyüdü.",
   },
 ];
 

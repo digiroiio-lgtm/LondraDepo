@@ -63,20 +63,21 @@ const features = [
 const faqs = [
   {
     q: "Kısa vadeli depolama mümkün mü?",
-    a: "Evet. Hem kısa hem de uzun vadeli depolama seçenekleri mevcuttur.",
+    a: "Evet. Depolama haftalık palet başına £3,50 + KDV'den ücretlendirildiği için birkaç haftalık kısa süreli ve uzun süreli depolama mümkündür; doğrudan sevk edilecek ürünler için cross-dock da yapılabilir.",
   },
   {
     q: "Palet depolama kabul ediyor musunuz?",
-    a: "Evet. Hem paletli hem de kolili ürünleri kabul ediyoruz.",
+    a: "Evet. FCL ve LCL konteyner teslimatları dahil paletli ve kolili ürünleri kabul ediyoruz. Dökme koliler mal kabulde paletlenip etiketlenebilir ve ardından Mintsoft WMS'e kaydedilir.",
   },
   {
     q: "Stok takibi nasıl yapılıyor?",
-    a: "Mintsoft depo yönetim yazılımı (WMS) üzerinden stok seviyeleri ve ürün hareketleri kayıt altında tutulmaktadır.",
+    a: "Stok seviyeleri ve ürün hareketleri, ürünler mal kabulde sisteme alındığı andan itibaren Mintsoft depo yönetim yazılımında (WMS) kayıt altına alınır; rafta ne olduğunu görür ve düzenli stok raporu alırsınız.",
   },
   {
     q: "Türkiye'den gelen ürünleri kabul ediyor musunuz?",
-    a: "Evet. Türkiye veya herhangi bir tedarikçiden gelen ürünleri depo adresimizde kabul ediyoruz.",
+    a: "Evet. Türkiye veya herhangi bir ülkedeki tedarikçiden gelen ürünleri Rayleigh'deki depomuzda kabul ediyoruz. Nakliye ve UK gümrüklemesi Arca Trade Group üzerinden yapılabilir ya da kendi nakliyeciniz teslim edebilir.",
   },
+  { q: "Depolama nasıl ücretlendiriliyor?", a: "Standart palet depolama haftalık palet başına £3,50 + KDV'den başlar. Koli depolama, mal kabul, konteyner boşaltma ve elleçleme ürünlerinize ve hacminize göre ayrıca tekliflendirilir." },
 ];
 
 export default function DepolamaPage() {

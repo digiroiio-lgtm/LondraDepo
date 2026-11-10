@@ -1,3 +1,4 @@
+import PageFaq from "@/components/PageFaq";
 import Emoji from "@/components/visual/Emoji";
 import type { Metadata } from "next";
 import TrClusterNav from "@/components/TrClusterNav";
@@ -67,6 +68,15 @@ const jsonLd = {
     },
   ],
 };
+
+
+const faqs = [
+  { q: "Türkiye'den İngiltere'de satış yapmak için UK şirketi gerekir mi?", a: "Her zaman gerekmez. Birçok yurt dışı firma mevcut şirketi ve GB EORI numarasıyla İngiltere'ye ithalat yapıp UK deposundan satış yapar. Doğru yapı satış modelinize bağlıdır; vergi danışmanlığı almanızı öneririz." },
+  { q: "İngiltere'de satışa başlamak için ilk adım nedir?", a: "İlk adım satış modelini seçmektir: Shopify, Amazon veya toptan. Ardından ürünlerinizin GTİP kodlarını belirleyin, GB EORI alın ve ürünleri teslim alacak, depolayacak ve siparişleri gönderecek bir UK deposuyla çalışın." },
+  { q: "Ürünlerimi İngiltere'de nerede depolarım?", a: "Ürünlerinizi Rayleigh, Essex'teki LondraDepo deposunda tutabilirsiniz. Palet depolama haftalık palet başına £3,50 + KDV'den başlar; mal kabul, pick & pack ve teslimat ayrıca fiyatlandırılır." },
+  { q: "Shopify ve Amazon siparişlerini aynı stoktan karşılayabilir miyim?", a: "Evet. LondraDepo'daki aynı UK stoğu Shopify siparişlerine, Amazon FBA hazırlığına veya FBM siparişlerine ve toptan palet siparişlerine hizmet verebilir; her kanal için ayrı depo gerekmez." },
+  { q: "Az ürünle İngiltere pazarını test edebilir miyim?", a: "Evet. Sabit bir minimum yok; 1 deneme paletiyle başlayabilirsiniz. Operasyon örneklerimizdeki Ankara merkezli tortilla üreticisi bu şekilde başladı ve bugün aylık 6 × 40HC konteyner gönderiyor." },
+];
 
 export default function TurkiyedenIngiltereye() {
   return (
@@ -341,6 +351,7 @@ export default function TurkiyedenIngiltereye() {
             </div>
           </div>
         </section>
+        <PageFaq faqs={faqs} />
         <TrClusterNav path="/turkiyeden-ingiltereye-satis" />
       </main>
       <Footer />

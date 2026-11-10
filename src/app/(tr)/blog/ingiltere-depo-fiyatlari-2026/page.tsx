@@ -47,7 +47,9 @@ const faqs = [
   {
     "q": "Amazon prep ve fulfillment hizmetini birlikte alabilir miyim?",
     "a": "Evet. LondraDepo.com'da Amazon prep ve 3PL fulfillment hizmetlerini tek operasyon çatısı altında sunuyoruz. Bu yaklaşım çift işlem ücretini ortadan kaldırır."
-  }
+  },
+  { q: "Palet depolama fiyatına neler dahil değil?", a: "Depolama fiyatı yalnızca depolamayı kapsar. Mal kabul, konteyner boşaltma, yeniden paletleme, etiketleme, pick & pack, ambalaj, teslimat, iade ve gümrükleme operasyonunuza göre ayrıca tekliflendirilir." },
+  { q: "Aylık depo maliyetimi nasıl tahmin ederim?", a: "Palet sayınızı hafta sayısıyla ve haftalık palet fiyatıyla çarpın, ardından sipariş yapınıza göre elleçleme ve teslimat kalemlerini ekleyin. Depo Maliyet Hesaplama aracı depolama kısmını sizin için hesaplar." },
 ];
 
 const jsonLd = {

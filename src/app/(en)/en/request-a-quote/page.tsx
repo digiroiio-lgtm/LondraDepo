@@ -5,6 +5,8 @@ import FooterEn from "@/components/FooterEn";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 import QuoteFormEn from "@/components/QuoteFormEn";
 import TrackedLink from "@/components/TrackedLink";
+import FaqJsonLd, { type Faq } from "@/components/FaqJsonLd";
+import { bookingUrl } from "@/lib/booking";
 import { absolute, enAlternates } from "@/lib/i18n";
 import { SITE_URL } from "@/lib/site";
 
@@ -48,6 +50,14 @@ const STEPS = [
   ["We review your operation", "Our warehouse team checks handling, storage and delivery needs and may ask a few follow-up questions."],
   ["You receive a tailored quote", "Storage, handling, fulfilment and delivery are priced line by line, so you can see exactly what you pay for."],
 ] as const;
+
+const FAQS: Faq[] = [
+  { q: "Is the quote free?", a: "Yes. A LondraDepo quote is free and does not commit you to anything. Fill in the form with your product, volumes and services and the team replies by email with a tailored proposal." },
+  { q: "What information do I need for a UK warehousing quote?", a: "Share your product type and sizes, estimated pallets or cartons, monthly orders, sales channels and where the goods ship from. The more detail you give, the more accurate the quote for storage, handling and delivery." },
+  { q: "Is there a minimum order or pallet volume for a quote?", a: "There is no fixed minimum. You can start with a single trial pallet, as one of the food producers in our case studies did, and grow from there." },
+  { q: "Can freight and customs clearance be included in the quote?", a: "Yes. Arca Trade Group, which operates LondraDepo, can quote international freight and UK customs clearance alongside warehousing, or you can use your own forwarder and quote the warehouse only." },
+  { q: "Can I talk to someone before sending the form?", a: "Yes. You can message the team on WhatsApp at +44 7554 195190, call the office on +44 1268 203 283 between 07:45 and 17:30 UK time, or book a 15-minute call." },
+];
 
 export default function RequestAQuotePage() {
   return (
@@ -103,6 +113,11 @@ export default function RequestAQuotePage() {
                 </TrackedLink>{" "}
                 (07:45–17:30 UK time)
               </p>
+              <p>
+                <TrackedLink kind="booking" source="quote_page" href={bookingUrl("en", PATH)} className="font-semibold text-[#0b2545] underline">
+                  Book a 15-minute call
+                </TrackedLink>
+              </p>
               <p>English and Turkish spoken.</p>
             </section>
             <section className="text-sm text-slate-700">
@@ -116,6 +131,19 @@ export default function RequestAQuotePage() {
             </section>
           </aside>
         </div>
+
+        <section className="max-w-3xl mx-auto px-4 pb-14">
+          <FaqJsonLd faqs={FAQS} />
+          <h2 className="text-2xl font-bold text-[#0b2545] mb-6">Frequently asked questions</h2>
+          <div className="space-y-4">
+            {FAQS.map((f) => (
+              <div key={f.q} className="rounded-xl border border-slate-200 p-5">
+                <h3 className="font-semibold text-[#0b2545] mb-2">{f.q}</h3>
+                <p className="text-sm text-slate-600 leading-relaxed">{f.a}</p>
+              </div>
+            ))}
+          </div>
+        </section>
       </main>
       <FooterEn />
       <StickyWhatsappCta lang="en" />

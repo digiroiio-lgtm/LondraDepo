@@ -43,6 +43,7 @@ const faqs = [
     q: "Elleçleme hizmetinin fiyatlandırması nasıl işliyor?",
     a: "Fiyatlandırma işlem türüne, ürün hacmine ve hizmet kapsamına göre belirlenir. Operasyonunuza özel teklif için WhatsApp üzerinden bize ulaşın.",
   },
+  { q: "Ürünler müşteriye veya Amazon'a gitmeden yeniden etiketlenebilir mi?", a: "Evet. Yeniden etiketleme, yeniden paketleme ve SKU'ya göre ayırma Essex deposundaki elleçleme hizmetinin parçasıdır; UK müşterilerine veya Amazon FBA'ya gönderilmeden önce etiketli stok hazırlanır." },
 ];
 
 const jsonLd = {

@@ -118,7 +118,7 @@ const faqs = [
   },
   {
     q: "Lüks araç parçaları için özel depolama koşulları sağlıyor musunuz?",
-    a: "Evet. Boyalı ve hassas yüzeyli parçalar için korumalı raf ve depolama alanı kullanıyoruz.",
+    a: "Evet. Boyalı ve hassas yüzeyli parçalar korumalı raf ve depolama alanında tutulur; mal kabulde ve sevkte fotoğraflı kontrol yapılır ve sevkiyatta köpük, balonlu naylon ve sağlam koli kullanılır.",
   },
   {
     q: "Stok seviyeleri düzenli olarak raporlanıyor mu?",

@@ -26,6 +26,7 @@ const faqs = [
   { q: "Hesaplayıcının sonucu kesin fiyat mı?", a: "Hayır. Standart paletler için başlangıç fiyatıyla yapılan bir tahmindir. Palet ölçüsü, ürün türü, depolama süresi ve işlem hacmi toplamı değiştirebilir; diğer hizmetler ayrıca tekliflendirilir." },
   { q: "Tahmine mal kabul ve teslimat dahil mi?", a: "Hayır. Mal kabul, konteyner boşaltma, pick & pack, Amazon hazırlık ve teslimat, ürünleriniz ve hacminiz netleştikten sonra ayrıca tekliflendirilir." },
   { q: "Kesin teklifi nasıl alırım?", a: "Hesaplayıcının altındaki butonla sayfadaki teklif formuna geçin ya da tahmini WhatsApp'tan gönderin. Ürün türünüzü ve ihtiyacınız olan hizmetleri yazmanız yeterlidir." },
+  { q: "Hesaplayıcı KDV'yi de gösteriyor mu?", a: "Evet. Hesaplayıcı depolama maliyetini KDV hariç gösterir ve İngiltere standart oranı olan %20 KDV'yi ekleyerek KDV dahil toplamı da verir. Örneğin 10 palet 4 hafta £140 + KDV, KDV dahil £168 tutar." },
 ];
 
 const ROWS = [

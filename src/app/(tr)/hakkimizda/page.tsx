@@ -1,3 +1,4 @@
+import PageFaq from "@/components/PageFaq";
 import Emoji from "@/components/visual/Emoji";
 import type { Metadata } from "next";
 import TeamQuote from "@/components/TeamQuote";
@@ -52,6 +53,14 @@ const jsonLd = {
     },
   ],
 };
+
+
+const faqs = [
+  { q: "LondraDepo'yu kim işletiyor?", a: "LondraDepo, İngiltere'de kayıtlı Arca Trade Group Ltd'nin (Şirket No. 13247691) depolama markasıdır ve şirket BIFA üyesidir. Kurucu Sertaç Yılmaz 18 yıllık lojistik deneyimine sahiptir; günlük depo operasyonunu Operasyon Müdürü Yusuf Barış yönetir." },
+  { q: "LondraDepo'nun deposu nerede?", a: "Depomuz Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY adresindedir. Karayoluyla London Gateway'e yaklaşık 13 mil, Tilbury Limanı'na 16 mil ve Londra merkezine 37 mil uzaklıktadır." },
+  { q: "LondraDepo hangi hizmetleri veriyor?", a: "Mal kabul ve konteyner boşaltma, palet ve koli depolama, Mintsoft WMS ile stok takibi, pick & pack, Amazon FBA hazırlığı ve UK dağıtım sunuyoruz. Uluslararası nakliye ve UK gümrüklemesi Arca Trade Group üzerinden yapılabilir." },
+  { q: "LondraDepo'yu çalışmadan önce nasıl doğrulayabilirim?", a: "Arca Trade Group Ltd, İngiltere Companies House kayıtlarında 13247691 numarasıyla yer alır ve BIFA üye listesinde görünür. Ürün göndermeden önce ekibimizle 15 dakikalık bir görüşme de ayarlayabilirsiniz." },
+];
 
 export default function HakkimizdaPage() {
   return (
@@ -205,6 +214,7 @@ export default function HakkimizdaPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <PageFaq faqs={faqs} />
       </main>
       <Footer />
       <StickyWhatsappCta />

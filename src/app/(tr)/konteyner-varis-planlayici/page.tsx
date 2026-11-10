@@ -26,6 +26,7 @@ const faqs = [
   { q: "Depo İngiltere'deki konteyner limanlarına ne kadar uzak?", a: "Rayleigh, Essex'ten karayoluyla DP World London Gateway yaklaşık 13 mil, Tilbury Limanı yaklaşık 16 mil, Felixstowe Limanı yaklaşık 62 mil uzaklıktadır." },
   { q: "Limandan taşıma ve gümrüklemeyi siz yapabilir misiniz?", a: "Evet. LondraDepo'yu işleten Arca Trade Group limandan depoya taşımayı ayarlayabilir ve ithalat beyannamesini verebilir; isterseniz kendi nakliyeciniz de depoya teslim edebilir." },
   { q: "Bir konteynere kaç palet sığar?", a: "Genel kural olarak tek katlı yüklemede 20ft konteynerin tabanına yaklaşık 10, 40ft konteynere yaklaşık 20 standart UK paleti sığar. Gerçek sayı palet ölçüsüne, yüksekliğe ve yükleme şekline bağlıdır." },
+  { q: "Planlayıcıdaki tarihler kesin mi?", a: "Hayır. Planlayıcı ETA'dan geriye doğru önerilen son tarihleri verir. Gemi varışı, liman tahliyesi ve gümrük kontrolleri değişebileceği için varıştan sonraki adımlar konteyner tahliye edildikten sonra olacak şekilde gösterilir." },
 ];
 
 const STEPS = [

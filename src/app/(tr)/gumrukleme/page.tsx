@@ -73,6 +73,7 @@ const faqs = [
     q: "Gümrük sonrası ürünler depoya nasıl alınıyor?",
     a: "Gümrük sürecinin tamamlanmasının ardından ürünleriniz depo adresimize teslim edilir, sayılır ve depo sistemine dahil edilir.",
   },
+  { q: "İngiltere'ye ithalat için GB EORI numarası gerekir mi?", a: "Evet. İthalatçının Büyük Britanya'ya ithalat için GB ile başlayan bir EORI numarası olmalıdır. Beyannameyi Arca Trade Group gümrük ekibi verebilir; gümrük vergisi ve ithalat KDV'si ithalatçının sorumluluğundadır." },
 ];
 
 export default function GumruklernePage() {

@@ -73,6 +73,8 @@ const faqs = [
   { q: "İngiltere'ye az ürünle başlanabilir mi?", a: "Evet, sabit bir minimum yok. Operasyon örneklerimizdeki Ankara merkezli tortilla üreticisi İngiltere'ye 1 deneme paletiyle girdi ve bugün aylık 6 × 40HC konteyner hacmine ulaştı." },
   { q: "Hangi sektörlerde operasyonunuz var?", a: "Gıda ve FMCG, ambalaj, otomotiv yedek parça ve döşeme malzemeleri, moda ve e-ticaret, walking treadmill gibi büyük hacimli ürünler ve taşınabilir şarj istasyonu gibi elektronik ürünlerde canlı UK operasyonlarımız var." },
   { q: "Aynı stok hem online hem B2B müşterilere hizmet verebilir mi?", a: "Evet. Örneklerimizden birkaçında e-ticaret siparişleri ve toptan ya da ticari teslimatlar Essex'teki aynı UK stoğundan karşılanıyor." },
+  { q: "Bu operasyonlar gerçek mi?", a: "Evet. Her örnek, LondraDepo'nun Rayleigh, Essex'teki deposundan yürütülen canlı bir operasyonu anlatır: başlangıç noktası, depolama, fulfillment ve dağıtımın nasıl kurulduğu ve neyin değiştiği." },
+  { q: "Benzer bir operasyona nasıl başlarım?", a: "Ürününüzü, tahmini hacminizi ve satış kanallarınızı bu sayfadaki formla paylaşın. 1 deneme paletiyle küçük başlayabilirsiniz; ekibimiz mal kabul, depolama ve sipariş akışını sizinle planlar." },
 ];
 
 const STATS = [

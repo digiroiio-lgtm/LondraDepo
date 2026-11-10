@@ -92,7 +92,7 @@ const faqs = [
   },
   {
     q: "Shopify siparişleri otomatik olarak mı işleniyor?",
-    a: "Sipariş aktarma süreci ve entegrasyon seçenekleri hakkında bizimle görüşmenizi öneririz. Operasyonel süreci birlikte planlıyoruz.",
+    a: "Sipariş aktarımı ve otomasyon kapsamı teklif öncesinde sizinle birlikte doğrulanır; otomatik bağlantı veya belirli bir süre önceden vaat etmiyoruz. Aylık sipariş sayınızı ve SKU'larınızı paylaşın, süreci birlikte planlayalım.",
   },
   {
     q: "UK Shopify deposu ne kadar tutar?",

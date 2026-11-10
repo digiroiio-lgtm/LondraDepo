@@ -142,11 +142,11 @@ const faqs = [
   },
   {
     q: "UK next-day delivery mümkün mü?",
-    a: "Evet. Essex merkezli operasyonumuz UK genelinde next-day ve 2-day delivery seçenekleri sunmaktadır.",
+    a: "Evet. Essex merkezli operasyonumuz UK genelinde next-day ve 2-day teslimat seçenekleri sunar; Cruyff örneğinde siparişler bu seçeneklerle UK kargo ağı üzerinden teslim edilmektedir.",
   },
   {
     q: "Moda markaları için stok yönetimi sağlıyor musunuz?",
-    a: "Evet. Stok takibi, sezonluk koleksiyon yönetimi ve düzenli stok raporlaması hizmetlerini Türkçe olarak sunuyoruz.",
+    a: "Evet. Stok Mintsoft WMS'te SKU bazında takip edilir; sezonluk koleksiyonlar ayrı yönetilebilir ve düzenli stok raporları Türkçe olarak iletilir. Yeniden paketleme ve etiket güncelleme de yapılabilir.",
   },
 ];
 

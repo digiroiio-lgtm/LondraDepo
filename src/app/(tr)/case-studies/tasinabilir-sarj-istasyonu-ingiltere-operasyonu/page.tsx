@@ -141,7 +141,7 @@ const faqs = [
   },
   {
     q: "Stok seviyesi ve teknik hazırlık durumu raporlanıyor mu?",
-    a: "Evet. Stok hareketi, teknik hazırlık durumu ve sevkiyat özeti düzenli aralıklarla Türkçe raporlarla iletilmektedir.",
+    a: "Evet. Stok hareketi, SIM aktivasyonu ve şarj kontrolü gibi teknik hazırlık durumu ve sevkiyat özeti düzenli aralıklarla Türkçe raporlarla iletilir; hangi ürünün gönderime hazır olduğunu görürsünüz.",
   },
 ];
 

@@ -1,3 +1,4 @@
+import PageFaq from "@/components/PageFaq";
 import Emoji from "@/components/visual/Emoji";
 import type { Metadata } from "next";
 import TrackedLink from "@/components/TrackedLink";
@@ -55,6 +56,14 @@ const jsonLd = {
     },
   ],
 };
+
+
+const faqs = [
+  { q: "LondraDepo'ya en hızlı nasıl ulaşırım?", a: "En hızlı yol WhatsApp: +44 7554 195190. Aynı numarayı arayabilir, ofisi +44 1268 203 283 numarasından arayabilir, teklif formunu doldurabilir veya 15 dakikalık bir görüşme ayarlayabilirsiniz." },
+  { q: "Ofis çalışma saatleriniz nedir?", a: "Ofisimiz İngiltere saatiyle 07:45–17:30 arası açıktır. Bu saatler dışında gönderilen mesaj ve teklif talepleri, ofis açıldığında ekibimiz tarafından cevaplanır." },
+  { q: "Türkçe destek veriyor musunuz?", a: "Evet. LondraDepo ekibi Türkçe ve İngilizce çalışır; UK operasyonunuzu, belgelerinizi ve stok raporlarınızı Türkçe konuşabilir, UK müşterileriniz ve taşıyıcılarla İngilizce iletişim kurulmasını bize bırakabilirsiniz." },
+  { q: "Depoyu ürün göndermeden önce görebilir miyim?", a: "Unit 19 Arterial Park, Rayleigh, Essex SS6 7FY adresindeki depomuzu ziyaret veya görüntülü tur için ekibimizle iletişime geçin. Önce operasyonunuzu konuşmak isterseniz 15 dakikalık görüşme de ayarlayabilirsiniz." },
+];
 
 export default function IletisimPage() {
   return (
@@ -159,6 +168,7 @@ export default function IletisimPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <PageFaq faqs={faqs} />
       </main>
       <Footer />
       <StickyWhatsappCta />

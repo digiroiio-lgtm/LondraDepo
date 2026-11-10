@@ -69,11 +69,11 @@ const faqs = [
   },
   {
     q: "Paletler Türkiye'den İngiltere'ye nasıl geliyor?",
-    a: "Türkiye'den İngiltere'ye konteyner veya parsiyel yük ile gelen paletleriniz, Essex depomuzda teslim alınıyor.",
+    a: "Paletleriniz Türkiye'den İngiltere'ye konteyner veya parsiyel yükle gelir ve Essex depomuzda teslim alınır. Nakliye ve UK gümrüklemesi Arca Trade Group üzerinden yapılabilir ya da kendi nakliyecinizle gönderebilirsiniz.",
   },
   {
     q: "Paletlerin güvenliği nasıl sağlanıyor?",
-    a: "Depomuz kilitli ve kontrollü erişim sistemiyle korunmaktadır. Her palet numaralandırılır ve stok takibi yapılır.",
+    a: "Depomuz kilitli, kamerayla izlenen ve erişimi kontrollü bir alandır. Her palet mal kabulde sayılır, sisteme kaydedilir ve stok hareketleri Mintsoft WMS üzerinden takip edilir.",
   },
 ];
 

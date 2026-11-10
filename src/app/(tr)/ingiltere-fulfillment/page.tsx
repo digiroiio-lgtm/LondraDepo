@@ -68,11 +68,11 @@ const faqs = [
   },
   {
     q: "Shopify ve Etsy siparişlerini de karşılıyor musunuz?",
-    a: "Evet. Shopify, Etsy ve diğer e-ticaret platformlarından gelen siparişleri operasyon sürecimize dahil ediyoruz.",
+    a: "Evet. Shopify, Etsy ve diğer e-ticaret platformlarından gelen siparişleri aynı UK stoğundan karşılıyoruz; sipariş aktarımı ve entegrasyon kapsamı teklif öncesinde sizinle birlikte netleştirilir.",
   },
   {
     q: "Fulfillment için minimum stok miktarı var mı?",
-    a: "Sabit bir minimum stok zorunluluğumuz bulunmamaktadır. İhtiyaçlarınıza göre esnek çözümler sunuyoruz.",
+    a: "Sabit bir minimum stok zorunluluğumuz yok; 1 deneme paletiyle başlayabilirsiniz. Hacminiz büyüdükçe depolama ve fulfillment kapasitesi aynı Essex deposunda esnek şekilde artırılır.",
   },
 ];
 

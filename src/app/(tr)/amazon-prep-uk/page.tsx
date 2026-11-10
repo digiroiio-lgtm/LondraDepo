@@ -62,7 +62,7 @@ const faqs = [
   },
   {
     q: "Amazon UK deposuna ürün göndermek ne kadar sürer?",
-    a: "Ürünleriniz Essex depomuzda prep tamamlandıktan sonra genellikle 2-5 iş günü içinde Amazon deposuna ulaşır.",
+    a: "Ürünleriniz Essex depomuzda prep tamamlandıktan sonra genellikle 2-5 iş günü içinde Amazon deposuna ulaşır. Kesin süre sevkiyat planına, atanan Amazon deposuna ve Amazon'un teslim randevusuna bağlıdır.",
   },
   {
     q: "Hangi Amazon marketplace'lere hizmet veriyorsunuz?",
@@ -70,7 +70,7 @@ const faqs = [
   },
   {
     q: "FNSKU etiketleme yapıyor musunuz?",
-    a: "Evet. Amazon'un gerektirdiği FNSKU ve barkod etiketleme işlemleri servis kapsamımızdadır.",
+    a: "Evet. Amazon'un gerektirdiği FNSKU ve barkod etiketleme, eski barkodların kapatılması, koruyucu ambalaj ve koli hazırlığı LondraDepo'nun Essex'teki Amazon prep hizmetinin kapsamındadır.",
   },
 ];
 

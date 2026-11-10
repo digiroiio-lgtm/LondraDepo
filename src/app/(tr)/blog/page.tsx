@@ -205,6 +205,8 @@ const faqs = [
   { q: "İngiltere depoya yeni başlıyorsam hangi rehberden başlamalıyım?", a: "Önce İngiltere Depo Rehberi ile sürecin nasıl işlediğini, sonra İngiltere Depo Fiyatları 2026 ile maliyet kalemlerini okuyun; partner seçmeden önce 3PL seçim rehberindeki 12 soruyu kullanın." },
   { q: "İngiltere'de depolama ne kadar tutar?", a: "LondraDepo'da standart palet depolama haftalık palet başına £3,50 + KDV'den başlar; 10 palet 4 hafta için £140 + KDV. Mal kabul, pick & pack, teslimat ve gümrükleme ayrıca fiyatlandırılır." },
   { q: "Gümrük vergisi ve ithalat KDV'si hangi rehberde anlatılıyor?", a: "İngiltere İthalat Maliyetleri rehberi gümrük vergisini, genellikle %20 olan ithalat KDV'sini ve ertelenmiş KDV muhasebesini örnek hesapla anlatır; ihracat rehberi EORI, GTİP ve beyanname adımlarını kapsar." },
+  { q: "Amazon FBA hazırlığını hangi rehber anlatıyor?", a: "Amazon Prep UK Rehberi süreci adım adım anlatır; Amazon FBA Prep Kontrol Listesi ise ürün hazırlığı, koli etiketleri ve Amazon UK teslimatını kapsar. Kontrol listesinin yazdırılabilir PDF sürümü de mevcuttur." },
+  { q: "Rehberleri kim yazıyor?", a: "Rehberler LondraDepo'nun Rayleigh, Essex'teki depo operasyon deneyimiyle Arca Trade Group Kurucu Ortağı Sertaç Yılmaz tarafından yazılır ve Operasyon Müdürü Yusuf Barış tarafından incelenir." },
 ];
 
 export default function BlogPage() {

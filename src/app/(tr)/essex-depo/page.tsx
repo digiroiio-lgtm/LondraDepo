@@ -1,3 +1,4 @@
+import PageFaq from "@/components/PageFaq";
 import Emoji from "@/components/visual/Emoji";
 import type { Metadata } from "next";
 import RouteMap from "@/components/visual/RouteMap";
@@ -56,6 +57,15 @@ const jsonLd = {
     },
   ],
 };
+
+
+const faqs = [
+  { q: "Essex depo nerede?", a: "LondraDepo deposu Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY adresindedir; A127 ve M25'e doğrudan bağlantılıdır. İngiltere'ye ithalat yapan ve Büyük Britanya genelinde satan firmalara hizmet verir." },
+  { q: "Essex depo Londra'ya ne kadar uzak?", a: "Depo Londra merkezine karayoluyla yaklaşık 37 mil, A127 üzerinden Doğu Londra'ya yaklaşık 40 dakika uzaklıktadır. Londra'nın içinde değildir ama Londra ve Güneydoğu'ya hizmet vermek için iyi konumdadır." },
+  { q: "Essex depoya en yakın limanlar hangileri?", a: "DP World London Gateway karayoluyla yaklaşık 13 mil, Tilbury Limanı yaklaşık 16 mil uzaklıktadır; ikisi de araçla yaklaşık 20 dakika. Felixstowe Limanı yaklaşık 62 mil uzaklıktadır." },
+  { q: "Essex depo komple konteyner kabul ediyor mu?", a: "Evet. Depo 20ft, 40ft ve 40ft high-cube FCL konteynerlerin yanı sıra LCL ve paletli parsiyel yükleri kabul eder. Her teslimat sayılır, görünür hasar kontrol edilir ve Mintsoft WMS'e kaydedilir." },
+  { q: "Essex depoda depolama ne kadar tutar?", a: "Standart palet depolama haftalık palet başına £3,50 + KDV'den başlar; 10 palet 4 hafta için £140 + KDV. Mal kabul, elleçleme, fulfillment ve teslimat operasyonunuza göre tekliflendirilir." },
+];
 
 export default function EssexDepoPage() {
   return (
@@ -175,6 +185,7 @@ export default function EssexDepoPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <PageFaq faqs={faqs} />
       </main>
       <Footer />
       <StickyWhatsappCta />

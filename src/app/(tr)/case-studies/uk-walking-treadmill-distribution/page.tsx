@@ -134,7 +134,7 @@ const faqs = [
   },
   {
     q: "Discount store dağıtımı yapıyor musunuz?",
-    a: "Evet. İngiltere genelindeki discount store ve retail zincirlerine toplu sevkiyat ve dağıtım organizasyonu sağlıyoruz.",
+    a: "Evet. İngiltere genelindeki discount store ve retail zincirlerine toplu sevkiyat ve dağıtım organizasyonu yapıyoruz; büyük hacimli ürünler aynı Essex stoğundan online siparişlere de gönderilir.",
   },
   {
     q: "Online sipariş fulfillment desteği mevcut mu?",
@@ -142,7 +142,7 @@ const faqs = [
   },
   {
     q: "İngiltere geneline dağıtım sağlıyor musunuz?",
-    a: "Evet. Essex merkezli deposumuzdan İngiltere'nin tüm bölgelerine courier ve freight koordinasyonuyla dağıtım yapıyoruz.",
+    a: "Evet. Essex merkezli depomuzdan İngiltere'nin tüm bölgelerine kargo ve yük taşımacılığı koordinasyonuyla dağıtım yapıyoruz; büyük hacimli ürünler için palet veya özel taşıma planlanır.",
   },
   {
     q: "Hassas ürün depolama operasyonu mevcut mu?",

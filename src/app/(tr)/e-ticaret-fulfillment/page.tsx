@@ -1,3 +1,4 @@
+import PageFaq from "@/components/PageFaq";
 import Emoji from "@/components/visual/Emoji";
 import type { Metadata } from "next";
 import TrClusterNav from "@/components/TrClusterNav";
@@ -66,6 +67,15 @@ const features = [
   { icon: "📦", title: "Paketleme", desc: "Ürünlerin sevkiyata uygun şekilde paketlenmesi." },
   { icon: "🚚", title: "Sevkiyat", desc: "Hazır siparişlerin UK geneline sevki." },
   { icon: "↩️", title: "İade Yönetimi", desc: "Müşteri iadelerinin kabulü ve işlenmesi." },
+];
+
+
+const faqs = [
+  { q: "E-ticaret fulfillment nedir?", a: "E-ticaret fulfillment, online mağazanızın siparişlerinin bir depodan sizin yerinize karşılanmasıdır: stok tutulur, sipariş gelince ürün toplanır, paketlenir, etiketlenir ve müşteriye gönderilir. LondraDepo bunu Rayleigh, Essex'ten yapar." },
+  { q: "Hangi satış kanallarının siparişlerini karşılıyorsunuz?", a: "Shopify, Amazon (FBA hazırlık ve FBM), diğer pazaryerleri ve toptan siparişler aynı UK stoğundan karşılanabilir. Sipariş aktarımı ve entegrasyon kapsamı teklif öncesinde birlikte netleştirilir." },
+  { q: "E-ticaret fulfillment ne kadar tutar?", a: "Depolama haftalık palet başına £3,50 + KDV'den başlar. Pick & pack, ambalaj, kargo ve iade; ürün ölçünüze, aylık sipariş hacminize ve sipariş başına ürün sayınıza göre fiyatlandırılır." },
+  { q: "İadeler nasıl yönetiliyor?", a: "İade edilen ürünler Essex deposuna döner, kontrol edilir ve talimatınıza göre stoğa geri alınır ya da ayrılır. İade işleme ürün başına fiyatlandırılır." },
+  { q: "Stoğumu nasıl takip ederim?", a: "Stok ve siparişler Mintsoft WMS'te yönetilir; ürünler mal kabulde sisteme kaydedilir ve stok seviyeleri ile hareketleri size düzenli olarak raporlanır." },
 ];
 
 export default function ETicaretFulfillmentPage() {
@@ -140,6 +150,7 @@ export default function ETicaretFulfillmentPage() {
           </div>
         </section>
 
+        <PageFaq faqs={faqs} />
         <TrClusterNav path="/e-ticaret-fulfillment" />
         <CtaCards />
       </main>

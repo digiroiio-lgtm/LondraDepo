@@ -133,6 +133,7 @@ const faqs = [
     q: "UK ithalatı için hangi belgeler gerekiyor?",
     a: "UK ithalatı için genellikle: ticari fatura (commercial invoice), konşimento veya taşıma belgesi, ambalaj listesi (packing list) ve ürüne bağlı olarak ek belgeler gerekebilir. Bu konuda gümrük uzmanınızdan veya taşıyıcınızdan destek almanızı öneririz.",
   },
+  { q: "Türkiye'den İngiltere'ye taşıma şekli nasıl seçilir?", a: "Taşıma şekli hacminize, süre ihtiyacınıza ve bütçenize göre seçilir: deniz, kara veya intermodal. Arca Trade Group Türkiye–İngiltere hattında nakliye ve gümrüklemeyi birlikte planlayıp ürünleri Essex depomuza teslim eder." },
 ];
 
 export default function TurkiyeIngiltere() {

@@ -135,7 +135,7 @@ const faqs = [
   },
   {
     q: "Stok raporlaması yapılıyor mu?",
-    a: "Evet. Düzenli aralıklarla stok hareketi, düşük stok uyarısı ve sipariş özeti Türkçe olarak iletilmektedir.",
+    a: "Evet. Stok Mintsoft WMS'te tutulur; düzenli aralıklarla stok hareketi, düşük stok uyarısı ve sipariş özeti Türkçe olarak iletilir, böylece hangi kaplama malzemesinin ne zaman yenileneceğini planlarsınız.",
   },
 ];
 

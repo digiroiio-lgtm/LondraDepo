@@ -57,8 +57,11 @@ const faqs = [
   },
   {
     "q": "Amazon FBA prep hizmetiniz de var mı?",
-    "a": "Evet. Amazon FBA hazırlık hizmetimiz /amazon-prep-uk sayfamızda detaylı olarak anlatılmaktadır."
-  }
+    "a": "Evet. LondraDepo Essex'te Amazon FBA hazırlığı yapar: FNSKU etiketleme, ambalaj kontrolü ve koli hazırlığından sonra stok, sevkiyat planındaki Amazon UK deposuna teslim edilir. Ayrıntılar Amazon Prep UK sayfamızda."
+  },
+  { q: "Amazon FBA ile FBM arasındaki fark nedir?", a: "FBA'da stoğunuzu Amazon depolar ve gönderir; ürünler önce Amazon kurallarına göre hazırlanmalıdır. FBM'de siparişleri siz veya deponuz gönderir. LondraDepo ikisini de destekler: Essex'te FBA hazırlık ve FBM sipariş karşılama." },
+  { q: "Hazırlanan ürünleri Amazon UK depolarına gönderebilir misiniz?", a: "Evet. LondraDepo stoğunuzu Essex'te Amazon gerekliliklerine göre etiketler ve paketler, ardından sevkiyat planınızda atanan Amazon UK deposuna teslim eder." },
+  { q: "FBA ve FBM'yi aynı anda kullanabilir miyim?", a: "Evet. Stoğunuzun bir kısmını FBM ve diğer kanallar için LondraDepo'da tutup hazırlanmış partileri Amazon FBA'ya gönderebilirsiniz; böylece tek bir fulfillment modeline bağlı kalmazsınız." },
 ];
 
 const features = [

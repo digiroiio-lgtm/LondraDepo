@@ -28,12 +28,12 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    q: "Başka bir UK konumundan ürün toplayabilir misiniz?",
+    q: "Başka bir UK deposundan veya tedarikçiden ürün alıp depoya getirebilir misiniz?",
     a: "Evet. UK içindeki farklı konumlardan ürün toplama ve Essex depomuza getirme operasyonlarını koordine edebiliyoruz. Detaylar için WhatsApp üzerinden bilgi alın.",
   },
   {
     q: "İngiltere'nin tüm bölgelerine dağıtım yapıyor musunuz?",
-    a: "Evet. Essex merkezli operasyonumuzdan Londra, Birmingham, Manchester ve İngiltere geneline teslimat koordinasyonu sağlıyoruz.",
+    a: "Evet. Essex merkezli operasyonumuzdan Londra, Birmingham, Manchester ve İngiltere geneline palet ve koli teslimat koordinasyonu sağlıyoruz; düzenli B2B müşteriler için programlı teslimat da kurulabilir.",
   },
   {
     q: "UK içi dağıtım için minimum sevkiyat hacmi var mı?",
@@ -43,6 +43,7 @@ const faqs = [
     q: "Nakliye ve dağıtım fiyatlandırması nasıl belirleniyor?",
     a: "Fiyatlandırma sevkiyat hacmine, mesafeye ve hizmet kapsamına göre belirlenir. Bespoke fiyat teklifi için WhatsApp'tan yazın.",
   },
+  { q: "Palet ve koli teslimatı yapıyor musunuz?", a: "Evet. Essex'ten toptan ve ticari müşterilere palet teslimatı, online alıcılara koli teslimatı koordine ediyoruz; düzenli B2B müşteriler için programlı teslimatlar da kurulabilir." },
 ];
 
 const jsonLd = {

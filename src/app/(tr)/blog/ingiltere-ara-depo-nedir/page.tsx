@@ -1,3 +1,4 @@
+import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -58,27 +59,6 @@ const jsonLd = {
       mainEntityOfPage: { "@type": "WebPage", "@id": PAGE_URL },
       inLanguage: "tr-TR",
     },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "İngiltere ara depo ile normal depo arasındaki fark nedir?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Ara depo, ürünlerin kısa süreli (geçici) olarak stoklandığı ve buradan başka bir noktaya sevk edildiği transit depolama çözümüdür. Normal depoda ise ürünler uzun süreli tutulur ve sipariş bazlı dağıtım yapılır.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "İngiltere ara depo hizmeti hangi firmalar için uygundur?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Türkiye'den konteynerle toplu ürün gönderip bunları İngiltere içinde farklı noktalara dağıtmak isteyen firmalar, sezonluk stok yönetimi yapanlar ve UK ithalat sürecinde ürünlerini geçici olarak depolamak isteyenler için uygundur.",
-          },
-        },
-      ],
-    },
   ],
 };
 
@@ -89,11 +69,21 @@ const relatedArticles = [
   { href: "/blog/ingiltere-palet-depolama-maliyetleri", title: "İngiltere Palet Depolama Maliyetleri", category: "Depolama", readTime: "5 dk", categoryColor: "bg-green-50 text-green-700" },
 ];
 
+
+const faqs = [
+  { q: "İngiltere ara depo nedir?", a: "İngiltere ara depo (cross-dock veya transit depo), Türkiye'den gelen toplu yükün kısa süre tutulup ayrıştırıldığı, etiketlendiği ve UK içinde farklı adreslere ya da Amazon depolarına sevk edildiği noktadır. LondraDepo bunu Essex'te sunar." },
+  { q: "Ara depo ile normal depo arasındaki fark nedir?", a: "Normal depoda ürünler uzun süre stoklanır ve siparişler geldikçe gönderilir. Ara depoda amaç stoklamak değil, gelen yükü hızla ayırıp sevk etmektir; ürünler genellikle kısa süre kalır." },
+  { q: "Ara depo hangi firmalar için uygun?", a: "Büyük toplu gönderimlerle İngiltere'ye gelip daha küçük miktarlarda veya birden fazla adrese satan, ürünlerin stoklanmadan hızla dağıtılmasını isteyen firmalar için uygundur." },
+  { q: "Ara depo ile Amazon prep birlikte yapılabilir mi?", a: "Evet. Ara depoya gelen yük ayrıştırılırken Amazon'a gidecek kısmı FNSKU etiketleme ve ambalaj kontrolüyle hazırlanıp atanan Amazon UK deposuna gönderilebilir, kalan kısım müşterilere sevk edilir." },
+  { q: "Ara depodaki ürünlerin bir kısmı depolanabilir mi?", a: "Evet. LondraDepo'da teslimatın bir kısmı doğrudan sevk edilirken kalanı haftalık palet başına £3,50 + KDV'den depolanıp siparişler geldikçe gönderilebilir." },
+];
+
 export default function AraDepoNedirPage() {
   return (
     <>
       <Header />
       <main>
+        <FaqJsonLd faqs={faqs} />
         <nav aria-label="breadcrumb" className="bg-slate-50 border-b border-slate-200">
           <div className="max-w-6xl mx-auto px-4 py-2 text-sm text-slate-500 flex flex-wrap gap-2">
             <Link href="/" className="hover:text-[#0b2545] transition">Ana Sayfa</Link>
@@ -181,26 +171,12 @@ export default function AraDepoNedirPage() {
               <ArticleSources path="/blog/ingiltere-ara-depo-nedir" />
 
               <h2>Sık Sorulan Sorular</h2>
-
-              <h3>İngiltere ara depo ile normal depo arasındaki fark nedir?</h3>
-              <p>
-                Ara depo, ürünlerin kısa süreli (geçici) olarak stoklandığı ve buradan başka
-                bir noktaya sevk edildiği transit depolama çözümüdür. Normal depoda ise ürünler
-                uzun süreli tutulur ve sipariş bazlı dağıtım yapılır.
-              </p>
-
-              <h3>İngiltere ara depo hizmeti hangi firmalar için uygundur?</h3>
-              <p>
-                Türkiye&apos;den konteynerle toplu ürün gönderip bunları İngiltere içinde farklı
-                noktalara dağıtmak isteyen firmalar, sezonluk stok yönetimi yapanlar ve UK
-                ithalat sürecinde ürünlerini geçici olarak depolamak isteyenler için uygundur.
-              </p>
-
-              <h3>Ara depo ile Amazon prep birlikte kullanılabilir mi?</h3>
-              <p>
-                Evet. Ürünleriniz Essex deposumuza geldiğinde hem ara depo hem Amazon prep
-                süreçleri aynı operasyon içinde yönetilebilir.
-              </p>
+              {faqs.map((f) => (
+                <div key={f.q}>
+                  <h3>{f.q}</h3>
+                  <p>{f.a}</p>
+                </div>
+              ))}
             </div>
 
             <div className="bg-[#0b2545] text-white rounded-2xl p-8 my-10 text-center">

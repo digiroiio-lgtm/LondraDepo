@@ -1,3 +1,4 @@
+import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -58,27 +59,6 @@ const jsonLd = {
       mainEntityOfPage: { "@type": "WebPage", "@id": PAGE_URL },
       inLanguage: "tr-TR",
     },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "Amazon FBA yerine 3PL fulfillment kullanmanın avantajı nedir?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "3PL fulfillment ile Amazon dışı kanalları da (web sitesi, Etsy, B2B müşteriler) tek depodan yönetebilir, paketleme markanızı özelleştirebilir ve Amazon'un uzun süreli depolama ücretlerinden kaçınabilirsiniz.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Amazon FBA ve UK 3PL fulfillment birlikte kullanılabilir mi?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. Hibrit model: ürünlerin bir kısmını Amazon FBA'de, diğerlerini 3PL fulfillment üzerinden yönetmek hem maliyet hem erişim açısından avantaj sağlayabilir.",
-          },
-        },
-      ],
-    },
   ],
 };
 
@@ -89,11 +69,21 @@ const relatedArticles = [
   { href: "/blog/ingiltere-depo-rehberi", title: "İngiltere Depo Hizmeti: Kapsamlı Rehber", category: "Depolama", readTime: "6 dk", categoryColor: "bg-green-50 text-green-700" },
 ];
 
+
+const faqs = [
+  { q: "Amazon FBA yerine 3PL fulfillment kullanmanın avantajı nedir?", a: "3PL ile tek bir UK stoğu web siteniz, pazaryerleri ve toptan müşterileriniz dahil tüm kanallara hizmet verir; ambalaj, iade ve stok kontrolü sizde kalır. Sadece Amazon'a bağlı kalmazsınız." },
+  { q: "Amazon FBA ne zaman daha iyi seçenek?", a: "Ağırlıklı olarak Amazon'da satıyorsanız ve Amazon'un kendi ağı üzerinden Prime rozetini istiyorsanız FBA güçlü bir seçenektir. Stoğun Amazon'a gönderilmeden önce Amazon kurallarına göre hazırlanması gerekir." },
+  { q: "Amazon FBA ve UK 3PL birlikte kullanılabilir mi?", a: "Evet. Ana stoğu UK 3PL deposunda tutup Amazon FBA'ya ihtiyaç kadar hazırlanmış parti gönderebilirsiniz; diğer kanalların siparişleri aynı depodan karşılanır." },
+  { q: "LondraDepo Amazon prep hizmeti veriyor mu?", a: "Evet. LondraDepo Essex'te FNSKU etiketleme, ambalaj kontrolü ve koli hazırlığı yapar ve stoğu sevkiyat planındaki Amazon UK deposuna teslim eder. LondraDepo resmi Amazon partneri değildir." },
+  { q: "FBA ve 3PL maliyetleri nasıl karşılaştırılır?", a: "Kendi ürünleriniz ve hacminiz için toplam maliyeti karşılaştırın: depolama, hazırlık, sipariş başına gönderim ve iade. LondraDepo'da depolama haftalık palet başına £3,50 + KDV'den başlar; diğer kalemler tekliflendirilir." },
+];
+
 export default function FbaVsFulfillmentPage() {
   return (
     <>
       <Header />
       <main>
+        <FaqJsonLd faqs={faqs} />
         <nav aria-label="breadcrumb" className="bg-slate-50 border-b border-slate-200">
           <div className="max-w-6xl mx-auto px-4 py-2 text-sm text-slate-500 flex flex-wrap gap-2">
             <Link href="/" className="hover:text-[#0b2545] transition">Ana Sayfa</Link>
@@ -195,26 +185,12 @@ export default function FbaVsFulfillmentPage() {
               <ArticleSources path="/blog/amazon-fba-vs-uk-fulfillment" />
 
               <h2>Sık Sorulan Sorular</h2>
-
-              <h3>Amazon FBA yerine 3PL fulfillment kullanmanın avantajı nedir?</h3>
-              <p>
-                3PL fulfillment ile Amazon dışı kanalları da (web sitesi, Etsy, B2B müşteriler)
-                tek depodan yönetebilir, paketleme markanızı özelleştirebilir ve Amazon&apos;un
-                uzun süreli depolama ücretlerinden kaçınabilirsiniz.
-              </p>
-
-              <h3>Amazon FBA ve UK 3PL fulfillment birlikte kullanılabilir mi?</h3>
-              <p>
-                Evet. Hibrit model: ürünlerin bir kısmını Amazon FBA&apos;de, diğerlerini
-                3PL fulfillment üzerinden yönetmek hem maliyet hem erişim açısından avantaj
-                sağlayabilir.
-              </p>
-
-              <h3>LondraDepo.com Amazon prep yapıyor mu?</h3>
-              <p>
-                Evet. Amazon FBA&apos;ye hazırlık (etiketleme, ambalaj, polybag vb.) hizmetini
-                3PL fulfillment operasyonumuzla entegre olarak sunuyoruz.
-              </p>
+              {faqs.map((f) => (
+                <div key={f.q}>
+                  <h3>{f.q}</h3>
+                  <p>{f.a}</p>
+                </div>
+              ))}
             </div>
 
             <div className="bg-[#0b2545] text-white rounded-2xl p-8 my-10 text-center">

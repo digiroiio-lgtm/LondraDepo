@@ -94,15 +94,15 @@ const services = [
 const faqs = [
   {
     q: "Türkiye'den ürünlerimi İngiltere deposuna gönderebilir miyim?",
-    a: "Evet. Türkiye'deki tedarikçinizden veya üretim noktanızdan ürünlerinizi doğrudan depo adresimize gönderebilirsiniz.",
+    a: "Evet. Türkiye'deki tedarikçinizden veya üretim noktanızdan ürünlerinizi doğrudan Rayleigh, Essex'teki depo adresimize gönderebilirsiniz; nakliye ve UK gümrüklemesi Arca Trade Group üzerinden yapılabilir.",
   },
   {
     q: "İngiltere'de kendi depomu kurmadan satış yapabilir miyim?",
-    a: "Evet. LondraDepo aracılığıyla kendi depo yatırımı yapmadan UK depolama ve fulfillment altyapısından yararlanabilirsiniz.",
+    a: "Evet. LondraDepo ile kira, personel ve yazılım yatırımı yapmadan UK depolama ve fulfillment altyapısını kullanırsınız; depolama haftalık palet başına £3,50 + KDV'den başlar.",
   },
   {
     q: "Shopify ve Amazon üzerinden satış yapıyorum. Destek sağlıyor musunuz?",
-    a: "Evet. Shopify ve Amazon üzerinden satış yapan işletmeler için fulfillment desteği sunuyoruz.",
+    a: "Evet. Shopify siparişleri, Amazon FBM siparişleri ve Amazon FBA'ya gidecek hazırlanmış partiler aynı UK stoğundan karşılanabilir; sipariş aktarımı ve entegrasyon kapsamı teklif öncesinde netleştirilir.",
   },
   {
     q: "Gümrükleme konusunda yardımcı olabilir misiniz?",

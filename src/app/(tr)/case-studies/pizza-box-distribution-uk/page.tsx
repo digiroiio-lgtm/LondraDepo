@@ -118,11 +118,11 @@ const faqs = [
   },
   {
     q: "Minimum sipariş miktarı var mı?",
-    a: "Palet bazlı operasyonlarda minimum hacim gereksinimi değişkenlik gösterebilir. İhtiyaçlarınızı paylaşırsanız size özel model oluşturabiliriz.",
+    a: "Sabit bir minimum yok. Palet bazlı operasyonlar tek tek değerlendirilir; tahmini palet sayınızı ve sipariş düzeninizi paylaşırsanız size özel depolama ve dağıtım modeli oluşturabiliriz.",
   },
   {
     q: "UK gıda sektörü distribütörleri için özel çözüm sunuyor musunuz?",
-    a: "Evet. Restoran tedarik zinciri ve FMCG B2B dağıtımı konusunda deneyimli operasyon ekibimiz mevcuttur.",
+    a: "Evet. Restoran tedarik zinciri ve FMCG B2B dağıtımı için paletli UK stoğu, müşteri bazlı sabit teslimat programları, lot bazlı stok kaydı ve düşük stok uyarıları sunuyoruz.",
   },
 ];
 

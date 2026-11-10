@@ -386,7 +386,7 @@ export const corePages: EnPage[] = [
       { q: "How much does pick and pack cost in the UK?", a: "Pick and pack is charged per order and depends on the product, the number of items per order and the packaging. Share your monthly order volume for a tailored quote." },
       { q: "What information do you need for a quote?", a: "Product type, estimated pallets or cartons, monthly order volume, the services you need and your sales channels such as Shopify, Amazon or wholesale." },
     ],
-    related: ["/en/uk-storage-cost-calculator", "/en/pallet-storage", "/en/pick-and-pack", "/en/blog/uk-warehousing-prices-2026", "/en/blog/uk-pallet-storage-costs"],
+    related: ["/en/blog/uk-import-costs", "/en/uk-storage-cost-calculator", "/en/pallet-storage", "/en/pick-and-pack", "/en/blog/uk-warehousing-prices-2026", "/en/blog/uk-pallet-storage-costs"],
     cta: { h2: "Get a tailored quote", text: "Send us your product type, pallet or carton count, monthly orders and sales channels." },
   },
 ];

@@ -1,5 +1,6 @@
 import FaqJsonLd from "@/components/FaqJsonLd";
 import TrClusterNav from "@/components/TrClusterNav";
+import QuoteForm from "@/components/QuoteForm";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -12,9 +13,9 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20Shopify%20için%2
 const TEL = "tel:+447554195190";
 
 export const metadata: Metadata = {
-  title: "Shopify İçin İngiltere Depo ve Sipariş Karşılama | LondraDepo.com",
+  title: "Shopify İngiltere Depo ve Fulfillment | LondraDepo",
   description:
-    "Shopify mağazanız için İngiltere'de stok depolama ve sipariş karşılama. Ürünlerinizi UK depomuzda saklayın, siparişleri ekibimiz karşılasın.",
+    "Shopify mağazanız için İngiltere fulfillment: stoğunuz Essex depomuzda, siparişleri toplayıp paketleyip UK müşterilerinize gönderiyor, iadeleri işliyoruz. Depolama palet başına haftalık £3,50 + KDV'den.",
   keywords: [
     "ingiltere shopify depo",
     "shopify sipariş karşılama ingiltere",
@@ -94,7 +95,11 @@ const faqs = [
   },
   {
     q: "UK Shopify deposu ne kadar tutar?",
-    a: "Fiyat; depolanan ürün miktarı, aylık sipariş hacmi ve gereken hizmetlere göre belirlenir. WhatsApp üzerinden özel teklif alabilirsiniz.",
+    a: "Depolama palet başına haftalık £3,50 + KDV'den başlar. Mal kabul, pick & pack, kargo ve iade; ürün ölçünüze ve aylık sipariş hacminize göre ayrıca fiyatlandırılır.",
+  },
+  {
+    q: "Shopify ve Amazon siparişlerini aynı stoktan karşılayabilir misiniz?",
+    a: "Evet. Aynı UK stoğu Shopify siparişlerine, Amazon FBA hazırlığına veya FBM siparişlerine ve toptan palet siparişlerine hizmet verebilir; her kanal için ayrı depo gerekmez.",
   },
   {
     q: "Shopify mağazam Türkiye'de kayıtlı, UK'e satış yapabilir miyim?",
@@ -129,9 +134,9 @@ export default function ShopifyIngiltereDepo() {
               ve Sipariş Karşılama
             </h1>
             <p className="text-slate-300 text-lg leading-relaxed max-w-3xl mb-4">
-              Shopify mağazanızdan gelen UK siparişlerini kendi deponuzu kurmadan karşılayın.
-              Ürünleriniz Essex depomuzda; sipariş geldiğinde depo ekibimiz
-              toplar, paketler ve müşterinize gönderir.
+              Shopify için İngiltere fulfillment, stoğunuzun bir UK deposunda tutulup Shopify siparişlerinizin sizin yerinize
+              gönderilmesidir. LondraDepo bunu Rayleigh, Essex&apos;ten yapar: ürünlerinizi teslim alıp depolar, her siparişi toplar,
+              paketler, UK müşterinize gönderir ve iadeleri işler. Depolama palet başına haftalık £3,50 + KDV&apos;den başlar.
             </p>
             <p className="text-slate-400 text-sm mb-8">
               Not: LondraDepo, Shopify&apos;ın resmi partneri değildir.
@@ -151,6 +156,12 @@ export default function ShopifyIngiltereDepo() {
                 className="inline-flex items-center justify-center gap-2 border border-white/30 hover:bg-white/10 text-white font-bold px-8 py-4 rounded-full transition"
               >
                 Hemen Ara
+              </a>
+              <a
+                href="#teklif"
+                className="inline-flex items-center justify-center gap-2 bg-white text-[#0b2545] hover:bg-slate-100 font-bold px-8 py-4 rounded-full transition"
+              >
+                Online Teklif Formu
               </a>
             </div>
           </div>
@@ -200,6 +211,58 @@ export default function ShopifyIngiltereDepo() {
         </section>
 
         {/* CTA dark */}
+        {/* Cost + location + proof */}
+        <section className="py-16 px-4 bg-[#f6f8fb]">
+          <div className="max-w-5xl mx-auto grid gap-10 lg:grid-cols-2">
+            <div>
+              <h2 className="text-2xl font-extrabold text-[#0b2545] mb-3">Shopify fulfillment İngiltere&apos;de ne kadar tutar?</h2>
+              <p className="text-slate-600 mb-4">Yayımlanmış tek fiyat depolamadır; diğer kalemler ürününüze ve sipariş yapınıza göre tekliflendirilir.</p>
+              <div className="overflow-x-auto rounded-xl border border-slate-200 bg-white">
+                <table className="w-full text-sm text-left">
+                  <thead className="bg-slate-100 text-[#0b2545]">
+                    <tr><th scope="col" className="px-4 py-3">Kalem</th><th scope="col" className="px-4 py-3">LondraDepo&apos;da fiyatlandırma</th></tr>
+                  </thead>
+                  <tbody>
+                    {[
+                      ["Depolama", "Palet başına haftalık £3,50 + KDV'den (10 palet 4 hafta: £140 + KDV)"],
+                      ["Mal kabul", "Teslimat başına: palet, koli veya konteyner boşaltma"],
+                      ["Pick & pack", "Sipariş ve ürün başına, ölçü ve ambalaja göre"],
+                      ["UK kargo", "Paket ölçüsü, ağırlığı ve servis seviyesine göre"],
+                      ["İade", "İade edilen ürün başına"],
+                    ].map((r) => (
+                      <tr key={r[0]} className="border-t border-slate-200">
+                        <th scope="row" className="px-4 py-3 font-medium text-slate-800">{r[0]}</th>
+                        <td className="px-4 py-3 text-slate-700">{r[1]}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-xs text-slate-500 mt-2">
+                Depolamayı hesaplayın: <Link href="/ingiltere-depo-maliyet-hesaplama" className="underline">Depo Maliyet Hesaplama</Link>
+              </p>
+            </div>
+            <div>
+              <h2 className="text-2xl font-extrabold text-[#0b2545] mb-3">Neden Shopify siparişlerini Essex&apos;ten göndermeli?</h2>
+              <p className="text-slate-600 leading-relaxed mb-3">
+                Rayleigh, DP World London Gateway&apos;e 13 mil, Tilbury Limanı&apos;na 16 mil ve Londra merkezine 37 mil uzaklıktadır; A127 ve
+                M25 bağlantılıdır. İthal stok depoya kısa sürede ulaşır, paketler Londra ve Güneydoğu&apos;ya hizmet veren UK kargo ağlarıyla çıkar.
+              </p>
+              <p className="text-slate-600 leading-relaxed mb-4">
+                İngiltere&apos;de alışveriş büyük ölçüde online: Office for National Statistics&apos;e göre 2026&apos;da perakende satışların yaklaşık %28&apos;i
+                internetten yapıldı (
+                <a href="https://www.ons.gov.uk/businessindustryandtrade/retailindustry/timeseries/j4mc" target="_blank" rel="noopener noreferrer" className="underline">ONS, J4MC</a>
+                ). Stoğu UK&apos;de tutmak, Shopify mağazanıza yurt içi teslimat süreleri ve kolay iade sunma imkânı verir.
+              </p>
+              <Link href="/case-studies/cruyff-uk-fulfillment" className="block bg-white border border-slate-200 rounded-2xl p-5 hover:border-[#0b2545] transition">
+                <span className="text-xs font-semibold text-[#e63946]">Operasyon örneği</span>
+                <span className="block font-bold text-[#0b2545] mt-1">Cruyff: İngiltere moda fulfillment</span>
+                <span className="block text-slate-600 text-sm mt-1">Hollanda&apos;dan İngiltere&apos;ye geçiş; depolama, repackaging ve e-ticaret fulfillment, UK içi 2 gün teslimat.</span>
+              </Link>
+            </div>
+          </div>
+        </section>
+
         <section className="py-16 px-4 bg-[#0b2545] text-white">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-2xl font-extrabold mb-4">
@@ -278,6 +341,12 @@ export default function ShopifyIngiltereDepo() {
             </div>
           </div>
         </section>
+        <QuoteForm
+          formId="tr_shopify_quote"
+          heading="Shopify Fulfillment Teklifi Alın"
+          intro="Aylık sipariş sayınızı, ürün (SKU) sayınızı ve ürün ölçülerinizi yazın; depolama, pick & pack ve UK kargoyu operasyonunuza göre fiyatlandıralım."
+          presetServices={["E-Ticaret Fulfillment", "Pick & Pack"]}
+        />
         <TrClusterNav path="/shopify-ingiltere-depo" />
       </main>
       <Footer />

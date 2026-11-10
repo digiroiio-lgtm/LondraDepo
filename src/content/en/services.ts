@@ -63,7 +63,7 @@ export const servicePages: EnPage[] = [
       { q: "What are your UK warehouse prices?", a: "Standard pallet storage starts from £3.50 + VAT per pallet per week. Handling, loading and unloading, re-palletising, customs coordination and distribution are quoted according to the scope of the operation." },
       { q: "Do you only store goods, or fulfil orders too?", a: "Both. We offer storage and full order fulfilment: when an order arrives we pick, pack, label and dispatch it to your UK customer." },
     ],
-    related: ["/en/storage-services", "/en/pallet-storage", "/en/container-unloading", "/en/uk-import-logistics", "/en/ecommerce-fulfilment", "/en/essex-warehouse", "/en/uk-warehousing-pricing"],
+    related: ["/en/blog/how-to-choose-a-uk-3pl", "/en/storage-services", "/en/pallet-storage", "/en/container-unloading", "/en/uk-import-logistics", "/en/ecommerce-fulfilment", "/en/essex-warehouse", "/en/uk-warehousing-pricing"],
     cta: { h2: "Sell in the UK without your own warehouse", text: "Use our ready-made warehouse and team, and focus on sales." },
   },
   {
@@ -398,7 +398,7 @@ export const servicePages: EnPage[] = [
       { q: "Do you support Amazon FBA?", a: "Yes. Through our Amazon prep service we make products FBA-compliant, label them and dispatch them to the Amazon fulfilment centre." },
       { q: "Is there a minimum stock level for fulfilment?", a: "There is no fixed minimum stock requirement. We offer flexible solutions based on your needs." },
     ],
-    related: ["/en/pallet-storage", "/en/amazon-prep-uk", "/en/uk-warehousing-benefits", "/en/blog/what-is-uk-fulfilment"],
+    related: ["/en/blog/how-to-choose-a-uk-3pl", "/en/pallet-storage", "/en/amazon-prep-uk", "/en/uk-warehousing-benefits", "/en/blog/what-is-uk-fulfilment"],
   },
   {
     slug: "/en/pallet-storage",
@@ -488,7 +488,7 @@ export const servicePages: EnPage[] = [
       { q: "Which Amazon marketplaces do you serve?", a: "Our main focus is prep and dispatch for Amazon UK (amazon.co.uk). We also provide support for Amazon EU marketplaces." },
       { q: "Do you do FNSKU labelling?", a: "Yes. The FNSKU and barcode labelling Amazon requires is part of our service." },
     ],
-    related: ["/en/blog/amazon-prep-uk-guide", "/en/amazon-seller-warehousing-uk", "/en/amazon-fulfilment-uk", "/en/essex-warehouse"],
+    related: ["/en/blog/amazon-fba-prep-checklist", "/en/blog/amazon-prep-uk-guide", "/en/amazon-seller-warehousing-uk", "/en/amazon-fulfilment-uk", "/en/essex-warehouse"],
   },
   {
     slug: "/en/storage-services",
@@ -563,7 +563,7 @@ export const servicePages: EnPage[] = [
       { q: "Is LondraDepo a bonded or customs warehouse?", a: "No. LondraDepo is not an HMRC-authorised customs warehouse. Goods are stored after they have been cleared for free circulation in the UK." },
       { q: "How are goods received after customs?", a: "Once clearance is complete, your goods are delivered to our warehouse address, counted and booked into the warehouse system." },
     ],
-    related: ["/en/uk-import-logistics", "/en/blog/uk-importing-guide", "/en/container-unloading", "/en/uk-warehousing", "/en/essex-warehouse"],
+    related: ["/en/blog/uk-import-costs", "/en/uk-import-logistics", "/en/blog/uk-importing-guide", "/en/container-unloading", "/en/uk-warehousing", "/en/essex-warehouse"],
   },
   {
     slug: "/en/cargo-handling",

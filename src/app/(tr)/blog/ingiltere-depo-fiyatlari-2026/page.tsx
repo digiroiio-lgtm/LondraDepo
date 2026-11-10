@@ -19,14 +19,14 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20depo%20maliyet%20
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "İngiltere Depo Fiyatları 2026 | UK Palet Depolama Maliyeti | LondraDepo.com",
+  title: "İngiltere Depo Fiyatları 2026: Palet £3,50/Hafta | LondraDepo",
   description:
-    "İngiltere depo fiyatları 2026: palet depolama, fulfillment ve Amazon prep maliyetleri. UK warehouse ücret yapısı ve bütçe planlaması rehberi.",
+    "UK depo fiyatları 2026: palet depolama haftalık £3,50 + KDV'den, 10 palet 4 hafta £140 + KDV. Mal kabul, pick & pack ve teslimat kalemleri, ücretsiz hesaplayıcı.",
   alternates: trAlternates("/blog/ingiltere-depo-fiyatlari-2026"),
   openGraph: {
-    title: "İngiltere Depo Fiyatları 2026 | LondraDepo.com",
+    title: "İngiltere Depo Fiyatları 2026: Palet £3,50/Hafta",
     description:
-      "UK palet depolama, fulfillment ve Amazon prep maliyetleri. İngiltere depo ücret yapısı ve bütçe planlaması.",
+      "Palet depolama haftalık £3,50 + KDV'den. Maliyet kalemleri, örnek hesap ve ücretsiz hesaplayıcı.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
     locale: "tr_TR",

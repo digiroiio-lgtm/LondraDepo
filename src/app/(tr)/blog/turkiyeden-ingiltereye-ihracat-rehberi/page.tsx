@@ -20,13 +20,13 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20ihracat%20operasy
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Türkiye'den İngiltere'ye İhracat Rehberi 2026 | UK Operasyon Altyapısı | LondraDepo.com",
+  title: "Türkiye'den İngiltere'ye İhracat 2026: EORI, GTİP, KDV",
   description:
-    "Türkiye'den İngiltere'ye ihracat süreçleri, gümrük, GTIP, nakliye ve UK'da operasyon kurma rehberi 2026. Türk ihracatçılar için kapsamlı bilgi kaynağı.",
+    "İngiltere'ye ihracatı adım adım planlayın: GB EORI, GTİP, CDS beyannamesi, menşe beyanı ve %20 ithalat KDV'si. Ücretsiz PDF kontrol listesini indirin.",
   alternates: trAlternates("/blog/turkiyeden-ingiltereye-ihracat-rehberi"),
   openGraph: {
-    title: "Türkiye'den İngiltere'ye İhracat Rehberi 2026 | LondraDepo.com",
-    description: "İngiltere ihracat süreçleri, gümrük ve UK'da depo operasyonu kurma rehberi.",
+    title: "Türkiye'den İngiltere'ye İhracat 2026: Adım Adım Rehber",
+    description: "GB EORI, GTİP, CDS beyannamesi, menşe beyanı ve ithalat KDV'si. Ücretsiz PDF kontrol listesi.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
     locale: "tr_TR",

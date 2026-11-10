@@ -11,7 +11,8 @@ const nextConfig = {
     return [
       // Retired URLs go straight to the canonical www target, so apex requests also take a single hop.
       { source: "/uk-warehousing-fulfilment", destination: "https://www.londradepo.com/en", statusCode: 301 },
-      { source: "/shopify-fulfillment", destination: "https://www.londradepo.com/shopify-ingiltere-depo", statusCode: 301 },
+      // English "shopify fulfillment uk" demand (GSC) goes to the English page, not the Turkish one.
+      { source: "/shopify-fulfillment", destination: "https://www.londradepo.com/en/shopify-fulfilment-uk", statusCode: 301 },
       // Canonical host is www (see src/lib/site.ts). Apex requests go to www with a permanent 308.
       {
         source: "/:path*",

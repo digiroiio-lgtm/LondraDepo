@@ -12,13 +12,13 @@ import QuoteForm from "@/components/QuoteForm";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20depolama%20hizmeti%20hakkında%20bilgi%20almak%20istiyorum.";
 
 export const metadata: Metadata = {
-  title: "İngiltere Depolama Hizmeti | Palet & Koli Depolama, Mintsoft WMS | LondraDepo.com",
+  title: "İngiltere Depolama: Palet & Koli, £3,50/Palet | LondraDepo",
   description:
-    "UK depolama detayları: palet ve koli kabulü, Mintsoft WMS ile gerçek zamanlı stok takibi, FCL konteyner boşaltma, kısa ve uzun vadeli depo. Essex.",
+    "Essex'te palet ve koli depolama: mal kabul, FCL konteyner boşaltma, Mintsoft WMS ile gerçek zamanlı stok takibi, kısa ve uzun vadeli depo. Haftalık £3,50 + KDV'den.",
   alternates: trAlternates("/depolama"),
   openGraph: {
-    title: "İngiltere Depolama Hizmeti | LondraDepo.com",
-    description: "UK depolama çözümleri. Kısa/uzun vadeli depo, palet ve koli kabulü, stok yönetimi.",
+    title: "İngiltere Depolama: Palet ve Koli Depolama",
+    description: "Essex'te palet ve koli depolama, Mintsoft WMS stok takibi, konteyner boşaltma. Haftalık £3,50 + KDV'den.",
     url: `${SITE_URL}/depolama`,
     siteName: "LondraDepo.com",
     locale: "tr_TR",

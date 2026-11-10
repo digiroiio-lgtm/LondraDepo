@@ -14,9 +14,9 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20İngiltere%20depo
 const TEL = "tel:+447554195190";
 
 export const metadata: Metadata = {
-  title: "İngiltere Depo Hizmeti | UK Depolama | LondraDepo.com",
+  title: "İngiltere Depo Hizmeti | Essex, Londra Yakını | LondraDepo",
   description:
-    "Essex merkezli İngiltere depo hizmeti: mal kabul, palet/koli depolama, Mintsoft WMS, sipariş karşılama, pick & pack ve UK dağıtım. Teklif için WhatsApp.",
+    "İngiltere depo hizmeti: Rayleigh, Essex'te mal kabul, palet ve koli depolama, Mintsoft WMS stok takibi, pick & pack ve UK dağıtım. Palet depolama haftalık £3,50 + KDV'den. Türkçe destek.",
   keywords: [
     "ingiltere depo",
     "ingiltere depo hizmeti",
@@ -63,6 +63,17 @@ const jsonLd = {
         "İngiltere'de ürün depolama, mal kabul, palet ve koli depolama, stok yönetimi, sipariş karşılama ve UK dağıtım hizmeti.",
       areaServed: { "@type": "Country", name: "United Kingdom" },
       url: `${SITE_URL}/ingiltere-depo`,
+      offers: {
+        "@type": "Offer",
+        priceCurrency: "GBP",
+        priceSpecification: {
+          "@type": "UnitPriceSpecification",
+          price: 3.5,
+          priceCurrency: "GBP",
+          valueAddedTaxIncluded: false,
+          unitText: "palet başına haftalık",
+        },
+      },
     },
   ],
 };
@@ -86,6 +97,14 @@ const whoWeServe = [
 ];
 
 const faqs = [
+  {
+    q: "İngiltere'deki depo nerede, limanlara ne kadar uzak?",
+    a: "Depomuz Unit 19 Arterial Park, Rayleigh, Essex SS6 7FY adresindedir. Karayoluyla DP World London Gateway'e yaklaşık 13 mil, Tilbury Limanı'na 16 mil, Londra merkezine 37 mil ve Felixstowe Limanı'na 62 mil uzaklıktadır.",
+  },
+  {
+    q: "İngiltere depoya az ürünle başlanabilir mi?",
+    a: "Evet. Operasyon örneklerimizdeki tortilla üreticisi İngiltere'ye 1 paletle başladı ve bugün aylık 6 × 40HC konteyner hacmine ulaştı. Ürününüzü ve tahmini hacminizi yazın, size uygun teklifi hazırlayalım.",
+  },
   {
     q: "İngiltere depo hizmetiniz hangi bölgelere hizmet veriyor?",
     a: "Essex merkezli depomuz İngiltere geneline hizmet vermektedir. Londra başta olmak üzere Birmingham, Manchester ve tüm UK'e dağıtım koordinasyonu sağlıyoruz.",
@@ -129,8 +148,9 @@ export default function IngiltereDepoPage() {
               <span className="text-red-400">Depolama Hizmeti</span>
             </h1>
             <p className="text-slate-300 text-lg md:text-xl leading-relaxed mb-8 max-w-3xl mx-auto">
-              Ürünlerinizi İngiltere'ye gönderin, depolamasını ve operasyonunu bize bırakın. Mal kabulünden
-              stok yönetimine, sipariş karşılamadan UK dağıtımına kadar tam operasyon altyapısı.
+              İngiltere depo hizmeti, ürünlerinizin UK&apos;de teslim alınıp depolandığı ve siparişlerinizin buradan
+              gönderildiği hazır altyapıdır. LondraDepo bunu Rayleigh, Essex&apos;teki deposundan yapar: mal kabul, palet ve
+              koli depolama, Mintsoft WMS stok takibi, pick &amp; pack ve UK dağıtım. Palet depolama haftalık £3,50 + KDV&apos;den başlar.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <a
@@ -146,6 +166,12 @@ export default function IngiltereDepoPage() {
                 className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold px-8 py-4 rounded-full text-base transition"
               >
                 📞 Hemen Arayın
+              </a>
+              <a
+                href="#teklif"
+                className="inline-flex items-center justify-center gap-2 bg-white text-[#0b2545] hover:bg-slate-100 font-semibold px-8 py-4 rounded-full text-base transition"
+              >
+                Online Teklif Formu
               </a>
             </div>
             <p className="text-slate-400 text-sm">
@@ -206,6 +232,118 @@ export default function IngiltereDepoPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* At a glance: location, price, proof */}
+        <section className="py-16 px-4 bg-white border-t border-slate-100">
+          <div className="max-w-6xl mx-auto grid gap-10 lg:grid-cols-2">
+            <div>
+              <h2 className="text-2xl font-extrabold text-[#0b2545] mb-3">İngiltere depo limanlara ne kadar uzak?</h2>
+              <p className="text-slate-600 mb-4">
+                Depomuz Londra&apos;nın doğusunda, A127 ve M25 bağlantılı Rayleigh, Essex&apos;tedir. Konteyner limanlarına yakın olduğu için
+                ithal ürünler kısa sürede depoya ulaşır.
+              </p>
+              <div className="overflow-x-auto rounded-xl border border-slate-200">
+                <table className="w-full text-sm text-left">
+                  <thead className="bg-slate-100 text-[#0b2545]">
+                    <tr><th scope="col" className="px-4 py-3">Varış noktası</th><th scope="col" className="px-4 py-3">Karayolu</th><th scope="col" className="px-4 py-3">Süre</th></tr>
+                  </thead>
+                  <tbody>
+                    {[
+                      ["DP World London Gateway", "13 mil / 21 km", "~20 dk"],
+                      ["Tilbury Limanı", "16 mil / 26 km", "~20 dk"],
+                      ["Londra merkezi", "37 mil / 59 km", "~1 saat"],
+                      ["Felixstowe Limanı", "62 mil / 99 km", "~1 saat 15 dk"],
+                    ].map((r) => (
+                      <tr key={r[0]} className="border-t border-slate-200">
+                        <th scope="row" className="px-4 py-3 font-medium text-slate-800">{r[0]}</th>
+                        <td className="px-4 py-3 text-slate-700">{r[1]}</td>
+                        <td className="px-4 py-3 text-slate-700">{r[2]}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-xs text-slate-500 mt-2">
+                SS6 7FY&apos;den karayolu rotasıyla ölçülmüştür (Kasım 2026); trafiksiz araç süreleri. Konteyner planı için{" "}
+                <Link href="/konteyner-varis-planlayici" className="underline">Konteyner Varış Planlayıcı</Link>.
+              </p>
+            </div>
+            <div>
+              <h2 className="text-2xl font-extrabold text-[#0b2545] mb-3">İngiltere depo fiyatı ne kadar?</h2>
+              <p className="text-slate-600 mb-4">
+                Standart palet depolama haftalık palet başına <strong>£3,50 + KDV</strong>&apos;den başlar. Mal kabul, elleçleme, pick &amp; pack,
+                gümrükleme ve teslimat ürün ve sipariş yapınıza göre ayrıca fiyatlandırılır.
+              </p>
+              <div className="overflow-x-auto rounded-xl border border-slate-200">
+                <table className="w-full text-sm text-left">
+                  <thead className="bg-slate-100 text-[#0b2545]">
+                    <tr><th scope="col" className="px-4 py-3">Örnek</th><th scope="col" className="px-4 py-3">Depolama (KDV hariç)</th></tr>
+                  </thead>
+                  <tbody>
+                    {[
+                      ["5 palet × 4 hafta", "£70"],
+                      ["10 palet × 4 hafta", "£140"],
+                      ["20 palet × 4 hafta", "£280"],
+                    ].map((r) => (
+                      <tr key={r[0]} className="border-t border-slate-200">
+                        <th scope="row" className="px-4 py-3 font-medium text-slate-800">{r[0]}</th>
+                        <td className="px-4 py-3 text-slate-700">{r[1]}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-xs text-slate-500 mt-2">
+                Kendi hacminizi hesaplayın: <Link href="/ingiltere-depo-maliyet-hesaplama" className="underline">Depo Maliyet Hesaplama</Link> ·
+                detaylı fiyat kalemleri: <Link href="/ingiltere-depo-fiyatlari" className="underline">İngiltere Depo Fiyatları</Link>
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Proof: case studies */}
+        <section className="py-16 px-4 bg-[#f6f8fb]">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-2xl font-extrabold text-[#0b2545] mb-2 text-center">İngiltere depomuzda çalışan markalar</h2>
+            <p className="text-slate-600 text-center mb-8">Gerçek operasyonlardan örnekler: ürün kabulünden UK dağıtımına.</p>
+            <div className="grid gap-5 sm:grid-cols-3">
+              {[
+                { href: "/case-studies/tortilla-uk-distribution", tag: "Gıda / FMCG", title: "Tortilla markası", text: "1 paletle başladı, bugün aylık 6 × 40HC konteyner hacmi." },
+                { href: "/case-studies/cruyff-uk-fulfillment", tag: "Moda / e-ticaret", title: "Cruyff", text: "Hollanda'dan İngiltere'ye geçiş; depolama, repackaging ve fulfillment, UK içi 2 gün teslimat." },
+                { href: "/case-studies/uk-auto-parts-warehouse", tag: "Otomotiv", title: "OEM yedek parça", text: "Palet ve raf depolama, hasar izleme ve UK geneli dağıtım." },
+              ].map((c) => (
+                <Link key={c.href} href={c.href} className="block bg-white border border-slate-200 rounded-2xl p-6 hover:border-[#0b2545] transition">
+                  <span className="text-xs font-semibold text-[#e63946]">{c.tag}</span>
+                  <h3 className="font-bold text-[#0b2545] mt-1 mb-2">{c.title}</h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">{c.text}</p>
+                </Link>
+              ))}
+            </div>
+            <p className="text-center mt-6">
+              <Link href="/case-studies" className="text-sm font-semibold text-[#0b2545] underline">Tüm operasyon örnekleri</Link>
+            </p>
+          </div>
+        </section>
+
+        {/* How to start */}
+        <section className="py-16 px-4 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-extrabold text-[#0b2545] mb-8 text-center">İngiltere depoya nasıl başlanır?</h2>
+            <ol className="grid gap-4 sm:grid-cols-2">
+              {[
+                ["Ürün ve hacmi paylaşın", "Ürün türü, tahmini palet veya koli sayısı, aylık sipariş ve satış kanallarınızı yazın."],
+                ["Teklifi alın", "Depolama, mal kabul, pick & pack ve teslimat kalemlerini operasyonunuza göre fiyatlandırırız."],
+                ["Ürünleri gönderin", "Nakliye ve UK gümrüklemesi Arca Trade Group üzerinden yapılabilir veya kendi nakliyecinizle gönderebilirsiniz."],
+                ["Satışa başlayın", "Ürünler sayılıp Mintsoft WMS'e kaydedilir; siparişleriniz Essex'ten İngiltere geneline gönderilir."],
+              ].map(([h, t], i) => (
+                <li key={h} className="flex gap-3 border border-slate-200 rounded-2xl p-5">
+                  <span className="flex-shrink-0 w-8 h-8 rounded-full bg-[#0b2545] text-white font-bold flex items-center justify-center">{i + 1}</span>
+                  <span><strong className="block text-[#0b2545] mb-1">{h}</strong><span className="text-slate-600 text-sm leading-relaxed">{t}</span></span>
+                </li>
+              ))}
+            </ol>
           </div>
         </section>
 
@@ -296,6 +434,8 @@ export default function IngiltereDepoPage() {
                 { href: "/e-ticaret-fulfillment", label: "E-Ticaret Fulfillment" },
                 { href: "/essex-depo", label: "Essex Depo" },
                 { href: "/ingiltere-depo-fiyatlari", label: "Depo Fiyatları" },
+                { href: "/ingiltere-depo-maliyet-hesaplama", label: "Maliyet Hesaplama" },
+                { href: "/blog/ingiltere-depo-rehberi", label: "İngiltere Depo Rehberi" },
               ].map((l) => (
                 <Link
                   key={l.href}

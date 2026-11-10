@@ -115,7 +115,7 @@ for host,proto in HOSTS:
   loc=r.headers.get('Location'); expected=308 if host=='londradepo.com' or (host=='www.londradepo.com' and proto=='http') else 200
   redirects.append({'host':host,'protocol':proto,'path':p,'status':status,'location':loc})
   if status!=expected or (expected==308 and loc!=SITE+p):failures.append([host,proto,p,'redirect',status,loc])
-for src,dst in [('/uk-warehousing-fulfilment','/en'),('/shopify-fulfillment','/shopify-ingiltere-depo')]:
+for src,dst in [('/uk-warehousing-fulfilment','/en'),('/shopify-fulfillment','/en/shopify-fulfilment-uk')]:
  try:op.open(BASE+src);failures.append([src,'expected 301'])
  except urllib.error.HTTPError as e:
   if e.code!=301 or urllib.parse.urlsplit(e.headers.get('Location','')).path!=dst:failures.append([src,'redirect',e.code,e.headers.get('Location')])

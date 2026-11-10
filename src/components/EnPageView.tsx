@@ -10,7 +10,7 @@ import ContainerPlanner from "./ContainerPlanner";
 import CostCalculator from "@/components/CostCalculator";
 
 /** Highest-intent pages get the quote form inline (CRO plan, weeks 11–13). */
-const INLINE_FORM = new Set(["/en/uk-import-logistics", "/en/container-unloading", "/en/uk-warehousing-pricing", "/en/pallet-storage", "/en/uk-warehousing"]);
+const INLINE_FORM = new Set(["/en/uk-import-logistics", "/en/container-unloading", "/en/uk-warehousing-pricing", "/en/pallet-storage", "/en/uk-warehousing", "/en/shopify-fulfilment-uk"]);
 import HeaderEn from "@/components/HeaderEn";
 import FooterEn from "@/components/FooterEn";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";

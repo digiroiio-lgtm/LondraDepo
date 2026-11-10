@@ -50,8 +50,8 @@ const EMPTY: Fields = {
 
 const NEEDS_ORDERS: ReadonlyArray<QuoteService> = ["fulfilment", "amazon-prep"];
 
-export default function QuoteFormEn() {
-  const [f, setF] = useState<Fields>(EMPTY);
+export default function QuoteFormEn({ defaultService, formId = "en_request_a_quote" }: { defaultService?: QuoteService; formId?: string } = {}) {
+  const [f, setF] = useState<Fields>({ ...EMPTY, service: defaultService ?? "" });
   const [errors, setErrors] = useState<Partial<Record<keyof Fields, string>>>({});
   const [tracking, setTracking] = useState<Record<string, string>>({});
   const [state, submit] = useForm(FORMSPREE_ID);
@@ -82,7 +82,7 @@ export default function QuoteFormEn() {
   const set = <K extends keyof Fields>(k: K, v: Fields[K]) => {
     if (!started.current) {
       started.current = true;
-      trackFormStart("en_quote");
+      trackFormStart(formId);
     }
     setF((x) => ({ ...x, [k]: v }));
     if (errors[k]) setErrors((e) => ({ ...e, [k]: "" }));
@@ -110,7 +110,7 @@ export default function QuoteFormEn() {
     if (!validate()) return;
     await submit({
       _subject: `New EN quote request: ${f.company} (${f.country})`,
-      form: "en_request_a_quote",
+      form: formId,
       page_lang: "en",
       page_path: window.location.pathname,
       name: f.name,
@@ -147,53 +147,53 @@ export default function QuoteFormEn() {
 
   const input = "w-full rounded-xl border border-slate-300 px-4 py-3 text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#0b2545]";
   const label = "block text-sm font-semibold text-slate-700 mb-1.5";
-  const err = (k: keyof Fields) => errors[k] && <p id={`${k}-error`} className="mt-1 text-xs text-red-600">{errors[k]}</p>;
-  const aria = (k: keyof Fields) => ({ "aria-invalid": Boolean(errors[k]), "aria-describedby": errors[k] ? `${k}-error` : undefined });
+  const err = (k: keyof Fields) => errors[k] && <p id={`${formId}-${k}-error`} className="mt-1 text-xs text-red-600">{errors[k]}</p>;
+  const aria = (k: keyof Fields) => ({ "aria-invalid": Boolean(errors[k]), "aria-describedby": errors[k] ? `${formId}-${k}-error` : undefined });
 
   return (
     <form onSubmit={onSubmit} noValidate className="grid gap-5 sm:grid-cols-2 rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 shadow-sm">
       <div>
-        <label htmlFor="q-name" className={label}>Full name *</label>
-        <input id="q-name" autoComplete="name" className={input} value={f.name} onChange={(e) => set("name", e.target.value)} {...aria("name")} />
+        <label htmlFor={`${formId}-name`} className={label}>Full name *</label>
+        <input id={`${formId}-name`} autoComplete="name" className={input} value={f.name} onChange={(e) => set("name", e.target.value)} {...aria("name")} />
         {err("name")}
       </div>
       <div>
-        <label htmlFor="q-company" className={label}>Business name *</label>
-        <input id="q-company" autoComplete="organization" className={input} value={f.company} onChange={(e) => set("company", e.target.value)} {...aria("company")} />
+        <label htmlFor={`${formId}-company`} className={label}>Business name *</label>
+        <input id={`${formId}-company`} autoComplete="organization" className={input} value={f.company} onChange={(e) => set("company", e.target.value)} {...aria("company")} />
         {err("company")}
       </div>
       <div>
-        <label htmlFor="q-email" className={label}>Business email *</label>
-        <input id="q-email" type="email" autoComplete="email" className={input} value={f.email} onChange={(e) => set("email", e.target.value)} {...aria("email")} />
+        <label htmlFor={`${formId}-email`} className={label}>Business email *</label>
+        <input id={`${formId}-email`} type="email" autoComplete="email" className={input} value={f.email} onChange={(e) => set("email", e.target.value)} {...aria("email")} />
         {err("email")}
       </div>
       <div>
-        <label htmlFor="q-country" className={label}>Country *</label>
-        <select id="q-country" className={input} value={f.country} onChange={(e) => set("country", e.target.value)} {...aria("country")}>
+        <label htmlFor={`${formId}-country`} className={label}>Country *</label>
+        <select id={`${formId}-country`} className={input} value={f.country} onChange={(e) => set("country", e.target.value)} {...aria("country")}>
           <option value="">Select…</option>
           {COUNTRIES.map((c) => <option key={c}>{c}</option>)}
         </select>
         {err("country")}
       </div>
       <div>
-        <label htmlFor="q-service" className={label}>Service needed *</label>
-        <select id="q-service" className={input} value={f.service} onChange={(e) => set("service", e.target.value as QuoteService)} {...aria("service")}>
+        <label htmlFor={`${formId}-service`} className={label}>Service needed *</label>
+        <select id={`${formId}-service`} className={input} value={f.service} onChange={(e) => set("service", e.target.value as QuoteService)} {...aria("service")}>
           <option value="">Select…</option>
           {(Object.keys(QUOTE_SERVICES) as QuoteService[]).map((k) => <option key={k} value={k}>{QUOTE_SERVICES[k]}</option>)}
         </select>
         {err("service")}
       </div>
       <div>
-        <label htmlFor="q-category" className={label}>Product category *</label>
-        <select id="q-category" className={input} value={f.category} onChange={(e) => set("category", e.target.value)} {...aria("category")}>
+        <label htmlFor={`${formId}-category`} className={label}>Product category *</label>
+        <select id={`${formId}-category`} className={input} value={f.category} onChange={(e) => set("category", e.target.value)} {...aria("category")}>
           <option value="">Select…</option>
           {PRODUCT_CATEGORIES.map((c) => <option key={c}>{c}</option>)}
         </select>
         {err("category")}
       </div>
       <div>
-        <label htmlFor="q-pallets" className={label}>Estimated storage *</label>
-        <select id="q-pallets" className={input} value={f.pallets} onChange={(e) => set("pallets", e.target.value)} {...aria("pallets")}>
+        <label htmlFor={`${formId}-pallets`} className={label}>Estimated storage *</label>
+        <select id={`${formId}-pallets`} className={input} value={f.pallets} onChange={(e) => set("pallets", e.target.value)} {...aria("pallets")}>
           <option value="">Select…</option>
           {PALLET_BANDS.map((c) => <option key={c}>{c}</option>)}
         </select>
@@ -201,8 +201,8 @@ export default function QuoteFormEn() {
       </div>
       {showOrders ? (
         <div>
-          <label htmlFor="q-orders" className={label}>Monthly orders *</label>
-          <select id="q-orders" className={input} value={f.orders} onChange={(e) => set("orders", e.target.value)} {...aria("orders")}>
+          <label htmlFor={`${formId}-orders`} className={label}>Monthly orders *</label>
+          <select id={`${formId}-orders`} className={input} value={f.orders} onChange={(e) => set("orders", e.target.value)} {...aria("orders")}>
             <option value="">Select…</option>
             {ORDER_BANDS.map((c) => <option key={c}>{c}</option>)}
           </select>
@@ -212,16 +212,16 @@ export default function QuoteFormEn() {
         <div className="hidden sm:block" aria-hidden="true" />
       )}
       <div>
-        <label htmlFor="q-phone" className={label}>Phone / WhatsApp <span className="font-normal text-slate-500">(optional)</span></label>
-        <input id="q-phone" type="tel" autoComplete="tel" className={input} value={f.phone} onChange={(e) => set("phone", e.target.value)} />
+        <label htmlFor={`${formId}-phone`} className={label}>Phone / WhatsApp <span className="font-normal text-slate-500">(optional)</span></label>
+        <input id={`${formId}-phone`} type="tel" autoComplete="tel" className={input} value={f.phone} onChange={(e) => set("phone", e.target.value)} />
       </div>
       <div>
-        <label htmlFor="q-website" className={label}>Website <span className="font-normal text-slate-500">(optional)</span></label>
-        <input id="q-website" type="url" autoComplete="url" className={input} value={f.website} onChange={(e) => set("website", e.target.value)} placeholder="https://" />
+        <label htmlFor={`${formId}-website`} className={label}>Website <span className="font-normal text-slate-500">(optional)</span></label>
+        <input id={`${formId}-website`} type="url" autoComplete="url" className={input} value={f.website} onChange={(e) => set("website", e.target.value)} placeholder="https://" />
       </div>
       <div className="sm:col-span-2">
-        <label htmlFor="q-notes" className={label}>Anything else we should know? <span className="font-normal text-slate-500">(optional)</span></label>
-        <textarea id="q-notes" rows={4} className={input} value={f.notes} onChange={(e) => set("notes", e.target.value)} placeholder="e.g. container sizes, arrival port, SKUs, special handling" />
+        <label htmlFor={`${formId}-notes`} className={label}>Anything else we should know? <span className="font-normal text-slate-500">(optional)</span></label>
+        <textarea id={`${formId}-notes`} rows={4} className={input} value={f.notes} onChange={(e) => set("notes", e.target.value)} placeholder="e.g. container sizes, arrival port, SKUs, special handling" />
       </div>
       <div className="sm:col-span-2">
         <label className="flex items-start gap-3 text-sm text-slate-700">

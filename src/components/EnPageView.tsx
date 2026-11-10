@@ -3,6 +3,10 @@ import Image from "next/image";
 import WarehouseGallery from "@/components/WarehouseGallery";
 import TrackedLink from "@/components/TrackedLink";
 import { ctaFor, quoteHref } from "@/content/en/cta";
+import QuoteFormEn from "@/components/QuoteFormEn";
+
+/** Highest-intent pages get the quote form inline (CRO plan, weeks 11–13). */
+const INLINE_FORM = new Set(["/en/uk-import-logistics", "/en/container-unloading", "/en/uk-warehousing-pricing", "/en/pallet-storage", "/en/uk-warehousing"]);
 import HeaderEn from "@/components/HeaderEn";
 import FooterEn from "@/components/FooterEn";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
@@ -193,7 +197,8 @@ export default function EnPageView({ page }: { page: EnPage }) {
   const crumbs = breadcrumbs(page);
   const related = (page.related ?? []).map((s) => getEnPage(s)).filter((p): p is EnPage => Boolean(p));
   const quote = ctaFor(page);
-  const qHref = quoteHref(quote.service, page.slug);
+  const inlineForm = INLINE_FORM.has(page.slug);
+  const qHref = inlineForm ? "#quote" : quoteHref(quote.service, page.slug);
   const cta = page.cta ?? { h2: "Get a UK warehousing quote", text: "Tell us your product, volumes and channels and we will prepare a tailored quote." };
 
   return (
@@ -269,7 +274,15 @@ export default function EnPageView({ page }: { page: EnPage }) {
 
           {page.sections.map((s, i) => <SectionView key={i} s={s} />)}
 
-          {page.kind !== "legal" && page.kind !== "contact" && (
+          {inlineForm && (
+            <section id="quote" aria-labelledby="quote-heading" className="mb-12 scroll-mt-24">
+              <h2 id="quote-heading" className="text-2xl font-bold text-[#0b2545] mb-2">{quote.label}</h2>
+              <p className="text-slate-600 mb-5">Takes about two minutes. We reply by email with a tailored proposal.</p>
+              <QuoteFormEn defaultService={quote.service} formId="en_inline_quote" />
+            </section>
+          )}
+
+          {!inlineForm && page.kind !== "legal" && page.kind !== "contact" && (
             <aside className="mb-12 flex flex-col sm:flex-row sm:items-center justify-between gap-4 rounded-xl border border-[#e63946]/30 bg-red-50 p-6">
               <p className="font-semibold text-[#0b2545]">Tell us your product, volumes and channels. We will prepare a tailored proposal.</p>
               <TrackedLink kind="cta" source="mid_page" href={qHref} className="shrink-0 text-center bg-[#e63946] hover:bg-[#c1121f] text-white font-semibold px-6 py-3 rounded-full transition">

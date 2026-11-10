@@ -14,7 +14,9 @@ export type Section =
   /** Attributed quotation; only verbatim, published statements. */
   | { type: "quote"; text: string; cite: string; sourceLabel?: string; sourceHref?: string }
   /** External references backing figures on the page. */
-  | { type: "sources"; h2: string; items: { label: string; href: string }[] };
+  | { type: "sources"; h2: string; items: { label: string; href: string }[] }
+  /** Interactive storage cost calculator. */
+  | { type: "calculator"; h2: string; intro?: string };
 
 export type PageKind = "home" | "service" | "article" | "case" | "hub" | "contact" | "legal";
 

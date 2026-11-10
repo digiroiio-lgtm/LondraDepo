@@ -4,6 +4,7 @@ import WarehouseGallery from "@/components/WarehouseGallery";
 import TrackedLink from "@/components/TrackedLink";
 import { ctaFor, quoteHref } from "@/content/en/cta";
 import QuoteFormEn from "@/components/QuoteFormEn";
+import CostCalculator from "@/components/CostCalculator";
 
 /** Highest-intent pages get the quote form inline (CRO plan, weeks 11–13). */
 const INLINE_FORM = new Set(["/en/uk-import-logistics", "/en/container-unloading", "/en/uk-warehousing-pricing", "/en/pallet-storage", "/en/uk-warehousing"]);
@@ -221,6 +222,14 @@ function SectionView({ s }: { s: Section }) {
             )}
           </figcaption>
         </figure>
+      );
+    case "calculator":
+      return (
+        <section className="mb-12" id="calculator">
+          {h2}
+          {s.intro && <p className="text-slate-600 mb-5">{s.intro}</p>}
+          <CostCalculator lang="en" />
+        </section>
       );
     case "sources":
       return (

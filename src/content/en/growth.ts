@@ -447,3 +447,76 @@ export const growthPagesP2: EnPage[] = [
     cta: { h2: "Plan your port-to-warehouse move", text: "Tell us the arrival port, container size, ETA and what should happen to the goods next." },
   },
 ];
+
+// Lead magnet: storage cost calculator (paired with the Turkish calculator page).
+export const calculatorPages: EnPage[] = [
+  {
+    slug: "/en/uk-storage-cost-calculator",
+    tr: "/ingiltere-depo-maliyet-hesaplama",
+    kind: "service",
+    serviceType: "Warehouse storage cost calculator",
+    modified: "2026-11-10",
+    title: "UK Pallet Storage Cost Calculator",
+    description:
+      "Calculate UK pallet storage costs in seconds: pallets × weeks at £3.50 + VAT per pallet per week, with VAT shown. Then request a full quote for handling, fulfilment and delivery.",
+    label: "Storage Cost Calculator",
+    eyebrow: "Free tool",
+    h1: "UK Pallet Storage Cost Calculator",
+    lead:
+      "Enter the number of standard pallets and how many weeks you need, and the calculator shows your UK storage cost at LondraDepo's published starting rate of £3.50 + VAT per pallet per week. Storing 10 pallets for 4 weeks, for example, starts at £140 + VAT (£168 including 20% VAT).",
+    facts: [
+      "Rate used: £3.50 + VAT per standard pallet per week",
+      "VAT shown at the UK standard rate of 20%",
+      "Goods-in, handling, pick and pack, Amazon prep and delivery are quoted separately",
+      "Warehouse: Unit 19 Arterial Park, Rayleigh, Essex SS6 7FY",
+    ],
+    sections: [
+      {
+        type: "calculator",
+        h2: "Calculate your storage cost",
+        intro: "Change the pallets and weeks. The estimate updates instantly; nothing is sent until you request a quote.",
+      },
+      {
+        type: "text",
+        h2: "How is the estimate calculated?",
+        paras: [
+          "The calculator multiplies the number of standard pallets by the number of weeks and by our starting rate of £3.50 + VAT per pallet per week, then adds VAT at 20%. It uses only our published rate, so the figure is a starting price rather than a final quote.",
+          "Pallet size, height and weight, product type, storage conditions and how often stock moves can change the rate. Oversized or heavy pallets, and goods that need special handling, are priced after we see the details.",
+        ],
+      },
+      {
+        type: "table",
+        h2: "Example storage costs",
+        head: ["Pallets × weeks", "Storage (ex VAT)", "Incl. 20% VAT"],
+        rows: [
+          ["5 × 4 weeks", "£70.00", "£84.00"],
+          ["10 × 4 weeks", "£140.00", "£168.00"],
+          ["20 × 4 weeks", "£280.00", "£336.00"],
+          ["50 × 12 weeks", "£2,100.00", "£2,520.00"],
+        ],
+        note: "Starting-price examples for standard pallets. Other services are quoted separately.",
+      },
+      {
+        type: "list",
+        h2: "What the calculator does not include",
+        intro: "These services depend on your products and order profile, so we quote them after reviewing your requirements:",
+        items: [
+          "Goods-in, container unloading and counting",
+          "Re-palletising, labelling and repacking",
+          "Pick and pack per order and packaging materials",
+          "Amazon FBA prep (FNSKU labelling, packing, delivery to Amazon)",
+          "UK carriage, pallet and parcel delivery",
+          "Freight and customs clearance (available through Arca Trade Group)",
+        ],
+      },
+    ],
+    faqs: [
+      { q: "How much does it cost to store a pallet in the UK?", a: "At LondraDepo, standard pallet storage starts from £3.50 + VAT per pallet per week. For example, 10 pallets for 4 weeks start at £140 + VAT, or £168 including VAT." },
+      { q: "Is the calculator result a final price?", a: "No. It is a starting-price estimate for standard pallets. Pallet size, product type, storage period and activity can change the total, and other services are quoted separately." },
+      { q: "Does the estimate include handling and delivery?", a: "No. Goods-in, unloading, pick and pack, Amazon prep and delivery are quoted separately once we know your products and volumes." },
+      { q: "How do I get a full quote?", a: "Use the button under the calculator. Your pallet count is passed to the quote form, so you only add your contact details, product and services." },
+    ],
+    related: ["/en/uk-warehousing-pricing", "/en/pallet-storage", "/en/blog/uk-pallet-storage-costs", "/en/container-unloading"],
+    cta: { h2: "Turn your estimate into a quote", text: "Send your pallet count, product type and services and we will price storage, handling and delivery for your operation." },
+  },
+];

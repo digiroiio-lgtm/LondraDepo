@@ -35,6 +35,7 @@ const company = [
   ["/en/locations/port-to-warehouse-logistics", "Port-to-Warehouse Logistics"],
   ["/en/uk-warehousing-benefits", "Why a UK Warehouse"],
   ["/en/uk-warehousing-pricing", "Pricing"],
+  ["/en/uk-storage-cost-calculator", "Storage Cost Calculator"],
   ["/en/case-studies", "Case Studies"],
   ["/en/blog", "Guides"],
   ["/en/contact", "Contact"],

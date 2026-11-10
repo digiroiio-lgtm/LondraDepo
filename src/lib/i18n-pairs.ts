@@ -45,6 +45,7 @@ export const PAIRS: ReadonlyArray<readonly [tr: string, en: string]> = [
   ["/cookie-policy", "/en/cookie-policy"],
   ["/sozlesme-kosullari", "/en/terms-and-conditions"],
   ["/turk-sirketleri-icin-ingiltere-depo", "/en/uk-warehousing-for-turkish-exporters"],
+  ["/ingiltere-depo-maliyet-hesaplama", "/en/uk-storage-cost-calculator"],
 ];
 
 export const TR_TO_EN = new Map(PAIRS.map(([tr, en]) => [tr, en]));

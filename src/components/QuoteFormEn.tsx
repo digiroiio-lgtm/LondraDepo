@@ -62,6 +62,12 @@ export default function QuoteFormEn({ defaultService, formId = "en_request_a_quo
     const params = new URLSearchParams(window.location.search);
     const preset = params.get("service");
     if (preset && preset in QUOTE_SERVICES) setF((x) => ({ ...x, service: preset as QuoteService }));
+    // Calculator hand-off: map a pallet count to the storage band.
+    const p = Number(params.get("pallets"));
+    if (p > 0) {
+      const band = p <= 10 ? PALLET_BANDS[0] : p <= 50 ? PALLET_BANDS[1] : p <= 200 ? PALLET_BANDS[2] : PALLET_BANDS[3];
+      setF((x) => ({ ...x, pallets: band, notes: x.notes || `Calculator estimate: ${p} pallets.` }));
+    }
     const t: Record<string, string> = {};
     for (const k of TRACKING_KEYS) {
       const v = params.get(k);

@@ -1,4 +1,5 @@
 import FaqJsonLd from "@/components/FaqJsonLd";
+import TeamQuote from "@/components/TeamQuote";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -232,6 +233,12 @@ export default function IngiltereDepoPage() {
         </section>
 
         {/* Value prop */}
+        <section className="py-12 px-4 bg-white">
+          <div className="max-w-3xl mx-auto space-y-4">
+            <TeamQuote id="yusufStock" />
+          </div>
+        </section>
+        
         <section className="py-20 px-4 bg-[#0b2545]">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-2xl font-extrabold text-white mb-5">

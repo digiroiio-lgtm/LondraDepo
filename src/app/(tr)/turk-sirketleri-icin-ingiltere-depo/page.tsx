@@ -1,4 +1,5 @@
 import FaqJsonLd from "@/components/FaqJsonLd";
+import TeamQuote from "@/components/TeamQuote";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -221,6 +222,12 @@ export default function TurkSirketleri() {
         </section>
 
         {/* CTA dark */}
+        <section className="py-12 px-4 bg-white">
+          <div className="max-w-3xl mx-auto">
+            <TeamQuote id="sertacExporters" />
+          </div>
+        </section>
+        
         <section className="py-16 px-4 bg-[#0b2545] text-white">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-2xl font-extrabold mb-4">

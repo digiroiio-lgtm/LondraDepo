@@ -1,4 +1,5 @@
 import type { EnPage } from "./types";
+import { teamQuote } from "@/content/quotes";
 
 // English-only commercial pages (no Turkish counterpart yet → self-referencing `en` hreflang).
 // Facts used here are limited to verified items: the Rayleigh site, FCL/LCL and 40HC receiving,
@@ -107,6 +108,7 @@ export const growthPages: EnPage[] = [
           { title: "Put away or dispatch", text: "Stock is booked into Mintsoft WMS and stored, or sent on to customers or Amazon." },
         ],
       },
+      teamQuote("yusufGoodsIn"),
       {
         type: "table",
         h2: "What affects the unloading quote",
@@ -352,6 +354,7 @@ export const growthPagesP2: EnPage[] = [
           { title: "Stock visibility", text: "Stock and orders are tracked in Mintsoft WMS." },
         ],
       },
+      teamQuote("sertacExporters"),
       {
         type: "steps",
         h2: "How to start",

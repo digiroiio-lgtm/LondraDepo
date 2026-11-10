@@ -11,7 +11,7 @@ export type Section =
   | { type: "table"; h2: string; intro?: string; head: string[]; rows: string[][]; note?: string }
   | { type: "stats"; h2?: string; items: { value: string; label: string }[] }
   | { type: "links"; h2: string; intro?: string; items: LinkCard[] }
-  /** Attributed quotation; only verbatim, published statements. */
+  /** Attributed quotation; only verbatim published statements or wording approved by the person quoted. */
   | { type: "quote"; text: string; cite: string; sourceLabel?: string; sourceHref?: string }
   /** External references backing figures on the page. */
   | { type: "sources"; h2: string; items: { label: string; href: string }[] }

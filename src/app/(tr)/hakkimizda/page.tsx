@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import TeamQuote from "@/components/TeamQuote";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -130,6 +131,10 @@ export default function HakkimizdaPage() {
               </div>
             </div>
 
+            <div className="space-y-4 mb-10">
+              <TeamQuote id="sertacFounder" />
+              <TeamQuote id="yusufGoodsIn" />
+            </div>
             <h2 className="text-2xl font-extrabold text-[#0b2545] mb-6">Hizmet Alanlarımız</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
               {[

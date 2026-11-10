@@ -1,4 +1,5 @@
 import type { EnPage } from "./types";
+import { teamQuote } from "@/content/quotes";
 
 export const PRICE_NOTE =
   "Standard pallet storage starts from £3.50 + VAT per pallet per week. Goods-in, handling, unloading, re-palletising, customs coordination, fulfilment and delivery are quoted separately for each operation.";
@@ -121,6 +122,7 @@ export const corePages: EnPage[] = [
           "Regular stock reports and movement summaries are sent on an agreed schedule in English or Turkish. Lot-level records are available for clients who need traceability, as our packaging client does for recall readiness.",
         ],
       },
+      teamQuote("yusufStock"),
       {
         type: "text",
         h2: "Who runs LondraDepo?",
@@ -130,6 +132,7 @@ export const corePages: EnPage[] = [
           "You can verify the company on Companies House, in the BIFA member directory and on LinkedIn.",
         ],
       },
+      teamQuote("sertacFounder"),
       {
         type: "quote",
         text: "At Arca Trade Group, our aim is to make the logistics process as smooth as possible for our business partners.",
@@ -228,6 +231,8 @@ export const corePages: EnPage[] = [
           "Our founder is a member of the Global Logistics Alliance (GLA) network and is taking part in the 15th GLA Global Logistics Conference in Bangkok in 2026.",
         ],
       },
+      teamQuote("sertacFounder"),
+      teamQuote("yusufGoodsIn"),
       {
         type: "list",
         h2: "Where you can verify us",

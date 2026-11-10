@@ -39,7 +39,7 @@ const TEXT = {
   },
   en: {
     h2: "A Real UK Warehouse Operation",
-    p: "Goods-in, pallet storage, fulfilment and distribution, run every day from our warehouse at Arterial Park, Rayleigh, Essex.",
+    p: "These photographs show our own site at Arterial Park, Rayleigh: the racked warehouse floor where pallets are stored, the building exterior and yard, an aerial view of the Arterial Park estate, and the office where the operations team manages stock and orders. Goods-in, pallet storage, fulfilment and distribution all happen here, in one building, rather than across separate sites.",
   },
 } as const;
 

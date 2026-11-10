@@ -18,6 +18,7 @@ const TR: ReadonlyArray<readonly [string, Freq, number]> = [
   ["/siparis-toplama-paketleme", "monthly", 0.9],
   ["/ingiltere-depo-fiyatlari", "monthly", 0.9],
   ["/ingiltere-depo-maliyet-hesaplama", "monthly", 0.8],
+  ["/konteyner-varis-planlayici", "monthly", 0.8],
   ["/turk-sirketleri-icin-ingiltere-depo", "monthly", 0.9],
   ["/turkiye-ingiltere-lojistik", "monthly", 0.9],
   ["/turkiyeden-ingiltereye-satis", "monthly", 0.9],

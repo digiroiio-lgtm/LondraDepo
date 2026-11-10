@@ -6,6 +6,7 @@ import { ctaFor, quoteHref } from "@/content/en/cta";
 import { bookingUrl } from "@/lib/booking";
 import QuoteFormEn from "@/components/QuoteFormEn";
 import ChecklistGate from "./ChecklistGate";
+import ContainerPlanner from "./ContainerPlanner";
 import CostCalculator from "@/components/CostCalculator";
 
 /** Highest-intent pages get the quote form inline (CRO plan, weeks 11–13). */
@@ -231,6 +232,14 @@ function SectionView({ s }: { s: Section }) {
           {h2}
           {s.intro && <p className="text-slate-600 mb-5">{s.intro}</p>}
           <CostCalculator lang="en" />
+        </section>
+      );
+    case "planner":
+      return (
+        <section className="mb-12" id="planner">
+          {h2}
+          {s.intro && <p className="text-slate-600 mb-5">{s.intro}</p>}
+          <ContainerPlanner lang="en" />
         </section>
       );
     case "checklist":

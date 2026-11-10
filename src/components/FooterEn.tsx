@@ -36,6 +36,7 @@ const company = [
   ["/en/uk-warehousing-benefits", "Why a UK Warehouse"],
   ["/en/uk-warehousing-pricing", "Pricing"],
   ["/en/uk-storage-cost-calculator", "Storage Cost Calculator"],
+  ["/en/container-arrival-planner", "Container Arrival Planner"],
   ["/en/case-studies", "Case Studies"],
   ["/en/blog", "Guides"],
   ["/en/contact", "Contact"],

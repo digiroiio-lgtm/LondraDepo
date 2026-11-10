@@ -88,3 +88,11 @@ body {
   font-weight: 700;
 }
 
+
+/* Container planner: print only the plan. */
+@media print {
+  body.print-planner * { visibility: hidden; }
+  body.print-planner #planner-print,
+  body.print-planner #planner-print * { visibility: visible; }
+  body.print-planner #planner-print { position: absolute; left: 0; top: 0; width: 100%; border: 0; background: #fff; }
+}

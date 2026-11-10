@@ -138,7 +138,7 @@ export const growthPages: EnPage[] = [
       { q: "Can you arrange haulage from the port?", a: "Yes. Arca Trade Group, the company that operates LondraDepo, can arrange transport from the port to our warehouse, or your own forwarder can deliver." },
       { q: "Can unloaded goods go straight out again?", a: "Yes. Goods can be cross-docked to UK customers or Amazon, or stored and released as orders arrive." },
     ],
-    related: ["/en/uk-import-logistics", "/en/locations/port-to-warehouse-logistics", "/en/pallet-storage", "/en/essex-warehouse", "/en/cargo-handling", "/en/blog/what-is-a-uk-transit-warehouse"],
+    related: ["/en/container-arrival-planner", "/en/uk-import-logistics", "/en/locations/port-to-warehouse-logistics", "/en/pallet-storage", "/en/essex-warehouse", "/en/cargo-handling"],
     cta: { h2: "Book a container unloading quote", text: "Send the container size, ETA, packing list and whether goods are palletised or loose-loaded." },
   },
   {
@@ -446,7 +446,7 @@ export const growthPagesP2: EnPage[] = [
       { q: "Can you arrange haulage from the port?", a: "Yes. Arca Trade Group, which operates LondraDepo, can arrange customs clearance and haulage from the port, or your forwarder can deliver to us." },
       { q: "Can you unload at the port instead?", a: "No. Unloading takes place at our Rayleigh warehouse, where goods can be stored and fulfilled without further handling." },
     ],
-    related: ["/en/container-unloading", "/en/uk-import-logistics", "/en/essex-warehouse", "/en/london-warehousing", "/en/blog/uk-importing-guide"],
+    related: ["/en/container-arrival-planner", "/en/container-unloading", "/en/uk-import-logistics", "/en/essex-warehouse", "/en/blog/uk-importing-guide"],
     cta: { h2: "Plan your port-to-warehouse move", text: "Tell us the arrival port, container size, ETA and what should happen to the goods next." },
   },
 ];
@@ -521,5 +521,71 @@ export const calculatorPages: EnPage[] = [
     ],
     related: ["/en/uk-warehousing-pricing", "/en/pallet-storage", "/en/blog/uk-pallet-storage-costs", "/en/container-unloading"],
     cta: { h2: "Turn your estimate into a quote", text: "Send your pallet count, product type and services and we will price storage, handling and delivery for your operation." },
+  },
+  {
+    slug: "/en/container-arrival-planner",
+    tr: "/konteyner-varis-planlayici",
+    kind: "service",
+    serviceType: "Container arrival planning",
+    modified: "2026-11-10",
+    title: "Container Arrival Planner: Port to Essex Warehouse",
+    description:
+      "Plan your container's arrival in the UK: choose the port, container size, ETA and customs route and get a dated checklist from EORI and pre-advice to unloading and stock booking in Essex.",
+    label: "Container Arrival Planner",
+    eyebrow: "Free tool",
+    h1: "Container Arrival Planner",
+    lead:
+      "Choose your arrival port, container size, how it is loaded and the ETA, and the planner builds a dated checklist for getting the container from a UK port to our Rayleigh, Essex warehouse. It covers the GB EORI and commodity codes, the customs declaration, pre-advice to the warehouse, haulage, unloading, counting and booking stock into Mintsoft WMS.",
+    facts: [
+      "Road distances from Rayleigh: London Gateway 13 miles, Tilbury 16 miles, Felixstowe 62 miles",
+      "20ft, 40ft and 40ft high-cube FCL plus LCL deliveries received",
+      "Freight, haulage and customs clearance available through Arca Trade Group",
+      "Storage from £3.50 + VAT per pallet per week, or cross-dock for onward delivery",
+    ],
+    sections: [
+      {
+        type: "planner",
+        h2: "Plan your container arrival",
+        intro: "Change any option and the plan updates instantly. Nothing is sent until you request a quote or message us.",
+      },
+      {
+        type: "steps",
+        h2: "What the plan covers",
+        items: [
+          { title: "Customs set-up", text: "The importer of record needs a GB EORI number and the commodity code for each product, and someone must lodge the import declaration in HMRC's Customs Declaration Service." },
+          { title: "Pre-advice", text: "The warehouse needs the container number, ETA, packing list and carton counts per SKU, and whether goods are palletised or loose-loaded." },
+          { title: "Haulage and slot", text: "Haulage from the port is booked through Arca Trade Group or your forwarder, and a delivery slot is agreed at Rayleigh." },
+          { title: "Unloading and checks", text: "The container is unloaded, counted against the packing list, and visible damage is photographed and reported." },
+          { title: "Stock booking", text: "Loose cartons are palletised and labelled where needed, and stock is booked into Mintsoft WMS, then stored or sent on." },
+        ],
+      },
+      {
+        type: "table",
+        h2: "UK ports and road distance to the warehouse",
+        intro: "Measured by road routing from SS6 7FY (November 2026). Times are free-flow car times.",
+        head: ["Port", "Road distance", "Typical time"],
+        rows: [
+          ["DP World London Gateway", "13 miles / 21 km", "~20 minutes"],
+          ["Port of Tilbury", "16 miles / 26 km", "~20 minutes"],
+          ["Port of Felixstowe", "62 miles / 99 km", "~1¼ hours"],
+        ],
+      },
+      {
+        type: "text",
+        h2: "Why are the dates only suggestions?",
+        paras: [
+          "Vessel arrival times move, ports release containers at different speeds and customs can select goods for checks. The planner therefore works back from your ETA with suggested deadlines for paperwork and bookings, and treats everything after arrival as happening once the container is released.",
+          "Starting the customs paperwork about three weeks before arrival and sending pre-advice about a week before gives time to fix missing commodity codes or documents before they hold up the delivery.",
+        ],
+      },
+    ],
+    faqs: [
+      { q: "What information does the warehouse need before a container arrives?", a: "The container number, ETA, packing list, carton counts per SKU and whether the goods are palletised or loose-loaded. With this, unloading can be planned and any palletising or labelling quoted before arrival." },
+      { q: "How far is the warehouse from UK container ports?", a: "By road from Rayleigh, Essex, DP World London Gateway is about 13 miles, the Port of Tilbury about 16 miles and the Port of Felixstowe about 62 miles." },
+      { q: "Can you arrange haulage and customs clearance?", a: "Yes. Arca Trade Group, which operates LondraDepo, can arrange haulage from the port and lodge the import declaration, or your own forwarder can deliver to the warehouse." },
+      { q: "How many pallets fit in a container?", a: "As a rule of thumb, about 10 standard UK pallets fit on the floor of a 20ft container and about 20 in a 40ft container when single-stacked. The real number depends on pallet size, height and how the goods are loaded." },
+    ],
+    related: ["/en/container-unloading", "/en/locations/port-to-warehouse-logistics", "/en/uk-import-logistics", "/en/blog/uk-importing-guide", "/en/uk-storage-cost-calculator"],
+    cta: { h2: "Turn your plan into a quote", text: "Send the container size, port, ETA and packing list and we will quote unloading, storage and onward delivery." },
   },
 ];

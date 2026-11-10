@@ -4,13 +4,19 @@ import WarehouseGallery from "@/components/WarehouseGallery";
 import TrackedLink from "@/components/TrackedLink";
 import { ctaFor, quoteHref } from "@/content/en/cta";
 import { bookingUrl } from "@/lib/booking";
+import { clusterFor } from "@/content/en/clusters";
 import QuoteFormEn from "@/components/QuoteFormEn";
 import ChecklistGate from "./ChecklistGate";
 import ContainerPlanner from "./ContainerPlanner";
 import CostCalculator from "@/components/CostCalculator";
 
 /** Highest-intent pages get the quote form inline (CRO plan, weeks 11–13). */
-const INLINE_FORM = new Set(["/en/uk-import-logistics", "/en/container-unloading", "/en/uk-warehousing-pricing", "/en/pallet-storage", "/en/uk-warehousing", "/en/shopify-fulfilment-uk"]);
+const INLINE_FORM = new Set([
+  "/en/uk-import-logistics", "/en/container-unloading", "/en/uk-warehousing-pricing", "/en/pallet-storage", "/en/uk-warehousing",
+  "/en/shopify-fulfilment-uk", "/en/uk-fulfilment", "/en/ecommerce-fulfilment", "/en/uk-ecommerce-logistics", "/en/pick-and-pack",
+  "/en/amazon-fulfilment-uk", "/en/amazon-seller-warehousing-uk", "/en/amazon-prep-uk", "/en/uk-distribution",
+  "/en/london-gateway-tilbury-warehousing", "/en/felixstowe-port-warehousing",
+]);
 import HeaderEn from "@/components/HeaderEn";
 import FooterEn from "@/components/FooterEn";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
@@ -283,6 +289,7 @@ export default function EnPageView({ page }: { page: EnPage }) {
   const related = (page.related ?? []).map((s) => getEnPage(s)).filter((p): p is EnPage => Boolean(p));
   const quote = ctaFor(page);
   const inlineForm = INLINE_FORM.has(page.slug);
+  const cluster = clusterFor(page.slug);
   const qHref = inlineForm ? "#quote" : quoteHref(quote.service, page.slug);
   const cta = page.cta ?? { h2: "Get a UK warehousing quote", text: "Tell us your product, volumes and channels and we will prepare a tailored quote." };
 
@@ -362,13 +369,56 @@ export default function EnPageView({ page }: { page: EnPage }) {
             </section>
           )}
 
-          {page.sections.map((s, i) => <SectionView key={i} s={s} />)}
+          {page.sections.map((s, i) => (
+            <div key={i}>
+              <SectionView s={s} />
+              {i === 0 && cluster && (
+                <nav aria-labelledby="cluster-heading" className="mb-12 rounded-xl border border-slate-200 p-6">
+                  <h2 id="cluster-heading" className="text-lg font-bold text-[#0b2545] mb-4">{cluster.h2}</h2>
+                  <ul className="grid gap-3 sm:grid-cols-2">
+                    {cluster.items.map((c) =>
+                      c.href === page.slug ? (
+                        <li key={c.href} aria-current="page" className="rounded-lg border-2 border-[#0b2545] bg-slate-50 p-4">
+                          <span className="block font-semibold text-[#0b2545]">{c.title} <span className="text-xs font-normal text-slate-500">(this page)</span></span>
+                          <span className="block text-sm text-slate-600 mt-1">Best if: {c.fit}</span>
+                        </li>
+                      ) : (
+                        <li key={c.href}>
+                          <Link href={c.href} className="block h-full rounded-lg border border-slate-200 p-4 hover:border-[#0b2545] transition">
+                            <span className="block font-semibold text-[#0b2545]">{c.title} →</span>
+                            <span className="block text-sm text-slate-600 mt-1">Best if: {c.fit}</span>
+                          </Link>
+                        </li>
+                      ),
+                    )}
+                  </ul>
+                </nav>
+              )}
+            </div>
+          ))}
 
           {inlineForm && (
             <section id="quote" aria-labelledby="quote-heading" className="mb-12 scroll-mt-24">
               <h2 id="quote-heading" className="text-2xl font-bold text-[#0b2545] mb-2">{quote.label}</h2>
-              <p className="text-slate-600 mb-5">Takes about two minutes. We reply by email with a tailored proposal.</p>
+              <p className="text-slate-600 mb-4">Takes about two minutes. We reply by email with a tailored proposal.</p>
+              <ul className="mb-5 grid gap-2 sm:grid-cols-2 text-sm text-slate-700">
+                <li className="flex gap-2"><span className="text-green-600" aria-hidden="true">✓</span>Warehouse at Unit 19 Arterial Park, Rayleigh, Essex SS6 7FY</li>
+                <li className="flex gap-2"><span className="text-green-600" aria-hidden="true">✓</span>Operated by Arca Trade Group Ltd (Company No. 13247691), BIFA member</li>
+                <li className="flex gap-2"><span className="text-green-600" aria-hidden="true">✓</span>Storage from £3.50 + VAT per pallet per week</li>
+                <li className="flex gap-2"><span className="text-green-600" aria-hidden="true">✓</span>English and Turkish spoken</li>
+              </ul>
               <QuoteFormEn defaultService={quote.service} formId="en_inline_quote" />
+              <p className="mt-4 text-sm text-slate-600">
+                Prefer to talk first?{" "}
+                <TrackedLink kind="booking" source="inline_quote" href={bookingUrl("en", page.slug)} className="font-semibold text-[#0b2545] underline">
+                  Book a 15-minute call
+                </TrackedLink>{" "}
+                or{" "}
+                <TrackedLink kind="whatsapp" source="inline_quote" href={WHATSAPP} className="font-semibold text-green-700 underline">
+                  message us on WhatsApp
+                </TrackedLink>
+                .
+              </p>
             </section>
           )}
 

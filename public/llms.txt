@@ -19,6 +19,8 @@ Each English page has a 1:1 Turkish equivalent linked with reciprocal hreflang (
 - https://www.londradepo.com/en/industries/food-packaging — Packaging and catering supplies warehousing and scheduled B2B delivery (English only)
 - https://www.londradepo.com/en/uk-market-entry — UK market entry with an outsourced warehouse (English only)
 - https://www.londradepo.com/en/uk-storage-cost-calculator — UK pallet storage cost calculator (£3.50 + VAT per pallet per week; TR pair: /ingiltere-depo-maliyet-hesaplama)
+- https://www.londradepo.com/en/london-gateway-tilbury-warehousing — Warehouse ~13 miles from DP World London Gateway and ~16 miles from the Port of Tilbury (not bonded, not at the port)
+- https://www.londradepo.com/en/felixstowe-port-warehousing — Felixstowe containers to the Rayleigh, Essex warehouse (~62 miles by road; not bonded, not at the port)
 - https://www.londradepo.com/en/container-arrival-planner — Container arrival planner: dated checklist from UK port (London Gateway, Tilbury, Felixstowe) to the Rayleigh warehouse (TR pair: /konteyner-varis-planlayici)
 - https://www.londradepo.com/en/industries/automotive-parts — Automotive parts warehousing and distribution (English only)
 - https://www.londradepo.com/en/uk-warehousing-for-turkish-exporters — UK warehousing for Turkish exporters (TR pair: /turk-sirketleri-icin-ingiltere-depo)

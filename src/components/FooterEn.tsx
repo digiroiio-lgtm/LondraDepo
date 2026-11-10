@@ -33,6 +33,8 @@ const company = [
   ["/en/industries/automotive-parts", "Automotive Parts"],
   ["/en/uk-warehousing-for-turkish-exporters", "For Turkish Exporters"],
   ["/en/locations/port-to-warehouse-logistics", "Port-to-Warehouse Logistics"],
+  ["/en/london-gateway-tilbury-warehousing", "London Gateway & Tilbury"],
+  ["/en/felixstowe-port-warehousing", "Felixstowe Port Warehousing"],
   ["/en/uk-warehousing-benefits", "Why a UK Warehouse"],
   ["/en/uk-warehousing-pricing", "Pricing"],
   ["/en/uk-storage-cost-calculator", "Storage Cost Calculator"],

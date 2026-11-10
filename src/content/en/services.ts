@@ -118,13 +118,14 @@ export const servicePages: EnPage[] = [
   {
     slug: "/en/uk-ecommerce-logistics",
     tr: "/ingiltere-e-ticaret-lojistigi",
+    modified: "2026-11-10",
     kind: "service",
     serviceType: "Ecommerce logistics",
-    title: "UK Ecommerce Logistics & Order Fulfilment",
+    title: "UK Ecommerce Logistics: Stock, Delivery & Returns",
     description:
       "End-to-end UK ecommerce logistics from Essex: stock storage, Mintsoft WMS, pick and pack, shipping labels, UK delivery and returns for Shopify, Amazon FBM and other online channels.",
     label: "UK Ecommerce Logistics",
-    h1: "UK Ecommerce Logistics and Order Fulfilment",
+    h1: "UK Ecommerce Logistics: Planning Stock, Delivery and Returns",
     lead:
       "UK ecommerce logistics covers everything that happens after an online customer clicks 'buy': holding stock in a UK warehouse, picking and packing the order, labelling it, delivering it and processing returns. LondraDepo runs this process from its Essex warehouse for Shopify, Amazon FBM and other online channels.",
     facts: [
@@ -301,13 +302,14 @@ export const servicePages: EnPage[] = [
   {
     slug: "/en/amazon-seller-warehousing-uk",
     tr: "/amazon-ingiltere-depo",
+    modified: "2026-11-10",
     kind: "service",
     serviceType: "Amazon FBM fulfilment",
-    title: "UK Warehouse for Amazon Sellers (FBM)",
+    title: "Amazon FBM Fulfilment UK: Warehouse for Amazon Sellers",
     description:
       "UK warehousing and order fulfilment for Amazon sellers using Fulfilled by Merchant (FBM), plus FBA prep. Compare FBM and FBA and run Amazon UK from our Essex warehouse.",
     label: "Amazon Seller Warehousing",
-    h1: "UK Warehousing for Amazon Sellers (FBM)",
+    h1: "Amazon FBM Fulfilment: UK Warehouse for Amazon Sellers",
     lead:
       "If you sell on Amazon.co.uk with Fulfilled by Merchant (FBM), LondraDepo can act as your UK warehouse: we store your stock in Essex and pick, pack and ship each Amazon order to the customer. If you use Fulfilled by Amazon (FBA), we prepare and send your stock to Amazon instead. " + NOT_PARTNER_AMAZON,
     facts: [
@@ -361,13 +363,14 @@ export const servicePages: EnPage[] = [
   {
     slug: "/en/uk-fulfilment",
     tr: "/ingiltere-fulfillment",
+    modified: "2026-11-10",
     kind: "service",
     serviceType: "Fulfilment",
-    title: "UK Fulfilment Services – Storage, Packing & Delivery",
+    title: "UK Fulfilment Services for Brands Importing into the UK",
     description:
       "UK fulfilment services from Essex: order picking, branded packing, Amazon FBA prep, Shopify and Etsy order handling, returns management and regular stock reporting.",
     label: "UK Fulfilment",
-    h1: "UK Fulfilment Services",
+    h1: "UK Fulfilment Services for Importing Brands",
     lead:
       "UK fulfilment means storing your stock in a UK warehouse and having each customer order picked, packed and shipped for you. LondraDepo runs fulfilment from its Essex operation for brands that import into the UK, covering picking, packing, Amazon FBA prep, multichannel orders and returns.",
     facts: [
@@ -490,13 +493,14 @@ export const servicePages: EnPage[] = [
   {
     slug: "/en/storage-services",
     tr: "/depolama",
+    modified: "2026-11-10",
     kind: "service",
     serviceType: "Storage",
-    title: "UK Storage Services – Pallet, Carton & Mintsoft WMS",
+    title: "UK Storage Services: Goods-in, Stock Control & Capacity",
     description:
       "UK storage services: pallet and carton goods-in, real-time stock tracking in Mintsoft WMS, FCL container unloading, and short or long-term warehouse capacity in Essex.",
     label: "Storage Services",
-    h1: "UK Storage Services: Pallets, Cartons and WMS",
+    h1: "UK Storage Services: Goods-in, Stock Control and Capacity",
     lead:
       "Our UK storage service covers the technical side of holding stock: pallet and carton goods-in, FCL container unloading, real-time stock tracking in Mintsoft WMS and flexible short or long-term capacity at our Essex warehouse.",
     facts: [
@@ -635,13 +639,14 @@ export const servicePages: EnPage[] = [
   {
     slug: "/en/ecommerce-fulfilment",
     tr: "/e-ticaret-fulfillment",
+    modified: "2026-11-10",
     kind: "service",
     serviceType: "Ecommerce fulfilment",
-    title: "Ecommerce Fulfilment UK – Pick, Pack & Dispatch",
+    title: "Ecommerce Fulfilment UK: From Online Order to Delivery",
     description:
       "Ecommerce fulfilment in the UK: order management, Mintsoft WMS stock tracking, pick and pack, shipping labels, packing, UK dispatch and returns handling from Essex.",
     label: "Ecommerce Fulfilment",
-    h1: "Ecommerce Fulfilment in the UK",
+    h1: "Ecommerce Fulfilment in the UK: From Order to Doorstep",
     lead:
       "Ecommerce fulfilment connects your online store to a physical warehouse. When an order arrives, LondraDepo's warehouse team takes over: picking the products, packing them, labelling the parcel and dispatching it to your UK customer, with returns handled in the same operation.",
     sections: [
@@ -669,15 +674,16 @@ export const servicePages: EnPage[] = [
   {
     slug: "/en/amazon-fulfilment-uk",
     tr: "/amazon-fulfillment",
+    modified: "2026-11-10",
     kind: "service",
     serviceType: "Amazon fulfilment",
-    title: "Amazon Fulfilment UK – Storage & Order Handling",
+    title: "Amazon Fulfilment UK: FBA Prep or FBM?",
     description:
       "Amazon fulfilment support in the UK: secure stock storage, order management, pick and pack, Amazon-compliant labelling, Mintsoft WMS tracking and UK delivery, plus FBA prep.",
     label: "Amazon Fulfilment UK",
-    h1: "Amazon Fulfilment in the UK",
+    h1: "Amazon Fulfilment in the UK: FBA Prep or FBM?",
     lead:
-      "LondraDepo supports businesses selling on Amazon in the UK with stock storage, order handling, pick and pack, labelling and UK delivery from Essex. For sellers sending stock into Amazon's own network, our Amazon Prep UK service handles FNSKU labelling and FBA compliance. " + NOT_PARTNER_AMAZON,
+      "Amazon sellers in the UK use one of two models: Fulfilled by Amazon (FBA), where Amazon stores and ships your stock, or Fulfilled by Merchant (FBM), where you or your warehouse ship each order. LondraDepo supports businesses selling on Amazon in the UK with stock storage, order handling, pick and pack, labelling and UK delivery from Essex. For sellers sending stock into Amazon's own network, our Amazon Prep UK service handles FNSKU labelling and FBA compliance. " + NOT_PARTNER_AMAZON,
     sections: [
       {
         type: "cards",
@@ -739,6 +745,6 @@ export const servicePages: EnPage[] = [
         ],
       },
     ],
-    related: ["/en/locations/port-to-warehouse-logistics", "/en/container-unloading", "/en/uk-import-logistics", "/en/pallet-storage", "/en/uk-fulfilment", "/en/london-warehousing"],
+    related: ["/en/london-gateway-tilbury-warehousing", "/en/felixstowe-port-warehousing", "/en/locations/port-to-warehouse-logistics", "/en/container-unloading", "/en/uk-import-logistics", "/en/pallet-storage", "/en/uk-fulfilment", "/en/london-warehousing"],
   },
 ];

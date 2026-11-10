@@ -47,6 +47,8 @@ const BY_SLUG: Record<string, Cta> = {
   "/en/locations/port-to-warehouse-logistics": { label: "Get a Port-to-Warehouse Quote", service: "container-unloading" },
   "/en/uk-storage-cost-calculator": { label: "Get a Full Storage Quote", service: "storage" },
   "/en/container-arrival-planner": { label: "Get a Container Unloading Quote", service: "container-unloading" },
+  "/en/london-gateway-tilbury-warehousing": { label: "Get a Port-to-Warehouse Quote", service: "container-unloading" },
+  "/en/felixstowe-port-warehousing": { label: "Get a Port-to-Warehouse Quote", service: "container-unloading" },
   "/en/blog/uk-importing-guide": { label: "Discuss Your Import Requirements", service: "freight-customs" },
   "/en/case-studies/cruyff-uk-fulfilment": FULFIL,
   "/en/case-studies/pizza-box-distribution-uk": { label: "Discuss Your Packaging Storage Requirements", service: "distribution" },

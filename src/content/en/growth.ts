@@ -138,7 +138,7 @@ export const growthPages: EnPage[] = [
       { q: "Can you arrange haulage from the port?", a: "Yes. Arca Trade Group, the company that operates LondraDepo, can arrange transport from the port to our warehouse, or your own forwarder can deliver." },
       { q: "Can unloaded goods go straight out again?", a: "Yes. Goods can be cross-docked to UK customers or Amazon, or stored and released as orders arrive." },
     ],
-    related: ["/en/container-arrival-planner", "/en/uk-import-logistics", "/en/locations/port-to-warehouse-logistics", "/en/pallet-storage", "/en/essex-warehouse", "/en/cargo-handling"],
+    related: ["/en/london-gateway-tilbury-warehousing", "/en/felixstowe-port-warehousing", "/en/container-arrival-planner", "/en/uk-import-logistics", "/en/locations/port-to-warehouse-logistics", "/en/pallet-storage", "/en/essex-warehouse", "/en/cargo-handling"],
     cta: { h2: "Book a container unloading quote", text: "Send the container size, ETA, packing list and whether goods are palletised or loose-loaded." },
   },
   {
@@ -446,7 +446,7 @@ export const growthPagesP2: EnPage[] = [
       { q: "Can you arrange haulage from the port?", a: "Yes. Arca Trade Group, which operates LondraDepo, can arrange customs clearance and haulage from the port, or your forwarder can deliver to us." },
       { q: "Can you unload at the port instead?", a: "No. Unloading takes place at our Rayleigh warehouse, where goods can be stored and fulfilled without further handling." },
     ],
-    related: ["/en/container-arrival-planner", "/en/container-unloading", "/en/uk-import-logistics", "/en/essex-warehouse", "/en/blog/uk-importing-guide"],
+    related: ["/en/london-gateway-tilbury-warehousing", "/en/felixstowe-port-warehousing", "/en/container-arrival-planner", "/en/container-unloading", "/en/uk-import-logistics", "/en/essex-warehouse"],
     cta: { h2: "Plan your port-to-warehouse move", text: "Tell us the arrival port, container size, ETA and what should happen to the goods next." },
   },
 ];
@@ -587,5 +587,172 @@ export const calculatorPages: EnPage[] = [
     ],
     related: ["/en/container-unloading", "/en/locations/port-to-warehouse-logistics", "/en/uk-import-logistics", "/en/blog/uk-importing-guide", "/en/uk-storage-cost-calculator"],
     cta: { h2: "Turn your plan into a quote", text: "Send the container size, port, ETA and packing list and we will quote unloading, storage and onward delivery." },
+  },
+];
+
+// Port location pages (EN only, no Turkish counterpart). Distances: road routing from SS6 7FY, 10 November 2026.
+// Port descriptions limited to what is already stated on the site and its cited Wikipedia sources.
+// LondraDepo is not a bonded warehouse and is not at a port: never claim either.
+export const portPages: EnPage[] = [
+  {
+    slug: "/en/london-gateway-tilbury-warehousing",
+    kind: "service",
+    serviceType: "Port warehousing for London Gateway and Tilbury",
+    modified: "2026-11-10",
+    title: "Warehouse near London Gateway & Tilbury",
+    description:
+      "Essex warehouse 13 miles from DP World London Gateway and 16 miles from the Port of Tilbury: container unloading, pallet storage from £3.50 + VAT per week, fulfilment and UK distribution in Rayleigh.",
+    label: "London Gateway & Tilbury",
+    eyebrow: "Thames ports · ~20 minutes by road",
+    h1: "Warehousing near London Gateway and Tilbury",
+    lead:
+      "LondraDepo's warehouse in Rayleigh, Essex, is about 13 miles (21 km) by road from DP World London Gateway and 16 miles (26 km) from the Port of Tilbury, around 20 minutes by car from each. Containers arriving at either Thames port can be cleared, hauled a short distance to our site, unloaded, counted and booked into stock, then stored from £3.50 + VAT per pallet per week or sent on to UK customers. The warehouse is not at the port and is not a bonded warehouse: goods are stored after customs clearance.",
+    facts: [
+      "DP World London Gateway (SS17): ~13 miles / 21 km, ~20 minutes",
+      "Port of Tilbury (RM18): ~16 miles / 26 km, ~20 minutes",
+      "20ft, 40ft and 40ft high-cube FCL plus LCL received",
+      "Customs clearance and haulage available through Arca Trade Group",
+      "Not a bonded warehouse: goods are stored after clearance",
+    ],
+    sections: [
+      {
+        type: "table",
+        h2: "London Gateway and Tilbury compared",
+        head: ["", "DP World London Gateway", "Port of Tilbury"],
+        rows: [
+          ["Location", "Thurrock, Essex, on the Thames", "Tilbury, Essex, on the Thames"],
+          ["What it handles", "Deep-water container port for large container ships", "Containers, ro-ro and general cargo"],
+          ["Road distance to our warehouse", "~13 miles / 21 km", "~16 miles / 26 km"],
+          ["Typical car time (free-flow)", "~20 minutes", "~20 minutes"],
+        ],
+        note: "Road routing from SS6 7FY to each port postcode (10 November 2026). HGVs, port queues and peak traffic take longer. Your shipping line usually decides the port.",
+      },
+      {
+        type: "steps",
+        h2: "From the Thames ports to stock on our shelves",
+        items: [
+          { title: "Pre-advice", text: "Send the container number, ETA, packing list and carton counts per SKU, and say whether goods are palletised or loose-loaded." },
+          { title: "Customs clearance", text: "Arca Trade Group's customs team or your broker lodges the import declaration; duty and import VAT are accounted for." },
+          { title: "Short haul", text: "A haulier collects the container from London Gateway or Tilbury and delivers it to Rayleigh, a road distance of 13 to 16 miles." },
+          { title: "Unload and check", text: "We unload, count against the packing list, photograph visible damage and report any discrepancies." },
+          { title: "Book into stock", text: "Loose cartons are palletised and labelled where needed, and stock is booked into Mintsoft WMS." },
+          { title: "Store or send on", text: "Goods are stored, picked for orders, or cross-docked to UK customers and Amazon." },
+        ],
+      },
+      {
+        type: "text",
+        h2: "Why use a warehouse close to the Thames ports?",
+        paras: [
+          "London Gateway and Tilbury are the closest major container ports to our site, so the road leg from port to warehouse is short compared with ports further away, such as Felixstowe at about 62 miles. Our warehouse is also about 37 miles from central London, so the same stock can serve London and South East customers as well as the rest of Great Britain over the M25.",
+          "Unloading, storage, order picking and UK distribution happen in one building, so goods are handled once instead of moving between a port-side yard and a separate fulfilment centre. If your containers arrive at Felixstowe instead, see our Felixstowe page; the process is the same with a longer haul.",
+        ],
+      },
+      {
+        type: "links",
+        h2: "Plan your delivery",
+        items: [
+          { href: "/en/container-arrival-planner", title: "Container arrival planner", text: "Pick London Gateway or Tilbury, your container and ETA, and get a dated checklist.", tag: "Free tool" },
+          { href: "/en/container-unloading", title: "Container unloading", text: "FCL and LCL devanning, counting, damage photos and re-palletising in Essex.", tag: "Service" },
+          { href: "/en/felixstowe-port-warehousing", title: "Felixstowe port warehousing", text: "Containers arriving at the UK's largest container port, about 62 miles away.", tag: "Port" },
+        ],
+      },
+      {
+        type: "sources",
+        h2: "Sources",
+        items: [
+          { label: "Wikipedia: London Gateway (deep-water container port in Thurrock)", href: "https://en.wikipedia.org/wiki/London_Gateway" },
+          { label: "Wikipedia: Port of Tilbury", href: "https://en.wikipedia.org/wiki/Port_of_Tilbury" },
+          { label: "Project OSRM: road routing used for the distances", href: "https://project-osrm.org/" },
+        ],
+      },
+    ],
+    faqs: [
+      { q: "How far is the warehouse from London Gateway?", a: "About 13 miles (21 km) by road from DP World London Gateway, around 20 minutes by car in free-flowing traffic." },
+      { q: "How far is the warehouse from the Port of Tilbury?", a: "About 16 miles (26 km) by road, around 20 minutes by car in free-flowing traffic. Container lorries take longer." },
+      { q: "Is this a bonded warehouse?", a: "No. LondraDepo is not a bonded warehouse. Goods are cleared through UK customs before they are stored at our Rayleigh site." },
+      { q: "Can you collect containers from London Gateway or Tilbury?", a: "Yes. Arca Trade Group, which operates LondraDepo, can arrange customs clearance and haulage from either port, or your own forwarder can deliver to our warehouse." },
+    ],
+    related: ["/en/locations/port-to-warehouse-logistics", "/en/container-unloading", "/en/container-arrival-planner", "/en/felixstowe-port-warehousing", "/en/essex-warehouse", "/en/london-warehousing"],
+    cta: { h2: "Get a quote for your Thames port container", text: "Send the port, container size, ETA and packing list, and we will quote haulage, unloading, storage and onward delivery." },
+  },
+  {
+    slug: "/en/felixstowe-port-warehousing",
+    kind: "service",
+    serviceType: "Port warehousing for Felixstowe",
+    modified: "2026-11-10",
+    title: "Felixstowe Port Warehousing: Essex Warehouse",
+    description:
+      "Containers arriving at Felixstowe, the UK's largest container port: haulage about 62 miles to our Rayleigh, Essex warehouse, unloading, pallet storage from £3.50 + VAT per week, fulfilment and London distribution.",
+    label: "Felixstowe Port Warehousing",
+    eyebrow: "Port of Felixstowe · ~62 miles by road",
+    h1: "Felixstowe Port Warehousing in Essex",
+    lead:
+      "Felixstowe is the UK's largest container port, and many deep-sea services from Asia call there. LondraDepo's warehouse is not at the port: it is in Rayleigh, Essex, about 62 miles (99 km) by road, roughly 1¼ hours by car. Containers landing at Felixstowe can be cleared, hauled to our site, unloaded and booked into stock, then stored from £3.50 + VAT per pallet per week, fulfilled or distributed across the UK, with London about 37 miles away. We are not a bonded warehouse, so goods are stored after customs clearance.",
+    facts: [
+      "Port of Felixstowe (IP11): ~62 miles / 99 km, ~1¼ hours by car",
+      "Central London: ~37 miles from the warehouse",
+      "20ft, 40ft and 40ft high-cube FCL plus LCL received",
+      "Customs clearance and haulage available through Arca Trade Group",
+      "Not a bonded warehouse and not at the port",
+    ],
+    sections: [
+      {
+        type: "table",
+        h2: "Felixstowe container to our warehouse: what to plan",
+        head: ["Step", "What it involves"],
+        rows: [
+          ["Customs", "Import declaration lodged by Arca Trade Group's customs team or your broker; duty and import VAT accounted for"],
+          ["Haulage", "About 62 miles / 99 km by road from Felixstowe to Rayleigh; booked through Arca Trade Group or your forwarder"],
+          ["Delivery slot", "Agreed in advance with our warehouse after pre-advice"],
+          ["Unloading", "Counted against the packing list, damage photographed, loose cartons palletised where needed"],
+          ["Next step", "Storage from £3.50 + VAT per pallet per week, order fulfilment, or cross-dock to UK customers and Amazon"],
+        ],
+        note: "Road distance by routing from SS6 7FY to IP11 (10 November 2026). Times are for a car in free-flowing traffic; container lorries and port queues take longer.",
+      },
+      {
+        type: "text",
+        h2: "When an Essex warehouse makes sense for Felixstowe containers",
+        paras: [
+          "Our site suits importers whose goods need more than storage next to the port. If the same stock has to serve London and South East customers, ecommerce orders, Amazon and wholesale accounts, unloading it once in Rayleigh, about 37 miles from central London, avoids moving it again between a port-side store and a fulfilment centre.",
+          "If your goods only need short-term storage beside the port before collection, a warehouse in the Felixstowe area may suit you better. If some of your containers arrive at London Gateway or Tilbury instead, those ports are only 13 to 16 miles from us.",
+        ],
+      },
+      {
+        type: "steps",
+        h2: "How a Felixstowe delivery works with us",
+        items: [
+          { title: "Pre-advice", text: "Send the container number, ETA, packing list and carton counts per SKU, and whether goods are palletised or loose-loaded." },
+          { title: "Clearance", text: "The declaration is lodged before or on arrival; customs duty is paid on release and import VAT is paid or accounted for." },
+          { title: "Haulage", text: "The container is collected at Felixstowe and delivered to Rayleigh in the agreed slot." },
+          { title: "Unload and book in", text: "Goods are unloaded, checked and booked into Mintsoft WMS." },
+          { title: "Store, fulfil or deliver", text: "Stock is stored, picked for orders or sent straight on to customers." },
+        ],
+      },
+      {
+        type: "links",
+        h2: "Plan your delivery",
+        items: [
+          { href: "/en/container-arrival-planner", title: "Container arrival planner", text: "Pick Felixstowe, your container and ETA, and get a dated checklist.", tag: "Free tool" },
+          { href: "/en/container-unloading", title: "Container unloading", text: "FCL and LCL devanning, counting, damage photos and re-palletising in Essex.", tag: "Service" },
+          { href: "/en/london-gateway-tilbury-warehousing", title: "London Gateway and Tilbury", text: "The closest container ports to our warehouse, 13 to 16 miles away.", tag: "Port" },
+        ],
+      },
+      {
+        type: "sources",
+        h2: "Sources",
+        items: [
+          { label: "Wikipedia: Port of Felixstowe (share of UK container traffic)", href: "https://en.wikipedia.org/wiki/Port_of_Felixstowe" },
+          { label: "Project OSRM: road routing used for the distances", href: "https://project-osrm.org/" },
+        ],
+      },
+    ],
+    faqs: [
+      { q: "How far is the warehouse from Felixstowe?", a: "About 62 miles (99 km) by road from the Port of Felixstowe to Rayleigh, Essex, roughly 1¼ hours by car in free-flowing traffic. Container lorries take longer." },
+      { q: "Is your warehouse at the Port of Felixstowe?", a: "No. Our warehouse is in Rayleigh, Essex. Containers are hauled from Felixstowe to our site for unloading, storage and fulfilment." },
+      { q: "Do you offer bonded storage for Felixstowe containers?", a: "No. LondraDepo is not a bonded warehouse. Goods are cleared through UK customs before they are stored with us." },
+      { q: "Can you arrange haulage and customs from Felixstowe?", a: "Yes. Arca Trade Group, which operates LondraDepo, can arrange customs clearance and haulage from Felixstowe, or your own forwarder can deliver to our warehouse." },
+    ],
+    related: ["/en/locations/port-to-warehouse-logistics", "/en/container-unloading", "/en/container-arrival-planner", "/en/london-gateway-tilbury-warehousing", "/en/uk-import-logistics", "/en/essex-warehouse"],
+    cta: { h2: "Get a quote for your Felixstowe container", text: "Send the container size, ETA and packing list, and we will quote haulage, unloading, storage and onward delivery." },
   },
 ];

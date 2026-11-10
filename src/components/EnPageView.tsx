@@ -75,6 +75,22 @@ function jsonLd(page: EnPage) {
       url,
     });
   }
+  if (page.kind === "home") {
+    // AEO freshness: answer engines read dateModified from Article-type schema.
+    graph.push({
+      "@type": "Article",
+      "@id": `${url}#article`,
+      headline: page.h1,
+      description: page.description,
+      inLanguage: "en",
+      datePublished: EN_PUBLISHED,
+      dateModified: modifiedOf(page),
+      author: { "@type": "Organization", name: "Arca Trade Group Ltd", url: "https://arcatrade.co.uk/" },
+      publisher: ORG,
+      mainEntityOfPage: { "@id": `${url}#webpage` },
+      image: `${SITE_URL}/londradepo.jpeg`,
+    });
+  }
   if (page.article) {
     graph.push({
       "@type": page.kind === "case" ? "Article" : "BlogPosting",

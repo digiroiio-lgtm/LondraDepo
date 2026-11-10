@@ -73,15 +73,15 @@ export const servicePages: EnPage[] = [
     serviceType: "Warehousing",
     title: "London Warehousing – Essex Warehouse 40 Minutes from London",
     description:
-      "Warehouse storage for London and the South East from Rayleigh, Essex: 40 minutes from London, 30 minutes from Tilbury, on the M25 corridor. Pallet storage, pick and pack and UK delivery.",
+      "Warehouse storage for London and the South East from Rayleigh, Essex: about 40 minutes from east London, 20–30 minutes from Tilbury, on the M25 corridor. Pallet storage, pick and pack and UK delivery.",
     label: "London Warehousing",
     eyebrow: "Near London, Essex",
     h1: "London Warehousing on the M25 Corridor",
     lead:
-      "Our warehouse is in Rayleigh, Essex, roughly 40–50 km (about 40 minutes) from London and 30 minutes from the Port of Tilbury. It is not inside London, but its position on the A127 and M25 routes makes it a practical base for storing stock and delivering quickly to London, the South East and the rest of the UK.",
+      "Our warehouse is in Rayleigh, Essex, about 37 miles (59 km) by road from central London, around 40 minutes from east London, and 20–30 minutes from the Port of Tilbury. It is not inside London, but its position on the A127 and M25 routes makes it a practical base for storing stock and delivering quickly to London, the South East and the rest of the UK.",
     facts: [
       "Address: Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY",
-      "~40 minutes to London, ~30 minutes to Tilbury",
+      "~40 minutes to east London, ~1 hour to central London, 20–30 minutes to Tilbury",
       "Goods-in, pallet and carton storage, Mintsoft WMS, pick and pack, UK delivery",
     ],
     sections: [
@@ -112,7 +112,7 @@ export const servicePages: EnPage[] = [
       { q: "How do I send products to the warehouse?", a: "Ship your goods to our warehouse address with your own freight forwarder, or ask Arca Trade Group to arrange freight and customs clearance, and on arrival the goods are received, counted and booked into the system." },
       { q: "How do I get a quote?", a: "Contact us on WhatsApp or by phone with your product type, volume, estimated pallets or cartons and the services you need." },
     ],
-    related: ["/en/uk-warehousing", "/en/essex-warehouse", "/en/pallet-storage", "/en/uk-warehousing-pricing"],
+    related: ["/en/uk-warehousing", "/en/essex-warehouse", "/en/locations/port-to-warehouse-logistics", "/en/pallet-storage", "/en/uk-warehousing-pricing"],
     cta: { h2: "Get a London warehousing quote", text: "Tell us what you need to store and where your customers are." },
   },
   {
@@ -502,7 +502,7 @@ export const servicePages: EnPage[] = [
       { q: "Is LondraDepo a bonded or customs warehouse?", a: "No. LondraDepo is not an HMRC-authorised customs warehouse. Goods are stored after they have been cleared for free circulation in the UK." },
       { q: "How are goods received after customs?", a: "Once clearance is complete, your goods are delivered to our warehouse address, counted and booked into the warehouse system." },
     ],
-    related: ["/en/uk-import-logistics", "/en/container-unloading", "/en/uk-warehousing", "/en/essex-warehouse"],
+    related: ["/en/uk-import-logistics", "/en/blog/uk-importing-guide", "/en/container-unloading", "/en/uk-warehousing", "/en/essex-warehouse"],
   },
   {
     slug: "/en/cargo-handling",
@@ -648,13 +648,13 @@ export const servicePages: EnPage[] = [
     serviceType: "Warehousing",
     title: "Essex Warehouse near London – Rayleigh, SS6 7FY",
     description:
-      "Our Essex warehouse in Rayleigh (SS6 7FY): ~40 minutes to London, ~30 minutes to Tilbury, roughly 1 to 1¼ hours to Felixstowe by road. FCL/LCL receiving, pallet storage, fulfilment and Amazon prep.",
+      "Our Essex warehouse in Rayleigh (SS6 7FY): ~40 minutes to east London, 20–30 minutes to Tilbury and London Gateway, about 62 miles to Felixstowe. FCL/LCL receiving, pallet storage, fulfilment and Amazon prep.",
     label: "Essex Warehouse",
     h1: "Essex Warehouse near London",
     lead:
-      "LondraDepo's warehouse is at Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY. It is about 40 minutes from London via the A127 and M25, 30 minutes from the Port of Tilbury and roughly 1 to 1¼ hours by road from Felixstowe, with a loading ramp and wide gate suitable for container unloading and palletised deliveries.",
+      "LondraDepo's warehouse is at Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY. It is about 40 minutes from east London via the A127, 20–30 minutes from the ports of Tilbury and London Gateway and about 62 miles (roughly 1¼ hours) by road from Felixstowe, with a loading ramp and wide gate suitable for container unloading and palletised deliveries.",
     facts: [
-      "~40 minutes to London (A127/M25)",
+      "~40 minutes to east London, ~1 hour to central London (A127)",
       "Roughly 1 to 1¼ hours by road to Felixstowe, the UK's largest container port",
       "~30 minutes to the Port of Tilbury (container and ro-ro services)",
       "Close to Amazon UK fulfilment centres at Tilbury and Dartford",
@@ -682,6 +682,6 @@ export const servicePages: EnPage[] = [
         ],
       },
     ],
-    related: ["/en/container-unloading", "/en/uk-import-logistics", "/en/pallet-storage", "/en/uk-fulfilment", "/en/amazon-prep-uk", "/en/london-warehousing"],
+    related: ["/en/locations/port-to-warehouse-logistics", "/en/container-unloading", "/en/uk-import-logistics", "/en/pallet-storage", "/en/uk-fulfilment", "/en/london-warehousing"],
   },
 ];

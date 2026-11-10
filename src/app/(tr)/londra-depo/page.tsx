@@ -11,9 +11,9 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20Londra%20depo%20h
 const TEL = "tel:+447554195190";
 
 export const metadata: Metadata = {
-  title: "Londra Depo Hizmeti | Londra'ya 40 Dakika Essex Warehouse | LondraDepo.com",
+  title: "Londra Depo Hizmeti | Doğu Londra'ya 40 Dakika Essex Warehouse | LondraDepo.com",
   description:
-    "Londra'ya 40 dakika mesafede Essex depo; M25 çıkışı, Tilbury Limanı'na 30 dakika. Mal kabul, depolama ve hızlı sipariş karşılama.",
+    "Doğu Londra'ya 40 dakika mesafede Essex depo; A127 üzerinde, Tilbury Limanı'na 20–30 dakika. Mal kabul, depolama ve hızlı sipariş karşılama.",
   keywords: [
     "londra depo",
     "londra depo hizmeti",
@@ -86,7 +86,7 @@ const whoWeServe = [
 const faqs = [
   {
     q: "Londra'da depo hizmeti alabilir miyim?",
-    a: "Evet. Depomuz Londra'ya yakın Essex'te yer almaktadır. Londra'ya olan mesafesi yaklaşık 40-50 km olup UK lojistik ağına tam entegredir. Ürünlerinizi depomuzda saklayabilir ve siparişlerinizi UK geneline karşılayabilirsiniz.",
+    a: "Evet. Depomuz Londra'ya yakın Essex'te yer almaktadır. Londra merkezine karayoluyla yaklaşık 59 km (Doğu Londra'ya ~40 dakika) olup UK lojistik ağına tam entegredir. Ürünlerinizi depomuzda saklayabilir ve siparişlerinizi UK geneline karşılayabilirsiniz.",
   },
   {
     q: "Depo konumu nerede?",
@@ -133,7 +133,7 @@ export default function LondraDepoPage() {
               UK Dağıtım
             </h1>
             <p className="text-slate-300 text-lg leading-relaxed max-w-3xl mb-4">
-              Essex depomuz Londra'ya 40 dakika, Tilbury Limanı'na 30 dakika mesafede.
+              Essex depomuz Doğu Londra'ya 40 dakika (Londra merkezine yaklaşık 1 saat), Tilbury Limanı'na 20–30 dakika mesafede.
               M25 güzergâhı üzerindeki stratejik konumumuz sayesinde Londra ve güneydoğu
               İngiltere'ye hızlı sevkiyat yapıyoruz.
             </p>
@@ -167,7 +167,7 @@ export default function LondraDepoPage() {
               <div>
                 <h2 className="font-bold text-[#0b2545] mb-1">Essex, Londra'ya Yakın İngiltere Deposu</h2>
                 <p className="text-slate-600 text-sm leading-relaxed">
-                  Depomuz Londra'ya yaklaşık 40-50 km uzaklıkta Essex'te yer almaktadır.
+                  Depomuz Londra merkezine karayoluyla yaklaşık 59 km uzaklıkta, Essex'te yer almaktadır.
                   Londra merkezli olmamasına karşın UK'nin ana lojistik güzergahlarına uygun
                   konumda olup Londra ve tüm İngiltere'ye teslimat yapılabilmektedir.
                   "Londra Depo" veya "İngiltere Depo" aramanızdan buraya geldiyseniz,

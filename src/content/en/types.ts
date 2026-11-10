@@ -10,7 +10,9 @@ export type Section =
   | { type: "list"; h2: string; intro?: string; items: string[]; outro?: string }
   | { type: "table"; h2: string; intro?: string; head: string[]; rows: string[][]; note?: string }
   | { type: "stats"; h2?: string; items: { value: string; label: string }[] }
-  | { type: "links"; h2: string; intro?: string; items: LinkCard[] };
+  | { type: "links"; h2: string; intro?: string; items: LinkCard[] }
+  /** Attributed quotation; only verbatim, published statements. */
+  | { type: "quote"; text: string; cite: string; sourceLabel?: string; sourceHref?: string };
 
 export type PageKind = "home" | "service" | "article" | "case" | "hub" | "contact" | "legal";
 
@@ -41,6 +43,8 @@ export type EnPage = {
   article?: { published: string; modified: string; readMins: number; section: string };
   /** Legal pages. */
   updated?: string;
+  /** ISO date of the last content review; shown as "Last updated" and used as dateModified. */
+  modified?: string;
   /** Hub breadcrumb parent (blog or case studies). */
   parent?: string;
 };

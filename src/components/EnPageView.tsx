@@ -22,6 +22,17 @@ const MAPS = "https://maps.google.com/?q=Unit+19+Arterial+Park+Arterial+Road+Ray
 
 const ORG = { "@id": `${SITE_URL}/#organization` };
 
+/** English site launch date; pages without their own review date fall back to it. */
+const EN_PUBLISHED = "2026-11-10";
+
+function modifiedOf(page: EnPage): string {
+  return page.article?.modified ?? page.modified ?? EN_PUBLISHED;
+}
+
+function formatDate(iso: string): string {
+  return new Date(`${iso}T12:00:00Z`).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
+}
+
 function breadcrumbs(page: EnPage) {
   const crumbs = [{ name: "Home", path: "/en" }];
   if (page.parent) {
@@ -45,6 +56,8 @@ function jsonLd(page: EnPage) {
       inLanguage: "en",
       isPartOf: { "@id": `${SITE_URL}/en#website` },
       about: ORG,
+      datePublished: page.article?.published ?? EN_PUBLISHED,
+      dateModified: modifiedOf(page),
     },
     {
       "@type": "BreadcrumbList",
@@ -174,6 +187,25 @@ function SectionView({ s }: { s: Section }) {
           </dl>
         </section>
       );
+    case "quote":
+      return (
+        <figure className="mb-12 rounded-xl border-l-4 border-[#e63946] bg-slate-50 p-6">
+          <blockquote className="text-lg text-[#0b2545] leading-relaxed">
+            <p>&ldquo;{s.text}&rdquo;</p>
+          </blockquote>
+          <figcaption className="mt-3 text-sm text-slate-600">
+            {s.cite}
+            {s.sourceHref && (
+              <>
+                {" "}·{" "}
+                <a href={s.sourceHref} target="_blank" rel="noopener noreferrer" className="underline">
+                  {s.sourceLabel ?? "Source"}
+                </a>
+              </>
+            )}
+          </figcaption>
+        </figure>
+      );
     case "links":
       return (
         <section className="mb-12">
@@ -224,11 +256,16 @@ export default function EnPageView({ page }: { page: EnPage }) {
             {page.article && (
               <p className="text-sm text-slate-500 mb-4">
                 By Sertaç Yılmaz · Reviewed by Yusuf Barış, Operations Manager · Updated{" "}
-                <time dateTime={page.article.modified}>{new Date(page.article.modified).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}</time>
+                <time dateTime={page.article.modified}>{formatDate(page.article.modified)}</time>
                 {" "}· {page.article.readMins} min read
               </p>
             )}
             {page.updated && <p className="text-sm text-slate-500 mb-4">Last updated: {page.updated}</p>}
+            {!page.updated && !page.article && (
+              <p className="text-sm text-slate-500 mb-4">
+                Last updated: <time dateTime={modifiedOf(page)}>{formatDate(modifiedOf(page))}</time>
+              </p>
+            )}
             <p className="text-lg text-slate-700 leading-relaxed max-w-3xl">{page.lead}</p>
             {page.kind !== "legal" && (
               <div className="flex flex-wrap gap-3 mt-7">

@@ -10,15 +10,15 @@ export const corePages: EnPage[] = [
     kind: "home",
     title: "UK Warehousing, Fulfilment & Distribution near London",
     description:
-      "UK warehousing, ecommerce fulfilment, pallet storage, Amazon prep and UK-wide distribution from our Essex warehouse, 40 minutes from London. Pallet storage from £3.50 + VAT/week.",
+      "UK warehousing, ecommerce fulfilment, pallet storage, Amazon prep and UK-wide distribution from our Essex warehouse, about 40 minutes from east London. Pallet storage from £3.50 + VAT/week.",
     label: "Home",
     eyebrow: "UK 3PL warehouse · Essex, near London",
     h1: "UK Warehousing and Fulfilment for International Brands",
     lead:
-      "LondraDepo is a UK third-party logistics (3PL) warehouse in Rayleigh, Essex, about 40 minutes from London. We receive your goods, store them on pallets or shelves, pick and pack your orders and deliver across the UK, so you can sell into the UK market without opening your own warehouse or hiring a UK team.",
+      "LondraDepo is a UK third-party logistics (3PL) warehouse in Rayleigh, Essex, about 40 minutes from east London and around an hour from central London. We receive your goods, store them on pallets or shelves, pick and pack your orders and deliver across the UK, so you can sell into the UK market without opening your own warehouse or hiring a UK team.",
     facts: [
       "Warehouse: Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY",
-      "~40 minutes to London, ~30 minutes to the Port of Tilbury, roughly 1 to 1¼ hours by road to Felixstowe",
+      "~40 minutes to east London, ~1 hour to central London, 20–30 minutes to Tilbury and London Gateway, ~1¼ hours to Felixstowe",
       "Pallet storage from £3.50 + VAT per pallet per week",
       "Stock managed in Mintsoft WMS (third-party warehouse management software)",
       "FCL and LCL container receiving, pallet and carton storage",
@@ -67,7 +67,7 @@ export const corePages: EnPage[] = [
       },
     ],
     faqs: [
-      { q: "Where is the LondraDepo warehouse?", a: "Our warehouse is at Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY, United Kingdom. It is about 40 minutes from London via the A127 and M25." },
+      { q: "Where is the LondraDepo warehouse?", a: "Our warehouse is at Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY, United Kingdom. It is about 40 minutes from east London and around an hour from central London via the A127." },
       { q: "How much does UK pallet storage cost?", a: "Standard pallet storage starts from £3.50 + VAT per pallet per week. Handling, goods-in, fulfilment and delivery are quoted separately based on your products and volumes." },
       { q: "Can you ship goods internationally to the UK?", a: "LondraDepo's warehouse service starts when goods arrive in the UK. International freight by sea, air, road and rail, and customs clearance, are available from our parent company Arca Trade Group, so transport and storage can be quoted together. You can also use your own freight forwarder." },
       { q: "Can you fulfil Shopify and Amazon orders?", a: "Yes. We store stock and fulfil orders for businesses selling on Shopify and Amazon (FBM), and prepare stock for Amazon FBA. LondraDepo is not an official Shopify or Amazon partner." },
@@ -100,7 +100,7 @@ export const corePages: EnPage[] = [
         type: "text",
         h2: "A physical UK logistics base",
         paras: [
-          "Our warehouse sits on the Arterial Park industrial estate in Rayleigh. The site is around 40 minutes from London, 30 minutes from the Port of Tilbury and roughly 1 to 1¼ hours by road from Felixstowe, the UK's largest container port. Full container loads (FCL) are delivered and unloaded directly at the site, and the M25 gives us access to the rest of the country.",
+          "Our warehouse sits on the Arterial Park industrial estate in Rayleigh. The site is around 40 minutes from east London, 20–30 minutes from the ports of Tilbury and London Gateway and about 62 miles (roughly 1¼ hours) by road from Felixstowe, the UK's largest container port. Full container loads (FCL) are delivered and unloaded directly at the site, and the M25 gives us access to the rest of the country.",
           "The operation runs on Mintsoft WMS, so stock levels, inbound and outbound movements and order status are recorded in real time. The same set-up supports Amazon FBA prep, Shopify and ecommerce fulfilment, and B2B wholesale distribution.",
         ],
       },

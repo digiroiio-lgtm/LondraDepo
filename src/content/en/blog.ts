@@ -397,6 +397,73 @@ export const blogPages: EnPage[] = [
     ],
     related: ["/en/amazon-seller-warehousing-uk", "/en/amazon-prep-uk", "/en/blog/what-is-uk-fulfilment", "/en/blog/uk-warehousing-prices-2026"],
   },
+  {
+    slug: "/en/blog/uk-importing-guide",
+    kind: "article",
+    parent: "/en/blog",
+    article: { ...DATE, readMins: 9, section: "Importing" },
+    title: "How to Import Goods into the UK: A Practical Guide for Overseas Businesses",
+    description:
+      "A step-by-step guide to importing goods into the UK: GB EORI, commodity codes and the UK Global Tariff, customs declarations, duty and import VAT, rules of origin, product rules and choosing a UK warehouse.",
+    label: "UK Importing Guide",
+    h1: "How to Import Goods into the UK: A Practical Guide",
+    lead:
+      "To import goods into Great Britain, the importer needs a GB EORI number, the correct commodity code for each product, a customs declaration lodged through HMRC's Customs Declaration Service, and payment or accounting of any customs duty and import VAT. Overseas businesses usually work with a freight forwarder or customs agent and a UK warehouse that receives the cleared goods.",
+    sections: [
+      {
+        type: "steps",
+        h2: "The import process step by step",
+        items: [
+          { title: "Decide who the importer is", text: "The importer of record is responsible for the declaration, duty and import VAT. This can be your own company, a UK subsidiary or your buyer, depending on your Incoterms." },
+          { title: "Get a GB EORI number", text: "The importer needs an EORI number starting with GB to move goods into Great Britain. Apply on GOV.UK." },
+          { title: "Classify your products", text: "Find the commodity code for each product in the UK Integrated Online Tariff. The code sets the duty rate and any import controls." },
+          { title: "Check origin and preferences", text: "Goods that meet the rules of origin under a UK trade agreement (for example with the EU or Turkey) may qualify for reduced or zero duty with the right proof of origin." },
+          { title: "Book freight and lodge the declaration", text: "Your forwarder or customs agent ships the goods and lodges the import declaration in CDS before or on arrival." },
+          { title: "Pay or account for duty and VAT", text: "Customs duty is paid on release. Import VAT is usually charged at 20% on the value including duty; VAT-registered importers can often use postponed VAT accounting." },
+          { title: "Deliver to your UK warehouse", text: "Cleared goods are hauled to the warehouse, unloaded, counted and booked into stock, ready for orders." },
+        ],
+      },
+      {
+        type: "table",
+        h2: "Key terms explained",
+        head: ["Term", "What it means"],
+        rows: [
+          ["EORI", "Economic Operators Registration and Identification number, required to import into Great Britain"],
+          ["Commodity code", "The product classification that sets duty and controls in the UK Global Tariff"],
+          ["CDS", "HMRC's Customs Declaration Service, where import declarations are lodged"],
+          ["Importer of record", "The party legally responsible for the import, its duty and import VAT"],
+          ["Postponed VAT accounting", "Lets VAT-registered importers account for import VAT on their VAT return instead of paying at the border"],
+          ["DAP / DDP", "Incoterms: under DAP the buyer handles import clearance; under DDP the seller does and may need UK VAT registration"],
+        ],
+      },
+      {
+        type: "list",
+        h2: "Documents you will usually need",
+        items: [
+          "Commercial invoice with value, currency and Incoterms",
+          "Packing list with cartons, weights and dimensions",
+          "Transport document: bill of lading, CMR or air waybill",
+          "Proof of origin if claiming a preferential tariff",
+          "Product certificates or licences where your goods require them",
+        ],
+      },
+      {
+        type: "text",
+        h2: "Product rules to check before shipping",
+        paras: [
+          "Some goods need UK conformity marking (UKCA, or CE where still accepted), UK-specific labelling, or licences. Food, plants and animal products can require health certificates and pre-notification through the IPAFFS system. Check the rules for your product category on GOV.UK before the first shipment, because non-compliant goods can be held at the border.",
+          "Customs duty and import VAT are separate from logistics costs. Warehousing at LondraDepo starts from £3.50 + VAT per pallet per week, and freight and customs clearance are available from our parent company, Arca Trade Group.",
+        ],
+      },
+    ],
+    faqs: [
+      { q: "Do I need an EORI number to import into the UK?", a: "Yes. The importer needs an EORI number starting with GB to import goods into Great Britain." },
+      { q: "How much is import VAT in the UK?", a: "Import VAT is usually charged at the standard rate of 20% on the value of the goods including duty and transport costs to the UK, although some goods have reduced rates. VAT-registered businesses can often use postponed VAT accounting." },
+      { q: "Can an overseas company be the importer of record?", a: "Yes, an overseas business with a GB EORI number can act as importer, but VAT and tax obligations depend on how you sell. Take professional advice before the first shipment." },
+      { q: "Who can lodge the customs declaration for me?", a: "A customs agent or freight forwarder usually lodges it. Arca Trade Group, which operates LondraDepo, completes import declarations on behalf of customers." },
+    ],
+    related: ["/en/uk-import-logistics", "/en/uk-customs-clearance", "/en/container-unloading", "/en/locations/port-to-warehouse-logistics", "/en/uk-market-entry"],
+  },
 ];
 
 export const blogHub: EnPage = {

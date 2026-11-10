@@ -72,7 +72,7 @@ export const growthPages: EnPage[] = [
       { q: "Is LondraDepo the importer of record?", a: "No, not by default. Using our warehouse or our group's customs service does not make LondraDepo or Arca Trade Group the importer of record, and duty and import VAT remain the importer's responsibility." },
       { q: "Is your warehouse a bonded warehouse?", a: "No. LondraDepo is not an HMRC-authorised customs warehouse. Goods are stored after they have been cleared into free circulation." },
     ],
-    related: ["/en/container-unloading", "/en/uk-customs-clearance", "/en/uk-market-entry", "/en/pallet-storage", "/en/uk-distribution"],
+    related: ["/en/container-unloading", "/en/locations/port-to-warehouse-logistics", "/en/blog/uk-importing-guide", "/en/uk-customs-clearance", "/en/uk-market-entry", "/en/pallet-storage"],
     cta: { h2: "Plan your next UK import", text: "Tell us the product, origin, volumes and how the goods will arrive. We will quote freight, customs, unloading and storage together or separately." },
   },
   {
@@ -136,7 +136,7 @@ export const growthPages: EnPage[] = [
       { q: "Can you arrange haulage from the port?", a: "Yes. Arca Trade Group, the company that operates LondraDepo, can arrange transport from the port to our warehouse, or your own forwarder can deliver." },
       { q: "Can unloaded goods go straight out again?", a: "Yes. Goods can be cross-docked to UK customers or Amazon, or stored and released as orders arrive." },
     ],
-    related: ["/en/uk-import-logistics", "/en/pallet-storage", "/en/essex-warehouse", "/en/cargo-handling", "/en/blog/what-is-a-uk-transit-warehouse"],
+    related: ["/en/uk-import-logistics", "/en/locations/port-to-warehouse-logistics", "/en/pallet-storage", "/en/essex-warehouse", "/en/cargo-handling", "/en/blog/what-is-a-uk-transit-warehouse"],
     cta: { h2: "Book a container unloading quote", text: "Send the container size, ETA, packing list and whether goods are palletised or loose-loaded." },
   },
   {
@@ -261,7 +261,189 @@ export const growthPages: EnPage[] = [
       { q: "Can you help with UK labelling and commodity codes?", a: "Yes. We give operational guidance on UK labelling and commodity code pre-checks, and Arca Trade Group's customs team advises on classification. Final compliance remains the importer's responsibility." },
       { q: "Do you offer market entry consultancy?", a: "Yes. Support with an initial operating plan, warehouse and fulfilment model, marketplace set-up and UK distribution is available and quoted separately." },
     ],
-    related: ["/en/uk-import-logistics", "/en/uk-warehousing-benefits", "/en/case-studies/tortilla-uk-distribution", "/en/uk-warehousing-pricing", "/en/case-studies"],
+    related: ["/en/uk-import-logistics", "/en/uk-warehousing-for-turkish-exporters", "/en/blog/uk-importing-guide", "/en/uk-warehousing-benefits", "/en/case-studies/tortilla-uk-distribution", "/en/uk-warehousing-pricing"],
     cta: { h2: "Plan your UK market entry", text: "Tell us what you sell, where you ship from and how you want to sell in the UK." },
+  },
+];
+
+// Weeks 7–10 (P2). Road distances verified 10.11.2026 with OSRM car routing between postcode
+// centroids (SS6 7FY → port admin postcodes); times are free-flow car times, HGVs and traffic take longer.
+export const growthPagesP2: EnPage[] = [
+  {
+    slug: "/en/industries/automotive-parts",
+    kind: "service",
+    serviceType: "Automotive parts warehousing",
+    title: "Automotive Parts Warehousing & Distribution UK",
+    description:
+      "UK warehousing for OEM and aftermarket parts and automotive trim: pallet and shelf storage by SKU, photo-documented damage checks, protective packing and next-day delivery to dealers, workshops and online buyers.",
+    label: "Automotive Parts Warehousing",
+    eyebrow: "Industry · automotive and aftermarket",
+    h1: "Automotive Parts Warehousing and Distribution in the UK",
+    lead:
+      "Automotive parts are awkward to store and easy to damage: bumpers and panels are bulky, painted surfaces scratch and SKU counts run into the thousands. LondraDepo stores OEM and aftermarket parts and upholstery materials in Essex by SKU, photographs condition at goods-in and dispatch, packs parts protectively and ships next-day or 2-day to UK dealers, workshops and online customers.",
+    facts: [
+      "Pallet and shelf storage organised by SKU, OEM and aftermarket kept separate",
+      "Photo-documented damage checks at goods-in and dispatch",
+      "Protective packing for painted and sensitive surfaces",
+      "Next-day or 2-day delivery options to dealers and workshops",
+      "Online orders from eBay, Amazon and web shops processed the same day in a live operation",
+    ],
+    sections: [
+      {
+        type: "cards",
+        h2: "What automotive suppliers need from a UK warehouse",
+        items: [
+          { title: "Bulky-part storage", text: "Bumpers, door panels and rolls of trim material stored on pallets without crushing." },
+          { title: "SKU discipline", text: "Parts racked by SKU so the right part number goes out every time." },
+          { title: "Damage control", text: "Photos at goods-in and dispatch give each part a condition history for claims." },
+          { title: "Protective packing", text: "Foam, bubble wrap and rigid cartons for painted and fragile parts." },
+          { title: "Trade and online orders", text: "Dealer, workshop and marketplace orders handled from the same stock." },
+          { title: "Stock reporting", text: "Periodic stock reports and low-stock alerts, in English or Turkish." },
+        ],
+      },
+      {
+        type: "links",
+        h2: "Automotive case studies",
+        items: [
+          { href: "/en/case-studies/uk-auto-parts-warehouse", title: "OEM and aftermarket parts: UK warehouse", text: "Photo-documented damage tracking and next-day delivery to UK dealers.", tag: "Automotive" },
+          { href: "/en/case-studies/car-seat-cover-uk-warehousing", title: "Car seat covers and faux leather", text: "Same-day processing of eBay, Amazon and B2B workshop orders.", tag: "Automotive & upholstery" },
+        ],
+      },
+    ],
+    faqs: [
+      { q: "Do you store large automotive parts?", a: "Yes. We store parts of all sizes, including front and rear bumpers and door panels, using pallet and shelving systems." },
+      { q: "How do you handle damage on painted parts?", a: "Each part is visually checked and photographed at goods-in and recorded in the system, and parts are packed with foam, bubble wrap and rigid cartons for dispatch." },
+      { q: "Can you deliver to workshops and dealers across the UK?", a: "Yes. From Essex we deliver to dealers, workshops and online customers throughout the UK, with next-day or 2-day options." },
+      { q: "Can you import parts from overseas for us?", a: "Yes. Arca Trade Group, which operates LondraDepo, can arrange freight and customs clearance, or your own forwarder can deliver to our warehouse." },
+    ],
+    related: ["/en/case-studies/uk-auto-parts-warehouse", "/en/case-studies/car-seat-cover-uk-warehousing", "/en/pallet-storage", "/en/uk-distribution", "/en/uk-import-logistics"],
+    cta: { h2: "Get a parts warehousing proposal", text: "Share your SKU count, part sizes, expected pallets and order channels." },
+  },
+  {
+    slug: "/en/uk-warehousing-for-turkish-exporters",
+    tr: "/turk-sirketleri-icin-ingiltere-depo",
+    kind: "service",
+    serviceType: "UK warehousing for Turkish exporters",
+    title: "UK Warehousing & Fulfilment for Turkish Exporters",
+    description:
+      "UK warehousing, fulfilment and distribution for Turkish manufacturers and brands: Turkish-speaking team, Turkey–UK freight and customs through Arca Trade Group, and an Essex warehouse near London.",
+    label: "For Turkish Exporters",
+    eyebrow: "Turkey → United Kingdom",
+    h1: "UK Warehousing and Fulfilment for Turkish Exporters",
+    lead:
+      "Turkish manufacturers and brands can sell in the UK without setting up a UK company, leasing a warehouse or hiring staff. Arca Trade Group, which operates LondraDepo, specialises in the Turkey–UK & Ireland trade lane: it arranges freight and customs clearance, and LondraDepo stores, fulfils and distributes your goods from Essex, with a team that works in Turkish and English.",
+    facts: [
+      "Turkish- and English-speaking operations team",
+      "Turkey–UK freight (sea, road, intermodal) and UK customs clearance via Arca Trade Group",
+      "Live UK operations for Turkish brands in food, packaging, automotive and upholstery",
+      "Pallet storage from £3.50 + VAT per pallet per week",
+      "Start with a trial pallet; no fixed minimum",
+    ],
+    sections: [
+      {
+        type: "cards",
+        h2: "Challenges Turkish businesses face in the UK, and how we solve them",
+        items: [
+          { title: "Setting up a UK company", text: "You can sell into the UK with your existing company and a GB EORI number; take tax advice on the right structure." },
+          { title: "Leasing your own warehouse", text: "Our Essex warehouse becomes your UK stock location, without rent, staff or WMS costs." },
+          { title: "Customs and logistics", text: "Arca Trade Group handles Turkey–UK freight and UK import declarations, including commodity code advice." },
+          { title: "Order fulfilment", text: "Pick and pack, carrier labels and returns are handled for Shopify, Amazon and wholesale orders." },
+          { title: "Language", text: "Day-to-day communication and stock reports in Turkish, with English for UK customers and carriers." },
+          { title: "Stock visibility", text: "Stock and orders are tracked in Mintsoft WMS." },
+        ],
+      },
+      {
+        type: "steps",
+        h2: "How to start",
+        items: [
+          { title: "Contact us", text: "Tell us about your product and plans by WhatsApp, phone or the quote form." },
+          { title: "Get a quote", text: "Freight, customs, storage and fulfilment are quoted for your volumes." },
+          { title: "Ship your goods", text: "Goods leave Turkey by sea, road or intermodal and are cleared into the UK." },
+          { title: "Goods-in", text: "Goods are received, counted and booked into the WMS in Rayleigh." },
+          { title: "Sell", text: "Sell through Shopify, Amazon or wholesale accounts." },
+          { title: "Fulfil", text: "Orders are picked, packed and shipped from our warehouse." },
+        ],
+      },
+      {
+        type: "links",
+        h2: "Turkish brands already operating in the UK with us",
+        items: [
+          { href: "/en/case-studies/tortilla-uk-distribution", title: "Tortilla and flatbread producer (Ankara)", text: "From a single trial pallet to six 40ft high-cube containers a month.", tag: "Food & FMCG" },
+          { href: "/en/case-studies/pizza-box-distribution-uk", title: "Pizza box manufacturer", text: "Palletised UK stock and scheduled restaurant deliveries.", tag: "B2B distribution" },
+          { href: "/en/case-studies/uk-auto-parts-warehouse", title: "OEM and aftermarket parts supplier", text: "Damage-controlled storage and next-day dealer delivery.", tag: "Automotive" },
+          { href: "/en/case-studies/car-seat-cover-uk-warehousing", title: "Seat cover and faux leather manufacturer", text: "Same-day processing of online and workshop orders.", tag: "Automotive & upholstery" },
+        ],
+      },
+    ],
+    faqs: [
+      { q: "Can I sell in the UK without setting up a UK company?", a: "Yes, it is possible. You can store products in our UK warehouse and sell through platforms such as Shopify or Amazon or to wholesale buyers. We recommend independent advice on tax and company law." },
+      { q: "Can I ship goods from Turkey and store them in the UK?", a: "Yes. Freight from Turkey and UK customs clearance can be handled by our parent company Arca Trade Group, and goods are stored in our warehouse once cleared. You can also use your own forwarder and customs broker." },
+      { q: "What does it cost to set up a UK operation this way?", a: "Working through LondraDepo means much lower fixed costs than setting up your own warehouse and team. Pallet storage starts from £3.50 + VAT per pallet per week; contact us for a tailored quote." },
+      { q: "Do you communicate in English and Turkish?", a: "Yes. Our team works in both Turkish and English." },
+      { q: "Should I use Amazon FBA or FBM?", a: "LondraDepo supports Amazon FBM, where stock stays in our warehouse and we fulfil Amazon orders from Essex, and also prepares stock for FBA. See our Amazon prep page for FBA." },
+    ],
+    related: ["/en/uk-market-entry", "/en/uk-import-logistics", "/en/uk-customs-clearance", "/en/uk-warehousing", "/en/uk-warehousing-pricing"],
+    cta: { h2: "Start your UK operation", text: "All you need to begin is your product and a message. Tell us what you sell and where it ships from." },
+  },
+  {
+    slug: "/en/locations/port-to-warehouse-logistics",
+    kind: "service",
+    serviceType: "Port-to-warehouse logistics",
+    title: "Felixstowe, Tilbury & London Gateway to Essex Warehouse",
+    description:
+      "Port-to-warehouse logistics for containers arriving at Felixstowe, London Gateway and Tilbury: verified road distances to our Rayleigh warehouse, customs, haulage, unloading and onward UK distribution.",
+    label: "Port-to-Warehouse Logistics",
+    eyebrow: "Felixstowe · London Gateway · Tilbury",
+    h1: "From Felixstowe, London Gateway or Tilbury to Our Essex Warehouse",
+    lead:
+      "Our warehouse at Unit 19 Arterial Park, Rayleigh (SS6 7FY) is not at a port, but it is close to three major ones: London Gateway is about 13 miles by road, the Port of Tilbury about 16 miles and the Port of Felixstowe about 62 miles. Containers arriving at any of them can be cleared, hauled to Rayleigh, unloaded and stored or sent straight on to UK customers.",
+    facts: [
+      "London Gateway: ~13 miles (21 km) by road",
+      "Port of Tilbury: ~16 miles (26 km) by road",
+      "Port of Felixstowe: ~62 miles (99 km) by road",
+      "Central London: ~37 miles (59 km); east London about 40 minutes",
+      "Customs clearance and haulage available through Arca Trade Group",
+    ],
+    sections: [
+      {
+        type: "table",
+        h2: "Road distances from the warehouse",
+        head: ["Destination", "Road distance", "Typical car time (free-flow)"],
+        rows: [
+          ["DP World London Gateway (SS17)", "~13 miles / 21 km", "~20 minutes"],
+          ["Port of Tilbury (RM18)", "~16 miles / 26 km", "~20 minutes"],
+          ["Port of Felixstowe (IP11)", "~62 miles / 99 km", "~1¼ hours"],
+          ["Central London (Charing Cross)", "~37 miles / 59 km", "~1 hour"],
+        ],
+        note: "Calculated by road routing between the warehouse postcode and each port's postcode (10 November 2026). Times are for a car in free-flowing traffic; HGVs, port queues and peak traffic take longer.",
+      },
+      {
+        type: "steps",
+        h2: "What happens after your container arrives at the port",
+        items: [
+          { title: "Arrival and release", text: "The shipping line releases the container once freight charges are settled and paperwork is in order." },
+          { title: "Customs clearance", text: "The import declaration is lodged, by Arca Trade Group's customs team or your broker, and duty and import VAT are accounted for." },
+          { title: "Haulage booking", text: "A haulier collects the container from the port and books a delivery slot at our warehouse." },
+          { title: "Unloading and checks", text: "We unload, count against the packing list, photograph visible damage and book stock into the WMS." },
+          { title: "Empty container return", text: "The haulier returns the empty container to the port or a depot, ideally within the line's free time to avoid detention charges." },
+          { title: "Storage or onward delivery", text: "Goods are stored, picked for orders or cross-docked to UK customers and Amazon." },
+        ],
+      },
+      {
+        type: "text",
+        h2: "Which port suits your goods?",
+        paras: [
+          "Felixstowe is the UK's largest container port and handles many deep-sea services from Asia. London Gateway, in Thurrock, is a deep-water port serving large container ships and is the closest of the three to our warehouse. Tilbury handles containers, ro-ro and general cargo on the Thames. Your shipping line and routing usually decide the port; we can receive from any of them.",
+        ],
+      },
+    ],
+    faqs: [
+      { q: "How far is the warehouse from Felixstowe?", a: "About 62 miles (99 km) by road. A car typically takes around 1¼ hours in free-flowing traffic; container lorries take longer." },
+      { q: "Is the warehouse at the port?", a: "No. Our warehouse is in Rayleigh, Essex, about 13 miles from London Gateway and 16 miles from Tilbury. Containers are hauled from the port to our site for unloading." },
+      { q: "Can you arrange haulage from the port?", a: "Yes. Arca Trade Group, which operates LondraDepo, can arrange customs clearance and haulage from the port, or your forwarder can deliver to us." },
+      { q: "Can you unload at the port instead?", a: "No. Unloading takes place at our Rayleigh warehouse, where goods can be stored and fulfilled without further handling." },
+    ],
+    related: ["/en/container-unloading", "/en/uk-import-logistics", "/en/essex-warehouse", "/en/london-warehousing", "/en/blog/uk-importing-guide"],
+    cta: { h2: "Plan your port-to-warehouse move", text: "Tell us the arrival port, container size, ETA and what should happen to the goods next." },
   },
 ];

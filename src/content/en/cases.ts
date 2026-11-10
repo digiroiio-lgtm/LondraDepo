@@ -140,7 +140,7 @@ export const casePages: EnPage[] = [
       { q: "Do you help with UK food labelling?", a: "Yes. We provide guidance and operational support on UK labelling requirements. Legal compliance of the label remains the producer's responsibility." },
       { q: "Do you help with commodity code classification?", a: "Yes. We offer guidance on placing products in the correct commodity code, which is the basis of the UK import operation. The final classification is the importer's responsibility." },
     ],
-    related: ["/en/uk-market-entry", "/en/container-unloading", "/en/pallet-storage", "/en/case-studies/pizza-box-distribution-uk"],
+    related: ["/en/uk-market-entry", "/en/uk-warehousing-for-turkish-exporters", "/en/container-unloading", "/en/pallet-storage", "/en/case-studies/pizza-box-distribution-uk"],
   },
   {
     slug: "/en/case-studies/uk-auto-parts-warehouse",
@@ -177,7 +177,7 @@ export const casePages: EnPage[] = [
       { q: "Do you carry out damage checks on parts?", a: "Yes. Each part is visually checked and photographed at goods-in and recorded in the system. The client is informed of any damage." },
       { q: "Can you distribute auto parts across the UK?", a: "Yes. From Essex we deliver to dealers, workshops and online customers throughout the UK." },
     ],
-    related: ["/en/pallet-storage", "/en/uk-distribution", "/en/case-studies/car-seat-cover-uk-warehousing"],
+    related: ["/en/industries/automotive-parts", "/en/pallet-storage", "/en/uk-distribution", "/en/case-studies/car-seat-cover-uk-warehousing"],
   },
   {
     slug: "/en/case-studies/uk-walking-treadmill-distribution",
@@ -249,7 +249,7 @@ export const casePages: EnPage[] = [
       { q: "Can you deliver B2B to UK workshops?", a: "Yes. From Essex we deliver to workshops, dealers and upholsterers across the UK, by pallet or by item." },
       { q: "Can you handle orders from online channels?", a: "Yes. We fulfil individual orders from eBay, Amazon and your own ecommerce site with same-day or next-day dispatch." },
     ],
-    related: ["/en/pallet-storage", "/en/ecommerce-fulfilment", "/en/case-studies/uk-auto-parts-warehouse"],
+    related: ["/en/industries/automotive-parts", "/en/pallet-storage", "/en/ecommerce-fulfilment", "/en/case-studies/uk-auto-parts-warehouse"],
   },
   {
     slug: "/en/case-studies/portable-power-station-uk-operations",

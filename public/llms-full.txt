@@ -23,7 +23,7 @@ LinkedIn: https://www.linkedin.com/company/arcatradegroup/
 
 ## Konum
 Depo: Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY
-Londra'ya: ~40-50 km (~40 dakika, A127/M25)
+Londra'ya: merkeze ~59 km / yaklaşık 1 saat, Doğu Londra'ya ~40 dakika (A127). Tilbury ~26 km, London Gateway ~21 km, Felixstowe ~99 km (karayolu)
 Tilbury Limanı: ~30 dakika (Türkiye ro-ro ve konteyner hatları)
 Felixstowe Limanı: ~1 saat (UK'nin en büyük konteyner limanı)
 Amazon UK depoları (Tilbury, Dartford): yakın erişim
@@ -95,7 +95,7 @@ A: Evet, kısa ve uzun dönemli her ikisi için de.
 ---
 ## URL: /londra-depo
 # Londra Depo: M25 Üzerinden UK Dağıtım
-Londra'ya 40 dakika mesafede Essex deposu — M25 çıkışı, Tilbury Limanı'na 30 dakika, mal kabul, depolama, sipariş karşılama.
+Doğu Londra'ya 40 dakika mesafede Essex deposu — M25 çıkışı, Tilbury Limanı'na 30 dakika, mal kabul, depolama, sipariş karşılama.
 
 ### Temel Bilgiler
 - Adres: Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY
@@ -458,7 +458,7 @@ Essex'te depo hizmeti. Londra yakını Essex depo alanlarımızda ürünlerinizi
 ### Konum Avantajları
 - Adres: Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY
 - Rayleigh, Rochford district; Southend-on-Sea'ye ~10 km
-- Londra: ~40 dakika (A127/M25)
+- Doğu Londra: ~40 dakika, Londra merkezi: ~1 saat (A127)
 - Felixstowe: ~1 saat (UK'nin en büyük konteyner limanı)
 - Tilbury: ~30 dakika (Türk ro-ro ve konteyner hatları)
 - Amazon UK depoları (Tilbury, Dartford): hızlı erişim

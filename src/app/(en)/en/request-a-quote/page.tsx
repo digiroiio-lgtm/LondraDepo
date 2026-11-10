@@ -65,7 +65,7 @@ export default function RequestAQuotePage() {
             <h1 className="text-3xl sm:text-4xl font-extrabold text-[#0b2545] leading-tight mb-4 max-w-3xl">Request a UK Warehousing Quote</h1>
             <p className="text-lg text-slate-700 leading-relaxed max-w-3xl">
               Tell us what you need to store, fulfil or distribute in the UK. LondraDepo runs a warehouse at Unit 19 Arterial Park,
-              Rayleigh, Essex, about 40 minutes from London. Standard pallet storage starts from £3.50 + VAT per pallet per week;
+              Rayleigh, Essex, about 40 minutes from east London. Standard pallet storage starts from £3.50 + VAT per pallet per week;
               goods-in, handling, fulfilment and delivery are quoted for your operation.
             </p>
           </div>

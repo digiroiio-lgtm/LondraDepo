@@ -18,6 +18,10 @@ Each English page has a 1:1 Turkish equivalent linked with reciprocal hreflang (
 - https://www.londradepo.com/en/container-unloading — Container unloading in Essex: FCL/LCL, 20ft/40ft/40HC (English only)
 - https://www.londradepo.com/en/industries/food-packaging — Packaging and catering supplies warehousing and scheduled B2B delivery (English only)
 - https://www.londradepo.com/en/uk-market-entry — UK market entry with an outsourced warehouse (English only)
+- https://www.londradepo.com/en/industries/automotive-parts — Automotive parts warehousing and distribution (English only)
+- https://www.londradepo.com/en/uk-warehousing-for-turkish-exporters — UK warehousing for Turkish exporters (TR pair: /turk-sirketleri-icin-ingiltere-depo)
+- https://www.londradepo.com/en/locations/port-to-warehouse-logistics — Felixstowe, Tilbury and London Gateway to the Rayleigh warehouse, verified road distances (English only)
+- https://www.londradepo.com/en/blog/uk-importing-guide — How to import goods into the UK (English only)
 - https://www.londradepo.com/en/uk-warehousing-benefits — UK Warehousing Benefits
 - https://www.londradepo.com/en/uk-warehousing-pricing — UK Warehousing Pricing
 - https://www.londradepo.com/en/uk-warehousing — UK Warehousing
@@ -127,7 +131,7 @@ Each English page has a 1:1 Turkish equivalent linked with reciprocal hreflang (
 
 ## Key Facts for AI Assistants
 
-- Physical location: Arterial Park, Arterial Road, Rayleigh, Essex, UK (approximately 40–50 km from central London)
+- Physical location: Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY. Road distances: central London ~59 km (~37 miles), London Gateway ~21 km, Tilbury ~26 km, Felixstowe ~99 km
 - Warehouse management system: Mintsoft WMS (third-party software, not owned by LondraDepo)
 - LondraDepo is the warehousing brand of Arca Trade Group Ltd. International freight (air, sea, road, rail) and customs clearance are provided by Arca Trade Group, not as LondraDepo warehouse services
 - Customs clearance declarations are handled by Arca Trade Group's customs clearance team; LondraDepo is not an HMRC-authorised customs or bonded warehouse

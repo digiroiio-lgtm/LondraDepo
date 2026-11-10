@@ -4,18 +4,21 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 import ArticleHero from "@/components/ArticleHero";
+import ArticleSources from "@/components/ArticleSources";
+import { TR_ARTICLES } from "@/content/tr-articles";
 import CtaCards from "@/components/CtaCards";
 import AuthorBox from "@/components/AuthorBox";
 import RelatedArticles from "@/components/RelatedArticles";
 
 import { SITE_URL } from "@/lib/site";
 import { trAlternates } from "@/lib/i18n";
+const ARTICLE = TR_ARTICLES["/blog/amazon-prep-uk-rehberi"];
 const PAGE_URL = `${SITE_URL}/blog/amazon-prep-uk-rehberi`;
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20Amazon%20Prep%20hizmeti%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Amazon Prep UK: Adım Adım Rehber 2025 | LondraDepo.com",
+  title: "Amazon Prep UK: Adım Adım Rehber | LondraDepo.com",
   description:
     "Amazon FBA için İngiltere'de prep hizmeti nedir, nasıl alınır, FNSKU etiketleme ve FBA hazırlık süreci. Türk ihracatçıları için kapsamlı Amazon Prep UK rehberi.",
   alternates: trAlternates("/blog/amazon-prep-uk-rehberi"),
@@ -43,12 +46,14 @@ const jsonLd = {
     },
     {
       "@type": "Article",
-      headline: "Amazon Prep UK: Adım Adım Rehber 2025",
+      headline: ARTICLE.headline,
       description: "Amazon FBA için İngiltere prep hizmeti rehberi. FNSKU etiketleme, FBA hazırlık ve sevk süreçleri.",
       url: PAGE_URL,
-      datePublished: "2025-06-01",
-      dateModified: "2026-01-15",
-      author: { "@type": "Person", name: "Sertaç Yılmaz" },
+      datePublished: ARTICLE.published,
+      dateModified: ARTICLE.modified,
+      mainEntityOfPage: { "@type": "WebPage", "@id": PAGE_URL },
+      author: { "@type": "Person", name: "Sertaç Yılmaz", jobTitle: "Arca Trade Group Kurucu Ortağı", url: `${SITE_URL}/hakkimizda` },
+      contributor: { "@type": "Person", name: "Yusuf Barış", jobTitle: "Operasyon Müdürü" },
       publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
       image: { "@type": "ImageObject", url: `${SITE_URL}/logo.svg`, width: 640, height: 160 },
       inLanguage: "tr-TR",
@@ -101,11 +106,11 @@ export default function AmazonPrepRehberiPage() {
         <article className="py-10 px-4 bg-white">
           <div className="max-w-3xl mx-auto">
             <ArticleHero
+              path="/blog/amazon-prep-uk-rehberi"
               category="Amazon"
               categoryColor="text-orange-700 bg-orange-50"
               title="Amazon Prep UK: Adım Adım Rehber"
               readTime="7 dakika"
-              date="Ocak 2026"
             />
 
             <p className="text-lg leading-relaxed text-slate-600 mb-8">
@@ -187,6 +192,8 @@ export default function AmazonPrepRehberiPage() {
                 bize ulaşabilirsiniz.
               </p>
 
+              <ArticleSources path="/blog/amazon-prep-uk-rehberi" />
+
               <h2>Sık Sorulan Sorular</h2>
 
               <h3>Amazon prep için Türkiye&apos;den mi göndermeliyim?</h3>
@@ -231,7 +238,7 @@ export default function AmazonPrepRehberiPage() {
               </div>
             </div>
 
-            <AuthorBox updatedDate="Ocak 2026" />
+            <AuthorBox path="/blog/amazon-prep-uk-rehberi" />
 
             <RelatedArticles articles={relatedArticles} />
 

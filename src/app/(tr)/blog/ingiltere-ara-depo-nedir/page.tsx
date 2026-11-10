@@ -4,12 +4,15 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 import ArticleHero from "@/components/ArticleHero";
+import ArticleSources from "@/components/ArticleSources";
+import { TR_ARTICLES } from "@/content/tr-articles";
 import CtaCards from "@/components/CtaCards";
 import AuthorBox from "@/components/AuthorBox";
 import RelatedArticles from "@/components/RelatedArticles";
 
 import { SITE_URL } from "@/lib/site";
 import { trAlternates } from "@/lib/i18n";
+const ARTICLE = TR_ARTICLES["/blog/ingiltere-ara-depo-nedir"];
 const PAGE_URL = `${SITE_URL}/blog/ingiltere-ara-depo-nedir`;
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20ara%20depo%20hakkinda%20bilgi%20almak%20istiyorum.";
 
@@ -43,14 +46,16 @@ const jsonLd = {
     },
     {
       "@type": "Article",
-      headline: "İngiltere Ara Depo Nedir? Kimler İçin Uygundur?",
+      headline: ARTICLE.headline,
       description: "UK ara depo ve transit depolama hizmetinin ne olduğu ve hangi firmalar için uygun olduğu.",
       url: PAGE_URL,
-      author: { "@type": "Person", name: "Sertaç Yılmaz" },
+      author: { "@type": "Person", name: "Sertaç Yılmaz", jobTitle: "Arca Trade Group Kurucu Ortağı", url: `${SITE_URL}/hakkimizda` },
+      contributor: { "@type": "Person", name: "Yusuf Barış", jobTitle: "Operasyon Müdürü" },
       publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
       image: { "@type": "ImageObject", url: `${SITE_URL}/logo.svg`, width: 640, height: 160 },
-      datePublished: "2025-06-01",
-      dateModified: "2026-01-01",
+      datePublished: ARTICLE.published,
+      dateModified: ARTICLE.modified,
+      mainEntityOfPage: { "@type": "WebPage", "@id": PAGE_URL },
       inLanguage: "tr-TR",
     },
     {
@@ -102,11 +107,11 @@ export default function AraDepoNedirPage() {
         <article className="py-10 px-4 bg-white">
           <div className="max-w-3xl mx-auto">
             <ArticleHero
+              path="/blog/ingiltere-ara-depo-nedir"
               category="Depolama"
               categoryColor="text-green-700 bg-green-50"
               title="İngiltere Ara Depo Nedir? Kimler İçin Uygundur?"
               readTime="5 dakika"
-              date="Ocak 2026"
             />
 
             <p className="text-lg leading-relaxed text-slate-600 mb-8">
@@ -173,6 +178,8 @@ export default function AraDepoNedirPage() {
                 <li><strong>UK altyapısı:</strong> Essex&apos;ten tüm İngiltere&apos;ye hızlı erişim</li>
               </ul>
 
+              <ArticleSources path="/blog/ingiltere-ara-depo-nedir" />
+
               <h2>Sık Sorulan Sorular</h2>
 
               <h3>İngiltere ara depo ile normal depo arasındaki fark nedir?</h3>
@@ -221,7 +228,7 @@ export default function AraDepoNedirPage() {
               </div>
             </div>
 
-            <AuthorBox updatedDate="Ocak 2026" />
+            <AuthorBox path="/blog/ingiltere-ara-depo-nedir" />
 
             <RelatedArticles articles={relatedArticles} />
 

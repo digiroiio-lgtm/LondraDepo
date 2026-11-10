@@ -5,6 +5,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 import ArticleHero from "@/components/ArticleHero";
+import ArticleSources from "@/components/ArticleSources";
+import { TR_ARTICLES } from "@/content/tr-articles";
 import CtaCards from "@/components/CtaCards";
 import ChecklistGate from "@/components/ChecklistGate";
 import AuthorBox from "@/components/AuthorBox";
@@ -12,6 +14,7 @@ import RelatedArticles from "@/components/RelatedArticles";
 
 import { SITE_URL } from "@/lib/site";
 import { trAlternates } from "@/lib/i18n";
+const ARTICLE = TR_ARTICLES["/blog/turkiyeden-ingiltereye-ihracat-rehberi"];
 const PAGE_URL = `${SITE_URL}/blog/turkiyeden-ingiltereye-ihracat-rehberi`;
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20ihracat%20operasyonu%20hakkinda%20bilgi%20almak%20istiyorum.";
 
@@ -60,14 +63,16 @@ const jsonLd = {
     },
     {
       "@type": "Article",
-      headline: "Türkiye'den İngiltere'ye İhracat Rehberi 2026",
+      headline: ARTICLE.headline,
       description: "Türk ihracatçılar için UK ihracat süreçleri, gümrük ve operasyon rehberi.",
       url: PAGE_URL,
-      author: { "@type": "Person", name: "Sertaç Yılmaz" },
+      author: { "@type": "Person", name: "Sertaç Yılmaz", jobTitle: "Arca Trade Group Kurucu Ortağı", url: `${SITE_URL}/hakkimizda` },
+      contributor: { "@type": "Person", name: "Yusuf Barış", jobTitle: "Operasyon Müdürü" },
       publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
       image: { "@type": "ImageObject", url: `${SITE_URL}/logo.svg`, width: 640, height: 160 },
-      datePublished: "2025-06-01",
-      dateModified: "2026-01-01",
+      datePublished: ARTICLE.published,
+      dateModified: ARTICLE.modified,
+      mainEntityOfPage: { "@type": "WebPage", "@id": PAGE_URL },
       inLanguage: "tr-TR",
     },
   ],
@@ -99,11 +104,11 @@ export default function IhracatRehberiPage() {
         <article className="py-10 px-4 bg-white">
           <div className="max-w-3xl mx-auto">
             <ArticleHero
+              path="/blog/turkiyeden-ingiltereye-ihracat-rehberi"
               category="İhracat"
               categoryColor="text-purple-700 bg-purple-50"
               title="Türkiye'den İngiltere'ye İhracat Rehberi 2026"
               readTime="10 dakika"
-              date="Ocak 2026"
             />
 
             <p className="text-lg leading-relaxed text-slate-600 mb-8">
@@ -188,6 +193,8 @@ export default function IhracatRehberiPage() {
                 genellikle daha akıllıca bir başlangıçtır.
               </p>
 
+              <ArticleSources path="/blog/turkiyeden-ingiltereye-ihracat-rehberi" />
+
               <h2>Sık Sorulan Sorular</h2>
 
               {faqs.map(({ q, a }) => (
@@ -223,7 +230,7 @@ export default function IhracatRehberiPage() {
               </div>
             </div>
 
-            <AuthorBox updatedDate="Ocak 2026" />
+            <AuthorBox path="/blog/turkiyeden-ingiltereye-ihracat-rehberi" />
 
             <RelatedArticles articles={relatedArticles} />
 

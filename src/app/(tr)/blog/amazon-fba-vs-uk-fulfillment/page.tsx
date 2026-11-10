@@ -4,12 +4,15 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 import ArticleHero from "@/components/ArticleHero";
+import ArticleSources from "@/components/ArticleSources";
+import { TR_ARTICLES } from "@/content/tr-articles";
 import CtaCards from "@/components/CtaCards";
 import AuthorBox from "@/components/AuthorBox";
 import RelatedArticles from "@/components/RelatedArticles";
 
 import { SITE_URL } from "@/lib/site";
 import { trAlternates } from "@/lib/i18n";
+const ARTICLE = TR_ARTICLES["/blog/amazon-fba-vs-uk-fulfillment"];
 const PAGE_URL = `${SITE_URL}/blog/amazon-fba-vs-uk-fulfillment`;
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20UK%20fulfillment%20modeli%20hakkinda%20bilgi%20almak%20istiyorum.";
 
@@ -43,14 +46,16 @@ const jsonLd = {
     },
     {
       "@type": "Article",
-      headline: "Amazon FBA mı, UK Fulfillment mı? Hangisi Daha Avantajlı?",
+      headline: ARTICLE.headline,
       description: "Amazon FBA ve 3PL UK fulfillment karşılaştırması — maliyet, esneklik ve kontrol.",
       url: PAGE_URL,
-      author: { "@type": "Person", name: "Sertaç Yılmaz" },
+      author: { "@type": "Person", name: "Sertaç Yılmaz", jobTitle: "Arca Trade Group Kurucu Ortağı", url: `${SITE_URL}/hakkimizda` },
+      contributor: { "@type": "Person", name: "Yusuf Barış", jobTitle: "Operasyon Müdürü" },
       publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
       image: { "@type": "ImageObject", url: `${SITE_URL}/logo.svg`, width: 640, height: 160 },
-      datePublished: "2025-06-01",
-      dateModified: "2026-01-01",
+      datePublished: ARTICLE.published,
+      dateModified: ARTICLE.modified,
+      mainEntityOfPage: { "@type": "WebPage", "@id": PAGE_URL },
       inLanguage: "tr-TR",
     },
     {
@@ -102,11 +107,11 @@ export default function FbaVsFulfillmentPage() {
         <article className="py-10 px-4 bg-white">
           <div className="max-w-3xl mx-auto">
             <ArticleHero
+              path="/blog/amazon-fba-vs-uk-fulfillment"
               category="Fulfillment"
               categoryColor="text-blue-700 bg-blue-50"
               title="Amazon FBA mı, UK Fulfillment mı? Hangisi Daha Avantajlı?"
               readTime="8 dakika"
-              date="Ocak 2026"
             />
 
             <p className="text-lg leading-relaxed text-slate-600 mb-8">
@@ -187,6 +192,8 @@ export default function FbaVsFulfillmentPage() {
                 <strong>Hibrit model:</strong> Amazon&apos;a satılan ürünlerin bir kısmını FBA&apos;de tutarken, web sitesi ve B2B siparişlerini 3PL fulfillment üzerinden karşılayabilirsiniz. Bu model özellikle büyüme aşamasındaki markalar için güçlüdür.
               </p>
 
+              <ArticleSources path="/blog/amazon-fba-vs-uk-fulfillment" />
+
               <h2>Sık Sorulan Sorular</h2>
 
               <h3>Amazon FBA yerine 3PL fulfillment kullanmanın avantajı nedir?</h3>
@@ -235,7 +242,7 @@ export default function FbaVsFulfillmentPage() {
               </div>
             </div>
 
-            <AuthorBox updatedDate="Ocak 2026" />
+            <AuthorBox path="/blog/amazon-fba-vs-uk-fulfillment" />
 
             <RelatedArticles articles={relatedArticles} />
 

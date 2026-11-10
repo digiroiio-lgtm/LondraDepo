@@ -4,18 +4,21 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 import ArticleHero from "@/components/ArticleHero";
+import ArticleSources from "@/components/ArticleSources";
+import { TR_ARTICLES } from "@/content/tr-articles";
 import CtaCards from "@/components/CtaCards";
 import AuthorBox from "@/components/AuthorBox";
 import RelatedArticles from "@/components/RelatedArticles";
 
 import { SITE_URL } from "@/lib/site";
 import { trAlternates } from "@/lib/i18n";
+const ARTICLE = TR_ARTICLES["/blog/ingiltere-depo-rehberi"];
 const PAGE_URL = `${SITE_URL}/blog/ingiltere-depo-rehberi`;
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20depo%20teklifi%20almak%20istiyorum.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "İngiltere Depo Hizmeti: Kapsamlı Rehber 2025 | LondraDepo.com",
+  title: "İngiltere Depo Hizmeti: Kapsamlı Rehber | LondraDepo.com",
   description:
     "Türkiye'den İngiltere'ye ihracat yapan markalar için UK depolama süreçleri, maliyetler, lokasyon seçimi ve doğru partner bulma rehberi.",
   alternates: trAlternates("/blog/ingiltere-depo-rehberi"),
@@ -43,12 +46,14 @@ const jsonLd = {
     },
     {
       "@type": "Article",
-      headline: "İngiltere Depo Hizmeti: Kapsamlı Rehber 2025",
+      headline: ARTICLE.headline,
       description: "Türkiye'den İngiltere'ye ihracat yapan markalar için UK depolama süreçleri, maliyetler ve partner seçimi.",
       url: PAGE_URL,
-      datePublished: "2025-06-01",
-      dateModified: "2026-01-15",
-      author: { "@type": "Person", name: "Sertaç Yılmaz" },
+      datePublished: ARTICLE.published,
+      dateModified: ARTICLE.modified,
+      mainEntityOfPage: { "@type": "WebPage", "@id": PAGE_URL },
+      author: { "@type": "Person", name: "Sertaç Yılmaz", jobTitle: "Arca Trade Group Kurucu Ortağı", url: `${SITE_URL}/hakkimizda` },
+      contributor: { "@type": "Person", name: "Yusuf Barış", jobTitle: "Operasyon Müdürü" },
       publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
       image: { "@type": "ImageObject", url: `${SITE_URL}/logo.svg`, width: 640, height: 160 },
       inLanguage: "tr-TR",
@@ -101,11 +106,11 @@ export default function DepoRehberiPage() {
         <article className="py-10 px-4 bg-white">
           <div className="max-w-3xl mx-auto">
             <ArticleHero
+              path="/blog/ingiltere-depo-rehberi"
               category="Depolama"
               categoryColor="text-green-700 bg-green-50"
               title="İngiltere Depo Hizmeti: Kapsamlı Rehber"
               readTime="6 dakika"
-              date="Ocak 2026"
             />
 
             <p className="text-lg leading-relaxed text-slate-600 mb-8">
@@ -171,6 +176,8 @@ export default function DepoRehberiPage() {
                 <li>Konteyner kabulü yapabilme kapasitesi</li>
               </ul>
 
+              <ArticleSources path="/blog/ingiltere-depo-rehberi" />
+
               <h2>Sık Sorulan Sorular</h2>
 
               <h3>İngiltere depo hizmetiniz hangi firmalar için uygun?</h3>
@@ -214,7 +221,7 @@ export default function DepoRehberiPage() {
               </div>
             </div>
 
-            <AuthorBox updatedDate="Ocak 2026" />
+            <AuthorBox path="/blog/ingiltere-depo-rehberi" />
 
             <RelatedArticles articles={relatedArticles} />
 

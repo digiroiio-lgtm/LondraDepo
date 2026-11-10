@@ -46,7 +46,7 @@ XHTML='{http://www.w3.org/1999/xhtml}'
 index=get(BASE+'/sitemap_index.xml')
 children=[x.text for x in ET.fromstring(index['body']).findall('{*}sitemap/{*}loc')]
 legacy=get(BASE+'/sitemap.xml')
-sm_alt={}; sm_lang={}; urls=[]; sm={'body':index['body']}; tr_body=''
+sm_alt={}; sm_lang={}; sm_lastmod={}; urls=[]; sm={'body':index['body']}; tr_body=''
 for child in children:
  doc=get(BASE+urllib.parse.urlsplit(child).path)
  if doc.get('status')!=200 or 'xml' not in doc.get('type',''): failures_pre=[child,'sitemap status/type',doc.get('status'),doc.get('type')]; print(failures_pre); sys.exit(1)
@@ -56,6 +56,8 @@ for child in children:
   loc=u.find('{*}loc').text; urls.append(loc)
   sm_alt[loc]={l.get('hreflang'):l.get('href') for l in u.findall(XHTML+'link')}
   sm_lang[loc]='en' if child.endswith('-en.xml') else 'tr'
+  lm=u.find('{*}lastmod')
+  if lm is not None: sm_lastmod[loc]=lm.text
 
 rows=[get(BASE+urllib.parse.urlsplit(u).path) for u in urls]
 failures=[]
@@ -66,8 +68,6 @@ rules = urllib.robotparser.RobotFileParser()
 rules.parse(robots['body'].splitlines())
 if 'Sitemap: '+SITE + '/sitemap_index.xml' not in robots['body']:
  failures.append(['robots.txt', 'sitemap origin mismatch'])
-if '<lastmod>' in tr_body:
- failures.append(['sitemap-tr.xml', 'unverified lastmod reintroduced'])
 def norm(t):return ' '.join(unicodedata.normalize('NFKC',t).replace('’',"'").replace('–','-').replace('—','-').split())
 for u,r in zip(urls,rows):
  r['target']=u
@@ -91,6 +91,10 @@ for u,r in zip(urls,rows):
       if norm(value) not in text:failures.append([u,'FAQ mismatch',value])
  if count>1:failures.append([u,'FAQ duplicate',count])
  r['faq_count']=count
+ # TR lastmod is allowed only where the page publishes the same dateModified (maintained article dates).
+ if sm_lang[u]=='tr' and u in sm_lastmod:
+  mods={n.get('dateModified') for g in r['schemas'] for n in g.get('@graph',[g]) if n.get('@type') in ('Article','BlogPosting')}
+  if sm_lastmod[u] not in mods: failures.append([u,'TR lastmod != Article dateModified',sm_lastmod[u],sorted(m for m in mods if m)])
  if len(text)<300:failures.append([u,'thin HTML',len(text)])
 images=[]
 for p in ['/logo.svg','/logo.png','/icon.svg','/icon.png','/apple-touch-icon.png','/favicon.ico']:

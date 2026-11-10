@@ -4,12 +4,15 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 import ArticleHero from "@/components/ArticleHero";
+import ArticleSources from "@/components/ArticleSources";
+import { TR_ARTICLES } from "@/content/tr-articles";
 import CtaCards from "@/components/CtaCards";
 import AuthorBox from "@/components/AuthorBox";
 import RelatedArticles from "@/components/RelatedArticles";
 
 import { SITE_URL } from "@/lib/site";
 import { trAlternates } from "@/lib/i18n";
+const ARTICLE = TR_ARTICLES["/blog/ingiltere-fulfillment-nedir"];
 const PAGE_URL = `${SITE_URL}/blog/ingiltere-fulfillment-nedir`;
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20fulfillment%20teklifi%20almak%20istiyorum.";
 
@@ -43,12 +46,14 @@ const jsonLd = {
     },
     {
       "@type": "Article",
-      headline: "İngiltere Fulfillment Nedir? Nasıl Çalışır?",
+      headline: ARTICLE.headline,
       description: "UK fulfillment hizmeti rehberi — e-ticaret satıcıları için sipariş hazırlama ve sevk süreçleri.",
       url: PAGE_URL,
-      datePublished: "2025-06-01",
-      dateModified: "2026-01-15",
-      author: { "@type": "Person", name: "Sertaç Yılmaz" },
+      datePublished: ARTICLE.published,
+      dateModified: ARTICLE.modified,
+      mainEntityOfPage: { "@type": "WebPage", "@id": PAGE_URL },
+      author: { "@type": "Person", name: "Sertaç Yılmaz", jobTitle: "Arca Trade Group Kurucu Ortağı", url: `${SITE_URL}/hakkimizda` },
+      contributor: { "@type": "Person", name: "Yusuf Barış", jobTitle: "Operasyon Müdürü" },
       publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
       image: { "@type": "ImageObject", url: `${SITE_URL}/logo.svg`, width: 640, height: 160 },
       inLanguage: "tr-TR",
@@ -101,11 +106,11 @@ export default function FulfillmentNedirPage() {
         <article className="py-10 px-4 bg-white">
           <div className="max-w-3xl mx-auto">
             <ArticleHero
+              path="/blog/ingiltere-fulfillment-nedir"
               category="Fulfillment"
               categoryColor="text-blue-700 bg-blue-50"
               title="İngiltere Fulfillment Nedir? Nasıl Çalışır?"
               readTime="5 dakika"
-              date="Ocak 2026"
             />
 
             <p className="text-lg leading-relaxed text-slate-600 mb-8">
@@ -165,6 +170,8 @@ export default function FulfillmentNedirPage() {
                 <li>Gıda dışı tüketim ürünleri</li>
               </ul>
 
+              <ArticleSources path="/blog/ingiltere-fulfillment-nedir" />
+
               <h2>Sık Sorulan Sorular</h2>
 
               <h3>İngiltere fulfillment hizmeti nedir?</h3>
@@ -210,7 +217,7 @@ export default function FulfillmentNedirPage() {
               </div>
             </div>
 
-            <AuthorBox updatedDate="Ocak 2026" />
+            <AuthorBox path="/blog/ingiltere-fulfillment-nedir" />
 
             <RelatedArticles articles={relatedArticles} />
 

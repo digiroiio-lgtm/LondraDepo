@@ -2,11 +2,12 @@ import { EN_PAGES } from "@/content/en";
 import type { PageKind } from "@/content/en/types";
 import { enAlternates, trAlternates, type Alternates } from "@/lib/i18n";
 import { SITE_URL } from "@/lib/site";
+import { TR_ARTICLES } from "@/content/tr-articles";
 
 type Freq = "weekly" | "monthly" | "yearly";
 type Entry = { path: string; changefreq: Freq; priority: number; alternates: Alternates; lastmod?: string };
 
-// Turkish URLs (unchanged). lastmod is omitted until verified modification dates are maintained per URL.
+// Turkish URLs (unchanged). lastmod is set only for articles whose dates are maintained in src/content/tr-articles.ts.
 const TR: ReadonlyArray<readonly [string, Freq, number]> = [
   ["/", "weekly", 1],
   ["/ingiltere-depo-avantajlari", "monthly", 0.9],
@@ -74,7 +75,7 @@ const EN_ONLY: ReadonlyArray<readonly [string, Freq, number]> = [["/en/request-a
 const EN_PUBLISHED = "2026-11-10";
 
 export function trEntries(): Entry[] {
-  return TR.map(([path, changefreq, priority]) => ({ path, changefreq, priority, alternates: trAlternates(path) }));
+  return TR.map(([path, changefreq, priority]) => ({ path, changefreq, priority, alternates: trAlternates(path), lastmod: TR_ARTICLES[path]?.modified }));
 }
 
 export function enEntries(): Entry[] {

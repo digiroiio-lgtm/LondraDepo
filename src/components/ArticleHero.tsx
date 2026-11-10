@@ -1,9 +1,13 @@
+import { TR_ARTICLES, trDate } from "@/content/tr-articles";
+
 interface ArticleHeroProps {
   category: string;
   categoryColor?: string;
   title: string;
   readTime: string;
   date?: string;
+  /** Article path; dates, short answer and reviewer come from src/content/tr-articles.ts. */
+  path?: string;
 }
 
 export default function ArticleHero({
@@ -12,7 +16,9 @@ export default function ArticleHero({
   title,
   readTime,
   date,
+  path,
 }: ArticleHeroProps) {
+  const a = path ? TR_ARTICLES[path] : undefined;
   return (
     <>
       {/* Hero banner */}
@@ -59,6 +65,7 @@ export default function ArticleHero({
       {/* Author line */}
       <p className="text-[#e63946] text-sm font-medium mb-4">
         Sertaç Yılmaz — Arca Trade Group Kurucu Ortağı
+        {a && <span className="text-slate-500 font-normal"> · İnceleyen: Yusuf Barış, Operasyon Müdürü</span>}
       </p>
 
       {/* Category badge + title */}
@@ -71,9 +78,24 @@ export default function ArticleHero({
 
       {/* Meta */}
       <p className="text-slate-500 text-sm mb-8">
-        {date && <span>Güncellendi: {date} · </span>}
+        {a ? (
+          <span>
+            Yayın: <time dateTime={a.published}>{trDate(a.published)}</time> · Son güncelleme:{" "}
+            <time dateTime={a.modified}>{trDate(a.modified)}</time> ·{" "}
+          </span>
+        ) : (
+          date && <span>Güncellendi: {date} · </span>
+        )}
         ⏱ {readTime} okuma
       </p>
+
+      {/* Answer-first summary (AEO) */}
+      {a && (
+        <div className="mb-8 rounded-xl border-l-4 border-[#e63946] bg-[#f6f8fb] p-5">
+          <div className="text-xs font-bold uppercase tracking-widest text-[#e63946] mb-2">Kısa cevap</div>
+          <div className="text-slate-700 leading-relaxed">{a.summary}</div>
+        </div>
+      )}
     </>
   );
 }

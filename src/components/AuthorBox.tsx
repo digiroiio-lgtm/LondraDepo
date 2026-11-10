@@ -1,8 +1,13 @@
+import { TR_ARTICLES, trDate } from "@/content/tr-articles";
+
 interface AuthorBoxProps {
   updatedDate?: string;
+  path?: string;
 }
 
-export default function AuthorBox({ updatedDate }: AuthorBoxProps) {
+export default function AuthorBox({ updatedDate, path }: AuthorBoxProps) {
+  const a = path ? TR_ARTICLES[path] : undefined;
+  const updated = a ? trDate(a.modified) : updatedDate;
   return (
     <div className="border border-slate-200 rounded-2xl p-6 my-10 bg-[#f6f8fb]">
       <p className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-4">
@@ -30,17 +35,17 @@ export default function AuthorBox({ updatedDate }: AuthorBoxProps) {
           </div>
           <div>
             <p className="font-bold text-[#0b2545] text-sm">
-              Yusuf Barış <span className="font-normal text-slate-400 text-xs">— Review</span>
+              Yusuf Barış <span className="font-normal text-slate-400 text-xs">— İnceleyen</span>
             </p>
             <p className="text-slate-500 text-xs leading-relaxed">
-              LondraDepo.com Operasyon Direktörü. Essex merkezli UK depo ve lojistik operasyonlarının yöneticisi.
+              LondraDepo.com Operasyon Müdürü. Essex merkezli UK depo ve lojistik operasyonlarının yöneticisi.
             </p>
           </div>
         </div>
       </div>
-      {updatedDate && (
+      {updated && (
         <p className="text-xs text-slate-400 mt-4 pt-4 border-t border-slate-200">
-          🗓 Son güncelleme: {updatedDate} · LondraDepo.com, Essex, United Kingdom
+          🗓 Son güncelleme: {updated} · LondraDepo.com, Essex, United Kingdom
         </p>
       )}
     </div>

@@ -75,6 +75,22 @@ function jsonLd(page: EnPage) {
       url,
     });
   }
+  if (page.kind === "home") {
+    // AEO freshness: answer engines read dateModified from Article-type schema.
+    graph.push({
+      "@type": "Article",
+      "@id": `${url}#article`,
+      headline: page.h1,
+      description: page.description,
+      inLanguage: "en",
+      datePublished: EN_PUBLISHED,
+      dateModified: modifiedOf(page),
+      author: { "@type": "Organization", name: "Arca Trade Group Ltd", url: "https://arcatrade.co.uk/" },
+      publisher: ORG,
+      mainEntityOfPage: { "@id": `${url}#webpage` },
+      image: `${SITE_URL}/londradepo.jpeg`,
+    });
+  }
   if (page.article) {
     graph.push({
       "@type": page.kind === "case" ? "Article" : "BlogPosting",
@@ -205,6 +221,21 @@ function SectionView({ s }: { s: Section }) {
             )}
           </figcaption>
         </figure>
+      );
+    case "sources":
+      return (
+        <section className="mb-12">
+          {h2}
+          <ol className="list-decimal pl-5 space-y-1.5 text-sm text-slate-700">
+            {s.items.map((it) => (
+              <li key={it.href}>
+                <a href={it.href} target="_blank" rel="noopener noreferrer" className="underline hover:text-[#0b2545]">
+                  {it.label}
+                </a>
+              </li>
+            ))}
+          </ol>
+        </section>
       );
     case "links":
       return (

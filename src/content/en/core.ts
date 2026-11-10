@@ -33,7 +33,7 @@ export const corePages: EnPage[] = [
         h2: "What does LondraDepo do for international businesses?",
         paras: [
           "LondraDepo gives overseas manufacturers, importers and online brands a ready-made UK operation. We receive goods from any country, store them in our Essex warehouse, prepare business and consumer orders and deliver them anywhere in Great Britain. You keep selling; we run the physical logistics in the UK.",
-          "The service covers six connected jobs: goods-in and container unloading, pallet and carton storage, stock control in Mintsoft WMS, pick and pack for ecommerce and wholesale orders, Amazon FBA preparation, and UK distribution by parcel or pallet. Because all six happen in one building, goods are handled once instead of moving between a port-side unloading yard, a storage site and a separate fulfilment centre.",
+          "The service covers six connected jobs: goods-in and container unloading, pallet and carton storage, stock control in Mintsoft WMS, pick and pack for ecommerce and wholesale orders, Amazon FBA preparation, and UK distribution by parcel or pallet. Because all six happen in one building, goods are handled once instead of moving between a port-side unloading yard, a storage site and a separate fulfilment centre. That matters because online sales made up around 28% of all retail sales in Great Britain in 2026, up from 19.2% in 2019 according to the Office for National Statistics, so most brands entering the UK need parcel and pallet fulfilment from the same stock.",
           "LondraDepo is the warehousing brand of Arca Trade Group, which also arranges international freight and UK customs clearance. That means one group can move your goods from the factory gate to a UK customer, or you can bring your own forwarder and use only the warehouse.",
         ],
       },
@@ -43,7 +43,7 @@ export const corePages: EnPage[] = [
         paras: [
           "The warehouse is at Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY. By road it is about 13 miles from DP World London Gateway, 16 miles from the Port of Tilbury, 37 miles from central London and 62 miles from the Port of Felixstowe, the UK's largest container port.",
           "We measured these distances with road routing between our postcode and each port's postcode in November 2026. In free-flowing traffic a car takes roughly 20 minutes to London Gateway or Tilbury, about an hour to central London and around 1¼ hours to Felixstowe; lorries and peak traffic take longer. The A127 connects the site to the M25, so pallets and parcels leave Essex for every region of Great Britain.",
-          "Rayleigh is not a port location, and we do not claim it is. Containers are hauled from the port to our loading ramp, unloaded on site and then stored or sent straight on to customers.",
+          "In percentage terms, London Gateway is 79% closer to us by road than Felixstowe, and Tilbury is 74% closer. Felixstowe still matters: industry estimates put its share of UK container traffic at roughly 40%, so many deep-sea shipments from Asia arrive there. Rayleigh is not a port location, and we do not claim it is. Containers are hauled from the port to our loading ramp, unloaded on site and then stored or sent straight on to customers.",
         ],
       },
       {
@@ -63,7 +63,7 @@ export const corePages: EnPage[] = [
         h2: "How much does UK warehousing cost at LondraDepo?",
         paras: [
           "Standard pallet storage at LondraDepo starts from £3.50 + VAT per pallet per week. Storing 10 standard pallets for four weeks therefore starts at £140 + VAT. Goods-in, unloading, pick and pack, labelling, returns, delivery and customs clearance are quoted separately, because they depend on your products and order profile.",
-          "For context, a published UK 3PL cost index puts typical mid-market storage at about £3 to £5 per pallet per week, with premium South East and short-term overflow space reaching around £6.50. Our starting rate sits at the lower end of that range, and we publish it so you can budget before you call.",
+          "For context, a published UK 3PL cost index puts typical mid-market storage at about £3 to £5 per pallet per week, with premium South East and short-term overflow space reaching around £6.50. Our £3.50 starting rate is 30% below the £5 top of that mid-market range and 46% below the £6.50 premium rate, and we publish it so you can budget before you call.",
           "Pick and pack is charged per order, with a base fee for the first item and a smaller fee for each extra item. Amazon FBA prep is priced per unit and task; standard prep in the UK market is often around £0.30 to £0.60 per unit, although that is an industry indication rather than our quote.",
         ],
       },
@@ -84,7 +84,7 @@ export const corePages: EnPage[] = [
         paras: [
           "An import through us follows six steps: plan the shipment, book freight, clear UK customs, deliver to Rayleigh, unload and book stock into the WMS, then fulfil orders. Arca Trade Group can handle freight and the customs declaration; LondraDepo handles everything from the moment goods reach the warehouse.",
           "Arca Trade Group offers sea and air freight worldwide, road freight between the UK and Europe, and rail freight from the Far East and Europe. Its customs team completes import declarations on behalf of customers and advises on commodity codes and preferential origin.",
-          "The importer, usually you, still needs a GB EORI number and remains responsible for customs duty and import VAT. Import VAT is normally charged at the standard UK rate of 20%, and VAT-registered businesses can often account for it through postponed VAT accounting. LondraDepo is not a bonded warehouse, so goods are stored after they have been cleared.",
+          "The importer, usually you, still needs a GB EORI number and remains responsible for customs duty and import VAT. Import VAT is normally charged at the standard UK rate of 20%, with a 5% reduced rate and a 0% zero rate for some goods, and VAT-registered businesses can often account for it through postponed VAT accounting. On duty, GOV.UK states that just under half of UK most-favoured-nation tariff lines are set at 0%, and goods that meet the rules of origin under the UK–EU Trade and Cooperation Agreement can enter at a 0% tariff. LondraDepo is not a bonded warehouse, so goods are stored after they have been cleared.",
         ],
       },
       {
@@ -107,7 +107,7 @@ export const corePages: EnPage[] = [
         type: "text",
         h2: "What results have clients achieved with LondraDepo?",
         paras: [
-          "We publish seven live UK operations across six sectors. The clearest growth story is an Ankara-based tortilla and flatbread producer that entered the UK with one trial pallet and now ships six 40ft high-cube containers a month into our warehouse for B2B and consumer distribution.",
+          "We publish seven live UK operations across six sectors, and at least four of the seven (57%) are manufacturers shipping from Turkey. The clearest growth story is an Ankara-based tortilla and flatbread producer that entered the UK with one trial pallet and now ships six 40ft high-cube containers a month into our warehouse for B2B and consumer distribution.",
           "Cruyff, the fashion brand carrying Johan Cruyff's legacy, moved UK online orders from shipping out of the Netherlands to fulfilment from Essex, cutting UK delivery times by around 80% and offering next-day and 2-day delivery. An OEM and aftermarket car parts supplier now has 100% photo-documented damage tracking at goods-in and dispatch, with next-day delivery to UK dealers.",
           "A car seat cover and faux leather manufacturer has eBay, Amazon and workshop orders processed the same day, and a pizza box producer supplies UK restaurants on fixed weekly or monthly delivery schedules with low-stock alerts. Each case study page explains the set-up step by step.",
         ],
@@ -117,7 +117,7 @@ export const corePages: EnPage[] = [
         h2: "How is stock tracked and reported?",
         paras: [
           "Every stock movement is recorded in Mintsoft WMS, a third-party warehouse management system that LondraDepo uses but does not own. Stock levels, inbound deliveries, outbound orders and order status are recorded in real time, and low-stock alerts can be set per product.",
-          "At goods-in, deliveries are counted against the packing list and visible damage is photographed and reported, so you can claim against a supplier or carrier with evidence. For high-value or fragile goods, such as painted car parts, photos are also taken at dispatch. Pallets are numbered and the warehouse is locked, CCTV-monitored and access-controlled.",
+          "At goods-in, 100% of deliveries are counted against the packing list and visible damage is photographed and reported, so you can claim against a supplier or carrier with evidence. For high-value or fragile goods, such as painted car parts, photos are also taken at dispatch. Pallets are numbered and the warehouse is locked, CCTV-monitored and access-controlled.",
           "Regular stock reports and movement summaries are sent on an agreed schedule in English or Turkish. Lot-level records are available for clients who need traceability, as our packaging client does for recall readiness.",
         ],
       },
@@ -136,6 +136,18 @@ export const corePages: EnPage[] = [
         cite: "Arca Trade Group (company website)",
         sourceLabel: "arcatrade.co.uk",
         sourceHref: "https://arcatrade.co.uk/",
+      },
+      {
+        type: "sources",
+        h2: "Sources for the figures on this page",
+        items: [
+          { label: "Office for National Statistics: internet sales as a percentage of total retail sales (series J4MC)", href: "https://www.ons.gov.uk/businessindustryandtrade/retailindustry/timeseries/j4mc" },
+          { label: "GOV.UK: The UK's integrated tariff schedule (share of 0% MFN tariff lines)", href: "https://www.gov.uk/government/publications/the-uks-integrated-tariff-schedule/the-uks-integrated-tariff-schedule" },
+          { label: "GOV.UK: VAT rates (20% standard, 5% reduced, 0% zero)", href: "https://www.gov.uk/vat-rates" },
+          { label: "Wikipedia: Port of Felixstowe (share of UK container traffic)", href: "https://en.wikipedia.org/wiki/Port_of_Felixstowe" },
+          { label: "eightx: UK 3PL cost index (pallet storage price range)", href: "https://eightx.co/blog/uk-3pl-cost-index" },
+          { label: "Distances: road routing from SS6 7FY to each port postcode, November 2026 (OSRM)", href: "https://project-osrm.org/" },
+        ],
       },
       {
         type: "text",

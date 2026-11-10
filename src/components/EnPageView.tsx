@@ -249,7 +249,7 @@ function SectionView({ s }: { s: Section }) {
         </section>
       );
     case "checklist":
-      return <ChecklistGate lang="en" />;
+      return <ChecklistGate lang="en" variant={s.variant} />;
     case "sources":
       return (
         <section className="mb-12">

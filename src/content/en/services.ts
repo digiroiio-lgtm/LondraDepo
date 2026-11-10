@@ -480,6 +480,7 @@ export const servicePages: EnPage[] = [
           { title: "Tracking and reporting", text: "Check-in at the Amazon fulfilment centre is followed up after dispatch." },
         ],
       },
+      { type: "checklist", variant: "fba" },
     ],
     faqs: [
       { q: "Is Amazon FBA prep free, and how is it priced?", a: "No. FNSKU labelling, product checks, polybagging, packing, carton and pallet preparation are charged according to need. Standard prep in the UK market is often around £0.30–£0.60 per unit; this is not a LondraDepo quote. We set the exact fee by product type, quantity and scope." },

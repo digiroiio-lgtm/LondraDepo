@@ -1,5 +1,6 @@
 import FaqJsonLd from "@/components/FaqJsonLd";
 import TrClusterNav from "@/components/TrClusterNav";
+import ChecklistGate from "@/components/ChecklistGate";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -153,6 +154,7 @@ export default function AmazonPrepPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <section className="px-4"><div className="max-w-4xl mx-auto"><ChecklistGate lang="tr" variant="fba" /></div></section>
         <TrClusterNav path="/amazon-prep-uk" />
       </main>
       <Footer />

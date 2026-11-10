@@ -34,9 +34,29 @@ const TEXT = {
   },
 } as const;
 
-export default function ChecklistGate({ lang }: { lang: "en" | "tr" }) {
-  const t = TEXT[lang];
-  const formId = `${lang}_import_checklist`;
+/** Per-checklist overrides; everything else comes from TEXT. */
+const VARIANTS = {
+  import: { en: {}, tr: {} },
+  fba: {
+    en: {
+      h: "Download the Amazon FBA Prep Checklist (PDF)",
+      intro: "A printable, tick-box version: before arrival, unit preparation, cartons and delivery to Amazon UK on one A4 page.",
+      file: "/downloads/amazon-fba-prep-checklist.pdf",
+    },
+    tr: {
+      h: "Amazon FBA Prep Kontrol Listesini İndirin (PDF)",
+      intro: "Yazdırılabilir, işaretlenebilir hali: ürünler gelmeden önce, ürün hazırlığı, koliler ve Amazon UK'ye teslimat tek A4 sayfada.",
+      file: "/downloads/amazon-fba-prep-kontrol-listesi.pdf",
+    },
+  },
+} as const;
+
+type Variant = keyof typeof VARIANTS;
+
+export default function ChecklistGate({ lang, variant = "import" }: { lang: "en" | "tr"; variant?: Variant }) {
+  const t = { ...TEXT[lang], ...VARIANTS[variant][lang] };
+  const leadType = variant === "fba" ? "fba_prep_checklist" : "import_checklist";
+  const formId = `${lang}_${leadType}`;
   const [f, setF] = useState({ name: "", company: "", email: "", consent: false });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [tracking, setTracking] = useState<Record<string, string>>({});
@@ -55,7 +75,7 @@ export default function ChecklistGate({ lang }: { lang: "en" | "tr" }) {
   }, []);
 
   useEffect(() => {
-    if (state.succeeded) trackQuoteSubmit({ form_id: formId, lead_type: "import_checklist" });
+    if (state.succeeded) trackQuoteSubmit({ form_id: formId, lead_type: leadType });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state.succeeded]);
 
@@ -77,9 +97,9 @@ export default function ChecklistGate({ lang }: { lang: "en" | "tr" }) {
     setErrors(e);
     if (Object.keys(e).length) return;
     await submit({
-      _subject: lang === "en" ? `Import checklist download: ${f.company || f.name}` : `İthalat kontrol listesi indirme: ${f.company || f.name}`,
+      _subject: `${variant === "fba" ? "FBA prep checklist" : lang === "en" ? "Import checklist" : "İthalat kontrol listesi"} download: ${f.company || f.name}`,
       form: formId,
-      lead_type: "import_checklist",
+      lead_type: leadType,
       page_lang: lang,
       page_path: window.location.pathname,
       name: f.name,

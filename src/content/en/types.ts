@@ -18,7 +18,7 @@ export type Section =
   /** Interactive storage cost calculator. */
   | { type: "calculator"; h2: string; intro?: string }
   /** Email-gated PDF checklist download. */
-  | { type: "checklist" }
+  | { type: "checklist"; variant?: "import" | "fba" }
   /** Interactive container arrival planner. */
   | { type: "planner"; h2: string; intro?: string };
 

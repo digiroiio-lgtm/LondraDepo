@@ -641,6 +641,7 @@ export const blogPages: EnPage[] = [
           "Track check-in until the stock shows as available for sale",
         ],
       },
+      { type: "checklist", variant: "fba" },
       {
         type: "text",
         h2: "When to use an Amazon prep warehouse",

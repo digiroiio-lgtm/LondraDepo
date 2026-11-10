@@ -1,6 +1,6 @@
 // Builds the gated import checklist PDFs (EN + TR) into public/downloads/.
 // Run: node scripts/build-checklists.mjs  (uses the pre-installed Playwright Chromium)
-// Content is limited to facts already published on /en/blog/uk-importing-guide.
+// Content is limited to facts already published on the importing guide and the FBA prep checklist pages.
 import { createRequire } from "node:module";
 const { chromium } = createRequire(import.meta.url)("playwright"); // global install, CommonJS
 import { mkdirSync } from "node:fs";
@@ -9,6 +9,70 @@ const OUT = new URL("../public/downloads/", import.meta.url);
 mkdirSync(OUT, { recursive: true });
 
 const DOCS = [
+  {
+    file: "amazon-fba-prep-checklist.pdf",
+    lang: "en",
+    title: "Amazon FBA Prep Checklist",
+    sub: "Before your stock goes to an Amazon UK fulfilment centre",
+    updated: "Last updated: 10 November 2026",
+    groups: [
+      ["1. Before the goods arrive", [
+        "Confirm each product's listing and FNSKU in Seller Central",
+        "Check the product's prep category and any category-specific requirements in Seller Central",
+        "Agree with your prep warehouse who creates the shipment plan and when",
+        "Send the warehouse the packing list, SKU details and units per SKU",
+      ]],
+      ["2. Unit preparation", [
+        "Apply an FNSKU label to every unit, unless the product is eligible to use its manufacturer barcode",
+        "Cover or remove any other scannable barcodes on the unit",
+        "Bag, box or protect items that could be damaged, leak or come apart in transit",
+        "Mark sets and bundles so they are not split and sold separately",
+        "Check expiry-dated products are labelled in the format Amazon requires",
+      ]],
+      ["3. Cartons and delivery", [
+        "Pack cartons within Amazon's current weight and size limits",
+        "Apply the shipment carton labels Amazon generates to each carton",
+        "Palletise and label pallets if sending a pallet shipment",
+        "Book delivery to the assigned Amazon UK fulfilment centre",
+        "Track check-in until the stock shows as available for sale",
+      ]],
+    ],
+    note: "Amazon updates its prep and packaging requirements. Always check the current rules in Seller Central for each product. LondraDepo is not an official Amazon partner.",
+    footer: "LondraDepo · Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY · +44 7554 195190 · www.londradepo.com/en",
+    cta: "Need FBA prep in the UK? Request a quote at www.londradepo.com/en/amazon-prep-uk",
+  },
+  {
+    file: "amazon-fba-prep-kontrol-listesi.pdf",
+    lang: "tr",
+    title: "Amazon FBA Prep Kontrol Listesi",
+    sub: "Stoğunuz Amazon UK deposuna gitmeden önce",
+    updated: "Son güncelleme: 10 Kasım 2026",
+    groups: [
+      ["1. Ürünler gelmeden önce", [
+        "Her ürünün listelemesini ve FNSKU'sunu Seller Central'da teyit edin",
+        "Ürünün prep kategorisini ve kategoriye özel gereklilikleri Seller Central'da kontrol edin",
+        "Sevkiyat planını kimin, ne zaman oluşturacağını prep deposuyla netleştirin",
+        "Depoya ambalaj listesini, SKU bilgilerini ve SKU başına adedi gönderin",
+      ]],
+      ["2. Ürün hazırlığı", [
+        "Üretici barkodunu kullanmaya uygun değilse her ürüne FNSKU etiketi yapıştırın",
+        "Üründeki diğer okunabilir barkodları kapatın veya kaldırın",
+        "Taşımada zarar görebilecek, sızabilecek veya dağılabilecek ürünleri koruyun",
+        "Set ve paketleri ayrı satılmayacak şekilde işaretleyin",
+        "Son kullanma tarihli ürünlerin Amazon'un istediği formatta etiketlendiğini kontrol edin",
+      ]],
+      ["3. Koliler ve teslimat", [
+        "Kolileri Amazon'un güncel ağırlık ve ölçü sınırları içinde paketleyin",
+        "Amazon'un oluşturduğu koli etiketlerini her koliye yapıştırın",
+        "Paletli sevkiyatsa paletleri hazırlayıp etiketleyin",
+        "Atanan Amazon UK deposuna teslim randevusu alın",
+        "Stok satışa açık görünene kadar kabul sürecini takip edin",
+      ]],
+    ],
+    note: "Amazon prep ve ambalaj kurallarını günceller. Her ürün için güncel kuralları Seller Central'dan kontrol edin. LondraDepo resmi Amazon partneri değildir.",
+    footer: "LondraDepo · Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY · +44 7554 195190 · www.londradepo.com",
+    cta: "İngiltere'de FBA prep mi gerekiyor? Teklif için: www.londradepo.com/amazon-prep-uk",
+  },
   {
     file: "uk-import-checklist.pdf",
     lang: "en",

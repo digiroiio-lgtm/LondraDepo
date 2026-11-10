@@ -1,3 +1,5 @@
+import Icon, { iconFor } from "@/components/visual/Icon";
+import ProcessFlow from "@/components/visual/ProcessFlow";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import TrClusterNav from "@/components/TrClusterNav";
 import type { Metadata } from "next";
@@ -108,11 +110,26 @@ export default function PaletDepolamaPage() {
                 { title: "Dağıtıma Hazırlık", desc: "Paletler sipariş bazında ayrıştırılır ve dağıtıma hazırlanır." },
               ].map((item) => (
                 <div key={item.title} className="border border-slate-200 rounded-xl p-5">
+                  <span className="mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-red-50 text-[#d62839]">
+                    <Icon name={iconFor(item.title, item.desc)} />
+                  </span>
                   <h2 className="font-bold text-[#0b2545] mb-2">{item.title}</h2>
                   <p className="text-slate-600 text-sm">{item.desc}</p>
                 </div>
               ))}
             </div>
+
+            <section className="mb-12" aria-labelledby="palet-surec">
+              <h2 id="palet-surec" className="text-2xl font-extrabold text-[#0b2545] mb-5">Palet depolama nasıl işler?</h2>
+              <ProcessFlow
+                items={[
+                  { title: "Mal kabul", text: "Konteyner ve parsiyel teslimatlar Rayleigh, Essex deposunda teslim alınır ve sayılır." },
+                  { title: "Güvenli depolama", text: "Paletler kilitli, CCTV ile izlenen ve erişimi kontrollü depoda saklanır." },
+                  { title: "Stok raporu", text: "Stok hareketleri raporlanır; palet sayınızı ve durumunu takip edersiniz." },
+                  { title: "B2B sevk", text: "Paletler İngiltere içindeki toptan ve ticari müşterilerinize sevke hazırlanır." },
+                ]}
+              />
+            </section>
 
             <section className="mb-12" aria-labelledby="palet-planlama">
               <h2 id="palet-planlama" className="text-2xl font-extrabold text-[#0b2545] mb-5">

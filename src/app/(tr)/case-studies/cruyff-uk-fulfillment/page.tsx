@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -207,11 +208,11 @@ export default function CruyffCaseStudyPage() {
 
             {/* Trust bar */}
             <div className="bg-slate-50 border border-slate-200 rounded-xl p-5 mb-10 flex flex-wrap gap-4 text-sm text-slate-600 justify-center md:justify-start">
-              <span>🏆 International fashion operations</span>
-              <span>🚀 UK ecommerce infrastructure</span>
-              <span>✨ Premium apparel logistics</span>
-              <span>📈 Operational scalability</span>
-              <span>🇬🇧 UK market fulfillment</span>
+              <span><Emoji e="🏆" /> International fashion operations</span>
+              <span><Emoji e="🚀" /> UK ecommerce infrastructure</span>
+              <span><Emoji e="✨" /> Premium apparel logistics</span>
+              <span><Emoji e="📈" /> Operational scalability</span>
+              <span><Emoji e="🇬🇧" /> UK market fulfillment</span>
             </div>
 
             {/* Problem */}
@@ -227,12 +228,12 @@ export default function CruyffCaseStudyPage() {
                   bulunmadığından lokal fulfillment mümkün değildi.
                 </p>
                 <ul className="text-slate-700 text-sm space-y-2 list-none">
-                  <li>⚠️ UK içi hızlı fulfillment ihtiyacı</li>
-                  <li>⚠️ İngiltere&apos;de fiziksel stok eksikliği</li>
-                  <li>⚠️ Online sipariş operasyonu altyapısı ihtiyacı</li>
-                  <li>⚠️ Moda ürünlerine uygun repackaging gereksinimi</li>
-                  <li>⚠️ UK kargo entegrasyonu eksikliği</li>
-                  <li>⚠️ Merkezi stok yönetimi ihtiyacı</li>
+                  <li><Emoji e="⚠️" /> UK içi hızlı fulfillment ihtiyacı</li>
+                  <li><Emoji e="⚠️" /> İngiltere&apos;de fiziksel stok eksikliği</li>
+                  <li><Emoji e="⚠️" /> Online sipariş operasyonu altyapısı ihtiyacı</li>
+                  <li><Emoji e="⚠️" /> Moda ürünlerine uygun repackaging gereksinimi</li>
+                  <li><Emoji e="⚠️" /> UK kargo entegrasyonu eksikliği</li>
+                  <li><Emoji e="⚠️" /> Merkezi stok yönetimi ihtiyacı</li>
                 </ul>
               </div>
             </section>
@@ -297,7 +298,7 @@ export default function CruyffCaseStudyPage() {
                     className="border border-slate-200 rounded-xl p-5 flex gap-4 hover:border-[#0b2545]/30 hover:shadow-sm transition"
                   >
                     <span className="text-2xl flex-shrink-0" aria-hidden="true">
-                      {item.icon}
+                      <Emoji e={item.icon} />
                     </span>
                     <div>
                       <h3 className="font-bold text-[#0b2545] mb-1">{item.title}</h3>

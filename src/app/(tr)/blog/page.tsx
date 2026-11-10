@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -215,10 +216,10 @@ export default function BlogPage() {
         {/* Trust bar */}
         <section className="bg-white border-b border-slate-200 py-4 px-4">
           <div className="max-w-5xl mx-auto flex flex-wrap gap-6 text-sm text-slate-600 justify-center md:justify-start">
-            <span>✅ Essex merkezli UK depo</span>
-            <span>✅ Türkçe operasyon iletişimi</span>
-            <span>✅ 18 yıl lojistik sektörü deneyimi</span>
-            <span>✅ Gerçek operasyon örnekleri</span>
+            <span><Emoji e="✅" /> Essex merkezli UK depo</span>
+            <span><Emoji e="✅" /> Türkçe operasyon iletişimi</span>
+            <span><Emoji e="✅" /> 18 yıl lojistik sektörü deneyimi</span>
+            <span><Emoji e="✅" /> Gerçek operasyon örnekleri</span>
           </div>
         </section>
 
@@ -253,7 +254,7 @@ export default function BlogPage() {
                     className="h-28 flex items-center justify-center relative overflow-hidden"
                     style={{ background: "linear-gradient(135deg, #0b2545 0%, #2d5986 100%)" }}
                   >
-                    <span className="text-4xl opacity-80">{post.icon}</span>
+                    <span className="text-4xl opacity-80"><Emoji e={post.icon} /></span>
                     {post.tag && (
                       <span
                         className={`absolute top-3 right-3 text-xs font-bold px-2 py-0.5 rounded-full ${

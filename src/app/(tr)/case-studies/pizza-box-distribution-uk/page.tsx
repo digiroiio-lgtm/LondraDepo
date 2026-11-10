@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -183,11 +184,11 @@ export default function PizzaBoxCaseStudyPage() {
                   Türkiye'den sevkiyat yapılması lojistik açıdan sürdürülemezdi.
                 </p>
                 <ul className="text-slate-700 text-sm space-y-2 list-none">
-                  <li>⚠️ Türkiye'den UK'ya her seferinde ayrı sevkiyat maliyeti ve gecikmesi</li>
-                  <li>⚠️ Restoranların tutarlı ve öngörülebilir tedarik ihtiyacı</li>
-                  <li>⚠️ Büyük hacimli palet ürünler için depolama ihtiyacı</li>
-                  <li>⚠️ UK'da fiziksel operasyon noktası gerekliliği</li>
-                  <li>⚠️ Stok erken tükenme riski ve müşteri kayıpları</li>
+                  <li><Emoji e="⚠️" /> Türkiye'den UK'ya her seferinde ayrı sevkiyat maliyeti ve gecikmesi</li>
+                  <li><Emoji e="⚠️" /> Restoranların tutarlı ve öngörülebilir tedarik ihtiyacı</li>
+                  <li><Emoji e="⚠️" /> Büyük hacimli palet ürünler için depolama ihtiyacı</li>
+                  <li><Emoji e="⚠️" /> UK'da fiziksel operasyon noktası gerekliliği</li>
+                  <li><Emoji e="⚠️" /> Stok erken tükenme riski ve müşteri kayıpları</li>
                 </ul>
               </div>
             </section>
@@ -210,7 +211,7 @@ export default function PizzaBoxCaseStudyPage() {
                   { icon: "💬", title: "Türkçe Koordinasyon", desc: "Tüm operasyon süreci Türkçe iletişimle Türkiye merkezli ekiple koordine edildi." },
                 ].map((item) => (
                   <div key={item.title} className="border border-slate-200 rounded-xl p-5 flex gap-4">
-                    <span className="text-2xl flex-shrink-0" aria-hidden="true">{item.icon}</span>
+                    <span className="text-2xl flex-shrink-0" aria-hidden="true"><Emoji e={item.icon} /></span>
                     <div>
                       <h3 className="font-bold text-[#0b2545] mb-1">{item.title}</h3>
                       <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>

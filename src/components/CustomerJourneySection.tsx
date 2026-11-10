@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20depo%20teklifi%20almak%20istiyorum.";
 
 const steps = [
@@ -67,7 +68,7 @@ export default function CustomerJourneySection() {
             <div key={step.num} className="relative">
               <div className="flex flex-col items-center text-center">
                 <div className="w-14 h-14 rounded-full bg-white/10 border-2 border-white/20 flex items-center justify-center text-2xl mb-3">
-                  {step.icon}
+                  <Emoji e={step.icon} />
                 </div>
                 <span className="text-green-400 text-xs font-bold uppercase tracking-wider mb-1">
                   {step.num}
@@ -93,7 +94,7 @@ export default function CustomerJourneySection() {
             <div key={step.num}>
               <div className="flex gap-4 items-start bg-white/5 rounded-2xl p-4 border border-white/10">
                 <div className="flex-shrink-0 w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-xl">
-                  {step.icon}
+                  <Emoji e={step.icon} />
                 </div>
                 <div>
                   <span className="text-green-400 text-xs font-bold uppercase tracking-wider">{step.num} — {step.label}</span>

@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -216,22 +217,22 @@ export default function WalkingTreadmillCaseStudyPage() {
               </p>
               <div className="flex flex-wrap items-center gap-6 justify-center md:justify-start">
                 <div className="text-center px-4">
-                  <div className="text-3xl mb-1">🏭</div>
+                  <div className="text-3xl mb-1"><Emoji e="🏭" /></div>
                   <div className="text-white/60 text-xs">Büyük Hacimli<br />Depolama</div>
                 </div>
                 <div className="text-2xl text-white/30 hidden sm:block">+</div>
                 <div className="text-center px-4">
-                  <div className="text-3xl mb-1">🛒</div>
+                  <div className="text-3xl mb-1"><Emoji e="🛒" /></div>
                   <div className="text-white/60 text-xs">Online<br />Fulfillment</div>
                 </div>
                 <div className="text-2xl text-white/30 hidden sm:block">+</div>
                 <div className="text-center px-4">
-                  <div className="text-3xl mb-1">🏪</div>
+                  <div className="text-3xl mb-1"><Emoji e="🏪" /></div>
                   <div className="text-white/60 text-xs">Discount Store<br />Dağıtımı</div>
                 </div>
                 <div className="text-2xl text-white/30 hidden sm:block">→</div>
                 <div className="text-center px-4">
-                  <div className="text-3xl mb-1">🇬🇧</div>
+                  <div className="text-3xl mb-1"><Emoji e="🇬🇧" /></div>
                   <div className="text-white/60 text-xs">UK Wide<br />Delivery</div>
                 </div>
               </div>
@@ -239,11 +240,11 @@ export default function WalkingTreadmillCaseStudyPage() {
 
             {/* Trust bar */}
             <div className="bg-slate-50 border border-slate-200 rounded-xl p-5 mb-10 flex flex-wrap gap-4 text-sm text-slate-600 justify-center md:justify-start">
-              <span>🏋️ Büyük hacimli ürün lojistiği</span>
-              <span>🛒 Online & retail fulfillment</span>
-              <span>🏪 Discount store dağıtımı</span>
-              <span>🚚 UK geneli teslimat</span>
-              <span>📊 Stok yönetimi & raporlama</span>
+              <span><Emoji e="🏋️" /> Büyük hacimli ürün lojistiği</span>
+              <span><Emoji e="🛒" /> Online & retail fulfillment</span>
+              <span><Emoji e="🏪" /> Discount store dağıtımı</span>
+              <span><Emoji e="🚚" /> UK geneli teslimat</span>
+              <span><Emoji e="📊" /> Stok yönetimi & raporlama</span>
             </div>
 
             {/* Problem */}
@@ -259,13 +260,13 @@ export default function WalkingTreadmillCaseStudyPage() {
                   operasyon altyapısına ihtiyaç duyuldu.
                 </p>
                 <ul className="text-slate-700 text-sm space-y-2 list-none">
-                  <li>⚠️ Büyük hacimli ürün depolama ihtiyacı</li>
-                  <li>⚠️ Hassas mekanik ürün taşıma ve depolama</li>
-                  <li>⚠️ Online sipariş fulfillment süreç kurulumu</li>
-                  <li>⚠️ Discount store dağıtım organizasyonu</li>
-                  <li>⚠️ İngiltere geneli lojistik planlaması</li>
-                  <li>⚠️ Stok takibi ve operasyon yönetimi</li>
-                  <li>⚠️ Ölçeklenebilir fulfillment altyapısı</li>
+                  <li><Emoji e="⚠️" /> Büyük hacimli ürün depolama ihtiyacı</li>
+                  <li><Emoji e="⚠️" /> Hassas mekanik ürün taşıma ve depolama</li>
+                  <li><Emoji e="⚠️" /> Online sipariş fulfillment süreç kurulumu</li>
+                  <li><Emoji e="⚠️" /> Discount store dağıtım organizasyonu</li>
+                  <li><Emoji e="⚠️" /> İngiltere geneli lojistik planlaması</li>
+                  <li><Emoji e="⚠️" /> Stok takibi ve operasyon yönetimi</li>
+                  <li><Emoji e="⚠️" /> Ölçeklenebilir fulfillment altyapısı</li>
                 </ul>
               </div>
             </section>
@@ -329,7 +330,7 @@ export default function WalkingTreadmillCaseStudyPage() {
                     className="border border-slate-200 rounded-xl p-5 flex gap-4 hover:border-[#0b2545]/30 hover:shadow-sm transition"
                   >
                     <span className="text-2xl flex-shrink-0" aria-hidden="true">
-                      {item.icon}
+                      <Emoji e={item.icon} />
                     </span>
                     <div>
                       <h3 className="font-bold text-[#0b2545] mb-1">{item.title}</h3>
@@ -381,7 +382,7 @@ export default function WalkingTreadmillCaseStudyPage() {
                     className="bg-[#f6f8fb] rounded-xl p-6 flex gap-4 hover:shadow-md transition"
                   >
                     <span className="text-3xl flex-shrink-0" aria-hidden="true">
-                      {r.icon}
+                      <Emoji e={r.icon} />
                     </span>
                     <div>
                       <div className="font-extrabold text-[#0b2545] mb-1">{r.label}</div>

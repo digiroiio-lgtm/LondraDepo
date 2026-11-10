@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -214,11 +215,11 @@ export default function SarjIstasyonuCaseStudyPage() {
                   operasyon altyapısı kurulması gerekiyordu.
                 </p>
                 <ul className="text-slate-700 text-sm space-y-2 list-none">
-                  <li>⚠️ SIM kart aktivasyonunun İngiltere&apos;de yapılması zorunluluğu</li>
-                  <li>⚠️ Cihaz şarj ve elektrik testi için lokal operasyon noktası ihtiyacı</li>
-                  <li>⚠️ Son kullanıcıya hızlı teslimat baskısı (next-day)</li>
-                  <li>⚠️ Teknik hazırlık süreçlerinin standart lojistik firmalarca karşılanamaması</li>
-                  <li>⚠️ Türkiye&apos;deki ekibin uzaktan koordinasyonu için Türkçe iletişim gerekliliği</li>
+                  <li><Emoji e="⚠️" /> SIM kart aktivasyonunun İngiltere&apos;de yapılması zorunluluğu</li>
+                  <li><Emoji e="⚠️" /> Cihaz şarj ve elektrik testi için lokal operasyon noktası ihtiyacı</li>
+                  <li><Emoji e="⚠️" /> Son kullanıcıya hızlı teslimat baskısı (next-day)</li>
+                  <li><Emoji e="⚠️" /> Teknik hazırlık süreçlerinin standart lojistik firmalarca karşılanamaması</li>
+                  <li><Emoji e="⚠️" /> Türkiye&apos;deki ekibin uzaktan koordinasyonu için Türkçe iletişim gerekliliği</li>
                 </ul>
               </div>
             </section>
@@ -272,7 +273,7 @@ export default function SarjIstasyonuCaseStudyPage() {
                     className="border border-slate-200 rounded-xl p-5 flex gap-4"
                   >
                     <span className="text-2xl flex-shrink-0" aria-hidden="true">
-                      {item.icon}
+                      <Emoji e={item.icon} />
                     </span>
                     <div>
                       <h3 className="font-bold text-[#0b2545] mb-1">{item.title}</h3>

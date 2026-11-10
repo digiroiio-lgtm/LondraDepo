@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 const capabilities = [
   { icon: "📊", label: "Stok görünürlüğü", desc: "Depodaki ürün miktarını anlık takip edin." },
   { icon: "📋", label: "Sipariş yönetimi", desc: "Gelen siparişleri sistemde takip edin." },
@@ -47,7 +48,7 @@ export default function MintSoftSection() {
                   key={c.label}
                   className="flex items-start gap-4 bg-[#f6f8fb] border border-slate-200 rounded-xl p-4"
                 >
-                  <span className="text-2xl flex-shrink-0">{c.icon}</span>
+                  <span className="text-2xl flex-shrink-0"><Emoji e={c.icon} /></span>
                   <div>
                     <h4 className="font-semibold text-[#0b2545] text-sm mb-0.5">{c.label}</h4>
                     <p className="text-slate-600 text-xs leading-relaxed">{c.desc}</p>

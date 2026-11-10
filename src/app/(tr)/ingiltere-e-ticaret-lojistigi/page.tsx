@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import TrClusterNav from "@/components/TrClusterNav";
 import type { Metadata } from "next";
@@ -213,7 +214,7 @@ export default function IngiltereETicaretLojistigi() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {services.map((s) => (
                 <div key={s.title} className="border border-slate-200 rounded-2xl p-5">
-                  <div className="text-2xl mb-2">{s.icon}</div>
+                  <div className="text-2xl mb-2"><Emoji e={s.icon} /></div>
                   <h3 className="font-bold text-[#0b2545] mb-1">{s.title}</h3>
                   <p className="text-slate-600 text-sm leading-relaxed">{s.desc}</p>
                 </div>
@@ -231,7 +232,7 @@ export default function IngiltereETicaretLojistigi() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
               {channels.map((ch) => (
                 <div key={ch.title} className="bg-white border border-slate-200 rounded-2xl p-5">
-                  <div className="text-2xl mb-2">{ch.icon}</div>
+                  <div className="text-2xl mb-2"><Emoji e={ch.icon} /></div>
                   <h3 className="font-bold text-[#0b2545] mb-1">{ch.title}</h3>
                   <p className="text-slate-600 text-sm leading-relaxed mb-2">{ch.desc}</p>
                   {ch.note && (

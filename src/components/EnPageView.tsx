@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 import Link from "next/link";
 import Image from "next/image";
 import WarehouseGallery from "@/components/WarehouseGallery";
@@ -348,7 +349,7 @@ export default function EnPageView({ page }: { page: EnPage }) {
                   WhatsApp us
                 </TrackedLink>
                 <TrackedLink kind="phone" source="hero" href={TEL} className="border border-[#0b2545] text-[#0b2545] font-semibold px-6 py-3 rounded-full hover:bg-[#0b2545] hover:text-white transition">
-                  📞 +44 7554 195190
+                  <Emoji e="📞" /> +44 7554 195190
                 </TrackedLink>
               </div>
             )}
@@ -425,10 +426,10 @@ export default function EnPageView({ page }: { page: EnPage }) {
               <h2 id="quote-heading" className="text-2xl font-bold text-[#0b2545] mb-2">{quote.label}</h2>
               <p className="text-slate-600 mb-4">Takes about two minutes. We reply by email with a tailored proposal.</p>
               <ul className="mb-5 grid gap-2 sm:grid-cols-2 text-sm text-slate-700">
-                <li className="flex gap-2"><span className="text-green-700" aria-hidden="true">✓</span>Warehouse at Unit 19 Arterial Park, Rayleigh, Essex SS6 7FY</li>
-                <li className="flex gap-2"><span className="text-green-700" aria-hidden="true">✓</span>Operated by Arca Trade Group Ltd (Company No. 13247691), BIFA member</li>
-                <li className="flex gap-2"><span className="text-green-700" aria-hidden="true">✓</span>Storage from £3.50 + VAT per pallet per week</li>
-                <li className="flex gap-2"><span className="text-green-700" aria-hidden="true">✓</span>English and Turkish spoken</li>
+                <li className="flex gap-2"><span className="text-green-700" aria-hidden="true"><Emoji e="✓" /></span>Warehouse at Unit 19 Arterial Park, Rayleigh, Essex SS6 7FY</li>
+                <li className="flex gap-2"><span className="text-green-700" aria-hidden="true"><Emoji e="✓" /></span>Operated by Arca Trade Group Ltd (Company No. 13247691), BIFA member</li>
+                <li className="flex gap-2"><span className="text-green-700" aria-hidden="true"><Emoji e="✓" /></span>Storage from £3.50 + VAT per pallet per week</li>
+                <li className="flex gap-2"><span className="text-green-700" aria-hidden="true"><Emoji e="✓" /></span>English and Turkish spoken</li>
               </ul>
               <QuoteFormEn defaultService={quote.service} formId="en_inline_quote" />
               <p className="mt-4 text-sm text-slate-600">

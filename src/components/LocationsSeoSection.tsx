@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20depo%20teklifi%20almak%20istiyorum.";
 
 const locations = [
@@ -33,7 +34,7 @@ export default function LocationsSeoSection() {
               key={loc.name}
               className="bg-white/10 border border-white/20 rounded-xl p-4 text-center hover:bg-white/20 transition"
             >
-              <div className="text-2xl mb-2">{loc.icon}</div>
+              <div className="text-2xl mb-2"><Emoji e={loc.icon} /></div>
               <div className="font-bold mb-1">{loc.name}</div>
               <div className="text-slate-300 text-xs">{loc.desc}</div>
             </div>

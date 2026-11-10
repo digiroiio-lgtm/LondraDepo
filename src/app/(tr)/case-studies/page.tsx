@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -161,10 +162,10 @@ export default function CaseStudiesIndexPage() {
         {/* Trust bar */}
         <section className="bg-white border-b border-slate-200 py-4 px-4">
           <div className="max-w-4xl mx-auto flex flex-wrap gap-6 text-sm text-slate-600 justify-center md:justify-start">
-            <span className="flex items-center gap-2">✅ Essex merkezli İngiltere depo altyapısı</span>
-            <span className="flex items-center gap-2">✅ Türkçe operasyon iletişimi</span>
-            <span className="flex items-center gap-2">✅ Hızlı operasyon kurulumu</span>
-            <span className="flex items-center gap-2">✅ Esnek depo &amp; sipariş operasyon modeli</span>
+            <span className="flex items-center gap-2"><Emoji e="✅" /> Essex merkezli İngiltere depo altyapısı</span>
+            <span className="flex items-center gap-2"><Emoji e="✅" /> Türkçe operasyon iletişimi</span>
+            <span className="flex items-center gap-2"><Emoji e="✅" /> Hızlı operasyon kurulumu</span>
+            <span className="flex items-center gap-2"><Emoji e="✅" /> Esnek depo &amp; sipariş operasyon modeli</span>
           </div>
         </section>
 

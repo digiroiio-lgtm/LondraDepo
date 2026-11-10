@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -119,7 +120,7 @@ export default function NakliyeDagitimPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {features.map((f) => (
                 <div key={f.title} className="border border-slate-200 rounded-2xl p-5">
-                  <div className="text-2xl mb-2">{f.icon}</div>
+                  <div className="text-2xl mb-2"><Emoji e={f.icon} /></div>
                   <h3 className="font-bold text-[#0b2545] mb-1">{f.title}</h3>
                   <p className="text-slate-600 text-sm leading-relaxed">{f.desc}</p>
                 </div>

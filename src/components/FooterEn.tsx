@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 import Link from "next/link";
 import CookieSettingsButton from "./CookieSettingsButton";
 import TrackedLink from "./TrackedLink";
@@ -95,7 +96,7 @@ export default function FooterEn() {
               Get a Quote on WhatsApp
             </TrackedLink>
             <TrackedLink kind="phone" source="footer" href={TEL} className="flex items-center gap-2 text-slate-300 hover:text-white transition">
-              📞 +44 7554 195190
+              <Emoji e="📞" /> +44 7554 195190
             </TrackedLink>
             <p className="text-xs text-slate-400">Office: +44 1268 203 283 · 07:45–17:30 UK time</p>
           </div>

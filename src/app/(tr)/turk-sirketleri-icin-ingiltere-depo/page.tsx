@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import TrClusterNav from "@/components/TrClusterNav";
 import TeamQuote from "@/components/TeamQuote";
@@ -140,7 +141,7 @@ export default function TurkSirketleri() {
               <span className="text-white">Türk Şirketleri İçin İngiltere Depo</span>
             </nav>
             <div className="inline-block bg-white/10 border border-white/20 rounded-full px-4 py-1.5 text-sm text-slate-300 mb-4">
-              🇹🇷 Türk işletmelere özel UK lojistik çözümü
+              <Emoji e="🇹🇷" /> Türk işletmelere özel UK lojistik çözümü
             </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4 leading-tight">
               Türk Şirketleri İçin{" "}
@@ -198,7 +199,7 @@ export default function TurkSirketleri() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
               {challenges.map((c) => (
                 <div key={c.title} className="bg-white border border-slate-200 rounded-2xl p-5 text-center">
-                  <div className="text-3xl mb-2">{c.icon}</div>
+                  <div className="text-3xl mb-2"><Emoji e={c.icon} /></div>
                   <h3 className="font-bold text-[#0b2545] mb-2 text-sm">{c.title}</h3>
                   <p className="text-slate-500 text-xs leading-relaxed">{c.desc}</p>
                 </div>
@@ -219,7 +220,7 @@ export default function TurkSirketleri() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {solutions.map((s) => (
                 <div key={s.title} className="border border-slate-200 rounded-2xl p-5">
-                  <div className="text-xl mb-2">{s.icon}</div>
+                  <div className="text-xl mb-2"><Emoji e={s.icon} /></div>
                   <h3 className="font-bold text-[#0b2545] mb-1">{s.title}</h3>
                   <p className="text-slate-600 text-sm leading-relaxed">{s.desc}</p>
                 </div>

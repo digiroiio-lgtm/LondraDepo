@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 const items = [
   { icon: "🏢", label: "Londra Depolama" },
   { icon: "📋", label: "Gümrükleme Desteği" },
@@ -13,7 +14,7 @@ export default function TrustBar() {
       <div className="max-w-6xl mx-auto flex flex-wrap justify-center gap-x-6 gap-y-2">
         {items.map((item) => (
           <div key={item.label} className="flex items-center gap-2 text-slate-600 text-sm font-medium">
-            <span>{item.icon}</span>
+            <span><Emoji e={item.icon} /></span>
             <span>{item.label}</span>
           </div>
         ))}

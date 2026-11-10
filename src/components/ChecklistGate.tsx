@@ -1,5 +1,6 @@
 "use client";
 
+import Emoji from "@/components/visual/Emoji";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import Link from "next/link";
 import { useForm } from "@formspree/react";
@@ -116,7 +117,7 @@ export default function ChecklistGate({ lang, variant = "import" }: { lang: "en"
 
   return (
     <div id="checklist" className="my-10 rounded-2xl border border-slate-200 bg-slate-50 p-6 sm:p-8 not-prose">
-      <div className="text-xl font-bold text-[#0b2545] mb-2">📋 {t.h}</div>
+      <div className="text-xl font-bold text-[#0b2545] mb-2"><Emoji e="📋" /> {t.h}</div>
       <div className="text-sm text-slate-600 mb-5">{t.intro}</div>
       {state.succeeded ? (
         <div role="status" className="rounded-xl border border-green-200 bg-green-50 p-5 text-sm text-slate-700">

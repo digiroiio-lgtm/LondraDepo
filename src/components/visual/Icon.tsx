@@ -5,7 +5,9 @@
 export type IconName =
   | "warehouse" | "pallet" | "box" | "truck" | "ship" | "container" | "customs" | "document" | "label"
   | "returns" | "chart" | "globe" | "chat" | "shield" | "clock" | "pin" | "cart" | "scan" | "check"
-  | "pound" | "users" | "plane" | "rail" | "forklift" | "calendar" | "layers" | "search" | "star";
+  | "pound" | "users" | "plane" | "rail" | "forklift" | "calendar" | "layers" | "search" | "star"
+  | "phone" | "mail" | "warning" | "bolt" | "handshake" | "rocket" | "trophy" | "eye" | "lock" | "link"
+  | "refresh" | "utensils" | "battery" | "building" | "book" | "activity" | "map" | "user" | "settings" | "inbox";
 
 const P: Record<IconName, React.ReactNode> = {
   warehouse: <><path d="M3 10 12 4l9 6v10H3z" /><path d="M7 20v-6h10v6" /><path d="M7 17h10" /></>,
@@ -36,6 +38,26 @@ const P: Record<IconName, React.ReactNode> = {
   layers: <><path d="m12 3 9 5-9 5-9-5z" /><path d="m3 13 9 5 9-5" /></>,
   search: <><circle cx="11" cy="11" r="6" /><path d="m20 20-4.5-4.5" /></>,
   star: <><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" /></>,
+  phone: <><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2" /></>,
+  mail: <><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 7 9 6 9-6" /></>,
+  warning: <><path d="M12 3 2 20h20z" /><path d="M12 10v4M12 17h.01" /></>,
+  bolt: <><path d="M13 2 4 14h7l-1 8 9-12h-7z" /></>,
+  handshake: <><path d="m3 11 4-4 4 2 3-2 4 1 3 3" /><path d="m7 7-4 4 5 5 2-1 2 2 2-1 2 1 3-3-4-4" /><path d="m10 15 2 2M12 13l2 2" /></>,
+  rocket: <><path d="M12 2c4 3 6 7 5 12H7C6 9 8 5 12 2z" /><circle cx="12" cy="9" r="2" /><path d="M7 14l-3 4h4M17 14l3 4h-4M10 18l2 4 2-4" /></>,
+  trophy: <><path d="M7 4h10v5a5 5 0 0 1-10 0z" /><path d="M7 6H4a3 3 0 0 0 3 4M17 6h3a3 3 0 0 1-3 4M12 14v4M8 21h8M9 18h6" /></>,
+  eye: <><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z" /><circle cx="12" cy="12" r="3" /></>,
+  lock: <><rect x="5" y="10" width="14" height="10" rx="2" /><path d="M8 10V7a4 4 0 0 1 8 0v3" /></>,
+  link: <><path d="M10 14a4 4 0 0 0 6 0l3-3a4 4 0 0 0-6-6l-1 1" /><path d="M14 10a4 4 0 0 0-6 0l-3 3a4 4 0 0 0 6 6l1-1" /></>,
+  refresh: <><path d="M20 11a8 8 0 0 0-14-4L4 9" /><path d="M4 4v5h5" /><path d="M4 13a8 8 0 0 0 14 4l2-2" /><path d="M20 20v-5h-5" /></>,
+  utensils: <><path d="M7 3v8a2 2 0 0 0 2 2v8M5 3v6M9 3v6" /><path d="M17 21V3c-2 1-3 4-3 7h3" /></>,
+  battery: <><rect x="3" y="7" width="16" height="10" rx="2" /><path d="M21 10v4M11 9l-2 3h3l-2 3" /></>,
+  building: <><rect x="5" y="3" width="14" height="18" rx="1" /><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2M11 21v-3h2v3" /></>,
+  book: <><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z" /><path d="M4 19a2 2 0 0 1 2-2h13" /></>,
+  activity: <><path d="M3 12h4l3-7 4 14 3-7h4" /></>,
+  map: <><path d="m3 6 6-2 6 2 6-2v14l-6 2-6-2-6 2z" /><path d="M9 4v14M15 6v14" /></>,
+  user: <><circle cx="12" cy="8" r="4" /><path d="M4 21a8 8 0 0 1 16 0" /></>,
+  settings: <><circle cx="12" cy="12" r="3" /><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1" /></>,
+  inbox: <><path d="M3 13h5l1 3h6l1-3h5" /><path d="M5 5h14l2 8v6H3v-6z" /></>,
 };
 
 export default function Icon({ name, className = "h-6 w-6" }: { name: IconName; className?: string }) {

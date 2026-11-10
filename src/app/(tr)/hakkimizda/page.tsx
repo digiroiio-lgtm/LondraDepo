@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 import type { Metadata } from "next";
 import TeamQuote from "@/components/TeamQuote";
 import Link from "next/link";
@@ -160,22 +161,22 @@ export default function HakkimizdaPage() {
               <h2 className="text-lg font-bold text-[#0b2545] mb-3">Sektör Bağlantıları</h2>
               <ul className="space-y-2 text-sm text-slate-600">
                 <li>
-                  🌐 <strong>GLA (Global Logistics Alliance)</strong> — Kurucumuz Sertaç Yılmaz, uluslararası yük taşımacılığı ağı GLA&apos;nın konferanslarına katılım sağlamaktadır. GLA üyesi olan kurucumuz, 15. GLA Global Lojistik Konferansı&apos;na (Bangkok, 2026) katılım sağlamaktadır.
+                  <Emoji e="🌐" /> <strong>GLA (Global Logistics Alliance)</strong> — Kurucumuz Sertaç Yılmaz, uluslararası yük taşımacılığı ağı GLA&apos;nın konferanslarına katılım sağlamaktadır. GLA üyesi olan kurucumuz, 15. GLA Global Lojistik Konferansı&apos;na (Bangkok, 2026) katılım sağlamaktadır.
                 </li>
                 <li>
-                  🏛️ <strong>BIFA (British International Freight Association):</strong>{" "}
+                  <Emoji e="🏛️" /> <strong>BIFA (British International Freight Association):</strong>{" "}
                   <a href="https://bifa.org/members/arca-trade-group-ltd/" target="_blank" rel="noopener noreferrer" className="text-[#0b2545] underline">
                     Arca Trade Group Ltd — Kayıtlı BIFA Üyesi
                   </a>
                 </li>
                 <li>
-                  🏢 <strong>LinkedIn:</strong>{" "}
+                  <Emoji e="🏢" /> <strong>LinkedIn:</strong>{" "}
                   <a href="https://www.linkedin.com/company/arcatradegroup/" target="_blank" rel="noopener noreferrer" className="text-[#0b2545] underline">
                     linkedin.com/company/arcatradegroup
                   </a>
                 </li>
                 <li>
-                  🏛️ <strong>Companies House:</strong>{" "}
+                  <Emoji e="🏛️" /> <strong>Companies House:</strong>{" "}
                   <a href="https://find-and-update.company-information.service.gov.uk/company/13247691" target="_blank" rel="noopener noreferrer" className="text-[#0b2545] underline">
                     Arca Trade Group Ltd · No: 13247691
                   </a>

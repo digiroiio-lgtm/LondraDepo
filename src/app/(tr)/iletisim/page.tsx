@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 import type { Metadata } from "next";
 import TrackedLink from "@/components/TrackedLink";
 import { bookingUrl } from "@/lib/booking";
@@ -84,7 +85,7 @@ export default function IletisimPage() {
                 rel="noopener noreferrer"
                 className="flex flex-col items-center gap-3 bg-green-50 border border-green-200 rounded-2xl p-8 hover:bg-green-100 transition text-center"
               >
-                <span className="text-4xl">💬</span>
+                <span className="text-4xl"><Emoji e="💬" /></span>
                 <span className="font-bold text-green-700 text-lg">WhatsApp ile Yazın</span>
                 <span className="text-green-700 text-sm">+44 7554 195190</span>
                 <span className="text-slate-500 text-xs">En hızlı yanıt yöntemi</span>
@@ -94,7 +95,7 @@ export default function IletisimPage() {
                 href={TEL}
                 className="flex flex-col items-center gap-3 bg-blue-50 border border-blue-200 rounded-2xl p-8 hover:bg-blue-100 transition text-center"
               >
-                <span className="text-4xl">📞</span>
+                <span className="text-4xl"><Emoji e="📞" /></span>
                 <span className="font-bold text-[#0b2545] text-lg">Telefon ile Arayın</span>
                 <span className="text-[#0b2545] text-sm">+44 7554 195190</span>
                 <span className="text-slate-500 text-xs">Türkçe destek mevcut</span>
@@ -106,7 +107,7 @@ export default function IletisimPage() {
                 href={bookingUrl("tr", "tr_contact_card")}
                 className="sm:col-span-2 flex flex-col items-center gap-2 bg-white border border-[#e63946]/40 rounded-2xl p-6 hover:bg-red-50 transition text-center"
               >
-                <span className="text-3xl">📅</span>
+                <span className="text-3xl"><Emoji e="📅" /></span>
                 <span className="font-bold text-[#0b2545] text-lg">15 Dakikalık Görüşme Ayarlayın</span>
                 <span className="text-slate-500 text-xs">Size uygun saati seçin, görüntülü görüşme bağlantısı e-postanıza gelsin</span>
               </TrackedLink>
@@ -116,16 +117,16 @@ export default function IletisimPage() {
               <h2 className="text-xl font-bold text-[#0b2545] mb-4">Depo Adresi & Operasyon Bölgesi</h2>
               <ul className="space-y-3 text-slate-600 text-sm">
                 <li className="flex gap-2">
-                  <span>📍</span>
+                  <span><Emoji e="📍" /></span>
                   <span>
                     <strong>Depo Adresi:</strong><br />
                     Unit 19 Arterial Park, Arterial Road<br />
                     Rayleigh, Essex SS6 7FY, United Kingdom
                   </span>
                 </li>
-                <li>🚚 <strong>Dağıtım Bölgesi:</strong> Tüm İngiltere (Londra, Birmingham, Manchester, Leeds ve çevresi)</li>
-                <li>🌍 <strong>Kaynak:</strong> Türkiye ve diğer ülkelerden ihracat</li>
-                <li>🗣️ <strong>Diller:</strong> Türkçe ve İngilizce</li>
+                <li><Emoji e="🚚" /> <strong>Dağıtım Bölgesi:</strong> Tüm İngiltere (Londra, Birmingham, Manchester, Leeds ve çevresi)</li>
+                <li><Emoji e="🌍" /> <strong>Kaynak:</strong> Türkiye ve diğer ülkelerden ihracat</li>
+                <li><Emoji e="🗣️" /> <strong>Diller:</strong> Türkçe ve İngilizce</li>
               </ul>
               <a
                 href="https://maps.google.com/?q=Unit+19+Arterial+Park+Arterial+Road+Rayleigh+Essex+SS6+7FY"

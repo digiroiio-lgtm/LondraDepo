@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20e-ticaret%20fulfillment%20operasyonumu%20kurmak%20istiyorum.";
 
 const workflow = [
@@ -46,7 +47,7 @@ export default function EcommerceFulfilmentSection() {
               <div key={step.label} className="flex items-center gap-3">
                 <div className="flex flex-col items-center text-center min-w-[80px]">
                   <div className="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-2xl mb-2 border border-slate-100">
-                    {step.icon}
+                    <Emoji e={step.icon} />
                   </div>
                   <span className="text-xs text-slate-600 font-medium leading-tight">{step.label}</span>
                 </div>

@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 import type { Metadata } from "next";
 import RouteMap from "@/components/visual/RouteMap";
 import Link from "next/link";
@@ -80,7 +81,7 @@ export default function EssexDepoPage() {
 
             {/* Address card */}
             <div className="border border-slate-200 rounded-2xl p-6 mb-8 flex flex-col sm:flex-row gap-4 items-start">
-              <div className="text-3xl">📍</div>
+              <div className="text-3xl"><Emoji e="📍" /></div>
               <div>
                 <p className="font-bold text-[#0b2545] mb-1">Depo Adresi</p>
                 <p className="text-slate-700 text-sm leading-relaxed">
@@ -102,12 +103,12 @@ export default function EssexDepoPage() {
             <div className="bg-[#0b2545] text-white rounded-2xl p-8 mb-10">
               <h2 className="text-xl font-bold mb-4">Neden Essex?</h2>
               <ul className="space-y-2 text-sm text-slate-200">
-                <li>✓ Doğu Londra&apos;ya ~40 dakika, Londra merkezine yaklaşık 1 saat (A127)</li>
-                <li>✓ Felixstowe Limanı&apos;na karayoluyla yaklaşık 1–1¼ saat — İngiltere&apos;nin en büyük konteyner limanı</li>
-                <li>✓ Tilbury Limanı&apos;na ~30 dakika — Türkiye&apos;den gelen ro-ro ve konteyner hatları</li>
-                <li>✓ M25 çevre yolu üzerinden İngiltere kuzeyine ve güneyine kolay dağıtım</li>
-                <li>✓ Amazon UK depolarına (Tilbury, Dartford) hızlı teslimat</li>
-                <li>✓ Türkiye&apos;den gelen FCL ve LCL konteynerlerin doğrudan kabulü</li>
+                <li><Emoji e="✓" /> Doğu Londra&apos;ya ~40 dakika, Londra merkezine yaklaşık 1 saat (A127)</li>
+                <li><Emoji e="✓" /> Felixstowe Limanı&apos;na karayoluyla yaklaşık 1–1¼ saat — İngiltere&apos;nin en büyük konteyner limanı</li>
+                <li><Emoji e="✓" /> Tilbury Limanı&apos;na ~30 dakika — Türkiye&apos;den gelen ro-ro ve konteyner hatları</li>
+                <li><Emoji e="✓" /> M25 çevre yolu üzerinden İngiltere kuzeyine ve güneyine kolay dağıtım</li>
+                <li><Emoji e="✓" /> Amazon UK depolarına (Tilbury, Dartford) hızlı teslimat</li>
+                <li><Emoji e="✓" /> Türkiye&apos;den gelen FCL ve LCL konteynerlerin doğrudan kabulü</li>
               </ul>
             </div>
 

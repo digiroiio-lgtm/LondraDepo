@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import TrClusterNav from "@/components/TrClusterNav";
 import type { Metadata } from "next";
@@ -139,7 +140,7 @@ export default function TurkiyeILandingPage() {
         <section className="bg-gradient-to-br from-[#0b2545] via-[#1e3a5f] to-[#0b2545] text-white py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-green-400 text-sm font-semibold uppercase tracking-widest mb-4">
-              🇹🇷 → 🇬🇧 Türkiye'den İngiltere'ye
+              <Emoji e="🇹🇷" /> → <Emoji e="🇬🇧" /> Türkiye'den İngiltere'ye
             </p>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight mb-6 text-balance">
               Türkiye'den İngiltere'ye Satış İçin{" "}
@@ -166,7 +167,7 @@ export default function TurkiyeILandingPage() {
                 href={TEL}
                 className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold px-8 py-4 rounded-full text-base transition"
               >
-                📞 Hemen Arayın
+                <Emoji e="📞" /> Hemen Arayın
               </a>
             </div>
           </div>
@@ -183,7 +184,7 @@ export default function TurkiyeILandingPage() {
                 <div key={step.label} className="flex items-center gap-3">
                   <div className="flex flex-col items-center text-center w-28">
                     <div className="w-14 h-14 bg-white/10 border border-white/20 rounded-2xl flex items-center justify-center text-2xl mb-2">
-                      {step.icon}
+                      <Emoji e={step.icon} />
                     </div>
                     <span className="text-white text-xs font-bold mb-1">{step.label}</span>
                     <span className="text-slate-400 text-xs leading-tight">{step.desc}</span>
@@ -301,7 +302,7 @@ export default function TurkiyeILandingPage() {
                 href={TEL}
                 className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold px-8 py-4 rounded-full transition"
               >
-                📞 Arayın
+                <Emoji e="📞" /> Arayın
               </a>
             </div>
           </div>

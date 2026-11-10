@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import RouteMap from "@/components/visual/RouteMap";
 import TrClusterNav from "@/components/TrClusterNav";
@@ -143,7 +144,7 @@ export default function IngiltereDepoPage() {
         <section className="bg-gradient-to-br from-[#0b2545] via-[#1e3a5f] to-[#0b2545] text-white py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-green-400 text-sm font-semibold uppercase tracking-widest mb-4">
-              🇬🇧 Essex, Londra Yakını • UK Depo Operasyonu
+              <Emoji e="🇬🇧" /> Essex, Londra Yakını • UK Depo Operasyonu
             </p>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight text-balance mb-6">
               İngiltere Depo ve{" "}
@@ -167,7 +168,7 @@ export default function IngiltereDepoPage() {
                 href={TEL}
                 className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold px-8 py-4 rounded-full text-base transition"
               >
-                📞 Hemen Arayın
+                <Emoji e="📞" /> Hemen Arayın
               </a>
               <a
                 href="#teklif"
@@ -228,7 +229,7 @@ export default function IngiltereDepoPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {services.map((s) => (
                 <div key={s.title} className="border border-slate-200 rounded-2xl p-6">
-                  <div className="text-3xl mb-3">{s.icon}</div>
+                  <div className="text-3xl mb-3"><Emoji e={s.icon} /></div>
                   <h3 className="font-bold text-[#0b2545] text-lg mb-2">{s.title}</h3>
                   <p className="text-slate-600 text-sm leading-relaxed">{s.desc}</p>
                 </div>
@@ -366,7 +367,7 @@ export default function IngiltereDepoPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {whoWeServe.map((w) => (
                 <div key={w.title} className="bg-white border border-slate-200 rounded-2xl p-6">
-                  <div className="text-3xl mb-3">{w.icon}</div>
+                  <div className="text-3xl mb-3"><Emoji e={w.icon} /></div>
                   <h3 className="font-bold text-[#0b2545] mb-2">{w.title}</h3>
                   <p className="text-slate-600 text-sm leading-relaxed">{w.desc}</p>
                 </div>
@@ -404,7 +405,7 @@ export default function IngiltereDepoPage() {
                 href={TEL}
                 className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold px-8 py-4 rounded-full transition"
               >
-                📞 Arayın
+                <Emoji e="📞" /> Arayın
               </a>
             </div>
           </div>

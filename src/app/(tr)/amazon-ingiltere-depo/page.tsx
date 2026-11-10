@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import TrClusterNav from "@/components/TrClusterNav";
 import type { Metadata } from "next";
@@ -129,7 +130,7 @@ export default function AmazonIngiltereDepo() {
               <span className="text-white">Amazon İngiltere Depo (FBM)</span>
             </nav>
             <div className="inline-block bg-white/10 border border-white/20 rounded-full px-4 py-1.5 text-sm text-slate-300 mb-4">
-              📦 Amazon FBM satıcıları için UK depo çözümü
+              <Emoji e="📦" /> Amazon FBM satıcıları için UK depo çözümü
             </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4 leading-tight">
               Amazon İçin{" "}
@@ -222,7 +223,7 @@ export default function AmazonIngiltereDepo() {
                 <div key={step.num} className="flex flex-col items-center text-center">
                   <div className="w-14 h-14 rounded-full bg-[#0b2545] text-white flex flex-col items-center justify-center mb-2">
                     <span className="text-xs font-bold opacity-60">{step.num}</span>
-                    <span className="text-lg leading-none">{step.icon}</span>
+                    <span className="text-lg leading-none"><Emoji e={step.icon} /></span>
                   </div>
                   <h3 className="font-bold text-[#0b2545] text-sm mb-1">{step.label}</h3>
                   <p className="text-slate-500 text-xs leading-relaxed">{step.desc}</p>

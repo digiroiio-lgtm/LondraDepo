@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -229,7 +230,7 @@ export default function TortillaCaseStudyPage() {
                 </div>
                 <div className="text-3xl text-white/40 font-light hidden sm:block">→</div>
                 <div className="text-center px-4">
-                  <div className="text-4xl font-extrabold">🇬🇧</div>
+                  <div className="text-4xl font-extrabold"><Emoji e="🇬🇧" /></div>
                   <div className="text-white/60 text-xs mt-1">Aktif UK Dağıtım</div>
                 </div>
               </div>
@@ -237,11 +238,11 @@ export default function TortillaCaseStudyPage() {
 
             {/* Trust bar */}
             <div className="bg-slate-50 border border-slate-200 rounded-xl p-5 mb-10 flex flex-wrap gap-4 text-sm text-slate-600 justify-center md:justify-start">
-              <span>🍽️ FMCG gıda lojistiği</span>
-              <span>📋 GTİP yönlendirme desteği</span>
-              <span>🏷️ İngiltere etiketleme uyumu</span>
-              <span>📈 Kontrollü ölçeklenme modeli</span>
-              <span>🚢 Konteyner bazlı büyüme</span>
+              <span><Emoji e="🍽️" /> FMCG gıda lojistiği</span>
+              <span><Emoji e="📋" /> GTİP yönlendirme desteği</span>
+              <span><Emoji e="🏷️" /> İngiltere etiketleme uyumu</span>
+              <span><Emoji e="📈" /> Kontrollü ölçeklenme modeli</span>
+              <span><Emoji e="🚢" /> Konteyner bazlı büyüme</span>
             </div>
 
             {/* Problem */}
@@ -257,13 +258,13 @@ export default function TortillaCaseStudyPage() {
                   ihtiyaç belirlendi.
                 </p>
                 <ul className="text-slate-700 text-sm space-y-2 list-none">
-                  <li>⚠️ İngiltere gıda ithalat operasyonu organizasyonu</li>
-                  <li>⚠️ Tortilla ve flatbread ürün GTİP sınıflandırması</li>
-                  <li>⚠️ GTİP yönlendirme ihtiyacı</li>
-                  <li>⚠️ İngiltere pazarına uyumlu gıda etiketleme</li>
-                  <li>⚠️ Gıda fulfillment operasyonu altyapısı</li>
-                  <li>⚠️ İngiltere dağıtım ağına erişim</li>
-                  <li>⚠️ Ölçeklenebilir büyüme modeli</li>
+                  <li><Emoji e="⚠️" /> İngiltere gıda ithalat operasyonu organizasyonu</li>
+                  <li><Emoji e="⚠️" /> Tortilla ve flatbread ürün GTİP sınıflandırması</li>
+                  <li><Emoji e="⚠️" /> GTİP yönlendirme ihtiyacı</li>
+                  <li><Emoji e="⚠️" /> İngiltere pazarına uyumlu gıda etiketleme</li>
+                  <li><Emoji e="⚠️" /> Gıda fulfillment operasyonu altyapısı</li>
+                  <li><Emoji e="⚠️" /> İngiltere dağıtım ağına erişim</li>
+                  <li><Emoji e="⚠️" /> Ölçeklenebilir büyüme modeli</li>
                 </ul>
               </div>
             </section>
@@ -327,7 +328,7 @@ export default function TortillaCaseStudyPage() {
                     className="border border-slate-200 rounded-xl p-5 flex gap-4 hover:border-[#0b2545]/30 hover:shadow-sm transition"
                   >
                     <span className="text-2xl flex-shrink-0" aria-hidden="true">
-                      {item.icon}
+                      <Emoji e={item.icon} />
                     </span>
                     <div>
                       <h3 className="font-bold text-[#0b2545] mb-1">{item.title}</h3>
@@ -379,7 +380,7 @@ export default function TortillaCaseStudyPage() {
                     className="bg-[#f6f8fb] rounded-xl p-6 flex gap-4 hover:shadow-md transition"
                   >
                     <span className="text-3xl flex-shrink-0" aria-hidden="true">
-                      {r.icon}
+                      <Emoji e={r.icon} />
                     </span>
                     <div>
                       <div className="font-extrabold text-[#0b2545] mb-1">{r.label}</div>

@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -184,11 +185,11 @@ export default function AutoPartsCaseStudyPage() {
                   memnuniyetsizliğini artırıyordu.
                 </p>
                 <ul className="text-slate-700 text-sm space-y-2 list-none">
-                  <li>⚠️ Büyük hacimli ve ağır parçaların uzun yolculukta hasar riski</li>
-                  <li>⚠️ UK bayi taleplerine yetersiz response süresi</li>
-                  <li>⚠️ Lüks araç parçaları için özel depolama ihtiyacı</li>
-                  <li>⚠️ Online UK satışında teslimat rekabetçiliği kaybı</li>
-                  <li>⚠️ Stok takibi ve iade yönetimi için UK'da operasyon noktası gerekliliği</li>
+                  <li><Emoji e="⚠️" /> Büyük hacimli ve ağır parçaların uzun yolculukta hasar riski</li>
+                  <li><Emoji e="⚠️" /> UK bayi taleplerine yetersiz response süresi</li>
+                  <li><Emoji e="⚠️" /> Lüks araç parçaları için özel depolama ihtiyacı</li>
+                  <li><Emoji e="⚠️" /> Online UK satışında teslimat rekabetçiliği kaybı</li>
+                  <li><Emoji e="⚠️" /> Stok takibi ve iade yönetimi için UK'da operasyon noktası gerekliliği</li>
                 </ul>
               </div>
             </section>
@@ -211,7 +212,7 @@ export default function AutoPartsCaseStudyPage() {
                   { icon: "📊", title: "Stok Raporlama", desc: "Periyodik stok raporu ve düşük stok uyarıları Türkçe olarak iletildi." },
                 ].map((item) => (
                   <div key={item.title} className="border border-slate-200 rounded-xl p-5 flex gap-4">
-                    <span className="text-2xl flex-shrink-0" aria-hidden="true">{item.icon}</span>
+                    <span className="text-2xl flex-shrink-0" aria-hidden="true"><Emoji e={item.icon} /></span>
                     <div>
                       <h3 className="font-bold text-[#0b2545] mb-1">{item.title}</h3>
                       <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>

@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -208,11 +209,11 @@ export default function AracKoltukKaplamaCaseStudyPage() {
                   ihtiyacını doğuruyordu.
                 </p>
                 <ul className="text-slate-700 text-sm space-y-2 list-none">
-                  <li>⚠️ Türkiye&apos;den sevkiyatta uzun teslimat süreleri</li>
-                  <li>⚠️ Rulo suni deri malzemelerin nakliyede hasar riski</li>
-                  <li>⚠️ İngiltere&apos;deki atölye ve bayilere hızlı karşılama gerekliliği</li>
-                  <li>⚠️ eBay ve Amazon kanallarında rekabetçi teslimat süresi baskısı</li>
-                  <li>⚠️ Stok takibi ve iade yönetimi için İngiltere operasyon noktası ihtiyacı</li>
+                  <li><Emoji e="⚠️" /> Türkiye&apos;den sevkiyatta uzun teslimat süreleri</li>
+                  <li><Emoji e="⚠️" /> Rulo suni deri malzemelerin nakliyede hasar riski</li>
+                  <li><Emoji e="⚠️" /> İngiltere&apos;deki atölye ve bayilere hızlı karşılama gerekliliği</li>
+                  <li><Emoji e="⚠️" /> eBay ve Amazon kanallarında rekabetçi teslimat süresi baskısı</li>
+                  <li><Emoji e="⚠️" /> Stok takibi ve iade yönetimi için İngiltere operasyon noktası ihtiyacı</li>
                 </ul>
               </div>
             </section>
@@ -267,7 +268,7 @@ export default function AracKoltukKaplamaCaseStudyPage() {
                     className="border border-slate-200 rounded-xl p-5 flex gap-4"
                   >
                     <span className="text-2xl flex-shrink-0" aria-hidden="true">
-                      {item.icon}
+                      <Emoji e={item.icon} />
                     </span>
                     <div>
                       <h3 className="font-bold text-[#0b2545] mb-1">{item.title}</h3>

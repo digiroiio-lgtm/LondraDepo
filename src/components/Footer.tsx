@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 import Link from "next/link";
 import CookieSettingsButton from "./CookieSettingsButton";
 
@@ -73,7 +74,7 @@ export default function Footer() {
               href={TEL}
               className="flex items-center gap-2 text-slate-300 hover:text-white transition"
             >
-              📞 Hemen Arayın
+              <Emoji e="📞" /> Hemen Arayın
             </a>
           </div>
         </div>

@@ -1,5 +1,6 @@
 "use client";
 
+import Emoji from "@/components/visual/Emoji";
 import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { trackCtaClick, trackFormStart, trackWhatsappClick } from "@/lib/gtag";
@@ -226,7 +227,7 @@ export default function ContainerPlanner({ lang = "en" }: { lang?: "en" | "tr" }
       <div id="planner-print" className="lg:col-span-3 rounded-xl bg-slate-50 border border-slate-200 p-6" aria-live="polite">
         <div className="text-xl font-bold text-[#0b2545] mb-1">{t.plan}</div>
         <div className="text-sm text-slate-600 mb-4">{t.boxes[box]} · {t.loads[load]} · {t.ports[port]}</div>
-        <div className="rounded-lg bg-white border border-slate-200 p-3 text-sm text-slate-700 mb-5">🚚 {route}</div>
+        <div className="rounded-lg bg-white border border-slate-200 p-3 text-sm text-slate-700 mb-5"><Emoji e="🚚" /> {route}</div>
         {eta && <ol className="space-y-4">
           {before.map(([when, items], i) => (
             <li key={i}>

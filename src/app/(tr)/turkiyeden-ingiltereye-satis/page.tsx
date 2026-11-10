@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 import type { Metadata } from "next";
 import TrClusterNav from "@/components/TrClusterNav";
 import Link from "next/link";
@@ -85,7 +86,7 @@ export default function TurkiyedenIngiltereye() {
               <span className="text-white">Türkiye&apos;den İngiltere&apos;ye Satış</span>
             </nav>
             <div className="inline-block bg-white/10 border border-white/20 rounded-full px-4 py-1.5 text-sm text-slate-300 mb-4">
-              📖 2026 Rehberi
+              <Emoji e="📖" /> 2026 Rehberi
             </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4 leading-tight">
               Türkiye&apos;den İngiltere&apos;ye{" "}

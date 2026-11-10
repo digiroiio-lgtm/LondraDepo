@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 import { TR_ARTICLES, trDate } from "@/content/tr-articles";
 
 interface AuthorBoxProps {
@@ -45,7 +46,7 @@ export default function AuthorBox({ updatedDate, path }: AuthorBoxProps) {
       </div>
       {updated && (
         <p className="text-xs text-slate-500 mt-4 pt-4 border-t border-slate-200">
-          🗓 Son güncelleme: {updated} · LondraDepo.com, Essex, United Kingdom
+          <Emoji e="🗓" /> Son güncelleme: {updated} · LondraDepo.com, Essex, United Kingdom
         </p>
       )}
     </div>

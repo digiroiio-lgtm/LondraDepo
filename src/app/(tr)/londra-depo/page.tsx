@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import RouteMap from "@/components/visual/RouteMap";
 import TrClusterNav from "@/components/TrClusterNav";
@@ -128,7 +129,7 @@ export default function LondraDepoPage() {
               <span className="text-white">Londra Depo</span>
             </nav>
             <div className="inline-block bg-white/10 border border-white/20 rounded-full px-4 py-1.5 text-sm text-slate-300 mb-4">
-              📍 Londra yakını Essex, İngiltere
+              <Emoji e="📍" /> Londra yakını Essex, İngiltere
             </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4 leading-tight">
               Londra Depo:{" "}
@@ -174,7 +175,7 @@ export default function LondraDepoPage() {
         <section className="py-10 px-4 bg-[#f6f8fb]">
           <div className="max-w-4xl mx-auto">
             <div className="bg-white border border-slate-200 rounded-2xl p-6 flex flex-col sm:flex-row gap-4 items-start">
-              <div className="text-3xl">🗺️</div>
+              <div className="text-3xl"><Emoji e="🗺️" /></div>
               <div>
                 <h2 className="font-bold text-[#0b2545] mb-1">Essex, Londra'ya Yakın İngiltere Deposu</h2>
                 <p className="text-slate-600 text-sm leading-relaxed">
@@ -201,7 +202,7 @@ export default function LondraDepoPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {services.map((s) => (
                 <div key={s.title} className="border border-slate-200 rounded-2xl p-5 hover:border-[#0b2545] transition">
-                  <div className="text-2xl mb-2">{s.icon}</div>
+                  <div className="text-2xl mb-2"><Emoji e={s.icon} /></div>
                   <h3 className="font-bold text-[#0b2545] mb-1">{s.title}</h3>
                   <p className="text-slate-600 text-sm leading-relaxed">{s.desc}</p>
                 </div>
@@ -219,7 +220,7 @@ export default function LondraDepoPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {whoWeServe.map((w) => (
                 <div key={w.title} className="bg-white border border-slate-200 rounded-2xl p-5">
-                  <div className="text-2xl mb-2">{w.icon}</div>
+                  <div className="text-2xl mb-2"><Emoji e={w.icon} /></div>
                   <h3 className="font-bold text-[#0b2545] mb-1">{w.title}</h3>
                   <p className="text-slate-600 text-sm leading-relaxed">{w.desc}</p>
                 </div>
@@ -248,7 +249,7 @@ export default function LondraDepoPage() {
                 { icon: "✅", text: "UK geneli dağıtım" },
               ].map((item) => (
                 <div key={item.text} className="flex items-center gap-2 text-slate-200 text-sm">
-                  <span>{item.icon}</span>
+                  <span><Emoji e={item.icon} /></span>
                   <span>{item.text}</span>
                 </div>
               ))}

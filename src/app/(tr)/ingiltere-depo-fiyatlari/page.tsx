@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -260,7 +261,7 @@ export default function IngiltereDepoFiyatlari() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {costCategories.map((cat) => (
                 <div key={cat.title} className="bg-white border border-slate-200 rounded-2xl p-5">
-                  <div className="text-2xl mb-2">{cat.icon}</div>
+                  <div className="text-2xl mb-2"><Emoji e={cat.icon} /></div>
                   <h3 className="font-bold text-[#0b2545] mb-3">{cat.title}</h3>
                   <ul className="space-y-1">
                     {cat.items.map((item) => (

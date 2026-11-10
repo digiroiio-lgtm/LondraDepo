@@ -1,5 +1,6 @@
 "use client";
 
+import Emoji from "@/components/visual/Emoji";
 import Image from "next/image";
 import { trackWhatsappClick, trackPhoneClick } from "@/lib/gtag";
 
@@ -19,7 +20,7 @@ export default function HeroSection() {
     <section className="bg-gradient-to-br from-[#0b2545] via-[#1e3a5f] to-[#0b2545] text-white py-20 px-4">
       <div className="max-w-4xl mx-auto text-center">
         <p className="text-green-400 text-sm font-semibold uppercase tracking-widest mb-4">
-          🇬🇧 UK Lojistik Partneri
+          <Emoji e="🇬🇧" /> UK Lojistik Partneri
         </p>
 
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight text-balance mb-6">
@@ -54,7 +55,7 @@ export default function HeroSection() {
             onClick={() => trackPhoneClick("hero")}
             className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold px-8 py-4 rounded-full text-base transition"
           >
-            📞 Ekibimizle Konuşun
+            <Emoji e="📞" /> Ekibimizle Konuşun
           </a>
         </div>
 

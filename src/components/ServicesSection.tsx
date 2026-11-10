@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 import Link from "next/link";
 
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20depo%20teklifi%20almak%20istiyorum.";
@@ -76,7 +77,7 @@ export default function ServicesSection() {
               key={s.title}
               className="border border-slate-200 rounded-2xl p-6 hover:shadow-lg transition flex flex-col"
             >
-              <div className="text-3xl mb-3">{s.icon}</div>
+              <div className="text-3xl mb-3"><Emoji e={s.icon} /></div>
               <h3 className="font-bold text-[#0b2545] text-lg mb-2">{s.title}</h3>
               <p className="text-slate-600 text-sm leading-relaxed flex-1 mb-4">{s.desc}</p>
               <div className="flex flex-col gap-2">

@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import TrClusterNav from "@/components/TrClusterNav";
 import type { Metadata } from "next";
@@ -193,7 +194,7 @@ export default function SiparisToplama() {
                 <div key={step.num} className="flex flex-col items-center text-center relative">
                   <div className="w-14 h-14 rounded-full bg-[#0b2545] text-white flex flex-col items-center justify-center mb-2">
                     <span className="text-xs font-bold opacity-60">{step.num}</span>
-                    <span className="text-lg leading-none">{step.icon}</span>
+                    <span className="text-lg leading-none"><Emoji e={step.icon} /></span>
                   </div>
                   <h3 className="font-bold text-[#0b2545] text-sm mb-1">{step.label}</h3>
                   <p className="text-slate-500 text-xs leading-relaxed">{step.desc}</p>
@@ -215,7 +216,7 @@ export default function SiparisToplama() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {included.map((item) => (
                 <div key={item.title} className="border border-slate-200 rounded-2xl p-5">
-                  <div className="text-2xl mb-2">{item.icon}</div>
+                  <div className="text-2xl mb-2"><Emoji e={item.icon} /></div>
                   <h3 className="font-bold text-[#0b2545] mb-1">{item.title}</h3>
                   <p className="text-slate-600 text-sm leading-relaxed">{item.desc}</p>
                 </div>

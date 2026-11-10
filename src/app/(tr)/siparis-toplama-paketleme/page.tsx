@@ -1,4 +1,5 @@
 import FaqJsonLd from "@/components/FaqJsonLd";
+import TrClusterNav from "@/components/TrClusterNav";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -282,6 +283,7 @@ export default function SiparisToplama() {
             </div>
           </div>
         </section>
+        <TrClusterNav path="/siparis-toplama-paketleme" />
       </main>
       <Footer />
       <StickyWhatsappCta />

@@ -1,4 +1,5 @@
 import FaqJsonLd from "@/components/FaqJsonLd";
+import TrClusterNav from "@/components/TrClusterNav";
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -305,6 +306,7 @@ export default function TurkiyeILandingPage() {
             </div>
           </div>
         </section>
+        <TrClusterNav path="/turkiyeden-ingiltereye-depolama" />
       </main>
       <Footer />
       <StickyWhatsappCta />

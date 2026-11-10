@@ -143,6 +143,7 @@ export const growthPages: EnPage[] = [
   },
   {
     slug: "/en/industries/food-packaging",
+    parent: "/en/industries",
     kind: "service",
     serviceType: "Packaging warehousing and distribution",
     title: "Packaging & Catering Supplies Warehousing UK",
@@ -273,6 +274,7 @@ export const growthPages: EnPage[] = [
 export const growthPagesP2: EnPage[] = [
   {
     slug: "/en/industries/automotive-parts",
+    parent: "/en/industries",
     kind: "service",
     serviceType: "Automotive parts warehousing",
     title: "Automotive Parts Warehousing & Distribution UK",
@@ -325,6 +327,7 @@ export const growthPagesP2: EnPage[] = [
     slug: "/en/uk-warehousing-for-turkish-exporters",
     tr: "/turk-sirketleri-icin-ingiltere-depo",
     kind: "service",
+    modified: "2026-11-10",
     serviceType: "UK warehousing for Turkish exporters",
     title: "UK Warehousing & Fulfilment for Turkish Exporters",
     description:
@@ -356,6 +359,18 @@ export const growthPagesP2: EnPage[] = [
       },
       teamQuote("sertacExporters"),
       {
+        type: "table",
+        h2: "What does it cost to start in the UK?",
+        intro: "Storage is the one published rate. Freight, customs clearance, goods-in and fulfilment are quoted for your product and volumes.",
+        head: ["Starting scenario", "Storage (ex VAT)"],
+        rows: [
+          ["1 trial pallet × 4 weeks", "£14"],
+          ["5 pallets × 4 weeks", "£70"],
+          ["10 pallets × 4 weeks", "£140"],
+        ],
+        note: "Based on £3.50 + VAT per pallet per week. Try your own numbers in the storage cost calculator.",
+      },
+      {
         type: "steps",
         h2: "How to start",
         items: [
@@ -377,12 +392,24 @@ export const growthPagesP2: EnPage[] = [
           { href: "/en/case-studies/car-seat-cover-uk-warehousing", title: "Seat cover and faux leather manufacturer", text: "Same-day processing of online and workshop orders.", tag: "Automotive & upholstery" },
         ],
       },
+      { type: "checklist" },
+      {
+        type: "links",
+        h2: "Free planning tools",
+        items: [
+          { href: "/en/uk-storage-cost-calculator", title: "Storage cost calculator", text: "Pallets × weeks at £3.50 + VAT, with VAT shown.", tag: "Free tool" },
+          { href: "/en/container-arrival-planner", title: "Container arrival planner", text: "A dated checklist from UK port to our Essex warehouse.", tag: "Free tool" },
+          { href: "/en/blog/uk-importing-guide", title: "UK importing guide", text: "GB EORI, commodity codes, declarations, duty and import VAT.", tag: "Guide" },
+        ],
+      },
     ],
     faqs: [
       { q: "Can I sell in the UK without setting up a UK company?", a: "Yes, it is possible. You can store products in our UK warehouse and sell through platforms such as Shopify or Amazon or to wholesale buyers. We recommend independent advice on tax and company law." },
       { q: "Can I ship goods from Turkey and store them in the UK?", a: "Yes. Freight from Turkey and UK customs clearance can be handled by our parent company Arca Trade Group, and goods are stored in our warehouse once cleared. You can also use your own forwarder and customs broker." },
       { q: "What does it cost to set up a UK operation this way?", a: "Working through LondraDepo means much lower fixed costs than setting up your own warehouse and team. Pallet storage starts from £3.50 + VAT per pallet per week; contact us for a tailored quote." },
-      { q: "Do you communicate in English and Turkish?", a: "Yes. Our team works in both Turkish and English." },
+      { q: "Do you communicate in English and Turkish?", a: "Yes. Our team works in both Turkish and English: Turkish with you, English with your UK customers and carriers." },
+      { q: "Can I start with a small trial shipment?", a: "Yes. There is no fixed minimum and you can start with a single trial pallet. The Ankara tortilla producer in our case studies entered the UK with one pallet and now ships six 40ft high-cube containers a month." },
+      { q: "Is there a free trade agreement between Turkey and the UK?", a: "Yes. The UK–Turkey trade agreement removes or reduces customs duty on many goods. To use it, the goods need proof of Turkish origin; import VAT is still paid or accounted for separately." },
       { q: "Should I use Amazon FBA or FBM?", a: "LondraDepo supports Amazon FBM, where stock stays in our warehouse and we fulfil Amazon orders from Essex, and also prepares stock for FBA. See our Amazon prep page for FBA." },
     ],
     related: ["/en/uk-market-entry", "/en/uk-import-logistics", "/en/uk-customs-clearance", "/en/uk-warehousing", "/en/uk-warehousing-pricing"],
@@ -756,3 +783,81 @@ export const portPages: EnPage[] = [
     cta: { h2: "Get a quote for your Felixstowe container", text: "Send the container size, ETA and packing list, and we will quote haulage, unloading, storage and onward delivery." },
   },
 ];
+
+/** Industries hub (EN only). Groups existing sector pages and case studies; no new claims. */
+export const industryHub: EnPage = {
+  slug: "/en/industries",
+  kind: "hub",
+  modified: "2026-11-10",
+  title: "UK Warehousing by Industry",
+  description:
+    "UK warehousing and fulfilment by industry: food and FMCG, packaging and catering supplies, automotive parts, fashion and ecommerce, bulky goods and electronics, with live case studies from our Essex warehouse.",
+  label: "Industries",
+  eyebrow: "Sectors we work with",
+  h1: "UK Warehousing and Fulfilment by Industry",
+  lead:
+    "LondraDepo stores, fulfils and distributes goods for manufacturers and brands in food and FMCG, packaging and catering supplies, automotive parts, fashion and ecommerce, bulky goods and consumer electronics. Each sector below links to the matching service page and to live case studies from our warehouse in Rayleigh, Essex, so you can see how a business like yours runs in the UK.",
+  facts: [
+    "Live UK operations in food, packaging, automotive, fashion, bulky goods and electronics",
+    "Pallet, carton and rack storage with stock in Mintsoft WMS",
+    "B2B pallet distribution and ecommerce parcel fulfilment from the same stock",
+    "Storage from £3.50 + VAT per pallet per week",
+  ],
+  sections: [
+    {
+      type: "links",
+      h2: "Food and FMCG",
+      intro: "Ambient food and fast-moving consumer goods stored on pallets and distributed to UK customers.",
+      items: [
+        { href: "/en/case-studies/tortilla-uk-distribution", title: "Tortilla and flatbread producer", text: "From a single trial pallet to six 40ft high-cube containers a month.", tag: "Case study" },
+        { href: "/en/industries/food-packaging", title: "Packaging and catering supplies", text: "Warehousing and distribution for packaging and catering products.", tag: "Industry" },
+        { href: "/en/case-studies/pizza-box-distribution-uk", title: "Pizza box manufacturer", text: "Palletised UK stock and scheduled restaurant deliveries.", tag: "Case study" },
+      ],
+    },
+    {
+      type: "links",
+      h2: "Automotive and industrial parts",
+      intro: "Parts and materials that need careful handling, SKU-level stock control and dealer or workshop delivery.",
+      items: [
+        { href: "/en/industries/automotive-parts", title: "Automotive parts warehousing", text: "Storage and distribution for OEM and aftermarket parts.", tag: "Industry" },
+        { href: "/en/case-studies/uk-auto-parts-warehouse", title: "OEM and aftermarket parts supplier", text: "Damage-controlled storage and dealer delivery across the UK.", tag: "Case study" },
+        { href: "/en/case-studies/car-seat-cover-uk-warehousing", title: "Seat cover and faux leather manufacturer", text: "Same-day processing of eBay, Amazon and workshop orders.", tag: "Case study" },
+      ],
+    },
+    {
+      type: "links",
+      h2: "Fashion and ecommerce brands",
+      intro: "Online brands that need pick and pack, returns and fast UK delivery.",
+      items: [
+        { href: "/en/case-studies/cruyff-uk-fulfilment", title: "Cruyff fashion brand", text: "UK online orders moved from the Netherlands to our Essex warehouse.", tag: "Case study" },
+        { href: "/en/shopify-fulfilment-uk", title: "Shopify fulfilment UK", text: "Storage, pick and pack and UK dispatch for Shopify stores.", tag: "Service" },
+        { href: "/en/ecommerce-fulfilment", title: "Ecommerce fulfilment", text: "From online order to the customer's door.", tag: "Service" },
+      ],
+    },
+    {
+      type: "links",
+      h2: "Bulky goods and consumer electronics",
+      intro: "Large or technical products that need space, careful handling or preparation before dispatch.",
+      items: [
+        { href: "/en/case-studies/uk-walking-treadmill-distribution", title: "Walking treadmill brand", text: "Bulky goods storage, online sales and retail distribution across the UK.", tag: "Case study" },
+        { href: "/en/case-studies/portable-power-station-uk-operations", title: "Portable power station supplier", text: "Storage, SIM activation, charge checks and end-customer dispatch.", tag: "Case study" },
+        { href: "/en/cargo-handling", title: "Cargo handling", text: "Repacking, relabelling and product preparation in Essex.", tag: "Service" },
+      ],
+    },
+    {
+      type: "links",
+      h2: "Exporters entering the UK",
+      items: [
+        { href: "/en/uk-warehousing-for-turkish-exporters", title: "For Turkish exporters", text: "Turkey–UK freight and customs through Arca Trade Group, Turkish-speaking team.", tag: "Market entry" },
+        { href: "/en/uk-market-entry", title: "UK market entry", text: "Sell in the UK without your own warehouse or staff.", tag: "Market entry" },
+      ],
+    },
+  ],
+  faqs: [
+    { q: "Which industries does LondraDepo work with?", a: "We run live UK operations for businesses in food and FMCG, packaging and catering supplies, automotive parts and upholstery materials, fashion and ecommerce, bulky goods such as walking treadmills, and consumer electronics such as portable power stations." },
+    { q: "Can the same stock serve B2B and online customers?", a: "Yes. The same UK stock can feed pallet deliveries to wholesale and trade customers and parcel orders to online shoppers, so you do not split inventory between providers." },
+    { q: "My sector is not listed. Can you still help?", a: "Probably. Tell us your product, packaging, volumes and sales channels, and we will confirm whether our Essex warehouse suits it before quoting." },
+  ],
+  related: ["/en/uk-warehousing", "/en/uk-fulfilment", "/en/case-studies", "/en/uk-market-entry"],
+  cta: { h2: "Tell us about your products", text: "Share your sector, product type, volumes and channels, and we will propose a UK set-up." },
+};

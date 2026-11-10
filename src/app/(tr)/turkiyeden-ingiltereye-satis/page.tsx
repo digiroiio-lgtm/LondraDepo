@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import TrClusterNav from "@/components/TrClusterNav";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -339,6 +340,7 @@ export default function TurkiyedenIngiltereye() {
             </div>
           </div>
         </section>
+        <TrClusterNav path="/turkiyeden-ingiltereye-satis" />
       </main>
       <Footer />
       <StickyWhatsappCta />

@@ -29,6 +29,7 @@ const company = [
   ["/en/about-us", "About Us"],
   ["/en/essex-warehouse", "Essex Warehouse"],
   ["/en/uk-market-entry", "UK Market Entry"],
+  ["/en/industries", "Industries"],
   ["/en/industries/food-packaging", "Packaging & Catering Supplies"],
   ["/en/industries/automotive-parts", "Automotive Parts"],
   ["/en/uk-warehousing-for-turkish-exporters", "For Turkish Exporters"],

@@ -40,6 +40,7 @@ const BY_SLUG: Record<string, Cta> = {
   "/en/uk-distribution": { label: "Get a UK Distribution Quote", service: "distribution" },
   "/en/uk-import-logistics": { label: "Discuss Your Import Requirements", service: "freight-customs" },
   "/en/container-unloading": { label: "Get a Container Unloading Quote", service: "container-unloading" },
+  "/en/industries": { label: "Discuss Your UK Set-up", service: "other" },
   "/en/industries/food-packaging": { label: "Discuss Your Packaging Storage Requirements", service: "distribution" },
   "/en/uk-market-entry": { label: "Plan Your UK Market Entry", service: "storage" },
   "/en/industries/automotive-parts": { label: "Get a Parts Warehousing Proposal", service: "storage" },

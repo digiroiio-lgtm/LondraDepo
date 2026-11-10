@@ -1,4 +1,5 @@
 import FaqJsonLd from "@/components/FaqJsonLd";
+import TrClusterNav from "@/components/TrClusterNav";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -313,6 +314,7 @@ export default function AmazonIngiltereDepo() {
             </div>
           </div>
         </section>
+        <TrClusterNav path="/amazon-ingiltere-depo" />
       </main>
       <Footer />
       <StickyWhatsappCta />

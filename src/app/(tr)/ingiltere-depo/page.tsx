@@ -1,4 +1,5 @@
 import FaqJsonLd from "@/components/FaqJsonLd";
+import TrClusterNav from "@/components/TrClusterNav";
 import TeamQuote from "@/components/TeamQuote";
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -448,6 +449,7 @@ export default function IngiltereDepoPage() {
             </div>
           </div>
         </section>
+        <TrClusterNav path="/ingiltere-depo" />
         <QuoteForm formId="tr_inline_quote" heading="İngiltere Depo Teklifi Alın" intro="Ürün türünüzü, yaklaşık palet veya koli sayınızı ve ihtiyacınız olan hizmetleri yazın; ekibimiz size özel teklif hazırlasın. Standart palet depolama haftalık £3,50 + KDV'den başlar." presetServices={["Depolama"]} />
       </main>
       <Footer />

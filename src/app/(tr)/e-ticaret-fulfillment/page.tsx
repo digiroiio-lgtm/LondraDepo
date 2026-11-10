@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import TrClusterNav from "@/components/TrClusterNav";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -138,6 +139,7 @@ export default function ETicaretFulfillmentPage() {
           </div>
         </section>
 
+        <TrClusterNav path="/e-ticaret-fulfillment" />
         <CtaCards />
       </main>
       <Footer />

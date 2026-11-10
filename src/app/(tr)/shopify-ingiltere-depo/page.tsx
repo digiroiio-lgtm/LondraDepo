@@ -1,4 +1,5 @@
 import FaqJsonLd from "@/components/FaqJsonLd";
+import TrClusterNav from "@/components/TrClusterNav";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -277,6 +278,7 @@ export default function ShopifyIngiltereDepo() {
             </div>
           </div>
         </section>
+        <TrClusterNav path="/shopify-ingiltere-depo" />
       </main>
       <Footer />
       <StickyWhatsappCta />

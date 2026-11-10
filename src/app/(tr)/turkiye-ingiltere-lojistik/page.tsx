@@ -1,4 +1,5 @@
 import FaqJsonLd from "@/components/FaqJsonLd";
+import TrClusterNav from "@/components/TrClusterNav";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -292,6 +293,7 @@ export default function TurkiyeIngiltere() {
             </div>
           </div>
         </section>
+        <TrClusterNav path="/turkiye-ingiltere-lojistik" />
       </main>
       <Footer />
       <StickyWhatsappCta />

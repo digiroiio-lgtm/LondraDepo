@@ -47,6 +47,11 @@ export const PAIRS: ReadonlyArray<readonly [tr: string, en: string]> = [
   ["/turk-sirketleri-icin-ingiltere-depo", "/en/uk-warehousing-for-turkish-exporters"],
   ["/ingiltere-depo-maliyet-hesaplama", "/en/uk-storage-cost-calculator"],
   ["/konteyner-varis-planlayici", "/en/container-arrival-planner"],
+  ["/london-gateway-tilbury-depo", "/en/london-gateway-tilbury-warehousing"],
+  ["/felixstowe-liman-depo", "/en/felixstowe-port-warehousing"],
+  ["/blog/ingiltere-3pl-nasil-secilir", "/en/blog/how-to-choose-a-uk-3pl"],
+  ["/blog/ingiltere-ithalat-maliyetleri", "/en/blog/uk-import-costs"],
+  ["/blog/amazon-fba-prep-kontrol-listesi", "/en/blog/amazon-fba-prep-checklist"],
 ];
 
 export const TR_TO_EN = new Map(PAIRS.map(([tr, en]) => [tr, en]));

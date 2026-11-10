@@ -128,7 +128,9 @@ export default function KonteynerPlanlayiciPage() {
               ))}
             </div>
             <p className="mt-6 text-sm text-slate-600">
-              İlgili sayfalar: <Link href="/ellecleme" className="underline">Elleçleme ve Boşaltma</Link> ·{" "}
+              İlgili sayfalar: <Link href="/london-gateway-tilbury-depo" className="underline">London Gateway &amp; Tilbury Depo</Link> ·{" "}
+              <Link href="/felixstowe-liman-depo" className="underline">Felixstowe Liman Depo</Link> ·{" "}
+              <Link href="/ellecleme" className="underline">Elleçleme ve Boşaltma</Link> ·{" "}
               <Link href="/gumrukleme" className="underline">Gümrükleme</Link> ·{" "}
               <Link href="/ingiltere-depo-maliyet-hesaplama" className="underline">Depo Maliyet Hesaplama</Link> ·{" "}
               <Link href="/blog/turkiyeden-ingiltereye-ihracat-rehberi" className="underline">Türkiye&apos;den İngiltere&apos;ye İhracat Rehberi</Link>

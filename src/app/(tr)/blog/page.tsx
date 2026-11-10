@@ -150,6 +150,36 @@ const posts: Post[] = [
     icon: "🌍",
     tag: "Yeni",
   },
+  {
+    title: "İngiltere'de 3PL Depo Nasıl Seçilir? Sorulacak 12 Soru",
+    desc: "Konum, fiyat yapısı, stok görünürlüğü, kanallar, iade, sözleşme ve gümrük desteği: teklifleri karşılaştırma rehberi.",
+    href: "/blog/ingiltere-3pl-nasil-secilir",
+    category: "Partner Seçimi",
+    badge: "blue",
+    readTime: "7 dk",
+    icon: "🔎",
+    tag: "Yeni",
+  },
+  {
+    title: "İngiltere'ye İthalatın Maliyeti Nedir?",
+    desc: "Gümrük vergisi, %20 ithalat KDV'si ve lojistik kalemleri; örnek KDV hesabıyla.",
+    href: "/blog/ingiltere-ithalat-maliyetleri",
+    category: "İhracat",
+    badge: "purple",
+    readTime: "7 dk",
+    icon: "🧾",
+    tag: "Yeni",
+  },
+  {
+    title: "Amazon FBA Prep Kontrol Listesi",
+    desc: "FNSKU etiketleri, ambalaj, koli etiketleri ve Amazon UK deposuna teslimat adım adım.",
+    href: "/blog/amazon-fba-prep-kontrol-listesi",
+    category: "Amazon",
+    badge: "amber",
+    readTime: "5 dk",
+    icon: "✅",
+    tag: "Yeni",
+  },
 ];
 
 export default function BlogPage() {

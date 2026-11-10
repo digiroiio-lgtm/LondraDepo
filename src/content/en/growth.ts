@@ -623,6 +623,7 @@ export const calculatorPages: EnPage[] = [
 export const portPages: EnPage[] = [
   {
     slug: "/en/london-gateway-tilbury-warehousing",
+    tr: "/london-gateway-tilbury-depo",
     kind: "service",
     serviceType: "Port warehousing for London Gateway and Tilbury",
     modified: "2026-11-10",
@@ -704,6 +705,7 @@ export const portPages: EnPage[] = [
   },
   {
     slug: "/en/felixstowe-port-warehousing",
+    tr: "/felixstowe-liman-depo",
     kind: "service",
     serviceType: "Port warehousing for Felixstowe",
     modified: "2026-11-10",

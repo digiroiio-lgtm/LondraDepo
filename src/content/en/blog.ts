@@ -467,6 +467,7 @@ export const blogPages: EnPage[] = [
   },
   {
     slug: "/en/blog/how-to-choose-a-uk-3pl",
+    tr: "/blog/ingiltere-3pl-nasil-secilir",
     kind: "article",
     parent: "/en/blog",
     article: { ...DATE, readMins: 7, section: "Choosing a partner" },
@@ -530,6 +531,7 @@ export const blogPages: EnPage[] = [
   },
   {
     slug: "/en/blog/uk-import-costs",
+    tr: "/blog/ingiltere-ithalat-maliyetleri",
     kind: "article",
     parent: "/en/blog",
     article: { ...DATE, readMins: 7, section: "Importing" },
@@ -595,6 +597,7 @@ export const blogPages: EnPage[] = [
   },
   {
     slug: "/en/blog/amazon-fba-prep-checklist",
+    tr: "/blog/amazon-fba-prep-kontrol-listesi",
     kind: "article",
     parent: "/en/blog",
     article: { ...DATE, readMins: 5, section: "Amazon" },

@@ -125,6 +125,33 @@ export const TR_ARTICLES: Record<string, TrArticle> = {
     summary:
       "Walking treadmill ürünlerinin İngiltere depolama, online satış ve retail dağıtım operasyonu LondraDepo üzerinden yürütülüyor. Büyük hacimli ürünler Essex deposunda kabul edilip stoklanıyor; online siparişler ve mağaza teslimatları İngiltere geneline tek merkezden organize ediliyor.",
   },
+  // Turkish pairs of the EN guides published 10 November 2026.
+  "/blog/ingiltere-3pl-nasil-secilir": {
+    headline: "İngiltere'de 3PL Depo Nasıl Seçilir? Sorulacak 12 Soru",
+    published: "2026-11-10",
+    modified: "2026-11-10",
+    summary:
+      "3PL depo seçerken firmaları aynı 12 soruyla karşılaştırın: konum, her maliyet kaleminin fiyatı, stok görünürlüğü, satış kanalları, iade, minimum hacim, sözleşme, sigorta, gümrük desteği, iletişim dili, referanslar ve depo ziyareti. Teklifleri tek tek fiyatlara değil, kendi hacminiz için aylık toplama göre karşılaştırın.",
+  },
+  "/blog/ingiltere-ithalat-maliyetleri": {
+    headline: "İngiltere'ye İthalatın Maliyeti Nedir?",
+    published: "2026-11-10",
+    modified: "2026-11-10",
+    summary:
+      "İngiltere'ye ithalatta iki tür maliyet vardır: devlet kalemleri (tarife koduna ve menşeye göre gümrük vergisi, genellikle vergi ve taşıma dahil değer üzerinden %20 ithalat KDV'si) ve lojistik kalemleri (nakliye, gümrükleme, taşıma, boşaltma, depolama, fulfillment). KDV kayıtlı ithalatçılar ertelenmiş KDV muhasebesiyle KDV'yi sınırda ödemeden beyan edebilir.",
+    sources: [
+      { label: "GOV.UK: The UK's integrated tariff schedule (UK gümrük tarifesi, %0 MFN satırları)", href: "https://www.gov.uk/government/publications/the-uks-integrated-tariff-schedule/the-uks-integrated-tariff-schedule" },
+      VAT_RATES,
+      { label: "US International Trade Administration (trade.gov): United Kingdom import requirements and documentation", href: "https://www.trade.gov/country-commercial-guides/united-kingdom-import-requirements-and-documentation" },
+    ],
+  },
+  "/blog/amazon-fba-prep-kontrol-listesi": {
+    headline: "Amazon FBA Prep Kontrol Listesi (UK Satıcıları İçin)",
+    published: "2026-11-10",
+    modified: "2026-11-10",
+    summary:
+      "Amazon UK depolarına göndermeden önce: Seller Central'da sevkiyat planını oluşturun, her ürüne FNSKU etiketi yapıştırın, diğer barkodları kapatın, ürünleri korumalı paketleyin, set ve paketleri işaretleyin, kolileri Amazon etiketleriyle etiketleyin ve atanan depoya teslim edin. Kurallar değiştiği için güncel gereklilikleri Seller Central'dan kontrol edin.",
+  },
 };
 
 const TR_DATE = new Intl.DateTimeFormat("tr-TR", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });

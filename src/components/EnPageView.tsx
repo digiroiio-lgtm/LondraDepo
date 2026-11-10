@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
+import WarehouseGallery from "@/components/WarehouseGallery";
 import HeaderEn from "@/components/HeaderEn";
 import FooterEn from "@/components/FooterEn";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
@@ -229,8 +231,23 @@ export default function EnPageView({ page }: { page: EnPage }) {
                 </a>
               </div>
             )}
+            {page.kind === "home" && (
+              <div className="mt-10 rounded-2xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/londradepo.jpeg"
+                  alt="LondraDepo UK warehouse and fulfilment centre in Rayleigh, Essex"
+                  width={2158}
+                  height={1260}
+                  sizes="(max-width: 1152px) 100vw, 1152px"
+                  className="w-full h-auto object-cover"
+                  priority
+                />
+              </div>
+            )}
           </div>
         </div>
+
+        {(page.kind === "home" || page.slug === "/en/about-us") && <WarehouseGallery lang="en" />}
 
         <div className="max-w-6xl mx-auto px-4 py-12">
           {page.note && <p className="mb-10 rounded-xl border border-amber-200 bg-amber-50 p-5 text-sm text-amber-900">{page.note}</p>}

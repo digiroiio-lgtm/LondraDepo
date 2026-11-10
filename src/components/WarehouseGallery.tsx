@@ -32,18 +32,25 @@ const gridImages = [
   },
 ];
 
-export default function WarehouseGallery() {
+const TEXT = {
+  tr: {
+    h2: "İngiltere'de Gerçek Operasyon Altyapısı",
+    p: "Essex merkezli depo operasyonumuzda ürün kabul, palet depolama, fulfillment ve dağıtım süreçlerini aktif olarak yönetiyoruz.",
+  },
+  en: {
+    h2: "A Real UK Warehouse Operation",
+    p: "Goods-in, pallet storage, fulfilment and distribution, run every day from our warehouse at Arterial Park, Rayleigh, Essex.",
+  },
+} as const;
+
+export default function WarehouseGallery({ lang = "tr" }: { lang?: "tr" | "en" }) {
+  const t = TEXT[lang];
   return (
     <section className="bg-white py-16 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-10">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0b2545] mb-3">
-            İngiltere'de Gerçek Operasyon Altyapısı
-          </h2>
-          <p className="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto">
-            Essex merkezli depo operasyonumuzda ürün kabul, palet depolama,
-            fulfillment ve dağıtım süreçlerini aktif olarak yönetiyoruz.
-          </p>
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0b2545] mb-3">{t.h2}</h2>
+          <p className="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto">{t.p}</p>
         </div>
 
         {/* Main large image */}

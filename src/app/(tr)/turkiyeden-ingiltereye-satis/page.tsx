@@ -89,7 +89,7 @@ export default function TurkiyedenIngiltereye() {
             </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4 leading-tight">
               Türkiye&apos;den İngiltere&apos;ye{" "}
-              <span className="text-[#e63946]">Nasıl Satış Yapılır?</span>
+              <span className="text-[#d62839]">Nasıl Satış Yapılır?</span>
             </h1>
             <p className="text-slate-300 text-lg leading-relaxed max-w-3xl mb-8">
               Satış modeli seçiminden gümrüğe, depolamadan sipariş karşılamaya —
@@ -100,7 +100,7 @@ export default function TurkiyedenIngiltereye() {
                 href={WHATSAPP}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
+                className="inline-flex items-center justify-center gap-2 bg-[#d62839] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
               >
                 Teklif Al
               </a>
@@ -154,7 +154,7 @@ export default function TurkiyedenIngiltereye() {
                 <li>• Taşıma belgesi (Konşimento / Air Waybill)</li>
                 <li>• Ürüne bağlı sertifikalar (CE, UKCA vb.)</li>
               </ul>
-              <Link href="/gumrukleme" className="text-[#e63946] text-sm font-semibold hover:underline">
+              <Link href="/gumrukleme" className="text-[#d62839] text-sm font-semibold hover:underline">
                 Gümrükleme Desteği hakkında daha fazla bilgi →
               </Link>
             </section>
@@ -186,7 +186,7 @@ export default function TurkiyedenIngiltereye() {
               <p className="text-slate-600 text-sm leading-relaxed mb-3">
                 Shopify, Türkiye&apos;de kurulu işletmelerin UK pazarına satış yapması için yaygın kullanılan bir platformdur. Shopify mağazanızı kurduktan sonra ürün stoğunuzu UK depomuzda (LondraDepo) tutabilir, sipariş geldiğinde depo ekibimiz karşılayabilir.
               </p>
-              <Link href="/shopify-ingiltere-depo" className="text-[#e63946] text-sm font-semibold hover:underline">
+              <Link href="/shopify-ingiltere-depo" className="text-[#d62839] text-sm font-semibold hover:underline">
                 Shopify İngiltere Depo hakkında daha fazla bilgi →
               </Link>
             </section>
@@ -198,10 +198,10 @@ export default function TurkiyedenIngiltereye() {
                 Amazon UK&apos;de iki temel model vardır:
               </p>
               <ul className="space-y-2 text-sm text-slate-600 mb-3">
-                <li><strong>FBA (Fulfillment by Amazon):</strong> Ürünler Amazon deposuna gönderilir, Amazon karşılar. FBA hazırlığı için bkz. <Link href="/amazon-prep-uk" className="text-[#e63946] hover:underline">Amazon Prep UK</Link>.</li>
+                <li><strong>FBA (Fulfillment by Amazon):</strong> Ürünler Amazon deposuna gönderilir, Amazon karşılar. FBA hazırlığı için bkz. <Link href="/amazon-prep-uk" className="text-[#d62839] underline">Amazon Prep UK</Link>.</li>
                 <li><strong>FBM (Fulfilled by Merchant):</strong> Ürünler kendi (veya LondraDepo gibi üçüncü taraf) deponuzda; siz (veya deponuz) karşılar. LondraDepo FBM modelini destekler.</li>
               </ul>
-              <Link href="/amazon-ingiltere-depo" className="text-[#e63946] text-sm font-semibold hover:underline">
+              <Link href="/amazon-ingiltere-depo" className="text-[#d62839] text-sm font-semibold hover:underline">
                 Amazon FBM İngiltere Depo hakkında daha fazla bilgi →
               </Link>
             </section>
@@ -220,7 +220,7 @@ export default function TurkiyedenIngiltereye() {
               <p className="text-slate-600 text-sm leading-relaxed">
                 Pick aşamasında depo ekibi, gelen siparişteki ürünleri depo raflarından toplar. Birden fazla ürün içeren siparişlerde her kalem doğru şekilde seçilir ve sipariş doğrulaması yapılır.
               </p>
-              <Link href="/siparis-toplama-paketleme" className="text-[#e63946] text-sm font-semibold hover:underline">
+              <Link href="/siparis-toplama-paketleme" className="text-[#d62839] text-sm font-semibold hover:underline">
                 Pick &amp; Pack hizmeti hakkında →
               </Link>
             </section>
@@ -265,7 +265,7 @@ export default function TurkiyedenIngiltereye() {
                 <li>• Platform komisyonu (Shopify, Amazon)</li>
                 <li>• İade yönetimi</li>
               </ul>
-              <Link href="/ingiltere-depo-fiyatlari" className="text-[#e63946] text-sm font-semibold hover:underline">
+              <Link href="/ingiltere-depo-fiyatlari" className="text-[#d62839] text-sm font-semibold hover:underline">
                 İngiltere Depo Fiyatları →
               </Link>
             </section>
@@ -281,7 +281,7 @@ export default function TurkiyedenIngiltereye() {
                 <li>• <strong>Ürün uyumu:</strong> UK piyasasına giren ürünler UKCA veya CE işareti gerektirebilir.</li>
                 <li>• <strong>Gümrük tarifeleri:</strong> Ürün HS koduna göre UK ithalat vergisi farklılık gösterir.</li>
               </ul>
-              <Link href="/turk-sirketleri-icin-ingiltere-depo" className="inline-block mt-3 text-[#e63946] text-sm font-semibold hover:underline">
+              <Link href="/turk-sirketleri-icin-ingiltere-depo" className="inline-block mt-3 text-[#d62839] text-sm font-semibold hover:underline">
                 Türk Şirketleri İçin İngiltere Depo →
               </Link>
             </section>
@@ -297,7 +297,7 @@ export default function TurkiyedenIngiltereye() {
                   href={WHATSAPP}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
+                  className="inline-flex items-center justify-center gap-2 bg-[#d62839] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
                 >
                   Teklif Al
                 </a>

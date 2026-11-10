@@ -59,6 +59,7 @@ export const corePages: EnPage[] = [
           ["Port of Felixstowe (IP11)", "62 miles / 99 km", "~1¼ hours"],
         ],
       },
+      { type: "routemap" },
       {
         type: "text",
         h2: "How much does UK warehousing cost at LondraDepo?",

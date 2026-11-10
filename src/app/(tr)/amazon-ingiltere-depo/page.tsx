@@ -133,7 +133,7 @@ export default function AmazonIngiltereDepo() {
             </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4 leading-tight">
               Amazon İçin{" "}
-              <span className="text-[#e63946]">İngiltere Depo</span>{" "}
+              <span className="text-[#d62839]">İngiltere Depo</span>{" "}
               ve Sipariş Karşılama
             </h1>
             <p className="text-slate-300 text-lg leading-relaxed max-w-3xl mb-4">
@@ -149,7 +149,7 @@ export default function AmazonIngiltereDepo() {
                 href={WHATSAPP}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
+                className="inline-flex items-center justify-center gap-2 bg-[#d62839] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
               >
                 Amazon FBM Teklifi Al
               </a>
@@ -200,7 +200,7 @@ export default function AmazonIngiltereDepo() {
                   {!item.highlight && (
                     <Link
                       href="/amazon-prep-uk"
-                      className="inline-block mt-4 text-sm text-[#e63946] font-semibold hover:underline"
+                      className="inline-block mt-4 text-sm text-[#d62839] font-semibold hover:underline"
                     >
                       {item.cta}
                     </Link>
@@ -246,7 +246,7 @@ export default function AmazonIngiltereDepo() {
               href={WHATSAPP}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
+              className="inline-flex items-center gap-2 bg-[#d62839] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
             >
               Hemen Teklif Al
             </a>

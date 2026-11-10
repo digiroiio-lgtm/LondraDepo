@@ -218,7 +218,7 @@ export default function IngiltereDepoFiyatlari() {
             </nav>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4 leading-tight">
               İngiltere Depo Fiyatları{" "}
-              <span className="text-[#e63946]">2026</span>
+              <span className="text-[#d62839]">2026</span>
             </h1>
             <p className="text-slate-300 text-lg leading-relaxed max-w-3xl mb-4">
               Depolama, pick & pack, mal kabul, kargo ve sipariş karşılama hizmetlerinin
@@ -234,7 +234,7 @@ export default function IngiltereDepoFiyatlari() {
                 href={WHATSAPP}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
+                className="inline-flex items-center justify-center gap-2 bg-[#d62839] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
               >
                 Fiyat Teklifi Al
               </a>
@@ -333,7 +333,7 @@ export default function IngiltereDepoFiyatlari() {
               href={WHATSAPP}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
+              className="inline-flex items-center gap-2 bg-[#d62839] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
             >
               WhatsApp ile Teklif İste
             </a>

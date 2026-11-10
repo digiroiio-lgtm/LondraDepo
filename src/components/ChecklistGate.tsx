@@ -151,7 +151,7 @@ export default function ChecklistGate({ lang, variant = "import" }: { lang: "en"
             {err("consent")}
           </div>
           <div className="sm:col-span-3 flex flex-col sm:flex-row sm:items-center gap-4">
-            <button type="submit" disabled={state.submitting} className="bg-[#e63946] hover:bg-[#c1121f] disabled:opacity-60 text-white font-semibold px-8 py-3 rounded-full transition">
+            <button type="submit" disabled={state.submitting} className="bg-[#d62839] hover:bg-[#c1121f] disabled:opacity-60 text-white font-semibold px-8 py-3 rounded-full transition">
               {state.submitting ? t.sending : t.submit}
             </button>
             {state.errors && <div role="alert" className="text-sm text-red-600">{t.fail}</div>}

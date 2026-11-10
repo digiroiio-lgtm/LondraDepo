@@ -396,7 +396,7 @@ export default function WalkingTreadmillCaseStudyPage() {
             <section className="mb-10">
               <div className="border-l-4 border-teal-500 bg-teal-50 rounded-r-xl p-6">
                 <p className="text-teal-900 font-semibold text-sm leading-relaxed">
-                  <span className="block text-xs font-bold uppercase tracking-widest text-teal-600 mb-2">
+                  <span className="block text-xs font-bold uppercase tracking-widest text-teal-700 mb-2">
                     Temel Mesaj
                   </span>
                   LondraDepo.com yalnızca küçük paket fulfillment değil; büyük hacimli ürünlerin
@@ -420,7 +420,7 @@ export default function WalkingTreadmillCaseStudyPage() {
                   href={WHATSAPP}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold px-7 py-3.5 rounded-full transition"
+                  className="inline-flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white font-bold px-7 py-3.5 rounded-full transition"
                 >
                   WhatsApp&apos;tan Bilgi Alın
                 </a>

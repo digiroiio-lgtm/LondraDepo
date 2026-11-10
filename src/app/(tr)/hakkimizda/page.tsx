@@ -106,7 +106,7 @@ export default function HakkimizdaPage() {
             </div>
 
             <div className="mb-12">
-              <p className="text-sm font-semibold text-slate-500 uppercase tracking-widest mb-4">
+              <p className="text-sm font-semibold text-slate-600 uppercase tracking-widest mb-4">
                 Depo Tesisimiz — Unit 19 Arterial Park, Rayleigh, Essex
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
@@ -192,7 +192,7 @@ export default function HakkimizdaPage() {
                 href={WHATSAPP}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold px-8 py-4 rounded-full transition"
+                className="inline-flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white font-bold px-8 py-4 rounded-full transition"
               >
                 WhatsApp ile Yazın
               </a>

@@ -19,6 +19,8 @@ export type Section =
   | { type: "calculator"; h2: string; intro?: string }
   /** Email-gated PDF checklist download. */
   | { type: "checklist"; variant?: "import" | "fba" }
+  /** Schematic route map: warehouse, London and the three container ports. */
+  | { type: "routemap"; h2?: string }
   /** Interactive container arrival planner. */
   | { type: "planner"; h2: string; intro?: string };
 

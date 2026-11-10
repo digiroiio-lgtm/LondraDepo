@@ -24,7 +24,7 @@ export default function EcommerceFulfilmentSection() {
     <section className="py-20 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <p className="text-[#e63946] text-sm font-semibold uppercase tracking-widest mb-3">
+          <p className="text-[#d62839] text-sm font-semibold uppercase tracking-widest mb-3">
             E-Ticaret Fulfillment
           </p>
           <h2 className="text-3xl font-extrabold text-[#0b2545] mb-4">
@@ -38,7 +38,7 @@ export default function EcommerceFulfilmentSection() {
 
         {/* Workflow visual */}
         <div className="bg-[#f6f8fb] rounded-3xl p-8 mb-12">
-          <h3 className="text-center text-sm font-semibold text-slate-500 uppercase tracking-wide mb-8">
+          <h3 className="text-center text-sm font-semibold text-slate-600 uppercase tracking-wide mb-8">
             Fulfillment Süreci
           </h3>
           <div className="flex flex-wrap justify-center items-center gap-3">
@@ -86,7 +86,7 @@ export default function EcommerceFulfilmentSection() {
               href={WHATSAPP}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white font-bold px-6 py-3 rounded-full transition text-sm"
+              className="inline-flex items-center gap-2 bg-[#d62839] hover:bg-[#c1121f] text-white font-bold px-6 py-3 rounded-full transition text-sm"
             >
               Fulfillment Operasyonumu Kuralım
             </a>

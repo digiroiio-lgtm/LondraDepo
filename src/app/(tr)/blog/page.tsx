@@ -258,8 +258,8 @@ export default function BlogPage() {
                       <span
                         className={`absolute top-3 right-3 text-xs font-bold px-2 py-0.5 rounded-full ${
                           post.tag === "Popüler"
-                            ? "bg-[#e63946] text-white"
-                            : "bg-green-500 text-white"
+                            ? "bg-[#d62839] text-white"
+                            : "bg-green-700 text-white"
                         }`}
                       >
                         {post.tag}
@@ -280,9 +280,9 @@ export default function BlogPage() {
                     <p className="text-slate-500 text-xs mb-4 leading-relaxed line-clamp-3">
                       {post.desc}
                     </p>
-                    <div className="flex items-center justify-between text-xs text-slate-400">
+                    <div className="flex items-center justify-between text-xs text-slate-500">
                       <span>⏱ {post.readTime} okuma</span>
-                      <span className="text-[#e63946] font-semibold group-hover:underline">
+                      <span className="text-[#d62839] font-semibold group-hover:underline">
                         Okumaya devam →
                       </span>
                     </div>
@@ -326,7 +326,7 @@ export default function BlogPage() {
                   href={WHATSAPP}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold px-7 py-3.5 rounded-full transition"
+                  className="inline-flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white font-bold px-7 py-3.5 rounded-full transition"
                 >
                   WhatsApp&apos;tan hızlı bilgi alın
                 </a>

@@ -243,7 +243,7 @@ export default function QuoteFormEn({ defaultService, formId = "en_request_a_quo
         {err("consent")}
       </div>
       <div className="sm:col-span-2 flex flex-col sm:flex-row sm:items-center gap-4">
-        <button type="submit" disabled={state.submitting} className="bg-[#e63946] hover:bg-[#c1121f] disabled:opacity-60 text-white font-semibold px-8 py-3 rounded-full transition">
+        <button type="submit" disabled={state.submitting} className="bg-[#d62839] hover:bg-[#c1121f] disabled:opacity-60 text-white font-semibold px-8 py-3 rounded-full transition">
           {state.submitting ? "Sending…" : "Request my quote"}
         </button>
         {state.errors && <p role="alert" className="text-sm text-red-600">Something went wrong. Please try again or message us on WhatsApp.</p>}

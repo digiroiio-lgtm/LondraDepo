@@ -335,7 +335,7 @@ export default function IngiltereDepoAvantajlariPage() {
                 href={WHATSAPP}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold px-8 py-4 rounded-full text-base transition shadow-lg"
+                className="inline-flex items-center justify-center gap-2 bg-green-700 hover:bg-green-800 text-white font-bold px-8 py-4 rounded-full text-base transition shadow-lg"
               >
                 <svg
                   className="w-5 h-5 fill-white flex-shrink-0"
@@ -384,7 +384,7 @@ export default function IngiltereDepoAvantajlariPage() {
                     href={WHATSAPP}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-5 inline-block text-sm font-semibold text-green-600 hover:text-green-700 transition"
+                    className="mt-5 inline-block text-sm font-semibold text-green-700 hover:text-green-800 transition"
                   >
                     {adv.cta} →
                   </a>

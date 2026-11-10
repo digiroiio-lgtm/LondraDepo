@@ -90,7 +90,7 @@ export default function FooterEn() {
               kind="whatsapp"
               source="footer"
               href={WHATSAPP}
-              className="flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white font-semibold px-5 py-3 rounded-full transition w-fit"
+              className="flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white font-semibold px-5 py-3 rounded-full transition w-fit"
             >
               Get a Quote on WhatsApp
             </TrackedLink>
@@ -102,7 +102,7 @@ export default function FooterEn() {
         </div>
       </div>
 
-      <div className="border-t border-white/10 pt-6 text-center text-xs text-slate-500 space-y-2">
+      <div className="border-t border-white/10 pt-6 text-center text-xs text-slate-400 space-y-2">
         <p>© {new Date().getFullYear()} LondraDepo.com. UK warehousing and fulfilment. All rights reserved.</p>
         <p className="text-slate-400">
           Arca Trade Group Ltd · Registered in England &amp; Wales · Company No: 13247691 · VAT: GB353315322

@@ -5,6 +5,11 @@ import TrackedLink from "@/components/TrackedLink";
 import { ctaFor, quoteHref } from "@/content/en/cta";
 import { bookingUrl } from "@/lib/booking";
 import { clusterFor } from "@/content/en/clusters";
+import Icon, { iconFor } from "@/components/visual/Icon";
+import ProcessFlow from "@/components/visual/ProcessFlow";
+import RouteMap from "@/components/visual/RouteMap";
+import HeroArt, { themeFor } from "@/components/visual/HeroArt";
+import { readable } from "@/lib/readable";
 import QuoteFormEn from "@/components/QuoteFormEn";
 import ChecklistGate from "./ChecklistGate";
 import ContainerPlanner from "./ContainerPlanner";
@@ -125,9 +130,11 @@ function SectionView({ s }: { s: Section }) {
       return (
         <section className="mb-12">
           {h2}
-          {s.paras.map((p) => (
-            <p key={p.slice(0, 40)} className="text-slate-700 leading-relaxed mb-4">{p}</p>
-          ))}
+          <div className="max-w-3xl">
+            {readable(s.paras).map((p) => (
+              <p key={p.slice(0, 40)} className="text-[1.0625rem] text-slate-700 leading-8 mb-5">{p}</p>
+            ))}
+          </div>
         </section>
       );
     case "cards":
@@ -137,7 +144,10 @@ function SectionView({ s }: { s: Section }) {
           {s.intro && <p className="text-slate-600 mb-5">{s.intro}</p>}
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {s.items.map((c) => (
-              <div key={c.title} className="rounded-xl border border-slate-200 bg-white p-5">
+              <div key={c.title} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+                <span className="mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-red-50 text-[#d62839]">
+                  <Icon name={iconFor(c.title, c.text)} />
+                </span>
                 <h3 className="font-semibold text-[#0b2545] mb-2">{c.title}</h3>
                 <p className="text-sm text-slate-600 leading-relaxed">{c.text}</p>
               </div>
@@ -150,15 +160,7 @@ function SectionView({ s }: { s: Section }) {
         <section className="mb-12">
           {h2}
           {s.intro && <p className="text-slate-600 mb-5">{s.intro}</p>}
-          <ol className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {s.items.map((c, i) => (
-              <li key={c.title} className="rounded-xl border border-slate-200 bg-slate-50 p-5">
-                <span className="text-xs font-bold text-[#e63946]">{String(i + 1).padStart(2, "0")}</span>
-                <h3 className="font-semibold text-[#0b2545] mt-1 mb-2">{c.title}</h3>
-                <p className="text-sm text-slate-600 leading-relaxed">{c.text}</p>
-              </li>
-            ))}
-          </ol>
+          <ProcessFlow items={s.items} />
         </section>
       );
     case "list":
@@ -169,8 +171,8 @@ function SectionView({ s }: { s: Section }) {
           <ul className="space-y-2">
             {s.items.map((it) => (
               <li key={it} className="flex gap-2 text-slate-700">
-                <span className="text-[#e63946] font-bold" aria-hidden="true">✓</span>
-                <span>{it}</span>
+                <span className="mt-0.5 text-green-600 shrink-0"><Icon name="check" className="h-5 w-5" /></span>
+                <span className="leading-relaxed">{it}</span>
               </li>
             ))}
           </ul>
@@ -189,7 +191,7 @@ function SectionView({ s }: { s: Section }) {
               </thead>
               <tbody>
                 {s.rows.map((r, i) => (
-                  <tr key={i} className="border-t border-slate-200">
+                  <tr key={i} className="border-t border-slate-200 even:bg-slate-50/70">
                     {r.map((c, j) => (j === 0 ? <th key={j} scope="row" className="px-4 py-3 font-medium text-slate-800">{c}</th> : <td key={j} className="px-4 py-3 text-slate-700">{c}</td>))}
                   </tr>
                 ))}
@@ -240,6 +242,13 @@ function SectionView({ s }: { s: Section }) {
           <CostCalculator lang="en" />
         </section>
       );
+    case "routemap":
+      return (
+        <section className="mb-12">
+          {h2}
+          <RouteMap lang="en" className="max-w-3xl" />
+        </section>
+      );
     case "planner":
       return (
         <section className="mb-12" id="planner">
@@ -273,7 +282,7 @@ function SectionView({ s }: { s: Section }) {
           <div className="grid gap-4 sm:grid-cols-2">
             {s.items.map((l) => (
               <Link key={l.href} href={l.href} className="block rounded-xl border border-slate-200 bg-white p-5 hover:border-[#e63946] transition">
-                {l.tag && <span className="text-xs font-semibold uppercase tracking-wide text-[#e63946]">{l.tag}</span>}
+                {l.tag && <span className="text-xs font-semibold uppercase tracking-wide text-[#d62839]">{l.tag}</span>}
                 <h3 className="font-semibold text-[#0b2545] mt-1 mb-2">{l.title}</h3>
                 <p className="text-sm text-slate-600 leading-relaxed">{l.text}</p>
               </Link>
@@ -300,7 +309,8 @@ export default function EnPageView({ page }: { page: EnPage }) {
       {page.faqs && <FaqJsonLd faqs={page.faqs} />}
       <main className="bg-white">
         <div className="bg-gradient-to-b from-slate-50 to-white border-b border-slate-200">
-          <div className="max-w-6xl mx-auto px-4 pt-6 pb-12">
+          <div className="max-w-6xl mx-auto px-4 pt-6 pb-12 lg:grid lg:grid-cols-[minmax(0,1fr)_320px] lg:gap-10 lg:items-center">
+            <div>
             {crumbs.length > 1 && (
               <nav aria-label="Breadcrumb" className="text-xs text-slate-500 mb-6">
                 {crumbs.map((c, i) => (
@@ -311,7 +321,7 @@ export default function EnPageView({ page }: { page: EnPage }) {
                 ))}
               </nav>
             )}
-            {page.eyebrow && <p className="text-sm font-semibold text-[#e63946] mb-3">{page.eyebrow}</p>}
+            {page.eyebrow && <p className="text-sm font-semibold text-[#d62839] mb-3">{page.eyebrow}</p>}
             <h1 className="text-3xl sm:text-4xl font-extrabold text-[#0b2545] leading-tight mb-5 max-w-3xl">{page.h1}</h1>
             {page.article && (
               <p className="text-sm text-slate-500 mb-4">
@@ -326,13 +336,15 @@ export default function EnPageView({ page }: { page: EnPage }) {
                 Last updated: <time dateTime={modifiedOf(page)}>{formatDate(modifiedOf(page))}</time>
               </p>
             )}
-            <p className="text-lg text-slate-700 leading-relaxed max-w-3xl">{page.lead}</p>
+            {readable([page.lead]).map((t, i) => (
+              <p key={i} className={`text-lg text-slate-700 leading-relaxed max-w-3xl ${i ? "mt-3" : ""}`}>{t}</p>
+            ))}
             {page.kind !== "legal" && (
               <div className="flex flex-wrap gap-3 mt-7">
-                <TrackedLink kind="cta" source="hero" href={qHref} className="bg-[#e63946] hover:bg-[#c1121f] text-white font-semibold px-6 py-3 rounded-full transition">
+                <TrackedLink kind="cta" source="hero" href={qHref} className="bg-[#d62839] hover:bg-[#c1121f] text-white font-semibold px-6 py-3 rounded-full transition">
                   {quote.label}
                 </TrackedLink>
-                <TrackedLink kind="whatsapp" source="hero" href={WHATSAPP} className="bg-green-500 hover:bg-green-400 text-white font-semibold px-6 py-3 rounded-full transition">
+                <TrackedLink kind="whatsapp" source="hero" href={WHATSAPP} className="bg-green-700 hover:bg-green-800 text-white font-semibold px-6 py-3 rounded-full transition">
                   WhatsApp us
                 </TrackedLink>
                 <TrackedLink kind="phone" source="hero" href={TEL} className="border border-[#0b2545] text-[#0b2545] font-semibold px-6 py-3 rounded-full hover:bg-[#0b2545] hover:text-white transition">
@@ -340,8 +352,14 @@ export default function EnPageView({ page }: { page: EnPage }) {
                 </TrackedLink>
               </div>
             )}
+            </div>
+            {page.kind !== "home" && page.kind !== "legal" && page.kind !== "contact" && (
+              <div className="hidden lg:block">
+                <HeroArt theme={themeFor(page.slug, page.kind)} />
+              </div>
+            )}
             {page.kind === "home" && (
-              <div className="mt-10 rounded-2xl overflow-hidden shadow-2xl">
+              <div className="mt-10 rounded-2xl overflow-hidden shadow-2xl lg:col-span-2">
                 <Image
                   src="/londradepo.jpeg"
                   alt="LondraDepo UK warehouse and fulfilment centre in Rayleigh, Essex"
@@ -364,7 +382,12 @@ export default function EnPageView({ page }: { page: EnPage }) {
             <section aria-labelledby="facts-heading" className="mb-12 rounded-xl border border-slate-200 bg-slate-50 p-6">
               <h2 id="facts-heading" className="text-lg font-bold text-[#0b2545] mb-3">At a glance</h2>
               <ul className="grid gap-2 sm:grid-cols-2 text-sm text-slate-700">
-                {page.facts.map((f) => <li key={f} className="flex gap-2"><span className="text-[#e63946]" aria-hidden="true">•</span>{f}</li>)}
+                {page.facts.map((f) => (
+                  <li key={f} className="flex gap-2.5">
+                    <span className="mt-0.5 text-[#d62839] shrink-0"><Icon name={iconFor(f)} className="h-5 w-5" /></span>
+                    <span className="leading-relaxed">{f}</span>
+                  </li>
+                ))}
               </ul>
             </section>
           )}
@@ -402,10 +425,10 @@ export default function EnPageView({ page }: { page: EnPage }) {
               <h2 id="quote-heading" className="text-2xl font-bold text-[#0b2545] mb-2">{quote.label}</h2>
               <p className="text-slate-600 mb-4">Takes about two minutes. We reply by email with a tailored proposal.</p>
               <ul className="mb-5 grid gap-2 sm:grid-cols-2 text-sm text-slate-700">
-                <li className="flex gap-2"><span className="text-green-600" aria-hidden="true">✓</span>Warehouse at Unit 19 Arterial Park, Rayleigh, Essex SS6 7FY</li>
-                <li className="flex gap-2"><span className="text-green-600" aria-hidden="true">✓</span>Operated by Arca Trade Group Ltd (Company No. 13247691), BIFA member</li>
-                <li className="flex gap-2"><span className="text-green-600" aria-hidden="true">✓</span>Storage from £3.50 + VAT per pallet per week</li>
-                <li className="flex gap-2"><span className="text-green-600" aria-hidden="true">✓</span>English and Turkish spoken</li>
+                <li className="flex gap-2"><span className="text-green-700" aria-hidden="true">✓</span>Warehouse at Unit 19 Arterial Park, Rayleigh, Essex SS6 7FY</li>
+                <li className="flex gap-2"><span className="text-green-700" aria-hidden="true">✓</span>Operated by Arca Trade Group Ltd (Company No. 13247691), BIFA member</li>
+                <li className="flex gap-2"><span className="text-green-700" aria-hidden="true">✓</span>Storage from £3.50 + VAT per pallet per week</li>
+                <li className="flex gap-2"><span className="text-green-700" aria-hidden="true">✓</span>English and Turkish spoken</li>
               </ul>
               <QuoteFormEn defaultService={quote.service} formId="en_inline_quote" />
               <p className="mt-4 text-sm text-slate-600">
@@ -425,7 +448,7 @@ export default function EnPageView({ page }: { page: EnPage }) {
           {!inlineForm && page.kind !== "legal" && page.kind !== "contact" && (
             <aside className="mb-12 flex flex-col sm:flex-row sm:items-center justify-between gap-4 rounded-xl border border-[#e63946]/30 bg-red-50 p-6">
               <p className="font-semibold text-[#0b2545]">Tell us your product, volumes and channels. We will prepare a tailored proposal.</p>
-              <TrackedLink kind="cta" source="mid_page" href={qHref} className="shrink-0 text-center bg-[#e63946] hover:bg-[#c1121f] text-white font-semibold px-6 py-3 rounded-full transition">
+              <TrackedLink kind="cta" source="mid_page" href={qHref} className="shrink-0 text-center bg-[#d62839] hover:bg-[#c1121f] text-white font-semibold px-6 py-3 rounded-full transition">
                 {quote.label}
               </TrackedLink>
             </aside>
@@ -490,10 +513,10 @@ export default function EnPageView({ page }: { page: EnPage }) {
               <h2 className="text-2xl font-bold mb-3">{cta.h2}</h2>
               <p className="text-white/80 mb-6 max-w-2xl mx-auto">{cta.text}</p>
               <div className="flex flex-wrap justify-center gap-3">
-                <TrackedLink kind="cta" source="footer_cta" href={qHref} className="inline-block bg-[#e63946] hover:bg-[#c1121f] text-white font-semibold px-7 py-3 rounded-full transition">
+                <TrackedLink kind="cta" source="footer_cta" href={qHref} className="inline-block bg-[#d62839] hover:bg-[#c1121f] text-white font-semibold px-7 py-3 rounded-full transition">
                   {quote.label}
                 </TrackedLink>
-                <TrackedLink kind="whatsapp" source="footer_cta" href={WHATSAPP} className="inline-block bg-green-500 hover:bg-green-400 text-white font-semibold px-7 py-3 rounded-full transition">
+                <TrackedLink kind="whatsapp" source="footer_cta" href={WHATSAPP} className="inline-block bg-green-700 hover:bg-green-800 text-white font-semibold px-7 py-3 rounded-full transition">
                   Message us on WhatsApp
                 </TrackedLink>
                 <TrackedLink kind="booking" source="footer_cta" href={bookingUrl("en", page.slug)} className="inline-block border border-white/60 hover:bg-white/10 text-white font-semibold px-7 py-3 rounded-full transition">

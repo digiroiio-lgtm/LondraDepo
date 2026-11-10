@@ -64,7 +64,7 @@ export default function FaqSection() {
       <FaqJsonLd faqs={faqs} />
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-12">
-          <p className="text-[#e63946] text-sm font-semibold uppercase tracking-widest mb-3">
+          <p className="text-[#d62839] text-sm font-semibold uppercase tracking-widest mb-3">
             SSS
           </p>
           <h2 className="text-3xl font-extrabold text-[#0b2545] mb-3">

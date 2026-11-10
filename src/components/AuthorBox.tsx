@@ -10,7 +10,7 @@ export default function AuthorBox({ updatedDate, path }: AuthorBoxProps) {
   const updated = a ? trDate(a.modified) : updatedDate;
   return (
     <div className="border border-slate-200 rounded-2xl p-6 my-10 bg-[#f6f8fb]">
-      <p className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-4">
+      <p className="text-xs font-semibold uppercase tracking-widest text-slate-600 mb-4">
         Yazar & Editör
       </p>
       <div className="flex flex-col sm:flex-row gap-5">
@@ -30,12 +30,12 @@ export default function AuthorBox({ updatedDate, path }: AuthorBoxProps) {
         </div>
         {/* Reviewer */}
         <div className="flex items-start gap-3 flex-1">
-          <div className="w-11 h-11 rounded-full bg-[#e63946] flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+          <div className="w-11 h-11 rounded-full bg-[#d62839] flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
             YB
           </div>
           <div>
             <p className="font-bold text-[#0b2545] text-sm">
-              Yusuf Barış <span className="font-normal text-slate-400 text-xs">— İnceleyen</span>
+              Yusuf Barış <span className="font-normal text-slate-500 text-xs">— İnceleyen</span>
             </p>
             <p className="text-slate-500 text-xs leading-relaxed">
               LondraDepo.com Operasyon Müdürü. Essex merkezli UK depo ve lojistik operasyonlarının yöneticisi.
@@ -44,7 +44,7 @@ export default function AuthorBox({ updatedDate, path }: AuthorBoxProps) {
         </div>
       </div>
       {updated && (
-        <p className="text-xs text-slate-400 mt-4 pt-4 border-t border-slate-200">
+        <p className="text-xs text-slate-500 mt-4 pt-4 border-t border-slate-200">
           🗓 Son güncelleme: {updated} · LondraDepo.com, Essex, United Kingdom
         </p>
       )}

@@ -201,7 +201,7 @@ export default function QuoteForm({
               href={whatsappUrl()}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-green-500 hover:bg-green-600 text-white font-extrabold py-3 px-8 rounded-full transition shadow-lg"
+              className="inline-block bg-green-700 hover:bg-green-800 text-white font-extrabold py-3 px-8 rounded-full transition shadow-lg"
             >
               WhatsApp&apos;tan da Yaz
             </a>
@@ -386,8 +386,8 @@ export default function QuoteForm({
                   key={s}
                   className={`flex items-center gap-2 cursor-pointer border rounded-full px-4 py-2 text-sm font-medium transition select-none ${
                     form.services.includes(s)
-                      ? "bg-[#e63946] border-[#e63946] text-white"
-                      : "border-slate-300 text-slate-600 hover:border-[#e63946] hover:text-[#e63946]"
+                      ? "bg-[#d62839] border-[#e63946] text-white"
+                      : "border-slate-300 text-slate-600 hover:border-[#e63946] hover:text-[#d62839]"
                   }`}
                 >
                   <input
@@ -426,7 +426,7 @@ export default function QuoteForm({
           <button
             type="submit"
             disabled={state.submitting}
-            className="w-full bg-[#e63946] hover:bg-[#c1121f] disabled:opacity-60 disabled:cursor-not-allowed text-white font-extrabold py-4 rounded-full text-base transition shadow-lg"
+            className="w-full bg-[#d62839] hover:bg-[#c1121f] disabled:opacity-60 disabled:cursor-not-allowed text-white font-extrabold py-4 rounded-full text-base transition shadow-lg"
           >
             {state.submitting ? "Gönderiliyor…" : "Teklifimi İste →"}
           </button>
@@ -445,7 +445,7 @@ export default function QuoteForm({
             </a>
           </p>
 
-          <p className="text-center text-xs text-slate-400">
+          <p className="text-center text-xs text-slate-500">
             Formu göndererek bilgilerinizin teklif hazırlamak amacıyla ekibimizle paylaşılmasını kabul etmiş olursunuz.
           </p>
         </form>

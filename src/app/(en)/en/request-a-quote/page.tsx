@@ -81,7 +81,7 @@ export default function RequestAQuotePage() {
               <ol className="space-y-4">
                 {STEPS.map(([t, d], i) => (
                   <li key={t} className="flex gap-3">
-                    <span className="text-xs font-bold text-[#e63946] mt-1">{String(i + 1).padStart(2, "0")}</span>
+                    <span className="text-xs font-bold text-[#d62839] mt-1">{String(i + 1).padStart(2, "0")}</span>
                     <div>
                       <h3 className="font-semibold text-[#0b2545]">{t}</h3>
                       <p className="text-sm text-slate-600">{d}</p>

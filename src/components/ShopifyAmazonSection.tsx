@@ -35,7 +35,7 @@ export default function ShopifyAmazonSection() {
     <section className="py-20 px-4 bg-[#f6f8fb]">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <p className="text-[#e63946] text-sm font-semibold uppercase tracking-widest mb-3">
+          <p className="text-[#d62839] text-sm font-semibold uppercase tracking-widest mb-3">
             Platform Fulfillment
           </p>
           <h2 className="text-3xl font-extrabold text-[#0b2545] mb-4">
@@ -91,7 +91,7 @@ export default function ShopifyAmazonSection() {
               href={WHATSAPP_SHOPIFY}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
+              className="inline-flex items-center gap-2 bg-[#d62839] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
             >
               Fulfillment Operasyonu Kur
             </a>

@@ -10,7 +10,8 @@ export type TrSection =
   | { type: "list"; h2: string; intro?: string; items: string[] }
   | { type: "steps"; h2: string; intro?: string; items: [string, string][] }
   | { type: "table"; h2: string; intro?: string; head: string[]; rows: string[][]; note?: string }
-  | { type: "links"; h2: string; items: { href: string; title: string; text: string; tag?: string }[] };
+  | { type: "links"; h2: string; items: { href: string; title: string; text: string; tag?: string }[] }
+  | { type: "routemap"; h2?: string };
 
 export type TrPage = {
   path: string;
@@ -73,6 +74,7 @@ export const TR_PAGES: Record<string, TrPage> = {
         ],
         note: "SS6 7FY'den liman posta kodlarına karayolu rotasıyla ölçülmüştür (10 Kasım 2026). Tır, liman kuyruğu ve yoğun saatlerde süre uzar. Limanı genellikle hat (armatör) belirler.",
       },
+      { type: "routemap" },
       {
         type: "steps",
         h2: "Thames limanlarından raflara",
@@ -142,6 +144,7 @@ export const TR_PAGES: Record<string, TrPage> = {
         ],
         note: "SS6 7FY'den IP11'e karayolu rotasıyla ölçülmüştür (10 Kasım 2026). Süreler trafiksiz araç içindir; konteyner tırları ve liman kuyrukları daha uzun sürer.",
       },
+      { type: "routemap" },
       {
         type: "text",
         h2: "Felixstowe konteynerleri için Essex deposu ne zaman mantıklı?",
@@ -725,6 +728,7 @@ export const TR_PAGES: Record<string, TrPage> = {
         ],
         note: "Depo posta kodundan her limanın posta koduna karayolu rotasıyla hesaplanmıştır (10 Kasım 2026). Süreler trafiksiz araç içindir; tır, liman kuyruğu ve yoğun saatlerde uzar.",
       },
+      { type: "routemap" },
       {
         type: "steps",
         h2: "Konteyneriniz limana geldikten sonra",

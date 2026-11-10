@@ -86,7 +86,7 @@ export default function IletisimPage() {
               >
                 <span className="text-4xl">💬</span>
                 <span className="font-bold text-green-700 text-lg">WhatsApp ile Yazın</span>
-                <span className="text-green-600 text-sm">+44 7554 195190</span>
+                <span className="text-green-700 text-sm">+44 7554 195190</span>
                 <span className="text-slate-500 text-xs">En hızlı yanıt yöntemi</span>
               </a>
 
@@ -146,7 +146,7 @@ export default function IletisimPage() {
                 href={WHATSAPP}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold px-8 py-4 rounded-full transition"
+                className="inline-flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white font-bold px-8 py-4 rounded-full transition"
               >
                 WhatsApp&apos;tan Teklif Al
               </a>

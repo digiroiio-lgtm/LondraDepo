@@ -33,7 +33,7 @@ export default function RelatedArticles({ articles }: RelatedArticlesProps) {
               <p className="font-bold text-[#0b2545] text-sm mt-2 group-hover:underline leading-snug">
                 {a.title}
               </p>
-              <p className="text-slate-400 text-xs mt-1">⏱ {a.readTime} okuma</p>
+              <p className="text-slate-500 text-xs mt-1">⏱ {a.readTime} okuma</p>
             </div>
             <span className="text-slate-300 group-hover:text-[#0b2545] transition text-lg self-center">→</span>
           </Link>

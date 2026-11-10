@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import RouteMap from "@/components/visual/RouteMap";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -144,7 +145,7 @@ export default function EssexDepoPage() {
                 href={WHATSAPP}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold px-8 py-4 rounded-full transition"
+                className="inline-flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white font-bold px-8 py-4 rounded-full transition"
               >
                 WhatsApp ile Teklif Al
               </a>
@@ -160,6 +161,14 @@ export default function EssexDepoPage() {
             </div>
           </div>
         </section>
+
+        <section className="py-12 px-4 bg-white">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-2xl font-extrabold text-[#0b2545] mb-4">Essex depomuzdan Londra ve limanlara mesafeler</h2>
+            <RouteMap lang="tr" />
+          </div>
+        </section>
+
 
         <script
           type="application/ld+json"

@@ -167,10 +167,10 @@ export default function CostCalculator({ lang = "en" }: { lang?: "en" | "tr" }) 
         </div>
         <p className="mt-4 text-xs text-white/60">{t.note}</p>
         <div className="mt-auto pt-6 flex flex-col gap-3">
-          <Link href={quoteHref} data-tracked="1" onClick={() => trackCtaClick(quoteHref, `calculator_${lang}`)} className="text-center bg-[#e63946] hover:bg-[#c1121f] text-white font-semibold px-6 py-3 rounded-full transition">
+          <Link href={quoteHref} data-tracked="1" onClick={() => trackCtaClick(quoteHref, `calculator_${lang}`)} className="text-center bg-[#d62839] hover:bg-[#c1121f] text-white font-semibold px-6 py-3 rounded-full transition">
             {t.cta}
           </Link>
-          <a href={waHref} target="_blank" rel="noopener noreferrer" data-tracked="1" onClick={() => trackWhatsappClick(`calculator_${lang}`)} className="text-center bg-green-500 hover:bg-green-400 text-white font-semibold px-6 py-3 rounded-full transition">
+          <a href={waHref} target="_blank" rel="noopener noreferrer" data-tracked="1" onClick={() => trackWhatsappClick(`calculator_${lang}`)} className="text-center bg-green-700 hover:bg-green-800 text-white font-semibold px-6 py-3 rounded-full transition">
             {t.wa}
           </a>
         </div>

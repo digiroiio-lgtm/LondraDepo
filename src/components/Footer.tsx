@@ -65,7 +65,7 @@ export default function Footer() {
               href={WHATSAPP}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white font-semibold px-5 py-3 rounded-full transition w-fit"
+              className="flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white font-semibold px-5 py-3 rounded-full transition w-fit"
             >
               WhatsApp&apos;tan Teklif Alın
             </a>
@@ -79,7 +79,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-white/10 pt-6 text-center text-xs text-slate-500 space-y-2">
+      <div className="border-t border-white/10 pt-6 text-center text-xs text-slate-400 space-y-2">
         <p>
           © {new Date().getFullYear()} LondraDepo.com — Londra depo, İngiltere
           warehouse ve İngiltere fulfillment çözümleri. Tüm hakları saklıdır.

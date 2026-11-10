@@ -452,6 +452,7 @@ export const growthPagesP2: EnPage[] = [
         ],
         note: "Calculated by road routing between the warehouse postcode and each port's postcode (10 November 2026). Times are for a car in free-flowing traffic; HGVs, port queues and peak traffic take longer.",
       },
+      { type: "routemap" },
       {
         type: "steps",
         h2: "What happens after your container arrives at the port",
@@ -660,6 +661,7 @@ export const portPages: EnPage[] = [
         ],
         note: "Road routing from SS6 7FY to each port postcode (10 November 2026). HGVs, port queues and peak traffic take longer. Your shipping line usually decides the port.",
       },
+      { type: "routemap" },
       {
         type: "steps",
         h2: "From the Thames ports to stock on our shelves",
@@ -743,6 +745,7 @@ export const portPages: EnPage[] = [
         ],
         note: "Road distance by routing from SS6 7FY to IP11 (10 November 2026). Times are for a car in free-flowing traffic; container lorries and port queues take longer.",
       },
+      { type: "routemap" },
       {
         type: "text",
         h2: "When an Essex warehouse makes sense for Felixstowe containers",

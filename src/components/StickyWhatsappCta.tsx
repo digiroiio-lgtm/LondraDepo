@@ -17,7 +17,7 @@ export default function StickyWhatsappCta({ lang = "tr" }: { lang?: "tr" | "en" 
       aria-label={t.aria}
       data-tracked="1"
       onClick={() => trackWhatsappClick("sticky_cta")}
-      className="fixed bottom-6 right-5 z-50 flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold text-sm px-4 py-3 rounded-full shadow-xl transition"
+      className="fixed bottom-6 right-5 z-50 flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white font-bold text-sm px-4 py-3 rounded-full shadow-xl transition"
     >
       <svg
         className="w-6 h-6 fill-white flex-shrink-0"

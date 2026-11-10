@@ -13,7 +13,7 @@ interface CaseHeroProps {
 
 export default function CaseHero({
   industry,
-  industryColor = "text-[#e63946] bg-red-50",
+  industryColor = "text-[#d62839] bg-red-50",
   brand,
   title,
   subtitle,

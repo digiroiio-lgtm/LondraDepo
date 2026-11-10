@@ -1,4 +1,5 @@
 import FaqJsonLd from "@/components/FaqJsonLd";
+import RouteMap from "@/components/visual/RouteMap";
 import TrClusterNav from "@/components/TrClusterNav";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -131,7 +132,7 @@ export default function LondraDepoPage() {
             </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4 leading-tight">
               Londra Depo:{" "}
-              <span className="text-[#e63946]">M25 Üzerinden</span>{" "}
+              <span className="text-[#d62839]">M25 Üzerinden</span>{" "}
               UK Dağıtım
             </h1>
             <p className="text-slate-300 text-lg leading-relaxed max-w-3xl mb-4">
@@ -147,7 +148,7 @@ export default function LondraDepoPage() {
                 href={WHATSAPP}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
+                className="inline-flex items-center justify-center gap-2 bg-[#d62839] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
               >
                 Depo Teklifi Al
               </a>
@@ -160,6 +161,14 @@ export default function LondraDepoPage() {
             </div>
           </div>
         </section>
+
+        <section className="py-12 px-4 bg-white">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-2xl font-extrabold text-[#0b2545] mb-4">Depomuz Londra&apos;ya ve limanlara ne kadar uzak?</h2>
+            <RouteMap lang="tr" />
+          </div>
+        </section>
+
 
         {/* Location note */}
         <section className="py-10 px-4 bg-[#f6f8fb]">
@@ -248,7 +257,7 @@ export default function LondraDepoPage() {
               href={WHATSAPP}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
+              className="inline-flex items-center gap-2 bg-[#d62839] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
             >
               Londra Depo Teklifi Al
             </a>

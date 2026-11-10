@@ -85,6 +85,7 @@ export const servicePages: EnPage[] = [
       "Goods-in, pallet and carton storage, Mintsoft WMS, pick and pack, UK delivery",
     ],
     sections: [
+      { type: "routemap" },
       {
         type: "text",
         h2: "An Essex warehouse serving London",
@@ -725,6 +726,7 @@ export const servicePages: EnPage[] = [
       "Direct receiving of FCL and LCL containers",
     ],
     sections: [
+      { type: "routemap" },
       {
         type: "text",
         h2: "Location and access",

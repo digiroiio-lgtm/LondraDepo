@@ -34,7 +34,7 @@ export default function CookiePolicyPage() {
         <article className="py-14 px-4 bg-white">
           <div className="max-w-3xl mx-auto prose prose-slate max-w-none">
             <h1 className="text-3xl font-extrabold text-[#0b2545] mb-2">Çerez Politikası</h1>
-            <p className="text-sm text-slate-400 mb-8">Son güncelleme: {LAST_UPDATED}</p>
+            <p className="text-sm text-slate-500 mb-8">Son güncelleme: {LAST_UPDATED}</p>
 
             <section className="mb-8">
               <h2 className="text-xl font-bold text-[#0b2545] mb-3">1. Çerezler Nedir?</h2>
@@ -154,7 +154,7 @@ export default function CookiePolicyPage() {
               <h2 className="text-xl font-bold text-[#0b2545] mb-3">7. İletişim</h2>
               <p className="text-slate-600 leading-relaxed">
                 Çerez politikamız hakkında sorularınız için{" "}
-                <Link href="/iletisim" className="text-[#0b2545] underline hover:text-[#e63946] transition">
+                <Link href="/iletisim" className="text-[#0b2545] underline hover:text-[#d62839] transition">
                   iletişim sayfamızı
                 </Link>{" "}
                 ziyaret edebilir veya WhatsApp üzerinden bize ulaşabilirsiniz.

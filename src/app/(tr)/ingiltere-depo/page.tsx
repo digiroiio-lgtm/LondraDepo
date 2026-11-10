@@ -1,4 +1,5 @@
 import FaqJsonLd from "@/components/FaqJsonLd";
+import RouteMap from "@/components/visual/RouteMap";
 import TrClusterNav from "@/components/TrClusterNav";
 import TeamQuote from "@/components/TeamQuote";
 import type { Metadata } from "next";
@@ -158,7 +159,7 @@ export default function IngiltereDepoPage() {
                 href={WHATSAPP}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full text-base transition shadow-lg"
+                className="inline-flex items-center justify-center gap-2 bg-[#d62839] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full text-base transition shadow-lg"
               >
                 Depo Teklifi Al
               </a>
@@ -184,7 +185,7 @@ export default function IngiltereDepoPage() {
         {/* Warehouse Photos */}
         <section className="py-10 px-4 bg-[#f6f8fb]">
           <div className="max-w-6xl mx-auto">
-            <p className="text-center text-sm font-semibold text-slate-500 uppercase tracking-widest mb-6">
+            <p className="text-center text-sm font-semibold text-slate-600 uppercase tracking-widest mb-6">
               Essex Depo — Unit 19 Arterial Park, Rayleigh
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -303,6 +304,9 @@ export default function IngiltereDepoPage() {
             </div>
           </div>
         </section>
+        <section className="pb-12 px-4 bg-white">
+          <div className="max-w-3xl mx-auto"><RouteMap lang="tr" /></div>
+        </section>
 
         {/* Proof: case studies */}
         <section className="py-16 px-4 bg-[#f6f8fb]">
@@ -316,7 +320,7 @@ export default function IngiltereDepoPage() {
                 { href: "/case-studies/uk-auto-parts-warehouse", tag: "Otomotiv", title: "OEM yedek parça", text: "Palet ve raf depolama, hasar izleme ve UK geneli dağıtım." },
               ].map((c) => (
                 <Link key={c.href} href={c.href} className="block bg-white border border-slate-200 rounded-2xl p-6 hover:border-[#0b2545] transition">
-                  <span className="text-xs font-semibold text-[#e63946]">{c.tag}</span>
+                  <span className="text-xs font-semibold text-[#d62839]">{c.tag}</span>
                   <h3 className="font-bold text-[#0b2545] mt-1 mb-2">{c.title}</h3>
                   <p className="text-slate-600 text-sm leading-relaxed">{c.text}</p>
                 </Link>
@@ -392,7 +396,7 @@ export default function IngiltereDepoPage() {
                 href={WHATSAPP}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
+                className="inline-flex items-center justify-center gap-2 bg-[#d62839] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
               >
                 Teklif Al
               </a>

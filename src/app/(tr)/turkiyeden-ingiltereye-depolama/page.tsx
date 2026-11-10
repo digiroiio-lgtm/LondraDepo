@@ -158,7 +158,7 @@ export default function TurkiyeILandingPage() {
                 href={WHATSAPP}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full text-base transition shadow-lg"
+                className="inline-flex items-center justify-center gap-2 bg-[#d62839] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full text-base transition shadow-lg"
               >
                 Teklif Al
               </a>
@@ -225,7 +225,7 @@ export default function TurkiyeILandingPage() {
               </a>
             </div>
             <div className="mt-10 lg:mt-0">
-              <h3 className="text-sm font-semibold text-slate-500 uppercase tracking-wide mb-4">
+              <h3 className="text-sm font-semibold text-slate-600 uppercase tracking-wide mb-4">
                 Kapsamımızdaki hizmetler:
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -293,7 +293,7 @@ export default function TurkiyeILandingPage() {
                 href={WHATSAPP}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
+                className="inline-flex items-center justify-center gap-2 bg-[#d62839] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
               >
                 Teklif Al
               </a>

@@ -17,8 +17,8 @@ export type PageKind = "home" | "service" | "article" | "case" | "hub" | "contac
 export type EnPage = {
   /** Public path, e.g. "/en/uk-warehousing". */
   slug: string;
-  /** Turkish counterpart path for reciprocal hreflang. */
-  tr: string;
+  /** Turkish counterpart path for reciprocal hreflang. Omit for English-only pages (self en alternate only). */
+  tr?: string;
   kind: PageKind;
   /** <title>; the brand suffix is appended automatically. */
   title: string;

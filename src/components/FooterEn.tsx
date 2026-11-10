@@ -7,6 +7,8 @@ const TEL = "tel:+447554195190";
 
 const services = [
   ["/en/uk-warehousing", "UK Warehousing"],
+  ["/en/uk-import-logistics", "UK Import Logistics"],
+  ["/en/container-unloading", "Container Unloading"],
   ["/en/london-warehousing", "London Warehousing"],
   ["/en/pallet-storage", "Pallet Storage"],
   ["/en/storage-services", "Storage Services"],
@@ -26,6 +28,8 @@ const services = [
 const company = [
   ["/en/about-us", "About Us"],
   ["/en/essex-warehouse", "Essex Warehouse"],
+  ["/en/uk-market-entry", "UK Market Entry"],
+  ["/en/industries/food-packaging", "Packaging & Catering Supplies"],
   ["/en/uk-warehousing-benefits", "Why a UK Warehouse"],
   ["/en/uk-warehousing-pricing", "Pricing"],
   ["/en/case-studies", "Case Studies"],

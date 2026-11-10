@@ -73,7 +73,7 @@ export const corePages: EnPage[] = [
       { q: "Can you fulfil Shopify and Amazon orders?", a: "Yes. We store stock and fulfil orders for businesses selling on Shopify and Amazon (FBM), and prepare stock for Amazon FBA. LondraDepo is not an official Shopify or Amazon partner." },
       { q: "Is there a minimum volume?", a: "There is no fixed minimum pallet quantity. Businesses can start with a small trial volume and scale up; acceptance terms are confirmed at quotation stage." },
     ],
-    related: ["/en/uk-warehousing", "/en/uk-fulfilment", "/en/uk-warehousing-pricing", "/en/case-studies"],
+    related: ["/en/uk-warehousing", "/en/uk-import-logistics", "/en/container-unloading", "/en/uk-fulfilment", "/en/uk-market-entry", "/en/uk-warehousing-pricing", "/en/case-studies"],
     cta: { h2: "Plan your UK operation", text: "Tell us your product type, estimated pallets or cartons, monthly orders and sales channels, and we will prepare a quote." },
   },
   {
@@ -217,7 +217,7 @@ export const corePages: EnPage[] = [
       { q: "Can I start with a small volume?", a: "Yes. Pallet-based and part-load models are accepted, and there is no full-truckload requirement." },
       { q: "Do you help with UK labelling compliance?", a: "Depending on the product group, we can guide you on English labelling, UK market requirements and operational suitability. Legal compliance of the product remains the seller's responsibility." },
     ],
-    related: ["/en/uk-warehousing-pricing", "/en/pallet-storage", "/en/uk-customs-clearance", "/en/uk-warehousing"],
+    related: ["/en/uk-market-entry", "/en/uk-warehousing-pricing", "/en/pallet-storage", "/en/uk-import-logistics", "/en/uk-warehousing"],
     cta: { h2: "Start your UK operation", text: "Share your product and volumes and we will suggest the simplest way to start." },
   },
   {

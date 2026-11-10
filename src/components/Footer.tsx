@@ -44,6 +44,7 @@ export default function Footer() {
             <li><a href="/shopify-ingiltere-depo" className="hover:text-white transition">Shopify Fulfillment</a></li>
             <li><a href="/amazon-fulfillment" className="hover:text-white transition">Amazon Fulfillment</a></li>
             <li><a href="/amazon-prep-uk" className="hover:text-white transition">Amazon Prep UK</a></li>
+            <li><a href="/amazon-ingiltere-depo-konumlari" className="hover:text-white transition">Amazon Depo Konumları</a></li>
           </ul>
         </div>
 

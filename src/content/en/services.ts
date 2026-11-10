@@ -3,6 +3,40 @@ import type { EnPage } from "./types";
 const NOT_PARTNER_SHOPIFY = "LondraDepo is not an official Shopify partner. We provide storage and fulfilment for businesses that sell through Shopify.";
 const NOT_PARTNER_AMAZON = "LondraDepo is not an official Amazon partner. We provide independent storage and fulfilment for businesses that sell on Amazon.";
 
+// Amazon inbound rules below are quoted from Amazon Freight's UK guidance (Dec 2025). Carton limits live in
+// Seller Central (login only), so no carton figures are stated. Never claim partnered-carrier or Carrier Central status.
+const AMAZON_SOURCES = [
+  { label: "Amazon Freight: UK LTL to Amazon FCs, shipper's checklist (Dec 2025)", href: "https://freight.amazon.co.uk/newsroom/uk-ltl-amazon-fcs-checklist" },
+  { label: "Amazon Freight: pallet and site prep, dimensions, wrapping and labels (Dec 2025)", href: "https://freight.amazon.co.uk/newsroom/pallet-site-prep-dimensions-wrapping-labels-tail-lift-alternatives" },
+];
+
+const AMAZON_SHIPMENT_TYPES = {
+  type: "table" as const,
+  h2: "Parcel, pallet or full truck: getting prepared stock into Amazon UK",
+  intro: "Once stock is prepared in Essex it goes to the fulfilment centre named in your shipment plan in one of three ways.",
+  head: ["Option", "What it means", "Usually suits"],
+  rows: [
+    ["Small parcel delivery (SPD)", "Individually labelled cartons sent by a parcel carrier", "A few cartons, or a first test shipment"],
+    ["Less-than-truckload (LTL)", "Pallets that share a trailer with other shippers' freight; Amazon Freight describes LTL as usually one to six pallets", "Regular, modest pallet volumes"],
+    ["Full truckload (FTL)", "A dedicated trailer to the fulfilment centre", "Loads that consistently fill, or nearly fill, a trailer"],
+  ],
+  note: "LTL and FTL definitions from Amazon Freight's UK guidance (December 2025). Amazon decides the destination fulfilment centre in the shipment plan.",
+};
+
+const AMAZON_PALLET_RULES = {
+  type: "list" as const,
+  h2: "Amazon UK pallet rules to plan for",
+  intro: "Amazon Freight's UK guidance sets out these points for pallet deliveries into Amazon fulfilment centres:",
+  items: [
+    "Footprint: most Amazon UK fulfilment centres accept the UK standard pallet (1200 × 1000 mm) and the Euro pallet (1200 × 800 mm); confirm with the specific centre.",
+    "Height: typically capped at 1.8 metres including the pallet base.",
+    "Weight: usually up to 1,000 kg per pallet including the pallet.",
+    "Labels: each carton carries its Amazon shipment label and each pallet a visible label with the shipment reference, ideally on two adjacent sides.",
+    "Appointment: delivery is booked into a slot, and the load, labels and paperwork must match the booking or a redelivery charge can apply.",
+  ],
+  outro: "Carton weight and size limits are set in Amazon Seller Central and change from time to time. We check your cartons against the current requirements before anything leaves our warehouse.",
+};
+
 const ORDER_STEPS = [
   { title: "Order placed", text: "A customer orders from your online store or marketplace." },
   { title: "Into the WMS", text: "The order is passed to our warehouse management system (Mintsoft)." },
@@ -196,7 +230,7 @@ export const servicePages: EnPage[] = [
       { q: "How is pick and pack priced?", a: "Pricing depends on order volume, product type and packing requirements. Contact us on WhatsApp for a tailored quote." },
       { q: "Can you pick and pack wholesale as well as online orders?", a: "Yes. The same stock can be picked for parcel orders to online shoppers and for pallet or carton orders to wholesale and trade customers, so you do not split inventory between providers." },
     ],
-    related: ["/en/ecommerce-fulfilment", "/en/uk-ecommerce-logistics", "/en/uk-fulfilment", "/en/uk-warehousing-pricing"],
+    related: ["/en/shopify-fulfilment-uk", "/en/ecommerce-fulfilment", "/en/uk-ecommerce-logistics", "/en/uk-fulfilment", "/en/uk-warehousing-pricing"],
   },
   {
     slug: "/en/shopify-fulfilment-uk",
@@ -204,12 +238,12 @@ export const servicePages: EnPage[] = [
     kind: "service",
     serviceType: "Shopify fulfilment",
     modified: "2026-11-10",
-    title: "Shopify Fulfilment UK: Fulfillment Warehouse in Essex",
+    title: "Shopify Fulfillment UK: Shopify Fulfilment in Essex",
     description:
-      "Shopify fulfilment in the UK: we store your stock in Essex, pick, pack and ship Shopify orders to UK customers and handle returns. Storage from £3.50 + VAT per pallet per week.",
+      "Shopify fulfillment UK: we store stock in Essex, pick, pack and ship Shopify orders to UK customers and handle returns. Storage from £3.50 + VAT per pallet a week.",
     label: "Shopify Fulfilment UK",
     eyebrow: "Shopify fulfillment · UK warehouse",
-    h1: "Shopify Fulfilment in the UK",
+    h1: "Shopify Fulfilment UK: Fulfillment for Shopify Stores",
     lead:
       "Shopify fulfilment in the UK means a third-party warehouse holds your stock and ships your Shopify orders to UK customers for you. LondraDepo does this from Rayleigh, Essex, near London: we receive and store your stock, pick and pack each order, dispatch it to the customer and process returns, so you can sell to the UK from any country without opening your own UK warehouse. Storage starts from £3.50 + VAT per pallet per week. " + NOT_PARTNER_SHOPIFY,
     facts: [
@@ -276,6 +310,31 @@ export const servicePages: EnPage[] = [
         ],
       },
       {
+        type: "table",
+        h2: "UK fulfilment versus shipping Shopify orders from abroad",
+        intro: "Many Shopify stores selling to the UK start by posting orders from their home country. Holding stock in a UK warehouse changes four things:",
+        head: ["", "UK warehouse (LondraDepo)", "Shipping each order from abroad"],
+        rows: [
+          ["Customs", "Stock is imported in bulk and cleared once, through Arca Trade Group or your broker", "Every parcel crosses a border and needs customs paperwork"],
+          ["Delivery to the customer", "Domestic UK parcel services from Essex", "International parcel services with longer transit"],
+          ["Returns", "Returned to Essex, checked and restocked or set aside as you instruct", "Sent back across the border, or written off"],
+          ["Other channels", "The same stock also serves Amazon FBA prep, FBM and wholesale orders", "Separate stock is usually needed for each channel"],
+        ],
+      },
+      {
+        type: "list",
+        h2: "What to send us for a Shopify fulfilment quote",
+        items: [
+          "Monthly order volume, and how it changes in peak months",
+          "Number of SKUs and the average number of items per order",
+          "Product sizes and weights, and any fragile or special-packaging items",
+          "How stock will arrive: pallets, cartons or a container, and from which country",
+          "Where your customers are, and the delivery services you want to offer",
+          "Expected return rate and what should happen to returned items",
+        ],
+        outro: "There is no fixed minimum: some clients start with a single trial pallet and scale up. We confirm the Shopify order import and integration scope before quoting.",
+      },
+      {
         type: "links",
         h2: "Ecommerce fulfilment in practice",
         items: [
@@ -299,6 +358,8 @@ export const servicePages: EnPage[] = [
       { q: "Is LondraDepo an official Shopify partner?", a: "No. LondraDepo is not an official Shopify partner. We provide fulfilment and storage support to businesses selling through Shopify." },
       { q: "Are Shopify orders processed automatically?", a: "We recommend discussing order import and integration options with us. We plan the operational process together and confirm the automation scope before quoting." },
       { q: "Can you fulfil Shopify and Amazon orders from the same stock?", a: "Yes. The same UK stock can serve Shopify orders, Amazon FBA prep or FBM orders and wholesale pallet orders, so you do not need separate warehouses for each channel." },
+      { q: "Is there a minimum order volume for Shopify fulfilment?", a: "No. LondraDepo has no fixed minimum for Shopify fulfilment: some clients start with a single trial pallet in our Essex warehouse and scale up, with storage from £3.50 + VAT per pallet per week and fulfilment quoted on your order profile." },
+      { q: "Why hold Shopify stock in the UK instead of shipping from abroad?", a: "With stock in LondraDepo's Essex warehouse, goods clear UK customs once in bulk, orders go out on domestic UK parcel services and returns come back to Essex, instead of every parcel crossing a border and needing its own customs paperwork." },
       { q: "My Shopify store is registered outside the UK. Can I sell to UK customers?", a: "Yes. You can sell to the UK with a store registered in another country. You will need to hold stock in a UK warehouse and meet the customs requirements for importing goods into the UK." },
     ],
     related: ["/en/ecommerce-fulfilment", "/en/pick-and-pack", "/en/uk-ecommerce-logistics", "/en/amazon-fulfilment-uk", "/en/uk-warehousing-pricing", "/en/case-studies/cruyff-uk-fulfilment"],
@@ -310,9 +371,9 @@ export const servicePages: EnPage[] = [
     modified: "2026-11-10",
     kind: "service",
     serviceType: "Amazon FBM fulfilment",
-    title: "Amazon FBM Fulfilment UK: Warehouse for Amazon Sellers",
+    title: "Amazon FBM Fulfilment UK: Essex Seller Warehouse",
     description:
-      "UK warehousing and order fulfilment for Amazon sellers using Fulfilled by Merchant (FBM), plus FBA prep. Compare FBM and FBA and run Amazon UK from our Essex warehouse.",
+      "UK warehouse for Amazon sellers: FBM pick, pack and dispatch plus FBA prep from Essex, near London and Amazon LCY2 Tilbury. No fixed minimum; start with one pallet.",
     label: "Amazon Seller Warehousing",
     h1: "Amazon FBM Fulfilment: UK Warehouse for Amazon Sellers",
     lead:
@@ -364,7 +425,7 @@ export const servicePages: EnPage[] = [
       { q: "Can I meet Amazon's FBM performance requirements?", a: "Amazon sets FBM delivery time and performance requirements. Fulfilling from a UK warehouse helps you meet UK delivery times, but the final performance assessment is made by Amazon." },
       { q: "Can the same stock serve Amazon FBM and my other channels?", a: "Yes. Stock held at LondraDepo can fulfil Amazon FBM orders, be prepared and sent into Amazon FBA, and serve Shopify or wholesale orders, all from one UK warehouse in Essex." },
     ],
-    related: ["/en/amazon-fulfilment-uk", "/en/amazon-prep-uk", "/en/uk-warehousing", "/en/blog/amazon-fba-vs-uk-fulfilment"],
+    related: ["/en/amazon-fulfilment-uk", "/en/amazon-prep-uk", "/en/amazon-uk-fulfilment-centres", "/en/uk-warehousing", "/en/blog/amazon-fba-vs-uk-fulfilment"],
   },
   {
     slug: "/en/uk-fulfilment",
@@ -405,7 +466,7 @@ export const servicePages: EnPage[] = [
       { q: "Is there a minimum stock level for fulfilment?", a: "There is no fixed minimum stock requirement. We offer flexible solutions based on your needs." },
       { q: "How is UK fulfilment priced?", a: "Storage starts from £3.50 + VAT per pallet per week. Goods-in, pick and pack, packaging, delivery and returns are quoted for your products, monthly orders and average items per order." },
     ],
-    related: ["/en/blog/how-to-choose-a-uk-3pl", "/en/pallet-storage", "/en/amazon-prep-uk", "/en/uk-warehousing-benefits", "/en/blog/what-is-uk-fulfilment"],
+    related: ["/en/shopify-fulfilment-uk", "/en/blog/how-to-choose-a-uk-3pl", "/en/pallet-storage", "/en/amazon-prep-uk", "/en/uk-warehousing-benefits", "/en/blog/what-is-uk-fulfilment"],
   },
   {
     slug: "/en/pallet-storage",
@@ -462,9 +523,10 @@ export const servicePages: EnPage[] = [
     tr: "/amazon-prep-uk",
     kind: "service",
     serviceType: "Amazon FBA prep",
-    title: "Amazon Prep UK – FBA Prep Service in Essex",
+    modified: "2026-11-10",
+    title: "Amazon FBA Prep UK: Essex Prep Centre, No Minimum",
     description:
-      "Amazon FBA prep in the UK: FNSKU labelling, FBA compliance checks, packing, shipment plan support and delivery to Amazon UK fulfilment centres from our Essex warehouse.",
+      "Amazon FBA prep in Essex: FNSKU labelling, checks, packing and parcel or pallet delivery to Amazon UK, 16 miles from Amazon LCY2 Tilbury. No fixed minimum.",
     label: "Amazon Prep UK",
     h1: "Amazon Prep UK: FBA Prep Service",
     lead:
@@ -474,6 +536,8 @@ export const servicePages: EnPage[] = [
       "Typical UK market rate for standard prep: around £0.30–£0.60 per unit (indicative, not our quote)",
       "Usually 2–5 working days from completed prep to arrival at Amazon",
       "Focus on Amazon UK (amazon.co.uk); support available for Amazon EU marketplaces",
+      "Amazon LCY2 Tilbury: ~16 miles by road; Amazon LCY1 London: ~32 miles",
+      "No fixed minimum: start with a trial pallet or a few cartons",
     ],
     sections: [
       {
@@ -488,7 +552,27 @@ export const servicePages: EnPage[] = [
           { title: "Tracking and reporting", text: "Check-in at the Amazon fulfilment centre is followed up after dispatch." },
         ],
       },
+      AMAZON_SHIPMENT_TYPES,
+      AMAZON_PALLET_RULES,
+      {
+        type: "text",
+        h2: "How we handle the Amazon leg from Essex",
+        paras: [
+          "We receive your stock, check it against the shipment plan, apply FNSKU and carton labels, and build pallets to Amazon's footprint, height and weight limits. Prepared cartons or pallets are then sent by parcel or pallet carrier to the fulfilment centre Amazon assigns, and we follow up check-in after dispatch.",
+          "Stock does not all have to go to Amazon at once. You can keep the balance in our warehouse from £3.50 + VAT per pallet per week and send further batches as your Amazon inventory sells, which keeps slow-moving units out of Amazon's storage fees. If Amazon splits a shipment plan across several fulfilment centres, we label and send each part separately.",
+        ],
+      },
+      {
+        type: "links",
+        h2: "Plan your Amazon shipment",
+        items: [
+          { href: "/en/amazon-uk-fulfilment-centres", title: "Amazon UK fulfilment centres", text: "Codes, towns and road distances from our warehouse, from LCY2 Tilbury to MAN1.", tag: "Guide" },
+          { href: "/en/blog/amazon-fba-prep-checklist", title: "FBA prep checklist", text: "Every step before stock leaves for Amazon.", tag: "Checklist" },
+          { href: "/en/container-arrival-planner", title: "Container arrival planner", text: "Dated plan from UK port to our warehouse, before prep starts.", tag: "Free tool" },
+        ],
+      },
       { type: "checklist", variant: "fba" },
+      { type: "sources", h2: "Sources", items: AMAZON_SOURCES },
     ],
     faqs: [
       { q: "Is Amazon FBA prep free, and how is it priced?", a: "No. FNSKU labelling, product checks, polybagging, packing, carton and pallet preparation are charged according to need. Standard prep in the UK market is often around £0.30–£0.60 per unit; this is not a LondraDepo quote. We set the exact fee by product type, quantity and scope." },
@@ -496,8 +580,11 @@ export const servicePages: EnPage[] = [
       { q: "How long does it take to get stock to Amazon UK?", a: "Once prep is complete in our Essex warehouse, products usually reach the Amazon fulfilment centre within 2–5 working days." },
       { q: "Which Amazon marketplaces do you serve?", a: "Our main focus is prep and dispatch for Amazon UK (amazon.co.uk). We also provide support for Amazon EU marketplaces." },
       { q: "Do you do FNSKU labelling?", a: "Yes. FNSKU and barcode labelling to Amazon's requirements is part of LondraDepo's Amazon prep service in Essex, along with covering old barcodes, protective packing and carton preparation before delivery to Amazon UK." },
+      { q: "What pallet size and height does Amazon UK accept?", a: "Amazon Freight's UK guidance says most Amazon UK fulfilment centres accept the UK standard pallet (1200 × 1000 mm) and the Euro pallet (1200 × 800 mm), with height typically capped at 1.8 metres including the pallet and weight usually up to 1,000 kg. LondraDepo builds pallets to these limits in Essex." },
+      { q: "Can you hold my stock and send it to Amazon in smaller batches?", a: "Yes. LondraDepo can store the balance of your stock in Essex from £3.50 + VAT per pallet per week and prepare further batches for Amazon as your inventory sells, so slow-moving units are not left in Amazon's storage." },
+      { q: "Should I send stock to Amazon by parcel or by pallet?", a: "It depends on volume. A few cartons usually go as small parcel delivery (SPD); Amazon Freight describes less-than-truckload (LTL) as usually one to six pallets; larger regular loads can justify a full truck. We advise on the option for each shipment plan." },
     ],
-    related: ["/en/blog/amazon-fba-prep-checklist", "/en/blog/amazon-prep-uk-guide", "/en/amazon-seller-warehousing-uk", "/en/amazon-fulfilment-uk", "/en/essex-warehouse"],
+    related: ["/en/amazon-uk-fulfilment-centres", "/en/blog/amazon-fba-prep-checklist", "/en/blog/amazon-prep-uk-guide", "/en/amazon-seller-warehousing-uk", "/en/amazon-fulfilment-uk", "/en/essex-warehouse"],
   },
   {
     slug: "/en/storage-services",
@@ -693,9 +780,9 @@ export const servicePages: EnPage[] = [
     modified: "2026-11-10",
     kind: "service",
     serviceType: "Amazon fulfilment",
-    title: "Amazon Fulfilment UK: FBA Prep or FBM?",
+    title: "Amazon Fulfilment UK: FBA Prep, FBM, Storage",
     description:
-      "Amazon fulfilment support in the UK: secure stock storage, order management, pick and pack, Amazon-compliant labelling, Mintsoft WMS tracking and UK delivery, plus FBA prep.",
+      "Amazon fulfilment in the UK: FBA prep, FBM order fulfilment, storage from £3.50 + VAT per pallet a week, Mintsoft WMS and customs via Arca. No fixed minimum.",
     label: "Amazon Fulfilment UK",
     h1: "Amazon Fulfilment in the UK: FBA Prep or FBM?",
     lead:
@@ -713,6 +800,17 @@ export const servicePages: EnPage[] = [
           { title: "UK delivery", text: "Dispatch of orders to UK customers." },
         ],
       },
+      AMAZON_SHIPMENT_TYPES,
+      {
+        type: "links",
+        h2: "Next steps for Amazon sellers",
+        items: [
+          { href: "/en/amazon-prep-uk", title: "Amazon FBA prep", text: "FNSKU labelling, packing and pallet rules for Amazon UK.", tag: "Service" },
+          { href: "/en/amazon-uk-fulfilment-centres", title: "Amazon UK fulfilment centres", text: "Where Amazon's UK sites are and how far they are from us.", tag: "Guide" },
+          { href: "/en/uk-customs-clearance", title: "UK customs clearance", text: "Import declarations and port collection through Arca Trade Group.", tag: "Service" },
+        ],
+      },
+      { type: "sources", h2: "Sources", items: AMAZON_SOURCES },
     ],
     faqs: [
       { q: "Is LondraDepo an official Amazon partner?", a: "No. LondraDepo is not an official Amazon partner. We provide stock storage and fulfilment support to businesses selling on Amazon." },
@@ -721,7 +819,7 @@ export const servicePages: EnPage[] = [
       { q: "Can you send prepared stock into Amazon UK fulfilment centres?", a: "Yes. LondraDepo labels and packs your stock to Amazon's requirements in Essex and delivers it to the Amazon UK fulfilment centre assigned in your shipment plan." },
       { q: "Can I use FBA and FBM at the same time?", a: "Yes. You can keep part of your stock at LondraDepo for FBM and other channels and send prepared batches into Amazon FBA, so you are not dependent on a single fulfilment model." },
     ],
-    related: ["/en/amazon-prep-uk", "/en/amazon-seller-warehousing-uk", "/en/blog/amazon-fba-vs-uk-fulfilment"],
+    related: ["/en/shopify-fulfilment-uk", "/en/amazon-prep-uk", "/en/amazon-seller-warehousing-uk", "/en/amazon-uk-fulfilment-centres", "/en/blog/amazon-fba-vs-uk-fulfilment"],
   },
   {
     slug: "/en/essex-warehouse",

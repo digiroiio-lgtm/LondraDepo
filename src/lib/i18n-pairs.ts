@@ -49,6 +49,7 @@ export const PAIRS: ReadonlyArray<readonly [tr: string, en: string]> = [
   ["/konteyner-varis-planlayici", "/en/container-arrival-planner"],
   ["/london-gateway-tilbury-depo", "/en/london-gateway-tilbury-warehousing"],
   ["/felixstowe-liman-depo", "/en/felixstowe-port-warehousing"],
+  ["/amazon-ingiltere-depo-konumlari", "/en/amazon-uk-fulfilment-centres"],
   ["/konteyner-bosaltma", "/en/container-unloading"],
   ["/otomotiv-yedek-parca-depolama", "/en/industries/automotive-parts"],
   ["/sektorler", "/en/industries"],

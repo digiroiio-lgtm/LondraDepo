@@ -21,6 +21,7 @@ const services = [
   ["/en/amazon-fulfilment-uk", "Amazon Fulfilment UK"],
   ["/en/amazon-seller-warehousing-uk", "Amazon FBM Warehousing"],
   ["/en/amazon-prep-uk", "Amazon Prep UK"],
+  ["/en/amazon-uk-fulfilment-centres", "Amazon UK Fulfilment Centres"],
   ["/en/uk-customs-clearance", "Customs Clearance Support"],
   ["/en/cargo-handling", "Cargo Handling"],
   ["/en/uk-distribution", "UK Distribution"],

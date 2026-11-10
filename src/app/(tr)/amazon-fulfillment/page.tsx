@@ -1,5 +1,8 @@
 import Emoji from "@/components/visual/Emoji";
 import PageFaq from "@/components/PageFaq";
+import AmazonInboundTr from "@/components/AmazonInboundTr";
+import TrackedLink from "@/components/TrackedLink";
+import { bookingUrl } from "@/lib/booking";
 import TrClusterNav from "@/components/TrClusterNav";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -13,9 +16,9 @@ import { trAlternates } from "@/lib/i18n";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20Amazon%20fulfillment%20hizmeti%20hakkında%20bilgi%20almak%20istiyorum.";
 
 export const metadata: Metadata = {
-  title: "Amazon İngiltere Fulfillment | Amazon UK Stok & Sipariş | LondraDepo",
+  title: "Amazon UK Fulfillment: FBA Prep, FBM ve Depolama | LondraDepo",
   description:
-    "Amazon satıcıları için İngiltere fulfillment: stok depolama, sipariş yönetimi, pick & pack ve UK teslimat. Amazon FBA prep hizmeti de mevcut.",
+    "Amazon UK için Essex'te FBA prep, FBM sipariş karşılama ve haftalık £3,50 + KDV'den palet depolama; gümrükleme Arca üzerinden. Sabit minimum yok, 1 deneme paleti.",
   alternates: trAlternates("/amazon-fulfillment"),
   openGraph: {
     title: "Amazon İngiltere Fulfillment | LondraDepo",
@@ -114,6 +117,9 @@ export default function AmazonFulfillmentPage() {
             >
               Amazon Fulfillment Hakkında Bilgi Al
             </a>
+            <TrackedLink kind="booking" source="amazon_fulfillment_tr_hero" href={bookingUrl("tr", "amazon_fulfillment_tr_hero")} className="ml-0 sm:ml-3 mt-3 sm:mt-0 inline-flex items-center gap-2 border border-white/60 hover:bg-white/10 text-white font-bold px-8 py-4 rounded-full transition">
+              15 dakikalık görüşme ayarlayın
+            </TrackedLink>
           </div>
         </section>
 
@@ -130,6 +136,12 @@ export default function AmazonFulfillmentPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        <section className="py-12 px-4 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <AmazonInboundTr />
           </div>
         </section>
 

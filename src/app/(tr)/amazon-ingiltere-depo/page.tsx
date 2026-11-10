@@ -1,4 +1,6 @@
 import Emoji from "@/components/visual/Emoji";
+import TrackedLink from "@/components/TrackedLink";
+import { bookingUrl } from "@/lib/booking";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import TrClusterNav from "@/components/TrClusterNav";
 import type { Metadata } from "next";
@@ -13,9 +15,9 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20Amazon%20İngilte
 const TEL = "tel:+447554195190";
 
 export const metadata: Metadata = {
-  title: "Amazon İçin İngiltere Depo ve Sipariş Karşılama (FBM) | LondraDepo",
+  title: "Amazon İçin İngiltere Depo: FBM ve FBA Prep, Essex | LondraDepo",
   description:
-    "Amazon FBM için İngiltere'de depo ve sipariş karşılama. UK siparişlerinizi Essex depomuzdan karşılayın, kendi deponuz olmadan satış yapın.",
+    "Amazon UK satıcıları için Essex'te depo: FBM sipariş karşılama ve FBA prep, Londra'ya ve Amazon LCY2 Tilbury'ye yakın. Sabit minimum yok; tek paletle başlayın.",
   keywords: [
     "ingiltere amazon depo",
     "amazon fbm ingiltere",
@@ -160,6 +162,9 @@ export default function AmazonIngiltereDepo() {
               >
                 Hemen Ara
               </a>
+              <TrackedLink kind="booking" source="amazon_depo_tr_hero" href={bookingUrl("tr", "amazon_depo_tr_hero")} className="inline-flex items-center justify-center gap-2 border border-white/30 hover:bg-white/10 text-white font-bold px-8 py-4 rounded-full transition">
+                15 dk görüşme ayarlayın
+              </TrackedLink>
             </div>
           </div>
         </section>
@@ -300,6 +305,7 @@ export default function AmazonIngiltereDepo() {
               {[
                 { href: "/amazon-fulfillment", label: "Amazon Fulfillment" },
                 { href: "/amazon-prep-uk", label: "Amazon FBA Prep UK" },
+                { href: "/amazon-ingiltere-depo-konumlari", label: "Amazon İngiltere Depo Konumları" },
                 { href: "/ingiltere-depo", label: "İngiltere Depo" },
                 { href: "/siparis-toplama-paketleme", label: "Pick & Pack" },
                 { href: "/ingiltere-depo-fiyatlari", label: "Depo Fiyatları" },

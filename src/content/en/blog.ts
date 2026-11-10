@@ -121,7 +121,7 @@ export const blogPages: EnPage[] = [
       { q: "How much does UK fulfilment cost?", a: "Storage starts from £3.50 + VAT per pallet per week at LondraDepo. Pick and pack, packaging, delivery and returns are priced per order and item, based on your products and monthly volumes." },
       { q: "What is the difference between fulfilment and warehousing?", a: "Warehousing is receiving and storing stock. Fulfilment adds what happens when a customer orders: picking, packing, labelling, dispatch and returns. LondraDepo provides both from the same Essex warehouse." },
     ],
-    related: ["/en/blog/uk-warehousing-guide", "/en/blog/amazon-fba-vs-uk-fulfilment", "/en/blog/amazon-prep-uk-guide", "/en/uk-fulfilment"],
+    related: ["/en/shopify-fulfilment-uk", "/en/blog/uk-warehousing-guide", "/en/blog/amazon-fba-vs-uk-fulfilment", "/en/blog/amazon-prep-uk-guide", "/en/uk-fulfilment"],
   },
   {
     slug: "/en/blog/amazon-prep-uk-guide",
@@ -545,7 +545,7 @@ export const blogPages: EnPage[] = [
       { q: "Should I visit a 3PL warehouse before choosing?", a: "Yes, if you can. A visit or video walk-through shows racking, cleanliness and security, and lets you meet the team who will handle your stock day to day." },
       { q: "What contract terms should I check with a 3PL?", a: "Check the contract length, the notice period and how stock is released if you leave, as well as any minimum monthly charges and what insurance applies to your goods." },
     ],
-    related: ["/en/uk-warehousing", "/en/uk-fulfilment", "/en/uk-warehousing-pricing", "/en/uk-storage-cost-calculator", "/en/industries"],
+    related: ["/en/shopify-fulfilment-uk", "/en/uk-warehousing", "/en/uk-fulfilment", "/en/uk-warehousing-pricing", "/en/uk-storage-cost-calculator", "/en/industries"],
   },
   {
     slug: "/en/blog/uk-import-costs",

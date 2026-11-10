@@ -57,7 +57,7 @@ export const casePages: EnPage[] = [
       { q: "Is UK next-day delivery possible?", a: "Yes. Our Essex operation offers next-day and 2-day delivery options across the UK through carrier services." },
       { q: "Why did Cruyff move UK fulfilment to a UK warehouse?", a: "Shipping UK orders from the Netherlands lengthened delivery times and raised costs. Moving fulfilment to LondraDepo's Essex warehouse gave next-day and 2-day UK delivery options and about 80% faster UK delivery after the switch." },
     ],
-    related: ["/en/uk-fulfilment", "/en/ecommerce-fulfilment", "/en/case-studies/uk-auto-parts-warehouse"],
+    related: ["/en/shopify-fulfilment-uk", "/en/uk-fulfilment", "/en/ecommerce-fulfilment", "/en/case-studies/uk-auto-parts-warehouse"],
   },
   {
     slug: "/en/case-studies/pizza-box-distribution-uk",

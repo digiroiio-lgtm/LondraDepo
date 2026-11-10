@@ -16,11 +16,16 @@ import ChecklistGate from "./ChecklistGate";
 import ContainerPlanner from "./ContainerPlanner";
 import CostCalculator from "@/components/CostCalculator";
 
+/** Amazon and Shopify pages also offer a call booking in the hero (competitors lead with "book a free call"). */
+const HERO_BOOKING = new Set([
+  "/en/amazon-prep-uk", "/en/amazon-fulfilment-uk", "/en/amazon-seller-warehousing-uk", "/en/amazon-uk-fulfilment-centres", "/en/shopify-fulfilment-uk",
+]);
+
 /** Highest-intent pages get the quote form inline (CRO plan, weeks 11–13). */
 const INLINE_FORM = new Set([
   "/en/uk-import-logistics", "/en/container-unloading", "/en/uk-warehousing-pricing", "/en/pallet-storage", "/en/uk-warehousing",
   "/en/shopify-fulfilment-uk", "/en/uk-fulfilment", "/en/ecommerce-fulfilment", "/en/uk-ecommerce-logistics", "/en/pick-and-pack",
-  "/en/amazon-fulfilment-uk", "/en/amazon-seller-warehousing-uk", "/en/amazon-prep-uk", "/en/uk-distribution",
+  "/en/amazon-fulfilment-uk", "/en/amazon-seller-warehousing-uk", "/en/amazon-prep-uk", "/en/amazon-uk-fulfilment-centres", "/en/uk-distribution",
   "/en/london-gateway-tilbury-warehousing", "/en/felixstowe-port-warehousing", "/en/uk-warehousing-for-turkish-exporters",
   "/en/case-studies", "/en/industries", "/en/blog",
 ]);
@@ -362,6 +367,11 @@ export default function EnPageView({ page }: { page: EnPage }) {
                 <TrackedLink kind="whatsapp" source="hero" href={WHATSAPP} className="bg-green-700 hover:bg-green-800 text-white font-semibold px-6 py-3 rounded-full transition">
                   WhatsApp us
                 </TrackedLink>
+                {HERO_BOOKING.has(page.slug) && (
+                  <TrackedLink kind="booking" source="hero" href={bookingUrl("en", page.slug)} className="border border-[#0b2545] text-[#0b2545] font-semibold px-6 py-3 rounded-full hover:bg-[#0b2545] hover:text-white transition">
+                    Book a 15-minute call
+                  </TrackedLink>
+                )}
                 <TrackedLink kind="phone" source="hero" href={TEL} className="border border-[#0b2545] text-[#0b2545] font-semibold px-6 py-3 rounded-full hover:bg-[#0b2545] hover:text-white transition">
                   <Emoji e="📞" /> +44 7554 195190
                 </TrackedLink>

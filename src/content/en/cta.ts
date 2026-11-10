@@ -50,6 +50,7 @@ const BY_SLUG: Record<string, Cta> = {
   "/en/container-arrival-planner": { label: "Get a Container Unloading Quote", service: "container-unloading" },
   "/en/london-gateway-tilbury-warehousing": { label: "Get a Port-to-Warehouse Quote", service: "container-unloading" },
   "/en/felixstowe-port-warehousing": { label: "Get a Port-to-Warehouse Quote", service: "container-unloading" },
+  "/en/amazon-uk-fulfilment-centres": { label: "Request an Amazon Prep Quote", service: "amazon-prep" },
   "/en/blog/uk-importing-guide": { label: "Discuss Your Import Requirements", service: "freight-customs" },
   "/en/blog/uk-import-costs": { label: "Get an Import and Storage Quote", service: "freight-customs" },
   "/en/blog/how-to-choose-a-uk-3pl": { label: "Request a UK Warehousing Quote", service: "storage" },

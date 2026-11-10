@@ -801,6 +801,107 @@ export const portPages: EnPage[] = [
     related: ["/en/locations/port-to-warehouse-logistics", "/en/container-unloading", "/en/container-arrival-planner", "/en/london-gateway-tilbury-warehousing", "/en/uk-import-logistics", "/en/essex-warehouse"],
     cta: { h2: "Get a quote for your Felixstowe container", text: "Send the container size, ETA and packing list, and we will quote haulage, unloading, storage and onward delivery." },
   },
+  {
+    slug: "/en/amazon-uk-fulfilment-centres",
+    tr: "/amazon-ingiltere-depo-konumlari",
+    kind: "service",
+    serviceType: "Amazon FBA prep and delivery to Amazon UK fulfilment centres",
+    modified: "2026-11-10",
+    title: "Amazon UK Fulfilment Centres: Codes and Distances",
+    description:
+      "Amazon UK fulfilment centre codes and locations, from LCY2 Tilbury and LCY1 London to MAN1, with road distances from our Essex FBA prep warehouse and delivery rules.",
+    label: "Amazon UK Fulfilment Centres",
+    eyebrow: "Amazon FBA · UK fulfilment centre guide",
+    h1: "Amazon UK Fulfilment Centres: Codes, Locations and Distances",
+    lead:
+      "Amazon runs fulfilment centres across the UK, each known by a code such as LCY2 (Tilbury, Essex), LCY1 (east London), LTN1 (Bedfordshire), BHX1 (Staffordshire) or MAN1 (Manchester Airport). You do not choose the centre: Amazon assigns it in your Seller Central shipment plan, sometimes splitting one plan across several sites. LondraDepo's FBA prep warehouse in Rayleigh, Essex is about 16 miles by road from LCY2 Tilbury and 32 miles from LCY1, so prepared stock reaches the London-area centres quickly and the rest of the network by parcel or pallet carrier. " + "LondraDepo is not an official Amazon partner.",
+    facts: [
+      "Amazon LCY2 Tilbury: ~16 miles / 25 km from our warehouse",
+      "Amazon LCY1 east London: ~32 miles / 52 km",
+      "Destination centre is set by Amazon in the shipment plan",
+      "Deliveries into Amazon centres are by booked appointment",
+      "Pallets: UK 1200 × 1000 mm or Euro 1200 × 800 mm, up to 1.8 m high",
+    ],
+    sections: [
+      {
+        type: "table",
+        h2: "Amazon UK fulfilment centres and road distance from our warehouse",
+        intro: "A selection of Amazon's UK sites that sellers' shipment plans commonly name, ordered by distance from Rayleigh, Essex (SS6 7FY).",
+        head: ["Code", "Location", "Road distance from LondraDepo"],
+        rows: [
+          ["LCY2", "Tilbury, Essex (RM18 7AN)", "~16 miles / 25 km"],
+          ["LCY1", "Bow, east London (E3 3JG)", "~32 miles / 52 km"],
+          ["LTN2", "Hemel Hempstead, Hertfordshire", "~54 miles / 86 km"],
+          ["LTN4", "Dunstable, Bedfordshire", "~65 miles / 105 km"],
+          ["LTN1", "Marston Gate, Ridgmont, Bedfordshire (MK43 0ZA)", "~74 miles / 119 km"],
+          ["EUK5", "Peterborough, Cambridgeshire (PE2 9EN)", "~95 miles / 152 km"],
+          ["BHX4", "Coventry, West Midlands", "~125 miles / 201 km"],
+          ["BHX1", "Rugeley, Staffordshire (WS15 1NZ)", "~158 miles / 255 km"],
+          ["MAN1", "Manchester Airport, Greater Manchester", "~219 miles / 353 km"],
+          ["CWL1", "Swansea, Wales (SA1 8QX)", "~235 miles / 379 km"],
+        ],
+        note: "Codes and locations compiled from public directories of Amazon UK sites (November 2026). Amazon opens, renames and closes sites, so always ship to the address in your Seller Central shipment plan. Road distances by OSRM routing from SS6 7FY on 10 November 2026; rows without a full postcode are measured to the centre of the town's postcode district.",
+      },
+      {
+        type: "text",
+        h2: "Why the destination centre matters for cost and timing",
+        paras: [
+          "The fulfilment centre Amazon assigns decides how far your stock travels after prep. A pallet from our Essex warehouse to LCY2 Tilbury is a short local run, while MAN1 or CWL1 are more than 200 miles away and go through a national pallet or parcel network. When Amazon splits a shipment plan, each part is labelled and sent to its own centre.",
+          "Every centre receives stock by appointment. According to Amazon Freight's UK guidance, a load that arrives outside its booked slot, without a valid reference, with incomplete paperwork or with a non-compliant pallet can be refused and charged for redelivery. Preparing and checking stock in the UK before it leaves for Amazon removes most of those risks.",
+        ],
+      },
+      {
+        type: "table",
+        h2: "Parcel, pallet or full truck",
+        head: ["Option", "What it means", "Usually suits"],
+        rows: [
+          ["Small parcel delivery (SPD)", "Individually labelled cartons sent by a parcel carrier", "A few cartons, or a first test shipment"],
+          ["Less-than-truckload (LTL)", "Pallets sharing a trailer with other freight; Amazon Freight describes LTL as usually one to six pallets", "Regular, modest pallet volumes"],
+          ["Full truckload (FTL)", "A dedicated trailer to one fulfilment centre", "Loads that consistently fill, or nearly fill, a trailer"],
+        ],
+      },
+      {
+        type: "list",
+        h2: "Pallet and label rules for Amazon UK centres",
+        intro: "From Amazon Freight's UK checklist for deliveries into Amazon fulfilment centres:",
+        items: [
+          "Most Amazon UK centres accept the UK standard pallet (1200 × 1000 mm) and the Euro pallet (1200 × 800 mm); confirm with the specific centre.",
+          "Pallet height is typically capped at 1.8 metres including the pallet base.",
+          "Maximum pallet weight is usually 1,000 kg including the pallet.",
+          "Each carton carries its Amazon shipment label; each pallet carries a visible label with the shipment reference, ideally on two adjacent sides.",
+          "The carrier's consignment note must match the physical shipment and the booked appointment.",
+        ],
+      },
+      {
+        type: "links",
+        h2: "Prepare and send your stock",
+        items: [
+          { href: "/en/amazon-prep-uk", title: "Amazon FBA prep in Essex", text: "FNSKU labelling, packing, palletising and delivery to the centre Amazon assigns.", tag: "Service" },
+          { href: "/en/blog/amazon-fba-prep-checklist", title: "FBA prep checklist", text: "Every step from shipment plan to Amazon check-in.", tag: "Checklist" },
+          { href: "/en/london-gateway-tilbury-warehousing", title: "London Gateway and Tilbury", text: "Containers landing 13 to 16 miles from our warehouse.", tag: "Port" },
+        ],
+      },
+      {
+        type: "sources",
+        h2: "Sources",
+        items: [
+          { label: "Amazon Freight: UK LTL to Amazon FCs, shipper's checklist (Dec 2025)", href: "https://freight.amazon.co.uk/newsroom/uk-ltl-amazon-fcs-checklist" },
+          { label: "Amazon Freight: pallet and site prep, dimensions, wrapping and labels (Dec 2025)", href: "https://freight.amazon.co.uk/newsroom/pallet-site-prep-dimensions-wrapping-labels-tail-lift-alternatives" },
+          { label: "AVASK: Amazon FBA warehouses in the UK and Europe", href: "https://avask.com/blog/amazon-fba-warehouses-in-uk-europe/" },
+          { label: "Project OSRM: road routing used for the distances", href: "https://project-osrm.org/" },
+        ],
+      },
+    ],
+    faqs: [
+      { q: "Where are Amazon's fulfilment centres in the UK?", a: "Amazon's UK fulfilment centres are spread across England, Scotland and Wales, for example LCY2 in Tilbury, LCY1 in east London, LTN1 in Bedfordshire, EUK5 in Peterborough, BHX1 in Staffordshire, MAN1 at Manchester Airport and CWL1 in Swansea. Your shipment plan names the exact address." },
+      { q: "Which Amazon fulfilment centre is closest to London?", a: "LCY1 is in Bow, east London, and LCY2 is in Tilbury, Essex, on the Thames. From LondraDepo's warehouse in Rayleigh, LCY2 is about 16 miles by road and LCY1 about 32 miles, so stock prepared with us reaches both quickly." },
+      { q: "Can I choose which Amazon fulfilment centre my stock goes to?", a: "No. Amazon assigns the destination fulfilment centre when you create the shipment plan in Seller Central, and it may split one plan across several centres. LondraDepo labels and sends each part of the plan to the centre Amazon names." },
+      { q: "Do Amazon UK fulfilment centres need a delivery appointment?", a: "Yes. Amazon Freight's UK guidance says deliveries into Amazon fulfilment centres are by appointment, and loads that miss the slot or do not match the booking can be refused and charged for redelivery. We prepare stock in Essex so it matches the shipment plan before collection." },
+      { q: "How far is LondraDepo from Amazon LCY2 Tilbury?", a: "About 16 miles (25 km) by road, roughly 20 minutes by car, from our warehouse at Unit 19 Arterial Park, Rayleigh, Essex SS6 7FY to Amazon's LCY2 site at Tilbury, measured by road routing in November 2026." },
+    ],
+    related: ["/en/amazon-prep-uk", "/en/amazon-fulfilment-uk", "/en/amazon-seller-warehousing-uk", "/en/blog/amazon-fba-prep-checklist", "/en/london-gateway-tilbury-warehousing", "/en/essex-warehouse"],
+    cta: { h2: "Get an Amazon FBA prep quote", text: "Send your SKUs, unit and carton counts and the fulfilment centres in your shipment plan, and we will price prep, storage and delivery to Amazon." },
+  },
 ];
 
 /** Industries hub (EN only). Groups existing sector pages and case studies; no new claims. */

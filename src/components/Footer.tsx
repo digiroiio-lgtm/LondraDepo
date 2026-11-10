@@ -29,6 +29,8 @@ export default function Footer() {
             <li><a href="/ingiltere-depo-fiyatlari" className="hover:text-white transition">İngiltere Depo Fiyatları</a></li>
             <li><a href="/ingiltere-depo-maliyet-hesaplama" className="hover:text-white transition">Depo Maliyet Hesaplama</a></li>
             <li><a href="/konteyner-varis-planlayici" className="hover:text-white transition">Konteyner Varış Planlayıcı</a></li>
+            <li><a href="/konteyner-bosaltma" className="hover:text-white transition">Konteyner Boşaltma</a></li>
+            <li><a href="/sektorler" className="hover:text-white transition">Sektörler</a></li>
             <li><a href="/london-gateway-tilbury-depo" className="hover:text-white transition">London Gateway &amp; Tilbury Depo</a></li>
             <li><a href="/felixstowe-liman-depo" className="hover:text-white transition">Felixstowe Liman Depo</a></li>
             <li><a href="/turkiyeden-ingiltereye-satis" className="hover:text-white transition">Türkiye&apos;den İngiltere&apos;ye Satış</a></li>

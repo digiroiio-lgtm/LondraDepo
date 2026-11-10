@@ -78,6 +78,7 @@ export const growthPages: EnPage[] = [
   },
   {
     slug: "/en/container-unloading",
+    tr: "/konteyner-bosaltma",
     kind: "service",
     serviceType: "Container unloading",
     title: "Container Unloading in Essex – FCL & LCL Devanning",
@@ -274,6 +275,7 @@ export const growthPages: EnPage[] = [
 export const growthPagesP2: EnPage[] = [
   {
     slug: "/en/industries/automotive-parts",
+    tr: "/otomotiv-yedek-parca-depolama",
     parent: "/en/industries",
     kind: "service",
     serviceType: "Automotive parts warehousing",
@@ -789,6 +791,7 @@ export const portPages: EnPage[] = [
 /** Industries hub (EN only). Groups existing sector pages and case studies; no new claims. */
 export const industryHub: EnPage = {
   slug: "/en/industries",
+  tr: "/sektorler",
   kind: "hub",
   modified: "2026-11-10",
   title: "UK Warehousing by Industry",

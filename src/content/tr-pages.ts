@@ -363,4 +363,208 @@ export const TR_PAGES: Record<string, TrPage> = {
     ],
     form: { id: "tr_guide_quote", heading: "Amazon Prep Teklifi Alın", intro: "Ürün sayınızı, SKU'larınızı ve Amazon'a gönderim sıklığınızı yazın; prep ve teslimatı fiyatlandıralım.", services: ["Ürün Elleçleme", "Depolama"] },
   },
+  "/konteyner-bosaltma": {
+    path: "/konteyner-bosaltma",
+    kind: "service",
+    serviceType: "Container unloading",
+    title: "İngiltere Konteyner Boşaltma (FCL & LCL), Essex | LondraDepo",
+    description:
+      "Rayleigh, Essex depomuzda konteyner boşaltma: 20ft, 40ft ve 40ft high-cube FCL ile LCL; sayım, hasar fotoğrafı, yeniden paletleme, Mintsoft WMS kaydı, depolama veya UK içi sevk.",
+    crumb: "Konteyner Boşaltma",
+    eyebrow: "Essex · Tilbury, London Gateway ve Felixstowe hatları",
+    h1: "İngiltere'de Konteyner Boşaltma (FCL ve LCL)",
+    lead:
+      "LondraDepo, Unit 19 Arterial Park, Rayleigh, Essex'te 20ft, 40ft ve 40ft high-cube konteynerler dahil FCL ve LCL teslimatları boşaltır. Her teslimat sayılır, görünür hasar için kontrol edilir, gerekirse yeniden paletlenir veya etiketlenir ve Mintsoft WMS'e kaydedilir; ardından depolanır veya UK içinde sevke hazırlanır.",
+    facts: [
+      "FCL ve LCL kabul; bir gıda müşterisi için her ay 40ft high-cube hacim",
+      "Tır ve konteyner taşıyıcıları için rampa ve geniş kapı",
+      "Sayım, hasar fotoğrafı ve fark raporu",
+      "Yeniden paletleme, etiketleme ve SKU'ya göre ayırma",
+      "Palet başına haftalık £3,50 + KDV'den depolama veya cross-dock",
+    ],
+    sections: [
+      {
+        type: "steps",
+        h2: "Konteyner boşaltma nasıl işler?",
+        items: [
+          ["Ön bildirim", "Konteyner numarası, ETA, ambalaj listesi, paletli mi dökme mi olduğu ve SKU başına koli sayısını gönderin."],
+          ["Randevu", "Teslim saati netleştirilir. Limandan taşıma Arca Trade Group veya nakliyeciniz tarafından yapılabilir."],
+          ["Boşaltma", "Konteyner Rayleigh deposunda boşaltılır."],
+          ["Sayım ve kontrol", "Koli ve paletler ambalaj listesiyle sayılır; görünür hasar fotoğraflanıp bildirilir."],
+          ["Hazırlık", "Dökme koliler paletlenir, paletler etiketlenir, gerekirse stok SKU'ya göre ayrılır."],
+          ["Depolama veya sevk", "Stok Mintsoft WMS'e kaydedilip depolanır ya da müşterilere veya Amazon'a gönderilir."],
+        ],
+      },
+      {
+        type: "table",
+        h2: "Boşaltma teklifini neler etkiler?",
+        head: ["Etken", "Neden önemli"],
+        rows: [
+          ["Konteyner tipi (20ft, 40ft, 40ft HC)", "Elleçlenecek hacim ve palet ya da koli sayısı"],
+          ["Paletli veya dökme", "Dökme koliler daha uzun sürer ve genellikle paletleme gerektirir"],
+          ["SKU ve koli sayısı", "Ayırma ve etiketleme süresi"],
+          ["Hasar veya farklar", "Ek fotoğraf, rapor ve yeniden paketleme"],
+          ["Sonraki adım", "Depolama, cross-dock veya doğrudan sevk"],
+        ],
+        note: "Boşaltma teslimat başına tekliflendirilir. Depolama palet başına haftalık £3,50 + KDV'den başlar.",
+      },
+      {
+        type: "text",
+        h2: "Neden limanda değil Essex'te boşaltma?",
+        paras: [
+          "Depomuz Tilbury Limanı'na karayoluyla yaklaşık 16 mil, London Gateway'e 13 mil, Felixstowe'a yaklaşık 62 mil uzaklıktadır ve A127 ile M25'e doğrudan bağlıdır. Boşaltma, depolama, sipariş toplama ve UK dağıtım aynı yerde yapılır; ürünler liman yanındaki bir boşaltma sahasıyla ayrı bir fulfillment deposu arasında taşınmaz, bir kez elleçlenir.",
+          "Hem işletmelere hem tüketicilere satan ithalatçılar için aynı teslimat, toptan müşterilere palet siparişlerini ve online alıcılara koli siparişlerini besleyebilir.",
+        ],
+      },
+      {
+        type: "links",
+        h2: "Teslimatınızı planlayın",
+        items: [
+          { href: "/konteyner-varis-planlayici", title: "Konteyner Varış Planlayıcı", text: "Limanı, konteyneri ve ETA'yı seçin, tarihli kontrol listesi alın.", tag: "Ücretsiz araç" },
+          { href: "/london-gateway-tilbury-depo", title: "London Gateway & Tilbury Depo", text: "En yakın iki konteyner limanı, 13–16 mil.", tag: "Liman" },
+          { href: "/case-studies/tortilla-uk-distribution", title: "Tortilla üreticisi", text: "1 paletten aylık 6 × 40HC konteynere.", tag: "Operasyon örneği" },
+        ],
+      },
+    ],
+    faqs: [
+      { q: "Hangi konteyner tiplerini boşaltıyorsunuz?", a: "20ft, 40ft ve 40ft high-cube FCL konteynerler ile LCL ve paletli parsiyel yükleri kabul ediyoruz. Teklif isterken konteyner tipini ve ürünlerin paletli mi dökme mi olduğunu belirtin." },
+      { q: "Dökme (paletsiz) yüklenmiş konteynerleri boşaltıyor musunuz?", a: "Kolilerin dökme yüklendiğini SKU başına koli sayısıyla önceden bildirin. Elleçleme süresi, paletleme ve etiketleme konteyner gelmeden değerlendirilir ve buna göre tekliflendirilir." },
+      { q: "Ürünler hasarlı veya eksik gelirse ne olur?", a: "Görünür hasar fotoğraflanır; ambalaj listesine göre eksik veya fazlalar size bildirilir, böylece tedarikçi veya taşıyıcıya talepte bulunabilirsiniz." },
+      { q: "Limandan taşımayı ayarlayabilir misiniz?", a: "Evet. LondraDepo'yu işleten Arca Trade Group limandan depoya taşımayı ayarlayabilir; dilerseniz kendi nakliyeciniz de teslim edebilir." },
+      { q: "Boşaltılan ürünler doğrudan sevk edilebilir mi?", a: "Evet. Ürünler UK müşterilerine veya Amazon'a cross-dock edilebilir ya da depolanıp siparişler geldikçe sevk edilebilir." },
+    ],
+    related: [
+      { href: "/ellecleme", label: "Elleçleme" },
+      { href: "/palet-depolama", label: "Palet Depolama" },
+      { href: "/felixstowe-liman-depo", label: "Felixstowe Liman Depo" },
+      { href: "/essex-depo", label: "Essex Depo" },
+    ],
+    form: { id: "tr_unloading_quote", heading: "Konteyner Boşaltma Teklifi Alın", intro: "Konteyner tipini, ETA'yı, ambalaj listesini ve paletli mi dökme mi olduğunu yazın.", services: ["Yükleme / Boşaltma"] },
+  },
+  "/otomotiv-yedek-parca-depolama": {
+    path: "/otomotiv-yedek-parca-depolama",
+    kind: "service",
+    serviceType: "Automotive parts warehousing",
+    title: "Otomotiv Yedek Parça Depolama İngiltere | LondraDepo",
+    description:
+      "OEM ve yan sanayi yedek parça ile döşeme malzemeleri için İngiltere depolama: SKU bazlı palet ve raf, fotoğraflı hasar kontrolü, koruyucu paketleme, bayi ve atölyelere ertesi gün teslimat seçenekleri.",
+    crumb: "Otomotiv Yedek Parça Depolama",
+    eyebrow: "Sektör · otomotiv ve yan sanayi",
+    h1: "İngiltere'de Otomotiv Yedek Parça Depolama ve Dağıtım",
+    lead:
+      "Otomotiv parçalarını depolamak zordur ve kolay hasar görürler: tampon ve paneller hacimlidir, boyalı yüzeyler çizilir ve SKU sayıları binlere çıkar. LondraDepo OEM ve yan sanayi parçaları ile döşeme malzemelerini Essex'te SKU bazında depolar, mal kabulde ve sevkte durumu fotoğraflar, parçaları koruyucu şekilde paketler ve UK bayi, atölye ve online müşterilere ertesi gün veya 2 gün seçenekleriyle gönderir.",
+    facts: [
+      "SKU bazlı palet ve raf depolama; OEM ve yan sanayi ayrı tutulur",
+      "Mal kabulde ve sevkte fotoğraflı hasar kontrolü",
+      "Boyalı ve hassas yüzeyler için koruyucu paketleme",
+      "Bayi ve atölyelere ertesi gün veya 2 gün teslimat seçenekleri",
+      "Canlı bir operasyonda eBay, Amazon ve web siparişleri aynı gün işleniyor",
+    ],
+    sections: [
+      {
+        type: "table",
+        h2: "Otomotiv tedarikçileri UK deposundan ne bekler?",
+        head: ["İhtiyaç", "LondraDepo'da"],
+        rows: [
+          ["Hacimli parça depolama", "Tampon, kapı paneli ve rulo döşeme malzemesi ezilmeden paletlerde depolanır"],
+          ["SKU disiplini", "Parçalar SKU'ya göre raflanır; her seferinde doğru parça numarası çıkar"],
+          ["Hasar kontrolü", "Mal kabulde ve sevkte fotoğraf; her parçanın talepler için durum geçmişi olur"],
+          ["Koruyucu paketleme", "Boyalı ve kırılgan parçalar için köpük, balonlu naylon ve sağlam koli"],
+          ["Ticari ve online sipariş", "Bayi, atölye ve pazaryeri siparişleri aynı stoktan karşılanır"],
+          ["Stok raporu", "Düzenli stok raporu ve düşük stok uyarısı, Türkçe veya İngilizce"],
+        ],
+      },
+      {
+        type: "links",
+        h2: "Otomotiv operasyon örnekleri",
+        items: [
+          { href: "/case-studies/uk-auto-parts-warehouse", title: "OEM ve yan sanayi yedek parça", text: "Fotoğraflı hasar takibi ve UK bayilerine dağıtım.", tag: "Otomotiv" },
+          { href: "/case-studies/arac-koltuk-kaplama-ingiltere-depo", title: "Araç koltuk kaplama ve suni deri", text: "eBay, Amazon ve atölye siparişleri aynı gün işleniyor.", tag: "Otomotiv & döşeme" },
+          { href: "/sektorler", title: "Tüm sektörler", text: "Gıda, ambalaj, moda, büyük hacimli ürünler ve elektronik.", tag: "Sektörler" },
+        ],
+      },
+    ],
+    faqs: [
+      { q: "Büyük otomotiv parçalarını depoluyor musunuz?", a: "Evet. Ön ve arka tampon, kapı paneli dahil her boyutta parçayı palet ve raf sistemleriyle depoluyoruz." },
+      { q: "Boyalı parçalardaki hasarı nasıl yönetiyorsunuz?", a: "Her parça mal kabulde görsel olarak kontrol edilip fotoğraflanır ve sisteme kaydedilir; sevkte köpük, balonlu naylon ve sağlam kolilerle paketlenir." },
+      { q: "İngiltere genelindeki atölye ve bayilere teslimat yapabiliyor musunuz?", a: "Evet. Essex'ten İngiltere genelindeki bayi, atölye ve online müşterilere ertesi gün veya 2 gün seçenekleriyle teslimat yapıyoruz." },
+      { q: "Parçaları yurt dışından bizim için getirebilir misiniz?", a: "Evet. LondraDepo'yu işleten Arca Trade Group nakliye ve gümrüklemeyi ayarlayabilir; dilerseniz kendi nakliyeciniz de depoya teslim edebilir." },
+    ],
+    related: [
+      { href: "/palet-depolama", label: "Palet Depolama" },
+      { href: "/nakliye-dagitim", label: "Nakliye ve Dağıtım" },
+      { href: "/gumrukleme", label: "Gümrükleme" },
+      { href: "/turk-sirketleri-icin-ingiltere-depo", label: "Türk Şirketleri İçin" },
+    ],
+    form: { id: "tr_auto_quote", heading: "Yedek Parça Depolama Teklifi Alın", intro: "SKU sayınızı, parça ölçülerini, tahmini palet sayısını ve sipariş kanallarınızı yazın.", services: ["Depolama", "Dağıtım"] },
+  },
+  "/sektorler": {
+    path: "/sektorler",
+    kind: "service",
+    serviceType: "Warehousing by industry",
+    title: "Sektörlere Göre İngiltere Depo ve Fulfillment | LondraDepo",
+    description:
+      "Sektörlere göre İngiltere depo ve fulfillment: gıda ve FMCG, ambalaj, otomotiv yedek parça, moda ve e-ticaret, büyük hacimli ürünler ve elektronik; Essex depomuzdan gerçek operasyon örnekleriyle.",
+    crumb: "Sektörler",
+    eyebrow: "Çalıştığımız sektörler",
+    h1: "Sektörlere Göre İngiltere Depo ve Fulfillment",
+    lead:
+      "LondraDepo gıda ve FMCG, ambalaj, otomotiv yedek parça, moda ve e-ticaret, büyük hacimli ürünler ve tüketici elektroniği alanlarındaki üretici ve markalar için depolama, fulfillment ve dağıtım yapar. Aşağıdaki her sektör ilgili hizmet sayfasına ve Rayleigh, Essex'teki depomuzdan gerçek operasyon örneklerine bağlanır.",
+    facts: [
+      "Gıda, ambalaj, otomotiv, moda, büyük hacimli ürünler ve elektronikte canlı UK operasyonları",
+      "Mintsoft WMS ile palet, koli ve raf depolama",
+      "Aynı stoktan B2B palet dağıtımı ve e-ticaret koli fulfillment",
+      "Palet başına haftalık £3,50 + KDV'den depolama",
+    ],
+    sections: [
+      {
+        type: "links",
+        h2: "Gıda ve FMCG",
+        items: [
+          { href: "/case-studies/tortilla-uk-distribution", title: "Tortilla üreticisi", text: "1 deneme paletinden aylık 6 × 40HC konteynere.", tag: "Operasyon örneği" },
+          { href: "/case-studies/pizza-box-distribution-uk", title: "Pizza kutusu üreticisi", text: "Paletli UK stoğu ve restoranlara programlı dağıtım.", tag: "Operasyon örneği" },
+          { href: "/palet-depolama", title: "Palet depolama", text: "Haftalık palet başına £3,50 + KDV'den.", tag: "Hizmet" },
+        ],
+      },
+      {
+        type: "links",
+        h2: "Otomotiv ve yedek parça",
+        items: [
+          { href: "/otomotiv-yedek-parca-depolama", title: "Otomotiv yedek parça depolama", text: "OEM ve yan sanayi parçalar için SKU bazlı depolama ve dağıtım.", tag: "Sektör" },
+          { href: "/case-studies/uk-auto-parts-warehouse", title: "OEM ve yan sanayi yedek parça", text: "Hasar kontrollü depolama ve UK bayi teslimatı.", tag: "Operasyon örneği" },
+          { href: "/case-studies/arac-koltuk-kaplama-ingiltere-depo", title: "Araç koltuk kaplama", text: "eBay, Amazon ve atölye siparişleri aynı gün.", tag: "Operasyon örneği" },
+        ],
+      },
+      {
+        type: "links",
+        h2: "Moda ve e-ticaret markaları",
+        items: [
+          { href: "/case-studies/cruyff-uk-fulfillment", title: "Cruyff", text: "Hollanda'dan İngiltere'ye online sipariş fulfillment.", tag: "Operasyon örneği" },
+          { href: "/shopify-ingiltere-depo", title: "Shopify İngiltere Depo", text: "Shopify mağazaları için depolama, pick & pack ve UK kargo.", tag: "Hizmet" },
+          { href: "/e-ticaret-fulfillment", title: "E-Ticaret Fulfillment", text: "Online siparişten müşterinin kapısına.", tag: "Hizmet" },
+        ],
+      },
+      {
+        type: "links",
+        h2: "Büyük hacimli ürünler ve elektronik",
+        items: [
+          { href: "/case-studies/uk-walking-treadmill-distribution", title: "Walking treadmill markası", text: "Büyük hacimli ürün depolama, online satış ve retail dağıtım.", tag: "Operasyon örneği" },
+          { href: "/case-studies/tasinabilir-sarj-istasyonu-ingiltere-operasyonu", title: "Taşınabilir şarj istasyonu", text: "Depolama, SIM aktivasyonu, şarj kontrolü ve son kullanıcı sevkiyatı.", tag: "Operasyon örneği" },
+          { href: "/ellecleme", title: "Elleçleme", text: "Yeniden paketleme, etiketleme ve ürün hazırlığı.", tag: "Hizmet" },
+        ],
+      },
+    ],
+    faqs: [
+      { q: "LondraDepo hangi sektörlerle çalışıyor?", a: "Gıda ve FMCG, ambalaj, otomotiv yedek parça ve döşeme malzemeleri, moda ve e-ticaret, walking treadmill gibi büyük hacimli ürünler ve taşınabilir şarj istasyonu gibi tüketici elektroniğinde canlı UK operasyonlarımız var." },
+      { q: "Aynı stok hem B2B hem online müşterilere hizmet verebilir mi?", a: "Evet. Aynı UK stoğu toptan ve ticari müşterilere palet teslimatlarını, online alıcılara koli siparişlerini besleyebilir; stoğu farklı firmalar arasında bölmeniz gerekmez." },
+      { q: "Sektörüm listede yok, yine de yardımcı olabilir misiniz?", a: "Büyük olasılıkla evet. Ürününüzü, ambalajını, hacminizi ve satış kanallarınızı yazın; teklif vermeden önce Essex depomuzun uygun olup olmadığını teyit edelim." },
+    ],
+    related: [
+      { href: "/ingiltere-depo", label: "İngiltere Depo" },
+      { href: "/ingiltere-fulfillment", label: "İngiltere Fulfillment" },
+      { href: "/case-studies", label: "Operasyon Örnekleri" },
+      { href: "/turk-sirketleri-icin-ingiltere-depo", label: "Türk Şirketleri İçin" },
+    ],
+    form: { id: "tr_industries_quote", heading: "Ürünleriniz İçin Teklif Alın", intro: "Sektörünüzü, ürün tipinizi, hacminizi ve satış kanallarınızı yazın; size uygun UK kurulumunu önerelim.", services: ["Depolama"] },
+  },
 };

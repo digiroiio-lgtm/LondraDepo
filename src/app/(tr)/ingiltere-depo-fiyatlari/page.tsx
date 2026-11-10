@@ -7,6 +7,7 @@ import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 
 import { SITE_URL } from "@/lib/site";
 import { trAlternates } from "@/lib/i18n";
+import QuoteForm from "@/components/QuoteForm";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20İngiltere%20depo%20fiyatları%20hakkında%20bilgi%20almak%20istiyorum.";
 const TEL = "tel:+447554195190";
 
@@ -399,6 +400,7 @@ export default function IngiltereDepoFiyatlari() {
             </div>
           </div>
         </section>
+        <QuoteForm formId="tr_inline_quote" heading="Size Özel Depo Fiyatı Alın" intro="Ürün türünüzü, yaklaşık palet veya koli sayınızı ve ihtiyacınız olan hizmetleri yazın; ekibimiz size özel teklif hazırlasın. Standart palet depolama haftalık £3,50 + KDV'den başlar." presetServices={["Depolama"]} />
       </main>
       <Footer />
       <StickyWhatsappCta />

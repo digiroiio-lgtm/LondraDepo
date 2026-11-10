@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useEffect, FormEvent } from "react";
+import { useState, useEffect, useRef, FormEvent } from "react";
 import { useForm } from "@formspree/react";
-import { trackQuoteSubmit } from "@/lib/gtag";
+import { trackFormStart, trackQuoteSubmit } from "@/lib/gtag";
 
 const WA_NUMBER = "447554195190";
 const FORMSPREE_ID = "xoejvawy";
@@ -34,7 +34,38 @@ interface FormData {
   message: string;
 }
 
-export default function QuoteForm() {
+const TRACKING_KEYS = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid", "from"] as const;
+
+type Props = {
+  /** Distinguishes the home form from inline page forms in submissions and GA4. */
+  formId?: string;
+  heading?: string;
+  intro?: string;
+  /** Services ticked by default on service pages. */
+  presetServices?: string[];
+};
+
+export default function QuoteForm({
+  formId = "tr_home_quote",
+  heading = "Teklifinizi Talep Edin",
+  intro = "Formu doldurun, ekibimiz ihtiyaçlarınıza uygun bir teklif hazırlasın. Zorunlu alanlar dışındakileri boş bırakabilirsiniz.",
+  presetServices = [],
+}: Props = {}) {
+  const [tracking, setTracking] = useState<Record<string, string>>({});
+  const started = useRef(false);
+
+  // Attribution captured on the client so pages stay static.
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const t: Record<string, string> = {};
+    for (const k of TRACKING_KEYS) {
+      const v = params.get(k);
+      if (v) t[k] = v.slice(0, 200);
+    }
+    if (document.referrer) t.referrer = document.referrer.slice(0, 300);
+    setTracking(t);
+  }, []);
+
   const [form, setForm] = useState<FormData>({
     name: "",
     company: "",
@@ -46,18 +77,27 @@ export default function QuoteForm() {
     pallets: "",
     monthlyOrders: "",
     channels: [],
-    services: [],
+    services: presetServices,
     message: "",
   });
   const [errors, setErrors] = useState<Partial<Record<keyof FormData, string>>>({});
   const [state, submitToFormspree] = useForm(FORMSPREE_ID);
 
+  function markStarted() {
+    if (!started.current) {
+      started.current = true;
+      trackFormStart(formId);
+    }
+  }
+
   function handleText(field: keyof FormData, value: string) {
+    markStarted();
     setForm((f) => ({ ...f, [field]: value }));
     if (errors[field]) setErrors((e) => ({ ...e, [field]: "" }));
   }
 
   function toggleCheck(field: "channels" | "services", value: string) {
+    markStarted();
     setForm((f) => {
       const arr = f[field] as string[];
       return {
@@ -72,7 +112,6 @@ export default function QuoteForm() {
     if (!form.name.trim()) e.name = "Ad Soyad zorunludur.";
     if (!form.email.trim()) e.email = "E-posta zorunludur.";
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) e.email = "Geçerli bir e-posta girin.";
-    if (!form.phone.trim()) e.phone = "Telefon / WhatsApp zorunludur.";
     setErrors(e);
     return Object.keys(e).length === 0;
   }
@@ -83,6 +122,10 @@ export default function QuoteForm() {
 
     await submitToFormspree({
       _subject: `Yeni teklif talebi — ${form.name}`,
+      form: formId,
+      page_lang: "tr",
+      page_path: window.location.pathname,
+      ...tracking,
       name: form.name,
       company: form.company,
       email: form.email,
@@ -99,7 +142,9 @@ export default function QuoteForm() {
   }
 
   useEffect(() => {
-    if (state.succeeded) trackQuoteSubmit();
+    if (state.succeeded) trackQuoteSubmit({ form_id: formId, services: form.services.join(", "), country: form.country });
+    // Fire once on success only.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state.succeeded]);
 
   function whatsappUrl(): string {
@@ -109,7 +154,7 @@ export default function QuoteForm() {
       `👤 Ad Soyad: ${form.name}`,
       form.company ? `🏢 Şirket: ${form.company}` : "",
       `📧 E-posta: ${form.email}`,
-      `📱 Telefon/WA: ${form.phone}`,
+      form.phone ? `📱 Telefon/WA: ${form.phone}` : "",
       form.country ? `🌍 Ülke: ${form.country}` : "",
       "",
       form.productType ? `📦 Ürün Türü: ${form.productType}` : "",
@@ -138,10 +183,9 @@ export default function QuoteForm() {
           <p className="text-green-400 text-sm font-semibold uppercase tracking-widest mb-3">
             Teklif Talebi
           </p>
-          <h2 className="text-3xl font-extrabold text-white mb-4">Teklifinizi Talep Edin</h2>
+          <h2 className="text-3xl font-extrabold text-white mb-4">{heading}</h2>
           <p className="text-slate-300 leading-relaxed">
-            Formu doldurun, ekibimiz ihtiyaçlarınıza uygun bir teklif hazırlasın.
-            Zorunlu alanlar dışındakileri boş bırakabilirsiniz.
+            {intro}
           </p>
         </div>
 
@@ -219,7 +263,7 @@ export default function QuoteForm() {
             </div>
             <div>
               <label htmlFor="qf-phone" className={labelCls}>
-                Telefon / WhatsApp <span className="text-red-500">*</span>
+                Telefon / WhatsApp <span className="font-normal text-slate-500">(isteğe bağlı)</span>
               </label>
               <input
                 id="qf-phone"

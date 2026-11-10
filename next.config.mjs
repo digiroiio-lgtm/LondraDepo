@@ -9,8 +9,16 @@ const nextConfig = {
   // Approved URL consolidations (10.11.2026). statusCode 301 as requested; Google treats 301 and 308 the same.
   async redirects() {
     return [
-      { source: "/uk-warehousing-fulfilment", destination: "/en", statusCode: 301 },
-      { source: "/shopify-fulfillment", destination: "/shopify-ingiltere-depo", statusCode: 301 },
+      // Retired URLs go straight to the canonical www target, so apex requests also take a single hop.
+      { source: "/uk-warehousing-fulfilment", destination: "https://www.londradepo.com/en", statusCode: 301 },
+      { source: "/shopify-fulfillment", destination: "https://www.londradepo.com/shopify-ingiltere-depo", statusCode: 301 },
+      // Canonical host is www (see src/lib/site.ts). Apex requests go to www with a permanent 308.
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "londradepo.com" }],
+        destination: "https://www.londradepo.com/:path*",
+        permanent: true,
+      },
     ];
   },
   async headers() {

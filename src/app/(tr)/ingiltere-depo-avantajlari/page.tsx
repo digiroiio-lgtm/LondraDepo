@@ -253,7 +253,7 @@ const faqs = [
   },
   {
     q: "Türkiye'den İngiltere'ye konteyner organizasyonu sağlıyor musunuz?",
-    a: "LondraDepo uluslararası nakliye hizmeti sunmamaktadır. Ürünlerinizin UK'ye taşınması için bir nakliyeci firmayla çalışmanız gerekir. LondraDepo'nun hizmet alanı, ürünlerin UK'ye varışından sonra başlar: mal kabul, depolama, sipariş karşılama ve UK dağıtımı.",
+    a: "Evet, çatı şirketimiz üzerinden. Uluslararası nakliye (deniz, hava, kara ve demiryolu) ve gümrükleme, LondraDepo'yu işleten çatı şirketimiz Arca Trade Group tarafından sağlanır; depolama ile birlikte tek teklifte planlanabilir. Dilerseniz kendi nakliyecinizle de çalışabilirsiniz.",
   },
   {
     q: "Küçük hacimli ürün gönderebilir miyim?",

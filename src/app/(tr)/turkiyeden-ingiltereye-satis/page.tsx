@@ -134,10 +134,10 @@ export default function TurkiyedenIngiltereye() {
             <section className="mb-12">
               <h2 className="text-xl font-extrabold text-[#0b2545] mb-3">2. Ürün Gönderimi: Türkiye&apos;den UK&apos;e</h2>
               <p className="text-slate-600 text-sm leading-relaxed mb-3">
-                Ürünlerin Türkiye&apos;den UK&apos;e taşınması için uluslararası bir nakliyeci veya kargo firmasıyla çalışmanız gerekir. LondraDepo uluslararası nakliye hizmeti sunmamaktadır; ancak ürünleriniz UK&apos;ye ulaştığında tüm süreci devralırız.
+                Ürünler Türkiye&apos;den UK&apos;e deniz, kara, hava veya demiryoluyla taşınır. Bu taşımayı LondraDepo&apos;yu işleten çatı şirketimiz Arca Trade Group organize edebilir; dilerseniz kendi nakliyecinizle de çalışabilirsiniz. Ürünleriniz UK&apos;ye ulaştığında süreci LondraDepo devralır.
               </p>
               <div className="bg-[#f6f8fb] rounded-xl p-4 text-sm text-slate-600">
-                <strong className="text-[#0b2545]">LondraDepo bu aşamada:</strong> Ürünlerinizin depo adresine kabulü ve gümrük koordinasyon desteği sağlar. Uluslararası nakliye için ayrı bir taşıyıcıyla çalışmanız gerekir.
+                <strong className="text-[#0b2545]">Bu aşamada:</strong> Arca Trade Group nakliye ve gümrüklemeyi, LondraDepo ürünlerin depoya kabulünü üstlenir. Nakliye ve gümrükleme depolamadan ayrı tekliflendirilir.
               </div>
             </section>
 
@@ -145,7 +145,7 @@ export default function TurkiyedenIngiltereye() {
             <section className="mb-12">
               <h2 className="text-xl font-extrabold text-[#0b2545] mb-3">3. UK Gümrüğü</h2>
               <p className="text-slate-600 text-sm leading-relaxed mb-3">
-                Türkiye&apos;den UK&apos;e gelen ürünler ithalat gümrüğüne tabidir. UK gümrük beyanı lisanslı gümrükçüler tarafından yapılmalıdır. Gerekli belgeler genellikle şunları içerir:
+                Türkiye&apos;den UK&apos;e gelen ürünler ithalat gümrüğüne tabidir. Gümrük beyannamesini Arca Trade Group&apos;un gümrükleme ekibi sizin adınıza verebilir ya da kendi gümrük müşavirinizle çalışabilirsiniz. Gerekli belgeler genellikle şunları içerir:
               </p>
               <ul className="space-y-1 text-sm text-slate-600 mb-3">
                 <li>• Ticari fatura (Commercial Invoice)</li>

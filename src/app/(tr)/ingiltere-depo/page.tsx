@@ -90,7 +90,7 @@ const faqs = [
   },
   {
     q: "Türkiye'den İngiltere depoma ürün gönderebilir miyim?",
-    a: "Evet. Türkiye'deki tedarikçinizden veya üretim noktanızdan ürünlerinizi doğrudan depo adresimize gönderebilirsiniz. UK ithalat gümrükleme sürecinde koordinasyon desteği de sağlıyoruz.",
+    a: "Evet. Türkiye'deki tedarikçinizden veya üretim noktanızdan ürünlerinizi doğrudan depo adresimize gönderebilirsiniz. Nakliye ve gümrükleme, çatı şirketimiz Arca Trade Group tarafından da yapılabilir.",
   },
   {
     q: "İngiltere depo fiyatlarınız nedir?",

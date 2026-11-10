@@ -69,7 +69,7 @@ const jsonLd = {
 const journey = [
   { icon: "🇹🇷", label: "Türkiye", desc: "Ürünlerinizi Türkiye'den veya tedarikçinizden gönderin." },
   { icon: "✈️", label: "İngiltere'ye Ulaşım", desc: "Ürünler UK'e taşınır." },
-  { icon: "📋", label: "Gümrük", desc: "Gümrükleme sürecinde koordinasyon desteği sağlanır." },
+  { icon: "📋", label: "Gümrük", desc: "Gümrükleme Arca Trade Group gümrük ekibi tarafından yapılır." },
   { icon: "🏢", label: "Depo", desc: "Ürünler depoya alınır, sayılır ve sisteme dahil edilir." },
   { icon: "🛍️", label: "Shopify / Amazon", desc: "Online mağazanızdan satışa devam edin." },
   { icon: "📦", label: "Pick & Pack", desc: "Siparişler toplanır, paketlenir ve etiketlenir." },
@@ -104,7 +104,7 @@ const faqs = [
   },
   {
     q: "Gümrükleme konusunda yardımcı olabilir misiniz?",
-    a: "UK ithalat gümrükleme sürecinde koordinasyon desteği sağlıyoruz. Detaylar için bizimle iletişime geçin.",
+    a: "Gümrük beyannameleri, LondraDepo'yu işleten Arca Trade Group'un gümrükleme ekibi tarafından müşteri adına verilir; gümrük prosedürleri, GTİP ve tercihli menşe konularında danışmanlık sağlanır. Dilerseniz kendi gümrük müşavirinizle de çalışabilirsiniz.",
   },
   {
     q: "UK EORI numarası kimden istenir?",
@@ -252,8 +252,8 @@ export default function TurkiyeILandingPage() {
               GB EORI kaydı, gümrük beyanındaki ithalatçı, teslim şekli ve vergi yükümlülükleri sevkiyat öncesinde netleşmelidir.
             </p>
             <p className="text-slate-600 leading-relaxed mb-4">
-              LondraDepo depolama ve gümrükleme sürecinde koordinasyon desteği sunabilir; bu hizmet,
-              LondraDepo'nun otomatik olarak importer of record olduğu veya ithalat KDV'si ve gümrük vergilerini üstlendiği anlamına gelmez.
+              Gümrükleme Arca Trade Group tarafından yapılabilir ve LondraDepo depolama sağlar; bu hizmetler,
+              LondraDepo'nun veya Arca Trade Group'un otomatik olarak importer of record olduğu veya ithalat KDV'si ve gümrük vergilerini üstlendiği anlamına gelmez.
               Vergiler ve gümrük işlemleri depolama başlangıç fiyatından ayrı değerlendirilir.
             </p>
             <p className="text-slate-600 leading-relaxed">

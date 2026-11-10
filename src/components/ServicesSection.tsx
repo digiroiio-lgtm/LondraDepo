@@ -14,7 +14,7 @@ const services = [
   {
     icon: "📋",
     title: "Gümrükleme Desteği",
-    desc: "Ürünlerinizi İngiltere'ye getirme sürecinde gümrükleme koordinasyonu desteği. İthalat belgesi koordinasyonu ve sevkiyat varış süreci.",
+    desc: "UK ithalat beyannamesi ve GTİP danışmanlığı, çatı şirketimiz Arca Trade Group'un gümrükleme ekibi tarafından. Gümrükten depoya doğrudan teslim.",
     cta: "Gümrükleme Hakkında Bilgi Al",
     waMsg: "Gümrükleme%20desteği%20hakkında%20bilgi%20almak%20istiyorum.",
     href: "/gumrukleme",

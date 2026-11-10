@@ -102,7 +102,7 @@ export default function EssexDepoPage() {
               <h2 className="text-xl font-bold mb-4">Neden Essex?</h2>
               <ul className="space-y-2 text-sm text-slate-200">
                 <li>✓ Londra&apos;ya ~40 dakika (A127/M25 güzergahı)</li>
-                <li>✓ Felixstowe Limanı&apos;na ~1 saat — İngiltere&apos;nin en büyük konteyner limanı</li>
+                <li>✓ Felixstowe Limanı&apos;na karayoluyla yaklaşık 1–1¼ saat — İngiltere&apos;nin en büyük konteyner limanı</li>
                 <li>✓ Tilbury Limanı&apos;na ~30 dakika — Türkiye&apos;den gelen ro-ro ve konteyner hatları</li>
                 <li>✓ M25 çevre yolu üzerinden İngiltere kuzeyine ve güneyine kolay dağıtım</li>
                 <li>✓ Amazon UK depolarına (Tilbury, Dartford) hızlı teslimat</li>

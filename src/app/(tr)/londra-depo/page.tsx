@@ -94,7 +94,7 @@ const faqs = [
   },
   {
     q: "Londra deposuna ürünlerimi nasıl gönderebilirim?",
-    a: "Ürünlerinizi Türkiye'den veya başka bir ülkeden depo adresimize sevk edebilirsiniz. Gümrükleme sürecinde koordinasyon desteği de sunmaktayız. Ürünler depoya ulaştığında mal kabul, sayım ve sisteme giriş işlemleri gerçekleştirilir.",
+    a: "Ürünlerinizi Türkiye'den veya başka bir ülkeden depo adresimize sevk edebilirsiniz. Nakliye ve gümrükleme, çatı şirketimiz Arca Trade Group tarafından da yapılabilir. Ürünler depoya ulaştığında mal kabul, sayım ve sisteme giriş işlemleri gerçekleştirilir.",
   },
   {
     q: "Depoda hangi hizmetler sunuluyor?",

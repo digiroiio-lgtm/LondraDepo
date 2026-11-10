@@ -12,7 +12,7 @@ const faqs = [
   },
   {
     q: "UK gümrükleme sürecinde destek sağlıyor musunuz?",
-    a: "İngiltere'ye yapılan ithalatlarda gümrükleme süreci koordinasyonunda destek sağlıyoruz. Gümrük işlemleri doğası gereği uzman gümrükçüler gerektirdiğinden, bu alanda koordinasyon desteği ve yönlendirme sunuyoruz.",
+    a: "Evet. Gümrük beyannameleri, LondraDepo'yu işleten Arca Trade Group'un gümrükleme ekibi tarafından müşteri adına verilir; gümrük prosedürleri, GTİP ve tercihli menşe konularında danışmanlık sağlanır. Dilerseniz kendi gümrük müşavirinizle de çalışabilirsiniz.",
   },
   {
     q: "Paletli ve kolili ürün kabul ediyor musunuz?",

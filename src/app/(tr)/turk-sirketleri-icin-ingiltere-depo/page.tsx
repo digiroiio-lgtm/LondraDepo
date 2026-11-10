@@ -71,7 +71,7 @@ const solutions = [
   { icon: "✅", title: "UK'de Şirket Kurmadan", desc: "Kendi şirketinizle UK pazarına girebilirsiniz. LondraDepo, depolama altyapısını sağlar." },
   { icon: "✅", title: "Kendi Deponuzu Kurmadan", desc: "Essex depomuz sizin deponuzdur. Kira, personel ve WMS maliyeti olmadan stok tutun." },
   { icon: "✅", title: "Türkçe İletişim", desc: "Türkiye'den çalışan işletmeler için Türkçe destek imkânı." },
-  { icon: "✅", title: "Gümrük Koordinasyonu", desc: "Ürünlerinizin UK'e girişinde gümrükleme sürecinde koordinasyon desteği." },
+  { icon: "✅", title: "Gümrükleme", desc: "UK ithalat beyannamesi Arca Trade Group gümrük ekibi tarafından sizin adınıza verilir." },
   { icon: "✅", title: "Mintsoft WMS", desc: "Stok ve sipariş takibi Mintsoft depo yönetim sistemi üzerinden yapılır." },
   { icon: "✅", title: "UK Dağıtım", desc: "İngiltere geneline sipariş karşılama ve teslimat koordinasyonu." },
 ];
@@ -92,7 +92,7 @@ const faqs = [
   },
   {
     q: "Türkiye'den ürün gönderip İngiltere'de depolayabilir miyim?",
-    a: "Evet. Türkiye'den gönderilen ürünler gümrükleme koordinasyonu desteğiyle UK'e getirilir, depomuzda stoklanır. Gümrük sürecinde koordinasyon sağlıyoruz ancak lisanslı gümrükçü ile çalışmanız gerekebilir.",
+    a: "Evet. Türkiye'den gönderilen ürünlerin nakliyesi ve gümrüklemesi çatı şirketimiz Arca Trade Group tarafından yapılabilir; ürünler gümrükten çekildikten sonra depomuzda stoklanır. Dilerseniz kendi nakliyeci ve gümrük müşavirinizle de çalışabilirsiniz.",
   },
   {
     q: "Türk işletmeler için İngiltere'de operasyon kurmanın maliyeti nedir?",

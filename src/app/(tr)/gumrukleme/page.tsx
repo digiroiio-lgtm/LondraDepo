@@ -11,13 +11,13 @@ import { trAlternates } from "@/lib/i18n";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20UK%20gümrükleme%20desteği%20hakkında%20bilgi%20almak%20istiyorum.";
 
 export const metadata: Metadata = {
-  title: "İngiltere Gümrükleme Desteği | UK İthalat Koordinasyonu | LondraDepo.com",
+  title: "İngiltere Gümrükleme Hizmeti | UK İthalat Gümrüğü | LondraDepo.com",
   description:
-    "İngiltere ithalatı için gümrükleme koordinasyonu: UK gümrük belgesi desteği ve sevkiyat varış koordinasyonu. Türkiye'den ihracat yapan işletmeler için.",
+    "İngiltere ithalatı için gümrükleme: Arca Trade Group gümrük ekibiyle beyanname, GTİP danışmanlığı ve gümrükten Essex depoya doğrudan teslim. Türkiye'den ihracat yapan işletmeler için.",
   alternates: trAlternates("/gumrukleme"),
   openGraph: {
     title: "İngiltere Gümrükleme Desteği | LondraDepo.com",
-    description: "UK ithalat gümrükleme koordinasyonu. Türkiye'den İngiltere'ye ihracat için destek.",
+    description: "UK ithalat gümrüklemesi ve depoya teslim. Türkiye'den İngiltere'ye ihracat için.",
     url: `${SITE_URL}/gumrukleme`,
     siteName: "LondraDepo.com",
     locale: "tr_TR",
@@ -37,11 +37,11 @@ const jsonLd = {
     },
     {
       "@type": "Service",
-      name: "İngiltere Gümrükleme Süreci Koordinasyonu",
+      name: "İngiltere İthalat Gümrüklemesi",
       provider: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
-      serviceType: "Customs Clearance Coordination",
+      serviceType: "Customs Clearance",
       description:
-        "İngiltere'ye ithalat için gümrükleme süreci koordinasyonu ve desteği. UK gümrük belgesi koordinasyonu ve sevkiyat-depo operasyonu.",
+        "İngiltere'ye ithalatta gümrük beyannamesi (Arca Trade Group gümrük ekibi), GTİP danışmanlığı ve gümrükten depoya teslim operasyonu.",
       areaServed: { "@type": "Country", name: "United Kingdom" },
       url: `${SITE_URL}/gumrukleme`,
     },
@@ -49,8 +49,8 @@ const jsonLd = {
 };
 
 const features = [
-  { icon: "📋", title: "İthalat Gümrükleme Koordinasyonu", desc: "İngiltere'ye yapılan ithalatlarda gümrükleme süreci koordinasyonunu destekliyoruz." },
-  { icon: "📄", title: "Belge Koordinasyonu", desc: "Gümrük sürecinde gerekli belgeler konusunda koordinasyon ve yönlendirme." },
+  { icon: "📋", title: "İthalat Beyannamesi", desc: "Arca Trade Group gümrük ekibi, ithalat beyannamenizi sizin adınıza verir." },
+  { icon: "📄", title: "GTİP ve Belge Danışmanlığı", desc: "Gümrük prosedürleri, GTİP sınıflandırması, tercihli menşe ve gerekli belgeler konusunda danışmanlık." },
   { icon: "🚢", title: "Sevkiyat Varış Koordinasyonu", desc: "Ürünlerinizin İngiltere'ye varışında gerekli süreç koordinasyonu." },
   { icon: "🏢", title: "Gümrük→Depo Operasyonu", desc: "Gümrükten çıkan ürünlerin depoya alınmasına kadar süreç yönetimi." },
 ];
@@ -58,11 +58,15 @@ const features = [
 const faqs = [
   {
     q: "UK gümrükleme sürecinde nasıl destek sağlıyorsunuz?",
-    a: "Gümrükleme sürecinde koordinasyon desteği sağlıyoruz. Gümrük işlemleri uzman gümrükçüler gerektirdiğinden, bu alanda yönlendirme ve süreç koordinasyonu sunmaktayız. Doğrudan gümrükleme hizmetinin kapsamı hakkında daha fazla bilgi için bizimle iletişime geçin.",
+    a: "Gümrük beyannameleri, LondraDepo'yu işleten Arca Trade Group'un gümrükleme ekibi tarafından müşteri adına verilir; gümrük prosedürleri, GTİP ve tercihli menşe konularında danışmanlık sağlanır. Dilerseniz kendi gümrük müşavirinizle de çalışabilirsiniz.",
   },
   {
     q: "Türkiye'den gönderdiğim ürünler için UK gümrük desteği alabilir miyim?",
-    a: "Evet. Türkiye'den İngiltere'ye gönderilen ürünlerin gümrükleme sürecinde koordinasyon desteği sağlıyoruz.",
+    a: "Evet. Türkiye'den ve diğer ülkelerden İngiltere'ye gelen ürünlerin gümrüklemesi Arca Trade Group tarafından yapılır; istenirse uluslararası nakliye de aynı grup tarafından organize edilir.",
+  },
+  {
+    q: "LondraDepo antrepo (bonded) depo mu?",
+    a: "Hayır. LondraDepo HMRC onaylı bir antrepo veya gümrüklü depo değildir. Ürünler gümrükten çekildikten sonra depomuzda stoklanır.",
   },
   {
     q: "Gümrük sonrası ürünler depoya nasıl alınıyor?",
@@ -89,18 +93,17 @@ export default function GumruklernePage() {
               <span className="text-white">Gümrükleme Desteği</span>
             </nav>
             <h1 className="text-3xl sm:text-4xl font-extrabold mb-4 leading-tight">
-              İngiltere Gümrükleme Desteği
+              İngiltere Gümrükleme Hizmeti
             </h1>
             <p className="text-slate-300 text-lg leading-relaxed max-w-3xl mb-6">
-              Ürünlerinizi İngiltere'ye getirme sürecinde gümrükleme koordinasyonu desteği sunuyoruz.
-              Türkiye'den veya herhangi bir ülkeden UK'e yapılan ithalatlarda süreç koordinasyonu
-              ve yönlendirme sağlıyoruz.
+              İngiltere'ye yapılan ithalatlarda gümrükleme, LondraDepo'yu işleten Arca Trade Group'un
+              gümrükleme ekibi tarafından yapılır: beyanname müşteri adına verilir, GTİP ve gümrük
+              prosedürleri konusunda danışmanlık sağlanır, gümrükten çekilen ürünler doğrudan Essex depomuza alınır.
             </p>
             <div className="bg-white/10 border border-white/20 rounded-xl p-4 mb-8 text-sm text-slate-300 max-w-2xl">
-              <strong className="text-white">Önemli Not:</strong> Gümrük işlemleri doğası gereği
-              lisanslı gümrükçüler gerektirmektedir. Sunduğumuz hizmet, gümrükleme sürecine
-              koordinasyon ve destek niteliğinde olup doğrudan gümrük beyanı içermeyebilir.
-              Detaylar için bizimle iletişime geçin.
+              <strong className="text-white">Not:</strong> Gümrükleme hizmeti Arca Trade Group tarafından
+              verilir ve depolamadan ayrı fiyatlandırılır. LondraDepo antrepo (bonded) depo değildir;
+              ürünler gümrükten çekildikten sonra depolanır. Dilerseniz kendi gümrük müşavirinizle de çalışabilirsiniz.
             </div>
             <a
               href={WHATSAPP}
@@ -116,7 +119,7 @@ export default function GumruklernePage() {
         {/* Features */}
         <section className="py-16 px-4 bg-white">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-2xl font-extrabold text-[#0b2545] mb-8 text-center">Gümrükleme Desteği Kapsamı</h2>
+            <h2 className="text-2xl font-extrabold text-[#0b2545] mb-8 text-center">Gümrükleme Hizmeti Kapsamı</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-3xl mx-auto">
               {features.map((f) => (
                 <div key={f.title} className="border border-slate-200 rounded-2xl p-5">

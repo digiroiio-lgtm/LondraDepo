@@ -6,6 +6,13 @@ const nextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
   },
+  // Approved URL consolidations (10.11.2026). statusCode 301 as requested; Google treats 301 and 308 the same.
+  async redirects() {
+    return [
+      { source: "/uk-warehousing-fulfilment", destination: "/en", statusCode: 301 },
+      { source: "/shopify-fulfillment", destination: "/shopify-ingiltere-depo", statusCode: 301 },
+    ];
+  },
   async headers() {
     return [
       {

@@ -52,6 +52,5 @@ export const EN_TO_TR = new Map(PAIRS.map(([tr, en]) => [en, tr]));
 /** Where the language switcher should send a visitor from the given path. */
 export function switchTarget(path: string): { href: string; lang: "tr" | "en" } {
   if (path === "/en" || path.startsWith("/en/")) return { href: EN_TO_TR.get(path) ?? "/", lang: "tr" };
-  if (path === "/uk-warehousing-fulfilment") return { href: "/", lang: "tr" };
   return { href: TR_TO_EN.get(path) ?? "/en", lang: "en" };
 }

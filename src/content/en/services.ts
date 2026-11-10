@@ -59,7 +59,7 @@ export const servicePages: EnPage[] = [
     ],
     faqs: [
       { q: "Which areas does your UK warehouse serve?", a: "Our Essex warehouse serves the whole of the UK. We coordinate delivery to London, Birmingham, Manchester and every other region." },
-      { q: "Can I ship goods from overseas straight to your warehouse?", a: "Yes. Your supplier or freight forwarder can deliver directly to our warehouse address. We also provide customs clearance coordination support for UK imports." },
+      { q: "Can I ship goods from overseas straight to your warehouse?", a: "Yes. Your supplier or freight forwarder can deliver directly to our warehouse address. Freight and customs clearance are also available through our parent company, Arca Trade Group." },
       { q: "What are your UK warehouse prices?", a: "Standard pallet storage starts from £3.50 + VAT per pallet per week. Handling, loading and unloading, re-palletising, customs coordination and distribution are quoted according to the scope of the operation." },
       { q: "Do you only store goods, or fulfil orders too?", a: "Both. We offer storage and full order fulfilment: when an order arrives we pick, pack, label and dispatch it to your UK customer." },
     ],
@@ -109,7 +109,7 @@ export const servicePages: EnPage[] = [
     faqs: [
       { q: "Can I get warehouse storage in London?", a: "Yes. Our warehouse is in Essex, close to London, about 40–50 km from the city and fully connected to UK logistics routes. You can store stock with us and fulfil orders across the UK." },
       { q: "Where exactly is the warehouse?", a: "Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY. It is close to London and easy to reach for trucks and container hauliers." },
-      { q: "How do I send products to the warehouse?", a: "Ship your goods from your country of origin to our warehouse address with your freight forwarder. We provide customs coordination support, and on arrival the goods are received, counted and booked into the system." },
+      { q: "How do I send products to the warehouse?", a: "Ship your goods to our warehouse address with your own freight forwarder, or ask Arca Trade Group to arrange freight and customs clearance, and on arrival the goods are received, counted and booked into the system." },
       { q: "How do I get a quote?", a: "Contact us on WhatsApp or by phone with your product type, volume, estimated pallets or cartons and the services you need." },
     ],
     related: ["/en/uk-warehousing", "/en/essex-warehouse", "/en/pallet-storage", "/en/uk-warehousing-pricing"],
@@ -474,31 +474,32 @@ export const servicePages: EnPage[] = [
     slug: "/en/uk-customs-clearance",
     tr: "/gumrukleme",
     kind: "service",
-    serviceType: "Customs clearance coordination",
-    title: "UK Customs Clearance Coordination Support",
+    serviceType: "Customs clearance",
+    title: "UK Customs Clearance for Imports",
     description:
-      "UK customs clearance coordination for imports: document coordination, shipment arrival support and customs-to-warehouse handover, working alongside licensed customs brokers.",
+      "UK import customs clearance through Arca Trade Group's customs team, with commodity code advice, arrival coordination and direct handover into our Essex warehouse.",
     label: "UK Customs Clearance",
-    h1: "UK Customs Clearance Coordination",
+    h1: "UK Customs Clearance for Imports",
     lead:
-      "LondraDepo provides coordination support for goods being imported into the UK: we help organise the documents, follow the shipment on arrival and manage the handover from customs into our warehouse. Customs declarations themselves are made by licensed customs agents, so our service is coordination and guidance rather than a declaration service.",
+      "Customs clearance for goods imported into the UK is handled by the customs clearance team of Arca Trade Group, the company that operates LondraDepo. The team completes declarations on behalf of customers and advises on customs procedures, commodity codes and preferences. Once goods are cleared, they are delivered to our Essex warehouse, counted and booked into stock.",
     note:
-      "Important: customs formalities require licensed customs brokers. Our service coordinates and supports the clearance process and may not include lodging the customs declaration itself. Contact us to confirm the scope for your shipment.",
+      "Customs clearance is provided by Arca Trade Group and quoted separately from warehousing. LondraDepo is not an HMRC-authorised customs or bonded warehouse: goods are stored after clearance. You can also use your own customs broker.",
     sections: [
       {
         type: "cards",
         h2: "Scope of our customs support",
         items: [
-          { title: "Import clearance coordination", text: "We support the coordination of clearance for imports into the UK." },
-          { title: "Document coordination", text: "Coordination and guidance on the documents required for customs." },
+          { title: "Import declarations", text: "Arca Trade Group's customs team completes import declarations on your behalf." },
+          { title: "Commodity codes and preferences", text: "Advice on customs procedures, commodity codes and preferential origin." },
           { title: "Arrival coordination", text: "Coordination when your shipment arrives in the UK." },
           { title: "Customs to warehouse", text: "We manage the process until cleared goods are received into our warehouse." },
         ],
       },
     ],
     faqs: [
-      { q: "How do you support UK customs clearance?", a: "We provide coordination support. Because customs formalities require specialist brokers, we offer guidance and process coordination. Contact us for details of the scope for your shipment." },
-      { q: "Can I get customs support for goods shipped from abroad?", a: "Yes. We support the coordination of customs clearance for goods shipped into the UK from Turkey and other countries." },
+      { q: "Who handles the UK customs declaration?", a: "The customs clearance team of Arca Trade Group, the company that operates LondraDepo, completes declarations on behalf of customers. You can also work with your own customs broker and simply deliver cleared goods to our warehouse." },
+      { q: "Can you clear goods shipped from abroad?", a: "Yes. Arca Trade Group clears goods shipped into the UK from Turkey, Europe and other countries, and can also arrange the sea, air, road or rail freight." },
+      { q: "Is LondraDepo a bonded or customs warehouse?", a: "No. LondraDepo is not an HMRC-authorised customs warehouse. Goods are stored after they have been cleared for free circulation in the UK." },
       { q: "How are goods received after customs?", a: "Once clearance is complete, your goods are delivered to our warehouse address, counted and booked into the warehouse system." },
     ],
     related: ["/en/uk-warehousing", "/en/uk-warehousing-benefits", "/en/essex-warehouse"],
@@ -647,14 +648,14 @@ export const servicePages: EnPage[] = [
     serviceType: "Warehousing",
     title: "Essex Warehouse near London – Rayleigh, SS6 7FY",
     description:
-      "Our Essex warehouse in Rayleigh (SS6 7FY): ~40 minutes to London, ~30 minutes to Tilbury, ~1 hour to Felixstowe. FCL/LCL receiving, pallet storage, fulfilment and Amazon prep.",
+      "Our Essex warehouse in Rayleigh (SS6 7FY): ~40 minutes to London, ~30 minutes to Tilbury, roughly 1 to 1¼ hours to Felixstowe by road. FCL/LCL receiving, pallet storage, fulfilment and Amazon prep.",
     label: "Essex Warehouse",
     h1: "Essex Warehouse near London",
     lead:
-      "LondraDepo's warehouse is at Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY. It is about 40 minutes from London via the A127 and M25, 30 minutes from the Port of Tilbury and an hour from Felixstowe, with a loading ramp and wide gate suitable for container unloading and palletised deliveries.",
+      "LondraDepo's warehouse is at Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY. It is about 40 minutes from London via the A127 and M25, 30 minutes from the Port of Tilbury and roughly 1 to 1¼ hours by road from Felixstowe, with a loading ramp and wide gate suitable for container unloading and palletised deliveries.",
     facts: [
       "~40 minutes to London (A127/M25)",
-      "~1 hour to Felixstowe, the UK's largest container port",
+      "Roughly 1 to 1¼ hours by road to Felixstowe, the UK's largest container port",
       "~30 minutes to the Port of Tilbury (container and ro-ro services)",
       "Close to Amazon UK fulfilment centres at Tilbury and Dartford",
       "Direct receiving of FCL and LCL containers",
@@ -676,7 +677,7 @@ export const servicePages: EnPage[] = [
           { title: "Pallet storage", text: "Palletised and loose goods are stored in secure warehouse space." },
           { title: "Fulfilment", text: "Orders are prepared, packed and shipped to customers." },
           { title: "Amazon prep", text: "FBA-compliant preparation and dispatch to Amazon." },
-          { title: "Customs guidance", text: "Guidance on commodity codes and customs processes." },
+          { title: "Customs clearance", text: "Import declarations and commodity code advice through Arca Trade Group." },
           { title: "Distribution", text: "UK-wide distribution through our carrier partners." },
         ],
       },

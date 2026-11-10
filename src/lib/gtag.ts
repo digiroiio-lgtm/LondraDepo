@@ -13,26 +13,35 @@ function hasAnalyticsConsent(): boolean {
   }
 }
 
-export function trackWhatsappClick(source: string) {
+type Params = Record<string, string | number | undefined>;
+
+function send(event: string, params: Params) {
   if (!hasAnalyticsConsent()) return;
-  (window as any).gtag?.("event", "whatsapp_click", {
-    event_category: "engagement",
-    source,
-  });
+  const page_lang = typeof document !== "undefined" ? document.documentElement.lang : undefined;
+  const page_path = typeof location !== "undefined" ? location.pathname : undefined;
+  (window as any).gtag?.("event", event, { page_lang, page_path, ...params });
+}
+
+export function trackWhatsappClick(source: string) {
+  send("whatsapp_click", { event_category: "engagement", source });
 }
 
 export function trackPhoneClick(source: string) {
-  if (!hasAnalyticsConsent()) return;
-  (window as any).gtag?.("event", "phone_call", {
-    event_category: "engagement",
-    source,
-  });
+  send("phone_call", { event_category: "engagement", source });
 }
 
-export function trackQuoteSubmit() {
-  if (!hasAnalyticsConsent()) return;
-  (window as any).gtag?.("event", "generate_lead", {
-    event_category: "conversion",
-    method: "form",
-  });
+export function trackCtaClick(cta_id: string, position: string) {
+  send("cta_click", { event_category: "engagement", cta_id, position });
+}
+
+export function trackLanguageSwitch(from: string, to: string) {
+  send("language_switch", { event_category: "navigation", from, to });
+}
+
+export function trackFormStart(form_id: string) {
+  send("form_start", { event_category: "conversion", form_id });
+}
+
+export function trackQuoteSubmit(details: Params = {}) {
+  send("generate_lead", { event_category: "conversion", method: "form", ...details });
 }

@@ -18,11 +18,12 @@ export const corePages: EnPage[] = [
       "LondraDepo is a UK third-party logistics (3PL) warehouse in Rayleigh, Essex, about 40 minutes from London. We receive your goods, store them on pallets or shelves, pick and pack your orders and deliver across the UK, so you can sell into the UK market without opening your own warehouse or hiring a UK team.",
     facts: [
       "Warehouse: Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY",
-      "~40 minutes to London, ~30 minutes to the Port of Tilbury, ~1 hour to Felixstowe",
+      "~40 minutes to London, ~30 minutes to the Port of Tilbury, roughly 1 to 1¼ hours by road to Felixstowe",
       "Pallet storage from £3.50 + VAT per pallet per week",
       "Stock managed in Mintsoft WMS (third-party warehouse management software)",
       "FCL and LCL container receiving, pallet and carton storage",
       "Operated by Arca Trade Group Ltd (Company No. 13247691), BIFA member, trading since 2021",
+      "Freight (sea, air, road, rail) and customs clearance available through Arca Trade Group",
     ],
     sections: [
       {
@@ -33,7 +34,7 @@ export const corePages: EnPage[] = [
           { title: "Warehousing & storage", text: "Short and long-term pallet and carton storage with goods-in, counting and live stock records." },
           { title: "Ecommerce fulfilment", text: "Order processing, pick and pack, shipping labels, dispatch and returns for online stores." },
           { title: "Shopify & Amazon support", text: "Fulfilment for Shopify stores and Amazon FBM sellers, plus Amazon FBA prep. We are not an official Shopify or Amazon partner." },
-          { title: "Customs coordination", text: "Coordination support for goods entering the UK, working alongside your customs broker." },
+          { title: "Freight & customs clearance", text: "Sea, air, road and rail freight plus customs clearance through our parent company, Arca Trade Group, or with your own forwarder." },
           { title: "Handling", text: "Container and vehicle unloading, sorting, repacking, relabelling and shipment preparation." },
           { title: "UK distribution", text: "Collections, warehouse transfers, B2B pallet deliveries and parcel dispatch across the UK." },
         ],
@@ -68,7 +69,7 @@ export const corePages: EnPage[] = [
     faqs: [
       { q: "Where is the LondraDepo warehouse?", a: "Our warehouse is at Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY, United Kingdom. It is about 40 minutes from London via the A127 and M25." },
       { q: "How much does UK pallet storage cost?", a: "Standard pallet storage starts from £3.50 + VAT per pallet per week. Handling, goods-in, fulfilment and delivery are quoted separately based on your products and volumes." },
-      { q: "Do you ship goods internationally to the UK?", a: "No. LondraDepo does not provide international freight. You or your freight forwarder ship the goods to our warehouse; our service starts when the goods arrive in the UK." },
+      { q: "Can you ship goods internationally to the UK?", a: "LondraDepo's warehouse service starts when goods arrive in the UK. International freight by sea, air, road and rail, and customs clearance, are available from our parent company Arca Trade Group, so transport and storage can be quoted together. You can also use your own freight forwarder." },
       { q: "Can you fulfil Shopify and Amazon orders?", a: "Yes. We store stock and fulfil orders for businesses selling on Shopify and Amazon (FBM), and prepare stock for Amazon FBA. LondraDepo is not an official Shopify or Amazon partner." },
       { q: "Is there a minimum volume?", a: "There is no fixed minimum pallet quantity. Businesses can start with a small trial volume and scale up; acceptance terms are confirmed at quotation stage." },
     ],
@@ -92,15 +93,31 @@ export const corePages: EnPage[] = [
       "Warehouse: Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY",
       "Languages: English and Turkish",
       "Service area: the whole of the UK",
+      "Office: +44 1268 203 283 · Sales@arcatrade.co.uk · 07:45–17:30 UK time",
     ],
     sections: [
       {
         type: "text",
         h2: "A physical UK logistics base",
         paras: [
-          "Our warehouse sits on the Arterial Park industrial estate in Rayleigh. The site is around 40 minutes from London, 30 minutes from the Port of Tilbury and an hour from Felixstowe, the UK's largest container port. Full container loads (FCL) are delivered and unloaded directly at the site, and the M25 gives us access to the rest of the country.",
+          "Our warehouse sits on the Arterial Park industrial estate in Rayleigh. The site is around 40 minutes from London, 30 minutes from the Port of Tilbury and roughly 1 to 1¼ hours by road from Felixstowe, the UK's largest container port. Full container loads (FCL) are delivered and unloaded directly at the site, and the M25 gives us access to the rest of the country.",
           "The operation runs on Mintsoft WMS, so stock levels, inbound and outbound movements and order status are recorded in real time. The same set-up supports Amazon FBA prep, Shopify and ecommerce fulfilment, and B2B wholesale distribution.",
         ],
+      },
+      {
+        type: "list",
+        h2: "Part of Arca Trade Group",
+        intro:
+          "LondraDepo is the warehousing and fulfilment brand of Arca Trade Group, a logistics provider founded in Basildon, Essex, and now based at the same Rayleigh site. Arca Trade Group works in two main areas, transportation and warehousing, with a strong trade lane between Turkey and the United Kingdom & Ireland. Alongside LondraDepo's warehouse services, the group offers:",
+        items: [
+          "Sea freight to and from every continent",
+          "Air freight for time-critical cargo",
+          "Road freight between the UK and Europe, groupage and full loads",
+          "Intermodal rail freight from the Far East and Europe to the UK",
+          "Customs clearance, including declarations on behalf of customers and advice on commodity codes and preferences",
+          "Project cargo",
+        ],
+        outro: "This means an international business can arrange transport, customs clearance, storage and UK distribution with one group. Freight and customs services are quoted by Arca Trade Group.",
       },
       {
         type: "text",
@@ -137,6 +154,7 @@ export const corePages: EnPage[] = [
     facts: [
       "WhatsApp and phone: +44 7554 195190",
       "Warehouse: Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY, United Kingdom",
+      "Arca Trade Group office: +44 1268 203 283 · Sales@arcatrade.co.uk · 07:45–17:30 UK time",
       "Delivery area: the whole of the UK, including London, Birmingham, Manchester and Leeds",
       "Languages: English and Turkish",
     ],
@@ -195,7 +213,7 @@ export const corePages: EnPage[] = [
     ],
     faqs: [
       { q: "How much does a UK warehouse cost?", a: "LondraDepo standard pallet storage starts from £3.50 + VAT per pallet per week. Handling, loading and unloading, re-palletising, customs coordination and distribution are quoted per shipment." },
-      { q: "Do you arrange international shipping to the UK?", a: "No. LondraDepo does not provide international freight. You will need a freight forwarder to move goods to the UK; our service starts on arrival with goods-in, storage, fulfilment and UK distribution." },
+      { q: "Do you arrange international shipping to the UK?", a: "LondraDepo's warehouse service starts when goods arrive in the UK. International freight by sea, air, road and rail, and customs clearance, are available from our parent company Arca Trade Group, so transport and storage can be quoted together. You can also use your own freight forwarder." },
       { q: "Can I start with a small volume?", a: "Yes. Pallet-based and part-load models are accepted, and there is no full-truckload requirement." },
       { q: "Do you help with UK labelling compliance?", a: "Depending on the product group, we can guide you on English labelling, UK market requirements and operational suitability. Legal compliance of the product remains the seller's responsibility." },
     ],

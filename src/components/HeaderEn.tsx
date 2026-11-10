@@ -3,17 +3,17 @@
 import Link from "next/link";
 import { useState } from "react";
 import LangSwitch from "./LangSwitch";
+import { trackCtaClick, trackPhoneClick } from "@/lib/gtag";
 
 const TEL = "tel:+447554195190";
 
 const navLinks = [
-  { href: "/en/uk-warehousing", label: "UK Warehousing" },
+  { href: "/en/uk-warehousing", label: "Warehousing" },
   { href: "/en/london-warehousing", label: "London" },
   { href: "/en/uk-warehousing-pricing", label: "Pricing" },
   { href: "/en/ecommerce-fulfilment", label: "Fulfilment" },
-  { href: "/en/amazon-prep-uk", label: "Amazon Prep" },
-  { href: "/en/case-studies", label: "Case Studies" },
-  { href: "/en/about-us", label: "About" },
+  { href: "/en/amazon-prep-uk", label: "Amazon" },
+  { href: "/en/case-studies", label: "Cases" },
   { href: "/en/contact", label: "Contact" },
 ];
 
@@ -39,8 +39,16 @@ export default function HeaderEn() {
 
         <div className="flex items-center gap-2 flex-shrink-0">
           <LangSwitch />
+          <Link
+            href="/en/request-a-quote?from=header"
+            onClick={() => trackCtaClick("/en/request-a-quote", "header")}
+            className="hidden sm:inline-flex items-center bg-[#0b2545] hover:bg-[#13315c] text-white text-sm font-semibold px-4 py-2.5 rounded-full transition"
+          >
+            Get a Quote
+          </Link>
           <a
             href={TEL}
+            onClick={() => trackPhoneClick("header")}
             className="inline-flex items-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white text-sm font-semibold px-4 py-2.5 rounded-full transition"
           >
             <svg className="w-4 h-4 fill-white flex-shrink-0" viewBox="0 0 24 24" aria-hidden="true">
@@ -81,6 +89,13 @@ export default function HeaderEn() {
               {l.label}
             </Link>
           ))}
+          <Link
+            href="/en/request-a-quote?from=header_mobile"
+            className="block mt-2 py-2.5 px-3 rounded-lg text-sm font-semibold text-white bg-[#e63946] text-center"
+            onClick={() => { trackCtaClick("/en/request-a-quote", "header_mobile"); setOpen(false); }}
+          >
+            Get a Quote
+          </Link>
         </nav>
       )}
     </header>

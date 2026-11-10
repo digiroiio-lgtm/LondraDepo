@@ -2,7 +2,8 @@
 
 import { useState, useEffect, useRef, FormEvent } from "react";
 import { useForm } from "@formspree/react";
-import { trackFormStart, trackQuoteSubmit } from "@/lib/gtag";
+import { trackCtaClick, trackFormStart, trackQuoteSubmit } from "@/lib/gtag";
+import { bookingUrl } from "@/lib/booking";
 
 const WA_NUMBER = "447554195190";
 const FORMSPREE_ID = "xoejvawy";
@@ -429,6 +430,20 @@ export default function QuoteForm({
           >
             {state.submitting ? "Gönderiliyor…" : "Teklifimi İste →"}
           </button>
+
+          <p className="text-center text-sm text-slate-600">
+            Önce konuşmak mı istersiniz?{" "}
+            <a
+              href={bookingUrl("tr", formId)}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-tracked="1"
+              onClick={() => trackCtaClick("book_call", formId)}
+              className="font-semibold text-[#0b2545] underline"
+            >
+              15 dakikalık görüşme ayarlayın
+            </a>
+          </p>
 
           <p className="text-center text-xs text-slate-400">
             Formu göndererek bilgilerinizin teklif hazırlamak amacıyla ekibimizle paylaşılmasını kabul etmiş olursunuz.

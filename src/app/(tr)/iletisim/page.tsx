@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import TrackedLink from "@/components/TrackedLink";
+import { bookingUrl } from "@/lib/booking";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -97,6 +99,17 @@ export default function IletisimPage() {
                 <span className="text-[#0b2545] text-sm">+44 7554 195190</span>
                 <span className="text-slate-500 text-xs">Türkçe destek mevcut</span>
               </a>
+
+              <TrackedLink
+                kind="booking"
+                source="tr_contact_card"
+                href={bookingUrl("tr", "tr_contact_card")}
+                className="sm:col-span-2 flex flex-col items-center gap-2 bg-white border border-[#e63946]/40 rounded-2xl p-6 hover:bg-red-50 transition text-center"
+              >
+                <span className="text-3xl">📅</span>
+                <span className="font-bold text-[#0b2545] text-lg">15 Dakikalık Görüşme Ayarlayın</span>
+                <span className="text-slate-500 text-xs">Size uygun saati seçin, görüntülü görüşme bağlantısı e-postanıza gelsin</span>
+              </TrackedLink>
             </div>
 
             <div className="bg-[#f6f8fb] rounded-2xl p-8 mb-10">

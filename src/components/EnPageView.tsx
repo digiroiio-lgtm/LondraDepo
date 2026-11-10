@@ -3,6 +3,7 @@ import Image from "next/image";
 import WarehouseGallery from "@/components/WarehouseGallery";
 import TrackedLink from "@/components/TrackedLink";
 import { ctaFor, quoteHref } from "@/content/en/cta";
+import { bookingUrl } from "@/lib/booking";
 import QuoteFormEn from "@/components/QuoteFormEn";
 import ChecklistGate from "./ChecklistGate";
 import CostCalculator from "@/components/CostCalculator";
@@ -435,6 +436,9 @@ export default function EnPageView({ page }: { page: EnPage }) {
                 </TrackedLink>
                 <TrackedLink kind="whatsapp" source="footer_cta" href={WHATSAPP} className="inline-block bg-green-500 hover:bg-green-400 text-white font-semibold px-7 py-3 rounded-full transition">
                   Message us on WhatsApp
+                </TrackedLink>
+                <TrackedLink kind="booking" source="footer_cta" href={bookingUrl("en", page.slug)} className="inline-block border border-white/60 hover:bg-white/10 text-white font-semibold px-7 py-3 rounded-full transition">
+                  Book a 15-min call
                 </TrackedLink>
               </div>
             </section>

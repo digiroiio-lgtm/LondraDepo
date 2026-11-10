@@ -39,6 +39,7 @@ export default function HeroSection() {
             href={WHATSAPP}
             target="_blank"
             rel="noopener noreferrer"
+            data-tracked="1"
             onClick={() => trackWhatsappClick("hero")}
             className="inline-flex items-center justify-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full text-base transition shadow-lg"
           >
@@ -49,6 +50,7 @@ export default function HeroSection() {
           </a>
           <a
             href={TEL}
+            data-tracked="1"
             onClick={() => trackPhoneClick("hero")}
             className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold px-8 py-4 rounded-full text-base transition"
           >

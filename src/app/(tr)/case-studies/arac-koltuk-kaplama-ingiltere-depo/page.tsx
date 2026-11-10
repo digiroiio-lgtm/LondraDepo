@@ -5,11 +5,14 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 import CaseHero from "@/components/CaseHero";
+import AuthorBox from "@/components/AuthorBox";
+import { TR_ARTICLES } from "@/content/tr-articles";
 import OperationsFlow from "@/components/OperationsFlow";
 import RelatedCases from "@/components/RelatedCases";
 
 import { SITE_URL } from "@/lib/site";
 import { trAlternates } from "@/lib/i18n";
+const ARTICLE = TR_ARTICLES["/case-studies/arac-koltuk-kaplama-ingiltere-depo"];
 const PAGE_URL = `${SITE_URL}/case-studies/arac-koltuk-kaplama-ingiltere-depo`;
 const WHATSAPP =
   "https://wa.me/447554195190?text=Merhaba%2C%20otomotiv%20urun%20depolama%20ve%20dagitim%20hakkinda%20bilgi%20almak%20istiyorum.";
@@ -58,11 +61,14 @@ const jsonLd = {
     {
       "@type": "Article",
       "@id": `${PAGE_URL}#article`,
-      headline:
-        "Araç Koltuk Kaplama & Suni Deri — İngiltere Depo & Satış Operasyonu",
+      headline: ARTICLE.headline,
       description:
         "Araç koltuk kaplama ve suni deri malzemelerinin İngiltere depo altyapısı, stok yönetimi, online fulfillment ve B2B dağıtım operasyonu.",
       url: PAGE_URL,
+      ...(ARTICLE.published ? { datePublished: ARTICLE.published } : {}),
+      dateModified: ARTICLE.modified,
+      author: { "@type": "Person", name: "Sertaç Yılmaz", jobTitle: "Arca Trade Group Kurucu Ortağı", url: `${SITE_URL}/hakkimizda` },
+      contributor: { "@type": "Person", name: "Yusuf Barış", jobTitle: "Operasyon Müdürü" },
       publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
       image: { "@type": "ImageObject", url: `${SITE_URL}/logo.svg`, width: 640, height: 160 },
       mainEntityOfPage: PAGE_URL,
@@ -175,6 +181,7 @@ export default function AracKoltukKaplamaCaseStudyPage() {
         <article className="py-12 px-4 bg-white">
           <div className="max-w-4xl mx-auto">
             <CaseHero
+              path="/case-studies/arac-koltuk-kaplama-ingiltere-depo"
               industry="Otomotiv & Döşeme"
               industryColor="text-blue-700 bg-blue-50"
               brand="Araç Koltuk Kaplama & Suni Deri"
@@ -383,6 +390,9 @@ export default function AracKoltukKaplamaCaseStudyPage() {
                 </Link>
               </div>
             </div>
+
+            <AuthorBox path="/case-studies/arac-koltuk-kaplama-ingiltere-depo" />
+
 
             <RelatedCases cases={relatedCases} />
           </div>

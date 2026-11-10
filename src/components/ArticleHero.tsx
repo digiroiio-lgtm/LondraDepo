@@ -1,4 +1,5 @@
-import { TR_ARTICLES, trDate } from "@/content/tr-articles";
+import { TR_ARTICLES } from "@/content/tr-articles";
+import { ArticleDates, ShortAnswer } from "./ArticleMeta";
 
 interface ArticleHeroProps {
   category: string;
@@ -77,24 +78,16 @@ export default function ArticleHero({
       </h1>
 
       {/* Meta */}
-      <p className="text-slate-500 text-sm mb-8">
-        {a ? (
-          <span>
-            Yayın: <time dateTime={a.published}>{trDate(a.published)}</time> · Son güncelleme:{" "}
-            <time dateTime={a.modified}>{trDate(a.modified)}</time> ·{" "}
-          </span>
-        ) : (
-          date && <span>Güncellendi: {date} · </span>
-        )}
-        ⏱ {readTime} okuma
-      </p>
-
-      {/* Answer-first summary (AEO) */}
-      {a && (
-        <div className="mb-8 rounded-xl border-l-4 border-[#e63946] bg-[#f6f8fb] p-5">
-          <div className="text-xs font-bold uppercase tracking-widest text-[#e63946] mb-2">Kısa cevap</div>
-          <div className="text-slate-700 leading-relaxed">{a.summary}</div>
-        </div>
+      {a && path ? (
+        <>
+          <ArticleDates path={path} suffix={<> · ⏱ {readTime} okuma</>} />
+          <ShortAnswer path={path} />
+        </>
+      ) : (
+        <p className="text-slate-500 text-sm mb-8">
+          {date && <span>Güncellendi: {date} · </span>}
+          ⏱ {readTime} okuma
+        </p>
       )}
     </>
   );

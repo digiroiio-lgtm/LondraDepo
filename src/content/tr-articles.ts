@@ -1,11 +1,12 @@
 /**
- * Turkish blog articles: one place for dates, the answer-first summary ("Kısa cevap")
+ * Turkish blog articles and case studies: one place for dates, the answer-first summary ("Kısa cevap")
  * and sources. Dates feed both the visible byline and Article JSON-LD so they never drift.
  * Update `modified` only when the article content is reviewed or changed.
  */
 export type TrArticle = {
   headline: string;
-  published: string;
+  /** Omitted where the original publication date is not known (never guessed). */
+  published?: string;
   modified: string;
   summary: string;
   sources?: { label: string; href: string }[];
@@ -77,6 +78,52 @@ export const TR_ARTICLES: Record<string, TrArticle> = {
       VAT_RATES,
       { label: "US International Trade Administration (trade.gov): United Kingdom import requirements and documentation", href: "https://www.trade.gov/country-commercial-guides/united-kingdom-import-requirements-and-documentation" },
     ],
+  },
+  // Case studies (operasyon örnekleri). Publication dates are kept only where they were already published.
+  "/case-studies/arac-koltuk-kaplama-ingiltere-depo": {
+    headline: "Araç Koltuk Kaplama & Suni Deri — İngiltere Depo & Satış Operasyonu",
+    modified: "2026-11-10",
+    summary:
+      "Araç koltuk kaplama ve suni deri üreticisi, İngiltere stoğunu Essex'teki LondraDepo deposunda tutuyor. Ürünler kabulde sayılıp kalite kontrolünden geçiyor, SKU'ya göre raf ve palet sisteminde depolanıyor; eBay, Amazon ve B2B bayi siparişleri aynı gün işleme alınıp İngiltere genelindeki atölye, bayi ve bireysel müşterilere gönderiliyor.",
+  },
+  "/case-studies/cruyff-uk-fulfillment": {
+    headline: "Cruyff — İngiltere Moda & Fulfillment Operasyonu",
+    published: "2026-01-01",
+    modified: "2026-11-10",
+    summary:
+      "Avrupa'dan İngiltere'ye online satış açan bu moda markası için LondraDepo stoğu Essex'te teslim alıp yeniden paketliyor, stok seviyelerini yönetiyor ve e-ticaret siparişlerini hazırlayıp İngiltere geneline gönderiyor. UK içi teslimat süresi 2 gün.",
+  },
+  "/case-studies/pizza-box-distribution-uk": {
+    headline: "Pizza Kutusu — İngiltere B2B Restoran Dağıtım Operasyonu",
+    modified: "2026-11-10",
+    summary:
+      "Pizza kutusu üreticisi, İngiltere'deki restoran müşterilerine düzenli teslimat için palet bazlı UK depolama ve programlı dağıtım modeline geçti. Stok Essex deposunda paletli tutuluyor ve restoranlara sabit haftalık veya aylık programla UK geneline dağıtılıyor.",
+  },
+  "/case-studies/tasinabilir-sarj-istasyonu-ingiltere-operasyonu": {
+    headline: "Taşınabilir Şarj İstasyonu — İngiltere Operasyon Yönetimi",
+    modified: "2026-11-10",
+    summary:
+      "Taşınabilir şarj istasyonu ürünlerinin İngiltere operasyonu tek merkezden yürütülüyor: Essex deposunda stoklama, SIM aktivasyonu, şarj kontrolü ve son kullanıcıya sevkiyat. Lojistik ile teknik hazırlık aynı depoda yapıldığı için ürünler kullanıma hazır şekilde müşteriye ulaşıyor.",
+  },
+  "/case-studies/tortilla-uk-distribution": {
+    headline: "Tortilla Markası — İngiltere Depo & Dağıtım Operasyonu",
+    published: "2026-01-01",
+    modified: "2026-11-10",
+    summary:
+      "İngiltere'ye küçük başlayıp büyümek mümkün: bu gıda üreticisi pazarı tek paletle test etti, GTİP ve UK etiketleme netleştikten sonra düzenli sevkiyata geçti. Mal kabul, depolama, sipariş hazırlama ve UK dağıtımı Essex'teki tek depodan yürütülüyor; hacim bugün ayda 6 × 40HC konteyner.",
+  },
+  "/case-studies/uk-auto-parts-warehouse": {
+    headline: "OEM & Yan Sanayi — Lüks Araç Yedek Parça İngiltere Deposu",
+    modified: "2026-11-10",
+    summary:
+      "Lüks araç segmenti için OEM ve aftermarket yedek parça üreten firma, İngiltere bayilik ve online satış ağını büyütürken UK stok yönetimi ve dağıtım altyapısını LondraDepo'da kurdu. Parçalar palet ve raf sisteminde hasar izlemeli depolanıyor ve İngiltere geneline dağıtılıyor.",
+  },
+  "/case-studies/uk-walking-treadmill-distribution": {
+    headline: "Walking Treadmill — İngiltere Depo & Satış Operasyonu",
+    published: "2026-01-01",
+    modified: "2026-11-10",
+    summary:
+      "Walking treadmill ürünlerinin İngiltere depolama, online satış ve retail dağıtım operasyonu LondraDepo üzerinden yürütülüyor. Büyük hacimli ürünler Essex deposunda kabul edilip stoklanıyor; online siparişler ve mağaza teslimatları İngiltere geneline tek merkezden organize ediliyor.",
   },
 };
 

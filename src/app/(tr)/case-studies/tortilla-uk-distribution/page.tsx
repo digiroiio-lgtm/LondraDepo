@@ -5,11 +5,14 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 import CaseHero from "@/components/CaseHero";
+import AuthorBox from "@/components/AuthorBox";
+import { TR_ARTICLES } from "@/content/tr-articles";
 import OperationsFlow from "@/components/OperationsFlow";
 import RelatedCases from "@/components/RelatedCases";
 
 import { SITE_URL } from "@/lib/site";
 import { trAlternates } from "@/lib/i18n";
+const ARTICLE = TR_ARTICLES["/case-studies/tortilla-uk-distribution"];
 const PAGE_URL = `${SITE_URL}/case-studies/tortilla-uk-distribution`;
 const WHATSAPP =
   "https://wa.me/447554195190?text=Merhaba%2C%20gida%20urunleri%20ingiltere%20operasyonu%20hakkinda%20bilgi%20almak%20istiyorum.";
@@ -62,17 +65,14 @@ const jsonLd = {
     {
       "@type": "Article",
       "@id": `${PAGE_URL}#article`,
-      headline: "Tortilla Markası — İngiltere Depo & Dağıtım Operasyonu",
+      headline: ARTICLE.headline,
       description:
         "Ankara merkezli tortilla ve flatbread üreticisinin 1 paletten aylık 6 x 40HC konteynere uzanan İngiltere operasyonu.",
       url: PAGE_URL,
-      datePublished: "2026-01-01",
-      dateModified: "2026-05-24",
-      author: {
-        "@type": "Person",
-        name: "Sertaç Yılmaz",
-      },
-      contributor: { "@type": "Person", name: "Yusuf Barış" },
+      ...(ARTICLE.published ? { datePublished: ARTICLE.published } : {}),
+      dateModified: ARTICLE.modified,
+      author: { "@type": "Person", name: "Sertaç Yılmaz", jobTitle: "Arca Trade Group Kurucu Ortağı", url: `${SITE_URL}/hakkimizda` },
+      contributor: { "@type": "Person", name: "Yusuf Barış", jobTitle: "Operasyon Müdürü" },
       publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
       image: { "@type": "ImageObject", url: `${SITE_URL}/logo.svg`, width: 640, height: 160 },
       mainEntityOfPage: PAGE_URL,
@@ -198,6 +198,7 @@ export default function TortillaCaseStudyPage() {
           <div className="max-w-4xl mx-auto">
             {/* Hero */}
             <CaseHero
+              path="/case-studies/tortilla-uk-distribution"
               industry="Gıda / FMCG"
               industryColor="text-amber-700 bg-amber-50"
               brand="Tortilla & Flatbread"
@@ -484,26 +485,7 @@ export default function TortillaCaseStudyPage() {
               </div>
             </div>
 
-            {/* Author box */}
-            <div className="border border-slate-200 rounded-xl p-5 mb-8 flex items-start gap-4 bg-slate-50">
-              <div className="w-12 h-12 rounded-full bg-[#0b2545] flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
-                SY
-              </div>
-              <div>
-                <p className="font-bold text-[#0b2545] text-sm">Sertaç Yılmaz</p>
-                <p className="text-slate-500 text-xs mb-1">
-                  UK Warehouse Operations Specialist — LondraDepo.com
-                </p>
-                <p className="text-slate-600 text-xs leading-relaxed">
-                  İngiltere depolama ve fulfillment operasyonlarında uzman. Türk ihracatçılar için UK lojistik
-                  altyapısı kurulumu ve FMCG gıda operasyonu konusunda aktif danışmanlık.
-                </p>
-                <p className="text-slate-400 text-xs mt-1">
-                  İncelendi:{" "}
-                  <span className="font-medium text-slate-500">Yusuf Barış</span> — Operations Manager
-                </p>
-              </div>
-            </div>
+            <AuthorBox path="/case-studies/tortilla-uk-distribution" />
 
             <RelatedCases cases={relatedCases} />
           </div>

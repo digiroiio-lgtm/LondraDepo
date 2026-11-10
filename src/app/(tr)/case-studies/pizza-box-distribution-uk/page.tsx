@@ -5,11 +5,14 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 import CaseHero from "@/components/CaseHero";
+import AuthorBox from "@/components/AuthorBox";
+import { TR_ARTICLES } from "@/content/tr-articles";
 import OperationsFlow from "@/components/OperationsFlow";
 import RelatedCases from "@/components/RelatedCases";
 
 import { SITE_URL } from "@/lib/site";
 import { trAlternates } from "@/lib/i18n";
+const ARTICLE = TR_ARTICLES["/case-studies/pizza-box-distribution-uk"];
 const PAGE_URL = `${SITE_URL}/case-studies/pizza-box-distribution-uk`;
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20B2B%20dagitim%20operasyonu%20hakkinda%20bilgi%20almak%20istiyorum.";
 
@@ -45,10 +48,14 @@ const jsonLd = {
     {
       "@type": "Article",
       "@id": `${PAGE_URL}#article`,
-      headline: "Pizza Kutusu — İngiltere B2B Dağıtım Operasyonu",
+      headline: ARTICLE.headline,
       description:
         "Pizza kutusu üreticisinin İngiltere restoranlarına palet bazlı stok yönetimi ve düzenli dağıtım planlaması.",
       url: PAGE_URL,
+      ...(ARTICLE.published ? { datePublished: ARTICLE.published } : {}),
+      dateModified: ARTICLE.modified,
+      author: { "@type": "Person", name: "Sertaç Yılmaz", jobTitle: "Arca Trade Group Kurucu Ortağı", url: `${SITE_URL}/hakkimizda` },
+      contributor: { "@type": "Person", name: "Yusuf Barış", jobTitle: "Operasyon Müdürü" },
       publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
       image: { "@type": "ImageObject", url: `${SITE_URL}/logo.svg`, width: 640, height: 160 },
       mainEntityOfPage: PAGE_URL,
@@ -153,6 +160,7 @@ export default function PizzaBoxCaseStudyPage() {
         <article className="py-12 px-4 bg-white">
           <div className="max-w-4xl mx-auto">
             <CaseHero
+              path="/case-studies/pizza-box-distribution-uk"
               industry="B2B Dağıtım"
               industryColor="text-amber-700 bg-amber-50"
               brand="Ambalaj & FMCG"
@@ -285,6 +293,9 @@ export default function PizzaBoxCaseStudyPage() {
                 <Link href="/essex-depo" className="text-sm text-[#0b2545] hover:underline">→ Essex Depo</Link>
               </div>
             </div>
+
+            <AuthorBox path="/case-studies/pizza-box-distribution-uk" />
+
 
             <RelatedCases cases={relatedCases} />
           </div>

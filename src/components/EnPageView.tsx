@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import WarehouseGallery from "@/components/WarehouseGallery";
+import TrackedLink from "@/components/TrackedLink";
+import { ctaFor, quoteHref } from "@/content/en/cta";
 import HeaderEn from "@/components/HeaderEn";
 import FooterEn from "@/components/FooterEn";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
@@ -190,6 +192,8 @@ function SectionView({ s }: { s: Section }) {
 export default function EnPageView({ page }: { page: EnPage }) {
   const crumbs = breadcrumbs(page);
   const related = (page.related ?? []).map((s) => getEnPage(s)).filter((p): p is EnPage => Boolean(p));
+  const quote = ctaFor(page);
+  const qHref = quoteHref(quote.service, page.slug);
   const cta = page.cta ?? { h2: "Get a UK warehousing quote", text: "Tell us your product, volumes and channels and we will prepare a tailored quote." };
 
   return (
@@ -223,12 +227,15 @@ export default function EnPageView({ page }: { page: EnPage }) {
             <p className="text-lg text-slate-700 leading-relaxed max-w-3xl">{page.lead}</p>
             {page.kind !== "legal" && (
               <div className="flex flex-wrap gap-3 mt-7">
-                <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="bg-green-500 hover:bg-green-400 text-white font-semibold px-6 py-3 rounded-full transition">
-                  Get a quote on WhatsApp
-                </a>
-                <a href={TEL} className="border border-[#0b2545] text-[#0b2545] font-semibold px-6 py-3 rounded-full hover:bg-[#0b2545] hover:text-white transition">
+                <TrackedLink kind="cta" source="hero" href={qHref} className="bg-[#e63946] hover:bg-[#c1121f] text-white font-semibold px-6 py-3 rounded-full transition">
+                  {quote.label}
+                </TrackedLink>
+                <TrackedLink kind="whatsapp" source="hero" href={WHATSAPP} className="bg-green-500 hover:bg-green-400 text-white font-semibold px-6 py-3 rounded-full transition">
+                  WhatsApp us
+                </TrackedLink>
+                <TrackedLink kind="phone" source="hero" href={TEL} className="border border-[#0b2545] text-[#0b2545] font-semibold px-6 py-3 rounded-full hover:bg-[#0b2545] hover:text-white transition">
                   📞 +44 7554 195190
-                </a>
+                </TrackedLink>
               </div>
             )}
             {page.kind === "home" && (
@@ -262,17 +269,34 @@ export default function EnPageView({ page }: { page: EnPage }) {
 
           {page.sections.map((s, i) => <SectionView key={i} s={s} />)}
 
+          {page.kind !== "legal" && page.kind !== "contact" && (
+            <aside className="mb-12 flex flex-col sm:flex-row sm:items-center justify-between gap-4 rounded-xl border border-[#e63946]/30 bg-red-50 p-6">
+              <p className="font-semibold text-[#0b2545]">Tell us your product, volumes and channels. We will prepare a tailored proposal.</p>
+              <TrackedLink kind="cta" source="mid_page" href={qHref} className="shrink-0 text-center bg-[#e63946] hover:bg-[#c1121f] text-white font-semibold px-6 py-3 rounded-full transition">
+                {quote.label}
+              </TrackedLink>
+            </aside>
+          )}
+
           {page.kind === "contact" && (
             <section className="mb-12 grid gap-4 sm:grid-cols-3">
-              <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="rounded-xl border border-slate-200 p-5 hover:border-green-500 transition">
+              <TrackedLink kind="cta" source="contact_card" href="/en/request-a-quote?from=%2Fen%2Fcontact" className="rounded-xl border border-[#e63946] p-5 hover:bg-red-50 transition">
+                <h2 className="font-semibold text-[#0b2545] mb-1">Request a quote online</h2>
+                <p className="text-sm text-slate-600">Short form: service, product and volumes</p>
+              </TrackedLink>
+              <TrackedLink kind="whatsapp" source="contact_card" href={WHATSAPP} className="rounded-xl border border-slate-200 p-5 hover:border-green-500 transition">
                 <h2 className="font-semibold text-[#0b2545] mb-1">WhatsApp</h2>
                 <p className="text-sm text-slate-600">+44 7554 195190 · fastest response</p>
-              </a>
-              <a href={TEL} className="rounded-xl border border-slate-200 p-5 hover:border-[#0b2545] transition">
+              </TrackedLink>
+              <TrackedLink kind="phone" source="contact_card" href={TEL} className="rounded-xl border border-slate-200 p-5 hover:border-[#0b2545] transition">
                 <h2 className="font-semibold text-[#0b2545] mb-1">Phone</h2>
                 <p className="text-sm text-slate-600">+44 7554 195190 · English and Turkish</p>
-              </a>
-              <a href={MAPS} target="_blank" rel="noopener noreferrer" className="rounded-xl border border-slate-200 p-5 hover:border-[#0b2545] transition">
+              </TrackedLink>
+              <TrackedLink kind="phone" source="contact_card_office" href="tel:+441268203283" className="rounded-xl border border-slate-200 p-5 hover:border-[#0b2545] transition">
+                <h2 className="font-semibold text-[#0b2545] mb-1">Arca Trade Group office</h2>
+                <p className="text-sm text-slate-600">+44 1268 203 283 · Sales@arcatrade.co.uk · 07:45–17:30 UK time</p>
+              </TrackedLink>
+              <a href={MAPS} target="_blank" rel="noopener noreferrer" className="rounded-xl border border-slate-200 p-5 hover:border-[#0b2545] transition sm:col-span-2">
                 <h2 className="font-semibold text-[#0b2545] mb-1">Warehouse address</h2>
                 <p className="text-sm text-slate-600">Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY · Open in Google Maps</p>
               </a>
@@ -312,9 +336,14 @@ export default function EnPageView({ page }: { page: EnPage }) {
             <section className="rounded-2xl bg-[#0b2545] text-white p-8 text-center">
               <h2 className="text-2xl font-bold mb-3">{cta.h2}</h2>
               <p className="text-white/80 mb-6 max-w-2xl mx-auto">{cta.text}</p>
-              <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="inline-block bg-green-500 hover:bg-green-400 text-white font-semibold px-7 py-3 rounded-full transition">
-                Message us on WhatsApp
-              </a>
+              <div className="flex flex-wrap justify-center gap-3">
+                <TrackedLink kind="cta" source="footer_cta" href={qHref} className="inline-block bg-[#e63946] hover:bg-[#c1121f] text-white font-semibold px-7 py-3 rounded-full transition">
+                  {quote.label}
+                </TrackedLink>
+                <TrackedLink kind="whatsapp" source="footer_cta" href={WHATSAPP} className="inline-block bg-green-500 hover:bg-green-400 text-white font-semibold px-7 py-3 rounded-full transition">
+                  Message us on WhatsApp
+                </TrackedLink>
+              </div>
             </section>
           )}
         </div>

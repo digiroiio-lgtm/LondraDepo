@@ -36,7 +36,7 @@ const jsonLd = {
       url: `${SITE_URL}/en`,
       logo: { "@type": "ImageObject", url: `${SITE_URL}/logo.svg` },
       description:
-        "UK third-party logistics warehouse in Rayleigh, Essex, near London, providing warehousing, pallet storage, ecommerce fulfilment, Amazon FBA prep, customs clearance coordination and UK-wide distribution for international brands.",
+        "UK third-party logistics warehouse in Rayleigh, Essex, near London, providing warehousing, pallet storage, container unloading, ecommerce fulfilment, Amazon FBA prep and UK-wide distribution for international brands. Operated by Arca Trade Group Ltd, which also provides international freight and customs clearance.",
       foundingDate: "2021",
       areaServed: ["London", "Essex", "Birmingham", "Manchester", "United Kingdom"],
       address: {
@@ -48,6 +48,7 @@ const jsonLd = {
         addressCountry: "GB",
       },
       telephone: "+447554195190",
+      email: "Sales@arcatrade.co.uk",
       vatID: "GB353315322",
       knowsAbout: ["UK warehousing", "Ecommerce fulfilment", "Pallet storage", "Amazon FBA prep", "UK distribution", "Customs clearance coordination"],
       contactPoint: {
@@ -56,6 +57,7 @@ const jsonLd = {
         telephone: "+447554195190",
         availableLanguage: ["English", "Turkish"],
       },
+      knowsLanguage: ["en", "tr"],
       sameAs: [
         "https://find-and-update.company-information.service.gov.uk/company/13247691",
         "https://www.linkedin.com/company/arcatradegroup/",

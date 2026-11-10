@@ -13,6 +13,7 @@ Each English page has a 1:1 Turkish equivalent linked with reciprocal hreflang (
 - https://www.londradepo.com/en — Home
 - https://www.londradepo.com/en/about-us — About Us
 - https://www.londradepo.com/en/contact — Contact
+- https://www.londradepo.com/en/request-a-quote — Request a quote (English B2B enquiry form)
 - https://www.londradepo.com/en/uk-warehousing-benefits — UK Warehousing Benefits
 - https://www.londradepo.com/en/uk-warehousing-pricing — UK Warehousing Pricing
 - https://www.londradepo.com/en/uk-warehousing — UK Warehousing
@@ -76,12 +77,10 @@ Each English page has a 1:1 Turkish equivalent linked with reciprocal hreflang (
 - https://www.londradepo.com/ellecleme — Goods handling: loading, unloading, sorting, repacking
 - https://www.londradepo.com/nakliye-dagitim — UK collection, local transfer and distribution
 - https://www.londradepo.com/e-ticaret-fulfillment — E-commerce fulfilment: pick, pack, label, dispatch
-- https://www.londradepo.com/shopify-fulfillment — Shopify order fulfilment service
 - https://www.londradepo.com/amazon-fulfillment — Amazon FBM order fulfilment service
 - https://www.londradepo.com/amazon-prep-uk — Amazon FBA prep service (UK)
 - https://www.londradepo.com/ingiltere-fulfillment — General UK fulfilment services overview
 - https://www.londradepo.com/turkiyeden-ingiltereye-depolama — Storage and fulfilment for Turkey-to-UK sellers
-- https://www.londradepo.com/uk-warehousing-fulfilment — UK warehousing and fulfilment (English language page)
 - https://www.londradepo.com/essex-depo — Essex warehouse location detail
 
 ---
@@ -126,8 +125,8 @@ Each English page has a 1:1 Turkish equivalent linked with reciprocal hreflang (
 
 - Physical location: Arterial Park, Arterial Road, Rayleigh, Essex, UK (approximately 40–50 km from central London)
 - Warehouse management system: Mintsoft WMS (third-party software, not owned by LondraDepo)
-- LondraDepo does NOT handle international freight from Turkey to UK — services begin from UK customs onward
-- Customs offering is coordination/support only, not licensed customs brokerage
+- LondraDepo is the warehousing brand of Arca Trade Group Ltd. International freight (air, sea, road, rail) and customs clearance are provided by Arca Trade Group, not as LondraDepo warehouse services
+- Customs clearance declarations are handled by Arca Trade Group's customs clearance team; LondraDepo is not an HMRC-authorised customs or bonded warehouse
 - No official Shopify or Amazon partnership — fulfilment is independent third-party service
 - Published starting price: standard pallet storage from £3.50 + VAT per pallet per week; all other services are quoted per operation via WhatsApp
 - Turkish- and English-speaking support available

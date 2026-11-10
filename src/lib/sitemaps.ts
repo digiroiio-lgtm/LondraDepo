@@ -1,10 +1,10 @@
 import { EN_PAGES } from "@/content/en";
 import type { PageKind } from "@/content/en/types";
-import { absolute, enAlternates, trAlternates, type Alternates } from "@/lib/i18n";
+import { enAlternates, trAlternates, type Alternates } from "@/lib/i18n";
 import { SITE_URL } from "@/lib/site";
 
 type Freq = "weekly" | "monthly" | "yearly";
-type Entry = { path: string; changefreq: Freq; priority: number; alternates: Alternates };
+type Entry = { path: string; changefreq: Freq; priority: number; alternates: Alternates; lastmod?: string };
 
 // Turkish URLs (unchanged). lastmod is omitted until verified modification dates are maintained per URL.
 const TR: ReadonlyArray<readonly [string, Freq, number]> = [
@@ -65,13 +65,11 @@ const EN_PRIORITY: Record<PageKind, [Freq, number]> = {
   legal: ["yearly", 0.4],
 };
 
-/** Legacy English page kept at its current URL (no hreflang pair) until the /en redirect is approved. */
-const EN_LEGACY: Entry = {
-  path: "/uk-warehousing-fulfilment",
-  changefreq: "monthly",
-  priority: 0.9,
-  alternates: { canonical: absolute("/uk-warehousing-fulfilment"), languages: {} },
-};
+/** English pages without a Turkish counterpart (self-referencing en alternate only). */
+const EN_ONLY: ReadonlyArray<readonly [string, Freq, number]> = [["/en/request-a-quote", "monthly", 0.8]];
+
+/** All English pages were published on this date; later edits update content dates. */
+const EN_PUBLISHED = "2026-11-10";
 
 export function trEntries(): Entry[] {
   return TR.map(([path, changefreq, priority]) => ({ path, changefreq, priority, alternates: trAlternates(path) }));
@@ -81,9 +79,9 @@ export function enEntries(): Entry[] {
   return [
     ...EN_PAGES.map((p) => {
       const [changefreq, priority] = EN_PRIORITY[p.kind];
-      return { path: p.slug, changefreq, priority, alternates: enAlternates(p.slug) };
+      return { path: p.slug, changefreq, priority, alternates: enAlternates(p.slug), lastmod: p.article?.modified ?? EN_PUBLISHED };
     }),
-    EN_LEGACY,
+    ...EN_ONLY.map(([path, changefreq, priority]) => ({ path, changefreq, priority, alternates: enAlternates(path), lastmod: EN_PUBLISHED })),
   ];
 }
 
@@ -95,6 +93,7 @@ export function urlset(entries: Entry[]): string {
     for (const [lang, href] of Object.entries(e.alternates.languages)) {
       lines.push(`    <xhtml:link rel="alternate" hreflang="${lang}" href="${esc(href)}"/>`);
     }
+    if (e.lastmod) lines.push(`    <lastmod>${e.lastmod}</lastmod>`);
     lines.push(`    <changefreq>${e.changefreq}</changefreq>`, `    <priority>${e.priority}</priority>`, "  </url>");
     return lines.join("\n");
   });

@@ -1,5 +1,5 @@
 # LondraDepo.com — Bilgi Dosyası (llms-full.txt)
-Oluşturulma: 2026-09-28 | Dil: Türkçe (öncelikli), İngilizce (/uk-warehousing-fulfilment)
+Oluşturulma: 2026-09-28 | Dil: Türkçe (öncelikli), İngilizce (/en/ altında, tam liste: /llms.txt)
 Web: https://www.londradepo.com
 
 
@@ -700,7 +700,7 @@ Web: https://www.londradepo.com
 # BÖLÜM 7: İNGİLİZCE SAYFA
 
 ---
-## URL: /uk-warehousing-fulfilment
+## URL: /en (önceki /uk-warehousing-fulfilment, 301 ile /en adresine taşındı)
 # UK Warehousing & Fulfilment Services
 Essex-based UK warehousing and fulfilment for businesses shipping from Turkey and beyond. Pallet storage, pick & pack, Amazon FBM, Shopify fulfilment.
 
@@ -709,7 +709,7 @@ Goods Receipt, Pallet Storage, Carton Storage, Stock Management (Mintsoft WMS), 
 
 ### Location
 Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY
-40 min to London, 30 min to Tilbury Port, 1 hr to Felixstowe.
+About 40 min to London, about 30 min to Tilbury, roughly 1 to 1¼ hours by road to Felixstowe.
 
 ### FAQ
 Q: Do you accept containers from Turkey?
@@ -752,12 +752,11 @@ A: No fixed minimum. Contact us for a tailored quote.
 - /ellecleme
 - /nakliye-dagitim
 - /e-ticaret-fulfillment
-- /shopify-fulfillment
 - /amazon-fulfillment
 
 ## Landing Sayfaları
 - /turkiyeden-ingiltereye-depolama
-- /uk-warehousing-fulfilment
+- /en (English site)
 
 ## Lokasyon
 - /essex-depo

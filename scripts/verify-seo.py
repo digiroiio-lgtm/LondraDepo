@@ -46,11 +46,12 @@ XHTML='{http://www.w3.org/1999/xhtml}'
 index=get(BASE+'/sitemap_index.xml')
 children=[x.text for x in ET.fromstring(index['body']).findall('{*}sitemap/{*}loc')]
 legacy=get(BASE+'/sitemap.xml')
-sm_alt={}; sm_lang={}; urls=[]; sm={'body':index['body']}
+sm_alt={}; sm_lang={}; urls=[]; sm={'body':index['body']}; tr_body=''
 for child in children:
  doc=get(BASE+urllib.parse.urlsplit(child).path)
  if doc.get('status')!=200 or 'xml' not in doc.get('type',''): failures_pre=[child,'sitemap status/type',doc.get('status'),doc.get('type')]; print(failures_pre); sys.exit(1)
  sm['body']+=doc['body']
+ if child.endswith('-tr.xml'): tr_body=doc['body']
  for u in ET.fromstring(doc['body']).findall('{*}url'):
   loc=u.find('{*}loc').text; urls.append(loc)
   sm_alt[loc]={l.get('hreflang'):l.get('href') for l in u.findall(XHTML+'link')}
@@ -65,8 +66,8 @@ rules = urllib.robotparser.RobotFileParser()
 rules.parse(robots['body'].splitlines())
 if 'Sitemap: '+SITE + '/sitemap_index.xml' not in robots['body']:
  failures.append(['robots.txt', 'sitemap origin mismatch'])
-if '<lastmod>' in sm['body']:
- failures.append(['sitemap.xml', 'unverified lastmod reintroduced'])
+if '<lastmod>' in tr_body:
+ failures.append(['sitemap-tr.xml', 'unverified lastmod reintroduced'])
 def norm(t):return ' '.join(unicodedata.normalize('NFKC',t).replace('’',"'").replace('–','-').replace('—','-').split())
 for u,r in zip(urls,rows):
  r['target']=u
@@ -107,6 +108,10 @@ for host,proto in [('londradepo.com','http'),('londradepo.com','https'),('www.lo
   loc=r.headers.get('Location'); expected=308 if host=='londradepo.com' or (host=='www.londradepo.com' and proto=='http') else 200
   redirects.append({'host':host,'protocol':proto,'path':p,'status':status,'location':loc})
   if status!=expected or (expected==308 and loc!=SITE+p):failures.append([host,proto,p,'redirect',status,loc])
+for src,dst in [('/uk-warehousing-fulfilment','/en'),('/shopify-fulfillment','/shopify-ingiltere-depo')]:
+ try:op.open(BASE+src);failures.append([src,'expected 301'])
+ except urllib.error.HTTPError as e:
+  if e.code!=301 or urllib.parse.urlsplit(e.headers.get('Location','')).path!=dst:failures.append([src,'redirect',e.code,e.headers.get('Location')])
 paths = {urllib.parse.urlsplit(u).path or '/' for u in urls}
 for r in rows:
  for link in r['links']:

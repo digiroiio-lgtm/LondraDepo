@@ -1,5 +1,6 @@
 import Link from "next/link";
 import CookieSettingsButton from "./CookieSettingsButton";
+import TrackedLink from "./TrackedLink";
 
 const WHATSAPP = "https://wa.me/447554195190?text=Hello%2C%20I%27d%20like%20a%20warehousing%20quote.";
 const TEL = "tel:+447554195190";
@@ -30,6 +31,7 @@ const company = [
   ["/en/case-studies", "Case Studies"],
   ["/en/blog", "Guides"],
   ["/en/contact", "Contact"],
+  ["/en/request-a-quote", "Request a Quote"],
 ] as const;
 
 export default function FooterEn() {
@@ -41,8 +43,8 @@ export default function FooterEn() {
             Londra<span className="text-red-400">Depo</span>.com
           </div>
           <p className="text-sm leading-relaxed">
-            UK warehousing, fulfilment and distribution from Rayleigh, Essex, near London. One operational
-            partner for brands selling into the UK without their own UK warehouse.
+            UK warehousing, fulfilment and distribution from Rayleigh, Essex, near London. Operated by Arca Trade Group, which also
+            provides international freight and customs clearance.
           </p>
           <p className="text-sm leading-relaxed mt-3">
             Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY, United Kingdom
@@ -72,17 +74,18 @@ export default function FooterEn() {
           <div className="text-white font-semibold mb-3">Contact</div>
           <div className="space-y-3 text-sm">
             <p>Reach our UK operations team on WhatsApp or by phone. English and Turkish spoken.</p>
-            <a
+            <TrackedLink
+              kind="whatsapp"
+              source="footer"
               href={WHATSAPP}
-              target="_blank"
-              rel="noopener noreferrer"
               className="flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white font-semibold px-5 py-3 rounded-full transition w-fit"
             >
               Get a Quote on WhatsApp
-            </a>
-            <a href={TEL} className="flex items-center gap-2 text-slate-300 hover:text-white transition">
+            </TrackedLink>
+            <TrackedLink kind="phone" source="footer" href={TEL} className="flex items-center gap-2 text-slate-300 hover:text-white transition">
               📞 +44 7554 195190
-            </a>
+            </TrackedLink>
+            <p className="text-xs text-slate-400">Office: +44 1268 203 283 · 07:45–17:30 UK time</p>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 "use client";
 
-export default function CookieSettingsButton() {
+export default function CookieSettingsButton({ label = "Çerez Ayarları" }: { label?: string }) {
   const handleClick = () => {
     window.dispatchEvent(new CustomEvent("openCookiePreferences"));
   };
@@ -10,7 +10,7 @@ export default function CookieSettingsButton() {
       onClick={handleClick}
       className="hover:text-white transition underline-offset-2 hover:underline"
     >
-      Çerez Ayarları
+      {label}
     </button>
   );
 }

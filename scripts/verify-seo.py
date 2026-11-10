@@ -5,10 +5,12 @@ from html.parser import HTMLParser
 from pathlib import Path
 class HTML(HTMLParser):
  def __init__(self):
-  super().__init__(); self.canonical=[]; self.robots=[]; self.links=[]; self.text=[]; self.schemas=[]; self.in_script=False; self.ld=False; self.buf=''
+  super().__init__(); self.canonical=[]; self.hreflang={}; self.lang=None; self.robots=[]; self.links=[]; self.text=[]; self.schemas=[]; self.in_script=False; self.ld=False; self.buf=''
  def handle_starttag(self,t,a):
   d=dict(a)
+  if t=='html': self.lang=d.get('lang')
   if t=='link' and d.get('rel')=='canonical': self.canonical.append(d.get('href'))
+  if t=='link' and d.get('rel')=='alternate' and d.get('hreflang'): self.hreflang[d['hreflang']]=d.get('href')
   if t=='meta' and d.get('name') in ('robots','googlebot'): self.robots.append(d.get('content'))
   if t=='a' and d.get('href'): self.links.append(d['href'])
   if t=='script': self.in_script=True; self.ld=d.get('type')=='application/ld+json'; self.buf=''
@@ -34,19 +36,34 @@ def get(url):
  except Exception as e: return {'url':url,'error':str(e),'chain':h.chain}
  parser=HTML(); typ=r.headers.get('Content-Type',''); body=data.decode('utf8','replace')
  if 'text/html' in typ: parser.feed(body)
- return {'url':url,'final':r.url,'status':status,'chain':h.chain,'type':typ,'xrobots':r.headers.get('X-Robots-Tag'),'canonical':parser.canonical,'robots':parser.robots,'links':parser.links,'text':' '.join(' '.join(parser.text).split()),'schemas':parser.schemas,'body':body if 'xml' in typ or url.endswith('robots.txt') else ''}
+ return {'url':url,'final':r.url,'status':status,'chain':h.chain,'type':typ,'xrobots':r.headers.get('X-Robots-Tag'),'canonical':parser.canonical,'hreflang':parser.hreflang,'lang':parser.lang,'robots':parser.robots,'links':parser.links,'text':' '.join(' '.join(parser.text).split()),'schemas':parser.schemas,'body':body if 'xml' in typ or url.endswith('robots.txt') else ''}
 
 import sys,json,re,urllib.request,urllib.error,urllib.parse,concurrent.futures,xml.etree.ElementTree as ET,unicodedata
 from pathlib import Path
 import os
 BASE=os.environ.get('SEO_BASE_URL', 'http://localhost:3100').rstrip('/'); SITE='https://www.londradepo.com'
-sm=get(BASE+'/sitemap.xml'); urls=[x.text for x in ET.fromstring(sm['body']).findall('.//{*}loc')]
+XHTML='{http://www.w3.org/1999/xhtml}'
+index=get(BASE+'/sitemap_index.xml')
+children=[x.text for x in ET.fromstring(index['body']).findall('{*}sitemap/{*}loc')]
+legacy=get(BASE+'/sitemap.xml')
+sm_alt={}; sm_lang={}; urls=[]; sm={'body':index['body']}
+for child in children:
+ doc=get(BASE+urllib.parse.urlsplit(child).path)
+ if doc.get('status')!=200 or 'xml' not in doc.get('type',''): failures_pre=[child,'sitemap status/type',doc.get('status'),doc.get('type')]; print(failures_pre); sys.exit(1)
+ sm['body']+=doc['body']
+ for u in ET.fromstring(doc['body']).findall('{*}url'):
+  loc=u.find('{*}loc').text; urls.append(loc)
+  sm_alt[loc]={l.get('hreflang'):l.get('href') for l in u.findall(XHTML+'link')}
+  sm_lang[loc]='en' if child.endswith('-en.xml') else 'tr'
+
 rows=[get(BASE+urllib.parse.urlsplit(u).path) for u in urls]
 failures=[]
+if legacy.get('body')!=index['body']: failures.append(['/sitemap.xml','does not serve the sitemap index'])
+if len(urls)!=len(set(urls)): failures.append(['sitemaps','duplicate loc'])
 robots = get(BASE + '/robots.txt')
 rules = urllib.robotparser.RobotFileParser()
 rules.parse(robots['body'].splitlines())
-if SITE + '/sitemap.xml' not in robots['body']:
+if 'Sitemap: '+SITE + '/sitemap_index.xml' not in robots['body']:
  failures.append(['robots.txt', 'sitemap origin mismatch'])
 if '<lastmod>' in sm['body']:
  failures.append(['sitemap.xml', 'unverified lastmod reintroduced'])
@@ -56,6 +73,12 @@ for u,r in zip(urls,rows):
  if not rules.can_fetch('Googlebot', u): failures.append([u, 'robots.txt disallows canonical'])
  if r['status']!=200:failures.append([u,'status',r['status']])
  if r['canonical']!=[u]:failures.append([u,'canonical',r['canonical']])
+ if r['lang']!=sm_lang[u]:failures.append([u,'html lang',r['lang'],'expected',sm_lang[u]])
+ if r['hreflang']!=sm_alt[u]:failures.append([u,'hreflang HTML != sitemap',r['hreflang'],sm_alt[u]])
+ for code,href in sm_alt[u].items():
+  if href not in sm_alt:failures.append([u,'hreflang target not in sitemaps',code,href]); continue
+  if code!='x-default' and u not in sm_alt[href].values():failures.append([u,'hreflang not reciprocal',code,href])
+ if sm_alt[u] and u not in sm_alt[u].values():failures.append([u,'hreflang missing self'])
  if 'noindex' in ','.join(r['robots']) or r['xrobots']:failures.append([u,'robots'])
  text=norm(r['text']); count=0
  for graph in r['schemas']:

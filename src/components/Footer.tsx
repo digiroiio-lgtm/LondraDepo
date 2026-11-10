@@ -1,3 +1,4 @@
+import Link from "next/link";
 import CookieSettingsButton from "./CookieSettingsButton";
 
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20depo%20teklifi%20almak%20istiyorum.";
@@ -30,7 +31,7 @@ export default function Footer() {
             <li><a href="/depolama" className="hover:text-white transition">Depolama & Stoklama</a></li>
             <li><a href="/gumrukleme" className="hover:text-white transition">Gümrükleme Desteği</a></li>
             <li><a href="/e-ticaret-fulfillment" className="hover:text-white transition">E-Ticaret Fulfillment</a></li>
-            <li><a href="/shopify-fulfillment" className="hover:text-white transition">Shopify Fulfillment</a></li>
+            <li><a href="/shopify-ingiltere-depo" className="hover:text-white transition">Shopify Fulfillment</a></li>
             <li><a href="/amazon-fulfillment" className="hover:text-white transition">Amazon Fulfillment</a></li>
             <li><a href="/amazon-prep-uk" className="hover:text-white transition">Amazon Prep UK</a></li>
           </ul>
@@ -42,7 +43,7 @@ export default function Footer() {
             <li><a href="/hakkimizda" className="hover:text-white transition">Hakkımızda</a></li>
             <li><a href="/case-studies" className="hover:text-white transition">Operasyon Örnekleri</a></li>
             <li><a href="/iletisim" className="hover:text-white transition">İletişim</a></li>
-            <li><a href="/uk-warehousing-fulfilment" className="hover:text-white transition" lang="en">UK Warehousing &amp; Fulfilment (English)</a></li>
+            <li><Link href="/en" className="hover:text-white transition" lang="en" hrefLang="en">English website</Link></li>
             <li><a href="/blog" className="hover:text-white transition">Blog & Rehberler</a></li>
           </ul>
         </div>

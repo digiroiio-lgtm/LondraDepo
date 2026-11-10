@@ -18,7 +18,7 @@ const platforms = [
     desc: "Shopify mağazanızdan gelen siparişleri depo altyapımızla fulfill edin. Stok depomuzda, siparişler sistemimize entegre.",
     cta: "Shopify Fulfillment Hakkında Bilgi Al",
     href: WHATSAPP_SHOPIFY,
-    link: "/shopify-fulfillment",
+    link: "/shopify-ingiltere-depo",
   },
   {
     name: "Amazon",

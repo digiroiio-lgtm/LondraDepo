@@ -24,6 +24,6 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: "Google-Extended", allow: "/" },
       { userAgent: "Bytespider", allow: "/" },
     ],
-    sitemap: `${SITE_URL}/sitemap.xml`,
+    sitemap: `${SITE_URL}/sitemap_index.xml`,
   };
 }

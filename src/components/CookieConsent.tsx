@@ -10,6 +10,37 @@ export interface CookiePrefs {
   decided: boolean;
 }
 
+const BANNER_TEXT = {
+  tr: {
+    aria: "Çerez kullanım bildirimi",
+    title: "Çerez Kullanımı",
+    body: "Bu sitenin düzgün çalışmasını sağlamak ve kullanımını analiz ederek geliştirmek amacıyla sınırlı sayıda çerez kullanıyoruz. Analitik ve pazarlama çerezleri yalnızca onay vermeniz halinde aktif olur. Tercihinizi istediğiniz zaman footer alanındaki “Çerez Ayarları” bağlantısından değiştirebilirsiniz.",
+    cookie: "Çerez Politikası",
+    cookieHref: "/cookie-policy",
+    and: "ve",
+    privacy: "Gizlilik Politikası",
+    privacyHref: "/privacy-policy",
+    tail: " sayfalarını inceleyebilirsiniz.",
+    prefs: "Tercihler",
+    reject: "Tümünü Reddet",
+    accept: "Tümünü Kabul Et",
+  },
+  en: {
+    aria: "Cookie notice",
+    title: "Cookies",
+    body: "We use a small number of cookies to keep this site working and to understand how it is used. Analytics and marketing cookies are only activated with your consent. You can change your choice at any time via “Cookie Settings” in the footer. See our",
+    cookie: "Cookie Policy",
+    cookieHref: "/en/cookie-policy",
+    and: "and",
+    privacy: "Privacy Policy",
+    privacyHref: "/en/privacy-policy",
+    tail: ".",
+    prefs: "Preferences",
+    reject: "Reject All",
+    accept: "Accept All",
+  },
+} as const;
+
 const STORAGE_KEY = "londradepo_cookie_consent";
 
 const DEFAULT_PREFS: CookiePrefs = {
@@ -39,7 +70,7 @@ function dispatchConsentChange(prefs: CookiePrefs): void {
   window.dispatchEvent(new CustomEvent<CookiePrefs>("consentChange", { detail: prefs }));
 }
 
-export default function CookieConsent() {
+export default function CookieConsent({ lang = "tr" }: { lang?: "tr" | "en" }) {
   const [mounted, setMounted] = useState(false);
   const [showBanner, setShowBanner] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -100,6 +131,7 @@ export default function CookieConsent() {
   };
 
   if (!mounted) return null;
+  const t = BANNER_TEXT[lang];
 
   return (
     <>
@@ -108,33 +140,24 @@ export default function CookieConsent() {
         <div
           role="dialog"
           aria-modal="false"
-          aria-label="Çerez kullanım bildirimi"
+          aria-label={t.aria}
           className="fixed bottom-0 left-0 right-0 z-[9998] bg-[#0b2545] text-white shadow-2xl border-t border-white/10"
         >
           <div className="max-w-6xl mx-auto px-4 sm:px-6 py-5">
             <div className="flex flex-col lg:flex-row gap-4 lg:items-start">
               {/* Text */}
               <div className="flex-1 min-w-0">
-                <h2 className="text-base font-extrabold mb-2 text-white">Çerez Kullanımı</h2>
+                <h2 className="text-base font-extrabold mb-2 text-white">{t.title}</h2>
                 <p className="text-sm text-white/75 leading-relaxed">
-                  Bu sitenin düzgün çalışmasını sağlamak ve kullanımını analiz ederek geliştirmek
-                  amacıyla sınırlı sayıda çerez kullanıyoruz. Analitik ve pazarlama çerezleri
-                  yalnızca onay vermeniz halinde aktif olur. Tercihinizi istediğiniz zaman
-                  footer alanındaki &ldquo;Çerez Ayarları&rdquo; bağlantısından değiştirebilirsiniz.{" "}
-                  <Link
-                    href="/cookie-policy"
-                    className="text-white/90 underline hover:text-white transition"
-                  >
-                    Çerez Politikası
+                  {t.body}{" "}
+                  <Link href={t.cookieHref} className="text-white/90 underline hover:text-white transition">
+                    {t.cookie}
                   </Link>{" "}
-                  ve{" "}
-                  <Link
-                    href="/privacy-policy"
-                    className="text-white/90 underline hover:text-white transition"
-                  >
-                    Gizlilik Politikası
-                  </Link>{" "}
-                  sayfalarını inceleyebilirsiniz.
+                  {t.and}{" "}
+                  <Link href={t.privacyHref} className="text-white/90 underline hover:text-white transition">
+                    {t.privacy}
+                  </Link>
+                  {t.tail}
                 </p>
               </div>
 
@@ -144,19 +167,19 @@ export default function CookieConsent() {
                   onClick={openPreferences}
                   className="px-5 py-2.5 rounded-full border border-white/30 text-sm font-semibold text-white hover:bg-white/10 transition focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#0b2545]"
                 >
-                  Tercihler
+                  {t.prefs}
                 </button>
                 <button
                   onClick={rejectAll}
                   className="px-5 py-2.5 rounded-full border border-white/30 text-sm font-semibold text-white hover:bg-white/10 transition focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#0b2545]"
                 >
-                  Tümünü Reddet
+                  {t.reject}
                 </button>
                 <button
                   onClick={acceptAll}
                   className="px-5 py-2.5 rounded-full bg-white text-[#0b2545] text-sm font-bold hover:bg-white/90 transition focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#0b2545]"
                 >
-                  Tümünü Kabul Et
+                  {t.accept}
                 </button>
               </div>
             </div>
@@ -171,6 +194,7 @@ export default function CookieConsent() {
         onChange={setModalPrefs}
         onSave={savePreferences}
         onClose={() => setShowModal(false)}
+        lang={lang}
       />
     </>
   );

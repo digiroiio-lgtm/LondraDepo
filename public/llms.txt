@@ -1,8 +1,55 @@
 # LondraDepo.com
 
-> UK warehousing, e-commerce fulfilment, customs coordination, pick & pack, and UK distribution services for Turkish and international businesses. Warehouse located in Rayleigh, Essex (near London). Primary language: Turkish. Contact: WhatsApp +44 7554 195190.
+> UK warehousing, e-commerce fulfilment, customs coordination, pick & pack, and UK distribution services for Turkish and international businesses. Warehouse located in Rayleigh, Essex (near London). Languages: Turkish (main site) and English (/en/, global English, UK spelling). Contact: WhatsApp +44 7554 195190.
 
 LondraDepo helps businesses — especially Turkish exporters and e-commerce brands — sell into the UK without setting up their own UK operation. Services cover the full logistics chain from UK customs onwards: goods receiving, pallet and carton storage, inventory management, order picking, packing, labelling, Shopify and Amazon FBM fulfilment, and UK distribution.
+
+---
+
+## English Pages (/en/)
+
+Each English page has a 1:1 Turkish equivalent linked with reciprocal hreflang (tr-TR / en).
+
+- https://www.londradepo.com/en — Home
+- https://www.londradepo.com/en/about-us — About Us
+- https://www.londradepo.com/en/contact — Contact
+- https://www.londradepo.com/en/uk-warehousing-benefits — UK Warehousing Benefits
+- https://www.londradepo.com/en/uk-warehousing-pricing — UK Warehousing Pricing
+- https://www.londradepo.com/en/uk-warehousing — UK Warehousing
+- https://www.londradepo.com/en/london-warehousing — London Warehousing
+- https://www.londradepo.com/en/uk-ecommerce-logistics — UK Ecommerce Logistics
+- https://www.londradepo.com/en/pick-and-pack — Pick and Pack
+- https://www.londradepo.com/en/shopify-fulfilment-uk — Shopify Fulfilment UK
+- https://www.londradepo.com/en/amazon-seller-warehousing-uk — Amazon Seller Warehousing
+- https://www.londradepo.com/en/uk-fulfilment — UK Fulfilment
+- https://www.londradepo.com/en/pallet-storage — Pallet Storage
+- https://www.londradepo.com/en/amazon-prep-uk — Amazon Prep UK
+- https://www.londradepo.com/en/storage-services — Storage Services
+- https://www.londradepo.com/en/uk-customs-clearance — UK Customs Clearance
+- https://www.londradepo.com/en/cargo-handling — Cargo Handling
+- https://www.londradepo.com/en/uk-distribution — UK Distribution
+- https://www.londradepo.com/en/ecommerce-fulfilment — Ecommerce Fulfilment
+- https://www.londradepo.com/en/amazon-fulfilment-uk — Amazon Fulfilment UK
+- https://www.londradepo.com/en/essex-warehouse — Essex Warehouse
+- https://www.londradepo.com/en/case-studies/cruyff-uk-fulfilment — Cruyff – UK fashion fulfilment
+- https://www.londradepo.com/en/case-studies/pizza-box-distribution-uk — Pizza boxes – UK B2B distribution
+- https://www.londradepo.com/en/case-studies/tortilla-uk-distribution — Tortilla brand – UK distribution
+- https://www.londradepo.com/en/case-studies/uk-auto-parts-warehouse — OEM auto parts – UK warehouse
+- https://www.londradepo.com/en/case-studies/uk-walking-treadmill-distribution — Walking treadmills – UK distribution
+- https://www.londradepo.com/en/case-studies/car-seat-cover-uk-warehousing — Car seat covers – UK warehousing
+- https://www.londradepo.com/en/case-studies/portable-power-station-uk-operations — Portable power stations – UK operations
+- https://www.londradepo.com/en/case-studies — Case Studies
+- https://www.londradepo.com/en/blog/uk-warehousing-guide — UK Warehousing Guide
+- https://www.londradepo.com/en/blog/what-is-uk-fulfilment — What Is UK Fulfilment?
+- https://www.londradepo.com/en/blog/amazon-prep-uk-guide — Amazon Prep UK Guide
+- https://www.londradepo.com/en/blog/what-is-a-uk-transit-warehouse — What Is a UK Transit Warehouse?
+- https://www.londradepo.com/en/blog/uk-warehousing-prices-2026 — UK Warehousing Prices 2026
+- https://www.londradepo.com/en/blog/uk-pallet-storage-costs — UK Pallet Storage Costs
+- https://www.londradepo.com/en/blog/amazon-fba-vs-uk-fulfilment — Amazon FBA vs UK Fulfilment
+- https://www.londradepo.com/en/blog — Blog
+- https://www.londradepo.com/en/privacy-policy — Privacy Policy
+- https://www.londradepo.com/en/cookie-policy — Cookie Policy
+- https://www.londradepo.com/en/terms-and-conditions — Terms and Conditions
 
 ---
 
@@ -82,6 +129,6 @@ LondraDepo helps businesses — especially Turkish exporters and e-commerce bran
 - LondraDepo does NOT handle international freight from Turkey to UK — services begin from UK customs onward
 - Customs offering is coordination/support only, not licensed customs brokerage
 - No official Shopify or Amazon partnership — fulfilment is independent third-party service
-- All pricing is bespoke — no published rates; contact via WhatsApp for quotes
-- Turkish-speaking support available
+- Published starting price: standard pallet storage from £3.50 + VAT per pallet per week; all other services are quoted per operation via WhatsApp
+- Turkish- and English-speaking support available
 - Contact: WhatsApp https://wa.me/447554195190 | Tel: +44 7554 195190

@@ -1,5 +1,5 @@
 # Run against a local production server: npm run build && npm start -- --port 3100
-# Optional: SEO_BASE_URL, SEO_REPORT_PATH. Never submits forms or indexing requests.
+# Optional: SEO_BASE_URL, SEO_REPORT_PATH, SEO_LIVE=1 (live host checks). Never submits forms or indexing requests.
 import urllib.request, urllib.error, urllib.parse, urllib.robotparser, json, re, concurrent.futures, xml.etree.ElementTree as ET
 from html.parser import HTMLParser
 from pathlib import Path
@@ -100,9 +100,12 @@ for p in ['/logo.svg','/logo.png','/icon.svg','/icon.png','/apple-touch-icon.png
 class NoRedirect(urllib.request.HTTPRedirectHandler):
  def redirect_request(self,*args):return None
 op=urllib.request.build_opener(NoRedirect()); redirects=[]
-for host,proto in [('londradepo.com','http'),('londradepo.com','https'),('www.londradepo.com','http'),('www.londradepo.com','https'),('preview.vercel.app','https')]:
+LIVE=bool(os.environ.get('SEO_LIVE'))
+# Live mode (seo:smoke): real HTTPS requests to apex and www; Vercel ignores spoofed Host headers.
+HOSTS=[('londradepo.com','https'),('www.londradepo.com','https')] if LIVE else [('londradepo.com','http'),('londradepo.com','https'),('www.londradepo.com','http'),('www.londradepo.com','https'),('preview.vercel.app','https')]
+for host,proto in HOSTS:
  for p in ['/','/amazon-fulfillment?utm_source=seo&sku=1','/blog/ingiltere-depo-rehberi','/case-studies/tortilla-uk-distribution','/logo.svg']:
-  req=urllib.request.Request(BASE+p,headers={'Host':host,'X-Forwarded-Proto':proto})
+  req=urllib.request.Request(f'https://{host}{p}') if LIVE else urllib.request.Request(BASE+p,headers={'Host':host,'X-Forwarded-Proto':proto})
   try:r=op.open(req);status=r.status
   except urllib.error.HTTPError as e:r=e;status=e.code
   loc=r.headers.get('Location'); expected=308 if host=='londradepo.com' or (host=='www.londradepo.com' and proto=='http') else 200

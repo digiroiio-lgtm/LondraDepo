@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import LangSwitch from "./LangSwitch";
 
 const TEL = "tel:+447554195190";
 
@@ -29,7 +30,7 @@ export default function Header() {
           </span>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600">
+        <nav className="hidden lg:flex items-center gap-4 xl:gap-6 text-sm font-medium text-slate-600">
           {navLinks.map((l) => (
             <Link key={l.href} href={l.href} className="hover:text-[#0b2545] transition">
               {l.label}
@@ -38,6 +39,7 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-2 flex-shrink-0">
+          <LangSwitch />
           <a
             href={TEL}
             className="inline-flex items-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white text-sm font-semibold px-4 py-2.5 rounded-full transition"
@@ -45,12 +47,12 @@ export default function Header() {
             <svg className="w-4 h-4 fill-white flex-shrink-0" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.26.2 2.47.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z" />
             </svg>
-            <span className="hidden sm:inline">+44 7554 195190</span>
-            <span className="sm:hidden">Ara</span>
+            <span className="hidden sm:inline lg:hidden xl:inline">+44 7554 195190</span>
+            <span className="sm:hidden lg:inline xl:hidden">Ara</span>
           </a>
 
           <button
-            className="md:hidden p-2 rounded-lg text-[#0b2545] hover:bg-slate-100 transition"
+            className="lg:hidden p-2 rounded-lg text-[#0b2545] hover:bg-slate-100 transition"
             onClick={() => setOpen((v) => !v)}
             aria-label={open ? "Menüyü kapat" : "Menüyü aç"}
             aria-expanded={open}
@@ -69,7 +71,7 @@ export default function Header() {
       </div>
 
       {open && (
-        <nav className="md:hidden border-t border-slate-200 bg-white px-4 py-3 flex flex-col gap-1">
+        <nav className="lg:hidden border-t border-slate-200 bg-white px-4 py-3 flex flex-col gap-1">
           {navLinks.map((l) => (
             <Link
               key={l.href}

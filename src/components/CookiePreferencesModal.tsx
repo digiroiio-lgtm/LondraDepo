@@ -3,12 +3,42 @@
 import { useEffect, useRef } from "react";
 import type { CookiePrefs } from "./CookieConsent";
 
+const MODAL_TEXT = {
+  tr: {
+    title: "Çerez Tercihleri", close: "Kapat",
+    intro: "Hangi çerezlere izin vermek istediğinizi seçin. Tercihleriniz kaydedilir ve istediğiniz zaman footer alanındaki “Çerez Ayarları” bağlantısından değiştirilebilir.",
+    necessary: "Zorunlu Çerezler", always: "Her Zaman Aktif",
+    necessaryText: "Sitenin temel işlevleri için gereklidir. Oturum yönetimi, güvenlik ve form koruması gibi kritik işlevleri kapsar. Devre dışı bırakılamaz.",
+    analytics: "Analitik Çerezler",
+    analyticsText: "Site kullanımını anlamamıza ve geliştirmemize yardımcı olan anonim istatistiksel veriler toplar. Ziyaretçi sayısı, popüler sayfalar ve kullanım süresi gibi bilgiler içerir.",
+    analyticsAria: "Analitik çerezleri aç/kapat",
+    marketing: "Pazarlama Çerezleri",
+    marketingText: "İlgi alanlarınıza uygun reklamlar göstermek ve kampanya etkinliğini ölçmek için kullanılır. Reklam platformlarıyla (ör. Google Ads, Meta) paylaşılabilir.",
+    marketingAria: "Pazarlama çerezlerini aç/kapat",
+    save: "Tercihleri Kaydet", cancel: "Vazgeç",
+  },
+  en: {
+    title: "Cookie Preferences", close: "Close",
+    intro: "Choose which cookies you allow. Your choice is saved and can be changed at any time via “Cookie Settings” in the footer.",
+    necessary: "Necessary Cookies", always: "Always Active",
+    necessaryText: "Required for the site to work, including session handling, security and form protection. These cannot be switched off.",
+    analytics: "Analytics Cookies",
+    analyticsText: "Collect anonymous statistics that help us understand and improve the site, such as visitor numbers, popular pages and time on site.",
+    analyticsAria: "Toggle analytics cookies",
+    marketing: "Marketing Cookies",
+    marketingText: "Used to show relevant adverts and measure campaign performance. May be shared with advertising platforms such as Google Ads and Meta.",
+    marketingAria: "Toggle marketing cookies",
+    save: "Save Preferences", cancel: "Cancel",
+  },
+} as const;
+
 interface Props {
   open: boolean;
   preferences: CookiePrefs;
   onChange: (prefs: CookiePrefs) => void;
   onSave: () => void;
   onClose: () => void;
+  lang?: "tr" | "en";
 }
 
 export default function CookiePreferencesModal({
@@ -17,7 +47,9 @@ export default function CookiePreferencesModal({
   onChange,
   onSave,
   onClose,
+  lang = "tr",
 }: Props) {
+  const t = MODAL_TEXT[lang];
   const dialogRef = useRef<HTMLDivElement>(null);
 
   // Trap focus and close on Escape
@@ -62,11 +94,11 @@ export default function CookiePreferencesModal({
             id="cookie-modal-title"
             className="text-lg font-extrabold text-[#0b2545] dark:text-white"
           >
-            Çerez Tercihleri
+            {t.title}
           </h2>
           <button
             onClick={onClose}
-            aria-label="Kapat"
+            aria-label={t.close}
             className="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition p-1 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"
           >
             <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -78,8 +110,7 @@ export default function CookiePreferencesModal({
         {/* Body */}
         <div className="px-6 py-5 space-y-5">
           <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-            Hangi çerezlere izin vermek istediğinizi seçin. Tercihleriniz kaydedilir ve istediğiniz
-            zaman footer alanındaki &ldquo;Çerez Ayarları&rdquo; bağlantısından değiştirilebilir.
+            {t.intro}
           </p>
 
           {/* Necessary */}
@@ -87,15 +118,14 @@ export default function CookiePreferencesModal({
             <div className="flex-1">
               <div className="flex items-center gap-2 mb-1">
                 <span className="font-semibold text-sm text-[#0b2545] dark:text-white">
-                  Zorunlu Çerezler
+                  {t.necessary}
                 </span>
                 <span className="text-xs px-2 py-0.5 rounded-full bg-green-100 text-green-700 font-medium">
-                  Her Zaman Aktif
+                  {t.always}
                 </span>
               </div>
               <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-                Sitenin temel işlevleri için gereklidir. Oturum yönetimi, güvenlik ve form
-                koruması gibi kritik işlevleri kapsar. Devre dışı bırakılamaz.
+                {t.necessaryText}
               </p>
             </div>
             <div className="mt-0.5 flex-shrink-0">
@@ -114,18 +144,16 @@ export default function CookiePreferencesModal({
           <div className="flex items-start justify-between gap-4 p-4 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
             <div className="flex-1">
               <span className="font-semibold text-sm text-[#0b2545] dark:text-white block mb-1">
-                Analitik Çerezler
+                {t.analytics}
               </span>
               <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-                Site kullanımını anlamamıza ve geliştirmemize yardımcı olan anonim istatistiksel
-                veriler toplar. Ziyaretçi sayısı, popüler sayfalar ve kullanım süresi gibi bilgiler
-                içerir.
+                {t.analyticsText}
               </p>
             </div>
             <button
               role="switch"
               aria-checked={preferences.analytics}
-              aria-label="Analitik çerezleri aç/kapat"
+              aria-label={t.analyticsAria}
               onClick={() => onChange({ ...preferences, analytics: !preferences.analytics })}
               className={`mt-0.5 flex-shrink-0 w-11 h-6 rounded-full transition-colors duration-200 relative focus:outline-none focus:ring-2 focus:ring-[#0b2545] focus:ring-offset-2 ${
                 preferences.analytics ? "bg-[#0b2545]" : "bg-slate-300 dark:bg-slate-600"
@@ -143,17 +171,16 @@ export default function CookiePreferencesModal({
           <div className="flex items-start justify-between gap-4 p-4 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
             <div className="flex-1">
               <span className="font-semibold text-sm text-[#0b2545] dark:text-white block mb-1">
-                Pazarlama Çerezleri
+                {t.marketing}
               </span>
               <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-                İlgi alanlarınıza uygun reklamlar göstermek ve kampanya etkinliğini ölçmek için
-                kullanılır. Reklam platformlarıyla (ör. Google Ads, Meta) paylaşılabilir.
+                {t.marketingText}
               </p>
             </div>
             <button
               role="switch"
               aria-checked={preferences.marketing}
-              aria-label="Pazarlama çerezlerini aç/kapat"
+              aria-label={t.marketingAria}
               onClick={() => onChange({ ...preferences, marketing: !preferences.marketing })}
               className={`mt-0.5 flex-shrink-0 w-11 h-6 rounded-full transition-colors duration-200 relative focus:outline-none focus:ring-2 focus:ring-[#0b2545] focus:ring-offset-2 ${
                 preferences.marketing ? "bg-[#0b2545]" : "bg-slate-300 dark:bg-slate-600"
@@ -174,13 +201,13 @@ export default function CookiePreferencesModal({
             onClick={onSave}
             className="flex-1 bg-[#0b2545] hover:bg-[#0d2f5a] text-white font-bold py-3 px-6 rounded-full transition text-sm"
           >
-            Tercihleri Kaydet
+            {t.save}
           </button>
           <button
             onClick={onClose}
             className="flex-1 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 font-semibold py-3 px-6 rounded-full transition text-sm"
           >
-            Vazgeç
+            {t.cancel}
           </button>
         </div>
       </div>

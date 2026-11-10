@@ -32,7 +32,7 @@ FCL ve LCL konteyner kabulü yapılıyor; büyük kapı ve HGV rampası mevcut
 
 ## Hizmet Kapsamı (Özet)
 UK'ye varıştan itibaren: mal kabul, gümrük koordinasyonu, depolama (palet/koli), Mintsoft WMS stok yönetimi, sipariş toplama (pick), paketleme (pack), kargo etiketleme, UK dağıtım, iade yönetimi.
-KAPSAM DIŞI: Türkiye → UK uluslararası nakliye hizmeti sunulmamaktadır. Hizmet alanı UK'ye varıştan sonra başlar.
+NAKLİYE VE GÜMRÜK: Türkiye → UK uluslararası nakliye (deniz, hava, kara, demiryolu) ve gümrükleme, LondraDepo'yu işleten çatı şirketi Arca Trade Group tarafından sağlanır ve ayrıca tekliflendirilir. LondraDepo'nun kendi hizmetleri UK'de mal kabul, depolama, fulfillment ve dağıtımdır. LondraDepo antrepo (bonded) depo değildir.
 
 ## Hedef Müşteri
 - Türkiye'den İngiltere'ye ihracat yapan markalar ve üreticiler
@@ -256,7 +256,7 @@ Türkiye'den İngiltere'ye lojistik ve ürün gönderimi rehberi: UK gümrük de
 
 ### Tedarik Zinciri: Sorumluluk Dağılımı
 01. Türkiye'den Gönderin → MÜŞTERİ sorumluluğu (uluslararası taşıyıcı)
-02. UK Gümrüğü → LondraDepo koordinasyon desteği sağlar
+02. UK Gümrüğü → Beyanname Arca Trade Group gümrük ekibi tarafından verilir
 03. Depoya Alınır → LondraDepo (gümrükten çıkış, sayım, WMS kaydı)
 04. Stoklanır → LondraDepo (Mintsoft WMS)
 05. Sipariş Gelir → LondraDepo (Shopify/Amazon/toptan)
@@ -272,7 +272,7 @@ Q: LondraDepo nakliye yapıyor mu?
 A: Hayır. Sadece UK'ye varıştan sonra: gümrükleme koordinasyonu, mal kabul, depolama, sipariş karşılama, UK dağıtımı.
 
 Q: UK gümrüğünde ürünleri kim geçirir?
-A: Lisanslı gümrükçüler. LondraDepo koordinasyon ve yönlendirme sağlar; doğrudan gümrük beyanı yapmaz. Gümrük sonrası depoda teslim alınır.
+A: Arca Trade Group'un gümrükleme ekibi müşteri adına beyanname verir; dilerseniz kendi gümrük müşavirinizle de çalışabilirsiniz. Gümrük sonrası ürünler depoda teslim alınır.
 
 Q: UK ithalatı için hangi belgeler gerekiyor?
 A: Ticari fatura (commercial invoice), konşimento/taşıma belgesi, ambalaj listesi (packing list), ürüne bağlı sertifikalar. Gümrük uzmanından destek önerilir.
@@ -294,7 +294,7 @@ Uluslararası nakliyeci/kargo firması gerekir. LondraDepo nakliye yapmaz; UK'ye
 Nakliye seçenekleri: FCL (20ft/40ft konteyner), LCL (CBM bazında parsiyel), hava kargo, karayolu + deniz kombinasyonu.
 
 ### 3. UK Gümrüğü
-Lisanslı gümrükçü gereklidir. Sistem: HMRC CDS (Customs Declaration Service).
+Beyanname HMRC CDS (Customs Declaration Service) üzerinden verilir; Arca Trade Group gümrükleme ekibi müşteri adına beyanname verebilir.
 Gerekli belgeler: ticari fatura, ambalaj listesi, taşıma belgesi (B/L veya AWB), menşe beyanı (declaration of origin), ürüne bağlı sertifikalar (CE, UKCA vb.).
 UK-Türkiye STA (2021): kapsamındaki ürünlerde gümrük indirimi/muafiyeti için menşe beyanı şart.
 

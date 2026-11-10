@@ -12,7 +12,7 @@ const steps = [
     num: "02",
     label: "GÜMRÜK",
     title: "Gümrük Süreci",
-    desc: "UK gümrük sürecinin koordinasyonunda destek sağlıyoruz.",
+    desc: "Gümrük beyannamesi Arca Trade Group gümrük ekibi tarafından verilebilir.",
     icon: "📋",
   },
   {

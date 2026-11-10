@@ -78,13 +78,16 @@ export default function HakkimizdaPage() {
                 LondraDepo.com, Türkiye'den İngiltere'ye ihracat yapan markalar için fiziksel bir UK lojistik altyapısı sunar. <strong>Arca Trade Group Ltd</strong> çatısı altında 2021'den beri faaliyet gösteren Essex depo operasyonumuz; ürünlerin İngiltere'ye gelişinden müşteriye teslimatına kadar tüm süreci tek noktadan yönetir.
               </p>
               <p>
-                Depomuz Rayleigh, Essex'teki Arterial Park sanayi bölgesinde yer alıyor: <strong>Unit 19 Arterial Park, Arterial Road, Rayleigh SS6 7FY</strong>. Bu konum, Londra'ya ~40 dakika, Felixstowe Limanı'na ~1 saat, Tilbury Limanı'na ~30 dakika mesafede. Türkiye'den gelen FCL konteynerlerin doğrudan teslim alındığı bu nokta; M25 üzerinden İngiltere'nin tamamına dağıtım yapabilmemizi sağlıyor.
+                Depomuz Rayleigh, Essex'teki Arterial Park sanayi bölgesinde yer alıyor: <strong>Unit 19 Arterial Park, Arterial Road, Rayleigh SS6 7FY</strong>. Bu konum, Londra'ya ~40 dakika, Tilbury Limanı'na ~30 dakika, Felixstowe Limanı'na karayoluyla yaklaşık 1–1¼ saat mesafede. Türkiye'den gelen FCL konteynerlerin doğrudan teslim alındığı bu nokta; M25 üzerinden İngiltere'nin tamamına dağıtım yapabilmemizi sağlıyor.
+              </p>
+              <p>
+                LondraDepo, depolama ve fulfillment markasıdır; çatı şirketimiz <strong>Arca Trade Group</strong> ise ulaşım ve depolama olmak üzere iki ana alanda çalışır. Grup; deniz, hava, kara (İngiltere–Avrupa parsiyel ve komple yük) ve demiryolu (Uzak Doğu ve Avrupa'dan UK'ye) taşımacılığı, proje kargo ve müşteri adına gümrük beyannamesi hizmetleri sunar. Türkiye ile İngiltere &amp; İrlanda arasındaki ticaret hattında uzmanlaşmıştır. Böylece nakliye, gümrükleme, depolama ve UK dağıtımını tek grup içinde planlayabilirsiniz. Ofis: +44 1268 203 283 · Sales@arcatrade.co.uk · 07:45–17:30 (UK saati).
               </p>
               <p>
                 Operasyonumuz Mintsoft WMS üzerinde çalışıyor. Stok seviyeleri, gelen ve çıkan sevkiyatlar, sipariş durumları gerçek zamanlı takip edilebiliyor. Bu altyapı, hem Amazon FBA prep hem Shopify/e-ticaret fulfillment hem de B2B toptancı dağıtım modellerini destekliyor.
               </p>
               <p>
-                Türkçe operasyon iletişimi sunuyoruz. İhracat belgelerinden gümrük koordinasyonuna, ürün kabulünden stok raporlamasına kadar her adımda Türkçe destek sağlanıyor. Bu, İngiltere'de ilk kez operasyon kuran Türk markaları için kritik bir farklılaştırıcı.
+                Türkçe operasyon iletişimi sunuyoruz. İhracat belgelerinden gümrüklemeye, ürün kabulünden stok raporlamasına kadar her adımda Türkçe destek sağlanıyor. Bu, İngiltere'de ilk kez operasyon kuran Türk markaları için kritik bir farklılaştırıcı.
               </p>
             </div>
 

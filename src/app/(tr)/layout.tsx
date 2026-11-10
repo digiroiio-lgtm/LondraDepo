@@ -124,10 +124,10 @@ const jsonLd = {
     {
       "@type": "Service",
       "@id": `${SITE_URL}/#service-gumrukleme`,
-      name: "İngiltere Gümrükleme Koordinasyon Desteği",
+      name: "İngiltere Gümrükleme Hizmeti",
       provider: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
       serviceType: "Customs Clearance Coordination",
-      description: "İngiltere'ye ithalat sürecinde gümrükleme koordinasyon desteği. İthalat belgeleri koordinasyonu ve sevkiyat varış desteği.",
+      description: "İngiltere'ye ithalatta gümrük beyannamesi ve GTİP danışmanlığı (Arca Trade Group gümrük ekibi), gümrükten depoya teslim.",
       areaServed: { "@type": "Country", name: "United Kingdom" },
       url: `${SITE_URL}/gumrukleme`,
     },

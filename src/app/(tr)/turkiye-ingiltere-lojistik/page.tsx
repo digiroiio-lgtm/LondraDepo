@@ -71,8 +71,8 @@ const supplyChain = [
   {
     num: "02",
     label: "UK Gümrüğü",
-    desc: "UK ithalat gümrüğü. LondraDepo koordinasyon desteği sağlar.",
-    scope: "LondraDepo koordinasyon desteği",
+    desc: "UK ithalat gümrüğü. Beyanname Arca Trade Group gümrük ekibi tarafından verilir.",
+    scope: "Arca Trade Group gümrükleme",
     color: "bg-yellow-100 text-yellow-800",
   },
   {
@@ -117,15 +117,15 @@ const londradepoScope = [
 const faqs = [
   {
     q: "Türkiye'den İngiltere'ye ürün nasıl gönderilir?",
-    a: "Türkiye'den UK'e ürün göndermek için uluslararası bir taşıyıcı (kargo firması veya nakliyeci) ile çalışmanız gerekir. LondraDepo uluslararası taşımacılık hizmeti vermez; ancak ürünleriniz UK'ye ulaştığında gümrükleme koordinasyonu, depoya alınma, stok yönetimi ve sipariş karşılama süreçlerini yönetiriz.",
+    a: "Türkiye'den UK'e ürünler deniz, kara, hava veya demiryoluyla gönderilir. Uluslararası nakliye (deniz, hava, kara ve demiryolu) ve gümrükleme, LondraDepo'yu işleten çatı şirketimiz Arca Trade Group tarafından sağlanır; depolama ile birlikte tek teklifte planlanabilir. Dilerseniz kendi nakliyecinizle de çalışabilirsiniz. Ürünleriniz UK'ye ulaştığında depoya alınma, stok yönetimi ve sipariş karşılama süreçlerini LondraDepo yönetir.",
   },
   {
     q: "LondraDepo Türkiye'den İngiltere'ye nakliye yapıyor mu?",
-    a: "Hayır. LondraDepo'nun hizmet alanı, ürünlerin UK'ye varışından sonra başlar: gümrükleme koordinasyonu, mal kabul, depolama, sipariş karşılama ve UK dağıtımı. Uluslararası nakliye için bir taşıyıcı firmayla çalışmanız gerekir.",
+    a: "Evet, çatı şirketimiz üzerinden. Uluslararası nakliye (deniz, hava, kara ve demiryolu) ve gümrükleme, LondraDepo'yu işleten çatı şirketimiz Arca Trade Group tarafından sağlanır; depolama ile birlikte tek teklifte planlanabilir. Dilerseniz kendi nakliyecinizle de çalışabilirsiniz. LondraDepo'nun kendi hizmetleri ise UK'de mal kabul, depolama, sipariş karşılama ve UK dağıtımıdır.",
   },
   {
     q: "UK gümrüğünde ürünlerimi kim geçirir?",
-    a: "UK gümrük beyanı lisanslı gümrükçüler tarafından yapılır. LondraDepo gümrükleme sürecinde koordinasyon ve yönlendirme desteği sağlar; doğrudan gümrük beyanı yapmaz. Gümrük sonrasında ürünler depomuzda teslim alınır.",
+    a: "Gümrük beyannameleri, LondraDepo'yu işleten Arca Trade Group'un gümrükleme ekibi tarafından müşteri adına verilir; gümrük prosedürleri, GTİP ve tercihli menşe konularında danışmanlık sağlanır. Dilerseniz kendi gümrük müşavirinizle de çalışabilirsiniz. Gümrük sonrasında ürünler depomuzda teslim alınır.",
   },
   {
     q: "UK ithalatı için hangi belgeler gerekiyor?",
@@ -158,13 +158,13 @@ export default function TurkiyeIngiltere() {
             </h1>
             <p className="text-slate-300 text-lg leading-relaxed max-w-3xl mb-4">
               Türkiye'den UK'e ürün sevkiyatı, gümrükleme ve depolama sürecini anlayın.
-              LondraDepo, ürünleriniz UK'ye ulaştıktan sonra gümrük koordinasyonundan
-              sipariş karşılamaya kadar tüm aşamayı yönetir.
+              Nakliye ve gümrükleme Arca Trade Group, depolama ve sipariş karşılama
+              LondraDepo tarafından tek grup içinde yönetilir.
             </p>
             <div className="bg-white/10 border border-white/20 rounded-xl p-4 mb-8 text-sm text-slate-300 max-w-2xl">
-              <strong className="text-white">Önemli:</strong> LondraDepo uluslararası nakliye
-              (Türkiye → UK kargo) hizmeti sunmamaktadır. Hizmet alanımız ürünlerinizin
-              UK'ye varmasından sonra başlar.
+              <strong className="text-white">Not:</strong> Türkiye → UK nakliye ve gümrükleme,
+              LondraDepo'yu işleten Arca Trade Group tarafından ayrıca tekliflendirilir.
+              Kendi nakliyecinizle çalışmak isterseniz hizmetimiz ürünler UK'ye vardığında başlar.
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
               <a

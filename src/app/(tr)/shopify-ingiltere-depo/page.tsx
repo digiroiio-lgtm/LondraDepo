@@ -15,7 +15,7 @@ const TEL = "tel:+447554195190";
 export const metadata: Metadata = {
   title: "Shopify İngiltere Depo ve Fulfillment | LondraDepo",
   description:
-    "Shopify mağazanız için İngiltere fulfillment: stoğunuz Essex depomuzda, siparişleri toplayıp paketleyip UK müşterilerinize gönderiyor, iadeleri işliyoruz. Depolama palet başına haftalık £3,50 + KDV'den.",
+    "Shopify için İngiltere fulfillment: stoğunuz Essex'te; siparişleri toplayıp paketliyor, UK müşterilerinize gönderiyor, iadeleri işliyoruz. Palet £3,50 + KDV/hafta'dan.",
   keywords: [
     "ingiltere shopify depo",
     "shopify sipariş karşılama ingiltere",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   ],
   alternates: trAlternates("/shopify-ingiltere-depo"),
   openGraph: {
-    title: "Shopify İçin İngiltere Depo | LondraDepo.com",
+    title: "Shopify İçin İngiltere Depo | LondraDepo",
     description: "Shopify UK depo ve sipariş karşılama. Ürün depolama, pick & pack, UK teslimat.",
     url: `${SITE_URL}/shopify-ingiltere-depo`,
     siteName: "LondraDepo.com",

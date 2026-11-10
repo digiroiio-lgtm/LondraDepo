@@ -18,12 +18,12 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20depo%20teklifi%20
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "İngiltere Depo Hizmeti: Kapsamlı Rehber | LondraDepo.com",
+  title: "İngiltere Depo Hizmeti: Kapsamlı Rehber | LondraDepo",
   description:
     "Türkiye'den İngiltere'ye ihracat yapan markalar için UK depolama süreçleri, maliyetler, lokasyon seçimi ve doğru partner bulma rehberi.",
   alternates: trAlternates("/blog/ingiltere-depo-rehberi"),
   openGraph: {
-    title: "İngiltere Depo Hizmeti: Kapsamlı Rehber | LondraDepo.com",
+    title: "İngiltere Depo Hizmeti: Kapsamlı Rehber | LondraDepo",
     description: "UK depolama süreçleri, maliyetler ve doğru partner seçimi için kapsamlı rehber.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",

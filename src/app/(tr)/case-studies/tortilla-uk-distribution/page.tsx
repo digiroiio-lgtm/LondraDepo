@@ -19,12 +19,12 @@ const WHATSAPP =
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Tortilla Markası İngiltere Depo & Dağıtım Operasyonu | LondraDepo.com",
+  title: "Tortilla Markası İngiltere Depo & Dağıtım Operasyonu | LondraDepo",
   description:
     "Ankara merkezli tortilla ve flatbread üreticisinin İngiltere depo, fulfillment, GTİP, etiketleme ve dağıtım operasyonunun ölçeklenme hikayesi.",
   alternates: trAlternates("/case-studies/tortilla-uk-distribution"),
   openGraph: {
-    title: "Tortilla Markası — İngiltere Depo & Dağıtım Operasyonu | LondraDepo.com",
+    title: "Tortilla Markası — İngiltere Depo & Dağıtım Operasyonu | LondraDepo",
     description:
       "1 paletten aylık 6 x 40HC konteynere: Ankara tortilla üreticisinin İngiltere'de ölçeklenen operasyon hikayesi.",
     url: PAGE_URL,
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tortilla Markası İngiltere Dağıtım Operasyonu | LondraDepo.com",
+    title: "Tortilla Markası İngiltere Dağıtım Operasyonu | LondraDepo",
     description:
       "Ankara merkezli lavaş & flatbread üreticisinin İngiltere pazar girişi ve ölçeklenme operasyonu.",
   },

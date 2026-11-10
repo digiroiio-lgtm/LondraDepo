@@ -185,7 +185,7 @@ export const casePages: EnPage[] = [
     kind: "case",
     parent: "/en/case-studies",
     article: { ...CASE_DATE, readMins: 4, section: "Health & ecommerce" },
-    title: "Walking Treadmill UK Warehouse & Retail Distribution Case Study",
+    title: "Walking Treadmill UK Distribution Case Study",
     description:
       "How walking treadmills for older users and rehabilitation are stored, fulfilled online and distributed to UK discount stores from one Essex warehouse.",
     label: "Walking treadmills – UK distribution",

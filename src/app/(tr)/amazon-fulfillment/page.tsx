@@ -12,12 +12,12 @@ import { trAlternates } from "@/lib/i18n";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20Amazon%20fulfillment%20hizmeti%20hakkında%20bilgi%20almak%20istiyorum.";
 
 export const metadata: Metadata = {
-  title: "Amazon İngiltere Fulfillment | Amazon UK Stok & Sipariş | LondraDepo.com",
+  title: "Amazon İngiltere Fulfillment | Amazon UK Stok & Sipariş | LondraDepo",
   description:
     "Amazon satıcıları için İngiltere fulfillment: stok depolama, sipariş yönetimi, pick & pack ve UK teslimat. Amazon FBA prep hizmeti de mevcut.",
   alternates: trAlternates("/amazon-fulfillment"),
   openGraph: {
-    title: "Amazon İngiltere Fulfillment | LondraDepo.com",
+    title: "Amazon İngiltere Fulfillment | LondraDepo",
     description: "Amazon UK fulfillment. Stok depolama, pick & pack ve UK teslimat desteği.",
     url: `${SITE_URL}/amazon-fulfillment`,
     siteName: "LondraDepo.com",

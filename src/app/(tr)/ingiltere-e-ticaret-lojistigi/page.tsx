@@ -12,7 +12,7 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20İngiltere%20e-ti
 const TEL = "tel:+447554195190";
 
 export const metadata: Metadata = {
-  title: "İngiltere E-Ticaret Lojistiği | Sipariş Karşılama UK | LondraDepo.com",
+  title: "İngiltere E-Ticaret Lojistiği | Sipariş Karşılama UK | LondraDepo",
   description:
     "İngiltere e-ticaret lojistiği: Shopify, Amazon ve online mağaza siparişleri için depolama, pick & pack, sipariş karşılama ve İngiltere teslimat.",
   keywords: [
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   ],
   alternates: trAlternates("/ingiltere-e-ticaret-lojistigi"),
   openGraph: {
-    title: "İngiltere E-Ticaret Lojistiği | LondraDepo.com",
+    title: "İngiltere E-Ticaret Lojistiği | LondraDepo",
     description: "UK e-ticaret lojistiği ve sipariş karşılama. Shopify, Amazon ve online mağaza entegrasyonu.",
     url: `${SITE_URL}/ingiltere-e-ticaret-lojistigi`,
     siteName: "LondraDepo.com",

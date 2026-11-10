@@ -19,12 +19,12 @@ const WHATSAPP =
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Walking Treadmill İngiltere Depo & Dağıtım Operasyonu | LondraDepo.com",
+  title: "Walking Treadmill İngiltere Depo & Dağıtım Operasyonu | LondraDepo",
   description:
     "Yaşlı ve rehabilitasyon kullanıcılarına yönelik walking treadmill ürünlerinin İngiltere depo, fulfillment ve online satış operasyonu.",
   alternates: trAlternates("/case-studies/uk-walking-treadmill-distribution"),
   openGraph: {
-    title: "Walking Treadmill — İngiltere Depo & Satış Operasyonu | LondraDepo.com",
+    title: "Walking Treadmill — İngiltere Depo & Satış Operasyonu | LondraDepo",
     description:
       "Büyük hacimli walking treadmill ürünlerinin İngiltere deposu, online fulfillment ve discount store dağıtım operasyonu.",
     url: PAGE_URL,
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Walking Treadmill UK Depo & Fulfillment Operasyonu | LondraDepo.com",
+    title: "Walking Treadmill UK Depo & Fulfillment Operasyonu | LondraDepo",
     description:
       "Yaşlı ve rehabilitasyon kullanıcıları için walking treadmill ürünlerinin İngiltere depo, online satış ve retail dağıtım operasyonu.",
   },

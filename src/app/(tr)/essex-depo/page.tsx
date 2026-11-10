@@ -11,12 +11,12 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20Essex%20depo%20hi
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Essex Depo Hizmeti | Essex Warehouse UK | LondraDepo.com",
+  title: "Essex Depo Hizmeti | Essex Warehouse UK | LondraDepo",
   description:
     "Londra yakını Essex'te depo hizmeti. Türkiye'den İngiltere'ye gelen yükler için güvenli depolama ve Essex warehouse çözümleri.",
   alternates: trAlternates("/essex-depo"),
   openGraph: {
-    title: "Essex Depo Hizmeti | LondraDepo.com",
+    title: "Essex Depo Hizmeti | LondraDepo",
     description: "Essex, Londra yakını depo ve lojistik çözümleri. Türk ihracatçıları için UK warehouse operasyonu.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",

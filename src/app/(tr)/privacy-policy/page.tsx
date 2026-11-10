@@ -9,7 +9,7 @@ import { trAlternates } from "@/lib/i18n";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Gizlilik Politikası | LondraDepo.com",
+  title: "Gizlilik Politikası | LondraDepo",
   description:
     "LondraDepo.com gizlilik politikası. Kişisel verilerinizin nasıl toplandığı, kullanıldığı, korunduğu ve UK GDPR kapsamındaki haklarınız hakkında bilgi.",
   alternates: trAlternates("/privacy-policy"),

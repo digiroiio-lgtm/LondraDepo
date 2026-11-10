@@ -12,7 +12,7 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20Amazon%20İngilte
 const TEL = "tel:+447554195190";
 
 export const metadata: Metadata = {
-  title: "Amazon İçin İngiltere Depo ve Sipariş Karşılama (FBM) | LondraDepo.com",
+  title: "Amazon İçin İngiltere Depo ve Sipariş Karşılama (FBM) | LondraDepo",
   description:
     "Amazon FBM için İngiltere'de depo ve sipariş karşılama. UK siparişlerinizi Essex depomuzdan karşılayın, kendi deponuz olmadan satış yapın.",
   keywords: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   ],
   alternates: trAlternates("/amazon-ingiltere-depo"),
   openGraph: {
-    title: "Amazon İçin İngiltere Depo (FBM) | LondraDepo.com",
+    title: "Amazon İçin İngiltere Depo (FBM) | LondraDepo",
     description: "Amazon FBM UK: Essex depomuzdan Amazon siparişi karşılama. FBM vs FBA rehberi.",
     url: `${SITE_URL}/amazon-ingiltere-depo`,
     siteName: "LondraDepo.com",

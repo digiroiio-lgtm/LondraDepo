@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     "LondraDepo.com ile iletişime geçin. İngiltere depo, fulfillment ve UK lojistik için WhatsApp veya telefon ile hızlı teklif alın. Türkçe destek mevcut.",
   alternates: trAlternates("/iletisim"),
   openGraph: {
-    title: "İletişim | LondraDepo.com",
+    title: "İletişim | LondraDepo",
     description: "İngiltere depo ve fulfillment için WhatsApp ile hızlı teklif alın. Türkçe destek.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",

@@ -15,7 +15,7 @@ const DESCRIPTION =
   "İngiltere'de palet depolama maliyetinizi saniyeler içinde hesaplayın: palet × hafta × £3,50 + KDV. KDV dahil toplamı görün, elleçleme ve fulfillment için teklif isteyin.";
 
 export const metadata: Metadata = {
-  title: `${TITLE} | LondraDepo.com`,
+  title: `${TITLE} | LondraDepo`,
   description: DESCRIPTION,
   alternates: trAlternates(PATH),
   openGraph: { title: TITLE, description: DESCRIPTION, url: `${SITE_URL}${PATH}`, siteName: "LondraDepo.com", locale: "tr_TR", type: "website" },

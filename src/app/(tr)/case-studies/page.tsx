@@ -11,7 +11,7 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20operasyon%20danis
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Operasyon Örnekleri | İngiltere Gerçek Müşteri Operasyonları | LondraDepo.com",
+  title: "Operasyon Örnekleri: Gerçek UK Müşteri Operasyonları | LondraDepo",
   description:
     "LondraDepo.com ile İngiltere depo altyapısı kuran markaların gerçek operasyon örnekleri. Fulfillment, dağıtım ve e-ticaret altyapısı vaka analizleri.",
   alternates: trAlternates("/case-studies"),

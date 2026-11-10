@@ -11,12 +11,12 @@ import { trAlternates } from "@/lib/i18n";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20e-ticaret%20fulfillment%20hizmeti%20hakkında%20bilgi%20almak%20istiyorum.";
 
 export const metadata: Metadata = {
-  title: "İngiltere E-Ticaret Fulfillment | UK Online Sipariş Karşılama | LondraDepo.com",
+  title: "İngiltere E-Ticaret Fulfillment | LondraDepo",
   description:
     "İngiltere e-ticaret fulfillment: sipariş yönetimi, stok takibi, pick & pack, kargo etiketleme ve UK teslimat. Online mağaza siparişlerini biz karşılayalım.",
   alternates: trAlternates("/e-ticaret-fulfillment"),
   openGraph: {
-    title: "İngiltere E-Ticaret Fulfillment | LondraDepo.com",
+    title: "İngiltere E-Ticaret Fulfillment | LondraDepo",
     description: "UK e-ticaret fulfillment. Sipariş yönetimi, pick & pack, kargo ve UK teslimat.",
     url: `${SITE_URL}/e-ticaret-fulfillment`,
     siteName: "LondraDepo.com",

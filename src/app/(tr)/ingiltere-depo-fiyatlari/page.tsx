@@ -12,7 +12,7 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20İngiltere%20depo
 const TEL = "tel:+447554195190";
 
 export const metadata: Metadata = {
-  title: "İngiltere Depo Fiyatları 2026 | UK Depolama Maliyeti | LondraDepo.com",
+  title: "İngiltere Depo Fiyatları 2026 | UK Depolama Maliyeti | LondraDepo",
   description:
     "İngiltere'de standart palet depolama haftalık £3,50 + KDV'den başlar. Elleçleme, yükleme, yeniden paletleme, gümrükleme ve fulfillment için özel teklif alın.",
   keywords: [
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   ],
   alternates: trAlternates("/ingiltere-depo-fiyatlari"),
   openGraph: {
-    title: "İngiltere Depo Fiyatları 2026 | LondraDepo.com",
+    title: "İngiltere Depo Fiyatları 2026 | LondraDepo",
     description: "UK depolama ve fulfillment maliyet kalemleri. Özel teklif için iletişime geçin.",
     url: `${SITE_URL}/ingiltere-depo-fiyatlari`,
     siteName: "LondraDepo.com",

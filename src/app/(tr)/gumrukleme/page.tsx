@@ -11,12 +11,12 @@ import { trAlternates } from "@/lib/i18n";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20UK%20gümrükleme%20desteği%20hakkında%20bilgi%20almak%20istiyorum.";
 
 export const metadata: Metadata = {
-  title: "İngiltere Gümrükleme Hizmeti | UK İthalat Gümrüğü | LondraDepo.com",
+  title: "İngiltere Gümrükleme Hizmeti | UK İthalat Gümrüğü | LondraDepo",
   description:
     "İngiltere ithalatı için gümrükleme: Arca Trade Group gümrük ekibiyle beyanname, GTİP danışmanlığı ve gümrükten Essex depoya doğrudan teslim. Türkiye'den ihracat yapan işletmeler için.",
   alternates: trAlternates("/gumrukleme"),
   openGraph: {
-    title: "İngiltere Gümrükleme Desteği | LondraDepo.com",
+    title: "İngiltere Gümrükleme Desteği | LondraDepo",
     description: "UK ithalat gümrüklemesi ve depoya teslim. Türkiye'den İngiltere'ye ihracat için.",
     url: `${SITE_URL}/gumrukleme`,
     siteName: "LondraDepo.com",

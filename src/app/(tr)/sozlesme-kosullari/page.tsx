@@ -11,7 +11,7 @@ const LAST_UPDATED = "Eylül 2026";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Sözleşme Koşulları | LondraDepo.com",
+  title: "Sözleşme Koşulları | LondraDepo",
   description:
     "LondraDepo.com hizmet sözleşmesi koşulları. Hizmet kapsamı, ödeme koşulları, sorumluluk sınırlamaları ve uygulanacak hukuk hakkında bilgi.",
   alternates: trAlternates("/sozlesme-kosullari"),

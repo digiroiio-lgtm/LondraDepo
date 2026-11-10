@@ -115,7 +115,7 @@ export const TR_PAGES: Record<string, TrPage> = {
     serviceType: "Port warehousing for Felixstowe",
     title: "Felixstowe Limanı İçin Essex Depo | LondraDepo",
     description:
-      "İngiltere'nin en büyük konteyner limanı Felixstowe'a gelen konteynerler: Rayleigh, Essex depomuza yaklaşık 62 mil taşıma, boşaltma, palet depolama haftalık £3,50 + KDV'den, fulfillment ve Londra dağıtımı.",
+      "Felixstowe'a gelen konteynerler için Essex depo: yaklaşık 62 mil taşıma, boşaltma, haftalık £3,50 + KDV'den palet depolama, fulfillment ve Londra dağıtımı.",
     crumb: "Felixstowe Liman Depo",
     eyebrow: "Felixstowe Limanı · karayoluyla ~62 mil",
     h1: "Felixstowe Limanı Konteynerleri İçin Essex Depo",
@@ -240,7 +240,7 @@ export const TR_PAGES: Record<string, TrPage> = {
     kind: "article",
     title: "İngiltere İthalat Maliyetleri: Vergi, KDV, Lojistik",
     description:
-      "İngiltere'ye ithalatın maliyeti: nakliye, gümrükleme, GTİP'e göre gümrük vergisi, vergi ve taşıma dahil değer üzerinden %20 ithalat KDV'si, taşıma, boşaltma, depolama ve fulfillment; örnek hesapla.",
+      "İngiltere'ye ithalat maliyeti: nakliye, gümrükleme, gümrük vergisi, %20 ithalat KDV'si, taşıma, boşaltma, depolama ve fulfillment; örnek hesapla.",
     crumb: "İngiltere İthalat Maliyetleri",
     eyebrow: "İthalat",
     h1: "İngiltere'ye İthalatın Maliyeti Nedir?",
@@ -302,7 +302,7 @@ export const TR_PAGES: Record<string, TrPage> = {
     kind: "article",
     title: "Amazon FBA Prep Kontrol Listesi (UK) | LondraDepo",
     description:
-      "UK satıcıları için adım adım Amazon FBA prep kontrol listesi: sevkiyat planı, FNSKU etiketleri, diğer barkodların kapatılması, ambalaj, set ve paketler, koli etiketleri ve Amazon UK deposuna teslimat.",
+      "UK satıcıları için Amazon FBA prep kontrol listesi: sevkiyat planı, FNSKU etiketleri, ambalaj, set ve paketler, koli etiketleri ve Amazon UK teslimatı.",
     crumb: "Amazon FBA Prep Kontrol Listesi",
     eyebrow: "Amazon",
     h1: "Amazon FBA Prep Kontrol Listesi (UK Satıcıları İçin)",
@@ -447,7 +447,7 @@ export const TR_PAGES: Record<string, TrPage> = {
     serviceType: "Automotive parts warehousing",
     title: "Otomotiv Yedek Parça Depolama İngiltere | LondraDepo",
     description:
-      "OEM ve yan sanayi yedek parça ile döşeme malzemeleri için İngiltere depolama: SKU bazlı palet ve raf, fotoğraflı hasar kontrolü, koruyucu paketleme, bayi ve atölyelere ertesi gün teslimat seçenekleri.",
+      "OEM ve yan sanayi parçalar için İngiltere depolama: SKU bazlı palet ve raf, fotoğraflı hasar kontrolü, koruyucu paketleme, bayi ve atölyelere teslimat.",
     crumb: "Otomotiv Yedek Parça Depolama",
     eyebrow: "Sektör · otomotiv ve yan sanayi",
     h1: "İngiltere'de Otomotiv Yedek Parça Depolama ve Dağıtım",

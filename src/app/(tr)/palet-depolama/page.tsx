@@ -14,12 +14,12 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20palet%20depolama%
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "İngiltere Palet Depolama | UK Pallet Storage | LondraDepo.com",
+  title: "İngiltere Palet Depolama | UK Pallet Storage | LondraDepo",
   description:
     "İngiltere'de standart palet depolama haftalık £3,50 + KDV'den başlar. Essex merkezli depo; elleçleme, yükleme ve gümrükleme işlemleri duruma göre fiyatlandırılır.",
   alternates: trAlternates("/palet-depolama"),
   openGraph: {
-    title: "İngiltere Palet Depolama | LondraDepo.com",
+    title: "İngiltere Palet Depolama | LondraDepo",
     description:
       "UK'da palet bazında depolama. İthalatçılar ve toptancılar için maliyet kontrollü İngiltere pallet storage.",
     url: PAGE_URL,

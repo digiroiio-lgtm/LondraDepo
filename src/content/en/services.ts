@@ -71,9 +71,9 @@ export const servicePages: EnPage[] = [
     tr: "/londra-depo",
     kind: "service",
     serviceType: "Warehousing",
-    title: "London Warehousing – Essex Warehouse 40 Minutes from London",
+    title: "London Warehousing: Essex, 40 Minutes from London",
     description:
-      "Warehouse storage for London and the South East from Rayleigh, Essex: about 40 minutes from east London, 20–30 minutes from Tilbury, on the M25 corridor. Pallet storage, pick and pack and UK delivery.",
+      "Warehousing for London and the South East from Rayleigh, Essex: about 40 minutes from east London and 20–30 minutes from Tilbury on the M25 corridor. Pallets from £3.50 + VAT.",
     label: "London Warehousing",
     eyebrow: "Near London, Essex",
     h1: "London Warehousing on the M25 Corridor",
@@ -201,7 +201,7 @@ export const servicePages: EnPage[] = [
     modified: "2026-11-10",
     title: "Shopify Fulfilment UK: Fulfillment Warehouse in Essex",
     description:
-      "Shopify fulfilment in the UK: store stock in our Essex warehouse near London, and we pick, pack and ship your Shopify orders to UK customers and handle returns. Storage from £3.50 + VAT per pallet per week.",
+      "Shopify fulfilment in the UK: we store your stock in Essex, pick, pack and ship Shopify orders to UK customers and handle returns. Storage from £3.50 + VAT per pallet per week.",
     label: "Shopify Fulfilment UK",
     eyebrow: "Shopify fulfillment · UK warehouse",
     h1: "Shopify Fulfilment in the UK",
@@ -712,7 +712,7 @@ export const servicePages: EnPage[] = [
     serviceType: "Warehousing",
     title: "Essex Warehouse near London – Rayleigh, SS6 7FY",
     description:
-      "Our Essex warehouse in Rayleigh (SS6 7FY): ~40 minutes to east London, 20–30 minutes to Tilbury and London Gateway, about 62 miles to Felixstowe. FCL/LCL receiving, pallet storage, fulfilment and Amazon prep.",
+      "Our Essex warehouse in Rayleigh (SS6 7FY): about 40 minutes to east London, 20–30 minutes to Tilbury and London Gateway, FCL/LCL receiving and storage from £3.50 + VAT.",
     label: "Essex Warehouse",
     h1: "Essex Warehouse near London",
     lead:

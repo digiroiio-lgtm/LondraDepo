@@ -14,12 +14,12 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20fulfillment%20tek
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "İngiltere Fulfillment Hizmeti | Türk Markalar için UK Operasyon | LondraDepo.com",
+  title: "İngiltere Fulfillment Hizmeti, Türk Markalar İçin | LondraDepo",
   description:
     "Türkiye'den ihracat yapan markalar için UK fulfillment: sipariş toplama, paketleme, Amazon, Etsy ve Shopify entegrasyonu. Essex merkezli operasyon.",
   alternates: trAlternates("/ingiltere-fulfillment"),
   openGraph: {
-    title: "İngiltere Fulfillment Hizmeti | LondraDepo.com",
+    title: "İngiltere Fulfillment Hizmeti | LondraDepo",
     description:
       "Amazon, Etsy ve Shopify satıcıları için İngiltere fulfillment ve sipariş hazırlama. Essex merkezli UK operasyon.",
     url: PAGE_URL,

@@ -20,13 +20,13 @@ const WHATSAPP =
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title:
-    "Cruyff UK Fulfillment & Fashion Warehouse Operasyonu | LondraDepo.com",
+    "Cruyff UK Fulfillment & Fashion Warehouse Operasyonu | LondraDepo",
   description:
     "Cruyff markasının Hollanda'dan İngiltere fulfillment operasyonuna geçişi: UK depo, yeniden paketleme, e-ticaret fulfillment ve dağıtım.",
   alternates: trAlternates("/case-studies/cruyff-uk-fulfillment"),
   openGraph: {
     title:
-      "Cruyff — İngiltere Moda & Fulfillment Operasyonu | LondraDepo.com",
+      "Cruyff — İngiltere Moda & Fulfillment Operasyonu | LondraDepo",
     description:
       "Johan Cruyff markasının Hollanda'dan UK fulfillment operasyonuna geçişi: warehouse, repackaging ve ecommerce distribution.",
     url: PAGE_URL,
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cruyff UK Fulfillment Operasyonu | LondraDepo.com",
+    title: "Cruyff UK Fulfillment Operasyonu | LondraDepo",
     description:
       "Cruyff markasının Hollanda'dan UK fulfillment altyapısına geçiş operasyonu.",
   },

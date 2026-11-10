@@ -12,7 +12,7 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20sipariş%20toplam
 const TEL = "tel:+447554195190";
 
 export const metadata: Metadata = {
-  title: "Sipariş Toplama ve Paketleme (Pick & Pack) İngiltere | LondraDepo.com",
+  title: "Sipariş Toplama ve Paketleme (Pick & Pack) İngiltere | LondraDepo",
   description:
     "İngiltere'de sipariş toplama ve paketleme hizmeti. Pick & pack, kargo etiketleme ve UK sevkiyat. Online mağaza siparişleriniz için depo operasyonu.",
   keywords: [
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   ],
   alternates: trAlternates("/siparis-toplama-paketleme"),
   openGraph: {
-    title: "Sipariş Toplama ve Paketleme (Pick & Pack) | LondraDepo.com",
+    title: "Sipariş Toplama ve Paketleme (Pick & Pack) | LondraDepo",
     description: "UK'de sipariş toplama ve paketleme. Pick & pack, kargo etiketleme, sevkiyat.",
     url: `${SITE_URL}/siparis-toplama-paketleme`,
     siteName: "LondraDepo.com",

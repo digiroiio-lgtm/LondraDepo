@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   ],
   alternates: trAlternates("/turk-sirketleri-icin-ingiltere-depo"),
   openGraph: {
-    title: "Türk Şirketleri İçin İngiltere Depo | LondraDepo.com",
+    title: "Türk Şirketleri İçin İngiltere Depo | LondraDepo",
     description: "UK'de şirket kurmadan İngiltere'de satış ve depolama. Türk işletmeler için fulfilment.",
     url: `${SITE_URL}/turk-sirketleri-icin-ingiltere-depo`,
     siteName: "LondraDepo.com",

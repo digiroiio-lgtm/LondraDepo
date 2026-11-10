@@ -11,7 +11,7 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20Türkiye'den%20İ
 const TEL = "tel:+447554195190";
 
 export const metadata: Metadata = {
-  title: "Türkiye'den İngiltere'ye Depolama ve Fulfillment | LondraDepo.com",
+  title: "Türkiye'den İngiltere'ye Depolama ve Fulfillment | LondraDepo",
   description:
     "Türkiye'den İngiltere'ye satış için eksiksiz UK operasyonu: gümrük desteği, Essex depo, Shopify/Amazon fulfillment, pick & pack ve dağıtım.",
   keywords: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   ],
   alternates: trAlternates("/turkiyeden-ingiltereye-depolama"),
   openGraph: {
-    title: "Türkiye'den İngiltere'ye Depolama ve Fulfillment | LondraDepo.com",
+    title: "Türkiye'den İngiltere'ye Depolama ve Fulfillment | LondraDepo",
     description:
       "İngiltere'de kendi deponuzu kurmadan satış yapın. Türkiye'den ürün gönderin, tüm UK operasyonunu bize bırakın.",
     url: `${SITE_URL}/turkiyeden-ingiltereye-depolama`,

@@ -9,7 +9,7 @@ import { trAlternates } from "@/lib/i18n";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Çerez Politikası | LondraDepo.com",
+  title: "Çerez Politikası | LondraDepo",
   description:
     "LondraDepo.com çerez politikası. Sitemizde kullandığımız çerez türleri, amaçları ve çerez tercihlerinizi nasıl yönetebileceğiniz hakkında bilgi.",
   alternates: trAlternates("/cookie-policy"),

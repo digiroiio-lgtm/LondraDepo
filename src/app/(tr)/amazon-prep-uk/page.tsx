@@ -14,12 +14,12 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20Amazon%20Prep%20h
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Amazon Prep UK | İngiltere Amazon FBA Hazırlık | LondraDepo.com",
+  title: "Amazon Prep UK | İngiltere Amazon FBA Hazırlık | LondraDepo",
   description:
     "İngiltere'de Amazon FBA prep hizmeti. Ürün etiketleme, paketleme, FBA uyumluluk ve Amazon UK deposuna sevk. Türk ihracatçıları için UK Amazon prep partneri.",
   alternates: trAlternates("/amazon-prep-uk"),
   openGraph: {
-    title: "Amazon Prep UK | LondraDepo.com",
+    title: "Amazon Prep UK | LondraDepo",
     description: "UK'da Amazon FBA prep, etiketleme ve sevk hizmeti. Türk ihracatçıları için İngiltere Amazon prep operasyonu.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",

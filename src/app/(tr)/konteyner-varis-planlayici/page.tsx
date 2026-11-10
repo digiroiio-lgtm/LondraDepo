@@ -10,12 +10,12 @@ import { SITE_URL } from "@/lib/site";
 import { trAlternates } from "@/lib/i18n";
 
 const PATH = "/konteyner-varis-planlayici";
-const TITLE = "Konteyner Varış Planlayıcı: UK Limanından Essex Deposuna";
+const TITLE = "Konteyner Varış Planlayıcı: Limandan Depoya";
 const DESCRIPTION =
   "Konteynerinizin İngiltere'ye varışını planlayın: limanı, konteyner tipini, ETA'yı ve gümrükleme şeklini seçin; EORI'den ön bildirime, boşaltmadan stok kaydına tarihli kontrol listesi alın.";
 
 export const metadata: Metadata = {
-  title: `${TITLE} | LondraDepo.com`,
+  title: `${TITLE} | LondraDepo`,
   description: DESCRIPTION,
   alternates: trAlternates(PATH),
   openGraph: { title: TITLE, description: DESCRIPTION, url: `${SITE_URL}${PATH}`, siteName: "LondraDepo.com", locale: "tr_TR", type: "website" },

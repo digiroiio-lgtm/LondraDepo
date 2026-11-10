@@ -18,12 +18,12 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20fulfillment%20tek
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "İngiltere Fulfillment Nedir? Nasıl Çalışır? | LondraDepo.com",
+  title: "İngiltere Fulfillment Nedir? Nasıl Çalışır? | LondraDepo",
   description:
     "UK fulfillment hizmetinin ne olduğunu, nasıl çalıştığını, Amazon ve e-ticaret satıcıları için neden önemli olduğunu anlatan kapsamlı rehber.",
   alternates: trAlternates("/blog/ingiltere-fulfillment-nedir"),
   openGraph: {
-    title: "İngiltere Fulfillment Nedir? | LondraDepo.com",
+    title: "İngiltere Fulfillment Nedir? | LondraDepo",
     description: "UK fulfillment hizmeti nedir, nasıl çalışır ve e-ticaret satıcıları için neden kritik?",
     url: PAGE_URL,
     siteName: "LondraDepo.com",

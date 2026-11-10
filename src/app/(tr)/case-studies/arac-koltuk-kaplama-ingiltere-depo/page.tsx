@@ -20,13 +20,13 @@ const WHATSAPP =
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title:
-    "Araç Koltuk Kaplama & Suni Deri İngiltere Depo Operasyonu | LondraDepo.com",
+    "Araç Koltuk Kaplama İngiltere Depo Operasyonu | LondraDepo",
   description:
     "Araç koltuk kaplama ve suni deri malzemelerinin İngiltere depo altyapısı, stok yönetimi, online sipariş fulfillment ve B2B dağıtım operasyonu.",
   alternates: trAlternates("/case-studies/arac-koltuk-kaplama-ingiltere-depo"),
   openGraph: {
     title:
-      "Araç Koltuk Kaplama & Suni Deri — İngiltere Depo & Satış Operasyonu | LondraDepo.com",
+      "Araç Koltuk Kaplama & Suni Deri — İngiltere Depo & Satış Operasyonu | LondraDepo",
     description:
       "Otomotiv döşeme malzemelerinin İngiltere deposunda stok yönetimi, online fulfillment ve B2B dağıtım operasyonu.",
     url: PAGE_URL,

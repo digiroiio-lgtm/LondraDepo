@@ -18,12 +18,12 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20ara%20depo%20hakk
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "İngiltere Ara Depo Nedir? | UK Transit Depolama Rehberi | LondraDepo.com",
+  title: "İngiltere Ara Depo (Transit Depo) Nedir? | LondraDepo",
   description:
     "İngiltere ara depo nedir, kimler için uygundur, normal depodan farkı nedir? UK transit depolama ve geçici depo çözümleri rehberi.",
   alternates: trAlternates("/blog/ingiltere-ara-depo-nedir"),
   openGraph: {
-    title: "İngiltere Ara Depo Nedir? | LondraDepo.com",
+    title: "İngiltere Ara Depo Nedir? | LondraDepo",
     description: "UK ara depo ve transit depolama hizmetinin ne olduğu, nasıl çalıştığı ve hangi firmalar için uygun olduğu.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",

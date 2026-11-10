@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   ],
   alternates: trAlternates("/ingiltere-depo"),
   openGraph: {
-    title: "İngiltere Depo Hizmeti | LondraDepo.com",
+    title: "İngiltere Depo Hizmeti | LondraDepo",
     description: "UK depolama, mal kabul, stok yönetimi ve sipariş karşılama. Essex merkezli İngiltere depo hizmeti.",
     url: `${SITE_URL}/ingiltere-depo`,
     siteName: "LondraDepo.com",

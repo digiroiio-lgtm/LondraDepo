@@ -13,7 +13,7 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20Londra%20depo%20h
 const TEL = "tel:+447554195190";
 
 export const metadata: Metadata = {
-  title: "Londra Depo Hizmeti | Doğu Londra'ya 40 Dakika Essex Warehouse | LondraDepo.com",
+  title: "Londra Depo: Doğu Londra'ya 40 Dakika, Essex | LondraDepo",
   description:
     "Doğu Londra'ya 40 dakika mesafede Essex depo; A127 üzerinde, Tilbury Limanı'na 20–30 dakika. Mal kabul, depolama ve hızlı sipariş karşılama.",
   keywords: [
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   ],
   alternates: trAlternates("/londra-depo"),
   openGraph: {
-    title: "Londra Depo Hizmeti | LondraDepo.com",
+    title: "Londra Depo Hizmeti | LondraDepo",
     description: "Londra yakını Essex depomuzda ürün depolama, stok yönetimi ve sipariş karşılama.",
     url: `${SITE_URL}/londra-depo`,
     siteName: "LondraDepo.com",

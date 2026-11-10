@@ -11,12 +11,12 @@ import { trAlternates } from "@/lib/i18n";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20nakliye%20ve%20dağıtım%20hizmeti%20hakkında%20bilgi%20almak%20istiyorum.";
 
 export const metadata: Metadata = {
-  title: "İngiltere Nakliye ve Dağıtım Hizmeti | UK Distribution | LondraDepo.com",
+  title: "İngiltere Nakliye ve Dağıtım Hizmeti | UK Distribution | LondraDepo",
   description:
     "İngiltere içi nakliye ve dağıtım hizmetleri. Ürün toplama, depo transferleri, yerel dağıtım ve UK geneli teslimat koordinasyonu. Essex merkezli operasyon.",
   alternates: trAlternates("/nakliye-dagitim"),
   openGraph: {
-    title: "İngiltere Nakliye ve Dağıtım | LondraDepo.com",
+    title: "İngiltere Nakliye ve Dağıtım | LondraDepo",
     description: "UK içi nakliye ve dağıtım koordinasyonu. Ürün toplama, yerel dağıtım, UK geneli teslimat.",
     url: `${SITE_URL}/nakliye-dagitim`,
     siteName: "LondraDepo.com",

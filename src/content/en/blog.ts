@@ -9,7 +9,7 @@ export const blogPages: EnPage[] = [
     kind: "article",
     parent: "/en/blog",
     article: { ...DATE, readMins: 6, section: "Warehousing" },
-    title: "UK Warehousing Guide: How It Works and How to Choose a Partner",
+    title: "UK Warehousing Guide: How It Works",
     description:
       "A practical guide to UK warehousing for overseas sellers: what a UK warehouse service is, who needs one, how the process works step by step and how to choose the right partner.",
     label: "UK Warehousing Guide",
@@ -402,9 +402,9 @@ export const blogPages: EnPage[] = [
     kind: "article",
     parent: "/en/blog",
     article: { ...DATE, readMins: 9, section: "Importing" },
-    title: "How to Import Goods into the UK: A Practical Guide for Overseas Businesses",
+    title: "How to Import Goods into the UK: A Practical Guide",
     description:
-      "A step-by-step guide to importing goods into the UK: GB EORI, commodity codes and the UK Global Tariff, customs declarations, duty and import VAT, rules of origin, product rules and choosing a UK warehouse.",
+      "How to import goods into the UK: GB EORI, commodity codes and the UK Global Tariff, customs declarations, duty and import VAT, rules of origin and choosing a UK warehouse.",
     label: "UK Importing Guide",
     h1: "How to Import Goods into the UK: A Practical Guide",
     lead:
@@ -537,7 +537,7 @@ export const blogPages: EnPage[] = [
     article: { ...DATE, readMins: 7, section: "Importing" },
     title: "UK Import Costs: Duty, VAT and Logistics",
     description:
-      "What it costs to import goods into the UK: freight, customs clearance, customs duty by commodity code, import VAT at 20% on the value including duty and transport, haulage, unloading, storage and fulfilment, with a worked example.",
+      "What it costs to import into the UK: freight, customs clearance, duty by commodity code, 20% import VAT, haulage, unloading, storage and fulfilment, with a worked example.",
     label: "UK Import Costs",
     h1: "What Does It Cost to Import Goods into the UK?",
     lead:
@@ -603,7 +603,7 @@ export const blogPages: EnPage[] = [
     article: { ...DATE, readMins: 5, section: "Amazon" },
     title: "Amazon FBA Prep Checklist for UK Sellers",
     description:
-      "A step-by-step Amazon FBA prep checklist for UK sellers: shipment plan, FNSKU labels, covering old barcodes, packaging, sets and bundles, carton labels and delivery to the Amazon UK fulfilment centre.",
+      "Amazon FBA prep checklist for UK sellers: shipment plan, FNSKU labels, covering old barcodes, packaging, sets and bundles, carton labels and delivery to Amazon UK.",
     label: "Amazon FBA Prep Checklist",
     h1: "Amazon FBA Prep Checklist for UK Sellers",
     lead:

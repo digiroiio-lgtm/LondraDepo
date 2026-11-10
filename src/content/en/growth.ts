@@ -212,7 +212,7 @@ export const growthPages: EnPage[] = [
     slug: "/en/uk-market-entry",
     kind: "service",
     serviceType: "UK market entry logistics",
-    title: "UK Market Entry: Sell in the UK Without Your Own Warehouse",
+    title: "UK Market Entry Without Your Own Warehouse",
     description:
       "How international manufacturers and brands enter the UK market with outsourced warehousing: choose a sales model, set up imports, start with a trial pallet and scale to containers.",
     label: "UK Market Entry",
@@ -283,7 +283,7 @@ export const growthPagesP2: EnPage[] = [
     serviceType: "Automotive parts warehousing",
     title: "Automotive Parts Warehousing & Distribution UK",
     description:
-      "UK warehousing for OEM and aftermarket parts and automotive trim: pallet and shelf storage by SKU, photo-documented damage checks, protective packing and next-day delivery to dealers, workshops and online buyers.",
+      "UK warehousing for OEM and aftermarket parts: pallet and shelf storage by SKU, photo-documented damage checks, protective packing and next-day delivery to dealers and workshops.",
     label: "Automotive Parts Warehousing",
     eyebrow: "Industry · automotive and aftermarket",
     h1: "Automotive Parts Warehousing and Distribution in the UK",
@@ -426,7 +426,7 @@ export const growthPagesP2: EnPage[] = [
     serviceType: "Port-to-warehouse logistics",
     title: "Felixstowe, Tilbury & London Gateway to Essex Warehouse",
     description:
-      "Port-to-warehouse logistics for containers arriving at Felixstowe, London Gateway and Tilbury: verified road distances to our Rayleigh warehouse, customs, haulage, unloading and onward UK distribution.",
+      "Port-to-warehouse logistics from Felixstowe, London Gateway and Tilbury: verified road distances to our Rayleigh warehouse, customs, haulage, unloading and UK distribution.",
     label: "Port-to-Warehouse Logistics",
     eyebrow: "Felixstowe · London Gateway · Tilbury",
     h1: "From Felixstowe, London Gateway or Tilbury to Our Essex Warehouse",
@@ -716,7 +716,7 @@ export const portPages: EnPage[] = [
     modified: "2026-11-10",
     title: "Felixstowe Port Warehousing: Essex Warehouse",
     description:
-      "Containers arriving at Felixstowe, the UK's largest container port: haulage about 62 miles to our Rayleigh, Essex warehouse, unloading, pallet storage from £3.50 + VAT per week, fulfilment and London distribution.",
+      "Containers landing at Felixstowe: haulage about 62 miles to our Rayleigh, Essex warehouse, unloading, pallet storage from £3.50 + VAT per week, fulfilment and London distribution.",
     label: "Felixstowe Port Warehousing",
     eyebrow: "Port of Felixstowe · ~62 miles by road",
     h1: "Felixstowe Port Warehousing in Essex",
@@ -799,7 +799,7 @@ export const industryHub: EnPage = {
   modified: "2026-11-10",
   title: "UK Warehousing by Industry",
   description:
-    "UK warehousing and fulfilment by industry: food and FMCG, packaging and catering supplies, automotive parts, fashion and ecommerce, bulky goods and electronics, with live case studies from our Essex warehouse.",
+    "UK warehousing and fulfilment by industry: food and FMCG, packaging, automotive parts, fashion and ecommerce, bulky goods and electronics, with live case studies.",
   label: "Industries",
   eyebrow: "Sectors we work with",
   h1: "UK Warehousing and Fulfilment by Industry",

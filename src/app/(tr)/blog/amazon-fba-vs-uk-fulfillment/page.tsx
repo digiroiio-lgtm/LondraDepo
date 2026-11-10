@@ -18,12 +18,12 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20UK%20fulfillment%
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Amazon FBA mı, UK Fulfillment mı? Hangisi Daha Avantajlı? | LondraDepo.com",
+  title: "Amazon FBA mı, UK Fulfillment mı? | LondraDepo",
   description:
     "Amazon FBA ve 3PL UK fulfillment arasındaki farklar, maliyet karşılaştırması, esneklik ve kontrol açısından hangisini seçmeli? Türk ihracatçılar için rehber.",
   alternates: trAlternates("/blog/amazon-fba-vs-uk-fulfillment"),
   openGraph: {
-    title: "Amazon FBA mı, UK Fulfillment mı? | LondraDepo.com",
+    title: "Amazon FBA mı, UK Fulfillment mı? | LondraDepo",
     description: "Amazon FBA ve 3PL UK fulfillment karşılaştırması — hangisi daha avantajlı?",
     url: PAGE_URL,
     siteName: "LondraDepo.com",

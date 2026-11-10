@@ -12,12 +12,12 @@ const TEL = "tel:+447554195190";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "İngiltere Depo Avantajları | LondraDepo.com",
+  title: "İngiltere Depo Avantajları | LondraDepo",
   description:
     "Uygun maliyetli haftalık İngiltere depo çözümleri, Türkiye'den düzenli konteyner organizasyonu, GTIP danışmanlığı ve fulfillment tek noktada.",
   alternates: trAlternates("/ingiltere-depo-avantajlari"),
   openGraph: {
-    title: "İngiltere Depo Avantajları | LondraDepo.com",
+    title: "İngiltere Depo Avantajları | LondraDepo",
     description:
       "Haftalık uygun maliyetli İngiltere depo çözümleri, Türkiye'den düzenli konteyner organizasyonu, GTIP danışmanlığı ve fulfillment operasyonları.",
     url: PAGE_URL,

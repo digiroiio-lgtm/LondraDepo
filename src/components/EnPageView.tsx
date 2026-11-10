@@ -22,6 +22,7 @@ const INLINE_FORM = new Set([
   "/en/shopify-fulfilment-uk", "/en/uk-fulfilment", "/en/ecommerce-fulfilment", "/en/uk-ecommerce-logistics", "/en/pick-and-pack",
   "/en/amazon-fulfilment-uk", "/en/amazon-seller-warehousing-uk", "/en/amazon-prep-uk", "/en/uk-distribution",
   "/en/london-gateway-tilbury-warehousing", "/en/felixstowe-port-warehousing", "/en/uk-warehousing-for-turkish-exporters",
+  "/en/case-studies", "/en/industries", "/en/blog",
 ]);
 import HeaderEn from "@/components/HeaderEn";
 import FooterEn from "@/components/FooterEn";
@@ -64,7 +65,7 @@ function jsonLd(page: EnPage) {
   const crumbs = breadcrumbs(page);
   const graph: Record<string, unknown>[] = [
     {
-      "@type": "WebPage",
+      "@type": page.kind === "hub" ? ["WebPage", "CollectionPage"] : "WebPage",
       "@id": `${url}#webpage`,
       url,
       name: page.title,
@@ -74,12 +75,25 @@ function jsonLd(page: EnPage) {
       about: ORG,
       datePublished: page.article?.published ?? EN_PUBLISHED,
       dateModified: modifiedOf(page),
+      ...(page.kind === "hub" ? { mainEntity: { "@id": `${url}#items` } } : {}),
     },
     {
       "@type": "BreadcrumbList",
       itemListElement: crumbs.map((c, i) => ({ "@type": "ListItem", position: i + 1, name: c.name, item: absolute(c.path) })),
     },
   ];
+  if (page.kind === "hub") {
+    // Hubs list their child pages (guides, case studies, sectors) as an ItemList, de-duplicated, in page order.
+    const seen = new Set<string>();
+    const items = page.sections.flatMap((sec) => (sec.type === "links" ? sec.items : [])).filter((it) => !seen.has(it.href) && seen.add(it.href));
+    graph.push({
+      "@type": "ItemList",
+      "@id": `${url}#items`,
+      name: page.h1,
+      numberOfItems: items.length,
+      itemListElement: items.map((it, i) => ({ "@type": "ListItem", position: i + 1, url: absolute(it.href), name: it.title })),
+    });
+  }
   if (page.kind === "service" && page.serviceType) {
     graph.push({
       "@type": "Service",

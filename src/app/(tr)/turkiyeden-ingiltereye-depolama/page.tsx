@@ -183,7 +183,7 @@ export default function TurkiyeILandingPage() {
               {journey.map((step, i) => (
                 <div key={step.label} className="flex items-center gap-3">
                   <div className="flex flex-col items-center text-center w-28">
-                    <div className="w-14 h-14 bg-white/10 border border-white/20 rounded-2xl flex items-center justify-center text-2xl mb-2">
+                    <div className="w-14 h-14 bg-white/10 text-white border border-white/20 rounded-2xl flex items-center justify-center text-2xl mb-2">
                       <Emoji e={step.icon} />
                     </div>
                     <span className="text-white text-xs font-bold mb-1">{step.label}</span>

@@ -67,7 +67,7 @@ export default function CustomerJourneySection() {
           {steps.map((step, i) => (
             <div key={step.num} className="relative">
               <div className="flex flex-col items-center text-center">
-                <div className="w-14 h-14 rounded-full bg-white/10 border-2 border-white/20 flex items-center justify-center text-2xl mb-3">
+                <div className="w-14 h-14 rounded-full bg-white/10 text-white border-2 border-white/20 flex items-center justify-center text-2xl mb-3">
                   <Emoji e={step.icon} />
                 </div>
                 <span className="text-green-400 text-xs font-bold uppercase tracking-wider mb-1">
@@ -93,7 +93,7 @@ export default function CustomerJourneySection() {
           {steps.map((step, i) => (
             <div key={step.num}>
               <div className="flex gap-4 items-start bg-white/5 rounded-2xl p-4 border border-white/10">
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-xl">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-white/10 text-white border border-white/20 flex items-center justify-center text-xl">
                   <Emoji e={step.icon} />
                 </div>
                 <div>

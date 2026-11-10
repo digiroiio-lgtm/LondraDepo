@@ -52,7 +52,7 @@ export default function EcommerceFulfilmentSection() {
                   <span className="text-xs text-slate-600 font-medium leading-tight">{step.label}</span>
                 </div>
                 {i < workflow.length - 1 && (
-                  <svg className="w-4 h-4 text-slate-300 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" aria-hidden="true">
+                  <svg className="w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                   </svg>
                 )}

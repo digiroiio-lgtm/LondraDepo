@@ -659,24 +659,74 @@ export const blogPages: EnPage[] = [
   },
 ];
 
+const guide = (slug: string) => {
+  const p = blogPages.find((g) => g.slug === slug);
+  if (!p) throw new Error(`blog hub: unknown guide ${slug}`);
+  return { href: p.slug, title: p.h1, text: p.description, tag: p.article?.section };
+};
+
 export const blogHub: EnPage = {
   slug: "/en/blog",
   tr: "/blog",
   kind: "hub",
-  title: "UK Warehousing & Fulfilment Guides",
+  modified: "2026-11-10",
+  title: "UK Warehousing, Fulfilment & Import Guides",
   description:
-    "Practical guides on UK warehousing, fulfilment, pallet storage costs, Amazon prep and FBA versus 3PL, written from experience running an Essex warehouse.",
-  label: "Blog",
+    "Practical guides for selling into the UK: warehousing and pallet storage costs, fulfilment, Amazon FBA prep, importing, duty and VAT, and how to choose a UK 3PL.",
+  label: "Guides",
   eyebrow: "Knowledge centre",
-  h1: "UK Warehousing and Fulfilment Guides",
+  h1: "UK Warehousing, Fulfilment and Import Guides",
   lead:
-    "Practical guides for businesses selling into the UK, written from our experience running a warehouse in Essex. They cover warehousing, fulfilment, pallet storage costs, Amazon prep and choosing between Amazon FBA and a UK 3PL.",
+    "These guides answer the questions overseas businesses ask before they hold stock in the UK: how UK warehousing works and what it costs, how fulfilment and Amazon FBA prep work, how to import goods and account for duty and import VAT, and how to choose a UK 3PL. Each is written from running our warehouse in Rayleigh, Essex, and links to the matching service and free planning tools.",
+  facts: [
+    `${blogPages.length} practical guides, updated November 2026`,
+    "Topics: warehousing costs, fulfilment, Amazon, importing, choosing a 3PL",
+    "Free tools: storage cost calculator and container arrival planner",
+    "Free downloads: UK import checklist and Amazon FBA prep checklist (PDF)",
+  ],
   sections: [
     {
       type: "links",
-      h2: "All guides",
-      items: blogPages.map((p) => ({ href: p.slug, title: p.h1, text: p.description, tag: p.article?.section })),
+      h2: "Start here",
+      intro: "New to UK warehousing? These three guides cover the basics, the costs and how to compare providers.",
+      items: [guide("/en/blog/uk-warehousing-guide"), guide("/en/blog/uk-warehousing-prices-2026"), guide("/en/blog/how-to-choose-a-uk-3pl")],
+    },
+    {
+      type: "links",
+      h2: "Warehousing and storage costs",
+      items: [guide("/en/blog/uk-warehousing-guide"), guide("/en/blog/uk-warehousing-prices-2026"), guide("/en/blog/uk-pallet-storage-costs"), guide("/en/blog/what-is-a-uk-transit-warehouse")],
+    },
+    {
+      type: "links",
+      h2: "Fulfilment and choosing a partner",
+      items: [guide("/en/blog/what-is-uk-fulfilment"), guide("/en/blog/how-to-choose-a-uk-3pl"), guide("/en/blog/amazon-fba-vs-uk-fulfilment")],
+    },
+    {
+      type: "links",
+      h2: "Amazon sellers",
+      items: [guide("/en/blog/amazon-prep-uk-guide"), guide("/en/blog/amazon-fba-prep-checklist"), guide("/en/blog/amazon-fba-vs-uk-fulfilment")],
+    },
+    {
+      type: "links",
+      h2: "Importing into the UK",
+      items: [guide("/en/blog/uk-importing-guide"), guide("/en/blog/uk-import-costs")],
+    },
+    {
+      type: "links",
+      h2: "Free tools and downloads",
+      items: [
+        { href: "/en/uk-storage-cost-calculator", title: "Storage cost calculator", text: "Pallets × weeks at £3.50 + VAT per pallet per week, with VAT shown.", tag: "Free tool" },
+        { href: "/en/container-arrival-planner", title: "Container arrival planner", text: "A dated checklist from UK port to our Essex warehouse, based on your ETA.", tag: "Free tool" },
+        { href: "/en/blog/uk-importing-guide", title: "UK import checklist (PDF)", text: "Set-up, products, documents, clearance and warehouse steps on two A4 pages.", tag: "Download" },
+        { href: "/en/blog/amazon-fba-prep-checklist", title: "Amazon FBA prep checklist (PDF)", text: "Unit preparation, cartons and delivery to Amazon UK on one A4 page.", tag: "Download" },
+      ],
     },
   ],
-  related: ["/en/case-studies", "/en/uk-fulfilment", "/en/pallet-storage"],
+  faqs: [
+    { q: "Where should I start if I am new to UK warehousing?", a: "Start with the UK warehousing guide for how it works, then the UK warehousing prices guide for the cost lines, and the 3PL guide for the questions to ask before you choose a provider." },
+    { q: "How much does UK warehousing cost?", a: "At LondraDepo, standard pallet storage starts from £3.50 + VAT per pallet per week, so 10 pallets for 4 weeks start at £140 + VAT. Goods-in, pick and pack, delivery and customs are quoted separately; the pricing and pallet storage guides explain each line." },
+    { q: "Which guide explains import duty and VAT?", a: "The UK import costs guide explains customs duty, import VAT at usually 20% of the value including duty and transport, and postponed VAT accounting, with a worked example. The UK importing guide covers the GB EORI, commodity codes and declarations." },
+  ],
+  related: ["/en/uk-warehousing", "/en/uk-fulfilment", "/en/uk-import-logistics", "/en/amazon-prep-uk", "/en/case-studies"],
+  cta: { h2: "Ready to talk about your products?", text: "Tell us what you sell, your volumes and your channels, and we will propose a UK set-up." },
 };

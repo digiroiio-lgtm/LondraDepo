@@ -82,7 +82,7 @@ export default function BlogInsightsSection() {
                 className="h-24 flex items-center justify-center"
                 style={{ background: "linear-gradient(135deg, #0b2545 0%, #2d5986 100%)" }}
               >
-                <span className="text-3xl opacity-80"><Emoji e={post.icon} /></span>
+                <span className="text-3xl text-white opacity-90"><Emoji e={post.icon} /></span>
               </div>
               <div className="p-5 flex flex-col flex-1">
                 <span className={`text-xs font-semibold px-2 py-0.5 rounded-full w-fit mb-3 ${post.badgeColor}`}>

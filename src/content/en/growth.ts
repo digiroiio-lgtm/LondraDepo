@@ -816,6 +816,16 @@ export const industryHub: EnPage = {
   ],
   sections: [
     {
+      type: "stats",
+      h2: "Across our sectors",
+      items: [
+        { value: "6", label: "sectors with live UK operations" },
+        { value: "7", label: "published case studies" },
+        { value: "£3.50", label: "+ VAT per pallet per week, starting storage rate" },
+        { value: "EN + TR", label: "operations team languages" },
+      ],
+    },
+    {
       type: "links",
       h2: "Food and FMCG",
       intro: "Ambient food and fast-moving consumer goods stored on pallets and distributed to UK customers.",

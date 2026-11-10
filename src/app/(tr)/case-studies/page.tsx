@@ -1,4 +1,8 @@
 import Emoji from "@/components/visual/Emoji";
+import FaqJsonLd from "@/components/FaqJsonLd";
+import QuoteForm from "@/components/QuoteForm";
+import ProcessFlow from "@/components/visual/ProcessFlow";
+import TeamQuote from "@/components/TeamQuote";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -42,11 +46,13 @@ const jsonLd = {
       "@type": "CollectionPage",
       name: "Operasyon Örnekleri — LondraDepo.com",
       url: PAGE_URL,
+      mainEntity: { "@id": `${PAGE_URL}#items` },
       description:
         "İngiltere'de depo altyapısı, fulfillment (sipariş hazırlama) ve dağıtım operasyonu kuran markaların gerçek büyüme hikayeleri.",
     },
     {
       "@type": "ItemList",
+      "@id": `${PAGE_URL}#items`,
       name: "LondraDepo.com Operasyon Örnekleri",
       url: PAGE_URL,
       numberOfItems: 7,
@@ -62,6 +68,19 @@ const jsonLd = {
     },
   ],
 };
+
+const faqs = [
+  { q: "İngiltere'ye az ürünle başlanabilir mi?", a: "Evet, sabit bir minimum yok. Operasyon örneklerimizdeki Ankara merkezli tortilla üreticisi İngiltere'ye 1 deneme paletiyle girdi ve bugün aylık 6 × 40HC konteyner hacmine ulaştı." },
+  { q: "Hangi sektörlerde operasyonunuz var?", a: "Gıda ve FMCG, ambalaj, otomotiv yedek parça ve döşeme malzemeleri, moda ve e-ticaret, walking treadmill gibi büyük hacimli ürünler ve taşınabilir şarj istasyonu gibi elektronik ürünlerde canlı UK operasyonlarımız var." },
+  { q: "Aynı stok hem online hem B2B müşterilere hizmet verebilir mi?", a: "Evet. Örneklerimizden birkaçında e-ticaret siparişleri ve toptan ya da ticari teslimatlar Essex'teki aynı UK stoğundan karşılanıyor." },
+];
+
+const STATS = [
+  { value: "7", label: "canlı UK operasyonu" },
+  { value: "1 → 6×40HC", label: "tortilla üreticisi: deneme paletinden aylık konteynere" },
+  { value: "~%80", label: "Cruyff için daha hızlı UK teslimatı" },
+  { value: "Aynı gün", label: "online ve atölye siparişleri işleniyor (koltuk kaplama)" },
+];
 
 const cases = [
   {
@@ -151,10 +170,11 @@ export default function CaseStudiesIndexPage() {
             <h1 className="text-3xl md:text-4xl font-extrabold mb-4 text-balance">
               İngiltere&apos;de Yürüttüğümüz Operasyonlar
             </h1>
-            <p className="text-white/70 text-lg leading-relaxed max-w-2xl">
-              Türkiye&apos;den İngiltere&apos;ye açılan markaların gerçek operasyon hikayeleri.
-              Depolama, fulfillment (sipariş hazırlama), dağıtım ve İngiltere operasyon
-              altyapısının nasıl kurulduğunu keşfedin.
+            <p className="text-white/80 text-lg leading-relaxed max-w-2xl">
+              Bunlar Rayleigh, Essex&apos;teki depomuzdan yürüttüğümüz canlı İngiltere operasyonları. Her örnek başlangıç
+              noktasını, depolama, fulfillment ve dağıtımın nasıl kurulduğunu ve neyin değiştiğini gösteriyor: 1 deneme
+              paletiyle başlayıp bugün ayda 6 × 40HC konteyner gönderen bir gıda üreticisinden, UK siparişlerini
+              Hollanda&apos;dan Essex&apos;e taşıyan bir moda markasına kadar.
             </p>
           </div>
         </section>
@@ -166,6 +186,24 @@ export default function CaseStudiesIndexPage() {
             <span className="flex items-center gap-2"><Emoji e="✅" /> Türkçe operasyon iletişimi</span>
             <span className="flex items-center gap-2"><Emoji e="✅" /> Hızlı operasyon kurulumu</span>
             <span className="flex items-center gap-2"><Emoji e="✅" /> Esnek depo &amp; sipariş operasyon modeli</span>
+          </div>
+        </section>
+
+        {/* Results */}
+        <section className="py-12 px-4 bg-[#f6f8fb]">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-extrabold text-[#0b2545] mb-5">Bu operasyonlardan sonuçlar</h2>
+            <dl className="grid gap-4 grid-cols-2 lg:grid-cols-4">
+              {STATS.map((st) => (
+                <div key={st.label} className="flex flex-col-reverse rounded-xl bg-[#0b2545] text-white p-5">
+                  <dt className="text-sm text-white/75 mt-1">{st.label}</dt>
+                  <dd className="text-2xl font-extrabold">{st.value}</dd>
+                </div>
+              ))}
+            </dl>
+            <p className="mt-4 text-sm text-slate-600">
+              Sektörünüze göre bakmak için: <Link href="/sektorler" className="underline">Sektörler</Link>
+            </p>
           </div>
         </section>
 
@@ -218,6 +256,32 @@ export default function CaseStudiesIndexPage() {
               ))}
             </div>
 
+            <div className="mt-14">
+              <h2 className="text-2xl font-extrabold text-[#0b2545] mb-5">Bu operasyonlar genelde nasıl başlıyor?</h2>
+              <ProcessFlow
+                items={[
+                  { title: "Ürünü ve planı paylaşın", text: "Ürün tipi, tahmini palet veya koli, aylık sipariş ve satış kanalları." },
+                  { title: "Deneme sevkiyatı", text: "Tortilla üreticisinin 1 paletle yaptığı gibi küçük başlayıp pazarı ve süreci test edebilirsiniz." },
+                  { title: "Kurulum", text: "Mal kabul, Mintsoft WMS'te stok, etiketleme ve sipariş akışı netleştirilir." },
+                  { title: "Büyüme", text: "Hacim, kanallar ve teslimat programları aynı Essex stoğundan büyür." },
+                ]}
+              />
+            </div>
+
+            <div className="mt-12"><TeamQuote id="sertacExporters" /></div>
+
+            <div className="mt-12">
+              <h2 className="text-2xl font-extrabold text-[#0b2545] mb-6">Sık Sorulan Sorular</h2>
+              <div className="space-y-4">
+                {faqs.map((f) => (
+                  <div key={f.q} className="border border-slate-200 rounded-xl p-5">
+                    <h3 className="font-bold text-[#0b2545] mb-2">{f.q}</h3>
+                    <p className="text-slate-600 text-sm leading-relaxed">{f.a}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
             {/* CTA */}
             <div className="mt-14 bg-[#0b2545] rounded-2xl p-8 text-center">
               <h2 className="text-2xl font-extrabold text-white mb-3">
@@ -253,6 +317,9 @@ export default function CaseStudiesIndexPage() {
                 <Link href="/palet-depolama" className="text-sm text-[#0b2545] hover:underline">→ Palet Depolama</Link>
                 <Link href="/amazon-prep-uk" className="text-sm text-[#0b2545] hover:underline">→ Amazon Prep UK</Link>
                 <Link href="/ingiltere-depo-avantajlari" className="text-sm text-[#0b2545] hover:underline">→ Depo Avantajları</Link>
+                <Link href="/sektorler" className="text-sm text-[#0b2545] hover:underline">→ Sektörler</Link>
+                <Link href="/ingiltere-depo-maliyet-hesaplama" className="text-sm text-[#0b2545] hover:underline">→ Depo Maliyet Hesaplama</Link>
+                <Link href="/konteyner-varis-planlayici" className="text-sm text-[#0b2545] hover:underline">→ Konteyner Varış Planlayıcı</Link>
               </div>
             </div>
           </div>
@@ -261,6 +328,13 @@ export default function CaseStudiesIndexPage() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <FaqJsonLd faqs={faqs} />
+        <QuoteForm
+          formId="tr_cases_quote"
+          heading="Sizin Operasyonunuzu Planlayalım"
+          intro="Ürününüzü, tahmini hacminizi ve satış kanallarınızı yazın; benzer operasyonlardaki deneyimimizle size uygun UK kurulumunu önerelim."
+          presetServices={["Depolama"]}
         />
       </main>
       <Footer />

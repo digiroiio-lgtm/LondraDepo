@@ -223,7 +223,7 @@ const advantages = [
             "İngiltere ticari yapı danışmanlığı",
           ].map((item) => (
             <li key={item} className="flex items-center gap-2">
-              <span className="text-green-500 flex-shrink-0"><Emoji e="✅" /></span>
+              <span className="text-green-600 flex-shrink-0"><Emoji e="✅" /></span>
               {item}
             </li>
           ))}

@@ -38,6 +38,14 @@ function jsonLd(p: TrPage) {
       itemListElement: crumbs.map((c, i) => ({ "@type": "ListItem", position: i + 1, name: c.name, item: `${SITE_URL}${c.path === "/" ? "" : c.path}` || SITE_URL })),
     },
   ];
+  if (p.hub) {
+    const seen = new Set<string>();
+    const items = p.sections.flatMap((sec) => (sec.type === "links" ? sec.items : [])).filter((it) => !seen.has(it.href) && seen.add(it.href));
+    graph.push(
+      { "@type": "CollectionPage", "@id": `${url}#webpage`, url, name: p.h1, description: p.description, inLanguage: "tr-TR", mainEntity: { "@id": `${url}#items` } },
+      { "@type": "ItemList", "@id": `${url}#items`, name: p.h1, numberOfItems: items.length, itemListElement: items.map((it, i) => ({ "@type": "ListItem", position: i + 1, url: `${SITE_URL}${it.href}`, name: it.title })) },
+    );
+  }
   const a = TR_ARTICLES[p.path];
   if (p.kind === "article" && a) {
     graph.push({
@@ -129,6 +137,20 @@ function Block({ s }: { s: TrSection }) {
         <section className="mb-10">
           {s.h2 && h2}
           <RouteMap lang="tr" className="max-w-3xl" />
+        </section>
+      );
+    case "stats":
+      return (
+        <section className="mb-10">
+          {h2}
+          <dl className="grid gap-4 grid-cols-2 lg:grid-cols-4">
+            {s.items.map((it) => (
+              <div key={it.label} className="flex flex-col-reverse rounded-xl bg-[#0b2545] text-white p-5">
+                <dt className="text-sm text-white/75 mt-1">{it.label}</dt>
+                <dd className="text-2xl font-extrabold">{it.value}</dd>
+              </div>
+            ))}
+          </dl>
         </section>
       );
     case "links":

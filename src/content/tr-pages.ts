@@ -11,7 +11,8 @@ export type TrSection =
   | { type: "steps"; h2: string; intro?: string; items: [string, string][] }
   | { type: "table"; h2: string; intro?: string; head: string[]; rows: string[][]; note?: string }
   | { type: "links"; h2: string; items: { href: string; title: string; text: string; tag?: string }[] }
-  | { type: "routemap"; h2?: string };
+  | { type: "routemap"; h2?: string }
+  | { type: "stats"; h2: string; items: { value: string; label: string }[] };
 
 export type TrPage = {
   path: string;
@@ -29,6 +30,8 @@ export type TrPage = {
   faqs: Faq[];
   related?: { href: string; label: string }[];
   form: { id: string; heading: string; intro: string; services: string[] };
+  /** Hub pages list their child pages as CollectionPage + ItemList in JSON-LD. */
+  hub?: boolean;
 };
 
 const PLANNER_LINKS = {
@@ -509,6 +512,7 @@ export const TR_PAGES: Record<string, TrPage> = {
     description:
       "Sektörlere göre İngiltere depo ve fulfillment: gıda ve FMCG, ambalaj, otomotiv yedek parça, moda ve e-ticaret, büyük hacimli ürünler ve elektronik; Essex depomuzdan gerçek operasyon örnekleriyle.",
     crumb: "Sektörler",
+    hub: true,
     eyebrow: "Çalıştığımız sektörler",
     h1: "Sektörlere Göre İngiltere Depo ve Fulfillment",
     lead:
@@ -520,6 +524,16 @@ export const TR_PAGES: Record<string, TrPage> = {
       "Palet başına haftalık £3,50 + KDV'den depolama",
     ],
     sections: [
+      {
+        type: "stats",
+        h2: "Sektörlerimizde rakamlar",
+        items: [
+          { value: "6", label: "canlı UK operasyonu olan sektör" },
+          { value: "7", label: "yayımlanmış operasyon örneği" },
+          { value: "£3,50", label: "+ KDV palet başına haftalık başlangıç depolama" },
+          { value: "TR + EN", label: "operasyon ekibinin dilleri" },
+        ],
+      },
       {
         type: "links",
         h2: "Gıda ve FMCG",

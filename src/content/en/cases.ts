@@ -290,25 +290,71 @@ export const casePages: EnPage[] = [
   },
 ];
 
+const caseLink = (slug: string) => {
+  const p = casePages.find((c) => c.slug === slug);
+  if (!p) throw new Error(`case hub: unknown case ${slug}`);
+  return { href: p.slug, title: p.h1, text: p.description, tag: p.article?.section };
+};
+
 export const caseHub: EnPage = {
   slug: "/en/case-studies",
   tr: "/case-studies",
   kind: "hub",
-  title: "Case Studies – Real UK Warehouse Operations",
+  modified: "2026-11-10",
+  title: "UK Warehouse & Fulfilment Case Studies",
   description:
-    "Real UK warehousing, fulfilment and distribution operations run from our Essex warehouse: fashion, food, automotive, B2B packaging, bulky goods and electronics.",
+    "Live UK warehousing, fulfilment and distribution operations run from our Essex warehouse: food, B2B packaging, automotive, fashion, bulky goods and electronics, from one trial pallet to monthly containers.",
   label: "Case Studies",
   eyebrow: "Real operations",
   h1: "UK Warehouse and Fulfilment Case Studies",
   lead:
-    "These are live operations run from LondraDepo's Essex warehouse for brands entering the UK market. Each case shows how storage, fulfilment and distribution were set up, from a single trial pallet to monthly container volumes.",
+    "These are live operations run from LondraDepo's warehouse in Rayleigh, Essex, for brands selling in the UK. Each case shows the starting point, how storage, fulfilment and distribution were set up and what changed, from a food producer that started with a single trial pallet and now ships six 40ft high-cube containers a month, to a fashion brand that moved UK orders from the Netherlands to Essex.",
   sections: [
     {
+      type: "stats",
+      h2: "Results from these operations",
+      items: [
+        { value: `${casePages.length}`, label: "live UK operations" },
+        { value: "1 → 6×40HC", label: "tortilla producer: trial pallet to monthly containers" },
+        { value: "~80%", label: "faster UK delivery for Cruyff after the switch" },
+        { value: "Same day", label: "online and workshop orders processed (seat covers)" },
+      ],
+    },
+    {
       type: "links",
-      h2: "Our operations",
-      items: casePages.map((p) => ({ href: p.slug, title: p.h1, text: p.description, tag: p.article?.section })),
+      h2: "Food, packaging and B2B distribution",
+      items: [caseLink("/en/case-studies/tortilla-uk-distribution"), caseLink("/en/case-studies/pizza-box-distribution-uk")],
+    },
+    {
+      type: "links",
+      h2: "Automotive and upholstery",
+      items: [caseLink("/en/case-studies/uk-auto-parts-warehouse"), caseLink("/en/case-studies/car-seat-cover-uk-warehousing")],
+    },
+    {
+      type: "links",
+      h2: "Ecommerce, bulky goods and electronics",
+      items: [
+        caseLink("/en/case-studies/cruyff-uk-fulfilment"),
+        caseLink("/en/case-studies/uk-walking-treadmill-distribution"),
+        caseLink("/en/case-studies/portable-power-station-uk-operations"),
+      ],
+    },
+    {
+      type: "steps",
+      h2: "How these operations usually start",
+      items: [
+        { title: "Share the product and plan", text: "Product type, expected pallets or cartons, monthly orders and sales channels." },
+        { title: "Trial shipment", text: "You can start small, as the tortilla producer did with a single pallet, to test the UK market and the process." },
+        { title: "Set-up", text: "Goods-in, stock in Mintsoft WMS, labelling and the order flow are agreed." },
+        { title: "Scale", text: "Volumes, channels and delivery programmes grow from the same Essex stock." },
+      ],
     },
   ],
-  related: ["/en/uk-market-entry", "/en/uk-import-logistics", "/en/uk-fulfilment", "/en/pallet-storage", "/en/amazon-prep-uk"],
+  faqs: [
+    { q: "Can I start with a small volume?", a: "Yes. There is no fixed minimum. The tortilla producer in these case studies entered the UK with a single trial pallet and now ships six 40ft high-cube containers a month." },
+    { q: "Which sectors do you work with?", a: "Live operations cover food and FMCG, B2B packaging, automotive parts and upholstery, fashion, bulky goods such as walking treadmills and consumer electronics. See the industries page for more." },
+    { q: "Can the same stock serve online and B2B customers?", a: "Yes. Several of these operations fulfil ecommerce orders and wholesale or trade deliveries from the same UK stock in Essex." },
+  ],
+  related: ["/en/industries", "/en/uk-market-entry", "/en/uk-import-logistics", "/en/uk-fulfilment", "/en/pallet-storage"],
   cta: { h2: "Setting up a UK operation?", text: "Share your operating model and we will plan the UK warehouse and logistics with you." },
 };

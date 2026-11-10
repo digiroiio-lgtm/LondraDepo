@@ -1,4 +1,7 @@
 import Emoji from "@/components/visual/Emoji";
+import FaqJsonLd from "@/components/FaqJsonLd";
+import QuoteForm from "@/components/QuoteForm";
+import Icon from "@/components/visual/Icon";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -42,6 +45,7 @@ const jsonLd = {
       "@type": "CollectionPage",
       name: "İngiltere Depo & Lojistik Rehberleri — LondraDepo.com",
       url: PAGE_URL,
+      mainEntity: { "@id": `${PAGE_URL}#items` },
       description:
         "Türkiye'den İngiltere'ye ihracat yapan firmalar için UK depo, fulfillment ve lojistik bilgi merkezi.",
     },
@@ -183,6 +187,26 @@ const posts: Post[] = [
   },
 ];
 
+const GROUPS = [
+  { id: "depolama", label: "Depolama ve maliyetler", cats: ["Depolama"] },
+  { id: "fulfillment", label: "Fulfillment ve partner seçimi", cats: ["Fulfillment", "Partner Seçimi"] },
+  { id: "amazon", label: "Amazon satıcıları", cats: ["Amazon"] },
+  { id: "ihracat", label: "İhracat ve ithalat", cats: ["İhracat"] },
+];
+
+const TOOLS = [
+  { href: "/ingiltere-depo-maliyet-hesaplama", title: "Depo Maliyet Hesaplama", text: "Palet × hafta × £3,50 + KDV; KDV dahil toplamı görün.", tag: "Ücretsiz araç" },
+  { href: "/konteyner-varis-planlayici", title: "Konteyner Varış Planlayıcı", text: "ETA'ya göre limandan Essex deposuna tarihli kontrol listesi.", tag: "Ücretsiz araç" },
+  { href: "/blog/turkiyeden-ingiltereye-ihracat-rehberi", title: "İthalat Kontrol Listesi (PDF)", text: "Hazırlık, ürün, belge, gümrük ve depo adımları iki A4 sayfada.", tag: "İndir" },
+  { href: "/blog/amazon-fba-prep-kontrol-listesi", title: "Amazon FBA Prep Kontrol Listesi (PDF)", text: "Ürün hazırlığı, koliler ve Amazon UK teslimatı tek sayfada.", tag: "İndir" },
+];
+
+const faqs = [
+  { q: "İngiltere depoya yeni başlıyorsam hangi rehberden başlamalıyım?", a: "Önce İngiltere Depo Rehberi ile sürecin nasıl işlediğini, sonra İngiltere Depo Fiyatları 2026 ile maliyet kalemlerini okuyun; partner seçmeden önce 3PL seçim rehberindeki 12 soruyu kullanın." },
+  { q: "İngiltere'de depolama ne kadar tutar?", a: "LondraDepo'da standart palet depolama haftalık palet başına £3,50 + KDV'den başlar; 10 palet 4 hafta için £140 + KDV. Mal kabul, pick & pack, teslimat ve gümrükleme ayrıca fiyatlandırılır." },
+  { q: "Gümrük vergisi ve ithalat KDV'si hangi rehberde anlatılıyor?", a: "İngiltere İthalat Maliyetleri rehberi gümrük vergisini, genellikle %20 olan ithalat KDV'sini ve ertelenmiş KDV muhasebesini örnek hesapla anlatır; ihracat rehberi EORI, GTİP ve beyanname adımlarını kapsar." },
+];
+
 export default function BlogPage() {
   return (
     <>
@@ -206,9 +230,11 @@ export default function BlogPage() {
             <h1 className="text-3xl md:text-4xl font-extrabold mb-4 text-balance">
               İngiltere Depo & Lojistik Rehberleri
             </h1>
-            <p className="text-white/70 text-lg leading-relaxed max-w-2xl">
-              Türkiye&apos;den İngiltere&apos;ye satış yapan firmalar için UK depo, fulfillment ve
-              ihracat operasyonu hakkında derinlemesine rehberler. Essex'teki gerçek depo operasyonumuzdan edindiğimiz deneyimle, Türkiye'den İngiltere'ye satış yapan firmalar için depolama, fulfillment, Amazon ve ihracat süreçlerini açıklıyoruz.
+            <p className="text-white/80 text-lg leading-relaxed max-w-2xl">
+              Bu rehberler İngiltere&apos;de stok tutmadan önce sorulan soruları cevaplar: UK depo nasıl işler ve ne tutar,
+              fulfillment ve Amazon FBA hazırlığı nasıl yapılır, ürünler nasıl ithal edilir ve gümrük vergisi ile ithalat
+              KDV&apos;si nasıl hesaplanır, doğru 3PL nasıl seçilir. Hepsi Essex&apos;teki depomuzu işletme deneyimimizle yazıldı ve
+              ilgili hizmet ile ücretsiz araçlara bağlanır.
             </p>
           </div>
         </section>
@@ -226,24 +252,21 @@ export default function BlogPage() {
         {/* Posts grid */}
         <section className="py-14 px-4 bg-white">
           <div className="max-w-5xl mx-auto">
-            {/* Category filter tabs (static) */}
-            <div className="flex flex-wrap gap-2 mb-10">
-              {["Tümü", "Depolama", "Fulfillment", "Amazon", "İhracat"].map((cat) => (
-                <span
-                  key={cat}
-                  className={`text-sm px-4 py-1.5 rounded-full border font-medium cursor-default ${
-                    cat === "Tümü"
-                      ? "bg-[#0b2545] text-white border-[#0b2545]"
-                      : "border-slate-200 text-slate-600 hover:border-[#0b2545]/40"
-                  }`}
-                >
-                  {cat}
-                </span>
+            {/* Topic navigation (links to the topic sections below) */}
+            <nav aria-label="Konular" className="flex flex-wrap gap-2 mb-10">
+              {GROUPS.map((g) => (
+                <a key={g.id} href={`#${g.id}`} className="text-sm px-4 py-1.5 rounded-full border border-slate-300 font-medium text-[#0b2545] hover:border-[#0b2545] hover:bg-slate-50 transition">
+                  {g.label}
+                </a>
               ))}
-            </div>
+              <a href="#araclar" className="text-sm px-4 py-1.5 rounded-full border border-slate-300 font-medium text-[#0b2545] hover:border-[#0b2545] hover:bg-slate-50 transition">Ücretsiz araçlar</a>
+            </nav>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
-              {posts.map((post) => (
+            {GROUPS.map((g) => (
+            <section key={g.id} id={g.id} className="mb-12 scroll-mt-24">
+            <h2 className="text-2xl font-extrabold text-[#0b2545] mb-5">{g.label}</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {posts.filter((post) => g.cats.includes(post.category)).map((post) => (
                 <Link
                   key={post.href}
                   href={post.href}
@@ -254,7 +277,7 @@ export default function BlogPage() {
                     className="h-28 flex items-center justify-center relative overflow-hidden"
                     style={{ background: "linear-gradient(135deg, #0b2545 0%, #2d5986 100%)" }}
                   >
-                    <span className="text-4xl opacity-80"><Emoji e={post.icon} /></span>
+                    <span className="text-4xl text-white opacity-90"><Emoji e={post.icon} /></span>
                     {post.tag && (
                       <span
                         className={`absolute top-3 right-3 text-xs font-bold px-2 py-0.5 rounded-full ${
@@ -275,14 +298,14 @@ export default function BlogPage() {
                     >
                       {post.category}
                     </span>
-                    <h2 className="font-bold text-[#0b2545] text-sm leading-snug mb-2 flex-1 group-hover:underline">
+                    <h3 className="font-bold text-[#0b2545] text-sm leading-snug mb-2 flex-1 group-hover:underline">
                       {post.title}
-                    </h2>
+                    </h3>
                     <p className="text-slate-500 text-xs mb-4 leading-relaxed line-clamp-3">
                       {post.desc}
                     </p>
                     <div className="flex items-center justify-between text-xs text-slate-500">
-                      <span>⏱ {post.readTime} okuma</span>
+                      <span className="inline-flex items-center gap-1"><Icon name="clock" className="h-3.5 w-3.5" /> {post.readTime} okuma</span>
                       <span className="text-[#d62839] font-semibold group-hover:underline">
                         Okumaya devam →
                       </span>
@@ -291,6 +314,39 @@ export default function BlogPage() {
                 </Link>
               ))}
             </div>
+            </section>
+            ))}
+
+            {/* Free tools and downloads */}
+            <section id="araclar" className="mb-12 scroll-mt-24">
+              <h2 className="text-2xl font-extrabold text-[#0b2545] mb-5">Ücretsiz araçlar ve indirmeler</h2>
+              <div className="grid gap-4 sm:grid-cols-2">
+                {TOOLS.map((t) => (
+                  <Link key={t.title} href={t.href} className="flex gap-4 border border-slate-200 rounded-2xl p-5 hover:border-[#0b2545] transition">
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-red-50 text-[#d62839]">
+                      <Icon name={t.tag === "İndir" ? "document" : "pound"} />
+                    </span>
+                    <span>
+                      <span className="block text-xs font-semibold text-[#d62839]">{t.tag}</span>
+                      <span className="block font-bold text-[#0b2545]">{t.title}</span>
+                      <span className="block text-sm text-slate-600">{t.text}</span>
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </section>
+
+            <section className="mb-12">
+              <h2 className="text-2xl font-extrabold text-[#0b2545] mb-5">Sık Sorulan Sorular</h2>
+              <div className="space-y-4">
+                {faqs.map((f) => (
+                  <div key={f.q} className="border border-slate-200 rounded-xl p-5">
+                    <h3 className="font-bold text-[#0b2545] mb-2">{f.q}</h3>
+                    <p className="text-slate-600 text-sm leading-relaxed">{f.a}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
 
             {/* Case Studies promo */}
             <div className="bg-slate-50 border border-slate-200 rounded-2xl p-7 mb-10 flex flex-col sm:flex-row items-center gap-6">
@@ -357,6 +413,26 @@ export default function BlogPage() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <FaqJsonLd faqs={faqs} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ItemList",
+              "@id": `${PAGE_URL}#items`,
+              name: "İngiltere Depo ve Lojistik Rehberleri",
+              numberOfItems: posts.length,
+              itemListElement: posts.map((post, i) => ({ "@type": "ListItem", position: i + 1, url: `${SITE_URL}${post.href}`, name: post.title })),
+            }).replace(/</g, "\\u003c"),
+          }}
+        />
+        <QuoteForm
+          formId="tr_blog_quote"
+          heading="Sorunuz Rehberlerde Yok mu?"
+          intro="Ürününüzü ve ihtiyacınızı yazın; ekibimiz İngiltere depolama, fulfillment veya ithalat sorunuzu cevaplasın ve size özel teklif hazırlasın."
+          presetServices={[]}
         />
       </main>
       <Footer />

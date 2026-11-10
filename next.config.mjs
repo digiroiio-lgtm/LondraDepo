@@ -37,6 +37,11 @@ const nextConfig = {
         ],
       },
       {
+        // Gated lead-magnet PDFs: keep out of search results.
+        source: "/downloads/(.*)",
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
+      },
+      {
         source: "/_next/(.*)",
         headers: [{ key: "X-Robots-Tag", value: "noindex" }],
       },

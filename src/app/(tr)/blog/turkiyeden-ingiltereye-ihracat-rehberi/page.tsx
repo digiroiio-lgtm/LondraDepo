@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 import ArticleHero from "@/components/ArticleHero";
 import CtaCards from "@/components/CtaCards";
+import ChecklistGate from "@/components/ChecklistGate";
 import AuthorBox from "@/components/AuthorBox";
 import RelatedArticles from "@/components/RelatedArticles";
 
@@ -176,6 +177,8 @@ export default function IhracatRehberiPage() {
                 <li>Menşe belgesi (serbest ticaret anlaşması için)</li>
                 <li>Sigorta belgesi</li>
               </ul>
+
+              <ChecklistGate lang="tr" />
 
               <h2>UK&apos;da Kendi Deponuzu Kurmak mı, 3PL mi?</h2>
               <p>

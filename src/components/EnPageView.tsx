@@ -4,6 +4,7 @@ import WarehouseGallery from "@/components/WarehouseGallery";
 import TrackedLink from "@/components/TrackedLink";
 import { ctaFor, quoteHref } from "@/content/en/cta";
 import QuoteFormEn from "@/components/QuoteFormEn";
+import ChecklistGate from "./ChecklistGate";
 import CostCalculator from "@/components/CostCalculator";
 
 /** Highest-intent pages get the quote form inline (CRO plan, weeks 11–13). */
@@ -231,6 +232,8 @@ function SectionView({ s }: { s: Section }) {
           <CostCalculator lang="en" />
         </section>
       );
+    case "checklist":
+      return <ChecklistGate lang="en" />;
     case "sources":
       return (
         <section className="mb-12">

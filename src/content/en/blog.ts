@@ -447,6 +447,7 @@ export const blogPages: EnPage[] = [
           "Product certificates or licences where your goods require them",
         ],
       },
+      { type: "checklist" },
       {
         type: "text",
         h2: "Product rules to check before shipping",

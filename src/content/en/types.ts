@@ -16,7 +16,9 @@ export type Section =
   /** External references backing figures on the page. */
   | { type: "sources"; h2: string; items: { label: string; href: string }[] }
   /** Interactive storage cost calculator. */
-  | { type: "calculator"; h2: string; intro?: string };
+  | { type: "calculator"; h2: string; intro?: string }
+  /** Email-gated PDF checklist download. */
+  | { type: "checklist" };
 
 export type PageKind = "home" | "service" | "article" | "case" | "hub" | "contact" | "legal";
 

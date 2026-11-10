@@ -567,4 +567,263 @@ export const TR_PAGES: Record<string, TrPage> = {
     ],
     form: { id: "tr_industries_quote", heading: "Ürünleriniz İçin Teklif Alın", intro: "Sektörünüzü, ürün tipinizi, hacminizi ve satış kanallarınızı yazın; size uygun UK kurulumunu önerelim.", services: ["Depolama"] },
   },
+  "/teklif-al": {
+    path: "/teklif-al",
+    kind: "service",
+    serviceType: "Warehousing quote",
+    title: "İngiltere Depo ve Fulfillment Teklifi Al | LondraDepo",
+    description:
+      "İngiltere depolama, fulfillment, konteyner boşaltma, gümrükleme ve dağıtım için teklif isteyin: kısa formu doldurun, ekibimiz e-postayla size özel teklif hazırlasın. Türkçe destek.",
+    crumb: "Teklif Al",
+    eyebrow: "Yaklaşık 2 dakika",
+    h1: "İngiltere Depo ve Fulfillment Teklifi Alın",
+    lead:
+      "Ürününüzü, tahmini palet veya koli sayınızı, aylık sipariş hacminizi ve ihtiyacınız olan hizmetleri yazın; ekibimiz depolama, mal kabul, fulfillment, gümrükleme ve teslimatı operasyonunuza göre fiyatlandırıp size e-postayla dönsün. Palet depolama haftalık palet başına £3,50 + KDV'den başlar. Önce konuşmak isterseniz WhatsApp'tan yazabilir veya +44 7554 195190'ı arayabilirsiniz.",
+    facts: [
+      "Depo: Unit 19 Arterial Park, Rayleigh, Essex SS6 7FY",
+      "Arca Trade Group Ltd (Şirket No. 13247691), BIFA üyesi",
+      "Palet depolama haftalık £3,50 + KDV'den",
+      "Türkçe ve İngilizce destek",
+    ],
+    sections: [
+      {
+        type: "table",
+        h2: "Hızlı teklif için hazırlamanız gerekenler",
+        head: ["Bilgi", "Neden gerekli"],
+        rows: [
+          ["Ürün tipi ve ölçüleri", "Depolama şekli (palet, raf) ve elleçleme süresi"],
+          ["Tahmini palet veya koli sayısı", "Depolama maliyeti (palet başına haftalık £3,50 + KDV'den)"],
+          ["Aylık sipariş ve sipariş başına ürün", "Pick & pack ve kargo fiyatı"],
+          ["Satış kanalları", "Shopify, Amazon, toptan: süreç ve entegrasyon kapsamı"],
+          ["Çıkış ülkesi ve teslim şekli", "Nakliye ve gümrükleme ihtiyacı"],
+        ],
+      },
+      {
+        type: "steps",
+        h2: "Teklif süreci",
+        items: [
+          ["Formu gönderin", "Bilgileriniz ekibimize ulaşır; telefon numarası isteğe bağlıdır."],
+          ["Gerekirse netleştiririz", "Eksik bir bilgi varsa e-posta veya WhatsApp'tan sorarız."],
+          ["Teklifinizi alın", "Depolama, mal kabul, fulfillment ve teslimat kalemleri ayrı ayrı yazılı teklif olarak gelir."],
+          ["Başlayın", "Onaylarsanız ilk sevkiyatı birlikte planlarız; 1 deneme paletiyle başlayabilirsiniz."],
+        ],
+      },
+    ],
+    faqs: [
+      { q: "Teklif ücretli mi?", a: "Hayır. Teklif ücretsizdir ve sizi bağlamaz." },
+      { q: "Minimum palet veya sipariş sayısı var mı?", a: "Sabit bir minimum yok; 1 deneme paletiyle başlayabilirsiniz. Hacminizi yazın, size uygun teklifi hazırlayalım." },
+      { q: "Nakliye ve gümrüklemeyi de teklife dahil edebilir misiniz?", a: "Evet. LondraDepo'yu işleten Arca Trade Group nakliye ve UK gümrüklemesi için ayrıca teklif verebilir; dilerseniz kendi nakliyecinizle de çalışabilirsiniz." },
+    ],
+    related: [
+      { href: "/ingiltere-depo-maliyet-hesaplama", label: "Depo Maliyet Hesaplama" },
+      { href: "/ingiltere-depo-fiyatlari", label: "Depo Fiyatları" },
+      { href: "/iletisim", label: "İletişim" },
+    ],
+    form: { id: "tr_quote_page", heading: "Teklif Formu", intro: "Bilgilerinizi yazın; ekibimiz size özel teklifle e-postayla dönsün.", services: [] },
+  },
+  "/ingiltere-ithalat-lojistigi": {
+    path: "/ingiltere-ithalat-lojistigi",
+    kind: "service",
+    serviceType: "Import logistics",
+    title: "İngiltere İthalat Lojistiği: Nakliyeden Depoya | LondraDepo",
+    description:
+      "İngiltere'ye tek grupla ithalat: Arca Trade Group üzerinden deniz, hava, kara ve demiryolu nakliyesi ile gümrükleme; ardından Essex depomuzda boşaltma, depolama, fulfillment ve UK dağıtım.",
+    crumb: "İngiltere İthalat Lojistiği",
+    eyebrow: "İthalatçılar, üreticiler ve distribütörler için",
+    h1: "İngiltere İthalat Lojistiği: Tedarikçiden UK Müşterisine",
+    lead:
+      "Yurt dışındaki işletmeler İngiltere'ye tek bir grup üzerinden ithalat yapabilir. Arca Trade Group deniz, hava, kara veya demiryolu nakliyesini ayarlar ve UK gümrük beyannamesini verir; depolama markası LondraDepo ürünleri Rayleigh, Essex'te boşaltır, depolar, siparişleri karşılar ve İngiltere geneline dağıtır. Dilerseniz kendi nakliyecinizle de çalışıp sadece depoyu kullanabilirsiniz.",
+    facts: [
+      "Nakliye: deniz, hava, kara (UK–Avrupa parsiyel ve komple) ve Uzak Doğu ile Avrupa'dan demiryolu",
+      "Gümrük beyannameleri Arca Trade Group gümrük ekibince sizin adınıza verilir",
+      "FCL ve LCL konteyner kabul: Unit 19 Arterial Park, Rayleigh SS6 7FY",
+      "Palet depolama haftalık £3,50 + KDV'den",
+      "Antrepo değildir: ürünler gümrükten sonra depolanır",
+    ],
+    sections: [
+      {
+        type: "steps",
+        h2: "Bizimle İngiltere'ye ithalat nasıl işler?",
+        items: [
+          ["Sevkiyatı planlayın", "Ürün, menşe, hacim ve teslim şeklini (Incoterms) paylaşın; rota, gereken belgeler ve ürünlerin nasıl geleceğini (paletli veya dökme) netleştiririz."],
+          ["Nakliye", "Arca Trade Group deniz, hava, kara veya demiryolu nakliyesini ayarlar ya da kendi nakliyeciniz depomuza gönderir."],
+          ["Gümrükleme", "Arca Trade Group gümrük ekibi ithalat beyannamesini verir; tarife kodu ve tercihli menşe konusunda yönlendirir."],
+          ["Teslim ve boşaltma", "Ürünler Rayleigh'e teslim edilir, boşaltılır, sayılır, görünür hasar kontrol edilir ve Mintsoft WMS'e kaydedilir."],
+          ["Depolama ve stok kontrolü", "Stok palet veya rafta tutulur; güncel stok kaydı ve düzenli rapor."],
+          ["Sipariş ve dağıtım", "B2B ve e-ticaret siparişleri toplanır; palet ve koliler İngiltere geneline gönderilir."],
+        ],
+      },
+      {
+        type: "table",
+        h2: "Kim neyi yapar?",
+        head: ["İş", "Sorumlu", "Not"],
+        rows: [
+          ["Uluslararası nakliye", "Arca Trade Group veya nakliyeciniz", "Depolamadan ayrı fiyatlandırılır"],
+          ["UK ithalat beyannamesi", "Arca Trade Group gümrük ekibi veya müşaviriniz", "Tarife kodu ve menşe yönlendirmesi mevcut"],
+          ["İthalatçı (importer of record), GB EORI, gümrük vergisi ve ithalat KDV'si", "İthalatçı (genellikle siz)", "LondraDepo otomatik olarak ithalatçı olmaz"],
+          ["Ürün uygunluğu ve etiketleme", "İthalatçı / marka sahibi", "UK etiketleme konusunda operasyonel yönlendirme verebiliriz"],
+          ["Boşaltma, depolama, fulfillment, UK dağıtım", "LondraDepo", "Depolama palet başına haftalık £3,50 + KDV'den"],
+        ],
+      },
+      {
+        type: "list",
+        h2: "İlk UK sevkiyatından önce hazırlayın",
+        items: [
+          "İthalatçı olacak firma için GB EORI numarası",
+          "Her ürün için tarife kodu (commodity code / GTİP)",
+          "Ticari fatura ve ambalaj listesi",
+          "Taşıma belgesi (konşimento, CMR veya hava konşimentosu)",
+          "Tercihli tarife talep edilecekse menşe belgesi",
+          "UK'de gereken ürün sertifikaları veya işaretleri (uygun yerlerde UKCA veya CE gibi)",
+        ],
+      },
+    ],
+    faqs: [
+      { q: "Yurt dışındaki bir firma UK ofisi olmadan İngiltere'ye ithalat yapabilir mi?", a: "Evet. Birçok yurt dışı firma GB EORI numarası ve bir UK depo partneriyle ithalat yapar. Doğru ithalatçı yapısı satış modelinize bağlıdır; ilk sevkiyattan önce vergi danışmanlığı alın." },
+      { q: "Türkiye, Avrupa veya Uzak Doğu'dan nakliye ayarlayabilir misiniz?", a: "Evet. LondraDepo'yu işleten Arca Trade Group dünya genelinde deniz ve hava, UK–Avrupa arasında kara ve Uzak Doğu ile Avrupa'dan UK'ye demiryolu nakliyesi sunar." },
+      { q: "UK gümrük beyannamesini kim veriyor?", a: "Arca Trade Group gümrük ekibi müşterileri adına beyanname verir. Dilerseniz kendi müşavirinizle çalışıp gümrükten çekilmiş ürünleri depomuza teslim edebilirsiniz." },
+      { q: "LondraDepo ithalatçı (importer of record) oluyor mu?", a: "Hayır, otomatik olarak olmaz. Depomuzu veya grubumuzun gümrük hizmetini kullanmak LondraDepo'yu ya da Arca Trade Group'u ithalatçı yapmaz; gümrük vergisi ve ithalat KDV'si ithalatçının sorumluluğundadır." },
+      { q: "Deponuz antrepo mu?", a: "Hayır. LondraDepo HMRC onaylı bir gümrük antreposu değildir. Ürünler serbest dolaşıma girdikten sonra depolanır." },
+    ],
+    related: [
+      { href: "/gumrukleme", label: "Gümrükleme" },
+      { href: "/konteyner-bosaltma", label: "Konteyner Boşaltma" },
+      { href: "/blog/ingiltere-ithalat-maliyetleri", label: "İthalat Maliyetleri" },
+      { href: "/turkiye-ingiltere-lojistik", label: "Türkiye–İngiltere Lojistik" },
+    ],
+    form: { id: "tr_import_quote", heading: "İthalat Teklifi Alın", intro: "Ürünü, menşe ülkeyi, hacmi ve ürünlerin nasıl geleceğini yazın; nakliye, gümrükleme, boşaltma ve depolamayı birlikte veya ayrı fiyatlandıralım.", services: ["Gümrükleme Koordinasyonu", "Nakliye", "Depolama"] },
+  },
+  "/limandan-depoya-lojistik": {
+    path: "/limandan-depoya-lojistik",
+    kind: "service",
+    serviceType: "Port-to-warehouse logistics",
+    title: "Limandan Depoya Lojistik: Felixstowe, Tilbury | LondraDepo",
+    description:
+      "Felixstowe, London Gateway ve Tilbury'ye gelen konteynerler için limandan depoya lojistik: doğrulanmış karayolu mesafeleri, gümrükleme, taşıma, boşaltma ve UK içi dağıtım.",
+    crumb: "Limandan Depoya Lojistik",
+    eyebrow: "Felixstowe · London Gateway · Tilbury",
+    h1: "Felixstowe, London Gateway veya Tilbury'den Essex Depomuza",
+    lead:
+      "Unit 19 Arterial Park, Rayleigh (SS6 7FY) adresindeki depomuz limanda değildir ama üç büyük limana yakındır: London Gateway karayoluyla yaklaşık 13 mil, Tilbury Limanı 16 mil, Felixstowe Limanı 62 mil uzaklıktadır. Bu limanlardan herhangi birine gelen konteynerler gümrükten çekilip Rayleigh'e taşınabilir, boşaltılıp depolanabilir veya doğrudan UK müşterilerine gönderilebilir.",
+    facts: [
+      "London Gateway: ~13 mil (21 km)",
+      "Tilbury Limanı: ~16 mil (26 km)",
+      "Felixstowe Limanı: ~62 mil (99 km)",
+      "Londra merkezi: ~37 mil (59 km)",
+      "Gümrükleme ve taşıma Arca Trade Group üzerinden",
+    ],
+    sections: [
+      {
+        type: "table",
+        h2: "Depodan karayolu mesafeleri",
+        head: ["Varış noktası", "Karayolu", "Tipik araç süresi (trafiksiz)"],
+        rows: [
+          ["DP World London Gateway (SS17)", "~13 mil / 21 km", "~20 dakika"],
+          ["Tilbury Limanı (RM18)", "~16 mil / 26 km", "~20 dakika"],
+          ["Felixstowe Limanı (IP11)", "~62 mil / 99 km", "~1 saat 15 dakika"],
+          ["Londra merkezi (Charing Cross)", "~37 mil / 59 km", "~1 saat"],
+        ],
+        note: "Depo posta kodundan her limanın posta koduna karayolu rotasıyla hesaplanmıştır (10 Kasım 2026). Süreler trafiksiz araç içindir; tır, liman kuyruğu ve yoğun saatlerde uzar.",
+      },
+      {
+        type: "steps",
+        h2: "Konteyneriniz limana geldikten sonra",
+        items: [
+          ["Varış ve tahliye", "Navlun ödendikten ve evrak tamamlandıktan sonra hat konteyneri serbest bırakır."],
+          ["Gümrükleme", "İthalat beyannamesi Arca Trade Group gümrük ekibi veya müşaviriniz tarafından verilir; gümrük vergisi ve ithalat KDV'si beyan edilir."],
+          ["Taşıma rezervasyonu", "Taşıyıcı konteyneri limandan alır ve depomuzda teslim saati ayarlar."],
+          ["Boşaltma ve kontrol", "Boşaltılır, ambalaj listesiyle sayılır, görünür hasar fotoğraflanır ve stok WMS'e kaydedilir."],
+          ["Boş konteyner iadesi", "Taşıyıcı boş konteyneri limana veya depoya, tercihen bekleme (demuraj/detention) ücreti doğmadan iade eder."],
+          ["Depolama veya sevk", "Ürünler depolanır, siparişler için toplanır veya UK müşterilerine ve Amazon'a cross-dock edilir."],
+        ],
+      },
+      {
+        type: "links",
+        h2: "Limana özel sayfalar ve araçlar",
+        items: [
+          { href: "/london-gateway-tilbury-depo", title: "London Gateway & Tilbury Depo", text: "En yakın iki liman, 13–16 mil.", tag: "Liman" },
+          { href: "/felixstowe-liman-depo", title: "Felixstowe Liman Depo", text: "İngiltere'nin en büyük konteyner limanı, ~62 mil.", tag: "Liman" },
+          { href: "/konteyner-varis-planlayici", title: "Konteyner Varış Planlayıcı", text: "ETA'ya göre tarihli kontrol listesi.", tag: "Ücretsiz araç" },
+        ],
+      },
+    ],
+    faqs: [
+      { q: "Depo Felixstowe'a ne kadar uzak?", a: "Karayoluyla yaklaşık 62 mil (99 km). Trafiksiz araçla yaklaşık 1 saat 15 dakika; konteyner tırları için daha uzun sürer." },
+      { q: "Depo limanda mı?", a: "Hayır. Depomuz Rayleigh, Essex'te; London Gateway'e yaklaşık 13 mil, Tilbury'ye 16 mil uzaklıkta. Konteynerler boşaltma için limandan depomuza taşınır." },
+      { q: "Limandan taşımayı ayarlayabilir misiniz?", a: "Evet. LondraDepo'yu işleten Arca Trade Group gümrükleme ve limandan taşımayı ayarlayabilir; dilerseniz nakliyeciniz de bize teslim edebilir." },
+      { q: "Limanda boşaltma yapabilir misiniz?", a: "Hayır. Boşaltma Rayleigh deposunda yapılır; ürünler burada ek elleçleme olmadan depolanır ve sevk edilir." },
+    ],
+    related: [
+      { href: "/konteyner-bosaltma", label: "Konteyner Boşaltma" },
+      { href: "/ingiltere-ithalat-lojistigi", label: "İthalat Lojistiği" },
+      { href: "/gumrukleme", label: "Gümrükleme" },
+      { href: "/essex-depo", label: "Essex Depo" },
+    ],
+    form: { id: "tr_port_quote", heading: "Limandan Depoya Teklif Alın", intro: "Varış limanını, konteyner tipini, ETA'yı ve ürünlerin sonrasında ne olacağını yazın.", services: ["Yükleme / Boşaltma", "Gümrükleme Koordinasyonu"] },
+  },
+  "/ambalaj-catering-depolama": {
+    path: "/ambalaj-catering-depolama",
+    kind: "service",
+    serviceType: "Packaging warehousing and distribution",
+    title: "Ambalaj ve Catering Depolama İngiltere | LondraDepo",
+    description:
+      "Pizza kutusu, paket servis ambalajı ve catering sarf malzemeleri için İngiltere'de paletli depolama ve programlı B2B teslimat: lot takibi, düşük stok uyarısı, restoran ve toptancılara dağıtım.",
+    crumb: "Ambalaj ve Catering Depolama",
+    eyebrow: "Sektör · ambalaj ve restoran tedariki",
+    h1: "Ambalaj ve Catering Ürünleri İçin İngiltere Depo ve Dağıtım",
+    lead:
+      "Pizza kutuları, paket servis kapları ve catering sarf malzemeleri hacimlidir, palet başına değeri düşüktür ve düzenli bir programla ihtiyaç duyulur. LondraDepo bunları Essex'te paletli depolar ve İngiltere genelindeki restoran, zincir ve toptancılara sabit haftalık veya aylık teslimatlar yapar; operasyon örneklerimizdeki pizza kutusu üreticisi için yaptığımız gibi.",
+    facts: [
+      "Palet başına haftalık £3,50 + KDV'den paletli depolama",
+      "Her müşteri için sabit haftalık veya aylık teslimat programı",
+      "Geri çağırma senaryolarına hazır lot bazlı stok kaydı",
+      "İkmal gerekmeden önce düşük stok uyarısı",
+      "İngiltere geneline palet ve koli teslimatı",
+    ],
+    sections: [
+      {
+        type: "list",
+        h2: "Ambalaj tedarikçilerinin tipik zorlukları",
+        items: [
+          "Her sipariş için fabrikadan sevkiyat yavaş ve pahalı",
+          "Restoranlar tutarlı, öngörülebilir tedarik ister ve stoksuz kalamaz",
+          "Yüksek hacimli, düşük değerli ürünler alanı verimli kullanan palet depolama gerektirir",
+          "Müşteriler karışık miktarlarda sipariş verir: tam palet, yarım palet ve koli",
+        ],
+      },
+      {
+        type: "table",
+        h2: "Ambalaj ve catering tedarikçilerine nasıl destek oluyoruz?",
+        head: ["Hizmet", "İçeriği"],
+        rows: [
+          ["Toplu palet depolama", "Hacimli ambalaj palet rafında düzenli ve erişilebilir tutulur"],
+          ["Teslimat programları", "Her restoran veya toptan müşteri için sabit teslimat günleri"],
+          ["Stok takibi", "Minimum stok eşikleri ve uyarılarla ikmal zamanında gönderilir"],
+          ["Lot takibi", "İzlenebilirlik için lot bazlı stok kaydı"],
+          ["Karışık sipariş toplama", "Tam palet, yarım palet veya koli; müşteri başına teslim listesiyle"],
+          ["İthalat desteği", "Yurt dışında üretilen ürünler için Arca Trade Group üzerinden nakliye ve gümrükleme"],
+        ],
+      },
+      {
+        type: "links",
+        h2: "Operasyon örneği",
+        items: [
+          { href: "/case-studies/pizza-box-distribution-uk", title: "Pizza kutusu: İngiltere B2B restoran dağıtımı", text: "Sipariş bazlı sevkiyattan paletli UK stoğuna ve programlı restoran teslimatına geçiş.", tag: "B2B dağıtım" },
+          { href: "/sektorler", title: "Tüm sektörler", text: "Gıda, otomotiv, moda, büyük hacimli ürünler ve elektronik.", tag: "Sektörler" },
+          { href: "/palet-depolama", title: "Palet depolama", text: "Haftalık palet başına £3,50 + KDV'den.", tag: "Hizmet" },
+        ],
+      },
+    ],
+    faqs: [
+      { q: "Restoranlara sabit programla teslimat yapabilir misiniz?", a: "Evet. Müşteri listenize ve sipariş sıklığınıza göre haftalık veya aylık teslimat programları kuruyoruz." },
+      { q: "Gıdayla temas eden ambalajları depoluyor musunuz?", a: "Evet. Pizza kutusu ve paket servis kapları gibi ambalajlar gıda dışı stok olarak paletlerde depolanır. Özel bir depolama gerekliliğiniz varsa teklif isterken belirtin." },
+      { q: "Minimum hacim var mı?", a: "Sabit bir minimum yok. Palet bazlı operasyonlar tek tek değerlendirilir; tahmini palet sayınızı ve sipariş düzeninizi paylaşın." },
+    ],
+    related: [
+      { href: "/case-studies/pizza-box-distribution-uk", label: "Pizza Kutusu Operasyonu" },
+      { href: "/nakliye-dagitim", label: "Nakliye ve Dağıtım" },
+      { href: "/ingiltere-ithalat-lojistigi", label: "İthalat Lojistiği" },
+    ],
+    form: { id: "tr_packaging_quote", heading: "Ambalaj Depolama Teklifi Alın", intro: "Ürün yelpazenizi, tahmini palet sayınızı ve müşteri teslimat düzeninizi yazın.", services: ["Depolama", "Dağıtım"] },
+  },
 };

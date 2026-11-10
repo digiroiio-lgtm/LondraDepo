@@ -8,6 +8,7 @@ import { teamQuote } from "@/content/quotes";
 export const growthPages: EnPage[] = [
   {
     slug: "/en/uk-import-logistics",
+    tr: "/ingiltere-ithalat-lojistigi",
     kind: "service",
     serviceType: "Import logistics",
     title: "UK Import Logistics for Overseas Businesses",
@@ -144,6 +145,7 @@ export const growthPages: EnPage[] = [
   },
   {
     slug: "/en/industries/food-packaging",
+    tr: "/ambalaj-catering-depolama",
     parent: "/en/industries",
     kind: "service",
     serviceType: "Packaging warehousing and distribution",
@@ -419,6 +421,7 @@ export const growthPagesP2: EnPage[] = [
   },
   {
     slug: "/en/locations/port-to-warehouse-logistics",
+    tr: "/limandan-depoya-lojistik",
     kind: "service",
     serviceType: "Port-to-warehouse logistics",
     title: "Felixstowe, Tilbury & London Gateway to Essex Warehouse",

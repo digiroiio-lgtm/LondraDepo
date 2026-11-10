@@ -15,7 +15,7 @@ const navLinks = [
   { href: "/case-studies", label: "Operasyon Örnekleri" },
   { href: "/hakkimizda", label: "Hakkımızda" },
   { href: "/iletisim", label: "İletişim" },
-  { href: "/#teklif", label: "Teklif Al" },
+  { href: "/teklif-al", label: "Teklif Al" },
 ];
 
 export default function Header() {

@@ -18,6 +18,8 @@ export function getEnPage(slug: string): EnPage | undefined {
 // Build-time guard: page registry and the lightweight pair list must stay identical.
 {
   const a = EN_PAGES.filter((p) => p.tr).map((p) => `${p.tr}>${p.slug}`).sort().join("|");
-  const b = PAIRS.map(([tr, en]) => `${tr}>${en}`).sort().join("|");
+  // Standalone EN routes outside the registry (own page.tsx) are paired in PAIRS only.
+  const STANDALONE = new Set(["/en/request-a-quote"]);
+  const b = PAIRS.filter(([, en]) => !STANDALONE.has(en)).map(([tr, en]) => `${tr}>${en}`).sort().join("|");
   if (a !== b) throw new Error("src/lib/i18n-pairs.ts is out of sync with src/content/en");
 }

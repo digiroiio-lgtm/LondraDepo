@@ -2,9 +2,24 @@ import { MetadataRoute } from "next";
 
 import { SITE_URL } from "@/lib/site";
 
+type Entry = MetadataRoute.Sitemap[number];
+
+// Site Türkçe (tr-TR); tek İngilizce sayfa en-GB. Henüz birebir çeviri çifti olmadığı için
+// her URL kendi dilini self-referencing hreflang ile bildirir. İleride bir sayfanın çevirisi
+// eklenirse iki URL'yi aynı `languages` grubunda karşılıklı tanımlayın.
+const EN_GB_PATHS = new Set(["/uk-warehousing-fulfilment"]);
+
+function withHreflang(entry: Entry): Entry {
+  const path = entry.url.slice(SITE_URL.length) || "/";
+  const lang = EN_GB_PATHS.has(path) ? "en-GB" : "tr-TR";
+  const languages: Record<string, string> = { [lang]: entry.url };
+  if (entry.url === SITE_URL) languages["x-default"] = SITE_URL;
+  return { ...entry, alternates: { languages } };
+}
+
 // Omit lastmod until a verified content modification date is maintained per URL.
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
+  const entries: MetadataRoute.Sitemap = [
     // Ana sayfalar
     { url: SITE_URL, changeFrequency: "weekly", priority: 1 },
     { url: `${SITE_URL}/ingiltere-depo-avantajlari`, changeFrequency: "monthly", priority: 0.9 },
@@ -61,4 +76,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/cookie-policy`, changeFrequency: "yearly", priority: 0.4 },
     { url: `${SITE_URL}/sozlesme-kosullari`, changeFrequency: "yearly", priority: 0.5 },
   ];
+  return entries.map(withHreflang);
 }

@@ -12,7 +12,9 @@ export type Section =
   | { type: "stats"; h2?: string; items: { value: string; label: string }[] }
   | { type: "links"; h2: string; intro?: string; items: LinkCard[] }
   /** Attributed quotation; only verbatim, published statements. */
-  | { type: "quote"; text: string; cite: string; sourceLabel?: string; sourceHref?: string };
+  | { type: "quote"; text: string; cite: string; sourceLabel?: string; sourceHref?: string }
+  /** External references backing figures on the page. */
+  | { type: "sources"; h2: string; items: { label: string; href: string }[] };
 
 export type PageKind = "home" | "service" | "article" | "case" | "hub" | "contact" | "legal";
 

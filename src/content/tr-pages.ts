@@ -403,6 +403,226 @@ export const TR_PAGES: Record<string, TrPage> = {
     ],
     form: { id: "tr_guide_quote", heading: "İthalat ve Depolama Teklifi Alın", intro: "Ürününüzü, çıkış noktasını ve tahmini hacmi yazın; nakliye, gümrükleme ve depolama için teklif hazırlayalım.", services: ["Gümrükleme Koordinasyonu", "Depolama"] },
   },
+  "/blog/antrepo-nedir": {
+    path: "/blog/antrepo-nedir",
+    kind: "article",
+    title: "Antrepo (Bonded Warehouse) Nedir? Gümrüklü Depo Farkı",
+    description:
+      "İngiltere'de antrepo (bonded / customs warehouse) nedir, gümrük vergisi ve ithalat KDV'si ne zaman askıya alınır; ertelenmiş KDV ile gümrüklenmiş depo ne zaman yeterli?",
+    crumb: "Antrepo Nedir?",
+    eyebrow: "İthalat",
+    h1: "Antrepo (Bonded Warehouse) Nedir? Gümrüklenmiş Depodan Farkı",
+    lead:
+      "Antrepo, HMRC'nin deyişiyle customs warehouse (İngilizcede yaygın adıyla bonded warehouse), ithal ürünlerin gümrük vergisi ve ithalat KDV'si askıya alınarak depolandığı, HMRC onaylı bir tesistir; vergiler ancak ürün İngiltere'de serbest dolaşıma girdiğinde doğar, yeniden ihraç edilen üründe hiç ödenmeyebilir. LondraDepo gibi gümrüklenmiş (duty-paid) bir depo ise ürünü ithalat beyannamesinden sonra, vergi ve KDV ödendikten veya beyan edildikten sonra depolar. KDV kayıtlı ithalatçılar ertelenmiş KDV muhasebesiyle sınırda KDV ödemediği için antrepo çoğunlukla yalnızca gümrük vergisi yüksekse veya ürün yeniden ihraç edilecekse avantaj sağlar.",
+    readTime: "6 dakika",
+    facts: [
+      "Antrepo = HMRC'nin 'customs warehousing' özel prosedürü",
+      "Gümrük vergisi ve ithalat KDV'si ürün çıkana kadar askıda",
+      "HMRC onaylı ve denetimli depo işletmecileri tarafından işletilir",
+      "Ertelenmiş KDV: KDV kayıtlı ithalatçı sınırda KDV ödemez",
+      "LondraDepo antrepo değildir; gümrüklenmiş (duty-paid) depodur",
+    ],
+    sections: [
+      {
+        type: "table",
+        h2: "Antrepo ile gümrüklenmiş depo karşılaştırması",
+        head: ["", "Antrepo (customs / bonded warehouse)", "Gümrüklenmiş depo (duty-paid)"],
+        rows: [
+          ["Ürünün gümrük durumu", "Henüz serbest dolaşımda değil; antrepo prosedüründe", "İngiltere'de serbest dolaşıma girmiş"],
+          ["Gümrük vergisi", "Çıkışa kadar askıda; yeniden ihraçta doğmaz", "İthalat beyannamesinde ödenir"],
+          ["İthalat KDV'si", "Çıkışa kadar askıda", "İthalatta ödenir veya ertelenmiş KDV ile KDV beyannamesinde beyan edilir"],
+          ["Kim işletebilir", "HMRC'nin onayladığı ve denetlediği depo işletmecisi", "Her depo; gümrük izni gerekmez"],
+          ["Kayıt ve kontrol", "HMRC'nin kayıt, muamele ve depolama koşulları", "Olağan stok ve KDV kayıtları"],
+          ["Uygun olduğu durum", "Yüksek vergili ürün, satıştan önce uzun depolama, yeniden ihraç ihtimali", "Kısa sürede İngiltere'de satılacak ürün, e-ticaret ve Amazon stoğu"],
+        ],
+      },
+      {
+        type: "text",
+        h2: "Antrepo tam olarak nedir?",
+        paras: [
+          "GOV.UK'ye göre antrepo (customs warehousing), ithalatçının gümrük vergisi ve ithalat KDV'si askıdayken ürün depolamasını sağlayan özel bir gümrük prosedürüdür. Ürün antrepodan başka bir gümrük prosedürüne alınabilir, yeniden ihraç edilebilir veya serbest dolaşıma sokulabilir; vergi ve KDV o anda doğar.",
+          "İki tür antrepo vardır: başkalarının malını depolayan genel (public) antrepo ve işletmecinin kendi malını depoladığı özel (private) antrepo. Ürünü antrepoya koyan kişinin (depositor) İngiltere'de yerleşik olması ve ürünü prosedüre kendisi beyan etmesi ya da bir temsilci ataması gerekir.",
+        ],
+      },
+      {
+        type: "text",
+        h2: "İngiltere'de satış için antrepoya ihtiyacınız var mı?",
+        paras: [
+          "Ürün İngiltere'de satılacaksa gümrük vergisi er ya da geç ödenir. Antreponun nakit avantajı, henüz satılmamış stoğun vergisini ertelemektir; karşılığında ek gümrük kontrolü ve kayıt yükü gelir.",
+          "Genellikle daha büyük kalem olan ithalat KDV'sinde ise Büyük Britanya'daki KDV kayıtlı ithalatçılar ertelenmiş KDV muhasebesini (postponed VAT accounting) kullanabilir: GOV.UK'ye göre ithalat KDV'si sınırda ödenmez, aynı KDV beyannamesinde beyan edilip indirilir ve bunun için onay gerekmez. Birçok ürünün gümrük vergisi oranı da %0'dır. Bu stok için gümrüklenmiş depo genellikle daha basit ve ucuzdur.",
+          "Antrepo; gümrük vergisi yüksek ürünlerde, alkol gibi özel tüketim vergili mallarda, satıştan önce aylarca bekleyecek stokta veya yeniden ihraç edilebilecek ürünlerde anlamlıdır.",
+        ],
+      },
+      {
+        type: "list",
+        h2: "LondraDepo'da gümrüklenmiş depolama nasıl işler?",
+        items: [
+          "LondraDepo'yu işleten Arca Trade Group veya kendi gümrük müşaviriniz ithalat beyannamesini verir ve ürünü limanda gümrükten çeker.",
+          "KDV kayıtlıysanız beyannamede ithalat KDV'sini sınırda ödemek yerine ertelenmiş KDV muhasebesini seçebilirsiniz.",
+          "Gümrüklenmiş konteyner veya paletler London Gateway ve Tilbury'ye 13–16 mil uzaklıktaki Rayleigh, Essex depomuza teslim edilir.",
+          "Stok Mintsoft WMS'e kaydedilir, palet başına haftalık £3,50 + KDV'den depolanır; ardından sipariş olarak gönderilir, Amazon'a hazırlanır veya UK müşterilerine teslim edilir.",
+        ],
+      },
+    ],
+    faqs: [
+      { q: "Antrepo ne demek?", a: "Antrepo, HMRC'nin customs warehouse dediği, ithal ürünlerin gümrük vergisi ve ithalat KDV'si askıya alınarak depolandığı onaylı tesistir. Vergiler ürün İngiltere'de serbest dolaşıma girince doğar; ürün yeniden ihraç edilirse doğmaz." },
+      { q: "Bonded warehouse ile customs warehouse aynı şey mi?", a: "İngiltere'de pratikte evet. HMRC'nin resmi terimi customs warehousing'dir ve onayladığı, denetlediği işletmecilerce yürütülür. Bonded warehouse aynı şeyin ticari adıdır ve alkol gibi özel tüketim vergili mallar için de kullanılır." },
+      { q: "LondraDepo antrepo mu?", a: "Hayır. LondraDepo, Rayleigh, Essex'te gümrüklenmiş (duty-paid) bir depodur: ürünler İngiltere gümrüğünden çekildikten sonra depolanır. LondraDepo'yu işleten Arca Trade Group ithalat beyannamesini ve limandan alımı üstlenebilir." },
+      { q: "İthalat KDV'sini ertelemek için antrepo gerekir mi?", a: "Genellikle hayır. GOV.UK'ye göre Büyük Britanya'daki KDV kayıtlı ithalatçılar ertelenmiş KDV muhasebesiyle ithalat KDV'sini sınırda ödemeden aynı KDV beyannamesinde beyan edip indirebilir ve bunun için onay gerekmez. Antrepo daha çok gümrük vergisini askıya almak içindir." },
+      { q: "Antrepo ne zaman mantıklı?", a: "Gümrük vergisi yüksek ürünlerde, alkol gibi özel tüketim vergili mallarda, satıştan önce aylarca bekleyecek stokta veya yeniden ihraç edilebilecek ürünlerde antrepo düşünülmeye değer. Kısa sürede İngiltere'de satılacak stok için gümrüklenmiş depo genellikle daha basittir." },
+    ],
+    related: [
+      { href: "/gumrukleme", label: "Gümrükleme" },
+      { href: "/blog/ingiltere-ithalat-maliyetleri", label: "İthalat Maliyetleri" },
+      { href: "/blog/incoterms-rehberi", label: "Incoterms Rehberi" },
+      { href: "/ingiltere-ithalat-lojistigi", label: "İngiltere İthalat Lojistiği" },
+      { href: "/palet-depolama", label: "Palet Depolama" },
+    ],
+    form: { id: "tr_guide_quote", heading: "İthalat ve Depolama Teklifi Alın", intro: "Ürününüzü, çıkış noktasını ve tahmini hacmi yazın; gümrükleme, taşıma ve depolamayı fiyatlandıralım.", services: ["Gümrükleme Koordinasyonu", "Depolama"] },
+  },
+  "/blog/incoterms-rehberi": {
+    path: "/blog/incoterms-rehberi",
+    kind: "article",
+    title: "Incoterms Rehberi: EXW, FOB, CIF, DAP, DDP | LondraDepo",
+    description:
+      "İngiltere'ye ihracatta Incoterms 2020: EXW, FCA, FOB, CIF, DAP ve DDP'de navlunu, sigortayı, gümrüğü, vergiyi ve ithalat KDV'sini kim öder?",
+    crumb: "Incoterms Rehberi",
+    eyebrow: "İhracat",
+    h1: "Incoterms Rehberi: İngiltere'ye Satışta Kim Neyi Öder?",
+    lead:
+      "Incoterms, Milletlerarası Ticaret Odası'nın (ICC) satıcının mal, masraf ve risk sorumluluğunun nerede bitip alıcınınkinin nerede başladığını tanımlayan standart teslim şekilleridir; güncel sürüm Incoterms 2020, 1 Ocak 2020'den beri geçerlidir. İngiltere'ye giden ürünlerde teslim şekli; navlunu kimin ayarlayacağını, sigortayı kimin yaptıracağını ve İngiltere gümrüğünü kimin çekeceğini belirler. EXW, FCA, FOB ve CIF'te İngiltere'deki alıcı gümrüğü çeker, gümrük vergisini ve ithalat KDV'sini öder; DAP'ta da gümrük alıcıdadır; yalnızca DDP'de İngiltere vergisini ve KDV'sini satıcı öder.",
+    readTime: "6 dakika",
+    facts: [
+      "Incoterms 2020: 11 kural, 1 Ocak 2020'den beri geçerli",
+      "FOB, FAS, CFR ve CIF yalnızca deniz ve iç su yolu taşımacılığı için",
+      "EXW, FCA, CPT, CIP, DAP, DPU ve DDP her taşıma türü için",
+      "İngiltere gümrük vergisi ve KDV'si yalnızca DDP'de satıcıda",
+      "Incoterms ödeme şeklini ve mülkiyet devrini düzenlemez",
+    ],
+    sections: [
+      {
+        type: "table",
+        h2: "İngiltere'ye giden mallarda yaygın Incoterms",
+        head: ["Teslim şekli", "Satıcının işi nerede biter", "Ana navlunu kim öder", "UK gümrük, vergi ve KDV"],
+        rows: [
+          ["EXW (Ex Works)", "Mal satıcının tesisinde hazır", "Alıcı", "Alıcı"],
+          ["FCA (Free Carrier)", "Mal, ihracat gümrüğü yapılmış olarak alıcının taşıyıcısına teslim", "Alıcı", "Alıcı"],
+          ["FOB (Free On Board)", "Mal çıkış limanında gemiye yüklenmiş", "Alıcı", "Alıcı"],
+          ["CIF (Cost, Insurance and Freight)", "Mal gemiye yüklenmiş; satıcı UK limanına kadar navlunu ve asgari sigortayı öder", "Satıcı", "Alıcı"],
+          ["DAP (Delivered At Place)", "Mal, İngiltere'de belirtilen yere boşaltmaya hazır ulaşmış", "Satıcı", "Alıcı"],
+          ["DDP (Delivered Duty Paid)", "Mal, İngiltere'de belirtilen yere ithalatı yapılmış olarak ulaşmış", "Satıcı", "Satıcı"],
+        ],
+        note: "ICC Incoterms 2020 kurallarının özetidir. Teslim şeklinin yanına her zaman net bir yer yazın; örneğin 'FOB Mersin' veya 'DAP Rayleigh SS6 7FY'.",
+      },
+      {
+        type: "text",
+        h2: "Türk ihracatçı ve İngiliz alıcı için hangisi uygun?",
+        paras: [
+          "FOB ve FCA, İngiltere'deki ithalatçının ana navlunu ve İngiltere tarafını kontrol ettiği için yaygındır: alıcı forwarder'ı, varış limanını ve gümrük müşavirini seçer, toplam maliyeti görür. CIF'te deniz navlununu satıcı ayarlar; pratik olabilir ama gemi, varış tarihi ve varış masrafları üzerinde alıcının söz hakkı azalır.",
+          "DDP en kolay görünen seçenektir; ancak satıcının İngiltere ithalatçısı olması veya bir ithalatçı ataması, gümrük vergisini ve ithalat KDV'sini ödemesi gerekir. İngiltere'de yerleşik olmayan satıcı bu KDV'yi, ertelenmiş KDV kullanan KDV kayıtlı bir İngiliz ithalatçı kadar kolay geri alamayabilir ve maliyet genellikle fiyata yansır.",
+        ],
+      },
+      {
+        type: "list",
+        h2: "Sipariş öncesi Incoterms kontrol listesi",
+        items: [
+          "Incoterms 2020 adını ve net bir yeri yazın: FOB Mersin veya DAP Rayleigh SS6 7FY gibi.",
+          "FOB, FAS, CFR ve CIF'i yalnızca deniz yolunda kullanın; terminalde teslim edilen konteynerlerde çoğunlukla FCA daha uygundur.",
+          "İngiltere'deki depoda boşaltmayı kimin ayarlayıp ödeyeceğini netleştirin; DAP'ta boşaltma alıcıdadır.",
+          "İngiltere ithalat beyannamesinde ithalatçının kim olacağını ve GB EORI numarasının kimde olduğunu kontrol edin.",
+          "Incoterms ödeme şeklini ve mülkiyetin geçiş anını düzenlemez; bunları satış sözleşmesine yazın.",
+        ],
+      },
+      {
+        type: "text",
+        h2: "LondraDepo her teslim şekline nasıl uyar?",
+        paras: [
+          "EXW, FCA veya FOB'da LondraDepo'yu işleten Arca Trade Group ana navlunu, İngiltere gümrüklemesini ve limandan Rayleigh, Essex'teki depomuza taşımayı ayarlayabilir. CIF veya DAP'ta tedarikçinizin forwarder'ı malı İngiltere limanına veya kapımıza getirir; gümrükleme ve boşaltmayı yine biz yapabiliriz. DDP'de gümrüklenmiş malı teslim alır, palet başına haftalık £3,50 + KDV'den depolarız.",
+        ],
+      },
+    ],
+    faqs: [
+      { q: "Incoterms nedir?", a: "Incoterms, Milletlerarası Ticaret Odası'nın (ICC) satıcının teslim, masraf ve risk sorumluluğunun nerede bitip alıcınınkinin nerede başladığını tanımlayan standart teslim şekilleridir. Güncel sürüm Incoterms 2020, 1 Ocak 2020'den beri geçerlidir." },
+      { q: "FOB veya CIF'te İngiltere gümrük vergisini ve KDV'sini kim öder?", a: "Alıcı öder. FOB ve CIF'te satıcının işi mal çıkış limanında gemiye yüklenince biter; İngiltere'deki alıcı ithalat gümrüğünü çeker, vergiyi ve ithalat KDV'sini öder ya da KDV kayıtlıysa ertelenmiş KDV muhasebesini kullanır." },
+      { q: "DAP ile DDP arasındaki fark nedir?", a: "DAP'ta da DDP'de de satıcı malı İngiltere'de belirtilen yere teslim eder. DAP'ta İngiltere gümrüğünü alıcı çeker, vergi ve ithalat KDV'sini alıcı öder; DDP'de bunların hepsini satıcı üstlenir ve İngiltere ithalatçısı olur veya bir ithalatçı atar." },
+      { q: "İngiltere'ye ihracatta hangi Incoterm daha uygun?", a: "İngiliz ithalatçıların çoğu deniz yolunda FOB'u, terminalde teslim edilen konteynerlerde FCA'yı tercih eder; böylece ana navlunu, varış limanını ve gümrük müşavirini kendileri seçer. LondraDepo'yu işleten Arca Trade Group bu şekillerde navlun ve gümrüklemeyi ayarlayabilir." },
+      { q: "FOB hava veya kara yolunda kullanılabilir mi?", a: "Hayır. ICC Incoterms 2020'ye göre FOB, FAS, CFR ve CIF yalnızca deniz ve iç su yolu taşımacılığı içindir. Hava veya kara yolunda FCA, CPT, CIP, DAP veya DDP gibi bir teslim şekli kullanılmalıdır." },
+    ],
+    related: [
+      { href: "/blog/turkiyeden-ingiltereye-ihracat-rehberi", label: "İhracat Rehberi" },
+      { href: "/blog/ingiltere-ithalat-maliyetleri", label: "İthalat Maliyetleri" },
+      { href: "/blog/antrepo-nedir", label: "Antrepo Nedir?" },
+      { href: "/gumrukleme", label: "Gümrükleme" },
+      { href: "/cbm-palet-hesaplama", label: "CBM ve Palet Hesaplama" },
+    ],
+    form: { id: "tr_guide_quote", heading: "İthalat ve Depolama Teklifi Alın", intro: "Teslim şeklini, çıkış noktasını ve tahmini hacmi yazın; navlun, gümrükleme, taşıma ve depolamayı fiyatlandıralım.", services: ["Gümrükleme Koordinasyonu", "Nakliye", "Depolama"] },
+  },
+  "/cbm-palet-hesaplama": {
+    path: "/cbm-palet-hesaplama",
+    kind: "service",
+    serviceType: "CBM and pallet calculator",
+    title: "CBM Hesaplama: Koliden Palete ve Konteynere | LondraDepo",
+    description:
+      "Ücretsiz CBM hesaplama: koli ölçüsünü ve adedini girin; metreküp, ağırlık, tahmini UK veya Euro palet sayısı ve 20ft, 40ft, 40HC konteyner doluluk oranını görün.",
+    crumb: "CBM ve Palet Hesaplama",
+    eyebrow: "Ücretsiz araç",
+    h1: "CBM Hesaplama: Koliden Palete ve Konteynere",
+    lead:
+      "CBM (metreküp), metre cinsinden uzunluk × genişlik × yükseklik çarpı koli sayısıdır; 60 × 40 × 40 cm'lik bir koli 0,096 m³'tür, 100 koli 9,6 m³ eder. Koli ölçüsünü, adedini ve ağırlığını girin; hesaplayıcı toplam hacmi, seçtiğiniz azami palet yüksekliğinde gereken UK veya Euro palet sayısını, palet başına ağırlığı ve 20ft, 40ft veya 40ft high-cube konteynerin ne kadarını doldurduğunuzu tahmin eder. LondraDepo'nun palet başına haftalık £3,50 + KDV başlangıç fiyatıyla depolama maliyetini de gösterir.",
+    facts: [
+      "CBM = uzunluk × genişlik × yükseklik (m) × koli sayısı",
+      "UK palet 1200 × 1000 mm; Euro palet 1200 × 800 mm",
+      "Tipik iç hacim: 20ft ~33 m³, 40ft ~67 m³, 40ft HC ~76 m³",
+      "Amazon UK depoları: palet dahil tipik sınır 1,8 m ve yaklaşık 1.000 kg",
+      "Depolama palet başına haftalık £3,50 + KDV'den",
+    ],
+    sections: [
+      {
+        type: "table",
+        h2: "Hesaplayıcı nasıl çalışır?",
+        head: ["Sonuç", "Nasıl hesaplanır"],
+        rows: [
+          ["Toplam CBM", "Koli uzunluğu × genişliği × yüksekliği (metre) × koli sayısı"],
+          ["Tahmini palet", "Toplam CBM ÷ kullanılabilir palet hacmi: palet tabanı × (azami yükseklik − 0,15 m palet) × %85 doluluk"],
+          ["Palet başına ağırlık", "Toplam ağırlık ÷ tahmini palet; genel 1.000 kg sınırının üzerindeyse uyarı"],
+          ["Konteyner doluluğu", "Toplam CBM'nin tipik iç hacme oranı: 20ft ~33 m³, 40ft ~67 m³, 40ft HC ~76 m³"],
+          ["Haftalık depolama", "Tahmini palet × £3,50 + KDV"],
+        ],
+      },
+      {
+        type: "text",
+        h2: "CBM ve palet sayısı İngiltere ithalatında neden önemli?",
+        paras: [
+          "Forwarder'lar parsiyel deniz yükünü (LCL) CBM'ye veya ağırlığa göre fiyatlar, tam konteyner ise boyuta göre kiralanır; CBM erken aşamada LCL'nin mi, 20ft veya 40ft konteynerin mi daha ucuz olduğunu gösterir. Mal geldikten sonra depolar depolamayı genellikle palet başına ücretlendirir; bu yüzden palet tahmini haftalık depolama maliyetinizi belirler.",
+          "Stok Amazon'a gidecekse paletleri Amazon Freight'in UK için tipik sınırlarına, yani palet dahil 1,8 metre ve yaklaşık 1.000 kg'a göre kurun. Dökme yüklenmiş koliler konteyner boşaltıldıktan sonra Essex depomuzda paletlenir.",
+        ],
+      },
+      {
+        type: "links",
+        h2: "Sonraki adımlar",
+        items: [
+          { href: "/ingiltere-depo-maliyet-hesaplama", title: "Depo Maliyet Hesaplama", text: "Palet × hafta × £3,50 + KDV; KDV dahil toplam.", tag: "Ücretsiz araç" },
+          { href: "/konteyner-varis-planlayici", title: "Konteyner Varış Planlayıcı", text: "Limandan depomuza tarihli kontrol listesi.", tag: "Ücretsiz araç" },
+          { href: "/blog/incoterms-rehberi", title: "Incoterms Rehberi", text: "FOB, CIF, DAP ve DDP'de navlunu, vergiyi ve KDV'yi kim öder.", tag: "Rehber" },
+        ],
+      },
+    ],
+    faqs: [
+      { q: "Bir sevkiyatın CBM'si nasıl hesaplanır?", a: "Her kolinin metre cinsinden uzunluğu, genişliği ve yüksekliği çarpılır, sonuç koli sayısıyla çarpılır. 60 × 40 × 40 cm'lik koli 0,6 × 0,4 × 0,4 = 0,096 m³'tür; 100 koli 9,6 m³ eder. LondraDepo hesaplayıcısı bunu yapar ve palet sayısını da tahmin eder." },
+      { q: "20ft ve 40ft konteynere kaç CBM sığar?", a: "20ft konteynerin tipik iç hacmi yaklaşık 33 m³, 40ft'in yaklaşık 67 m³, 40ft high-cube'un yaklaşık 76 m³'tür. Koliler her boşluğu dolduramadığı için pratikte yüklenebilen hacim daha azdır." },
+      { q: "Bir UK paletine kaç koli sığar?", a: "Koli ölçüsüne ve yükseklik sınırına bağlıdır. UK paleti 1200 × 1000 mm'dir; hesaplayıcı palet dahil 1,8 m yükseklikte taban üstündeki alanın yaklaşık %85'inin kullanılabildiğini varsayar. Koli ölçünüzü girerek tahmini görebilirsiniz." },
+      { q: "UK paleti ile Euro palet arasındaki fark nedir?", a: "UK standart paleti 1200 × 1000 mm, Euro palet 1200 × 800 mm'dir. Amazon Freight'in UK rehberine göre Amazon UK depolarının çoğu ikisini de kabul eder; LondraDepo da Essex'te her iki paleti teslim alır ve depolar." },
+      { q: "Hesaplayıcının sonucu teklif mi?", a: "Hayır, planlama tahminidir. LondraDepo ambalaj listenizi gördükten sonra mal kabulü, paletlemeyi, palet başına haftalık £3,50 + KDV'den depolamayı ve teslimatı fiyatlandırır." },
+    ],
+    related: [
+      { href: "/ingiltere-depo-maliyet-hesaplama", label: "Depo Maliyet Hesaplama" },
+      { href: "/konteyner-varis-planlayici", label: "Konteyner Varış Planlayıcı" },
+      { href: "/konteyner-bosaltma", label: "Konteyner Boşaltma" },
+      { href: "/palet-depolama", label: "Palet Depolama" },
+      { href: "/blog/incoterms-rehberi", label: "Incoterms Rehberi" },
+    ],
+    form: { id: "tr_cbm_quote", heading: "CBM'nizi Teklife Çevirin", intro: "Ambalaj listenizi, koli sayısını ve varış limanını yazın; boşaltma, paletleme, depolama ve teslimatı fiyatlandıralım.", services: ["Yükleme / Boşaltma", "Depolama"] },
+  },
   "/blog/amazon-fba-prep-kontrol-listesi": {
     path: "/blog/amazon-fba-prep-kontrol-listesi",
     kind: "article",

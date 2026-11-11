@@ -15,6 +15,7 @@ import QuoteFormEn from "@/components/QuoteFormEn";
 import ChecklistGate from "./ChecklistGate";
 import ContainerPlanner from "./ContainerPlanner";
 import CostCalculator from "@/components/CostCalculator";
+import CbmCalculator from "@/components/CbmCalculator";
 
 /** Amazon and Shopify pages also offer a call booking in the hero (competitors lead with "book a free call"). */
 const HERO_BOOKING = new Set([
@@ -253,6 +254,14 @@ function SectionView({ s }: { s: Section }) {
             )}
           </figcaption>
         </figure>
+      );
+    case "cbm":
+      return (
+        <section className="mb-12" id="calculator">
+          {h2}
+          {s.intro && <p className="text-slate-600 mb-5">{s.intro}</p>}
+          <CbmCalculator lang="en" />
+        </section>
       );
     case "calculator":
       return (

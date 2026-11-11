@@ -372,7 +372,7 @@ export const blogPages: EnPage[] = [
     tr: "/blog/amazon-fba-vs-uk-fulfillment",
     kind: "article",
     parent: "/en/blog",
-    article: { ...DATE, readMins: 8, section: "Fulfilment" },
+    article: { ...DATE, modified: "2026-11-11", readMins: 9, section: "Fulfilment" },
     title: "Amazon FBA vs UK 3PL Fulfilment: Which Is Better?",
     description:
       "Amazon FBA versus independent UK 3PL fulfilment compared on cost, channels, packaging, control and Prime, plus when a hybrid model makes sense.",
@@ -394,6 +394,19 @@ export const blogPages: EnPage[] = [
         ],
       },
       {
+        type: "table",
+        h2: "Selling in both the UK and the EU",
+        intro: "Since the UK left the EU's single market, stock held in the UK and stock held in the EU are separate inventories for customs purposes.",
+        head: ["", "Stock in a UK warehouse", "Stock in an EU warehouse"],
+        rows: [
+          ["Serves", "Amazon.co.uk, UK web and B2B orders", "Amazon's EU marketplaces and EU customers"],
+          ["Moving it across the border", "An export from Great Britain plus an import declaration, duty and VAT in the EU country", "An export from the EU plus a UK import declaration, duty and import VAT"],
+          ["Registration", "GB EORI number; UK VAT where required", "An EU EORI number and VAT where stock is held"],
+          ["Typical set-up", "Import once into the UK, then fulfil FBM or prep for FBA", "Import separately into the EU, often with a local EU fulfilment partner"],
+        ],
+        note: "GOV.UK: exporters moving goods from Great Britain to the EU follow the export process and need a GB EORI number. Check EU-side rules with your EU broker.",
+      },
+      {
         type: "list",
         h2: "How to decide",
         items: [
@@ -402,8 +415,14 @@ export const blogPages: EnPage[] = [
           "Choose a hybrid model if you want part of your Amazon range in FBA while your website and B2B orders are fulfilled by a 3PL.",
         ],
       },
+      {
+        type: "sources",
+        h2: "Sources",
+        items: [{ label: "GOV.UK: Export goods from the UK, step by step (including to the EU)", href: "https://www.gov.uk/export-goods" }],
+      },
     ],
     faqs: [
+      { q: "Can stock in a UK Amazon fulfilment centre be sold on Amazon's EU marketplaces?", a: "Not without crossing a customs border. Moving goods from Great Britain to the EU is an export from the UK and an import into the EU, with declarations, duty and VAT. Most sellers hold separate UK and EU stock; LondraDepo handles the UK side from Essex." },
       { q: "What is the advantage of 3PL fulfilment over Amazon FBA?", a: "With 3PL fulfilment you can run non-Amazon channels such as your website, Etsy and B2B customers from one warehouse, customise packaging and avoid Amazon's long-term storage fees." },
       { q: "Can Amazon FBA and a UK 3PL be used together?", a: "Yes. In a hybrid model some products are held in FBA and others are fulfilled by a 3PL, which can help on both cost and reach." },
       { q: "Does LondraDepo provide Amazon prep?", a: "Yes. FBA prep (labelling, packaging, polybagging and similar tasks) is offered alongside our 3PL fulfilment operation." },
@@ -678,6 +697,165 @@ export const blogPages: EnPage[] = [
     ],
     related: ["/en/amazon-prep-uk", "/en/amazon-fulfilment-uk", "/en/amazon-seller-warehousing-uk", "/en/blog/amazon-prep-uk-guide", "/en/blog/amazon-fba-vs-uk-fulfilment"],
   },
+  {
+    slug: "/en/blog/bonded-warehouse-vs-duty-paid-storage",
+    tr: "/blog/antrepo-nedir",
+    kind: "article",
+    parent: "/en/blog",
+    article: { published: "2026-11-11", modified: "2026-11-11", readMins: 6, section: "Importing" },
+    title: "Bonded Warehouse Meaning: Customs vs Duty-Paid",
+    description:
+      "What a bonded (customs) warehouse is, when duty and import VAT are suspended, and when duty-paid storage with postponed VAT accounting is the simpler choice.",
+    label: "Bonded Warehouse vs Duty-Paid Storage",
+    h1: "Bonded Warehouse Meaning: Customs Warehouse or Duty-Paid Storage?",
+    lead:
+      "A bonded warehouse, which HMRC calls a customs warehouse, is an HMRC-authorised site where imported goods can be stored with customs duty and import VAT suspended; the charges fall due only when the goods are released into free circulation in the UK, and goods re-exported from the warehouse may never pay them. A duty-paid (cleared) warehouse such as LondraDepo stores goods after the import declaration, once duty and import VAT have been paid or accounted for. For VAT-registered importers, postponed VAT accounting already removes the import VAT cash outlay, so a bonded warehouse mainly pays off when duty is high or goods may leave the UK again.",
+    facts: [
+      "Bonded = HMRC 'customs warehousing' special procedure",
+      "Duty and import VAT suspended until goods are released",
+      "Run by warehousekeepers approved and supervised by HMRC",
+      "Postponed VAT accounting: no import VAT paid at the border for VAT-registered importers",
+      "LondraDepo is a duty-paid warehouse, not a bonded warehouse",
+    ],
+    sections: [
+      {
+        type: "table",
+        h2: "Bonded warehouse vs duty-paid storage",
+        head: ["", "Bonded (customs) warehouse", "Duty-paid warehouse"],
+        rows: [
+          ["Customs status of the goods", "Not yet in free circulation; held under the customs warehousing procedure", "Cleared into free circulation in the UK"],
+          ["Customs duty", "Suspended until release; not due if the goods are re-exported", "Paid when the import declaration is made"],
+          ["Import VAT", "Suspended until release", "Paid at import, or accounted for on the VAT Return with postponed VAT accounting"],
+          ["Who can operate it", "A warehousekeeper authorised and supervised by HMRC", "Any warehouse; no customs authorisation needed"],
+          ["Records and controls", "HMRC conditions on record keeping, treatment and storage of goods", "Normal stock and VAT records"],
+          ["Best for", "High-duty goods, long storage before sale, or goods likely to be re-exported", "Goods sold in the UK soon after arrival, ecommerce and Amazon stock"],
+        ],
+      },
+      {
+        type: "text",
+        h2: "What a customs warehouse actually is",
+        paras: [
+          "GOV.UK describes customs warehousing as a special procedure that lets importers store goods while duties and import VAT are suspended. From the warehouse, goods can be declared to another customs procedure, re-exported, or released into free circulation, at which point duty and VAT become due.",
+          "There are two types. A public customs warehouse stores other people's goods; a private customs warehouse stores the operator's own goods. The person placing goods into the warehouse, the depositor, must be established in the UK and either declare the goods into the procedure or appoint an agent to do it.",
+        ],
+      },
+      {
+        type: "text",
+        h2: "Do you need a bonded warehouse? Usually not for UK sales",
+        paras: [
+          "If your goods will be sold in the UK, duty becomes payable sooner or later anyway. The cash-flow saving of a bonded warehouse is the duty on stock that has not yet sold, and it comes with extra customs controls and records.",
+          "Import VAT is often the bigger number, and VAT-registered importers in Great Britain can use postponed VAT accounting: GOV.UK says they declare and recover import VAT on the same VAT Return instead of paying it when the goods arrive, with no approval needed. Many UK goods also carry a 0% customs duty rate. For that stock, cleared storage is usually simpler and cheaper.",
+          "A bonded warehouse earns its place for goods with high duty rates, alcohol and other excise goods, stock held for many months before sale, or goods that may be re-exported, where the duty would otherwise never be recovered.",
+        ],
+      },
+      {
+        type: "list",
+        h2: "How duty-paid storage works with LondraDepo",
+        items: [
+          "Arca Trade Group, which operates LondraDepo, or your own broker lodges the import declaration and clears the goods at the port.",
+          "If you are VAT-registered, you can choose postponed VAT accounting on the declaration instead of paying import VAT at the border.",
+          "The cleared container or pallets are delivered to our warehouse in Rayleigh, Essex, 13 to 16 miles from London Gateway and Tilbury.",
+          "Stock is booked into Mintsoft WMS and stored from £3.50 + VAT per pallet per week, then fulfilled, sent to Amazon or delivered to UK customers.",
+        ],
+      },
+      {
+        type: "sources",
+        h2: "Sources",
+        items: [
+          { label: "GOV.UK: Special procedure, customs warehousing (introduction)", href: "https://www.gov.uk/guidance/special-procedure-customs-warehousing/introduction" },
+          { label: "GOV.UK: Check when you can account for import VAT on your VAT Return", href: "https://www.gov.uk/guidance/check-when-you-can-account-for-import-vat-on-your-vat-return" },
+          { label: "GOV.UK: The UK's integrated tariff schedule", href: "https://www.gov.uk/government/publications/the-uks-integrated-tariff-schedule/the-uks-integrated-tariff-schedule" },
+        ],
+      },
+    ],
+    faqs: [
+      { q: "What does bonded warehouse mean?", a: "A bonded warehouse, called a customs warehouse by HMRC, is an authorised site where imported goods are stored with customs duty and import VAT suspended. The charges become due when the goods are released into free circulation in the UK, and are not due if the goods are re-exported." },
+      { q: "Is a bonded warehouse the same as a customs warehouse?", a: "Yes, in UK usage. HMRC's term is customs warehousing, a special procedure run by warehousekeepers it authorises and supervises. Bonded warehouse is the common trade name for the same thing, also used for excise goods such as alcohol." },
+      { q: "Does LondraDepo offer bonded storage?", a: "No. LondraDepo in Rayleigh, Essex is a duty-paid warehouse: goods are cleared through UK customs before we store them. Arca Trade Group, which operates LondraDepo, can handle the import declaration and port collection." },
+      { q: "Do I need a bonded warehouse to delay paying import VAT?", a: "Usually not. GOV.UK says VAT-registered importers in Great Britain can use postponed VAT accounting, declaring and recovering import VAT on the same VAT Return instead of paying it at the border, with no approval needed. A bonded warehouse is mainly about suspending duty." },
+      { q: "When is a bonded warehouse worth it?", a: "A bonded warehouse is worth considering for goods with high duty rates, excise goods such as alcohol, stock stored for many months before sale, or goods that may be re-exported. For stock sold in the UK soon after arrival, duty-paid storage is usually simpler." },
+    ],
+    related: ["/en/uk-customs-clearance", "/en/blog/uk-import-costs", "/en/blog/uk-importing-guide", "/en/uk-import-logistics", "/en/london-gateway-tilbury-warehousing", "/en/pallet-storage"],
+  },
+  {
+    slug: "/en/blog/incoterms-for-uk-imports",
+    tr: "/blog/incoterms-rehberi",
+    kind: "article",
+    parent: "/en/blog",
+    article: { published: "2026-11-11", modified: "2026-11-11", readMins: 6, section: "Importing" },
+    title: "Incoterms for UK Imports: EXW, FOB, CIF, DAP, DDP",
+    description:
+      "Incoterms 2020 explained for goods shipped to the UK: who pays freight, insurance, customs, duty and import VAT under EXW, FCA, FOB, CIF, DAP and DDP.",
+    label: "Incoterms for UK Imports",
+    h1: "Incoterms for UK Imports: Who Pays for What?",
+    lead:
+      "Incoterms are the International Chamber of Commerce's standard trade terms that say where the seller's responsibility for goods, costs and risk ends and the buyer's begins; the current edition, Incoterms 2020, has applied since 1 January 2020. For goods shipped to the UK, the term decides who books the freight, who insures it and who clears UK customs. Under EXW, FCA, FOB and CIF the UK buyer clears import customs and pays duty and import VAT; under DAP the buyer still clears customs; only under DDP does the seller pay UK duty and import VAT.",
+    facts: [
+      "Incoterms 2020: 11 rules, in force since 1 January 2020",
+      "FOB, FAS, CFR and CIF are for sea and inland waterway only",
+      "EXW, FCA, CPT, CIP, DAP, DPU and DDP work for any transport",
+      "Only DDP puts UK import duty and VAT on the seller",
+      "Incoterms do not cover payment terms or transfer of ownership",
+    ],
+    sections: [
+      {
+        type: "table",
+        h2: "The common Incoterms for goods coming to the UK",
+        head: ["Term", "Seller's job ends", "Main freight paid by", "UK customs, duty and VAT"],
+        rows: [
+          ["EXW (Ex Works)", "Goods ready at the seller's premises", "Buyer", "Buyer"],
+          ["FCA (Free Carrier)", "Goods handed to the buyer's carrier, export-cleared", "Buyer", "Buyer"],
+          ["FOB (Free On Board)", "Goods loaded on the vessel at the origin port", "Buyer", "Buyer"],
+          ["CIF (Cost, Insurance and Freight)", "Goods loaded on the vessel; seller pays sea freight and minimum insurance to the UK port", "Seller", "Buyer"],
+          ["DAP (Delivered At Place)", "Goods arrive at the named UK place, ready for unloading", "Seller", "Buyer"],
+          ["DDP (Delivered Duty Paid)", "Goods arrive at the named UK place, cleared for import", "Seller", "Seller"],
+        ],
+        note: "Summary of the ICC's Incoterms 2020 rules. Always name a precise place after the term, for example 'FOB Mersin' or 'DAP Rayleigh SS6 7FY'.",
+      },
+      {
+        type: "text",
+        h2: "Which term suits a UK importer?",
+        paras: [
+          "FOB and FCA are popular with UK importers because the buyer controls the main freight and the UK end: you choose the forwarder, the arrival port and the customs broker, and you can see the full landed cost. With CIF the supplier books the sea freight, which can be convenient but leaves you with less say over the vessel, the arrival date and the destination charges.",
+          "DDP looks simplest, but the seller must act as, or appoint, the UK importer and pay duty and import VAT. A non-UK seller often cannot recover that VAT as easily as a VAT-registered UK importer using postponed VAT accounting, and the cost usually returns in the price.",
+        ],
+      },
+      {
+        type: "list",
+        h2: "Incoterms checklist before you place an order",
+        items: [
+          "Use the Incoterms 2020 name and a precise place, such as FOB Mersin or DAP Rayleigh SS6 7FY.",
+          "Use FOB, FAS, CFR or CIF only for sea freight; for containers handed over at a terminal, FCA is often the better fit.",
+          "Agree who books and pays for unloading at the UK warehouse; under DAP the buyer unloads.",
+          "Check who is the importer of record and holds the GB EORI number for the UK import declaration.",
+          "Remember that Incoterms do not set payment terms or the moment ownership passes; put those in the sales contract.",
+        ],
+      },
+      {
+        type: "text",
+        h2: "How LondraDepo fits each term",
+        paras: [
+          "Under EXW, FCA or FOB, Arca Trade Group, which operates LondraDepo, can arrange the main freight, UK customs clearance and haulage from the port to our warehouse in Rayleigh, Essex. Under CIF or DAP, your supplier's forwarder brings the goods to the UK port or our door, and we can still handle clearance and unloading. Under DDP, we receive the cleared goods and store them from £3.50 + VAT per pallet per week.",
+        ],
+      },
+      {
+        type: "sources",
+        h2: "Sources",
+        items: [
+          { label: "International Chamber of Commerce: Incoterms rules (Incoterms 2020)", href: "https://iccwbo.org/business-solutions/incoterms-rules/" },
+          { label: "GOV.UK: Check when you can account for import VAT on your VAT Return", href: "https://www.gov.uk/guidance/check-when-you-can-account-for-import-vat-on-your-vat-return" },
+        ],
+      },
+    ],
+    faqs: [
+      { q: "What are Incoterms?", a: "Incoterms are the International Chamber of Commerce's standard trade terms that define where a seller's responsibility for delivery, costs and risk ends and the buyer's begins. The current edition, Incoterms 2020, has applied since 1 January 2020." },
+      { q: "Who pays UK import duty and VAT under FOB or CIF?", a: "The buyer. Under FOB and CIF the seller's job ends when the goods are loaded on the vessel at the origin port, so the UK buyer clears import customs and pays duty and import VAT, or uses postponed VAT accounting if VAT-registered." },
+      { q: "What is the difference between DAP and DDP?", a: "Under both DAP and DDP the seller delivers to a named place in the UK. Under DAP the buyer clears UK import customs and pays duty and import VAT; under DDP the seller does both, acting as or appointing the UK importer." },
+      { q: "Which Incoterm is best for importing into the UK?", a: "Many UK importers prefer FOB for sea freight or FCA for containers handed over at a terminal, because they control the main freight, the arrival port and the customs broker. LondraDepo's operator Arca Trade Group can arrange freight and clearance on those terms." },
+      { q: "Can I use FOB for air freight or road freight?", a: "No. Under the ICC's Incoterms 2020, FOB, FAS, CFR and CIF are for sea and inland waterway transport only. For air or road freight, use a term such as FCA, CPT, CIP, DAP or DDP." },
+    ],
+    related: ["/en/blog/uk-importing-guide", "/en/blog/uk-import-costs", "/en/blog/bonded-warehouse-vs-duty-paid-storage", "/en/uk-customs-clearance", "/en/uk-import-logistics", "/en/cbm-pallet-calculator"],
+  },
 ];
 
 const guide = (slug: string) => {
@@ -730,7 +908,7 @@ export const blogHub: EnPage = {
     {
       type: "links",
       h2: "Importing into the UK",
-      items: [guide("/en/blog/uk-importing-guide"), guide("/en/blog/uk-import-costs")],
+      items: [guide("/en/blog/uk-importing-guide"), guide("/en/blog/uk-import-costs"), guide("/en/blog/incoterms-for-uk-imports"), guide("/en/blog/bonded-warehouse-vs-duty-paid-storage")],
     },
     {
       type: "links",
@@ -738,6 +916,7 @@ export const blogHub: EnPage = {
       items: [
         { href: "/en/uk-storage-cost-calculator", title: "Storage cost calculator", text: "Pallets × weeks at £3.50 + VAT per pallet per week, with VAT shown.", tag: "Free tool" },
         { href: "/en/container-arrival-planner", title: "Container arrival planner", text: "A dated checklist from UK port to our Essex warehouse, based on your ETA.", tag: "Free tool" },
+        { href: "/en/cbm-pallet-calculator", title: "CBM and pallet calculator", text: "Carton size to cubic metres, pallets and container fill.", tag: "Free tool" },
         { href: "/en/blog/uk-importing-guide", title: "UK import checklist (PDF)", text: "Set-up, products, documents, clearance and warehouse steps on two A4 pages.", tag: "Download" },
         { href: "/en/blog/amazon-fba-prep-checklist", title: "Amazon FBA prep checklist (PDF)", text: "Unit preparation, cartons and delivery to Amazon UK on one A4 page.", tag: "Download" },
       ],

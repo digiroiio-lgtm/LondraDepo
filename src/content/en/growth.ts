@@ -492,6 +492,81 @@ export const growthPagesP2: EnPage[] = [
 // Lead magnet: storage cost calculator (paired with the Turkish calculator page).
 export const calculatorPages: EnPage[] = [
   {
+    slug: "/en/cbm-pallet-calculator",
+    tr: "/cbm-palet-hesaplama",
+    kind: "service",
+    serviceType: "CBM and pallet calculator",
+    modified: "2026-11-11",
+    title: "CBM Calculator: Cartons to Pallets and Containers",
+    description:
+      "Free CBM calculator: enter carton size and quantity to get cubic metres, weight, estimated UK or Euro pallets and how much of a 20ft, 40ft or 40ft HC container you fill.",
+    label: "CBM and Pallet Calculator",
+    eyebrow: "Free tool",
+    h1: "CBM Calculator: Cartons to Pallets and Containers",
+    lead:
+      "CBM (cubic metres) is length × width × height in metres, multiplied by the number of cartons; a 60 × 40 × 40 cm carton is 0.096 m³, so 100 of them make 9.6 m³. Enter your carton size, quantity and weight, and the calculator estimates the total volume, how many UK or Euro pallets the goods need at your maximum pallet height, the weight per pallet and the share of a 20ft, 40ft or 40ft high-cube container they fill. It also shows the weekly storage cost at LondraDepo's starting rate of £3.50 + VAT per pallet.",
+    facts: [
+      "CBM = length × width × height (m) × number of cartons",
+      "UK pallet 1200 × 1000 mm; Euro pallet 1200 × 800 mm",
+      "Typical internal volume: 20ft ~33 m³, 40ft ~67 m³, 40ft HC ~76 m³",
+      "Amazon UK centres typically cap pallets at 1.8 m and about 1,000 kg",
+      "Storage from £3.50 + VAT per pallet per week",
+    ],
+    sections: [
+      {
+        type: "cbm",
+        h2: "Calculate CBM, pallets and container fill",
+        intro: "Change any value and the results update instantly. Nothing is sent until you ask for a quote.",
+      },
+      {
+        type: "table",
+        h2: "How the calculator works",
+        head: ["Figure", "How it is worked out"],
+        rows: [
+          ["Total CBM", "Carton length × width × height in metres × number of cartons"],
+          ["Estimated pallets", "Total CBM ÷ usable pallet volume: pallet footprint × (maximum height − 0.15 m base) × 85% fill"],
+          ["Weight per pallet", "Total weight ÷ estimated pallets; flagged above the usual 1,000 kg limit"],
+          ["Container fill", "Total CBM as a share of typical internal volume: 20ft ~33 m³, 40ft ~67 m³, 40ft HC ~76 m³"],
+          ["Weekly storage", "Estimated pallets × £3.50 + VAT"],
+        ],
+        note: "Planning estimates. Real pallet counts depend on carton fit, stacking strength and pallet height rules at the destination.",
+      },
+      {
+        type: "text",
+        h2: "Why CBM and pallet count matter for UK imports",
+        paras: [
+          "Freight forwarders price sea groupage (LCL) by CBM or weight, and a full container is booked by size, so CBM tells you early whether LCL or a 20ft or 40ft container is the cheaper option. Once the goods arrive, warehouses usually charge storage per pallet, so the pallet estimate drives your weekly storage cost.",
+          "If stock is going on to Amazon, build pallets within Amazon Freight's typical UK limits of 1.8 metres including the pallet and about 1,000 kg. Loose-loaded cartons are palletised at our Essex warehouse after the container is unloaded.",
+        ],
+      },
+      {
+        type: "links",
+        h2: "Next steps",
+        items: [
+          { href: "/en/uk-storage-cost-calculator", title: "Storage cost calculator", text: "Pallets × weeks at £3.50 + VAT, with VAT shown.", tag: "Free tool" },
+          { href: "/en/container-arrival-planner", title: "Container arrival planner", text: "A dated checklist from UK port to our warehouse.", tag: "Free tool" },
+          { href: "/en/blog/incoterms-for-uk-imports", title: "Incoterms for UK imports", text: "Who pays freight, duty and VAT under FOB, CIF, DAP and DDP.", tag: "Guide" },
+        ],
+      },
+      {
+        type: "sources",
+        h2: "Sources",
+        items: [
+          { label: "Amazon Freight: UK LTL to Amazon FCs, shipper's checklist (pallet sizes, height and weight)", href: "https://freight.amazon.co.uk/newsroom/uk-ltl-amazon-fcs-checklist" },
+        ],
+      },
+    ],
+    faqs: [
+      { q: "How do I calculate CBM for a shipment?", a: "Multiply each carton's length, width and height in metres, then multiply by the number of cartons. A 60 × 40 × 40 cm carton is 0.6 × 0.4 × 0.4 = 0.096 m³, so 100 cartons are 9.6 m³. The LondraDepo calculator does this and estimates pallets too." },
+      { q: "How many CBM fit in a 20ft or 40ft container?", a: "A 20ft container has a typical internal volume of about 33 m³, a 40ft about 67 m³ and a 40ft high-cube about 76 m³. In practice less can be loaded, because cartons rarely fill every gap." },
+      { q: "How many cartons fit on a UK pallet?", a: "It depends on carton size and the height limit. A UK pallet is 1200 × 1000 mm; at 1.8 m including the pallet, the calculator assumes about 85% of the space above the base is usable. Enter your carton size to see the estimate." },
+      { q: "What is the difference between a UK pallet and a Euro pallet?", a: "A UK standard pallet measures 1200 × 1000 mm and a Euro pallet 1200 × 800 mm. Amazon Freight's UK guidance says most Amazon UK fulfilment centres accept both, and LondraDepo receives and stores both in Essex." },
+      { q: "Is the calculator result a quote?", a: "No. It is a planning estimate. LondraDepo quotes goods-in, palletising, storage from £3.50 + VAT per pallet per week and delivery once we see your packing list." },
+    ],
+    related: ["/en/uk-storage-cost-calculator", "/en/container-arrival-planner", "/en/container-unloading", "/en/pallet-storage", "/en/blog/incoterms-for-uk-imports", "/en/uk-import-logistics"],
+    cta: { h2: "Turn your CBM into a quote", text: "Send your packing list and we will price unloading, palletising, storage and delivery." },
+  },
+  {
     slug: "/en/uk-storage-cost-calculator",
     tr: "/ingiltere-depo-maliyet-hesaplama",
     kind: "service",

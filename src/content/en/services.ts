@@ -409,6 +409,15 @@ export const servicePages: EnPage[] = [
         ],
       },
       {
+        type: "links",
+        h2: "Amazon orders from our Essex warehouse in practice",
+        items: [
+          { href: "/en/case-studies/car-seat-cover-uk-warehousing", title: "Car seat covers: eBay, Amazon and dealer orders", text: "A manufacturer's eBay, Amazon and web orders are processed the same day from Essex, alongside B2B workshop supply.", tag: "Case study" },
+          { href: "/en/amazon-uk-fulfilment-centres", title: "Amazon UK fulfilment centres", text: "Codes, locations and road distances from our warehouse.", tag: "Guide" },
+          { href: "/en/about-us", title: "Who runs your operation", text: "Operations Manager Yusuf Barış's team, in English and Turkish.", tag: "Team" },
+        ],
+      },
+      {
         type: "text",
         h2: "FBA prep versus FBM fulfilment",
         paras: [
@@ -538,6 +547,7 @@ export const servicePages: EnPage[] = [
       "Focus on Amazon UK (amazon.co.uk); support available for Amazon EU marketplaces",
       "Amazon LCY2 Tilbury: ~16 miles by road; Amazon LCY1 London: ~32 miles",
       "No fixed minimum: start with a trial pallet or a few cartons",
+      "Operations run by Yusuf Barış, Operations Manager, in English and Turkish",
     ],
     sections: [
       {

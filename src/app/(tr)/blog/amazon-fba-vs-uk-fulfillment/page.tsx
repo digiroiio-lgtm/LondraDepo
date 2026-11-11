@@ -75,6 +75,7 @@ const faqs = [
   { q: "Amazon FBA ne zaman daha iyi seçenek?", a: "Ağırlıklı olarak Amazon'da satıyorsanız ve Amazon'un kendi ağı üzerinden Prime rozetini istiyorsanız FBA güçlü bir seçenektir. Stoğun Amazon'a gönderilmeden önce Amazon kurallarına göre hazırlanması gerekir." },
   { q: "Amazon FBA ve UK 3PL birlikte kullanılabilir mi?", a: "Evet. Ana stoğu UK 3PL deposunda tutup Amazon FBA'ya ihtiyaç kadar hazırlanmış parti gönderebilirsiniz; diğer kanalların siparişleri aynı depodan karşılanır." },
   { q: "LondraDepo Amazon prep hizmeti veriyor mu?", a: "Evet. LondraDepo Essex'te FNSKU etiketleme, ambalaj kontrolü ve koli hazırlığı yapar ve stoğu sevkiyat planındaki Amazon UK deposuna teslim eder. LondraDepo resmi Amazon partneri değildir." },
+  { q: "İngiltere'deki Amazon deposundaki stok AB pazaryerlerinde satılabilir mi?", a: "Gümrük sınırını geçmeden hayır. Büyük Britanya'dan AB'ye mal göndermek İngiltere'den ihracat ve AB'ye ithalattır; beyanname, vergi ve KDV gerekir. Satıcıların çoğu İngiltere ve AB için ayrı stok tutar; LondraDepo İngiltere tarafını Essex'ten yönetir." },
   { q: "FBA ve 3PL maliyetleri nasıl karşılaştırılır?", a: "Kendi ürünleriniz ve hacminiz için toplam maliyeti karşılaştırın: depolama, hazırlık, sipariş başına gönderim ve iade. LondraDepo'da depolama haftalık palet başına £3,50 + KDV'den başlar; diğer kalemler tekliflendirilir." },
 ];
 
@@ -181,6 +182,19 @@ export default function FbaVsFulfillmentPage() {
               <p>
                 <strong>Hibrit model:</strong> Amazon&apos;a satılan ürünlerin bir kısmını FBA&apos;de tutarken, web sitesi ve B2B siparişlerini 3PL fulfillment üzerinden karşılayabilirsiniz. Bu model özellikle büyüme aşamasındaki markalar için güçlüdür.
               </p>
+
+              <h2>Hem İngiltere'de hem AB'de satış</h2>
+              <p>
+                İngiltere AB tek pazarından çıktığından beri İngiltere&apos;de tutulan stok ile AB&apos;de tutulan stok gümrük açısından
+                ayrı envanterlerdir. Büyük Britanya&apos;dan AB&apos;ye mal göndermek İngiltere&apos;den ihracat, AB ülkesine ithalattır;
+                beyanname, vergi ve KDV gerekir.
+              </p>
+              <ul>
+                <li><strong>UK stoğu:</strong> Amazon.co.uk, İngiltere web ve B2B siparişleri; GB EORI numarası ve gerektiğinde UK KDV kaydı</li>
+                <li><strong>AB stoğu:</strong> Amazon&apos;un AB pazaryerleri ve AB müşterileri; AB EORI numarası ve stoğun tutulduğu ülkede KDV</li>
+                <li><strong>Tipik kurgu:</strong> İngiltere&apos;ye bir kez ithal edip FBM ile göndermek veya FBA için hazırlamak; AB için ayrı ithalat ve çoğunlukla yerel bir AB depo partneri</li>
+              </ul>
+              <p>LondraDepo İngiltere tarafını Essex&apos;ten yönetir; AB tarafındaki kuralları AB&apos;deki gümrük müşavirinizle teyit edin.</p>
 
               <ArticleSources path="/blog/amazon-fba-vs-uk-fulfillment" />
 

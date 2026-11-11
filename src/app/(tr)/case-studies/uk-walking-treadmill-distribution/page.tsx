@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -5,23 +6,26 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 import CaseHero from "@/components/CaseHero";
+import AuthorBox from "@/components/AuthorBox";
+import { TR_ARTICLES } from "@/content/tr-articles";
 import OperationsFlow from "@/components/OperationsFlow";
 import RelatedCases from "@/components/RelatedCases";
 
 import { SITE_URL } from "@/lib/site";
 import { trAlternates } from "@/lib/i18n";
+const ARTICLE = TR_ARTICLES["/case-studies/uk-walking-treadmill-distribution"];
 const PAGE_URL = `${SITE_URL}/case-studies/uk-walking-treadmill-distribution`;
 const WHATSAPP =
   "https://wa.me/447554195190?text=Merhaba%2C%20buyuk%20hacimli%20urun%20fulfillment%20operasyonu%20hakkinda%20bilgi%20almak%20istiyorum.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Walking Treadmill İngiltere Depo & Dağıtım Operasyonu | LondraDepo.com",
+  title: "Walking Treadmill İngiltere Depo & Dağıtım Operasyonu | LondraDepo",
   description:
     "Yaşlı ve rehabilitasyon kullanıcılarına yönelik walking treadmill ürünlerinin İngiltere depo, fulfillment ve online satış operasyonu.",
   alternates: trAlternates("/case-studies/uk-walking-treadmill-distribution"),
   openGraph: {
-    title: "Walking Treadmill — İngiltere Depo & Satış Operasyonu | LondraDepo.com",
+    title: "Walking Treadmill — İngiltere Depo & Satış Operasyonu | LondraDepo",
     description:
       "Büyük hacimli walking treadmill ürünlerinin İngiltere deposu, online fulfillment ve discount store dağıtım operasyonu.",
     url: PAGE_URL,
@@ -31,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Walking Treadmill UK Depo & Fulfillment Operasyonu | LondraDepo.com",
+    title: "Walking Treadmill UK Depo & Fulfillment Operasyonu | LondraDepo",
     description:
       "Yaşlı ve rehabilitasyon kullanıcıları için walking treadmill ürünlerinin İngiltere depo, online satış ve retail dağıtım operasyonu.",
   },
@@ -62,17 +66,14 @@ const jsonLd = {
     {
       "@type": "Article",
       "@id": `${PAGE_URL}#article`,
-      headline: "Walking Treadmill — İngiltere Depo & Satış Operasyonu",
+      headline: ARTICLE.headline,
       description:
         "Yaşlı ve rehabilitasyon kullanıcılarına yönelik walking treadmill ürünlerinin İngiltere depo, fulfillment ve online + retail satış operasyonu.",
       url: PAGE_URL,
-      datePublished: "2026-01-01",
-      dateModified: "2026-05-24",
-      author: {
-        "@type": "Person",
-        name: "Sertaç Yılmaz",
-      },
-      contributor: { "@type": "Person", name: "Yusuf Barış" },
+      ...(ARTICLE.published ? { datePublished: ARTICLE.published } : {}),
+      dateModified: ARTICLE.modified,
+      author: { "@type": "Person", name: "Sertaç Yılmaz", jobTitle: "Arca Trade Group Kurucu Ortağı", url: `${SITE_URL}/hakkimizda` },
+      contributor: { "@type": "Person", name: "Yusuf Barış", jobTitle: "Operasyon Müdürü" },
       publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
       image: { "@type": "ImageObject", url: `${SITE_URL}/logo.svg`, width: 640, height: 160 },
       mainEntityOfPage: PAGE_URL,
@@ -133,7 +134,7 @@ const faqs = [
   },
   {
     q: "Discount store dağıtımı yapıyor musunuz?",
-    a: "Evet. İngiltere genelindeki discount store ve retail zincirlerine toplu sevkiyat ve dağıtım organizasyonu sağlıyoruz.",
+    a: "Evet. İngiltere genelindeki discount store ve retail zincirlerine toplu sevkiyat ve dağıtım organizasyonu yapıyoruz; büyük hacimli ürünler aynı Essex stoğundan online siparişlere de gönderilir.",
   },
   {
     q: "Online sipariş fulfillment desteği mevcut mu?",
@@ -141,7 +142,7 @@ const faqs = [
   },
   {
     q: "İngiltere geneline dağıtım sağlıyor musunuz?",
-    a: "Evet. Essex merkezli deposumuzdan İngiltere'nin tüm bölgelerine courier ve freight koordinasyonuyla dağıtım yapıyoruz.",
+    a: "Evet. Essex merkezli depomuzdan İngiltere'nin tüm bölgelerine kargo ve yük taşımacılığı koordinasyonuyla dağıtım yapıyoruz; büyük hacimli ürünler için palet veya özel taşıma planlanır.",
   },
   {
     q: "Hassas ürün depolama operasyonu mevcut mu?",
@@ -195,6 +196,7 @@ export default function WalkingTreadmillCaseStudyPage() {
           <div className="max-w-4xl mx-auto">
             {/* Hero */}
             <CaseHero
+              path="/case-studies/uk-walking-treadmill-distribution"
               industry="Healthcare / Ecommerce"
               industryColor="text-teal-700 bg-teal-50"
               brand="Walking Treadmill"
@@ -215,22 +217,22 @@ export default function WalkingTreadmillCaseStudyPage() {
               </p>
               <div className="flex flex-wrap items-center gap-6 justify-center md:justify-start">
                 <div className="text-center px-4">
-                  <div className="text-3xl mb-1">🏭</div>
+                  <div className="text-3xl mb-1"><Emoji e="🏭" /></div>
                   <div className="text-white/60 text-xs">Büyük Hacimli<br />Depolama</div>
                 </div>
                 <div className="text-2xl text-white/30 hidden sm:block">+</div>
                 <div className="text-center px-4">
-                  <div className="text-3xl mb-1">🛒</div>
+                  <div className="text-3xl mb-1"><Emoji e="🛒" /></div>
                   <div className="text-white/60 text-xs">Online<br />Fulfillment</div>
                 </div>
                 <div className="text-2xl text-white/30 hidden sm:block">+</div>
                 <div className="text-center px-4">
-                  <div className="text-3xl mb-1">🏪</div>
+                  <div className="text-3xl mb-1"><Emoji e="🏪" /></div>
                   <div className="text-white/60 text-xs">Discount Store<br />Dağıtımı</div>
                 </div>
                 <div className="text-2xl text-white/30 hidden sm:block">→</div>
                 <div className="text-center px-4">
-                  <div className="text-3xl mb-1">🇬🇧</div>
+                  <div className="text-3xl mb-1"><Emoji e="🇬🇧" /></div>
                   <div className="text-white/60 text-xs">UK Wide<br />Delivery</div>
                 </div>
               </div>
@@ -238,11 +240,11 @@ export default function WalkingTreadmillCaseStudyPage() {
 
             {/* Trust bar */}
             <div className="bg-slate-50 border border-slate-200 rounded-xl p-5 mb-10 flex flex-wrap gap-4 text-sm text-slate-600 justify-center md:justify-start">
-              <span>🏋️ Büyük hacimli ürün lojistiği</span>
-              <span>🛒 Online & retail fulfillment</span>
-              <span>🏪 Discount store dağıtımı</span>
-              <span>🚚 UK geneli teslimat</span>
-              <span>📊 Stok yönetimi & raporlama</span>
+              <span><Emoji e="🏋️" /> Büyük hacimli ürün lojistiği</span>
+              <span><Emoji e="🛒" /> Online & retail fulfillment</span>
+              <span><Emoji e="🏪" /> Discount store dağıtımı</span>
+              <span><Emoji e="🚚" /> UK geneli teslimat</span>
+              <span><Emoji e="📊" /> Stok yönetimi & raporlama</span>
             </div>
 
             {/* Problem */}
@@ -258,13 +260,13 @@ export default function WalkingTreadmillCaseStudyPage() {
                   operasyon altyapısına ihtiyaç duyuldu.
                 </p>
                 <ul className="text-slate-700 text-sm space-y-2 list-none">
-                  <li>⚠️ Büyük hacimli ürün depolama ihtiyacı</li>
-                  <li>⚠️ Hassas mekanik ürün taşıma ve depolama</li>
-                  <li>⚠️ Online sipariş fulfillment süreç kurulumu</li>
-                  <li>⚠️ Discount store dağıtım organizasyonu</li>
-                  <li>⚠️ İngiltere geneli lojistik planlaması</li>
-                  <li>⚠️ Stok takibi ve operasyon yönetimi</li>
-                  <li>⚠️ Ölçeklenebilir fulfillment altyapısı</li>
+                  <li><Emoji e="⚠️" /> Büyük hacimli ürün depolama ihtiyacı</li>
+                  <li><Emoji e="⚠️" /> Hassas mekanik ürün taşıma ve depolama</li>
+                  <li><Emoji e="⚠️" /> Online sipariş fulfillment süreç kurulumu</li>
+                  <li><Emoji e="⚠️" /> Discount store dağıtım organizasyonu</li>
+                  <li><Emoji e="⚠️" /> İngiltere geneli lojistik planlaması</li>
+                  <li><Emoji e="⚠️" /> Stok takibi ve operasyon yönetimi</li>
+                  <li><Emoji e="⚠️" /> Ölçeklenebilir fulfillment altyapısı</li>
                 </ul>
               </div>
             </section>
@@ -328,7 +330,7 @@ export default function WalkingTreadmillCaseStudyPage() {
                     className="border border-slate-200 rounded-xl p-5 flex gap-4 hover:border-[#0b2545]/30 hover:shadow-sm transition"
                   >
                     <span className="text-2xl flex-shrink-0" aria-hidden="true">
-                      {item.icon}
+                      <Emoji e={item.icon} />
                     </span>
                     <div>
                       <h3 className="font-bold text-[#0b2545] mb-1">{item.title}</h3>
@@ -380,7 +382,7 @@ export default function WalkingTreadmillCaseStudyPage() {
                     className="bg-[#f6f8fb] rounded-xl p-6 flex gap-4 hover:shadow-md transition"
                   >
                     <span className="text-3xl flex-shrink-0" aria-hidden="true">
-                      {r.icon}
+                      <Emoji e={r.icon} />
                     </span>
                     <div>
                       <div className="font-extrabold text-[#0b2545] mb-1">{r.label}</div>
@@ -395,7 +397,7 @@ export default function WalkingTreadmillCaseStudyPage() {
             <section className="mb-10">
               <div className="border-l-4 border-teal-500 bg-teal-50 rounded-r-xl p-6">
                 <p className="text-teal-900 font-semibold text-sm leading-relaxed">
-                  <span className="block text-xs font-bold uppercase tracking-widest text-teal-600 mb-2">
+                  <span className="block text-xs font-bold uppercase tracking-widest text-teal-700 mb-2">
                     Temel Mesaj
                   </span>
                   LondraDepo.com yalnızca küçük paket fulfillment değil; büyük hacimli ürünlerin
@@ -419,7 +421,7 @@ export default function WalkingTreadmillCaseStudyPage() {
                   href={WHATSAPP}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold px-7 py-3.5 rounded-full transition"
+                  className="inline-flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white font-bold px-7 py-3.5 rounded-full transition"
                 >
                   WhatsApp&apos;tan Bilgi Alın
                 </a>
@@ -500,26 +502,7 @@ export default function WalkingTreadmillCaseStudyPage() {
               </div>
             </div>
 
-            {/* Author box */}
-            <div className="border border-slate-200 rounded-xl p-5 mb-8 flex items-start gap-4 bg-slate-50">
-              <div className="w-12 h-12 rounded-full bg-[#0b2545] flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
-                SY
-              </div>
-              <div>
-                <p className="font-bold text-[#0b2545] text-sm">Sertaç Yılmaz</p>
-                <p className="text-slate-500 text-xs mb-1">
-                  UK Warehouse Operations Specialist — LondraDepo.com
-                </p>
-                <p className="text-slate-600 text-xs leading-relaxed">
-                  Büyük hacimli ürün lojistiği ve İngiltere ecommerce fulfillment operasyonlarında
-                  uzman. Online + retail çift kanallı operasyon modelleri konusunda aktif danışmanlık.
-                </p>
-                <p className="text-slate-400 text-xs mt-1">
-                  İncelendi:{" "}
-                  <span className="font-medium text-slate-500">Yusuf Barış</span> — Operations Manager
-                </p>
-              </div>
-            </div>
+            <AuthorBox path="/case-studies/uk-walking-treadmill-distribution" />
 
             <RelatedCases cases={relatedCases} />
           </div>

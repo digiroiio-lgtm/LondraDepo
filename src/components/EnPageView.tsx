@@ -1,12 +1,34 @@
+import Emoji from "@/components/visual/Emoji";
 import Link from "next/link";
 import Image from "next/image";
 import WarehouseGallery from "@/components/WarehouseGallery";
 import TrackedLink from "@/components/TrackedLink";
 import { ctaFor, quoteHref } from "@/content/en/cta";
+import { bookingUrl } from "@/lib/booking";
+import { clusterFor } from "@/content/en/clusters";
+import Icon, { iconFor } from "@/components/visual/Icon";
+import ProcessFlow from "@/components/visual/ProcessFlow";
+import RouteMap from "@/components/visual/RouteMap";
+import HeroArt, { themeFor } from "@/components/visual/HeroArt";
+import { readable } from "@/lib/readable";
 import QuoteFormEn from "@/components/QuoteFormEn";
+import ChecklistGate from "./ChecklistGate";
+import ContainerPlanner from "./ContainerPlanner";
+import CostCalculator from "@/components/CostCalculator";
+
+/** Amazon and Shopify pages also offer a call booking in the hero (competitors lead with "book a free call"). */
+const HERO_BOOKING = new Set([
+  "/en/amazon-prep-uk", "/en/amazon-fulfilment-uk", "/en/amazon-seller-warehousing-uk", "/en/amazon-uk-fulfilment-centres", "/en/shopify-fulfilment-uk",
+]);
 
 /** Highest-intent pages get the quote form inline (CRO plan, weeks 11–13). */
-const INLINE_FORM = new Set(["/en/uk-import-logistics", "/en/container-unloading", "/en/uk-warehousing-pricing", "/en/pallet-storage", "/en/uk-warehousing"]);
+const INLINE_FORM = new Set([
+  "/en/uk-import-logistics", "/en/container-unloading", "/en/uk-warehousing-pricing", "/en/pallet-storage", "/en/uk-warehousing",
+  "/en/shopify-fulfilment-uk", "/en/uk-fulfilment", "/en/ecommerce-fulfilment", "/en/uk-ecommerce-logistics", "/en/pick-and-pack",
+  "/en/amazon-fulfilment-uk", "/en/amazon-seller-warehousing-uk", "/en/amazon-prep-uk", "/en/amazon-uk-fulfilment-centres", "/en/uk-distribution",
+  "/en/london-gateway-tilbury-warehousing", "/en/felixstowe-port-warehousing", "/en/uk-warehousing-for-turkish-exporters",
+  "/en/case-studies", "/en/industries", "/en/blog",
+]);
 import HeaderEn from "@/components/HeaderEn";
 import FooterEn from "@/components/FooterEn";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
@@ -48,7 +70,7 @@ function jsonLd(page: EnPage) {
   const crumbs = breadcrumbs(page);
   const graph: Record<string, unknown>[] = [
     {
-      "@type": "WebPage",
+      "@type": page.kind === "hub" ? ["WebPage", "CollectionPage"] : "WebPage",
       "@id": `${url}#webpage`,
       url,
       name: page.title,
@@ -58,12 +80,25 @@ function jsonLd(page: EnPage) {
       about: ORG,
       datePublished: page.article?.published ?? EN_PUBLISHED,
       dateModified: modifiedOf(page),
+      ...(page.kind === "hub" ? { mainEntity: { "@id": `${url}#items` } } : {}),
     },
     {
       "@type": "BreadcrumbList",
       itemListElement: crumbs.map((c, i) => ({ "@type": "ListItem", position: i + 1, name: c.name, item: absolute(c.path) })),
     },
   ];
+  if (page.kind === "hub") {
+    // Hubs list their child pages (guides, case studies, sectors) as an ItemList, de-duplicated, in page order.
+    const seen = new Set<string>();
+    const items = page.sections.flatMap((sec) => (sec.type === "links" ? sec.items : [])).filter((it) => !seen.has(it.href) && seen.add(it.href));
+    graph.push({
+      "@type": "ItemList",
+      "@id": `${url}#items`,
+      name: page.h1,
+      numberOfItems: items.length,
+      itemListElement: items.map((it, i) => ({ "@type": "ListItem", position: i + 1, url: absolute(it.href), name: it.title })),
+    });
+  }
   if (page.kind === "service" && page.serviceType) {
     graph.push({
       "@type": "Service",
@@ -115,9 +150,11 @@ function SectionView({ s }: { s: Section }) {
       return (
         <section className="mb-12">
           {h2}
-          {s.paras.map((p) => (
-            <p key={p.slice(0, 40)} className="text-slate-700 leading-relaxed mb-4">{p}</p>
-          ))}
+          <div className="max-w-3xl">
+            {readable(s.paras).map((p) => (
+              <p key={p.slice(0, 40)} className="text-[1.0625rem] text-slate-700 leading-8 mb-5">{p}</p>
+            ))}
+          </div>
         </section>
       );
     case "cards":
@@ -127,7 +164,10 @@ function SectionView({ s }: { s: Section }) {
           {s.intro && <p className="text-slate-600 mb-5">{s.intro}</p>}
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {s.items.map((c) => (
-              <div key={c.title} className="rounded-xl border border-slate-200 bg-white p-5">
+              <div key={c.title} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+                <span className="mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-red-50 text-[#d62839]">
+                  <Icon name={iconFor(c.title, c.text)} />
+                </span>
                 <h3 className="font-semibold text-[#0b2545] mb-2">{c.title}</h3>
                 <p className="text-sm text-slate-600 leading-relaxed">{c.text}</p>
               </div>
@@ -140,15 +180,7 @@ function SectionView({ s }: { s: Section }) {
         <section className="mb-12">
           {h2}
           {s.intro && <p className="text-slate-600 mb-5">{s.intro}</p>}
-          <ol className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {s.items.map((c, i) => (
-              <li key={c.title} className="rounded-xl border border-slate-200 bg-slate-50 p-5">
-                <span className="text-xs font-bold text-[#e63946]">{String(i + 1).padStart(2, "0")}</span>
-                <h3 className="font-semibold text-[#0b2545] mt-1 mb-2">{c.title}</h3>
-                <p className="text-sm text-slate-600 leading-relaxed">{c.text}</p>
-              </li>
-            ))}
-          </ol>
+          <ProcessFlow items={s.items} />
         </section>
       );
     case "list":
@@ -159,8 +191,8 @@ function SectionView({ s }: { s: Section }) {
           <ul className="space-y-2">
             {s.items.map((it) => (
               <li key={it} className="flex gap-2 text-slate-700">
-                <span className="text-[#e63946] font-bold" aria-hidden="true">✓</span>
-                <span>{it}</span>
+                <span className="mt-0.5 text-green-600 shrink-0"><Icon name="check" className="h-5 w-5" /></span>
+                <span className="leading-relaxed">{it}</span>
               </li>
             ))}
           </ul>
@@ -179,7 +211,7 @@ function SectionView({ s }: { s: Section }) {
               </thead>
               <tbody>
                 {s.rows.map((r, i) => (
-                  <tr key={i} className="border-t border-slate-200">
+                  <tr key={i} className="border-t border-slate-200 even:bg-slate-50/70">
                     {r.map((c, j) => (j === 0 ? <th key={j} scope="row" className="px-4 py-3 font-medium text-slate-800">{c}</th> : <td key={j} className="px-4 py-3 text-slate-700">{c}</td>))}
                   </tr>
                 ))}
@@ -222,6 +254,31 @@ function SectionView({ s }: { s: Section }) {
           </figcaption>
         </figure>
       );
+    case "calculator":
+      return (
+        <section className="mb-12" id="calculator">
+          {h2}
+          {s.intro && <p className="text-slate-600 mb-5">{s.intro}</p>}
+          <CostCalculator lang="en" />
+        </section>
+      );
+    case "routemap":
+      return (
+        <section className="mb-12">
+          {h2}
+          <RouteMap lang="en" className="max-w-3xl" />
+        </section>
+      );
+    case "planner":
+      return (
+        <section className="mb-12" id="planner">
+          {h2}
+          {s.intro && <p className="text-slate-600 mb-5">{s.intro}</p>}
+          <ContainerPlanner lang="en" />
+        </section>
+      );
+    case "checklist":
+      return <ChecklistGate lang="en" variant={s.variant} />;
     case "sources":
       return (
         <section className="mb-12">
@@ -245,7 +302,7 @@ function SectionView({ s }: { s: Section }) {
           <div className="grid gap-4 sm:grid-cols-2">
             {s.items.map((l) => (
               <Link key={l.href} href={l.href} className="block rounded-xl border border-slate-200 bg-white p-5 hover:border-[#e63946] transition">
-                {l.tag && <span className="text-xs font-semibold uppercase tracking-wide text-[#e63946]">{l.tag}</span>}
+                {l.tag && <span className="text-xs font-semibold uppercase tracking-wide text-[#d62839]">{l.tag}</span>}
                 <h3 className="font-semibold text-[#0b2545] mt-1 mb-2">{l.title}</h3>
                 <p className="text-sm text-slate-600 leading-relaxed">{l.text}</p>
               </Link>
@@ -261,6 +318,7 @@ export default function EnPageView({ page }: { page: EnPage }) {
   const related = (page.related ?? []).map((s) => getEnPage(s)).filter((p): p is EnPage => Boolean(p));
   const quote = ctaFor(page);
   const inlineForm = INLINE_FORM.has(page.slug);
+  const cluster = clusterFor(page.slug);
   const qHref = inlineForm ? "#quote" : quoteHref(quote.service, page.slug);
   const cta = page.cta ?? { h2: "Get a UK warehousing quote", text: "Tell us your product, volumes and channels and we will prepare a tailored quote." };
 
@@ -271,7 +329,8 @@ export default function EnPageView({ page }: { page: EnPage }) {
       {page.faqs && <FaqJsonLd faqs={page.faqs} />}
       <main className="bg-white">
         <div className="bg-gradient-to-b from-slate-50 to-white border-b border-slate-200">
-          <div className="max-w-6xl mx-auto px-4 pt-6 pb-12">
+          <div className="max-w-6xl mx-auto px-4 pt-6 pb-12 lg:grid lg:grid-cols-[minmax(0,1fr)_320px] lg:gap-10 lg:items-center">
+            <div>
             {crumbs.length > 1 && (
               <nav aria-label="Breadcrumb" className="text-xs text-slate-500 mb-6">
                 {crumbs.map((c, i) => (
@@ -282,7 +341,7 @@ export default function EnPageView({ page }: { page: EnPage }) {
                 ))}
               </nav>
             )}
-            {page.eyebrow && <p className="text-sm font-semibold text-[#e63946] mb-3">{page.eyebrow}</p>}
+            {page.eyebrow && <p className="text-sm font-semibold text-[#d62839] mb-3">{page.eyebrow}</p>}
             <h1 className="text-3xl sm:text-4xl font-extrabold text-[#0b2545] leading-tight mb-5 max-w-3xl">{page.h1}</h1>
             {page.article && (
               <p className="text-sm text-slate-500 mb-4">
@@ -297,22 +356,35 @@ export default function EnPageView({ page }: { page: EnPage }) {
                 Last updated: <time dateTime={modifiedOf(page)}>{formatDate(modifiedOf(page))}</time>
               </p>
             )}
-            <p className="text-lg text-slate-700 leading-relaxed max-w-3xl">{page.lead}</p>
+            {readable([page.lead]).map((t, i) => (
+              <p key={i} className={`text-lg text-slate-700 leading-relaxed max-w-3xl ${i ? "mt-3" : ""}`}>{t}</p>
+            ))}
             {page.kind !== "legal" && (
               <div className="flex flex-wrap gap-3 mt-7">
-                <TrackedLink kind="cta" source="hero" href={qHref} className="bg-[#e63946] hover:bg-[#c1121f] text-white font-semibold px-6 py-3 rounded-full transition">
+                <TrackedLink kind="cta" source="hero" href={qHref} className="bg-[#d62839] hover:bg-[#c1121f] text-white font-semibold px-6 py-3 rounded-full transition">
                   {quote.label}
                 </TrackedLink>
-                <TrackedLink kind="whatsapp" source="hero" href={WHATSAPP} className="bg-green-500 hover:bg-green-400 text-white font-semibold px-6 py-3 rounded-full transition">
+                <TrackedLink kind="whatsapp" source="hero" href={WHATSAPP} className="bg-green-700 hover:bg-green-800 text-white font-semibold px-6 py-3 rounded-full transition">
                   WhatsApp us
                 </TrackedLink>
+                {HERO_BOOKING.has(page.slug) && (
+                  <TrackedLink kind="booking" source="hero" href={bookingUrl("en", page.slug)} className="border border-[#0b2545] text-[#0b2545] font-semibold px-6 py-3 rounded-full hover:bg-[#0b2545] hover:text-white transition">
+                    Book a 15-minute call
+                  </TrackedLink>
+                )}
                 <TrackedLink kind="phone" source="hero" href={TEL} className="border border-[#0b2545] text-[#0b2545] font-semibold px-6 py-3 rounded-full hover:bg-[#0b2545] hover:text-white transition">
-                  📞 +44 7554 195190
+                  <Emoji e="📞" /> +44 7554 195190
                 </TrackedLink>
               </div>
             )}
+            </div>
+            {page.kind !== "home" && page.kind !== "legal" && page.kind !== "contact" && (
+              <div className="hidden lg:block">
+                <HeroArt theme={themeFor(page.slug, page.kind)} />
+              </div>
+            )}
             {page.kind === "home" && (
-              <div className="mt-10 rounded-2xl overflow-hidden shadow-2xl">
+              <div className="mt-10 rounded-2xl overflow-hidden shadow-2xl lg:col-span-2">
                 <Image
                   src="/londradepo.jpeg"
                   alt="LondraDepo UK warehouse and fulfilment centre in Rayleigh, Essex"
@@ -335,25 +407,73 @@ export default function EnPageView({ page }: { page: EnPage }) {
             <section aria-labelledby="facts-heading" className="mb-12 rounded-xl border border-slate-200 bg-slate-50 p-6">
               <h2 id="facts-heading" className="text-lg font-bold text-[#0b2545] mb-3">At a glance</h2>
               <ul className="grid gap-2 sm:grid-cols-2 text-sm text-slate-700">
-                {page.facts.map((f) => <li key={f} className="flex gap-2"><span className="text-[#e63946]" aria-hidden="true">•</span>{f}</li>)}
+                {page.facts.map((f) => (
+                  <li key={f} className="flex gap-2.5">
+                    <span className="mt-0.5 text-[#d62839] shrink-0"><Icon name={iconFor(f)} className="h-5 w-5" /></span>
+                    <span className="leading-relaxed">{f}</span>
+                  </li>
+                ))}
               </ul>
             </section>
           )}
 
-          {page.sections.map((s, i) => <SectionView key={i} s={s} />)}
+          {page.sections.map((s, i) => (
+            <div key={i}>
+              <SectionView s={s} />
+              {i === 0 && cluster && (
+                <nav aria-labelledby="cluster-heading" className="mb-12 rounded-xl border border-slate-200 p-6">
+                  <h2 id="cluster-heading" className="text-lg font-bold text-[#0b2545] mb-4">{cluster.h2}</h2>
+                  <ul className="grid gap-3 sm:grid-cols-2">
+                    {cluster.items.map((c) =>
+                      c.href === page.slug ? (
+                        <li key={c.href} aria-current="page" className="rounded-lg border-2 border-[#0b2545] bg-slate-50 p-4">
+                          <span className="block font-semibold text-[#0b2545]">{c.title} <span className="text-xs font-normal text-slate-500">(this page)</span></span>
+                          <span className="block text-sm text-slate-600 mt-1">Best if: {c.fit}</span>
+                        </li>
+                      ) : (
+                        <li key={c.href}>
+                          <Link href={c.href} className="block h-full rounded-lg border border-slate-200 p-4 hover:border-[#0b2545] transition">
+                            <span className="block font-semibold text-[#0b2545]">{c.title} →</span>
+                            <span className="block text-sm text-slate-600 mt-1">Best if: {c.fit}</span>
+                          </Link>
+                        </li>
+                      ),
+                    )}
+                  </ul>
+                </nav>
+              )}
+            </div>
+          ))}
 
           {inlineForm && (
             <section id="quote" aria-labelledby="quote-heading" className="mb-12 scroll-mt-24">
               <h2 id="quote-heading" className="text-2xl font-bold text-[#0b2545] mb-2">{quote.label}</h2>
-              <p className="text-slate-600 mb-5">Takes about two minutes. We reply by email with a tailored proposal.</p>
+              <p className="text-slate-600 mb-4">Takes about two minutes. We reply by email with a tailored proposal.</p>
+              <ul className="mb-5 grid gap-2 sm:grid-cols-2 text-sm text-slate-700">
+                <li className="flex gap-2"><span className="text-green-700" aria-hidden="true"><Emoji e="✓" /></span>Warehouse at Unit 19 Arterial Park, Rayleigh, Essex SS6 7FY</li>
+                <li className="flex gap-2"><span className="text-green-700" aria-hidden="true"><Emoji e="✓" /></span>Operated by Arca Trade Group Ltd (Company No. 13247691), BIFA member</li>
+                <li className="flex gap-2"><span className="text-green-700" aria-hidden="true"><Emoji e="✓" /></span>Storage from £3.50 + VAT per pallet per week</li>
+                <li className="flex gap-2"><span className="text-green-700" aria-hidden="true"><Emoji e="✓" /></span>English and Turkish spoken</li>
+              </ul>
               <QuoteFormEn defaultService={quote.service} formId="en_inline_quote" />
+              <p className="mt-4 text-sm text-slate-600">
+                Prefer to talk first?{" "}
+                <TrackedLink kind="booking" source="inline_quote" href={bookingUrl("en", page.slug)} className="font-semibold text-[#0b2545] underline">
+                  Book a 15-minute call
+                </TrackedLink>{" "}
+                or{" "}
+                <TrackedLink kind="whatsapp" source="inline_quote" href={WHATSAPP} className="font-semibold text-green-700 underline">
+                  message us on WhatsApp
+                </TrackedLink>
+                .
+              </p>
             </section>
           )}
 
           {!inlineForm && page.kind !== "legal" && page.kind !== "contact" && (
             <aside className="mb-12 flex flex-col sm:flex-row sm:items-center justify-between gap-4 rounded-xl border border-[#e63946]/30 bg-red-50 p-6">
               <p className="font-semibold text-[#0b2545]">Tell us your product, volumes and channels. We will prepare a tailored proposal.</p>
-              <TrackedLink kind="cta" source="mid_page" href={qHref} className="shrink-0 text-center bg-[#e63946] hover:bg-[#c1121f] text-white font-semibold px-6 py-3 rounded-full transition">
+              <TrackedLink kind="cta" source="mid_page" href={qHref} className="shrink-0 text-center bg-[#d62839] hover:bg-[#c1121f] text-white font-semibold px-6 py-3 rounded-full transition">
                 {quote.label}
               </TrackedLink>
             </aside>
@@ -418,11 +538,14 @@ export default function EnPageView({ page }: { page: EnPage }) {
               <h2 className="text-2xl font-bold mb-3">{cta.h2}</h2>
               <p className="text-white/80 mb-6 max-w-2xl mx-auto">{cta.text}</p>
               <div className="flex flex-wrap justify-center gap-3">
-                <TrackedLink kind="cta" source="footer_cta" href={qHref} className="inline-block bg-[#e63946] hover:bg-[#c1121f] text-white font-semibold px-7 py-3 rounded-full transition">
+                <TrackedLink kind="cta" source="footer_cta" href={qHref} className="inline-block bg-[#d62839] hover:bg-[#c1121f] text-white font-semibold px-7 py-3 rounded-full transition">
                   {quote.label}
                 </TrackedLink>
-                <TrackedLink kind="whatsapp" source="footer_cta" href={WHATSAPP} className="inline-block bg-green-500 hover:bg-green-400 text-white font-semibold px-7 py-3 rounded-full transition">
+                <TrackedLink kind="whatsapp" source="footer_cta" href={WHATSAPP} className="inline-block bg-green-700 hover:bg-green-800 text-white font-semibold px-7 py-3 rounded-full transition">
                   Message us on WhatsApp
+                </TrackedLink>
+                <TrackedLink kind="booking" source="footer_cta" href={bookingUrl("en", page.slug)} className="inline-block border border-white/60 hover:bg-white/10 text-white font-semibold px-7 py-3 rounded-full transition">
+                  Book a 15-min call
                 </TrackedLink>
               </div>
             </section>

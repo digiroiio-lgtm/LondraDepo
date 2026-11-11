@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 const capabilities = [
   { icon: "📊", label: "Stok görünürlüğü", desc: "Depodaki ürün miktarını anlık takip edin." },
   { icon: "📋", label: "Sipariş yönetimi", desc: "Gelen siparişleri sistemde takip edin." },
@@ -13,7 +14,7 @@ export default function MintSoftSection() {
       <div className="max-w-6xl mx-auto">
         <div className="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-start">
           <div>
-            <p className="text-[#e63946] text-sm font-semibold uppercase tracking-widest mb-3">
+            <p className="text-[#d62839] text-sm font-semibold uppercase tracking-widest mb-3">
               Teknoloji Altyapısı
             </p>
             <h2 className="text-3xl font-extrabold text-[#0b2545] mb-5 leading-tight">
@@ -38,7 +39,7 @@ export default function MintSoftSection() {
           </div>
 
           <div className="mt-12 lg:mt-0">
-            <h3 className="text-sm font-semibold text-slate-500 uppercase tracking-wide mb-5">
+            <h3 className="text-sm font-semibold text-slate-600 uppercase tracking-wide mb-5">
               Sistem kapsamındaki işlevler:
             </h3>
             <div className="space-y-3">
@@ -47,10 +48,10 @@ export default function MintSoftSection() {
                   key={c.label}
                   className="flex items-start gap-4 bg-[#f6f8fb] border border-slate-200 rounded-xl p-4"
                 >
-                  <span className="text-2xl flex-shrink-0">{c.icon}</span>
+                  <span className="text-2xl flex-shrink-0"><Emoji e={c.icon} /></span>
                   <div>
                     <h4 className="font-semibold text-[#0b2545] text-sm mb-0.5">{c.label}</h4>
-                    <p className="text-slate-500 text-xs leading-relaxed">{c.desc}</p>
+                    <p className="text-slate-600 text-xs leading-relaxed">{c.desc}</p>
                   </div>
                 </div>
               ))}

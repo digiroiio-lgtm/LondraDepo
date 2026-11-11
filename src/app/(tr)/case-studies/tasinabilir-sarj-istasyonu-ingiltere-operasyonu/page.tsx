@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -5,11 +6,14 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 import CaseHero from "@/components/CaseHero";
+import AuthorBox from "@/components/AuthorBox";
+import { TR_ARTICLES } from "@/content/tr-articles";
 import OperationsFlow from "@/components/OperationsFlow";
 import RelatedCases from "@/components/RelatedCases";
 
 import { SITE_URL } from "@/lib/site";
 import { trAlternates } from "@/lib/i18n";
+const ARTICLE = TR_ARTICLES["/case-studies/tasinabilir-sarj-istasyonu-ingiltere-operasyonu"];
 const PAGE_URL = `${SITE_URL}/case-studies/tasinabilir-sarj-istasyonu-ingiltere-operasyonu`;
 const WHATSAPP =
   "https://wa.me/447554195190?text=Merhaba%2C%20elektronik%20urun%20ingiltere%20operasyonu%20hakkinda%20bilgi%20almak%20istiyorum.";
@@ -17,13 +21,13 @@ const WHATSAPP =
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title:
-    "Taşınabilir Şarj İstasyonu İngiltere Operasyon Yönetimi | LondraDepo.com",
+    "Taşınabilir Şarj İstasyonu İngiltere Operasyonu | LondraDepo",
   description:
     "Taşınabilir şarj istasyonlarının İngiltere depo altyapısı, teknik hazırlık, SIM kart aktivasyonu, şarj kontrolü ve dağıtım operasyonu.",
   alternates: trAlternates("/case-studies/tasinabilir-sarj-istasyonu-ingiltere-operasyonu"),
   openGraph: {
     title:
-      "Taşınabilir Şarj İstasyonu — İngiltere Operasyon Yönetimi | LondraDepo.com",
+      "Taşınabilir Şarj İstasyonu — İngiltere Operasyon Yönetimi | LondraDepo",
     description:
       "Elektronik ürün fulfillment İngiltere: SIM aktivasyonu, şarj kontrolü, teknik hazırlık ve son kullanıcı sevkiyatı tek merkezden.",
     url: PAGE_URL,
@@ -58,11 +62,14 @@ const jsonLd = {
     {
       "@type": "Article",
       "@id": `${PAGE_URL}#article`,
-      headline:
-        "Taşınabilir Şarj İstasyonu — İngiltere Operasyon Yönetimi",
+      headline: ARTICLE.headline,
       description:
         "Taşınabilir şarj istasyonu ürünlerinin İngiltere depo altyapısı, SIM kart aktivasyonu, şarj kontrolü ve son kullanıcı sevkiyat operasyonu.",
       url: PAGE_URL,
+      ...(ARTICLE.published ? { datePublished: ARTICLE.published } : {}),
+      dateModified: ARTICLE.modified,
+      author: { "@type": "Person", name: "Sertaç Yılmaz", jobTitle: "Arca Trade Group Kurucu Ortağı", url: `${SITE_URL}/hakkimizda` },
+      contributor: { "@type": "Person", name: "Yusuf Barış", jobTitle: "Operasyon Müdürü" },
       publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
       image: { "@type": "ImageObject", url: `${SITE_URL}/logo.svg`, width: 640, height: 160 },
       mainEntityOfPage: PAGE_URL,
@@ -134,7 +141,7 @@ const faqs = [
   },
   {
     q: "Stok seviyesi ve teknik hazırlık durumu raporlanıyor mu?",
-    a: "Evet. Stok hareketi, teknik hazırlık durumu ve sevkiyat özeti düzenli aralıklarla Türkçe raporlarla iletilmektedir.",
+    a: "Evet. Stok hareketi, SIM aktivasyonu ve şarj kontrolü gibi teknik hazırlık durumu ve sevkiyat özeti düzenli aralıklarla Türkçe raporlarla iletilir; hangi ürünün gönderime hazır olduğunu görürsünüz.",
   },
 ];
 
@@ -181,6 +188,7 @@ export default function SarjIstasyonuCaseStudyPage() {
         <article className="py-12 px-4 bg-white">
           <div className="max-w-4xl mx-auto">
             <CaseHero
+              path="/case-studies/tasinabilir-sarj-istasyonu-ingiltere-operasyonu"
               industry="Elektronik & Smart Device"
               industryColor="text-teal-700 bg-teal-50"
               brand="Taşınabilir Şarj İstasyonu"
@@ -207,11 +215,11 @@ export default function SarjIstasyonuCaseStudyPage() {
                   operasyon altyapısı kurulması gerekiyordu.
                 </p>
                 <ul className="text-slate-700 text-sm space-y-2 list-none">
-                  <li>⚠️ SIM kart aktivasyonunun İngiltere&apos;de yapılması zorunluluğu</li>
-                  <li>⚠️ Cihaz şarj ve elektrik testi için lokal operasyon noktası ihtiyacı</li>
-                  <li>⚠️ Son kullanıcıya hızlı teslimat baskısı (next-day)</li>
-                  <li>⚠️ Teknik hazırlık süreçlerinin standart lojistik firmalarca karşılanamaması</li>
-                  <li>⚠️ Türkiye&apos;deki ekibin uzaktan koordinasyonu için Türkçe iletişim gerekliliği</li>
+                  <li><Emoji e="⚠️" /> SIM kart aktivasyonunun İngiltere&apos;de yapılması zorunluluğu</li>
+                  <li><Emoji e="⚠️" /> Cihaz şarj ve elektrik testi için lokal operasyon noktası ihtiyacı</li>
+                  <li><Emoji e="⚠️" /> Son kullanıcıya hızlı teslimat baskısı (next-day)</li>
+                  <li><Emoji e="⚠️" /> Teknik hazırlık süreçlerinin standart lojistik firmalarca karşılanamaması</li>
+                  <li><Emoji e="⚠️" /> Türkiye&apos;deki ekibin uzaktan koordinasyonu için Türkçe iletişim gerekliliği</li>
                 </ul>
               </div>
             </section>
@@ -265,7 +273,7 @@ export default function SarjIstasyonuCaseStudyPage() {
                     className="border border-slate-200 rounded-xl p-5 flex gap-4"
                   >
                     <span className="text-2xl flex-shrink-0" aria-hidden="true">
-                      {item.icon}
+                      <Emoji e={item.icon} />
                     </span>
                     <div>
                       <h3 className="font-bold text-[#0b2545] mb-1">{item.title}</h3>
@@ -330,7 +338,7 @@ export default function SarjIstasyonuCaseStudyPage() {
                   href={WHATSAPP}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold px-7 py-3.5 rounded-full transition"
+                  className="inline-flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white font-bold px-7 py-3.5 rounded-full transition"
                 >
                   WhatsApp&apos;tan Bilgi Alın
                 </a>
@@ -388,6 +396,9 @@ export default function SarjIstasyonuCaseStudyPage() {
                 </Link>
               </div>
             </div>
+
+            <AuthorBox path="/case-studies/tasinabilir-sarj-istasyonu-ingiltere-operasyonu" />
+
 
             <RelatedCases cases={relatedCases} />
           </div>

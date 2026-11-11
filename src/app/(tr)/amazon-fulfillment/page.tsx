@@ -1,4 +1,9 @@
+import Emoji from "@/components/visual/Emoji";
 import PageFaq from "@/components/PageFaq";
+import AmazonInboundTr from "@/components/AmazonInboundTr";
+import TrackedLink from "@/components/TrackedLink";
+import { bookingUrl } from "@/lib/booking";
+import TrClusterNav from "@/components/TrClusterNav";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -11,12 +16,12 @@ import { trAlternates } from "@/lib/i18n";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20Amazon%20fulfillment%20hizmeti%20hakkında%20bilgi%20almak%20istiyorum.";
 
 export const metadata: Metadata = {
-  title: "Amazon İngiltere Fulfillment | Amazon UK Stok & Sipariş | LondraDepo.com",
+  title: "Amazon UK Fulfillment: FBA Prep, FBM ve Depolama | LondraDepo",
   description:
-    "Amazon satıcıları için İngiltere fulfillment: stok depolama, sipariş yönetimi, pick & pack ve UK teslimat. Amazon FBA prep hizmeti de mevcut.",
+    "Amazon UK için Essex'te FBA prep, FBM sipariş karşılama ve haftalık £3,50 + KDV'den palet depolama; gümrükleme Arca üzerinden. Sabit minimum yok, 1 deneme paleti.",
   alternates: trAlternates("/amazon-fulfillment"),
   openGraph: {
-    title: "Amazon İngiltere Fulfillment | LondraDepo.com",
+    title: "Amazon İngiltere Fulfillment | LondraDepo",
     description: "Amazon UK fulfillment. Stok depolama, pick & pack ve UK teslimat desteği.",
     url: `${SITE_URL}/amazon-fulfillment`,
     siteName: "LondraDepo.com",
@@ -55,8 +60,11 @@ const faqs = [
   },
   {
     "q": "Amazon FBA prep hizmetiniz de var mı?",
-    "a": "Evet. Amazon FBA hazırlık hizmetimiz /amazon-prep-uk sayfamızda detaylı olarak anlatılmaktadır."
-  }
+    "a": "Evet. LondraDepo Essex'te Amazon FBA hazırlığı yapar: FNSKU etiketleme, ambalaj kontrolü ve koli hazırlığından sonra stok, sevkiyat planındaki Amazon UK deposuna teslim edilir. Ayrıntılar Amazon Prep UK sayfamızda."
+  },
+  { q: "Amazon FBA ile FBM arasındaki fark nedir?", a: "FBA'da stoğunuzu Amazon depolar ve gönderir; ürünler önce Amazon kurallarına göre hazırlanmalıdır. FBM'de siparişleri siz veya deponuz gönderir. LondraDepo ikisini de destekler: Essex'te FBA hazırlık ve FBM sipariş karşılama." },
+  { q: "Hazırlanan ürünleri Amazon UK depolarına gönderebilir misiniz?", a: "Evet. LondraDepo stoğunuzu Essex'te Amazon gerekliliklerine göre etiketler ve paketler, ardından sevkiyat planınızda atanan Amazon UK deposuna teslim eder." },
+  { q: "FBA ve FBM'yi aynı anda kullanabilir miyim?", a: "Evet. Stoğunuzun bir kısmını FBM ve diğer kanallar için LondraDepo'da tutup hazırlanmış partileri Amazon FBA'ya gönderebilirsiniz; böylece tek bir fulfillment modeline bağlı kalmazsınız." },
 ];
 
 const features = [
@@ -86,7 +94,7 @@ export default function AmazonFulfillmentPage() {
               <span className="text-white">Amazon Fulfillment</span>
             </nav>
             <div className="inline-block bg-white/10 border border-white/20 rounded-full px-4 py-1.5 text-sm text-slate-300 mb-4">
-              📦 Amazon üzerinden satış yapan işletmeler için
+              <Emoji e="📦" /> Amazon üzerinden satış yapan işletmeler için
             </div>
             <h1 className="text-3xl sm:text-4xl font-extrabold mb-4 leading-tight">
               Amazon İngiltere Fulfillment
@@ -105,10 +113,13 @@ export default function AmazonFulfillmentPage() {
               href={WHATSAPP}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
+              className="inline-flex items-center gap-2 bg-[#d62839] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
             >
               Amazon Fulfillment Hakkında Bilgi Al
             </a>
+            <TrackedLink kind="booking" source="amazon_fulfillment_tr_hero" href={bookingUrl("tr", "amazon_fulfillment_tr_hero")} className="ml-0 sm:ml-3 mt-3 sm:mt-0 inline-flex items-center gap-2 border border-white/60 hover:bg-white/10 text-white font-bold px-8 py-4 rounded-full transition">
+              15 dakikalık görüşme ayarlayın
+            </TrackedLink>
           </div>
         </section>
 
@@ -119,12 +130,18 @@ export default function AmazonFulfillmentPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {features.map((f) => (
                 <div key={f.title} className="border border-slate-200 rounded-2xl p-5">
-                  <div className="text-2xl mb-2">{f.icon}</div>
+                  <div className="text-2xl mb-2"><Emoji e={f.icon} /></div>
                   <h3 className="font-bold text-[#0b2545] mb-1">{f.title}</h3>
                   <p className="text-slate-600 text-sm leading-relaxed">{f.desc}</p>
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        <section className="py-12 px-4 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <AmazonInboundTr />
           </div>
         </section>
 
@@ -145,6 +162,7 @@ export default function AmazonFulfillmentPage() {
           </div>
         </section>
 
+        <TrClusterNav path="/amazon-fulfillment" />
         <PageFaq faqs={faqs} />
         <CtaCards />
       </main>

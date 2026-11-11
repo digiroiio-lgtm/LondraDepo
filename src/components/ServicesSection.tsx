@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 import Link from "next/link";
 
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20depo%20teklifi%20almak%20istiyorum.";
@@ -58,7 +59,7 @@ export default function ServicesSection() {
     <section id="hizmetler" className="py-20 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <p className="text-[#e63946] text-sm font-semibold uppercase tracking-widest mb-3">
+          <p className="text-[#d62839] text-sm font-semibold uppercase tracking-widest mb-3">
             Hizmetlerimiz
           </p>
           <h2 className="text-3xl font-extrabold text-[#0b2545] mb-3">
@@ -76,7 +77,7 @@ export default function ServicesSection() {
               key={s.title}
               className="border border-slate-200 rounded-2xl p-6 hover:shadow-lg transition flex flex-col"
             >
-              <div className="text-3xl mb-3">{s.icon}</div>
+              <div className="text-3xl mb-3"><Emoji e={s.icon} /></div>
               <h3 className="font-bold text-[#0b2545] text-lg mb-2">{s.title}</h3>
               <p className="text-slate-600 text-sm leading-relaxed flex-1 mb-4">{s.desc}</p>
               <div className="flex flex-col gap-2">
@@ -84,13 +85,13 @@ export default function ServicesSection() {
                   href={`https://wa.me/447554195190?text=Merhaba%2C%20${s.waMsg}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block text-sm font-semibold text-green-600 hover:text-green-700 transition"
+                  className="inline-block text-sm font-semibold text-green-700 hover:text-green-800 transition"
                 >
                   {s.cta} →
                 </a>
                 <Link
                   href={s.href}
-                  className="inline-block text-xs text-slate-400 hover:text-[#0b2545] transition"
+                  className="inline-block text-xs text-slate-500 hover:text-[#0b2545] transition"
                 >
                   Detaylı bilgi
                 </Link>

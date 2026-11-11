@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 import Link from "next/link";
 
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20depo%20teklifi%20almak%20istiyorum.";
@@ -50,13 +51,13 @@ export default function BlogInsightsSection() {
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
           <div>
-            <span className="text-xs font-bold uppercase tracking-widest text-[#e63946] mb-2 block">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#d62839] mb-2 block">
               Bilgi Merkezi
             </span>
             <h2 className="text-2xl md:text-3xl font-extrabold text-[#0b2545]">
               İngiltere İhracat Rehberleri
             </h2>
-            <p className="text-slate-500 text-sm mt-2 max-w-xl">
+            <p className="text-slate-600 text-sm mt-2 max-w-xl">
               Türkiye&apos;den İngiltere&apos;ye satış yapan firmalar için UK depo, fulfillment
               ve ihracat operasyonu rehberleri.
             </p>
@@ -81,7 +82,7 @@ export default function BlogInsightsSection() {
                 className="h-24 flex items-center justify-center"
                 style={{ background: "linear-gradient(135deg, #0b2545 0%, #2d5986 100%)" }}
               >
-                <span className="text-3xl opacity-80">{post.icon}</span>
+                <span className="text-3xl text-white opacity-90"><Emoji e={post.icon} /></span>
               </div>
               <div className="p-5 flex flex-col flex-1">
                 <span className={`text-xs font-semibold px-2 py-0.5 rounded-full w-fit mb-3 ${post.badgeColor}`}>
@@ -93,7 +94,7 @@ export default function BlogInsightsSection() {
                 <p className="text-slate-500 text-xs mb-3 line-clamp-2 leading-relaxed">
                   {post.excerpt}
                 </p>
-                <span className="text-xs text-slate-400">⏱ {post.readTime} okuma</span>
+                <span className="text-xs text-slate-500">⏱ {post.readTime} okuma</span>
               </div>
             </Link>
           ))}
@@ -115,7 +116,7 @@ export default function BlogInsightsSection() {
             <p className="text-white/70 text-sm leading-relaxed flex-1">
               {caseStudy.excerpt}
             </p>
-            <span className="text-[#e63946] font-semibold text-sm mt-4">Operasyonu incele →</span>
+            <span className="text-red-300 font-semibold text-sm mt-4">Operasyonu incele →</span>
           </Link>
 
           {/* FAQ snippet */}
@@ -148,7 +149,7 @@ export default function BlogInsightsSection() {
               href={WHATSAPP}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold px-6 py-3 rounded-full text-sm transition"
+              className="inline-flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white font-bold px-6 py-3 rounded-full text-sm transition"
             >
               WhatsApp&apos;tan hızlı bilgi alın
             </a>

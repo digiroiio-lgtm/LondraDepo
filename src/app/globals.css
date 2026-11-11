@@ -29,8 +29,9 @@ body {
 /* Article / blog prose */
 .article-body {
   color: #334155;
-  line-height: 1.8;
-  font-size: 1rem;
+  line-height: 1.85;
+  font-size: 1.0625rem;
+  max-width: 46rem;
 }
 
 .article-body h2 {
@@ -88,3 +89,11 @@ body {
   font-weight: 700;
 }
 
+
+/* Container planner: print only the plan. */
+@media print {
+  body.print-planner * { visibility: hidden; }
+  body.print-planner #planner-print,
+  body.print-planner #planner-print * { visibility: visible; }
+  body.print-planner #planner-print { position: absolute; left: 0; top: 0; width: 100%; border: 0; background: #fff; }
+}

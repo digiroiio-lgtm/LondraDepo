@@ -2,11 +2,12 @@ import { EN_PAGES } from "@/content/en";
 import type { PageKind } from "@/content/en/types";
 import { enAlternates, trAlternates, type Alternates } from "@/lib/i18n";
 import { SITE_URL } from "@/lib/site";
+import { TR_ARTICLES } from "@/content/tr-articles";
 
 type Freq = "weekly" | "monthly" | "yearly";
 type Entry = { path: string; changefreq: Freq; priority: number; alternates: Alternates; lastmod?: string };
 
-// Turkish URLs (unchanged). lastmod is omitted until verified modification dates are maintained per URL.
+// Turkish URLs (unchanged). lastmod is set only for articles whose dates are maintained in src/content/tr-articles.ts.
 const TR: ReadonlyArray<readonly [string, Freq, number]> = [
   ["/", "weekly", 1],
   ["/ingiltere-depo-avantajlari", "monthly", 0.9],
@@ -17,6 +18,17 @@ const TR: ReadonlyArray<readonly [string, Freq, number]> = [
   ["/ingiltere-e-ticaret-lojistigi", "monthly", 0.9],
   ["/siparis-toplama-paketleme", "monthly", 0.9],
   ["/ingiltere-depo-fiyatlari", "monthly", 0.9],
+  ["/ingiltere-depo-maliyet-hesaplama", "monthly", 0.8],
+  ["/konteyner-varis-planlayici", "monthly", 0.8],
+  ["/london-gateway-tilbury-depo", "monthly", 0.8],
+  ["/felixstowe-liman-depo", "monthly", 0.8],
+  ["/konteyner-bosaltma", "monthly", 0.8],
+  ["/otomotiv-yedek-parca-depolama", "monthly", 0.8],
+  ["/sektorler", "monthly", 0.7],
+  ["/teklif-al", "monthly", 0.8],
+  ["/ingiltere-ithalat-lojistigi", "monthly", 0.9],
+  ["/limandan-depoya-lojistik", "monthly", 0.8],
+  ["/ambalaj-catering-depolama", "monthly", 0.7],
   ["/turk-sirketleri-icin-ingiltere-depo", "monthly", 0.9],
   ["/turkiye-ingiltere-lojistik", "monthly", 0.9],
   ["/turkiyeden-ingiltereye-satis", "monthly", 0.9],
@@ -25,6 +37,7 @@ const TR: ReadonlyArray<readonly [string, Freq, number]> = [
   ["/ingiltere-fulfillment", "monthly", 0.9],
   ["/palet-depolama", "monthly", 0.9],
   ["/amazon-prep-uk", "monthly", 0.9],
+  ["/amazon-ingiltere-depo-konumlari", "monthly", 0.8],
   ["/depolama", "monthly", 0.9],
   ["/gumrukleme", "monthly", 0.9],
   ["/ellecleme", "monthly", 0.8],
@@ -50,6 +63,9 @@ const TR: ReadonlyArray<readonly [string, Freq, number]> = [
   ["/blog/ingiltere-palet-depolama-maliyetleri", "monthly", 0.7],
   ["/blog/amazon-fba-vs-uk-fulfillment", "monthly", 0.7],
   ["/blog/turkiyeden-ingiltereye-ihracat-rehberi", "monthly", 0.7],
+  ["/blog/ingiltere-3pl-nasil-secilir", "monthly", 0.7],
+  ["/blog/ingiltere-ithalat-maliyetleri", "monthly", 0.7],
+  ["/blog/amazon-fba-prep-kontrol-listesi", "monthly", 0.7],
   ["/privacy-policy", "yearly", 0.4],
   ["/cookie-policy", "yearly", 0.4],
   ["/sozlesme-kosullari", "yearly", 0.5],
@@ -72,7 +88,7 @@ const EN_ONLY: ReadonlyArray<readonly [string, Freq, number]> = [["/en/request-a
 const EN_PUBLISHED = "2026-11-10";
 
 export function trEntries(): Entry[] {
-  return TR.map(([path, changefreq, priority]) => ({ path, changefreq, priority, alternates: trAlternates(path) }));
+  return TR.map(([path, changefreq, priority]) => ({ path, changefreq, priority, alternates: trAlternates(path), lastmod: TR_ARTICLES[path]?.modified }));
 }
 
 export function enEntries(): Entry[] {

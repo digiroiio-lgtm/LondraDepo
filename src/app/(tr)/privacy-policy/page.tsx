@@ -9,7 +9,7 @@ import { trAlternates } from "@/lib/i18n";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Gizlilik Politikası | LondraDepo.com",
+  title: "Gizlilik Politikası | LondraDepo",
   description:
     "LondraDepo.com gizlilik politikası. Kişisel verilerinizin nasıl toplandığı, kullanıldığı, korunduğu ve UK GDPR kapsamındaki haklarınız hakkında bilgi.",
   alternates: trAlternates("/privacy-policy"),
@@ -34,7 +34,7 @@ export default function PrivacyPolicyPage() {
         <article className="py-14 px-4 bg-white">
           <div className="max-w-3xl mx-auto prose prose-slate max-w-none">
             <h1 className="text-3xl font-extrabold text-[#0b2545] mb-2">Gizlilik Politikası</h1>
-            <p className="text-sm text-slate-400 mb-8">Son güncelleme: {LAST_UPDATED}</p>
+            <p className="text-sm text-slate-500 mb-8">Son güncelleme: {LAST_UPDATED}</p>
 
             <section className="mb-8">
               <h2 className="text-xl font-bold text-[#0b2545] mb-3">1. Veri Sorumlusu</h2>

@@ -1,3 +1,5 @@
+import { ArticleDates, ShortAnswer } from "./ArticleMeta";
+
 interface CaseHeroProps {
   industry: string;
   industryColor?: string;
@@ -5,17 +7,21 @@ interface CaseHeroProps {
   title: string;
   subtitle: string;
   metrics: { label: string; value: string }[];
+  /** Case path; dates and the short answer come from src/content/tr-articles.ts. */
+  path?: string;
 }
 
 export default function CaseHero({
   industry,
-  industryColor = "text-[#e63946] bg-red-50",
+  industryColor = "text-[#d62839] bg-red-50",
   brand,
   title,
   subtitle,
   metrics,
+  path,
 }: CaseHeroProps) {
   return (
+    <>
     <div
       className="w-full rounded-2xl mb-8 overflow-hidden"
       style={{ minHeight: "320px" }}
@@ -72,5 +78,15 @@ export default function CaseHero({
         )}
       </div>
     </div>
+    {path && (
+      <>
+        <ArticleDates
+          path={path}
+          suffix={<> · Hazırlayan: Sertaç Yılmaz, Arca Trade Group Kurucu Ortağı · İnceleyen: Yusuf Barış, Operasyon Müdürü</>}
+        />
+        <ShortAnswer path={path} />
+      </>
+    )}
+    </>
   );
 }

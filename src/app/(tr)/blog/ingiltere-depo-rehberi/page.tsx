@@ -1,26 +1,30 @@
+import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 import ArticleHero from "@/components/ArticleHero";
+import ArticleSources from "@/components/ArticleSources";
+import { TR_ARTICLES } from "@/content/tr-articles";
 import CtaCards from "@/components/CtaCards";
 import AuthorBox from "@/components/AuthorBox";
 import RelatedArticles from "@/components/RelatedArticles";
 
 import { SITE_URL } from "@/lib/site";
 import { trAlternates } from "@/lib/i18n";
+const ARTICLE = TR_ARTICLES["/blog/ingiltere-depo-rehberi"];
 const PAGE_URL = `${SITE_URL}/blog/ingiltere-depo-rehberi`;
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20depo%20teklifi%20almak%20istiyorum.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "İngiltere Depo Hizmeti: Kapsamlı Rehber 2025 | LondraDepo.com",
+  title: "İngiltere Depo Hizmeti: Kapsamlı Rehber | LondraDepo",
   description:
     "Türkiye'den İngiltere'ye ihracat yapan markalar için UK depolama süreçleri, maliyetler, lokasyon seçimi ve doğru partner bulma rehberi.",
   alternates: trAlternates("/blog/ingiltere-depo-rehberi"),
   openGraph: {
-    title: "İngiltere Depo Hizmeti: Kapsamlı Rehber | LondraDepo.com",
+    title: "İngiltere Depo Hizmeti: Kapsamlı Rehber | LondraDepo",
     description: "UK depolama süreçleri, maliyetler ve doğru partner seçimi için kapsamlı rehber.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
@@ -43,35 +47,17 @@ const jsonLd = {
     },
     {
       "@type": "Article",
-      headline: "İngiltere Depo Hizmeti: Kapsamlı Rehber 2025",
+      headline: ARTICLE.headline,
       description: "Türkiye'den İngiltere'ye ihracat yapan markalar için UK depolama süreçleri, maliyetler ve partner seçimi.",
       url: PAGE_URL,
-      datePublished: "2025-06-01",
-      dateModified: "2026-01-15",
-      author: { "@type": "Person", name: "Sertaç Yılmaz" },
+      datePublished: ARTICLE.published,
+      dateModified: ARTICLE.modified,
+      mainEntityOfPage: { "@type": "WebPage", "@id": PAGE_URL },
+      author: { "@type": "Person", name: "Sertaç Yılmaz", jobTitle: "Arca Trade Group Kurucu Ortağı", url: `${SITE_URL}/hakkimizda` },
+      contributor: { "@type": "Person", name: "Yusuf Barış", jobTitle: "Operasyon Müdürü" },
       publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
       image: { "@type": "ImageObject", url: `${SITE_URL}/logo.svg`, width: 640, height: 160 },
       inLanguage: "tr-TR",
-    },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "İngiltere depo hizmetiniz hangi firmalar için uygun?",
-          acceptedAnswer: { "@type": "Answer", text: "Türkiye'den İngiltere'ye ihracat yapan markalar, e-ticaret satıcıları, toptancılar, gıda üreticileri ve ithalatçılar için uygundur." },
-        },
-        {
-          "@type": "Question",
-          name: "Paletli ürün kabul ediyor musunuz?",
-          acceptedAnswer: { "@type": "Answer", text: "Evet. İngiltere palet depolama ihtiyacı olan işletmelere uygun çözümler sağlıyoruz." },
-        },
-        {
-          "@type": "Question",
-          name: "Sadece depo mu, dağıtım da sağlıyor musunuz?",
-          acceptedAnswer: { "@type": "Answer", text: "Depolama ile birlikte dağıtım hazırlığı ve operasyon desteği de sunuyoruz." },
-        },
-      ],
     },
   ],
 };
@@ -83,11 +69,21 @@ const relatedArticles = [
   { href: "/blog/turkiyeden-ingiltereye-ihracat-rehberi", title: "Türkiye'den İngiltere'ye İhracat Rehberi", category: "İhracat", readTime: "10 dk", categoryColor: "bg-purple-50 text-purple-700" },
 ];
 
+
+const faqs = [
+  { q: "İngiltere depo hizmeti hangi firmalar için uygun?", a: "İngiltere depo hizmeti; Türkiye'den İngiltere'ye ihracat yapan markalar, e-ticaret satıcıları, toptancılar, gıda üreticileri ve ithalatçılar için uygundur. LondraDepo bu firmalara Rayleigh, Essex'ten depolama, fulfillment ve UK dağıtım sunar." },
+  { q: "Paletli ürün kabul ediyor musunuz?", a: "Evet. Paletli ve kolili ürünleri, FCL ve LCL konteyner teslimatları dahil kabul ediyoruz. Standart palet depolama haftalık palet başına £3,50 + KDV'den başlar; dökme koliler mal kabulde paletlenebilir." },
+  { q: "Sadece depolama mı, dağıtım da yapıyor musunuz?", a: "İkisi de. Depolamanın yanında sipariş toplama ve paketleme, e-ticaret fulfillment, Amazon FBA hazırlığı ve palet ya da koli ile UK dağıtım yapıyoruz; hepsi Essex'teki aynı depodan." },
+  { q: "İngiltere'de depo kiralamak mı, 3PL ile çalışmak mı?", a: "Kendi deponuz kira, personel, sigorta ve yazılım yatırımı gerektirir. 3PL ile bu sabit maliyetler olmadan ödediğiniz hizmet kadar ödersiniz; LondraDepo'da depolama haftalık palet başına £3,50 + KDV'den başlar." },
+  { q: "İngiltere depo seçerken nelere bakmalıyım?", a: "Konuma (liman ve müşterilere mesafe), her maliyet kaleminin nasıl fiyatlandığına, stok görünürlüğüne, satış kanallarına, iade sürecine, minimum şartlara, gümrük desteğine ve referanslara bakın. 3PL seçim rehberimizde sorulacak 12 soru var." },
+];
+
 export default function DepoRehberiPage() {
   return (
     <>
       <Header />
       <main>
+        <FaqJsonLd faqs={faqs} />
         <nav aria-label="breadcrumb" className="bg-slate-50 border-b border-slate-200">
           <div className="max-w-6xl mx-auto px-4 py-2 text-sm text-slate-500 flex flex-wrap gap-2">
             <Link href="/" className="hover:text-[#0b2545] transition">Ana Sayfa</Link>
@@ -101,11 +97,11 @@ export default function DepoRehberiPage() {
         <article className="py-10 px-4 bg-white">
           <div className="max-w-3xl mx-auto">
             <ArticleHero
+              path="/blog/ingiltere-depo-rehberi"
               category="Depolama"
               categoryColor="text-green-700 bg-green-50"
               title="İngiltere Depo Hizmeti: Kapsamlı Rehber"
               readTime="6 dakika"
-              date="Ocak 2026"
             />
 
             <p className="text-lg leading-relaxed text-slate-600 mb-8">
@@ -171,24 +167,15 @@ export default function DepoRehberiPage() {
                 <li>Konteyner kabulü yapabilme kapasitesi</li>
               </ul>
 
+              <ArticleSources path="/blog/ingiltere-depo-rehberi" />
+
               <h2>Sık Sorulan Sorular</h2>
-
-              <h3>İngiltere depo hizmetiniz hangi firmalar için uygun?</h3>
-              <p>
-                Türkiye&apos;den İngiltere&apos;ye ihracat yapan markalar, e-ticaret satıcıları,
-                toptancılar, gıda üreticileri ve ithalatçılar için uygundur.
-              </p>
-
-              <h3>Paletli ürün kabul ediyor musunuz?</h3>
-              <p>
-                Evet. İngiltere palet depolama ihtiyacı olan işletmelere uygun
-                çözümler sağlıyoruz.
-              </p>
-
-              <h3>Sadece depo mu, dağıtım da sağlıyor musunuz?</h3>
-              <p>
-                Depolama ile birlikte dağıtım hazırlığı ve operasyon desteği de sunuyoruz.
-              </p>
+              {faqs.map((f) => (
+                <div key={f.q}>
+                  <h3>{f.q}</h3>
+                  <p>{f.a}</p>
+                </div>
+              ))}
             </div>
 
             <div className="bg-[#0b2545] text-white rounded-2xl p-8 my-10 text-center">
@@ -201,7 +188,7 @@ export default function DepoRehberiPage() {
                   href={WHATSAPP}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold px-7 py-3.5 rounded-full transition"
+                  className="inline-flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white font-bold px-7 py-3.5 rounded-full transition"
                 >
                   WhatsApp&apos;tan hızlı bilgi alın
                 </a>
@@ -214,7 +201,7 @@ export default function DepoRehberiPage() {
               </div>
             </div>
 
-            <AuthorBox updatedDate="Ocak 2026" />
+            <AuthorBox path="/blog/ingiltere-depo-rehberi" />
 
             <RelatedArticles articles={relatedArticles} />
 

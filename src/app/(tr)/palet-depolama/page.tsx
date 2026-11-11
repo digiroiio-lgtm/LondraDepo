@@ -1,4 +1,7 @@
+import Icon, { iconFor } from "@/components/visual/Icon";
+import ProcessFlow from "@/components/visual/ProcessFlow";
 import FaqJsonLd from "@/components/FaqJsonLd";
+import TrClusterNav from "@/components/TrClusterNav";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -13,12 +16,12 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20palet%20depolama%
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "İngiltere Palet Depolama | UK Pallet Storage | LondraDepo.com",
+  title: "İngiltere Palet Depolama | UK Pallet Storage | LondraDepo",
   description:
     "İngiltere'de standart palet depolama haftalık £3,50 + KDV'den başlar. Essex merkezli depo; elleçleme, yükleme ve gümrükleme işlemleri duruma göre fiyatlandırılır.",
   alternates: trAlternates("/palet-depolama"),
   openGraph: {
-    title: "İngiltere Palet Depolama | LondraDepo.com",
+    title: "İngiltere Palet Depolama | LondraDepo",
     description:
       "UK'da palet bazında depolama. İthalatçılar ve toptancılar için maliyet kontrollü İngiltere pallet storage.",
     url: PAGE_URL,
@@ -66,11 +69,11 @@ const faqs = [
   },
   {
     q: "Paletler Türkiye'den İngiltere'ye nasıl geliyor?",
-    a: "Türkiye'den İngiltere'ye konteyner veya parsiyel yük ile gelen paletleriniz, Essex depomuzda teslim alınıyor.",
+    a: "Paletleriniz Türkiye'den İngiltere'ye konteyner veya parsiyel yükle gelir ve Essex depomuzda teslim alınır. Nakliye ve UK gümrüklemesi Arca Trade Group üzerinden yapılabilir ya da kendi nakliyecinizle gönderebilirsiniz.",
   },
   {
     q: "Paletlerin güvenliği nasıl sağlanıyor?",
-    a: "Depomuz kilitli ve kontrollü erişim sistemiyle korunmaktadır. Her palet numaralandırılır ve stok takibi yapılır.",
+    a: "Depomuz kilitli, kamerayla izlenen ve erişimi kontrollü bir alandır. Her palet mal kabulde sayılır, sisteme kaydedilir ve stok hareketleri Mintsoft WMS üzerinden takip edilir.",
   },
 ];
 
@@ -107,11 +110,26 @@ export default function PaletDepolamaPage() {
                 { title: "Dağıtıma Hazırlık", desc: "Paletler sipariş bazında ayrıştırılır ve dağıtıma hazırlanır." },
               ].map((item) => (
                 <div key={item.title} className="border border-slate-200 rounded-xl p-5">
+                  <span className="mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-red-50 text-[#d62839]">
+                    <Icon name={iconFor(item.title, item.desc)} />
+                  </span>
                   <h2 className="font-bold text-[#0b2545] mb-2">{item.title}</h2>
                   <p className="text-slate-600 text-sm">{item.desc}</p>
                 </div>
               ))}
             </div>
+
+            <section className="mb-12" aria-labelledby="palet-surec">
+              <h2 id="palet-surec" className="text-2xl font-extrabold text-[#0b2545] mb-5">Palet depolama nasıl işler?</h2>
+              <ProcessFlow
+                items={[
+                  { title: "Mal kabul", text: "Konteyner ve parsiyel teslimatlar Rayleigh, Essex deposunda teslim alınır ve sayılır." },
+                  { title: "Güvenli depolama", text: "Paletler kilitli, CCTV ile izlenen ve erişimi kontrollü depoda saklanır." },
+                  { title: "Stok raporu", text: "Stok hareketleri raporlanır; palet sayınızı ve durumunu takip edersiniz." },
+                  { title: "B2B sevk", text: "Paletler İngiltere içindeki toptan ve ticari müşterilerinize sevke hazırlanır." },
+                ]}
+              />
+            </section>
 
             <section className="mb-12" aria-labelledby="palet-planlama">
               <h2 id="palet-planlama" className="text-2xl font-extrabold text-[#0b2545] mb-5">
@@ -156,7 +174,7 @@ export default function PaletDepolamaPage() {
                 href={WHATSAPP}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold px-8 py-4 rounded-full transition"
+                className="inline-flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white font-bold px-8 py-4 rounded-full transition"
               >
                 WhatsApp ile Teklif Al
               </a>
@@ -189,6 +207,7 @@ export default function PaletDepolamaPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <TrClusterNav path="/palet-depolama" />
         <QuoteForm formId="tr_inline_quote" heading="Palet Depolama Teklifi Alın" intro="Ürün türünüzü, yaklaşık palet veya koli sayınızı ve ihtiyacınız olan hizmetleri yazın; ekibimiz size özel teklif hazırlasın. Standart palet depolama haftalık £3,50 + KDV'den başlar." presetServices={["Depolama"]} />
       </main>
       <Footer />

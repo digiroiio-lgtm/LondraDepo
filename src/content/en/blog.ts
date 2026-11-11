@@ -9,7 +9,7 @@ export const blogPages: EnPage[] = [
     kind: "article",
     parent: "/en/blog",
     article: { ...DATE, readMins: 6, section: "Warehousing" },
-    title: "UK Warehousing Guide: How It Works and How to Choose a Partner",
+    title: "UK Warehousing Guide: How It Works",
     description:
       "A practical guide to UK warehousing for overseas sellers: what a UK warehouse service is, who needs one, how the process works step by step and how to choose the right partner.",
     label: "UK Warehousing Guide",
@@ -63,7 +63,9 @@ export const blogPages: EnPage[] = [
     faqs: [
       { q: "Who is a UK warehouse service suitable for?", a: "Exporting brands, ecommerce sellers, wholesalers, food producers and importers that need stock in the UK." },
       { q: "Do you accept palletised goods?", a: "Yes. LondraDepo provides pallet storage for businesses that need it, starting from £3.50 + VAT per pallet per week." },
-      { q: "Do you only store goods, or distribute them too?", a: "Alongside storage we provide order preparation, fulfilment and UK distribution." },
+      { q: "Do you only store goods, or distribute them too?", a: "Both. Alongside storage, LondraDepo provides order picking and packing, ecommerce fulfilment, Amazon FBA prep and UK distribution by parcel or pallet, all from the same warehouse in Rayleigh, Essex." },
+      { q: "What does UK warehousing typically cost?", a: "At LondraDepo, standard pallet storage starts from £3.50 + VAT per pallet per week, so 10 pallets for 4 weeks start at £140 + VAT. Goods-in, fulfilment and delivery are quoted separately." },
+      { q: "How do I choose a UK warehouse partner?", a: "Compare providers on location, how each cost line is priced, stock visibility, sales channels, returns, minimums, contract terms, insurance, customs support and references. Our 3PL guide lists 12 questions to ask." },
     ],
     related: ["/en/blog/uk-warehousing-prices-2026", "/en/blog/what-is-a-uk-transit-warehouse", "/en/blog/what-is-uk-fulfilment", "/en/uk-warehousing"],
   },
@@ -116,8 +118,10 @@ export const blogPages: EnPage[] = [
       { q: "What is a UK fulfilment service?", a: "Fulfilment is the process of picking, packing and shipping customer orders from a warehouse. A UK fulfilment provider stores your products in the UK and sends orders to your customers." },
       { q: "Does LondraDepo support Amazon FBA?", a: "Yes. Through our Amazon prep service we make products FBA-compliant, label them and dispatch them to Amazon's fulfilment centre." },
       { q: "Do you fulfil Shopify and Etsy orders?", a: "Yes. Orders from Shopify, Etsy and other ecommerce platforms can be brought into our fulfilment process." },
+      { q: "How much does UK fulfilment cost?", a: "Storage starts from £3.50 + VAT per pallet per week at LondraDepo. Pick and pack, packaging, delivery and returns are priced per order and item, based on your products and monthly volumes." },
+      { q: "What is the difference between fulfilment and warehousing?", a: "Warehousing is receiving and storing stock. Fulfilment adds what happens when a customer orders: picking, packing, labelling, dispatch and returns. LondraDepo provides both from the same Essex warehouse." },
     ],
-    related: ["/en/blog/uk-warehousing-guide", "/en/blog/amazon-fba-vs-uk-fulfilment", "/en/blog/amazon-prep-uk-guide", "/en/uk-fulfilment"],
+    related: ["/en/shopify-fulfilment-uk", "/en/blog/uk-warehousing-guide", "/en/blog/amazon-fba-vs-uk-fulfilment", "/en/blog/amazon-prep-uk-guide", "/en/uk-fulfilment"],
   },
   {
     slug: "/en/blog/amazon-prep-uk-guide",
@@ -177,8 +181,10 @@ export const blogPages: EnPage[] = [
     ],
     faqs: [
       { q: "Can I send stock straight from my factory to your UK warehouse?", a: "Yes. You can ship products directly to our UK warehouse; we carry out the prep and send the stock on to Amazon." },
-      { q: "Do you help with shipment plans?", a: "Yes. We guide you through creating shipment plans in Amazon Seller Central." },
+      { q: "Do you help with shipment plans?", a: "Yes. We guide you through creating shipment plans in Amazon Seller Central and agree who creates each plan, so labelled stock goes to the Amazon UK fulfilment centre Amazon assigns." },
       { q: "Is there a minimum quantity?", a: "There is no fixed minimum. We work with both small batches and full container operations." },
+      { q: "What happens if stock is not prepared to Amazon's rules?", a: "Amazon can refuse stock that does not meet its labelling and packaging requirements or charge extra to fix it. Preparing goods in a UK warehouse before delivery lets problems be corrected before Amazon receives them." },
+      { q: "How is Amazon prep priced at LondraDepo?", a: "Amazon FBA prep is quoted for your products, quantities and the tasks needed, such as FNSKU labelling, protective packing and carton preparation. Share your SKUs and volumes for a quote." },
     ],
     related: ["/en/amazon-prep-uk", "/en/blog/amazon-fba-vs-uk-fulfilment", "/en/blog/what-is-uk-fulfilment", "/en/blog/uk-warehousing-prices-2026"],
   },
@@ -232,6 +238,9 @@ export const blogPages: EnPage[] = [
     faqs: [
       { q: "What is the difference between a transit warehouse and a standard warehouse?", a: "A transit warehouse holds goods temporarily before sending them on to another destination. A standard warehouse holds stock long term and distributes it order by order." },
       { q: "Can transit warehousing be combined with Amazon prep?", a: "Yes. When goods arrive at our Essex warehouse, transit handling and Amazon prep can be managed in the same operation." },
+      { q: "What is a UK transit warehouse?", a: "A UK transit or cross-dock warehouse holds goods briefly, sorts and labels them, then sends them on to UK customers, other warehouses or Amazon, instead of storing them long term. LondraDepo offers this in Essex." },
+      { q: "Who should use a transit warehouse?", a: "A transit warehouse suits businesses that ship bulk consignments into the UK but sell in smaller quantities or to several destinations, and want goods split and sent on quickly rather than stored." },
+      { q: "Can transit stock also be stored if needed?", a: "Yes. At LondraDepo, part of a delivery can be cross-docked straight on while the rest is stored from £3.50 + VAT per pallet per week and released as orders arrive." },
     ],
     related: ["/en/storage-services", "/en/blog/uk-warehousing-guide", "/en/blog/uk-pallet-storage-costs", "/en/essex-warehouse"],
   },
@@ -295,6 +304,8 @@ export const blogPages: EnPage[] = [
       { q: "How much does it cost to store one pallet in the UK?", a: "LondraDepo standard pallet storage starts from £3.50 + VAT per pallet per week. Extra services such as handling, loading and customs coordination are quoted separately." },
       { q: "How is UK fulfilment cost calculated?", a: "Fulfilment cost is the sum of storage, per-order pick and pack, packaging materials and carriage." },
       { q: "Can I use Amazon prep and fulfilment together?", a: "Yes. LondraDepo offers Amazon prep and 3PL fulfilment within one operation, which avoids paying for double handling." },
+      { q: "What is not included in the pallet storage price?", a: "The storage rate covers storage only. Goods-in, container unloading, re-palletising, labelling, pick and pack, packaging, delivery, returns and customs clearance are quoted separately for your operation." },
+      { q: "How can I estimate my monthly warehousing cost?", a: "Multiply your pallets by the number of weeks and the per-pallet weekly rate, then add the handling and delivery lines for your order profile. The storage cost calculator does the storage part for you." },
     ],
     related: ["/en/uk-warehousing-pricing", "/en/blog/uk-pallet-storage-costs", "/en/blog/amazon-fba-vs-uk-fulfilment", "/en/pallet-storage"],
   },
@@ -350,7 +361,9 @@ export const blogPages: EnPage[] = [
     faqs: [
       { q: "What is the weekly cost of storing one pallet in the UK?", a: "At LondraDepo, standard pallet storage starts from £3.50 + VAT per pallet per week. This covers storage only; handling, loading, unloading, re-palletising and customs coordination are quoted separately." },
       { q: "What affects the price of pallet storage?", a: "Pallet size and weight, product type, storage period, access frequency, warehouse location and any extra services." },
-      { q: "What is the minimum number of pallets?", a: "Minimum quantities and acceptance terms are confirmed at quotation stage, based on your products and operating needs." },
+      { q: "Is there a minimum number of pallets for UK storage?", a: "Minimum quantities and acceptance terms are confirmed at quotation stage, based on your products and operating needs." },
+      { q: "How much do 10 pallets cost to store for a month?", a: "At LondraDepo, 10 standard pallets for 4 weeks start at £140 + VAT, or £168 including 20% VAT, based on the published rate of £3.50 + VAT per pallet per week." },
+      { q: "Is VAT charged on pallet storage?", a: "Yes. Prices are quoted excluding VAT, and VAT is added at the UK standard rate of 20%. VAT-registered businesses can usually reclaim it." },
     ],
     related: ["/en/pallet-storage", "/en/uk-warehousing-pricing", "/en/blog/uk-warehousing-prices-2026", "/en/blog/what-is-a-uk-transit-warehouse"],
   },
@@ -394,6 +407,8 @@ export const blogPages: EnPage[] = [
       { q: "What is the advantage of 3PL fulfilment over Amazon FBA?", a: "With 3PL fulfilment you can run non-Amazon channels such as your website, Etsy and B2B customers from one warehouse, customise packaging and avoid Amazon's long-term storage fees." },
       { q: "Can Amazon FBA and a UK 3PL be used together?", a: "Yes. In a hybrid model some products are held in FBA and others are fulfilled by a 3PL, which can help on both cost and reach." },
       { q: "Does LondraDepo provide Amazon prep?", a: "Yes. FBA prep (labelling, packaging, polybagging and similar tasks) is offered alongside our 3PL fulfilment operation." },
+      { q: "When is Amazon FBA the better choice?", a: "Amazon FBA is strong if you sell mainly on Amazon and want Prime eligibility through Amazon's own network. Stock must be prepared to Amazon's rules before it is sent in." },
+      { q: "When is a UK 3PL the better choice?", a: "A UK 3PL suits sellers with several channels, such as a website, marketplaces and wholesale, because one stock in a UK warehouse can serve all of them and you keep control of packaging and returns." },
     ],
     related: ["/en/amazon-seller-warehousing-uk", "/en/amazon-prep-uk", "/en/blog/what-is-uk-fulfilment", "/en/blog/uk-warehousing-prices-2026"],
   },
@@ -402,9 +417,9 @@ export const blogPages: EnPage[] = [
     kind: "article",
     parent: "/en/blog",
     article: { ...DATE, readMins: 9, section: "Importing" },
-    title: "How to Import Goods into the UK: A Practical Guide for Overseas Businesses",
+    title: "How to Import Goods into the UK: A Practical Guide",
     description:
-      "A step-by-step guide to importing goods into the UK: GB EORI, commodity codes and the UK Global Tariff, customs declarations, duty and import VAT, rules of origin, product rules and choosing a UK warehouse.",
+      "How to import goods into the UK: GB EORI, commodity codes and the UK Global Tariff, customs declarations, duty and import VAT, rules of origin and choosing a UK warehouse.",
     label: "UK Importing Guide",
     h1: "How to Import Goods into the UK: A Practical Guide",
     lead:
@@ -447,6 +462,7 @@ export const blogPages: EnPage[] = [
           "Product certificates or licences where your goods require them",
         ],
       },
+      { type: "checklist" },
       {
         type: "text",
         h2: "Product rules to check before shipping",
@@ -461,29 +477,279 @@ export const blogPages: EnPage[] = [
       { q: "How much is import VAT in the UK?", a: "Import VAT is usually charged at the standard rate of 20% on the value of the goods including duty and transport costs to the UK, although some goods have reduced rates. VAT-registered businesses can often use postponed VAT accounting." },
       { q: "Can an overseas company be the importer of record?", a: "Yes, an overseas business with a GB EORI number can act as importer, but VAT and tax obligations depend on how you sell. Take professional advice before the first shipment." },
       { q: "Who can lodge the customs declaration for me?", a: "A customs agent or freight forwarder usually lodges it. Arca Trade Group, which operates LondraDepo, completes import declarations on behalf of customers." },
+      { q: "Can LondraDepo handle the whole import?", a: "Yes. Arca Trade Group, which operates LondraDepo, can arrange freight and lodge the UK customs declaration, and LondraDepo unloads, stores and fulfils the goods in Essex. You can also use your own forwarder." },
     ],
     related: ["/en/uk-import-logistics", "/en/uk-customs-clearance", "/en/container-unloading", "/en/locations/port-to-warehouse-logistics", "/en/uk-market-entry"],
   },
+  {
+    slug: "/en/blog/how-to-choose-a-uk-3pl",
+    tr: "/blog/ingiltere-3pl-nasil-secilir",
+    kind: "article",
+    parent: "/en/blog",
+    article: { ...DATE, readMins: 7, section: "Choosing a partner" },
+    title: "How to Choose a UK 3PL Warehouse: 12 Questions to Ask",
+    description:
+      "A practical checklist for choosing a UK 3PL warehouse: location, pricing structure, stock visibility, channels, returns, minimums, contracts, insurance, customs support and references.",
+    label: "Choosing a UK 3PL",
+    h1: "How to Choose a UK 3PL Warehouse: 12 Questions to Ask",
+    lead:
+      "To choose a UK 3PL (third-party logistics) warehouse, compare providers on twelve points: where the warehouse is, how each cost line is priced, how you see your stock, which sales channels they fulfil, how returns work, whether there are minimums, the contract and notice terms, insurance, customs and freight support, communication, references and whether you can visit. Asking the same questions to every provider makes quotes comparable and shows early whether a warehouse suits your products.",
+    sections: [
+      {
+        type: "table",
+        h2: "The 12 questions",
+        head: ["Question", "Why it matters"],
+        rows: [
+          ["1. Where is the warehouse, and how far is it from your arrival port and your customers?", "Distance drives haulage cost and delivery times, especially for container imports."],
+          ["2. How is each cost line priced?", "Storage, goods-in, pick and pack, packaging, delivery and returns are usually priced separately; compare totals for your real volumes, not headline rates."],
+          ["3. How will you see your stock?", "Ask which warehouse management system (WMS) they use and what reports or access you get."],
+          ["4. Which channels can they fulfil?", "Check Shopify, Amazon FBA prep or FBM, marketplaces and wholesale pallet orders, ideally from the same stock."],
+          ["5. How do returns work?", "Ask how returned items are checked, restocked or set aside, and how you are told."],
+          ["6. Are there minimum volumes or fees?", "Minimum monthly charges can make a small start expensive."],
+          ["7. What are the contract and notice terms?", "Check contract length, notice periods and how stock is released if you leave."],
+          ["8. What insurance applies to your goods?", "Ask what the warehouse insures and what you need to insure yourself."],
+          ["9. Can they help with freight and customs?", "One group handling freight, UK customs and the warehouse reduces handovers; check who lodges the declaration."],
+          ["10. Who will you talk to, and in which language?", "A named contact and a shared language make daily operations faster."],
+          ["11. Can they show similar clients?", "Case studies in your sector show they can handle your product type and order profile."],
+          ["12. Can you visit the site?", "A visit or video walk-through shows racking, cleanliness and security."],
+        ],
+      },
+      {
+        type: "text",
+        h2: "How to compare quotes fairly",
+        paras: [
+          "Send every provider the same brief: product type and sizes, number of SKUs, pallets or cartons in stock, monthly orders and average items per order, sales channels, return rate and delivery regions. Then compare the monthly total for that scenario, not individual rates, because a low storage price can be offset by higher handling or delivery charges.",
+          "For a first estimate of storage alone, multiply pallets by weeks by the per-pallet weekly rate. At LondraDepo, 10 standard pallets for 4 weeks start at £140 + VAT.",
+        ],
+      },
+      {
+        type: "table",
+        h2: "How LondraDepo answers these questions",
+        head: ["Topic", "LondraDepo"],
+        rows: [
+          ["Location", "Unit 19 Arterial Park, Rayleigh, Essex SS6 7FY: ~13 miles from London Gateway, ~16 miles from Tilbury, ~37 miles from central London"],
+          ["Storage price", "From £3.50 + VAT per pallet per week; other services quoted for your volumes"],
+          ["Stock visibility", "Stock and orders managed in Mintsoft WMS"],
+          ["Channels", "Shopify, Amazon FBA prep and FBM, marketplaces and wholesale pallet orders from the same stock"],
+          ["Minimums", "No fixed minimum; you can start with a trial pallet"],
+          ["Freight and customs", "Available through Arca Trade Group, which operates LondraDepo"],
+          ["Language", "English and Turkish"],
+          ["References", "Case studies in food, packaging, automotive, fashion, bulky goods and electronics"],
+        ],
+      },
+    ],
+    faqs: [
+      { q: "What is a 3PL warehouse?", a: "A 3PL (third-party logistics) warehouse stores your stock and handles goods-in, order picking, packing, delivery and returns for you, so you do not need your own warehouse or staff." },
+      { q: "What should I send a 3PL to get an accurate quote?", a: "Your product type and sizes, number of SKUs, pallets or cartons in stock, monthly orders and average items per order, sales channels, expected return rate and delivery regions." },
+      { q: "Is the cheapest storage rate the best deal?", a: "Not necessarily. Storage, goods-in, pick and pack, packaging, delivery and returns are usually priced separately, so compare the monthly total for your real volumes." },
+      { q: "Should I visit a 3PL warehouse before choosing?", a: "Yes, if you can. A visit or video walk-through shows racking, cleanliness and security, and lets you meet the team who will handle your stock day to day." },
+      { q: "What contract terms should I check with a 3PL?", a: "Check the contract length, the notice period and how stock is released if you leave, as well as any minimum monthly charges and what insurance applies to your goods." },
+    ],
+    related: ["/en/shopify-fulfilment-uk", "/en/uk-warehousing", "/en/uk-fulfilment", "/en/uk-warehousing-pricing", "/en/uk-storage-cost-calculator", "/en/industries"],
+  },
+  {
+    slug: "/en/blog/uk-import-costs",
+    tr: "/blog/ingiltere-ithalat-maliyetleri",
+    kind: "article",
+    parent: "/en/blog",
+    article: { ...DATE, readMins: 7, section: "Importing" },
+    title: "UK Import Costs: Duty, VAT and Logistics",
+    description:
+      "What it costs to import into the UK: freight, customs clearance, duty by commodity code, 20% import VAT, haulage, unloading, storage and fulfilment, with a worked example.",
+    label: "UK Import Costs",
+    h1: "What Does It Cost to Import Goods into the UK?",
+    lead:
+      "The cost of importing goods into the UK has two parts. Government charges are customs duty, set by the commodity code and origin of each product, and import VAT, usually 20% of the value of the goods including duty and transport to the UK. Logistics costs are freight, customs clearance, port-to-warehouse haulage, unloading, storage and order fulfilment. VAT-registered importers can often use postponed VAT accounting, so import VAT does not have to be paid in cash at the border.",
+    sections: [
+      {
+        type: "table",
+        h2: "The cost lines of a UK import",
+        head: ["Cost", "What sets it", "Who usually charges it"],
+        rows: [
+          ["Freight", "Mode (sea, road, rail, air), volume and route", "Freight forwarder"],
+          ["Customs clearance", "Number of declarations and lines", "Customs agent or forwarder"],
+          ["Customs duty", "Commodity code, customs value and origin; preferential origin can reduce it to 0%", "HMRC"],
+          ["Import VAT", "Usually 20% of the value including duty and transport to the UK; 5% or 0% for some goods", "HMRC (or postponed VAT accounting)"],
+          ["Port-to-warehouse haulage", "Distance from the port and container size", "Haulier or forwarder"],
+          ["Unloading and goods-in", "Container size, palletised or loose-loaded, SKU count", "Warehouse"],
+          ["Storage", "Pallets or cartons and how long they stay", "Warehouse (LondraDepo: from £3.50 + VAT per pallet per week)"],
+          ["Fulfilment and delivery", "Orders, items per order, parcel or pallet delivery", "Warehouse and carriers"],
+        ],
+      },
+      {
+        type: "steps",
+        h2: "Worked example: how import VAT is calculated",
+        intro: "A hypothetical consignment to show the order of the calculation. Your duty rate depends on your commodity code and origin.",
+        items: [
+          { title: "Customs value", text: "Goods invoiced at £10,000, plus £800 freight and insurance to the UK: £10,800." },
+          { title: "Customs duty", text: "With an assumed 4% duty rate: 4% of £10,800 = £432. With preferential origin, the rate could be 0%." },
+          { title: "VAT value", text: "Customs value plus duty: £10,800 + £432 = £11,232." },
+          { title: "Import VAT", text: "20% of £11,232 = £2,246.40, payable at import or accounted for through postponed VAT accounting if you are VAT-registered." },
+        ],
+      },
+      {
+        type: "text",
+        h2: "How to reduce UK import costs",
+        paras: [
+          "Check the commodity code for every product before shipping: it sets the duty rate, and GOV.UK states that just under half of UK most-favoured-nation tariff lines are 0%. If your goods qualify under a UK trade agreement, such as the UK–EU Trade and Cooperation Agreement or the UK–Turkey agreement, proof of origin can bring duty down to 0%.",
+          "On the logistics side, a warehouse close to your arrival port shortens the haulage leg, and handling unloading, storage and fulfilment in one building avoids paying to move stock between sites. Our Rayleigh warehouse is about 13 miles from London Gateway and 16 miles from Tilbury.",
+        ],
+      },
+      {
+        type: "sources",
+        h2: "Sources",
+        items: [
+          { label: "GOV.UK: The UK's integrated tariff schedule (share of 0% MFN tariff lines)", href: "https://www.gov.uk/government/publications/the-uks-integrated-tariff-schedule/the-uks-integrated-tariff-schedule" },
+          { label: "GOV.UK: VAT rates (20% standard, 5% reduced, 0% zero)", href: "https://www.gov.uk/vat-rates" },
+          { label: "US International Trade Administration (trade.gov): United Kingdom import requirements and documentation", href: "https://www.trade.gov/country-commercial-guides/united-kingdom-import-requirements-and-documentation" },
+        ],
+      },
+    ],
+    faqs: [
+      { q: "What rate of import VAT applies in the UK?", a: "Import VAT is usually charged at the standard rate of 20% on the value of the goods including duty and transport costs to the UK. Some goods have a 5% or 0% rate." },
+      { q: "How is UK customs duty calculated?", a: "Duty is a percentage of the customs value set by the product's commodity code in the UK tariff. Goods that meet the rules of origin under a UK trade agreement can qualify for a reduced or 0% rate with proof of origin." },
+      { q: "What is postponed VAT accounting?", a: "It lets VAT-registered importers account for import VAT on their VAT return instead of paying it at the border, which helps cash flow." },
+      { q: "What do UK warehousing costs add to an import?", a: "At LondraDepo, storage starts from £3.50 + VAT per pallet per week. Unloading, goods-in, fulfilment and delivery are quoted for your volumes." },
+      { q: "Who pays customs duty and import VAT?", a: "The importer of record pays customs duty and accounts for import VAT, not the warehouse. Using LondraDepo or Arca Trade Group's customs service does not make them the importer of record." },
+    ],
+    related: ["/en/blog/uk-importing-guide", "/en/uk-import-logistics", "/en/uk-customs-clearance", "/en/container-arrival-planner", "/en/uk-storage-cost-calculator"],
+  },
+  {
+    slug: "/en/blog/amazon-fba-prep-checklist",
+    tr: "/blog/amazon-fba-prep-kontrol-listesi",
+    kind: "article",
+    parent: "/en/blog",
+    article: { ...DATE, readMins: 5, section: "Amazon" },
+    title: "Amazon FBA Prep Checklist for UK Sellers",
+    description:
+      "Amazon FBA prep checklist for UK sellers: shipment plan, FNSKU labels, covering old barcodes, packaging, sets and bundles, carton labels and delivery to Amazon UK.",
+    label: "Amazon FBA Prep Checklist",
+    h1: "Amazon FBA Prep Checklist for UK Sellers",
+    lead:
+      "Before stock goes into Amazon's UK fulfilment centres, each unit must be identifiable and packed to Amazon's rules: create the shipment plan in Seller Central, label every unit with its FNSKU barcode, cover any other scannable barcodes, pack items so they arrive undamaged, mark sets and bundles, label every carton and deliver to the fulfilment centre Amazon assigns. Amazon updates its prep and packaging requirements, so check the current rules in Seller Central before each new product.",
+    sections: [
+      {
+        type: "list",
+        h2: "Before the goods arrive",
+        items: [
+          "Confirm each product's listing and FNSKU in Seller Central",
+          "Check the product's prep category and any category-specific requirements in Seller Central",
+          "Agree with your prep warehouse who creates the shipment plan and when",
+          "Send the warehouse the packing list, SKU details and the number of units per SKU",
+        ],
+      },
+      {
+        type: "list",
+        h2: "Unit preparation",
+        items: [
+          "Apply an FNSKU label to every unit, unless the product is eligible to use its manufacturer barcode",
+          "Cover or remove any other scannable barcodes on the unit",
+          "Bag, box or protect items that could be damaged, leak or come apart in transit",
+          "Mark sets and bundles so they are not split and sold separately",
+          "Check expiry-dated products are labelled in the format Amazon requires",
+        ],
+      },
+      {
+        type: "list",
+        h2: "Cartons and delivery",
+        items: [
+          "Pack cartons within Amazon's current weight and size limits",
+          "Apply the shipment carton labels Amazon generates to each carton",
+          "Palletise and label pallets if sending a pallet shipment",
+          "Book delivery to the assigned Amazon UK fulfilment centre",
+          "Track check-in until the stock shows as available for sale",
+        ],
+      },
+      { type: "checklist", variant: "fba" },
+      {
+        type: "text",
+        h2: "When to use an Amazon prep warehouse",
+        paras: [
+          "If your stock arrives in the UK from abroad, preparing it at a UK warehouse before it goes to Amazon lets you fix labelling or packaging problems before Amazon receives the goods. LondraDepo receives stock in Essex, applies FNSKU labels, checks packaging and delivers to the Amazon UK fulfilment centre on the shipment plan. The same stock can also serve Shopify, FBM and wholesale orders.",
+        ],
+      },
+    ],
+    faqs: [
+      { q: "What does Amazon FBA prep involve?", a: "It is the labelling, packing and preparation products need before Amazon accepts them into its fulfilment centres, such as FNSKU labels, protective packaging and carton labels." },
+      { q: "Do I need an FNSKU label on every unit?", a: "Usually yes. Each unit needs an Amazon barcode, normally the FNSKU, unless the product is eligible to use its manufacturer barcode. Check the product's settings in Seller Central." },
+      { q: "Can a UK warehouse do FBA prep for me?", a: "Yes. LondraDepo receives your stock in Essex, prepares it to Amazon's requirements and delivers it to the assigned Amazon UK fulfilment centre." },
+      { q: "Where can I download the FBA prep checklist?", a: "A printable one-page PDF of this checklist is available on this page. Leave your name and email and the download link appears immediately." },
+      { q: "Do Amazon's prep rules change?", a: "Yes. Amazon updates its prep and packaging requirements, so check the current rules in Seller Central for each product before shipping, even if you have sent similar stock before." },
+    ],
+    related: ["/en/amazon-prep-uk", "/en/amazon-fulfilment-uk", "/en/amazon-seller-warehousing-uk", "/en/blog/amazon-prep-uk-guide", "/en/blog/amazon-fba-vs-uk-fulfilment"],
+  },
 ];
+
+const guide = (slug: string) => {
+  const p = blogPages.find((g) => g.slug === slug);
+  if (!p) throw new Error(`blog hub: unknown guide ${slug}`);
+  return { href: p.slug, title: p.h1, text: p.description, tag: p.article?.section };
+};
 
 export const blogHub: EnPage = {
   slug: "/en/blog",
   tr: "/blog",
   kind: "hub",
-  title: "UK Warehousing & Fulfilment Guides",
+  modified: "2026-11-10",
+  title: "UK Warehousing, Fulfilment & Import Guides",
   description:
-    "Practical guides on UK warehousing, fulfilment, pallet storage costs, Amazon prep and FBA versus 3PL, written from experience running an Essex warehouse.",
-  label: "Blog",
+    "Practical guides for selling into the UK: warehousing and pallet storage costs, fulfilment, Amazon FBA prep, importing, duty and VAT, and how to choose a UK 3PL.",
+  label: "Guides",
   eyebrow: "Knowledge centre",
-  h1: "UK Warehousing and Fulfilment Guides",
+  h1: "UK Warehousing, Fulfilment and Import Guides",
   lead:
-    "Practical guides for businesses selling into the UK, written from our experience running a warehouse in Essex. They cover warehousing, fulfilment, pallet storage costs, Amazon prep and choosing between Amazon FBA and a UK 3PL.",
+    "These guides answer the questions overseas businesses ask before they hold stock in the UK: how UK warehousing works and what it costs, how fulfilment and Amazon FBA prep work, how to import goods and account for duty and import VAT, and how to choose a UK 3PL. Each is written from running our warehouse in Rayleigh, Essex, and links to the matching service and free planning tools.",
+  facts: [
+    `${blogPages.length} practical guides, updated November 2026`,
+    "Topics: warehousing costs, fulfilment, Amazon, importing, choosing a 3PL",
+    "Free tools: storage cost calculator and container arrival planner",
+    "Free downloads: UK import checklist and Amazon FBA prep checklist (PDF)",
+  ],
   sections: [
     {
       type: "links",
-      h2: "All guides",
-      items: blogPages.map((p) => ({ href: p.slug, title: p.h1, text: p.description, tag: p.article?.section })),
+      h2: "Start here",
+      intro: "New to UK warehousing? These three guides cover the basics, the costs and how to compare providers.",
+      items: [guide("/en/blog/uk-warehousing-guide"), guide("/en/blog/uk-warehousing-prices-2026"), guide("/en/blog/how-to-choose-a-uk-3pl")],
+    },
+    {
+      type: "links",
+      h2: "Warehousing and storage costs",
+      items: [guide("/en/blog/uk-warehousing-guide"), guide("/en/blog/uk-warehousing-prices-2026"), guide("/en/blog/uk-pallet-storage-costs"), guide("/en/blog/what-is-a-uk-transit-warehouse")],
+    },
+    {
+      type: "links",
+      h2: "Fulfilment and choosing a partner",
+      items: [guide("/en/blog/what-is-uk-fulfilment"), guide("/en/blog/how-to-choose-a-uk-3pl"), guide("/en/blog/amazon-fba-vs-uk-fulfilment")],
+    },
+    {
+      type: "links",
+      h2: "Amazon sellers",
+      items: [guide("/en/blog/amazon-prep-uk-guide"), guide("/en/blog/amazon-fba-prep-checklist"), guide("/en/blog/amazon-fba-vs-uk-fulfilment")],
+    },
+    {
+      type: "links",
+      h2: "Importing into the UK",
+      items: [guide("/en/blog/uk-importing-guide"), guide("/en/blog/uk-import-costs")],
+    },
+    {
+      type: "links",
+      h2: "Free tools and downloads",
+      items: [
+        { href: "/en/uk-storage-cost-calculator", title: "Storage cost calculator", text: "Pallets × weeks at £3.50 + VAT per pallet per week, with VAT shown.", tag: "Free tool" },
+        { href: "/en/container-arrival-planner", title: "Container arrival planner", text: "A dated checklist from UK port to our Essex warehouse, based on your ETA.", tag: "Free tool" },
+        { href: "/en/blog/uk-importing-guide", title: "UK import checklist (PDF)", text: "Set-up, products, documents, clearance and warehouse steps on two A4 pages.", tag: "Download" },
+        { href: "/en/blog/amazon-fba-prep-checklist", title: "Amazon FBA prep checklist (PDF)", text: "Unit preparation, cartons and delivery to Amazon UK on one A4 page.", tag: "Download" },
+      ],
     },
   ],
-  related: ["/en/case-studies", "/en/uk-fulfilment", "/en/pallet-storage"],
+  faqs: [
+    { q: "Where should I start if I am new to UK warehousing?", a: "Start with the UK warehousing guide for how it works, then the UK warehousing prices guide for the cost lines, and the 3PL guide for the questions to ask before you choose a provider." },
+    { q: "How much does UK warehousing cost?", a: "At LondraDepo, standard pallet storage starts from £3.50 + VAT per pallet per week, so 10 pallets for 4 weeks start at £140 + VAT. Goods-in, pick and pack, delivery and customs are quoted separately; the pricing and pallet storage guides explain each line." },
+    { q: "Which guide explains import duty and VAT?", a: "The UK import costs guide explains customs duty, import VAT at usually 20% of the value including duty and transport, and postponed VAT accounting, with a worked example. The UK importing guide covers the GB EORI, commodity codes and declarations." },
+    { q: "Which guide explains Amazon FBA prep?", a: "The Amazon Prep UK guide explains the step-by-step process and the Amazon FBA prep checklist covers unit preparation, carton labels and delivery to Amazon UK. A printable PDF version of the checklist is available." },
+    { q: "Are the guides written by warehouse operators?", a: "Yes. The guides are written from experience running LondraDepo's warehouse in Rayleigh, Essex, by Sertaç Yılmaz, founder and co-founder of Arca Trade Group, and reviewed by Operations Manager Yusuf Barış." },
+  ],
+  related: ["/en/uk-warehousing", "/en/uk-fulfilment", "/en/uk-import-logistics", "/en/amazon-prep-uk", "/en/case-studies"],
+  cta: { h2: "Ready to talk about your products?", text: "Tell us what you sell, your volumes and your channels, and we will propose a UK set-up." },
 };

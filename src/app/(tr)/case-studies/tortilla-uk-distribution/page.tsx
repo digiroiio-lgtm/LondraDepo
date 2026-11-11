@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -5,23 +6,26 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 import CaseHero from "@/components/CaseHero";
+import AuthorBox from "@/components/AuthorBox";
+import { TR_ARTICLES } from "@/content/tr-articles";
 import OperationsFlow from "@/components/OperationsFlow";
 import RelatedCases from "@/components/RelatedCases";
 
 import { SITE_URL } from "@/lib/site";
 import { trAlternates } from "@/lib/i18n";
+const ARTICLE = TR_ARTICLES["/case-studies/tortilla-uk-distribution"];
 const PAGE_URL = `${SITE_URL}/case-studies/tortilla-uk-distribution`;
 const WHATSAPP =
   "https://wa.me/447554195190?text=Merhaba%2C%20gida%20urunleri%20ingiltere%20operasyonu%20hakkinda%20bilgi%20almak%20istiyorum.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Tortilla Markası İngiltere Depo & Dağıtım Operasyonu | LondraDepo.com",
+  title: "Tortilla Markası İngiltere Depo & Dağıtım Operasyonu | LondraDepo",
   description:
     "Ankara merkezli tortilla ve flatbread üreticisinin İngiltere depo, fulfillment, GTİP, etiketleme ve dağıtım operasyonunun ölçeklenme hikayesi.",
   alternates: trAlternates("/case-studies/tortilla-uk-distribution"),
   openGraph: {
-    title: "Tortilla Markası — İngiltere Depo & Dağıtım Operasyonu | LondraDepo.com",
+    title: "Tortilla Markası — İngiltere Depo & Dağıtım Operasyonu | LondraDepo",
     description:
       "1 paletten aylık 6 x 40HC konteynere: Ankara tortilla üreticisinin İngiltere'de ölçeklenen operasyon hikayesi.",
     url: PAGE_URL,
@@ -31,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tortilla Markası İngiltere Dağıtım Operasyonu | LondraDepo.com",
+    title: "Tortilla Markası İngiltere Dağıtım Operasyonu | LondraDepo",
     description:
       "Ankara merkezli lavaş & flatbread üreticisinin İngiltere pazar girişi ve ölçeklenme operasyonu.",
   },
@@ -62,17 +66,14 @@ const jsonLd = {
     {
       "@type": "Article",
       "@id": `${PAGE_URL}#article`,
-      headline: "Tortilla Markası — İngiltere Depo & Dağıtım Operasyonu",
+      headline: ARTICLE.headline,
       description:
         "Ankara merkezli tortilla ve flatbread üreticisinin 1 paletten aylık 6 x 40HC konteynere uzanan İngiltere operasyonu.",
       url: PAGE_URL,
-      datePublished: "2026-01-01",
-      dateModified: "2026-05-24",
-      author: {
-        "@type": "Person",
-        name: "Sertaç Yılmaz",
-      },
-      contributor: { "@type": "Person", name: "Yusuf Barış" },
+      ...(ARTICLE.published ? { datePublished: ARTICLE.published } : {}),
+      dateModified: ARTICLE.modified,
+      author: { "@type": "Person", name: "Sertaç Yılmaz", jobTitle: "Arca Trade Group Kurucu Ortağı", url: `${SITE_URL}/hakkimizda` },
+      contributor: { "@type": "Person", name: "Yusuf Barış", jobTitle: "Operasyon Müdürü" },
       publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
       image: { "@type": "ImageObject", url: `${SITE_URL}/logo.svg`, width: 640, height: 160 },
       mainEntityOfPage: PAGE_URL,
@@ -140,7 +141,7 @@ const faqs = [
   },
   {
     q: "İngiltere gıda etiketleme süreçlerinde destek sağlıyor musunuz?",
-    a: "Evet. İngiltere pazarına uygun etiketleme gereksinimleri konusunda yönlendirme ve operasyonel destek sağlıyoruz.",
+    a: "Evet. İngiltere pazarına uygun etiketleme gereksinimleri konusunda operasyonel yönlendirme veriyor ve etiketleme işlemini depoda yapıyoruz; ürüne özel resmî gereklilikler için GOV.UK'yi kontrol etmenizi öneririz.",
   },
   {
     q: "GTİP yönlendirmesi yapıyor musunuz?",
@@ -152,7 +153,7 @@ const faqs = [
   },
   {
     q: "Gıda fulfillment operasyonu sağlıyor musunuz?",
-    a: "Evet. Gıda ürünleri için depolama, sipariş hazırlama, etiketleme ve İngiltere genelinde dağıtım operasyonu sunuyoruz.",
+    a: "Evet. Gıda ürünleri için Essex'te depolama, sipariş hazırlama, etiketleme ve İngiltere genelinde dağıtım yapıyoruz; bu örnekteki tortilla üreticisi 1 paletten aylık 6 × 40HC konteynere bu altyapıyla büyüdü.",
   },
 ];
 
@@ -198,6 +199,7 @@ export default function TortillaCaseStudyPage() {
           <div className="max-w-4xl mx-auto">
             {/* Hero */}
             <CaseHero
+              path="/case-studies/tortilla-uk-distribution"
               industry="Gıda / FMCG"
               industryColor="text-amber-700 bg-amber-50"
               brand="Tortilla & Flatbread"
@@ -228,7 +230,7 @@ export default function TortillaCaseStudyPage() {
                 </div>
                 <div className="text-3xl text-white/40 font-light hidden sm:block">→</div>
                 <div className="text-center px-4">
-                  <div className="text-4xl font-extrabold">🇬🇧</div>
+                  <div className="text-4xl font-extrabold"><Emoji e="🇬🇧" /></div>
                   <div className="text-white/60 text-xs mt-1">Aktif UK Dağıtım</div>
                 </div>
               </div>
@@ -236,11 +238,11 @@ export default function TortillaCaseStudyPage() {
 
             {/* Trust bar */}
             <div className="bg-slate-50 border border-slate-200 rounded-xl p-5 mb-10 flex flex-wrap gap-4 text-sm text-slate-600 justify-center md:justify-start">
-              <span>🍽️ FMCG gıda lojistiği</span>
-              <span>📋 GTİP yönlendirme desteği</span>
-              <span>🏷️ İngiltere etiketleme uyumu</span>
-              <span>📈 Kontrollü ölçeklenme modeli</span>
-              <span>🚢 Konteyner bazlı büyüme</span>
+              <span><Emoji e="🍽️" /> FMCG gıda lojistiği</span>
+              <span><Emoji e="📋" /> GTİP yönlendirme desteği</span>
+              <span><Emoji e="🏷️" /> İngiltere etiketleme uyumu</span>
+              <span><Emoji e="📈" /> Kontrollü ölçeklenme modeli</span>
+              <span><Emoji e="🚢" /> Konteyner bazlı büyüme</span>
             </div>
 
             {/* Problem */}
@@ -256,13 +258,13 @@ export default function TortillaCaseStudyPage() {
                   ihtiyaç belirlendi.
                 </p>
                 <ul className="text-slate-700 text-sm space-y-2 list-none">
-                  <li>⚠️ İngiltere gıda ithalat operasyonu organizasyonu</li>
-                  <li>⚠️ Tortilla ve flatbread ürün GTİP sınıflandırması</li>
-                  <li>⚠️ GTİP yönlendirme ihtiyacı</li>
-                  <li>⚠️ İngiltere pazarına uyumlu gıda etiketleme</li>
-                  <li>⚠️ Gıda fulfillment operasyonu altyapısı</li>
-                  <li>⚠️ İngiltere dağıtım ağına erişim</li>
-                  <li>⚠️ Ölçeklenebilir büyüme modeli</li>
+                  <li><Emoji e="⚠️" /> İngiltere gıda ithalat operasyonu organizasyonu</li>
+                  <li><Emoji e="⚠️" /> Tortilla ve flatbread ürün GTİP sınıflandırması</li>
+                  <li><Emoji e="⚠️" /> GTİP yönlendirme ihtiyacı</li>
+                  <li><Emoji e="⚠️" /> İngiltere pazarına uyumlu gıda etiketleme</li>
+                  <li><Emoji e="⚠️" /> Gıda fulfillment operasyonu altyapısı</li>
+                  <li><Emoji e="⚠️" /> İngiltere dağıtım ağına erişim</li>
+                  <li><Emoji e="⚠️" /> Ölçeklenebilir büyüme modeli</li>
                 </ul>
               </div>
             </section>
@@ -326,7 +328,7 @@ export default function TortillaCaseStudyPage() {
                     className="border border-slate-200 rounded-xl p-5 flex gap-4 hover:border-[#0b2545]/30 hover:shadow-sm transition"
                   >
                     <span className="text-2xl flex-shrink-0" aria-hidden="true">
-                      {item.icon}
+                      <Emoji e={item.icon} />
                     </span>
                     <div>
                       <h3 className="font-bold text-[#0b2545] mb-1">{item.title}</h3>
@@ -378,7 +380,7 @@ export default function TortillaCaseStudyPage() {
                     className="bg-[#f6f8fb] rounded-xl p-6 flex gap-4 hover:shadow-md transition"
                   >
                     <span className="text-3xl flex-shrink-0" aria-hidden="true">
-                      {r.icon}
+                      <Emoji e={r.icon} />
                     </span>
                     <div>
                       <div className="font-extrabold text-[#0b2545] mb-1">{r.label}</div>
@@ -403,7 +405,7 @@ export default function TortillaCaseStudyPage() {
                   href={WHATSAPP}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold px-7 py-3.5 rounded-full transition"
+                  className="inline-flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white font-bold px-7 py-3.5 rounded-full transition"
                 >
                   WhatsApp&apos;tan Bilgi Alın
                 </a>
@@ -484,26 +486,7 @@ export default function TortillaCaseStudyPage() {
               </div>
             </div>
 
-            {/* Author box */}
-            <div className="border border-slate-200 rounded-xl p-5 mb-8 flex items-start gap-4 bg-slate-50">
-              <div className="w-12 h-12 rounded-full bg-[#0b2545] flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
-                SY
-              </div>
-              <div>
-                <p className="font-bold text-[#0b2545] text-sm">Sertaç Yılmaz</p>
-                <p className="text-slate-500 text-xs mb-1">
-                  UK Warehouse Operations Specialist — LondraDepo.com
-                </p>
-                <p className="text-slate-600 text-xs leading-relaxed">
-                  İngiltere depolama ve fulfillment operasyonlarında uzman. Türk ihracatçılar için UK lojistik
-                  altyapısı kurulumu ve FMCG gıda operasyonu konusunda aktif danışmanlık.
-                </p>
-                <p className="text-slate-400 text-xs mt-1">
-                  İncelendi:{" "}
-                  <span className="font-medium text-slate-500">Yusuf Barış</span> — Operations Manager
-                </p>
-              </div>
-            </div>
+            <AuthorBox path="/case-studies/tortilla-uk-distribution" />
 
             <RelatedCases cases={relatedCases} />
           </div>

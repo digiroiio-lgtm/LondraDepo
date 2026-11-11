@@ -11,10 +11,18 @@ export type Section =
   | { type: "table"; h2: string; intro?: string; head: string[]; rows: string[][]; note?: string }
   | { type: "stats"; h2?: string; items: { value: string; label: string }[] }
   | { type: "links"; h2: string; intro?: string; items: LinkCard[] }
-  /** Attributed quotation; only verbatim, published statements. */
+  /** Attributed quotation; only verbatim published statements or wording approved by the person quoted. */
   | { type: "quote"; text: string; cite: string; sourceLabel?: string; sourceHref?: string }
   /** External references backing figures on the page. */
-  | { type: "sources"; h2: string; items: { label: string; href: string }[] };
+  | { type: "sources"; h2: string; items: { label: string; href: string }[] }
+  /** Interactive storage cost calculator. */
+  | { type: "calculator"; h2: string; intro?: string }
+  /** Email-gated PDF checklist download. */
+  | { type: "checklist"; variant?: "import" | "fba" }
+  /** Schematic route map: warehouse, London and the three container ports. */
+  | { type: "routemap"; h2?: string }
+  /** Interactive container arrival planner. */
+  | { type: "planner"; h2: string; intro?: string };
 
 export type PageKind = "home" | "service" | "article" | "case" | "hub" | "contact" | "legal";
 

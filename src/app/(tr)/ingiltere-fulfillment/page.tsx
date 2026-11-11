@@ -1,4 +1,5 @@
 import FaqJsonLd from "@/components/FaqJsonLd";
+import TrClusterNav from "@/components/TrClusterNav";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -13,12 +14,12 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20fulfillment%20tek
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "İngiltere Fulfillment Hizmeti | Türk Markalar için UK Operasyon | LondraDepo.com",
+  title: "İngiltere Fulfillment Hizmeti, Türk Markalar İçin | LondraDepo",
   description:
     "Türkiye'den ihracat yapan markalar için UK fulfillment: sipariş toplama, paketleme, Amazon, Etsy ve Shopify entegrasyonu. Essex merkezli operasyon.",
   alternates: trAlternates("/ingiltere-fulfillment"),
   openGraph: {
-    title: "İngiltere Fulfillment Hizmeti | LondraDepo.com",
+    title: "İngiltere Fulfillment Hizmeti | LondraDepo",
     description:
       "Amazon, Etsy ve Shopify satıcıları için İngiltere fulfillment ve sipariş hazırlama. Essex merkezli UK operasyon.",
     url: PAGE_URL,
@@ -67,11 +68,11 @@ const faqs = [
   },
   {
     q: "Shopify ve Etsy siparişlerini de karşılıyor musunuz?",
-    a: "Evet. Shopify, Etsy ve diğer e-ticaret platformlarından gelen siparişleri operasyon sürecimize dahil ediyoruz.",
+    a: "Evet. Shopify, Etsy ve diğer e-ticaret platformlarından gelen siparişleri aynı UK stoğundan karşılıyoruz; sipariş aktarımı ve entegrasyon kapsamı teklif öncesinde sizinle birlikte netleştirilir.",
   },
   {
     q: "Fulfillment için minimum stok miktarı var mı?",
-    a: "Sabit bir minimum stok zorunluluğumuz bulunmamaktadır. İhtiyaçlarınıza göre esnek çözümler sunuyoruz.",
+    a: "Sabit bir minimum stok zorunluluğumuz yok; 1 deneme paletiyle başlayabilirsiniz. Hacminiz büyüdükçe depolama ve fulfillment kapasitesi aynı Essex deposunda esnek şekilde artırılır.",
   },
 ];
 
@@ -124,7 +125,7 @@ export default function FulfillmentPage() {
                 href={WHATSAPP}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
+                className="inline-flex items-center gap-2 bg-[#d62839] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
               >
                 WhatsApp ile Teklif Al
               </a>
@@ -157,6 +158,7 @@ export default function FulfillmentPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <TrClusterNav path="/ingiltere-fulfillment" />
       </main>
       <Footer />
       <StickyWhatsappCta />

@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20depo%20teklifi%20almak%20istiyorum.";
 
 const industries = [
@@ -53,14 +54,14 @@ export default function IndustriesSection() {
               key={item.title}
               className="bg-white border border-slate-200 rounded-2xl p-6 hover:shadow-lg transition flex flex-col"
             >
-              <div className="text-3xl mb-3">{item.icon}</div>
+              <div className="text-3xl mb-3"><Emoji e={item.icon} /></div>
               <h3 className="font-bold text-[#0b2545] text-lg mb-2">{item.title}</h3>
               <p className="text-slate-600 text-sm leading-relaxed flex-1">{item.desc}</p>
               <a
                 href={WHATSAPP}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 text-sm font-semibold text-green-600 hover:text-green-700 transition"
+                className="mt-4 text-sm font-semibold text-green-700 hover:text-green-800 transition"
               >
                 {item.cta} →
               </a>
@@ -73,7 +74,7 @@ export default function IndustriesSection() {
             href={WHATSAPP}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold px-8 py-4 rounded-full transition"
+            className="inline-flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white font-bold px-8 py-4 rounded-full transition"
           >
             Sektörünüze Uygun Çözümü Keşfedin
           </a>

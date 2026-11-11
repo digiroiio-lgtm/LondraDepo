@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -5,22 +6,25 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 import CaseHero from "@/components/CaseHero";
+import AuthorBox from "@/components/AuthorBox";
+import { TR_ARTICLES } from "@/content/tr-articles";
 import OperationsFlow from "@/components/OperationsFlow";
 import RelatedCases from "@/components/RelatedCases";
 
 import { SITE_URL } from "@/lib/site";
 import { trAlternates } from "@/lib/i18n";
+const ARTICLE = TR_ARTICLES["/case-studies/uk-auto-parts-warehouse"];
 const PAGE_URL = `${SITE_URL}/case-studies/uk-auto-parts-warehouse`;
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20otomotiv%20yedek%20parca%20depolama%20hakkinda%20bilgi%20almak%20istiyorum.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "OEM Yedek Parça UK Depo | Automotive Fulfillment İngiltere | LondraDepo.com",
+  title: "OEM Yedek Parça İngiltere Depo Operasyonu | LondraDepo",
   description:
     "Lüks araç OEM ve aftermarket yedek parçalarının İngiltere'de depolanması, stok yönetimi ve UK dağıtım operasyonu. Automotive fulfillment UK operasyon örneği.",
   alternates: trAlternates("/case-studies/uk-auto-parts-warehouse"),
   openGraph: {
-    title: "OEM Yedek Parça — UK Automotive Fulfillment | LondraDepo.com",
+    title: "OEM Yedek Parça — UK Automotive Fulfillment | LondraDepo",
     description:
       "Lüks araç yedek parçalarının İngiltere'de hasar kontrollü depolanması ve UK dağıtım operasyonu.",
     url: PAGE_URL,
@@ -45,10 +49,14 @@ const jsonLd = {
     {
       "@type": "Article",
       "@id": `${PAGE_URL}#article`,
-      headline: "OEM & Yan Sanayi — İngiltere Yedek Parça Depolama Operasyonu",
+      headline: ARTICLE.headline,
       description:
         "Lüks araç OEM ve aftermarket yedek parçalarının İngiltere'de hasar kontrollü depolanması ve UK dağıtım ağına entegrasyonu.",
       url: PAGE_URL,
+      ...(ARTICLE.published ? { datePublished: ARTICLE.published } : {}),
+      dateModified: ARTICLE.modified,
+      author: { "@type": "Person", name: "Sertaç Yılmaz", jobTitle: "Arca Trade Group Kurucu Ortağı", url: `${SITE_URL}/hakkimizda` },
+      contributor: { "@type": "Person", name: "Yusuf Barış", jobTitle: "Operasyon Müdürü" },
       publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
       image: { "@type": "ImageObject", url: `${SITE_URL}/logo.svg`, width: 640, height: 160 },
       mainEntityOfPage: PAGE_URL,
@@ -110,7 +118,7 @@ const faqs = [
   },
   {
     q: "Lüks araç parçaları için özel depolama koşulları sağlıyor musunuz?",
-    a: "Evet. Boyalı ve hassas yüzeyli parçalar için korumalı raf ve depolama alanı kullanıyoruz.",
+    a: "Evet. Boyalı ve hassas yüzeyli parçalar korumalı raf ve depolama alanında tutulur; mal kabulde ve sevkte fotoğraflı kontrol yapılır ve sevkiyatta köpük, balonlu naylon ve sağlam koli kullanılır.",
   },
   {
     q: "Stok seviyeleri düzenli olarak raporlanıyor mu?",
@@ -153,6 +161,7 @@ export default function AutoPartsCaseStudyPage() {
         <article className="py-12 px-4 bg-white">
           <div className="max-w-4xl mx-auto">
             <CaseHero
+              path="/case-studies/uk-auto-parts-warehouse"
               industry="Otomotiv"
               industryColor="text-blue-700 bg-blue-50"
               brand="OEM & Yan Sanayi"
@@ -176,11 +185,11 @@ export default function AutoPartsCaseStudyPage() {
                   memnuniyetsizliğini artırıyordu.
                 </p>
                 <ul className="text-slate-700 text-sm space-y-2 list-none">
-                  <li>⚠️ Büyük hacimli ve ağır parçaların uzun yolculukta hasar riski</li>
-                  <li>⚠️ UK bayi taleplerine yetersiz response süresi</li>
-                  <li>⚠️ Lüks araç parçaları için özel depolama ihtiyacı</li>
-                  <li>⚠️ Online UK satışında teslimat rekabetçiliği kaybı</li>
-                  <li>⚠️ Stok takibi ve iade yönetimi için UK'da operasyon noktası gerekliliği</li>
+                  <li><Emoji e="⚠️" /> Büyük hacimli ve ağır parçaların uzun yolculukta hasar riski</li>
+                  <li><Emoji e="⚠️" /> UK bayi taleplerine yetersiz response süresi</li>
+                  <li><Emoji e="⚠️" /> Lüks araç parçaları için özel depolama ihtiyacı</li>
+                  <li><Emoji e="⚠️" /> Online UK satışında teslimat rekabetçiliği kaybı</li>
+                  <li><Emoji e="⚠️" /> Stok takibi ve iade yönetimi için UK'da operasyon noktası gerekliliği</li>
                 </ul>
               </div>
             </section>
@@ -203,7 +212,7 @@ export default function AutoPartsCaseStudyPage() {
                   { icon: "📊", title: "Stok Raporlama", desc: "Periyodik stok raporu ve düşük stok uyarıları Türkçe olarak iletildi." },
                 ].map((item) => (
                   <div key={item.title} className="border border-slate-200 rounded-xl p-5 flex gap-4">
-                    <span className="text-2xl flex-shrink-0" aria-hidden="true">{item.icon}</span>
+                    <span className="text-2xl flex-shrink-0" aria-hidden="true"><Emoji e={item.icon} /></span>
                     <div>
                       <h3 className="font-bold text-[#0b2545] mb-1">{item.title}</h3>
                       <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
@@ -250,7 +259,7 @@ export default function AutoPartsCaseStudyPage() {
                   href={WHATSAPP}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold px-7 py-3.5 rounded-full transition"
+                  className="inline-flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white font-bold px-7 py-3.5 rounded-full transition"
                 >
                   WhatsApp&apos;tan hızlı bilgi alın
                 </a>
@@ -286,6 +295,9 @@ export default function AutoPartsCaseStudyPage() {
                 <Link href="/essex-depo" className="text-sm text-[#0b2545] hover:underline">→ Essex Depo</Link>
               </div>
             </div>
+
+            <AuthorBox path="/case-studies/uk-auto-parts-warehouse" />
+
 
             <RelatedCases cases={relatedCases} />
           </div>

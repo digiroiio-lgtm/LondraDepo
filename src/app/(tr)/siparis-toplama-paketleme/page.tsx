@@ -1,4 +1,6 @@
+import Emoji from "@/components/visual/Emoji";
 import FaqJsonLd from "@/components/FaqJsonLd";
+import TrClusterNav from "@/components/TrClusterNav";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -11,7 +13,7 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20sipariş%20toplam
 const TEL = "tel:+447554195190";
 
 export const metadata: Metadata = {
-  title: "Sipariş Toplama ve Paketleme (Pick & Pack) İngiltere | LondraDepo.com",
+  title: "Sipariş Toplama ve Paketleme (Pick & Pack) İngiltere | LondraDepo",
   description:
     "İngiltere'de sipariş toplama ve paketleme hizmeti. Pick & pack, kargo etiketleme ve UK sevkiyat. Online mağaza siparişleriniz için depo operasyonu.",
   keywords: [
@@ -29,7 +31,7 @@ export const metadata: Metadata = {
   ],
   alternates: trAlternates("/siparis-toplama-paketleme"),
   openGraph: {
-    title: "Sipariş Toplama ve Paketleme (Pick & Pack) | LondraDepo.com",
+    title: "Sipariş Toplama ve Paketleme (Pick & Pack) | LondraDepo",
     description: "UK'de sipariş toplama ve paketleme. Pick & pack, kargo etiketleme, sevkiyat.",
     url: `${SITE_URL}/siparis-toplama-paketleme`,
     siteName: "LondraDepo.com",
@@ -152,7 +154,7 @@ export default function SiparisToplama() {
             </nav>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4 leading-tight">
               Sipariş Toplama ve Paketleme{" "}
-              <span className="text-[#e63946]">(Pick &amp; Pack)</span>
+              <span className="text-[#d62839]">(Pick &amp; Pack)</span>
             </h1>
             <p className="text-slate-300 text-lg leading-relaxed max-w-3xl mb-8">
               Online mağazanızdan gelen siparişler Essex depomuzda karşılanır.
@@ -164,7 +166,7 @@ export default function SiparisToplama() {
                 href={WHATSAPP}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
+                className="inline-flex items-center justify-center gap-2 bg-[#d62839] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
               >
                 Pick &amp; Pack Teklifi Al
               </a>
@@ -192,7 +194,7 @@ export default function SiparisToplama() {
                 <div key={step.num} className="flex flex-col items-center text-center relative">
                   <div className="w-14 h-14 rounded-full bg-[#0b2545] text-white flex flex-col items-center justify-center mb-2">
                     <span className="text-xs font-bold opacity-60">{step.num}</span>
-                    <span className="text-lg leading-none">{step.icon}</span>
+                    <span className="text-lg leading-none"><Emoji e={step.icon} /></span>
                   </div>
                   <h3 className="font-bold text-[#0b2545] text-sm mb-1">{step.label}</h3>
                   <p className="text-slate-500 text-xs leading-relaxed">{step.desc}</p>
@@ -214,7 +216,7 @@ export default function SiparisToplama() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {included.map((item) => (
                 <div key={item.title} className="border border-slate-200 rounded-2xl p-5">
-                  <div className="text-2xl mb-2">{item.icon}</div>
+                  <div className="text-2xl mb-2"><Emoji e={item.icon} /></div>
                   <h3 className="font-bold text-[#0b2545] mb-1">{item.title}</h3>
                   <p className="text-slate-600 text-sm leading-relaxed">{item.desc}</p>
                 </div>
@@ -237,7 +239,7 @@ export default function SiparisToplama() {
               href={WHATSAPP}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
+              className="inline-flex items-center gap-2 bg-[#d62839] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
             >
               Hemen Teklif Al
             </a>
@@ -282,6 +284,7 @@ export default function SiparisToplama() {
             </div>
           </div>
         </section>
+        <TrClusterNav path="/siparis-toplama-paketleme" />
       </main>
       <Footer />
       <StickyWhatsappCta />

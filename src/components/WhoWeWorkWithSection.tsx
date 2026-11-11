@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20depo%20teklifi%20almak%20istiyorum.";
 
 const customers = [
@@ -38,7 +39,7 @@ export default function WhoWeWorkWithSection() {
     <section className="py-20 px-4 bg-[#f6f8fb]">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <p className="text-[#e63946] text-sm font-semibold uppercase tracking-widest mb-3">
+          <p className="text-[#d62839] text-sm font-semibold uppercase tracking-widest mb-3">
             Müşterilerimiz
           </p>
           <h2 className="text-3xl font-extrabold text-[#0b2545] mb-4">
@@ -56,7 +57,7 @@ export default function WhoWeWorkWithSection() {
               key={c.title}
               className="bg-white border border-slate-200 rounded-2xl p-6 hover:shadow-md transition"
             >
-              <div className="text-3xl mb-3">{c.icon}</div>
+              <div className="text-3xl mb-3"><Emoji e={c.icon} /></div>
               <h3 className="font-bold text-[#0b2545] text-lg mb-2">{c.title}</h3>
               <p className="text-slate-600 text-sm leading-relaxed">{c.desc}</p>
             </div>

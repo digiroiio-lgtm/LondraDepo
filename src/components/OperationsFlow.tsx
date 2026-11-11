@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 interface Step {
   step: number;
   title: string;
@@ -23,7 +24,7 @@ export default function OperationsFlow({ steps }: OperationsFlowProps) {
             </div>
             <div className="flex-1 bg-slate-50 border border-slate-200 rounded-xl p-5">
               <div className="flex items-center gap-2 mb-2">
-                <span className="text-xl" aria-hidden="true">{s.icon}</span>
+                <span className="text-xl" aria-hidden="true"><Emoji e={s.icon} /></span>
                 <h3 className="font-bold text-[#0b2545]">{s.title}</h3>
               </div>
               <p className="text-slate-600 text-sm leading-relaxed">{s.desc}</p>

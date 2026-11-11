@@ -1,4 +1,7 @@
+import PageFaq from "@/components/PageFaq";
+import Emoji from "@/components/visual/Emoji";
 import type { Metadata } from "next";
+import RouteMap from "@/components/visual/RouteMap";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -11,12 +14,12 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20Essex%20depo%20hi
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Essex Depo Hizmeti | Essex Warehouse UK | LondraDepo.com",
+  title: "Essex Depo Hizmeti | Essex Warehouse UK | LondraDepo",
   description:
     "Londra yakını Essex'te depo hizmeti. Türkiye'den İngiltere'ye gelen yükler için güvenli depolama ve Essex warehouse çözümleri.",
   alternates: trAlternates("/essex-depo"),
   openGraph: {
-    title: "Essex Depo Hizmeti | LondraDepo.com",
+    title: "Essex Depo Hizmeti | LondraDepo",
     description: "Essex, Londra yakını depo ve lojistik çözümleri. Türk ihracatçıları için UK warehouse operasyonu.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
@@ -55,6 +58,15 @@ const jsonLd = {
   ],
 };
 
+
+const faqs = [
+  { q: "Essex depo nerede?", a: "LondraDepo deposu Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY adresindedir; A127 ve M25'e doğrudan bağlantılıdır. İngiltere'ye ithalat yapan ve Büyük Britanya genelinde satan firmalara hizmet verir." },
+  { q: "Essex depo Londra'ya ne kadar uzak?", a: "Depo Londra merkezine karayoluyla yaklaşık 37 mil, A127 üzerinden Doğu Londra'ya yaklaşık 40 dakika uzaklıktadır. Londra'nın içinde değildir ama Londra ve Güneydoğu'ya hizmet vermek için iyi konumdadır." },
+  { q: "Essex depoya en yakın limanlar hangileri?", a: "DP World London Gateway karayoluyla yaklaşık 13 mil, Tilbury Limanı yaklaşık 16 mil uzaklıktadır; ikisi de araçla yaklaşık 20 dakika. Felixstowe Limanı yaklaşık 62 mil uzaklıktadır." },
+  { q: "Essex depo komple konteyner kabul ediyor mu?", a: "Evet. Depo 20ft, 40ft ve 40ft high-cube FCL konteynerlerin yanı sıra LCL ve paletli parsiyel yükleri kabul eder. Her teslimat sayılır, görünür hasar kontrol edilir ve Mintsoft WMS'e kaydedilir." },
+  { q: "Essex depoda depolama ne kadar tutar?", a: "Standart palet depolama haftalık palet başına £3,50 + KDV'den başlar; 10 palet 4 hafta için £140 + KDV. Mal kabul, elleçleme, fulfillment ve teslimat operasyonunuza göre tekliflendirilir." },
+];
+
 export default function EssexDepoPage() {
   return (
     <>
@@ -79,7 +91,7 @@ export default function EssexDepoPage() {
 
             {/* Address card */}
             <div className="border border-slate-200 rounded-2xl p-6 mb-8 flex flex-col sm:flex-row gap-4 items-start">
-              <div className="text-3xl">📍</div>
+              <div className="text-3xl"><Emoji e="📍" /></div>
               <div>
                 <p className="font-bold text-[#0b2545] mb-1">Depo Adresi</p>
                 <p className="text-slate-700 text-sm leading-relaxed">
@@ -101,12 +113,12 @@ export default function EssexDepoPage() {
             <div className="bg-[#0b2545] text-white rounded-2xl p-8 mb-10">
               <h2 className="text-xl font-bold mb-4">Neden Essex?</h2>
               <ul className="space-y-2 text-sm text-slate-200">
-                <li>✓ Doğu Londra&apos;ya ~40 dakika, Londra merkezine yaklaşık 1 saat (A127)</li>
-                <li>✓ Felixstowe Limanı&apos;na karayoluyla yaklaşık 1–1¼ saat — İngiltere&apos;nin en büyük konteyner limanı</li>
-                <li>✓ Tilbury Limanı&apos;na ~30 dakika — Türkiye&apos;den gelen ro-ro ve konteyner hatları</li>
-                <li>✓ M25 çevre yolu üzerinden İngiltere kuzeyine ve güneyine kolay dağıtım</li>
-                <li>✓ Amazon UK depolarına (Tilbury, Dartford) hızlı teslimat</li>
-                <li>✓ Türkiye&apos;den gelen FCL ve LCL konteynerlerin doğrudan kabulü</li>
+                <li><Emoji e="✓" /> Doğu Londra&apos;ya ~40 dakika, Londra merkezine yaklaşık 1 saat (A127)</li>
+                <li><Emoji e="✓" /> Felixstowe Limanı&apos;na karayoluyla yaklaşık 1–1¼ saat — İngiltere&apos;nin en büyük konteyner limanı</li>
+                <li><Emoji e="✓" /> Tilbury Limanı&apos;na ~30 dakika — Türkiye&apos;den gelen ro-ro ve konteyner hatları</li>
+                <li><Emoji e="✓" /> M25 çevre yolu üzerinden İngiltere kuzeyine ve güneyine kolay dağıtım</li>
+                <li><Emoji e="✓" /> Amazon UK depolarına (Tilbury, Dartford) hızlı teslimat</li>
+                <li><Emoji e="✓" /> Türkiye&apos;den gelen FCL ve LCL konteynerlerin doğrudan kabulü</li>
               </ul>
             </div>
 
@@ -144,7 +156,7 @@ export default function EssexDepoPage() {
                 href={WHATSAPP}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold px-8 py-4 rounded-full transition"
+                className="inline-flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white font-bold px-8 py-4 rounded-full transition"
               >
                 WhatsApp ile Teklif Al
               </a>
@@ -161,10 +173,19 @@ export default function EssexDepoPage() {
           </div>
         </section>
 
+        <section className="py-12 px-4 bg-white">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-2xl font-extrabold text-[#0b2545] mb-4">Essex depomuzdan Londra ve limanlara mesafeler</h2>
+            <RouteMap lang="tr" />
+          </div>
+        </section>
+
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <PageFaq faqs={faqs} />
       </main>
       <Footer />
       <StickyWhatsappCta />

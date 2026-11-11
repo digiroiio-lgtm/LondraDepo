@@ -1,4 +1,6 @@
+import Emoji from "@/components/visual/Emoji";
 import FaqJsonLd from "@/components/FaqJsonLd";
+import TrClusterNav from "@/components/TrClusterNav";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -11,7 +13,7 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20İngiltere%20e-ti
 const TEL = "tel:+447554195190";
 
 export const metadata: Metadata = {
-  title: "İngiltere E-Ticaret Lojistiği | Sipariş Karşılama UK | LondraDepo.com",
+  title: "İngiltere E-Ticaret Lojistiği | Sipariş Karşılama UK | LondraDepo",
   description:
     "İngiltere e-ticaret lojistiği: Shopify, Amazon ve online mağaza siparişleri için depolama, pick & pack, sipariş karşılama ve İngiltere teslimat.",
   keywords: [
@@ -30,7 +32,7 @@ export const metadata: Metadata = {
   ],
   alternates: trAlternates("/ingiltere-e-ticaret-lojistigi"),
   openGraph: {
-    title: "İngiltere E-Ticaret Lojistiği | LondraDepo.com",
+    title: "İngiltere E-Ticaret Lojistiği | LondraDepo",
     description: "UK e-ticaret lojistiği ve sipariş karşılama. Shopify, Amazon ve online mağaza entegrasyonu.",
     url: `${SITE_URL}/ingiltere-e-ticaret-lojistigi`,
     siteName: "LondraDepo.com",
@@ -150,7 +152,7 @@ export default function IngiltereETicaretLojistigi() {
             </nav>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4 leading-tight">
               İngiltere{" "}
-              <span className="text-[#e63946]">E-Ticaret Lojistiği</span>{" "}
+              <span className="text-[#d62839]">E-Ticaret Lojistiği</span>{" "}
               ve Sipariş Karşılama
             </h1>
             <p className="text-slate-300 text-lg leading-relaxed max-w-3xl mb-4">
@@ -166,7 +168,7 @@ export default function IngiltereETicaretLojistigi() {
                 href={WHATSAPP}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
+                className="inline-flex items-center justify-center gap-2 bg-[#d62839] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
               >
                 Lojistik Teklifi Al
               </a>
@@ -212,7 +214,7 @@ export default function IngiltereETicaretLojistigi() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {services.map((s) => (
                 <div key={s.title} className="border border-slate-200 rounded-2xl p-5">
-                  <div className="text-2xl mb-2">{s.icon}</div>
+                  <div className="text-2xl mb-2"><Emoji e={s.icon} /></div>
                   <h3 className="font-bold text-[#0b2545] mb-1">{s.title}</h3>
                   <p className="text-slate-600 text-sm leading-relaxed">{s.desc}</p>
                 </div>
@@ -230,13 +232,13 @@ export default function IngiltereETicaretLojistigi() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
               {channels.map((ch) => (
                 <div key={ch.title} className="bg-white border border-slate-200 rounded-2xl p-5">
-                  <div className="text-2xl mb-2">{ch.icon}</div>
+                  <div className="text-2xl mb-2"><Emoji e={ch.icon} /></div>
                   <h3 className="font-bold text-[#0b2545] mb-1">{ch.title}</h3>
                   <p className="text-slate-600 text-sm leading-relaxed mb-2">{ch.desc}</p>
                   {ch.note && (
-                    <p className="text-slate-400 text-xs mb-3">{ch.note}</p>
+                    <p className="text-slate-500 text-xs mb-3">{ch.note}</p>
                   )}
-                  <Link href={ch.link} className="text-[#e63946] text-sm font-semibold hover:underline">
+                  <Link href={ch.link} className="text-[#d62839] text-sm font-semibold hover:underline">
                     {ch.linkLabel}
                   </Link>
                 </div>
@@ -259,7 +261,7 @@ export default function IngiltereETicaretLojistigi() {
               href={WHATSAPP}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
+              className="inline-flex items-center gap-2 bg-[#d62839] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
             >
               E-Ticaret Lojistik Teklifi Al
             </a>
@@ -305,6 +307,7 @@ export default function IngiltereETicaretLojistigi() {
             </div>
           </div>
         </section>
+        <TrClusterNav path="/ingiltere-e-ticaret-lojistigi" />
       </main>
       <Footer />
       <StickyWhatsappCta />

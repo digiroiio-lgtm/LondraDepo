@@ -17,7 +17,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "İngiltere Depo, Fulfillment ve Londra Lojistik Çözümleri | LondraDepo.com",
+  title: "İngiltere Depo, Fulfillment ve Londra Lojistiği | LondraDepo",
   description:
     "Türkiye'den İngiltere'ye ihracat yapanlar için İngiltere depo, Londra depo, fulfillment, palet depolama ve dağıtım çözümleri. Hızlı teklif alın.",
   keywords: [
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     "İngiltere Türk deposu",
   ],
   openGraph: {
-    title: "İngiltere Depo ve Fulfillment Çözümleri | LondraDepo.com",
+    title: "İngiltere Depo ve Fulfillment Çözümleri | LondraDepo",
     description:
       "Türkiye'den İngiltere'ye ihracat için Londra depo, fulfillment ve dağıtım hizmetleri. Hızlı teklif için WhatsApp'tan yazın.",
     url: SITE_URL,

@@ -5,24 +5,28 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 import ArticleHero from "@/components/ArticleHero";
+import ArticleSources from "@/components/ArticleSources";
+import { TR_ARTICLES } from "@/content/tr-articles";
 import CtaCards from "@/components/CtaCards";
+import ChecklistGate from "@/components/ChecklistGate";
 import AuthorBox from "@/components/AuthorBox";
 import RelatedArticles from "@/components/RelatedArticles";
 
 import { SITE_URL } from "@/lib/site";
 import { trAlternates } from "@/lib/i18n";
+const ARTICLE = TR_ARTICLES["/blog/turkiyeden-ingiltereye-ihracat-rehberi"];
 const PAGE_URL = `${SITE_URL}/blog/turkiyeden-ingiltereye-ihracat-rehberi`;
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20ihracat%20operasyonu%20hakkinda%20bilgi%20almak%20istiyorum.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Türkiye'den İngiltere'ye İhracat Rehberi 2026 | UK Operasyon Altyapısı | LondraDepo.com",
+  title: "Türkiye'den İngiltere'ye İhracat 2026: EORI, GTİP, KDV",
   description:
-    "Türkiye'den İngiltere'ye ihracat süreçleri, gümrük, GTIP, nakliye ve UK'da operasyon kurma rehberi 2026. Türk ihracatçılar için kapsamlı bilgi kaynağı.",
+    "İngiltere'ye ihracatı adım adım planlayın: GB EORI, GTİP, CDS beyannamesi, menşe beyanı ve %20 ithalat KDV'si. Ücretsiz PDF kontrol listesini indirin.",
   alternates: trAlternates("/blog/turkiyeden-ingiltereye-ihracat-rehberi"),
   openGraph: {
-    title: "Türkiye'den İngiltere'ye İhracat Rehberi 2026 | LondraDepo.com",
-    description: "İngiltere ihracat süreçleri, gümrük ve UK'da depo operasyonu kurma rehberi.",
+    title: "Türkiye'den İngiltere'ye İhracat 2026: Adım Adım Rehber",
+    description: "GB EORI, GTİP, CDS beyannamesi, menşe beyanı ve ithalat KDV'si. Ücretsiz PDF kontrol listesi.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
     locale: "tr_TR",
@@ -43,7 +47,9 @@ const faqs = [
   {
     "q": "İngiltere'ye ihracat için hangi belgeler gereklidir?",
     "a": "Ticari fatura, ambalaj listesi, konşimento, menşe beyanı (declaration of origin — UK-Türkiye STA kapsamında tercihli tarife uygulaması için) ve varsa özel ürün belgeleri (CE, gıda analizi vb.) gereklidir."
-  }
+  },
+  { q: "İhracat kontrol listesini nereden indirebilirim?", a: "Bu sayfada iki sayfalık yazdırılabilir İngiltere İthalat Kontrol Listesi (PDF) var. Adınızı ve e-postanızı bırakın, indirme linki hemen açılır." },
+  { q: "LondraDepo ihracatın tamamını yönetebilir mi?", a: "Evet. LondraDepo'yu işleten Arca Trade Group Türkiye–İngiltere hattında nakliye ve UK gümrüklemesini yapar; LondraDepo ürünleri Essex'te teslim alır, depolar ve siparişleri gönderir. Kendi nakliyecinizle de çalışabilirsiniz." },
 ];
 
 const jsonLd = {
@@ -59,14 +65,16 @@ const jsonLd = {
     },
     {
       "@type": "Article",
-      headline: "Türkiye'den İngiltere'ye İhracat Rehberi 2026",
+      headline: ARTICLE.headline,
       description: "Türk ihracatçılar için UK ihracat süreçleri, gümrük ve operasyon rehberi.",
       url: PAGE_URL,
-      author: { "@type": "Person", name: "Sertaç Yılmaz" },
+      author: { "@type": "Person", name: "Sertaç Yılmaz", jobTitle: "Arca Trade Group Kurucu Ortağı", url: `${SITE_URL}/hakkimizda` },
+      contributor: { "@type": "Person", name: "Yusuf Barış", jobTitle: "Operasyon Müdürü" },
       publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
       image: { "@type": "ImageObject", url: `${SITE_URL}/logo.svg`, width: 640, height: 160 },
-      datePublished: "2025-06-01",
-      dateModified: "2026-01-01",
+      datePublished: ARTICLE.published,
+      dateModified: ARTICLE.modified,
+      mainEntityOfPage: { "@type": "WebPage", "@id": PAGE_URL },
       inLanguage: "tr-TR",
     },
   ],
@@ -98,11 +106,11 @@ export default function IhracatRehberiPage() {
         <article className="py-10 px-4 bg-white">
           <div className="max-w-3xl mx-auto">
             <ArticleHero
+              path="/blog/turkiyeden-ingiltereye-ihracat-rehberi"
               category="İhracat"
               categoryColor="text-purple-700 bg-purple-50"
               title="Türkiye'den İngiltere'ye İhracat Rehberi 2026"
               readTime="10 dakika"
-              date="Ocak 2026"
             />
 
             <p className="text-lg leading-relaxed text-slate-600 mb-8">
@@ -177,6 +185,8 @@ export default function IhracatRehberiPage() {
                 <li>Sigorta belgesi</li>
               </ul>
 
+              <ChecklistGate lang="tr" />
+
               <h2>UK&apos;da Kendi Deponuzu Kurmak mı, 3PL mi?</h2>
               <p>
                 Kendi UK deponuzu kurmak ciddi sermaye gerektirir: kira, personel, sigorta,
@@ -184,6 +194,8 @@ export default function IhracatRehberiPage() {
                 kullandığınız kadar ödersiniz. Büyüme aşamasındaki markalar için 3PL modeli
                 genellikle daha akıllıca bir başlangıçtır.
               </p>
+
+              <ArticleSources path="/blog/turkiyeden-ingiltereye-ihracat-rehberi" />
 
               <h2>Sık Sorulan Sorular</h2>
 
@@ -207,7 +219,7 @@ export default function IhracatRehberiPage() {
                   href={WHATSAPP}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold px-7 py-3.5 rounded-full transition"
+                  className="inline-flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white font-bold px-7 py-3.5 rounded-full transition"
                 >
                   WhatsApp&apos;tan hızlı bilgi alın
                 </a>
@@ -220,7 +232,7 @@ export default function IhracatRehberiPage() {
               </div>
             </div>
 
-            <AuthorBox updatedDate="Ocak 2026" />
+            <AuthorBox path="/blog/turkiyeden-ingiltereye-ihracat-rehberi" />
 
             <RelatedArticles articles={relatedArticles} />
 

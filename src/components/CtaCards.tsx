@@ -20,7 +20,7 @@ export default function CtaCards() {
           href={WHATSAPP}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white font-semibold px-5 py-2.5 rounded-full text-sm transition"
+          className="inline-flex items-center gap-2 bg-[#d62839] hover:bg-[#c1121f] text-white font-semibold px-5 py-2.5 rounded-full text-sm transition"
         >
           Teklif Al <ArrowIcon />
         </a>
@@ -34,7 +34,7 @@ export default function CtaCards() {
         </p>
         <a
           href={TEL}
-          className="inline-flex items-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white font-semibold px-5 py-2.5 rounded-full text-sm transition"
+          className="inline-flex items-center gap-2 bg-[#d62839] hover:bg-[#c1121f] text-white font-semibold px-5 py-2.5 rounded-full text-sm transition"
         >
           Hemen Ara <ArrowIcon />
         </a>

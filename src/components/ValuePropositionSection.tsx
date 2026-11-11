@@ -21,7 +21,7 @@ export default function ValuePropositionSection() {
       <div className="max-w-6xl mx-auto">
         <div className="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center">
           <div>
-            <p className="text-[#e63946] text-sm font-semibold uppercase tracking-widest mb-3">
+            <p className="text-[#d62839] text-sm font-semibold uppercase tracking-widest mb-3">
               Neden LondraDepo?
             </p>
             <h2 className="text-3xl font-extrabold text-[#0b2545] mb-5 leading-tight">
@@ -47,7 +47,7 @@ export default function ValuePropositionSection() {
           </div>
 
           <div className="mt-12 lg:mt-0">
-            <h3 className="text-sm font-semibold text-slate-500 uppercase tracking-wide mb-4">
+            <h3 className="text-sm font-semibold text-slate-600 uppercase tracking-wide mb-4">
               Destek verdiğimiz süreçler:
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">

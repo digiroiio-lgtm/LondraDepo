@@ -1,26 +1,30 @@
+import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 import ArticleHero from "@/components/ArticleHero";
+import ArticleSources from "@/components/ArticleSources";
+import { TR_ARTICLES } from "@/content/tr-articles";
 import CtaCards from "@/components/CtaCards";
 import AuthorBox from "@/components/AuthorBox";
 import RelatedArticles from "@/components/RelatedArticles";
 
 import { SITE_URL } from "@/lib/site";
 import { trAlternates } from "@/lib/i18n";
+const ARTICLE = TR_ARTICLES["/blog/ingiltere-fulfillment-nedir"];
 const PAGE_URL = `${SITE_URL}/blog/ingiltere-fulfillment-nedir`;
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20fulfillment%20teklifi%20almak%20istiyorum.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "İngiltere Fulfillment Nedir? Nasıl Çalışır? | LondraDepo.com",
+  title: "İngiltere Fulfillment Nedir? Nasıl Çalışır? | LondraDepo",
   description:
     "UK fulfillment hizmetinin ne olduğunu, nasıl çalıştığını, Amazon ve e-ticaret satıcıları için neden önemli olduğunu anlatan kapsamlı rehber.",
   alternates: trAlternates("/blog/ingiltere-fulfillment-nedir"),
   openGraph: {
-    title: "İngiltere Fulfillment Nedir? | LondraDepo.com",
+    title: "İngiltere Fulfillment Nedir? | LondraDepo",
     description: "UK fulfillment hizmeti nedir, nasıl çalışır ve e-ticaret satıcıları için neden kritik?",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
@@ -43,35 +47,17 @@ const jsonLd = {
     },
     {
       "@type": "Article",
-      headline: "İngiltere Fulfillment Nedir? Nasıl Çalışır?",
+      headline: ARTICLE.headline,
       description: "UK fulfillment hizmeti rehberi — e-ticaret satıcıları için sipariş hazırlama ve sevk süreçleri.",
       url: PAGE_URL,
-      datePublished: "2025-06-01",
-      dateModified: "2026-01-15",
-      author: { "@type": "Person", name: "Sertaç Yılmaz" },
+      datePublished: ARTICLE.published,
+      dateModified: ARTICLE.modified,
+      mainEntityOfPage: { "@type": "WebPage", "@id": PAGE_URL },
+      author: { "@type": "Person", name: "Sertaç Yılmaz", jobTitle: "Arca Trade Group Kurucu Ortağı", url: `${SITE_URL}/hakkimizda` },
+      contributor: { "@type": "Person", name: "Yusuf Barış", jobTitle: "Operasyon Müdürü" },
       publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
       image: { "@type": "ImageObject", url: `${SITE_URL}/logo.svg`, width: 640, height: 160 },
       inLanguage: "tr-TR",
-    },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "İngiltere fulfillment hizmeti nedir?",
-          acceptedAnswer: { "@type": "Answer", text: "Fulfillment, müşteri siparişlerinin depodan toplanması, paketlenmesi ve gönderilmesi sürecidir. UK depomuzdaki ürünlerinizi stoklar, siparişleri hazırlayarak müşterilerinize gönderiyoruz." },
-        },
-        {
-          "@type": "Question",
-          name: "Amazon FBA için UK fulfillment desteği veriyor musunuz?",
-          acceptedAnswer: { "@type": "Answer", text: "Evet. Amazon prep hizmetimiz kapsamında ürünlerinizi FBA uyumlu hale getiriyor, etiketliyor ve Amazon deposuna sevk ediyoruz." },
-        },
-        {
-          "@type": "Question",
-          name: "Shopify ve Etsy siparişlerini de karşılıyor musunuz?",
-          acceptedAnswer: { "@type": "Answer", text: "Evet. Shopify, Etsy ve diğer e-ticaret platformlarından gelen siparişleri operasyon sürecimize dahil ediyoruz." },
-        },
-      ],
     },
   ],
 };
@@ -83,11 +69,21 @@ const relatedArticles = [
   { href: "/blog/amazon-prep-uk-rehberi", title: "Amazon Prep UK Rehberi", category: "Amazon", readTime: "7 dk", categoryColor: "bg-amber-50 text-amber-700" },
 ];
 
+
+const faqs = [
+  { q: "Fulfillment nedir, basitçe nasıl çalışır?", a: "Fulfillment, bir siparişin alınmasından müşteriye teslimine kadar olan depo sürecidir: stok tutulur, sipariş gelince ürün raftan toplanır, paketlenir, etiketlenir ve kargoya verilir; iadeler de geri alınıp kontrol edilir." },
+  { q: "Fulfillment ile depolama arasındaki fark nedir?", a: "Depolama stoğun teslim alınıp saklanmasıdır. Fulfillment buna müşteri sipariş verdiğinde olanları ekler: toplama, paketleme, etiketleme, sevk ve iade. LondraDepo ikisini de aynı Essex deposundan yapar." },
+  { q: "3PL fulfillment kimler için uygun?", a: "3PL fulfillment, İngiltere'de kendi deposu olmayan ve siparişlerini UK'den göndermek isteyen markalar için uygundur; özellikle Türk ihracatçılar kendi depo ve personel yatırımı yapmadan UK müşterilerine yurt içi teslimat sunabilir." },
+  { q: "Amazon ve Shopify siparişleri aynı depodan karşılanabilir mi?", a: "Evet. Aynı UK stoğu Shopify ve diğer online mağaza siparişlerine, Amazon FBM siparişlerine ve Amazon FBA'ya gidecek hazırlanmış partilere hizmet verebilir; her kanal için ayrı stok gerekmez." },
+  { q: "İngiltere'de fulfillment maliyeti nasıl oluşur?", a: "Maliyet depolama, mal kabul, sipariş başına pick & pack, ambalaj, kargo ve iade kalemlerinden oluşur. LondraDepo'da depolama haftalık palet başına £3,50 + KDV'den başlar; diğer kalemler sipariş yapınıza göre tekliflendirilir." },
+];
+
 export default function FulfillmentNedirPage() {
   return (
     <>
       <Header />
       <main>
+        <FaqJsonLd faqs={faqs} />
         <nav aria-label="breadcrumb" className="bg-slate-50 border-b border-slate-200">
           <div className="max-w-6xl mx-auto px-4 py-2 text-sm text-slate-500 flex flex-wrap gap-2">
             <Link href="/" className="hover:text-[#0b2545] transition">Ana Sayfa</Link>
@@ -101,11 +97,11 @@ export default function FulfillmentNedirPage() {
         <article className="py-10 px-4 bg-white">
           <div className="max-w-3xl mx-auto">
             <ArticleHero
+              path="/blog/ingiltere-fulfillment-nedir"
               category="Fulfillment"
               categoryColor="text-blue-700 bg-blue-50"
               title="İngiltere Fulfillment Nedir? Nasıl Çalışır?"
               readTime="5 dakika"
-              date="Ocak 2026"
             />
 
             <p className="text-lg leading-relaxed text-slate-600 mb-8">
@@ -165,26 +161,15 @@ export default function FulfillmentNedirPage() {
                 <li>Gıda dışı tüketim ürünleri</li>
               </ul>
 
+              <ArticleSources path="/blog/ingiltere-fulfillment-nedir" />
+
               <h2>Sık Sorulan Sorular</h2>
-
-              <h3>İngiltere fulfillment hizmeti nedir?</h3>
-              <p>
-                Fulfillment, müşteri siparişlerinin depodan toplanması, paketlenmesi
-                ve gönderilmesi sürecidir. UK depomuzdaki ürünlerinizi stoklar,
-                siparişleri hazırlayarak müşterilerinize gönderiyoruz.
-              </p>
-
-              <h3>Amazon FBA için UK fulfillment desteği veriyor musunuz?</h3>
-              <p>
-                Evet. Amazon prep hizmetimiz kapsamında ürünlerinizi FBA uyumlu hale
-                getiriyor, etiketliyor ve Amazon deposuna sevk ediyoruz.
-              </p>
-
-              <h3>Shopify ve Etsy siparişlerini de karşılıyor musunuz?</h3>
-              <p>
-                Evet. Shopify, Etsy ve diğer e-ticaret platformlarından gelen
-                siparişleri operasyon sürecimize dahil ediyoruz.
-              </p>
+              {faqs.map((f) => (
+                <div key={f.q}>
+                  <h3>{f.q}</h3>
+                  <p>{f.a}</p>
+                </div>
+              ))}
             </div>
 
             <div className="bg-[#0b2545] text-white rounded-2xl p-8 my-10 text-center">
@@ -197,7 +182,7 @@ export default function FulfillmentNedirPage() {
                   href={WHATSAPP}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold px-7 py-3.5 rounded-full transition"
+                  className="inline-flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white font-bold px-7 py-3.5 rounded-full transition"
                 >
                   WhatsApp&apos;tan hızlı bilgi alın
                 </a>
@@ -210,7 +195,7 @@ export default function FulfillmentNedirPage() {
               </div>
             </div>
 
-            <AuthorBox updatedDate="Ocak 2026" />
+            <AuthorBox path="/blog/ingiltere-fulfillment-nedir" />
 
             <RelatedArticles articles={relatedArticles} />
 

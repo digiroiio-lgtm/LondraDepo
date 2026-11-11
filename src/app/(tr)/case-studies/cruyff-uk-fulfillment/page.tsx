@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -5,11 +6,14 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 import CaseHero from "@/components/CaseHero";
+import AuthorBox from "@/components/AuthorBox";
+import { TR_ARTICLES } from "@/content/tr-articles";
 import OperationsFlow from "@/components/OperationsFlow";
 import RelatedCases from "@/components/RelatedCases";
 
 import { SITE_URL } from "@/lib/site";
 import { trAlternates } from "@/lib/i18n";
+const ARTICLE = TR_ARTICLES["/case-studies/cruyff-uk-fulfillment"];
 const PAGE_URL = `${SITE_URL}/case-studies/cruyff-uk-fulfillment`;
 const WHATSAPP =
   "https://wa.me/447554195190?text=Merhaba%2C%20moda%20fulfillment%20operasyonu%20hakkinda%20bilgi%20almak%20istiyorum.";
@@ -17,13 +21,13 @@ const WHATSAPP =
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title:
-    "Cruyff UK Fulfillment & Fashion Warehouse Operasyonu | LondraDepo.com",
+    "Cruyff UK Fulfillment & Fashion Warehouse Operasyonu | LondraDepo",
   description:
     "Cruyff markasının Hollanda'dan İngiltere fulfillment operasyonuna geçişi: UK depo, yeniden paketleme, e-ticaret fulfillment ve dağıtım.",
   alternates: trAlternates("/case-studies/cruyff-uk-fulfillment"),
   openGraph: {
     title:
-      "Cruyff — İngiltere Moda & Fulfillment Operasyonu | LondraDepo.com",
+      "Cruyff — İngiltere Moda & Fulfillment Operasyonu | LondraDepo",
     description:
       "Johan Cruyff markasının Hollanda'dan UK fulfillment operasyonuna geçişi: warehouse, repackaging ve ecommerce distribution.",
     url: PAGE_URL,
@@ -33,7 +37,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cruyff UK Fulfillment Operasyonu | LondraDepo.com",
+    title: "Cruyff UK Fulfillment Operasyonu | LondraDepo",
     description:
       "Cruyff markasının Hollanda'dan UK fulfillment altyapısına geçiş operasyonu.",
   },
@@ -64,17 +68,14 @@ const jsonLd = {
     {
       "@type": "Article",
       "@id": `${PAGE_URL}#article`,
-      headline: "Cruyff — İngiltere Moda & Fulfillment Operasyonu",
+      headline: ARTICLE.headline,
       description:
         "Johan Cruyff markasının Hollanda'dan İngiltere fulfillment operasyonuna geçiş süreci.",
       url: PAGE_URL,
-      datePublished: "2026-01-01",
-      dateModified: "2026-05-24",
-      author: {
-        "@type": "Person",
-        name: "Sertaç Yılmaz",
-      },
-      contributor: { "@type": "Person", name: "Yusuf Barış" },
+      ...(ARTICLE.published ? { datePublished: ARTICLE.published } : {}),
+      dateModified: ARTICLE.modified,
+      author: { "@type": "Person", name: "Sertaç Yılmaz", jobTitle: "Arca Trade Group Kurucu Ortağı", url: `${SITE_URL}/hakkimizda` },
+      contributor: { "@type": "Person", name: "Yusuf Barış", jobTitle: "Operasyon Müdürü" },
       publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
       image: { "@type": "ImageObject", url: `${SITE_URL}/logo.svg`, width: 640, height: 160 },
       mainEntityOfPage: PAGE_URL,
@@ -141,11 +142,11 @@ const faqs = [
   },
   {
     q: "UK next-day delivery mümkün mü?",
-    a: "Evet. Essex merkezli operasyonumuz UK genelinde next-day ve 2-day delivery seçenekleri sunmaktadır.",
+    a: "Evet. Essex merkezli operasyonumuz UK genelinde next-day ve 2-day teslimat seçenekleri sunar; Cruyff örneğinde siparişler bu seçeneklerle UK kargo ağı üzerinden teslim edilmektedir.",
   },
   {
     q: "Moda markaları için stok yönetimi sağlıyor musunuz?",
-    a: "Evet. Stok takibi, sezonluk koleksiyon yönetimi ve düzenli stok raporlaması hizmetlerini Türkçe olarak sunuyoruz.",
+    a: "Evet. Stok Mintsoft WMS'te SKU bazında takip edilir; sezonluk koleksiyonlar ayrı yönetilebilir ve düzenli stok raporları Türkçe olarak iletilir. Yeniden paketleme ve etiket güncelleme de yapılabilir.",
   },
 ];
 
@@ -191,6 +192,7 @@ export default function CruyffCaseStudyPage() {
           <div className="max-w-4xl mx-auto">
             {/* Hero */}
             <CaseHero
+              path="/case-studies/cruyff-uk-fulfillment"
               industry="Moda & Premium Apparel"
               industryColor="text-pink-700 bg-pink-50"
               brand="Cruyff"
@@ -206,11 +208,11 @@ export default function CruyffCaseStudyPage() {
 
             {/* Trust bar */}
             <div className="bg-slate-50 border border-slate-200 rounded-xl p-5 mb-10 flex flex-wrap gap-4 text-sm text-slate-600 justify-center md:justify-start">
-              <span>🏆 International fashion operations</span>
-              <span>🚀 UK ecommerce infrastructure</span>
-              <span>✨ Premium apparel logistics</span>
-              <span>📈 Operational scalability</span>
-              <span>🇬🇧 UK market fulfillment</span>
+              <span><Emoji e="🏆" /> International fashion operations</span>
+              <span><Emoji e="🚀" /> UK ecommerce infrastructure</span>
+              <span><Emoji e="✨" /> Premium apparel logistics</span>
+              <span><Emoji e="📈" /> Operational scalability</span>
+              <span><Emoji e="🇬🇧" /> UK market fulfillment</span>
             </div>
 
             {/* Problem */}
@@ -226,12 +228,12 @@ export default function CruyffCaseStudyPage() {
                   bulunmadığından lokal fulfillment mümkün değildi.
                 </p>
                 <ul className="text-slate-700 text-sm space-y-2 list-none">
-                  <li>⚠️ UK içi hızlı fulfillment ihtiyacı</li>
-                  <li>⚠️ İngiltere&apos;de fiziksel stok eksikliği</li>
-                  <li>⚠️ Online sipariş operasyonu altyapısı ihtiyacı</li>
-                  <li>⚠️ Moda ürünlerine uygun repackaging gereksinimi</li>
-                  <li>⚠️ UK kargo entegrasyonu eksikliği</li>
-                  <li>⚠️ Merkezi stok yönetimi ihtiyacı</li>
+                  <li><Emoji e="⚠️" /> UK içi hızlı fulfillment ihtiyacı</li>
+                  <li><Emoji e="⚠️" /> İngiltere&apos;de fiziksel stok eksikliği</li>
+                  <li><Emoji e="⚠️" /> Online sipariş operasyonu altyapısı ihtiyacı</li>
+                  <li><Emoji e="⚠️" /> Moda ürünlerine uygun repackaging gereksinimi</li>
+                  <li><Emoji e="⚠️" /> UK kargo entegrasyonu eksikliği</li>
+                  <li><Emoji e="⚠️" /> Merkezi stok yönetimi ihtiyacı</li>
                 </ul>
               </div>
             </section>
@@ -296,7 +298,7 @@ export default function CruyffCaseStudyPage() {
                     className="border border-slate-200 rounded-xl p-5 flex gap-4 hover:border-[#0b2545]/30 hover:shadow-sm transition"
                   >
                     <span className="text-2xl flex-shrink-0" aria-hidden="true">
-                      {item.icon}
+                      <Emoji e={item.icon} />
                     </span>
                     <div>
                       <h3 className="font-bold text-[#0b2545] mb-1">{item.title}</h3>
@@ -369,7 +371,7 @@ export default function CruyffCaseStudyPage() {
                   href={WHATSAPP}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold px-7 py-3.5 rounded-full transition"
+                  className="inline-flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white font-bold px-7 py-3.5 rounded-full transition"
                 >
                   WhatsApp&apos;tan Hızlı Bilgi Alın
                 </a>
@@ -450,26 +452,7 @@ export default function CruyffCaseStudyPage() {
               </div>
             </div>
 
-            {/* Author box */}
-            <div className="border border-slate-200 rounded-xl p-5 mb-8 flex items-start gap-4 bg-slate-50">
-              <div className="w-12 h-12 rounded-full bg-[#0b2545] flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
-                SY
-              </div>
-              <div>
-                <p className="font-bold text-[#0b2545] text-sm">Sertaç Yılmaz</p>
-                <p className="text-slate-500 text-xs mb-1">
-                  UK Warehouse Operations Specialist — LondraDepo.com
-                </p>
-                <p className="text-slate-600 text-xs leading-relaxed">
-                  İngiltere depolama ve fulfillment operasyonlarında uzman. Türk ihracatçılar için UK lojistik
-                  altyapısı kurulumu konusunda aktif danışmanlık.
-                </p>
-                <p className="text-slate-400 text-xs mt-1">
-                  İncelendi:{" "}
-                  <span className="font-medium text-slate-500">Yusuf Barış</span> — Operations Manager
-                </p>
-              </div>
-            </div>
+            <AuthorBox path="/case-studies/cruyff-uk-fulfillment" />
 
             <RelatedCases cases={relatedCases} />
           </div>

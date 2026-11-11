@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 const WHATSAPP_SHOPIFY = "https://wa.me/447554195190?text=Merhaba%2C%20Shopify%20fulfillment%20hizmeti%20hakkında%20bilgi%20almak%20istiyorum.";
 const WHATSAPP_AMAZON = "https://wa.me/447554195190?text=Merhaba%2C%20Amazon%20fulfillment%20hizmeti%20hakkında%20bilgi%20almak%20istiyorum.";
 
@@ -35,7 +36,7 @@ export default function ShopifyAmazonSection() {
     <section className="py-20 px-4 bg-[#f6f8fb]">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <p className="text-[#e63946] text-sm font-semibold uppercase tracking-widest mb-3">
+          <p className="text-[#d62839] text-sm font-semibold uppercase tracking-widest mb-3">
             Platform Fulfillment
           </p>
           <h2 className="text-3xl font-extrabold text-[#0b2545] mb-4">
@@ -52,7 +53,7 @@ export default function ShopifyAmazonSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-14">
           {platforms.map((p) => (
             <div key={p.name} className="bg-white border border-slate-200 rounded-3xl p-8 flex flex-col">
-              <div className="text-4xl mb-4">{p.icon}</div>
+              <div className="text-4xl mb-4"><Emoji e={p.icon} /></div>
               <h3 className="font-extrabold text-[#0b2545] text-2xl mb-3">{p.name}</h3>
               <p className="text-slate-600 text-sm leading-relaxed flex-1 mb-6">{p.desc}</p>
               <a
@@ -91,7 +92,7 @@ export default function ShopifyAmazonSection() {
               href={WHATSAPP_SHOPIFY}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
+              className="inline-flex items-center gap-2 bg-[#d62839] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
             >
               Fulfillment Operasyonu Kur
             </a>

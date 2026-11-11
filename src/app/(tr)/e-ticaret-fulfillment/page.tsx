@@ -1,4 +1,7 @@
+import PageFaq from "@/components/PageFaq";
+import Emoji from "@/components/visual/Emoji";
 import type { Metadata } from "next";
+import TrClusterNav from "@/components/TrClusterNav";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -10,12 +13,12 @@ import { trAlternates } from "@/lib/i18n";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20e-ticaret%20fulfillment%20hizmeti%20hakkında%20bilgi%20almak%20istiyorum.";
 
 export const metadata: Metadata = {
-  title: "İngiltere E-Ticaret Fulfillment | UK Online Sipariş Karşılama | LondraDepo.com",
+  title: "İngiltere E-Ticaret Fulfillment | LondraDepo",
   description:
     "İngiltere e-ticaret fulfillment: sipariş yönetimi, stok takibi, pick & pack, kargo etiketleme ve UK teslimat. Online mağaza siparişlerini biz karşılayalım.",
   alternates: trAlternates("/e-ticaret-fulfillment"),
   openGraph: {
-    title: "İngiltere E-Ticaret Fulfillment | LondraDepo.com",
+    title: "İngiltere E-Ticaret Fulfillment | LondraDepo",
     description: "UK e-ticaret fulfillment. Sipariş yönetimi, pick & pack, kargo ve UK teslimat.",
     url: `${SITE_URL}/e-ticaret-fulfillment`,
     siteName: "LondraDepo.com",
@@ -66,6 +69,15 @@ const features = [
   { icon: "↩️", title: "İade Yönetimi", desc: "Müşteri iadelerinin kabulü ve işlenmesi." },
 ];
 
+
+const faqs = [
+  { q: "E-ticaret fulfillment nedir?", a: "E-ticaret fulfillment, online mağazanızın siparişlerinin bir depodan sizin yerinize karşılanmasıdır: stok tutulur, sipariş gelince ürün toplanır, paketlenir, etiketlenir ve müşteriye gönderilir. LondraDepo bunu Rayleigh, Essex'ten yapar." },
+  { q: "Hangi satış kanallarının siparişlerini karşılıyorsunuz?", a: "Shopify, Amazon (FBA hazırlık ve FBM), diğer pazaryerleri ve toptan siparişler aynı UK stoğundan karşılanabilir. Sipariş aktarımı ve entegrasyon kapsamı teklif öncesinde birlikte netleştirilir." },
+  { q: "E-ticaret fulfillment ne kadar tutar?", a: "Depolama haftalık palet başına £3,50 + KDV'den başlar. Pick & pack, ambalaj, kargo ve iade; ürün ölçünüze, aylık sipariş hacminize ve sipariş başına ürün sayınıza göre fiyatlandırılır." },
+  { q: "İadeler nasıl yönetiliyor?", a: "İade edilen ürünler Essex deposuna döner, kontrol edilir ve talimatınıza göre stoğa geri alınır ya da ayrılır. İade işleme ürün başına fiyatlandırılır." },
+  { q: "Stoğumu nasıl takip ederim?", a: "Stok ve siparişler Mintsoft WMS'te yönetilir; ürünler mal kabulde sisteme kaydedilir ve stok seviyeleri ile hareketleri size düzenli olarak raporlanır." },
+];
+
 export default function ETicaretFulfillmentPage() {
   return (
     <>
@@ -95,7 +107,7 @@ export default function ETicaretFulfillmentPage() {
               href={WHATSAPP}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
+              className="inline-flex items-center gap-2 bg-[#d62839] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
             >
               Fulfillment Operasyonumu Kuralım
             </a>
@@ -129,7 +141,7 @@ export default function ETicaretFulfillmentPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {features.map((f) => (
                 <div key={f.title} className="border border-slate-200 rounded-2xl p-5">
-                  <div className="text-2xl mb-2">{f.icon}</div>
+                  <div className="text-2xl mb-2"><Emoji e={f.icon} /></div>
                   <h3 className="font-bold text-[#0b2545] mb-1">{f.title}</h3>
                   <p className="text-slate-600 text-sm leading-relaxed">{f.desc}</p>
                 </div>
@@ -138,6 +150,8 @@ export default function ETicaretFulfillmentPage() {
           </div>
         </section>
 
+        <PageFaq faqs={faqs} />
+        <TrClusterNav path="/e-ticaret-fulfillment" />
         <CtaCards />
       </main>
       <Footer />

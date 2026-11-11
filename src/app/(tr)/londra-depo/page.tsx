@@ -1,4 +1,7 @@
+import Emoji from "@/components/visual/Emoji";
 import FaqJsonLd from "@/components/FaqJsonLd";
+import RouteMap from "@/components/visual/RouteMap";
+import TrClusterNav from "@/components/TrClusterNav";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -12,7 +15,7 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20Londra%20depo%20h
 const TEL = "tel:+447554195190";
 
 export const metadata: Metadata = {
-  title: "Londra Depo Hizmeti | Doğu Londra'ya 40 Dakika Essex Warehouse | LondraDepo.com",
+  title: "Londra Depo: Doğu Londra'ya 40 Dakika, Essex | LondraDepo",
   description:
     "Doğu Londra'ya 40 dakika mesafede Essex depo; A127 üzerinde, Tilbury Limanı'na 20–30 dakika. Mal kabul, depolama ve hızlı sipariş karşılama.",
   keywords: [
@@ -31,7 +34,7 @@ export const metadata: Metadata = {
   ],
   alternates: trAlternates("/londra-depo"),
   openGraph: {
-    title: "Londra Depo Hizmeti | LondraDepo.com",
+    title: "Londra Depo Hizmeti | LondraDepo",
     description: "Londra yakını Essex depomuzda ürün depolama, stok yönetimi ve sipariş karşılama.",
     url: `${SITE_URL}/londra-depo`,
     siteName: "LondraDepo.com",
@@ -126,11 +129,11 @@ export default function LondraDepoPage() {
               <span className="text-white">Londra Depo</span>
             </nav>
             <div className="inline-block bg-white/10 border border-white/20 rounded-full px-4 py-1.5 text-sm text-slate-300 mb-4">
-              📍 Londra yakını Essex, İngiltere
+              <Emoji e="📍" /> Londra yakını Essex, İngiltere
             </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4 leading-tight">
               Londra Depo:{" "}
-              <span className="text-[#e63946]">M25 Üzerinden</span>{" "}
+              <span className="text-[#d62839]">M25 Üzerinden</span>{" "}
               UK Dağıtım
             </h1>
             <p className="text-slate-300 text-lg leading-relaxed max-w-3xl mb-4">
@@ -146,7 +149,7 @@ export default function LondraDepoPage() {
                 href={WHATSAPP}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
+                className="inline-flex items-center justify-center gap-2 bg-[#d62839] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
               >
                 Depo Teklifi Al
               </a>
@@ -160,11 +163,19 @@ export default function LondraDepoPage() {
           </div>
         </section>
 
+        <section className="py-12 px-4 bg-white">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-2xl font-extrabold text-[#0b2545] mb-4">Depomuz Londra&apos;ya ve limanlara ne kadar uzak?</h2>
+            <RouteMap lang="tr" />
+          </div>
+        </section>
+
+
         {/* Location note */}
         <section className="py-10 px-4 bg-[#f6f8fb]">
           <div className="max-w-4xl mx-auto">
             <div className="bg-white border border-slate-200 rounded-2xl p-6 flex flex-col sm:flex-row gap-4 items-start">
-              <div className="text-3xl">🗺️</div>
+              <div className="text-3xl"><Emoji e="🗺️" /></div>
               <div>
                 <h2 className="font-bold text-[#0b2545] mb-1">Essex, Londra'ya Yakın İngiltere Deposu</h2>
                 <p className="text-slate-600 text-sm leading-relaxed">
@@ -191,7 +202,7 @@ export default function LondraDepoPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {services.map((s) => (
                 <div key={s.title} className="border border-slate-200 rounded-2xl p-5 hover:border-[#0b2545] transition">
-                  <div className="text-2xl mb-2">{s.icon}</div>
+                  <div className="text-2xl mb-2"><Emoji e={s.icon} /></div>
                   <h3 className="font-bold text-[#0b2545] mb-1">{s.title}</h3>
                   <p className="text-slate-600 text-sm leading-relaxed">{s.desc}</p>
                 </div>
@@ -209,7 +220,7 @@ export default function LondraDepoPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {whoWeServe.map((w) => (
                 <div key={w.title} className="bg-white border border-slate-200 rounded-2xl p-5">
-                  <div className="text-2xl mb-2">{w.icon}</div>
+                  <div className="text-2xl mb-2"><Emoji e={w.icon} /></div>
                   <h3 className="font-bold text-[#0b2545] mb-1">{w.title}</h3>
                   <p className="text-slate-600 text-sm leading-relaxed">{w.desc}</p>
                 </div>
@@ -238,7 +249,7 @@ export default function LondraDepoPage() {
                 { icon: "✅", text: "UK geneli dağıtım" },
               ].map((item) => (
                 <div key={item.text} className="flex items-center gap-2 text-slate-200 text-sm">
-                  <span>{item.icon}</span>
+                  <span><Emoji e={item.icon} /></span>
                   <span>{item.text}</span>
                 </div>
               ))}
@@ -247,7 +258,7 @@ export default function LondraDepoPage() {
               href={WHATSAPP}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
+              className="inline-flex items-center gap-2 bg-[#d62839] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
             >
               Londra Depo Teklifi Al
             </a>
@@ -294,6 +305,7 @@ export default function LondraDepoPage() {
             </div>
           </div>
         </section>
+        <TrClusterNav path="/londra-depo" />
         <QuoteForm formId="tr_inline_quote" heading="Londra Depo Teklifi Alın" intro="Ürün türünüzü, yaklaşık palet veya koli sayınızı ve ihtiyacınız olan hizmetleri yazın; ekibimiz size özel teklif hazırlasın. Standart palet depolama haftalık £3,50 + KDV'den başlar." presetServices={["Depolama"]} />
       </main>
       <Footer />

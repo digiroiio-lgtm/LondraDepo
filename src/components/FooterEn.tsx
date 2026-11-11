@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 import Link from "next/link";
 import CookieSettingsButton from "./CookieSettingsButton";
 import TrackedLink from "./TrackedLink";
@@ -20,6 +21,7 @@ const services = [
   ["/en/amazon-fulfilment-uk", "Amazon Fulfilment UK"],
   ["/en/amazon-seller-warehousing-uk", "Amazon FBM Warehousing"],
   ["/en/amazon-prep-uk", "Amazon Prep UK"],
+  ["/en/amazon-uk-fulfilment-centres", "Amazon UK Fulfilment Centres"],
   ["/en/uk-customs-clearance", "Customs Clearance Support"],
   ["/en/cargo-handling", "Cargo Handling"],
   ["/en/uk-distribution", "UK Distribution"],
@@ -29,12 +31,17 @@ const company = [
   ["/en/about-us", "About Us"],
   ["/en/essex-warehouse", "Essex Warehouse"],
   ["/en/uk-market-entry", "UK Market Entry"],
+  ["/en/industries", "Industries"],
   ["/en/industries/food-packaging", "Packaging & Catering Supplies"],
   ["/en/industries/automotive-parts", "Automotive Parts"],
   ["/en/uk-warehousing-for-turkish-exporters", "For Turkish Exporters"],
   ["/en/locations/port-to-warehouse-logistics", "Port-to-Warehouse Logistics"],
+  ["/en/london-gateway-tilbury-warehousing", "London Gateway & Tilbury"],
+  ["/en/felixstowe-port-warehousing", "Felixstowe Port Warehousing"],
   ["/en/uk-warehousing-benefits", "Why a UK Warehouse"],
   ["/en/uk-warehousing-pricing", "Pricing"],
+  ["/en/uk-storage-cost-calculator", "Storage Cost Calculator"],
+  ["/en/container-arrival-planner", "Container Arrival Planner"],
   ["/en/case-studies", "Case Studies"],
   ["/en/blog", "Guides"],
   ["/en/contact", "Contact"],
@@ -85,19 +92,19 @@ export default function FooterEn() {
               kind="whatsapp"
               source="footer"
               href={WHATSAPP}
-              className="flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white font-semibold px-5 py-3 rounded-full transition w-fit"
+              className="flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white font-semibold px-5 py-3 rounded-full transition w-fit"
             >
               Get a Quote on WhatsApp
             </TrackedLink>
             <TrackedLink kind="phone" source="footer" href={TEL} className="flex items-center gap-2 text-slate-300 hover:text-white transition">
-              📞 +44 7554 195190
+              <Emoji e="📞" /> +44 7554 195190
             </TrackedLink>
             <p className="text-xs text-slate-400">Office: +44 1268 203 283 · 07:45–17:30 UK time</p>
           </div>
         </div>
       </div>
 
-      <div className="border-t border-white/10 pt-6 text-center text-xs text-slate-500 space-y-2">
+      <div className="border-t border-white/10 pt-6 text-center text-xs text-slate-400 space-y-2">
         <p>© {new Date().getFullYear()} LondraDepo.com. UK warehousing and fulfilment. All rights reserved.</p>
         <p className="text-slate-400">
           Arca Trade Group Ltd · Registered in England &amp; Wales · Company No: 13247691 · VAT: GB353315322

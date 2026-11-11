@@ -1,4 +1,9 @@
 import FaqJsonLd from "@/components/FaqJsonLd";
+import TrClusterNav from "@/components/TrClusterNav";
+import ChecklistGate from "@/components/ChecklistGate";
+import AmazonInboundTr from "@/components/AmazonInboundTr";
+import TrackedLink from "@/components/TrackedLink";
+import { bookingUrl } from "@/lib/booking";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -12,12 +17,12 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20Amazon%20Prep%20h
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Amazon Prep UK | İngiltere Amazon FBA Hazırlık | LondraDepo.com",
+  title: "Amazon FBA Prep UK: Essex'te Hazırlık, Minimum Yok | LondraDepo",
   description:
-    "İngiltere'de Amazon FBA prep hizmeti. Ürün etiketleme, paketleme, FBA uyumluluk ve Amazon UK deposuna sevk. Türk ihracatçıları için UK Amazon prep partneri.",
+    "Essex'te Amazon FBA prep: FNSKU etiket, kontrol, paketleme ve Amazon UK'ye koli/palet sevki. Amazon LCY2 Tilbury'ye 16 mil. Sabit minimum yok, 1 deneme paleti.",
   alternates: trAlternates("/amazon-prep-uk"),
   openGraph: {
-    title: "Amazon Prep UK | LondraDepo.com",
+    title: "Amazon Prep UK | LondraDepo",
     description: "UK'da Amazon FBA prep, etiketleme ve sevk hizmeti. Türk ihracatçıları için İngiltere Amazon prep operasyonu.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
@@ -42,7 +47,7 @@ const jsonLd = {
       name: "Amazon Prep UK",
       provider: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
       serviceType: "Amazon FBA Preparation",
-      description: "Amazon UK FBA uyumlu ürün hazırlama, etiketleme ve sevk hizmeti. İngiltere'de Amazon prep partneri.",
+      description: "Amazon UK FBA uyumlu ürün hazırlama, etiketleme ve sevk hizmeti. Essex'te bağımsız Amazon prep hizmeti; resmi Amazon partneri değildir.",
       areaServed: { "@type": "Country", name: "United Kingdom" },
       url: PAGE_URL,
     },
@@ -60,7 +65,7 @@ const faqs = [
   },
   {
     q: "Amazon UK deposuna ürün göndermek ne kadar sürer?",
-    a: "Ürünleriniz Essex depomuzda prep tamamlandıktan sonra genellikle 2-5 iş günü içinde Amazon deposuna ulaşır.",
+    a: "Ürünleriniz Essex depomuzda prep tamamlandıktan sonra genellikle 2-5 iş günü içinde Amazon deposuna ulaşır. Kesin süre sevkiyat planına, atanan Amazon deposuna ve Amazon'un teslim randevusuna bağlıdır.",
   },
   {
     q: "Hangi Amazon marketplace'lere hizmet veriyorsunuz?",
@@ -68,7 +73,19 @@ const faqs = [
   },
   {
     q: "FNSKU etiketleme yapıyor musunuz?",
-    a: "Evet. Amazon'un gerektirdiği FNSKU ve barkod etiketleme işlemleri servis kapsamımızdadır.",
+    a: "Evet. Amazon'un gerektirdiği FNSKU ve barkod etiketleme, eski barkodların kapatılması, koruyucu ambalaj ve koli hazırlığı LondraDepo'nun Essex'teki Amazon prep hizmetinin kapsamındadır.",
+  },
+  {
+    q: "Amazon UK hangi palet ölçüsünü ve yüksekliğini kabul ediyor?",
+    a: "Amazon Freight'in UK rehberine göre Amazon UK depolarının çoğu UK standart paleti (1200 × 1000 mm) ve Euro paleti (1200 × 800 mm) kabul eder; yükseklik palet dahil genellikle en fazla 1,8 metre, ağırlık en fazla 1.000 kg'dır. LondraDepo paletleri Essex'te bu sınırlara göre hazırlar.",
+  },
+  {
+    q: "Stoğumu depoda tutup Amazon'a parça parça gönderebilir miyim?",
+    a: "Evet. LondraDepo stoğunuzun kalanını Essex'te palet başına haftalık £3,50 + KDV'den depolar ve Amazon stokunuz eridikçe yeni partileri hazırlayıp gönderir; böylece yavaş satan ürünler Amazon depolama ücretine takılmaz.",
+  },
+  {
+    q: "Amazon'a koli olarak mı, palet olarak mı göndermeliyim?",
+    a: "Hacme bağlıdır. Birkaç koli genellikle koli kargo (SPD) ile gider; Amazon Freight parsiyel paleti (LTL) genellikle 1–6 palet olarak tanımlar; düzenli büyük yüklerde tam tır mantıklı olabilir. Her sevkiyat planı için uygun seçeneği LondraDepo ekibi önerir.",
   },
 ];
 
@@ -119,11 +136,19 @@ export default function AmazonPrepPage() {
                 href={WHATSAPP}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold px-8 py-4 rounded-full transition"
+                className="inline-flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white font-bold px-8 py-4 rounded-full transition"
               >
                 WhatsApp ile Bilgi Alın
               </a>
+              <p className="mt-4 text-sm text-slate-600">
+                veya{" "}
+                <TrackedLink kind="booking" source="amazon_prep_tr" href={bookingUrl("tr", "amazon_prep_tr")} className="font-semibold text-[#0b2545] underline">
+                  15 dakikalık görüşme ayarlayın
+                </TrackedLink>
+              </p>
             </div>
+
+            <AmazonInboundTr />
 
             <section>
               <h2 className="text-2xl font-extrabold text-[#0b2545] mb-6">Sık Sorulan Sorular</h2>
@@ -140,6 +165,7 @@ export default function AmazonPrepPage() {
             <div className="mt-12 pt-8 border-t border-slate-200">
               <p className="text-slate-500 text-sm mb-3">İlgili hizmetler:</p>
               <div className="flex flex-wrap gap-3">
+                <Link href="/amazon-ingiltere-depo-konumlari" className="text-sm text-[#0b2545] hover:underline">→ Amazon İngiltere Depo Konumları</Link>
                 <Link href="/ingiltere-fulfillment" className="text-sm text-[#0b2545] hover:underline">→ İngiltere Fulfillment</Link>
                 <Link href="/palet-depolama" className="text-sm text-[#0b2545] hover:underline">→ Palet Depolama</Link>
                 <Link href="/essex-depo" className="text-sm text-[#0b2545] hover:underline">→ Essex Depo</Link>
@@ -152,6 +178,8 @@ export default function AmazonPrepPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <section className="px-4"><div className="max-w-4xl mx-auto"><ChecklistGate lang="tr" variant="fba" /></div></section>
+        <TrClusterNav path="/amazon-prep-uk" />
       </main>
       <Footer />
       <StickyWhatsappCta />

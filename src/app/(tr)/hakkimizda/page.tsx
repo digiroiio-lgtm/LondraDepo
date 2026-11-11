@@ -1,4 +1,7 @@
+import PageFaq from "@/components/PageFaq";
+import Emoji from "@/components/visual/Emoji";
 import type { Metadata } from "next";
+import TeamQuote from "@/components/TeamQuote";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -16,7 +19,7 @@ export const metadata: Metadata = {
     "LondraDepo.com: Essex merkezli İngiltere depo, fulfillment ve UK lojistik operasyonu. Türkiye'den ihracat yapan markaların UK lojistik partneri.",
   alternates: trAlternates("/hakkimizda"),
   openGraph: {
-    title: "Hakkımızda | LondraDepo.com",
+    title: "Hakkımızda | LondraDepo",
     description: "Essex merkezli UK depo ve lojistik operasyonumuz hakkında bilgi alın.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
@@ -50,6 +53,14 @@ const jsonLd = {
     },
   ],
 };
+
+
+const faqs = [
+  { q: "LondraDepo'yu kim işletiyor?", a: "LondraDepo, İngiltere'de kayıtlı Arca Trade Group Ltd'nin (Şirket No. 13247691) depolama markasıdır ve şirket BIFA üyesidir. Kurucu Sertaç Yılmaz 18 yıllık lojistik deneyimine sahiptir; günlük depo operasyonunu Operasyon Müdürü Yusuf Barış yönetir." },
+  { q: "LondraDepo'nun deposu nerede?", a: "Depomuz Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY adresindedir. Karayoluyla London Gateway'e yaklaşık 13 mil, Tilbury Limanı'na 16 mil ve Londra merkezine 37 mil uzaklıktadır." },
+  { q: "LondraDepo hangi hizmetleri veriyor?", a: "Mal kabul ve konteyner boşaltma, palet ve koli depolama, Mintsoft WMS ile stok takibi, pick & pack, Amazon FBA hazırlığı ve UK dağıtım sunuyoruz. Uluslararası nakliye ve UK gümrüklemesi Arca Trade Group üzerinden yapılabilir." },
+  { q: "LondraDepo'yu çalışmadan önce nasıl doğrulayabilirim?", a: "Arca Trade Group Ltd, İngiltere Companies House kayıtlarında 13247691 numarasıyla yer alır ve BIFA üye listesinde görünür. Ürün göndermeden önce ekibimizle 15 dakikalık bir görüşme de ayarlayabilirsiniz." },
+];
 
 export default function HakkimizdaPage() {
   return (
@@ -105,7 +116,7 @@ export default function HakkimizdaPage() {
             </div>
 
             <div className="mb-12">
-              <p className="text-sm font-semibold text-slate-500 uppercase tracking-widest mb-4">
+              <p className="text-sm font-semibold text-slate-600 uppercase tracking-widest mb-4">
                 Depo Tesisimiz — Unit 19 Arterial Park, Rayleigh, Essex
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
@@ -130,6 +141,10 @@ export default function HakkimizdaPage() {
               </div>
             </div>
 
+            <div className="space-y-4 mb-10">
+              <TeamQuote id="sertacFounder" />
+              <TeamQuote id="yusufGoodsIn" />
+            </div>
             <h2 className="text-2xl font-extrabold text-[#0b2545] mb-6">Hizmet Alanlarımız</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
               {[
@@ -155,22 +170,22 @@ export default function HakkimizdaPage() {
               <h2 className="text-lg font-bold text-[#0b2545] mb-3">Sektör Bağlantıları</h2>
               <ul className="space-y-2 text-sm text-slate-600">
                 <li>
-                  🌐 <strong>GLA (Global Logistics Alliance)</strong> — Kurucumuz Sertaç Yılmaz, uluslararası yük taşımacılığı ağı GLA&apos;nın konferanslarına katılım sağlamaktadır. GLA üyesi olan kurucumuz, 15. GLA Global Lojistik Konferansı&apos;na (Bangkok, 2026) katılım sağlamaktadır.
+                  <Emoji e="🌐" /> <strong>GLA (Global Logistics Alliance)</strong> — Kurucumuz Sertaç Yılmaz, uluslararası yük taşımacılığı ağı GLA&apos;nın konferanslarına katılım sağlamaktadır. GLA üyesi olan kurucumuz, 15. GLA Global Lojistik Konferansı&apos;na (Bangkok, 2026) katılım sağlamaktadır.
                 </li>
                 <li>
-                  🏛️ <strong>BIFA (British International Freight Association):</strong>{" "}
+                  <Emoji e="🏛️" /> <strong>BIFA (British International Freight Association):</strong>{" "}
                   <a href="https://bifa.org/members/arca-trade-group-ltd/" target="_blank" rel="noopener noreferrer" className="text-[#0b2545] underline">
                     Arca Trade Group Ltd — Kayıtlı BIFA Üyesi
                   </a>
                 </li>
                 <li>
-                  🏢 <strong>LinkedIn:</strong>{" "}
+                  <Emoji e="🏢" /> <strong>LinkedIn:</strong>{" "}
                   <a href="https://www.linkedin.com/company/arcatradegroup/" target="_blank" rel="noopener noreferrer" className="text-[#0b2545] underline">
                     linkedin.com/company/arcatradegroup
                   </a>
                 </li>
                 <li>
-                  🏛️ <strong>Companies House:</strong>{" "}
+                  <Emoji e="🏛️" /> <strong>Companies House:</strong>{" "}
                   <a href="https://find-and-update.company-information.service.gov.uk/company/13247691" target="_blank" rel="noopener noreferrer" className="text-[#0b2545] underline">
                     Arca Trade Group Ltd · No: 13247691
                   </a>
@@ -187,7 +202,7 @@ export default function HakkimizdaPage() {
                 href={WHATSAPP}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold px-8 py-4 rounded-full transition"
+                className="inline-flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white font-bold px-8 py-4 rounded-full transition"
               >
                 WhatsApp ile Yazın
               </a>
@@ -199,6 +214,7 @@ export default function HakkimizdaPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <PageFaq faqs={faqs} />
       </main>
       <Footer />
       <StickyWhatsappCta />

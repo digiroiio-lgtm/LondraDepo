@@ -11,7 +11,7 @@ const LAST_UPDATED = "Eylül 2026";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Sözleşme Koşulları | LondraDepo.com",
+  title: "Sözleşme Koşulları | LondraDepo",
   description:
     "LondraDepo.com hizmet sözleşmesi koşulları. Hizmet kapsamı, ödeme koşulları, sorumluluk sınırlamaları ve uygulanacak hukuk hakkında bilgi.",
   alternates: trAlternates("/sozlesme-kosullari"),
@@ -47,7 +47,7 @@ export default function SozlesmeKosullariPage() {
         <section className="py-12 px-4 bg-white">
           <div className="max-w-3xl mx-auto">
             <h1 className="text-3xl font-extrabold text-[#0b2545] mb-2">Sözleşme Koşulları</h1>
-            <p className="text-sm text-slate-400 mb-8">Son güncelleme: {LAST_UPDATED}</p>
+            <p className="text-sm text-slate-500 mb-8">Son güncelleme: {LAST_UPDATED}</p>
 
             <section className="mb-8">
               <h2 className="text-xl font-bold text-[#0b2545] mb-3">1. Taraflar ve Kapsam</h2>

@@ -55,8 +55,9 @@ export const casePages: EnPage[] = [
       { q: "What is UK fashion fulfilment?", a: "UK fashion fulfilment is storing fashion products in a UK warehouse, repackaging and labelling them, and preparing online orders for delivery to customers." },
       { q: "Do you offer repackaging?", a: "Yes. We provide full repackaging and relabelling, including brand-specific packaging, hang tags and label updates." },
       { q: "Is UK next-day delivery possible?", a: "Yes. Our Essex operation offers next-day and 2-day delivery options across the UK through carrier services." },
+      { q: "Why did Cruyff move UK fulfilment to a UK warehouse?", a: "Shipping UK orders from the Netherlands lengthened delivery times and raised costs. Moving fulfilment to LondraDepo's Essex warehouse gave next-day and 2-day UK delivery options and about 80% faster UK delivery after the switch." },
     ],
-    related: ["/en/uk-fulfilment", "/en/ecommerce-fulfilment", "/en/case-studies/uk-auto-parts-warehouse"],
+    related: ["/en/shopify-fulfilment-uk", "/en/uk-fulfilment", "/en/ecommerce-fulfilment", "/en/case-studies/uk-auto-parts-warehouse"],
   },
   {
     slug: "/en/case-studies/pizza-box-distribution-uk",
@@ -96,6 +97,7 @@ export const casePages: EnPage[] = [
       { q: "What is the difference between B2B and B2C fulfilment?", a: "B2B fulfilment covers bulk orders to businesses, with pallet shipments, fixed delivery schedules and invoice-based logistics. B2C focuses on single orders to individual consumers." },
       { q: "Can you set up regular deliveries to restaurants?", a: "Yes. We build weekly or monthly delivery programmes based on the customer list and frequency." },
       { q: "Do you store palletised packaging products?", a: "Yes. Bulky products such as pizza boxes and packaging materials are stored by the pallet, tracked in stock and prepared per order for distribution." },
+      { q: "How did the pizza box operation change?", a: "The manufacturer moved from separate shipments for every order to palletised UK stock in Essex, with scheduled deliveries to restaurants, which gives customers consistent and predictable supply." },
     ],
     related: ["/en/industries/food-packaging", "/en/pallet-storage", "/en/uk-distribution", "/en/case-studies/tortilla-uk-distribution"],
   },
@@ -139,6 +141,7 @@ export const casePages: EnPage[] = [
       { q: "Can a food brand start a UK operation with a small volume?", a: "Yes. This producer started with a single pallet and grew to container-based volumes as demand increased." },
       { q: "Do you help with UK food labelling?", a: "Yes. We provide guidance and operational support on UK labelling requirements. Legal compliance of the label remains the producer's responsibility." },
       { q: "Do you help with commodity code classification?", a: "Yes. We offer guidance on placing products in the correct commodity code, which is the basis of the UK import operation. The final classification is the importer's responsibility." },
+      { q: "How did the tortilla producer grow in the UK?", a: "The Ankara-based producer entered the UK with a single trial pallet. With commodity code guidance, labelling, fulfilment and distribution in place, the operation grew to six 40ft high-cube containers a month." },
     ],
     related: ["/en/uk-market-entry", "/en/uk-warehousing-for-turkish-exporters", "/en/container-unloading", "/en/pallet-storage", "/en/case-studies/pizza-box-distribution-uk"],
   },
@@ -173,9 +176,10 @@ export const casePages: EnPage[] = [
       { type: "stats", h2: "Results", items: [{ value: "Next-day", label: "UK dealer delivery" }, { value: "100%", label: "damage tracking" }, { value: "EN + TR", label: "bilingual management" }] },
     ],
     faqs: [
-      { q: "Do you store large automotive parts?", a: "Yes. We store automotive parts of all sizes, including front and rear bumpers and door panels, using pallet and shelving systems." },
+      { q: "Can you store bulky auto parts such as bumpers and panels?", a: "Yes. We store automotive parts of all sizes, including front and rear bumpers and door panels, using pallet and shelving systems." },
       { q: "Do you carry out damage checks on parts?", a: "Yes. Each part is visually checked and photographed at goods-in and recorded in the system. The client is informed of any damage." },
-      { q: "Can you distribute auto parts across the UK?", a: "Yes. From Essex we deliver to dealers, workshops and online customers throughout the UK." },
+      { q: "Can you distribute auto parts across the UK?", a: "Yes. From the Essex warehouse, parts are delivered to dealers, workshops and online customers throughout the UK, with next-day or 2-day options, and packed protectively for painted and sensitive surfaces." },
+      { q: "How do you record the condition of parts?", a: "Each part is checked and photographed at goods-in and dispatch, giving it a condition history. This photo-documented damage tracking supports claims and protects painted and sensitive surfaces." },
     ],
     related: ["/en/industries/automotive-parts", "/en/pallet-storage", "/en/uk-distribution", "/en/case-studies/car-seat-cover-uk-warehousing"],
   },
@@ -185,7 +189,7 @@ export const casePages: EnPage[] = [
     kind: "case",
     parent: "/en/case-studies",
     article: { ...CASE_DATE, readMins: 4, section: "Health & ecommerce" },
-    title: "Walking Treadmill UK Warehouse & Retail Distribution Case Study",
+    title: "Walking Treadmill UK Distribution Case Study",
     description:
       "How walking treadmills for older users and rehabilitation are stored, fulfilled online and distributed to UK discount stores from one Essex warehouse.",
     label: "Walking treadmills – UK distribution",
@@ -212,6 +216,7 @@ export const casePages: EnPage[] = [
       { q: "Do you fulfil bulky products?", a: "Yes. For large, heavy products such as walking treadmills we provide dedicated storage space, goods-in processes and fulfilment." },
       { q: "Do you distribute to discount stores?", a: "Yes. We organise bulk shipments and distribution to discount stores and retail chains across the UK." },
       { q: "Do you deliver across the whole UK?", a: "Yes. From our Essex warehouse we deliver to every region of the UK through courier and freight coordination." },
+      { q: "Which channels does the treadmill operation serve?", a: "The walking treadmill operation serves online sales and retail distribution across the UK from the same Essex stock, including bulk deliveries to discount stores and retail chains." },
     ],
     related: ["/en/ecommerce-fulfilment", "/en/uk-distribution", "/en/case-studies/portable-power-station-uk-operations"],
   },
@@ -248,6 +253,7 @@ export const casePages: EnPage[] = [
       { q: "Can you store rolls and large-format materials?", a: "Yes. Faux leather rolls and large panels are stacked properly on pallets to minimise the risk of damage." },
       { q: "Can you deliver B2B to UK workshops?", a: "Yes. From Essex we deliver to workshops, dealers and upholsterers across the UK, by pallet or by item." },
       { q: "Can you handle orders from online channels?", a: "Yes. We fulfil individual orders from eBay, Amazon and your own ecommerce site with same-day or next-day dispatch." },
+      { q: "How fast are seat cover orders processed?", a: "In this live operation, eBay, Amazon and B2B workshop orders are processed the same day from the Essex warehouse, with rolls and large-format materials stored on pallets." },
     ],
     related: ["/en/industries/automotive-parts", "/en/pallet-storage", "/en/ecommerce-fulfilment", "/en/case-studies/uk-auto-parts-warehouse"],
   },
@@ -285,30 +291,79 @@ export const casePages: EnPage[] = [
       { q: "Do you carry out technical operations for electronics?", a: "Yes. We provide SIM card activation, charging checks and pre-dispatch technical preparation. Every unit passes the agreed checks before dispatch." },
       { q: "Can SIM cards be activated in the UK warehouse?", a: "Yes. UK SIM activation is carried out in our warehouse, and each activation is recorded and reported to the client." },
       { q: "Do you deliver to end users?", a: "Yes. Prepared devices are sent to end users across the UK on next-day or 2-day services." },
+      { q: "What technical preparation happens before dispatch?", a: "Portable power stations are stored in Essex and prepared before dispatch, including SIM activation and charge checks, and then shipped to end users across the UK." },
     ],
     related: ["/en/cargo-handling", "/en/ecommerce-fulfilment", "/en/case-studies/uk-walking-treadmill-distribution"],
   },
 ];
 
+const caseLink = (slug: string) => {
+  const p = casePages.find((c) => c.slug === slug);
+  if (!p) throw new Error(`case hub: unknown case ${slug}`);
+  return { href: p.slug, title: p.h1, text: p.description, tag: p.article?.section };
+};
+
 export const caseHub: EnPage = {
   slug: "/en/case-studies",
   tr: "/case-studies",
   kind: "hub",
-  title: "Case Studies – Real UK Warehouse Operations",
+  modified: "2026-11-10",
+  title: "UK Warehouse & Fulfilment Case Studies",
   description:
-    "Real UK warehousing, fulfilment and distribution operations run from our Essex warehouse: fashion, food, automotive, B2B packaging, bulky goods and electronics.",
+    "Live UK warehousing, fulfilment and distribution operations run from our Essex warehouse: food, B2B packaging, automotive, fashion, bulky goods and electronics, from one trial pallet to monthly containers.",
   label: "Case Studies",
   eyebrow: "Real operations",
   h1: "UK Warehouse and Fulfilment Case Studies",
   lead:
-    "These are live operations run from LondraDepo's Essex warehouse for brands entering the UK market. Each case shows how storage, fulfilment and distribution were set up, from a single trial pallet to monthly container volumes.",
+    "These are live operations run from LondraDepo's warehouse in Rayleigh, Essex, for brands selling in the UK. Each case shows the starting point, how storage, fulfilment and distribution were set up and what changed, from a food producer that started with a single trial pallet and now ships six 40ft high-cube containers a month, to a fashion brand that moved UK orders from the Netherlands to Essex.",
   sections: [
     {
+      type: "stats",
+      h2: "Results from these operations",
+      items: [
+        { value: `${casePages.length}`, label: "live UK operations" },
+        { value: "1 → 6×40HC", label: "tortilla producer: trial pallet to monthly containers" },
+        { value: "~80%", label: "faster UK delivery for Cruyff after the switch" },
+        { value: "Same day", label: "online and workshop orders processed (seat covers)" },
+      ],
+    },
+    {
       type: "links",
-      h2: "Our operations",
-      items: casePages.map((p) => ({ href: p.slug, title: p.h1, text: p.description, tag: p.article?.section })),
+      h2: "Food, packaging and B2B distribution",
+      items: [caseLink("/en/case-studies/tortilla-uk-distribution"), caseLink("/en/case-studies/pizza-box-distribution-uk")],
+    },
+    {
+      type: "links",
+      h2: "Automotive and upholstery",
+      items: [caseLink("/en/case-studies/uk-auto-parts-warehouse"), caseLink("/en/case-studies/car-seat-cover-uk-warehousing")],
+    },
+    {
+      type: "links",
+      h2: "Ecommerce, bulky goods and electronics",
+      items: [
+        caseLink("/en/case-studies/cruyff-uk-fulfilment"),
+        caseLink("/en/case-studies/uk-walking-treadmill-distribution"),
+        caseLink("/en/case-studies/portable-power-station-uk-operations"),
+      ],
+    },
+    {
+      type: "steps",
+      h2: "How these operations usually start",
+      items: [
+        { title: "Share the product and plan", text: "Product type, expected pallets or cartons, monthly orders and sales channels." },
+        { title: "Trial shipment", text: "You can start small, as the tortilla producer did with a single pallet, to test the UK market and the process." },
+        { title: "Set-up", text: "Goods-in, stock in Mintsoft WMS, labelling and the order flow are agreed." },
+        { title: "Scale", text: "Volumes, channels and delivery programmes grow from the same Essex stock." },
+      ],
     },
   ],
-  related: ["/en/uk-market-entry", "/en/uk-import-logistics", "/en/uk-fulfilment", "/en/pallet-storage", "/en/amazon-prep-uk"],
+  faqs: [
+    { q: "Can I start with a small volume?", a: "Yes. There is no fixed minimum. The tortilla producer in these case studies entered the UK with a single trial pallet and now ships six 40ft high-cube containers a month." },
+    { q: "Which sectors do you work with?", a: "Live operations cover food and FMCG, B2B packaging, automotive parts and upholstery, fashion, bulky goods such as walking treadmills and consumer electronics. See the industries page for more." },
+    { q: "Can the same stock serve online and B2B customers?", a: "Yes. Several of these operations fulfil ecommerce orders and wholesale or trade deliveries from the same UK stock in Essex." },
+    { q: "Are these real operations?", a: "Yes. Each case study describes a live operation run from LondraDepo's warehouse in Rayleigh, Essex, with the starting point, how storage, fulfilment and distribution were set up and what changed." },
+    { q: "How can I start an operation like these?", a: "Share your product, expected volumes and sales channels using the quote form. You can start small, with a single trial pallet, and the team will plan goods-in, storage and the order flow with you." },
+  ],
+  related: ["/en/industries", "/en/uk-market-entry", "/en/uk-import-logistics", "/en/uk-fulfilment", "/en/pallet-storage"],
   cta: { h2: "Setting up a UK operation?", text: "Share your operating model and we will plan the UK warehouse and logistics with you." },
 };

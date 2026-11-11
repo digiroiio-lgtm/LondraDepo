@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Header from "@/components/Header";
@@ -12,12 +13,12 @@ const TEL = "tel:+447554195190";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "İngiltere Depo Avantajları | LondraDepo.com",
+  title: "İngiltere Depo Avantajları | LondraDepo",
   description:
     "Uygun maliyetli haftalık İngiltere depo çözümleri, Türkiye'den düzenli konteyner organizasyonu, GTIP danışmanlığı ve fulfillment tek noktada.",
   alternates: trAlternates("/ingiltere-depo-avantajlari"),
   openGraph: {
-    title: "İngiltere Depo Avantajları | LondraDepo.com",
+    title: "İngiltere Depo Avantajları | LondraDepo",
     description:
       "Haftalık uygun maliyetli İngiltere depo çözümleri, Türkiye'den düzenli konteyner organizasyonu, GTIP danışmanlığı ve fulfillment operasyonları.",
     url: PAGE_URL,
@@ -222,7 +223,7 @@ const advantages = [
             "İngiltere ticari yapı danışmanlığı",
           ].map((item) => (
             <li key={item} className="flex items-center gap-2">
-              <span className="text-green-500 flex-shrink-0">✅</span>
+              <span className="text-green-600 flex-shrink-0"><Emoji e="✅" /></span>
               {item}
             </li>
           ))}
@@ -294,7 +295,7 @@ export default function IngiltereDepoAvantajlariPage() {
         <section className="bg-gradient-to-br from-[#0b2545] via-[#1e3a5f] to-[#0b2545] text-white py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-green-400 text-sm font-semibold uppercase tracking-widest mb-4">
-              🇬🇧 İngiltere'de Fiziksel Operasyon Gücü Kazanın
+              <Emoji e="🇬🇧" /> İngiltere'de Fiziksel Operasyon Gücü Kazanın
             </p>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight text-balance mb-6">
@@ -324,7 +325,7 @@ export default function IngiltereDepoAvantajlariPage() {
                   key={item}
                   className="flex items-center gap-2 bg-white/10 border border-white/20 px-4 py-2 rounded-full"
                 >
-                  <span className="text-green-400 flex-shrink-0">✅</span>
+                  <span className="text-green-400 flex-shrink-0"><Emoji e="✅" /></span>
                   {item}
                 </li>
               ))}
@@ -335,7 +336,7 @@ export default function IngiltereDepoAvantajlariPage() {
                 href={WHATSAPP}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold px-8 py-4 rounded-full text-base transition shadow-lg"
+                className="inline-flex items-center justify-center gap-2 bg-green-700 hover:bg-green-800 text-white font-bold px-8 py-4 rounded-full text-base transition shadow-lg"
               >
                 <svg
                   className="w-5 h-5 fill-white flex-shrink-0"
@@ -350,7 +351,7 @@ export default function IngiltereDepoAvantajlariPage() {
                 href={TEL}
                 className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold px-8 py-4 rounded-full text-base transition"
               >
-                📞 Hemen Arayın
+                <Emoji e="📞" /> Hemen Arayın
               </a>
             </div>
           </div>
@@ -375,7 +376,7 @@ export default function IngiltereDepoAvantajlariPage() {
                   key={adv.title}
                   className="border border-slate-200 rounded-2xl p-6 hover:shadow-lg transition flex flex-col"
                 >
-                  <div className="text-3xl mb-3">{adv.icon}</div>
+                  <div className="text-3xl mb-3"><Emoji e={adv.icon} /></div>
                   <h3 className="font-bold text-[#0b2545] text-lg mb-3">
                     {adv.title}
                   </h3>
@@ -384,7 +385,7 @@ export default function IngiltereDepoAvantajlariPage() {
                     href={WHATSAPP}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-5 inline-block text-sm font-semibold text-green-600 hover:text-green-700 transition"
+                    className="mt-5 inline-block text-sm font-semibold text-green-700 hover:text-green-800 transition"
                   >
                     {adv.cta} →
                   </a>

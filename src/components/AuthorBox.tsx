@@ -1,11 +1,17 @@
+import Emoji from "@/components/visual/Emoji";
+import { TR_ARTICLES, trDate } from "@/content/tr-articles";
+
 interface AuthorBoxProps {
   updatedDate?: string;
+  path?: string;
 }
 
-export default function AuthorBox({ updatedDate }: AuthorBoxProps) {
+export default function AuthorBox({ updatedDate, path }: AuthorBoxProps) {
+  const a = path ? TR_ARTICLES[path] : undefined;
+  const updated = a ? trDate(a.modified) : updatedDate;
   return (
     <div className="border border-slate-200 rounded-2xl p-6 my-10 bg-[#f6f8fb]">
-      <p className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-4">
+      <p className="text-xs font-semibold uppercase tracking-widest text-slate-600 mb-4">
         Yazar & Editör
       </p>
       <div className="flex flex-col sm:flex-row gap-5">
@@ -25,22 +31,22 @@ export default function AuthorBox({ updatedDate }: AuthorBoxProps) {
         </div>
         {/* Reviewer */}
         <div className="flex items-start gap-3 flex-1">
-          <div className="w-11 h-11 rounded-full bg-[#e63946] flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+          <div className="w-11 h-11 rounded-full bg-[#d62839] flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
             YB
           </div>
           <div>
             <p className="font-bold text-[#0b2545] text-sm">
-              Yusuf Barış <span className="font-normal text-slate-400 text-xs">— Review</span>
+              Yusuf Barış <span className="font-normal text-slate-500 text-xs">— İnceleyen</span>
             </p>
             <p className="text-slate-500 text-xs leading-relaxed">
-              LondraDepo.com Operasyon Direktörü. Essex merkezli UK depo ve lojistik operasyonlarının yöneticisi.
+              LondraDepo.com Operasyon Müdürü. Essex merkezli UK depo ve lojistik operasyonlarının yöneticisi.
             </p>
           </div>
         </div>
       </div>
-      {updatedDate && (
-        <p className="text-xs text-slate-400 mt-4 pt-4 border-t border-slate-200">
-          🗓 Son güncelleme: {updatedDate} · LondraDepo.com, Essex, United Kingdom
+      {updated && (
+        <p className="text-xs text-slate-500 mt-4 pt-4 border-t border-slate-200">
+          <Emoji e="🗓" /> Son güncelleme: {updated} · LondraDepo.com, Essex, United Kingdom
         </p>
       )}
     </div>

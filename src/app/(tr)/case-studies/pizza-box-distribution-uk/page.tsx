@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -5,22 +6,25 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 import CaseHero from "@/components/CaseHero";
+import AuthorBox from "@/components/AuthorBox";
+import { TR_ARTICLES } from "@/content/tr-articles";
 import OperationsFlow from "@/components/OperationsFlow";
 import RelatedCases from "@/components/RelatedCases";
 
 import { SITE_URL } from "@/lib/site";
 import { trAlternates } from "@/lib/i18n";
+const ARTICLE = TR_ARTICLES["/case-studies/pizza-box-distribution-uk"];
 const PAGE_URL = `${SITE_URL}/case-studies/pizza-box-distribution-uk`;
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20B2B%20dagitim%20operasyonu%20hakkinda%20bilgi%20almak%20istiyorum.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Pizza Kutusu UK Dağıtım | B2B Fulfillment İngiltere | LondraDepo.com",
+  title: "Pizza Kutusu UK Dağıtım | B2B Fulfillment İngiltere | LondraDepo",
   description:
     "Pizza kutusu üreticisinin İngiltere restoranlarına palet bazlı B2B dağıtım operasyonu. Packaging distribution UK, pallet storage UK operasyon örneği.",
   alternates: trAlternates("/case-studies/pizza-box-distribution-uk"),
   openGraph: {
-    title: "Pizza Kutusu — İngiltere B2B Dağıtım Operasyonu | LondraDepo.com",
+    title: "Pizza Kutusu — İngiltere B2B Dağıtım Operasyonu | LondraDepo",
     description:
       "Restoranlardan gelen toplu siparişlerin palet bazlı depolanması ve düzenli UK dağıtım planlaması.",
     url: PAGE_URL,
@@ -45,10 +49,14 @@ const jsonLd = {
     {
       "@type": "Article",
       "@id": `${PAGE_URL}#article`,
-      headline: "Pizza Kutusu — İngiltere B2B Dağıtım Operasyonu",
+      headline: ARTICLE.headline,
       description:
         "Pizza kutusu üreticisinin İngiltere restoranlarına palet bazlı stok yönetimi ve düzenli dağıtım planlaması.",
       url: PAGE_URL,
+      ...(ARTICLE.published ? { datePublished: ARTICLE.published } : {}),
+      dateModified: ARTICLE.modified,
+      author: { "@type": "Person", name: "Sertaç Yılmaz", jobTitle: "Arca Trade Group Kurucu Ortağı", url: `${SITE_URL}/hakkimizda` },
+      contributor: { "@type": "Person", name: "Yusuf Barış", jobTitle: "Operasyon Müdürü" },
       publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
       image: { "@type": "ImageObject", url: `${SITE_URL}/logo.svg`, width: 640, height: 160 },
       mainEntityOfPage: PAGE_URL,
@@ -110,11 +118,11 @@ const faqs = [
   },
   {
     q: "Minimum sipariş miktarı var mı?",
-    a: "Palet bazlı operasyonlarda minimum hacim gereksinimi değişkenlik gösterebilir. İhtiyaçlarınızı paylaşırsanız size özel model oluşturabiliriz.",
+    a: "Sabit bir minimum yok. Palet bazlı operasyonlar tek tek değerlendirilir; tahmini palet sayınızı ve sipariş düzeninizi paylaşırsanız size özel depolama ve dağıtım modeli oluşturabiliriz.",
   },
   {
     q: "UK gıda sektörü distribütörleri için özel çözüm sunuyor musunuz?",
-    a: "Evet. Restoran tedarik zinciri ve FMCG B2B dağıtımı konusunda deneyimli operasyon ekibimiz mevcuttur.",
+    a: "Evet. Restoran tedarik zinciri ve FMCG B2B dağıtımı için paletli UK stoğu, müşteri bazlı sabit teslimat programları, lot bazlı stok kaydı ve düşük stok uyarıları sunuyoruz.",
   },
 ];
 
@@ -153,6 +161,7 @@ export default function PizzaBoxCaseStudyPage() {
         <article className="py-12 px-4 bg-white">
           <div className="max-w-4xl mx-auto">
             <CaseHero
+              path="/case-studies/pizza-box-distribution-uk"
               industry="B2B Dağıtım"
               industryColor="text-amber-700 bg-amber-50"
               brand="Ambalaj & FMCG"
@@ -175,11 +184,11 @@ export default function PizzaBoxCaseStudyPage() {
                   Türkiye'den sevkiyat yapılması lojistik açıdan sürdürülemezdi.
                 </p>
                 <ul className="text-slate-700 text-sm space-y-2 list-none">
-                  <li>⚠️ Türkiye'den UK'ya her seferinde ayrı sevkiyat maliyeti ve gecikmesi</li>
-                  <li>⚠️ Restoranların tutarlı ve öngörülebilir tedarik ihtiyacı</li>
-                  <li>⚠️ Büyük hacimli palet ürünler için depolama ihtiyacı</li>
-                  <li>⚠️ UK'da fiziksel operasyon noktası gerekliliği</li>
-                  <li>⚠️ Stok erken tükenme riski ve müşteri kayıpları</li>
+                  <li><Emoji e="⚠️" /> Türkiye'den UK'ya her seferinde ayrı sevkiyat maliyeti ve gecikmesi</li>
+                  <li><Emoji e="⚠️" /> Restoranların tutarlı ve öngörülebilir tedarik ihtiyacı</li>
+                  <li><Emoji e="⚠️" /> Büyük hacimli palet ürünler için depolama ihtiyacı</li>
+                  <li><Emoji e="⚠️" /> UK'da fiziksel operasyon noktası gerekliliği</li>
+                  <li><Emoji e="⚠️" /> Stok erken tükenme riski ve müşteri kayıpları</li>
                 </ul>
               </div>
             </section>
@@ -202,7 +211,7 @@ export default function PizzaBoxCaseStudyPage() {
                   { icon: "💬", title: "Türkçe Koordinasyon", desc: "Tüm operasyon süreci Türkçe iletişimle Türkiye merkezli ekiple koordine edildi." },
                 ].map((item) => (
                   <div key={item.title} className="border border-slate-200 rounded-xl p-5 flex gap-4">
-                    <span className="text-2xl flex-shrink-0" aria-hidden="true">{item.icon}</span>
+                    <span className="text-2xl flex-shrink-0" aria-hidden="true"><Emoji e={item.icon} /></span>
                     <div>
                       <h3 className="font-bold text-[#0b2545] mb-1">{item.title}</h3>
                       <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
@@ -249,7 +258,7 @@ export default function PizzaBoxCaseStudyPage() {
                   href={WHATSAPP}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold px-7 py-3.5 rounded-full transition"
+                  className="inline-flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white font-bold px-7 py-3.5 rounded-full transition"
                 >
                   WhatsApp&apos;tan hızlı bilgi alın
                 </a>
@@ -285,6 +294,9 @@ export default function PizzaBoxCaseStudyPage() {
                 <Link href="/essex-depo" className="text-sm text-[#0b2545] hover:underline">→ Essex Depo</Link>
               </div>
             </div>
+
+            <AuthorBox path="/case-studies/pizza-box-distribution-uk" />
+
 
             <RelatedCases cases={relatedCases} />
           </div>

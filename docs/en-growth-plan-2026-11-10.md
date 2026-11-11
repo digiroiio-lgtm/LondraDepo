@@ -220,7 +220,7 @@ UK market pricing reference: ~£3–£6.50 per pallet per week for storage, plus
 | No internal links to non-canonical URLs | ✅ (except the legacy page, resolved by R1) |
 | `lastmod` from real content dates (EN) | ⬜ P2 |
 | R1 `/uk-warehousing-fulfilment` → `/en` (301) | ⬜ awaiting approval |
-| R2 `/shopify-fulfillment` → `/shopify-ingiltere-depo` (301) | ⬜ awaiting approval |
+| R2 `/shopify-fulfillment` → `/en/shopify-fulfilment-uk` (301; changed 10 Nov 2026 with owner approval: the URL’s GSC demand is English) | ✅ |
 | Sitemap index submitted in GSC | ⬜ your action |
 | Google Business Profile matches address and phone | ⬜ verify |
 | Structured data validated (Rich Results Test) for new templates | ⬜ per release |

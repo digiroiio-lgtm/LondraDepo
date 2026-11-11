@@ -5,9 +5,9 @@ import { servicePages } from "./services";
 import { casePages, caseHub } from "./cases";
 import { blogPages, blogHub } from "./blog";
 import { legalPages } from "./legal";
-import { growthPages, growthPagesP2 } from "./growth";
+import { growthPages, growthPagesP2, calculatorPages, portPages, industryHub } from "./growth";
 
-export const EN_PAGES: EnPage[] = [...corePages, ...servicePages, ...growthPages, ...growthPagesP2, caseHub, ...casePages, blogHub, ...blogPages, ...legalPages];
+export const EN_PAGES: EnPage[] = [...corePages, ...servicePages, ...growthPages, ...growthPagesP2, ...calculatorPages, ...portPages, industryHub, caseHub, ...casePages, blogHub, ...blogPages, ...legalPages];
 
 const bySlug = new Map(EN_PAGES.map((p) => [p.slug, p]));
 
@@ -18,6 +18,8 @@ export function getEnPage(slug: string): EnPage | undefined {
 // Build-time guard: page registry and the lightweight pair list must stay identical.
 {
   const a = EN_PAGES.filter((p) => p.tr).map((p) => `${p.tr}>${p.slug}`).sort().join("|");
-  const b = PAIRS.map(([tr, en]) => `${tr}>${en}`).sort().join("|");
+  // Standalone EN routes outside the registry (own page.tsx) are paired in PAIRS only.
+  const STANDALONE = new Set(["/en/request-a-quote"]);
+  const b = PAIRS.filter(([, en]) => !STANDALONE.has(en)).map(([tr, en]) => `${tr}>${en}`).sort().join("|");
   if (a !== b) throw new Error("src/lib/i18n-pairs.ts is out of sync with src/content/en");
 }

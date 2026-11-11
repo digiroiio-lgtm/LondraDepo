@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -11,12 +12,12 @@ import { trAlternates } from "@/lib/i18n";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20UK%20gümrükleme%20desteği%20hakkında%20bilgi%20almak%20istiyorum.";
 
 export const metadata: Metadata = {
-  title: "İngiltere Gümrükleme Hizmeti | UK İthalat Gümrüğü | LondraDepo.com",
+  title: "İngiltere Gümrükleme Hizmeti | UK İthalat Gümrüğü | LondraDepo",
   description:
     "İngiltere ithalatı için gümrükleme: Arca Trade Group gümrük ekibiyle beyanname, GTİP danışmanlığı ve gümrükten Essex depoya doğrudan teslim. Türkiye'den ihracat yapan işletmeler için.",
   alternates: trAlternates("/gumrukleme"),
   openGraph: {
-    title: "İngiltere Gümrükleme Desteği | LondraDepo.com",
+    title: "İngiltere Gümrükleme Desteği | LondraDepo",
     description: "UK ithalat gümrüklemesi ve depoya teslim. Türkiye'den İngiltere'ye ihracat için.",
     url: `${SITE_URL}/gumrukleme`,
     siteName: "LondraDepo.com",
@@ -72,6 +73,7 @@ const faqs = [
     q: "Gümrük sonrası ürünler depoya nasıl alınıyor?",
     a: "Gümrük sürecinin tamamlanmasının ardından ürünleriniz depo adresimize teslim edilir, sayılır ve depo sistemine dahil edilir.",
   },
+  { q: "İngiltere'ye ithalat için GB EORI numarası gerekir mi?", a: "Evet. İthalatçının Büyük Britanya'ya ithalat için GB ile başlayan bir EORI numarası olmalıdır. Beyannameyi Arca Trade Group gümrük ekibi verebilir; gümrük vergisi ve ithalat KDV'si ithalatçının sorumluluğundadır." },
 ];
 
 export default function GumruklernePage() {
@@ -109,7 +111,7 @@ export default function GumruklernePage() {
               href={WHATSAPP}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
+              className="inline-flex items-center gap-2 bg-[#d62839] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
             >
               Gümrükleme Hakkında Bilgi Al
             </a>
@@ -123,7 +125,7 @@ export default function GumruklernePage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-3xl mx-auto">
               {features.map((f) => (
                 <div key={f.title} className="border border-slate-200 rounded-2xl p-5">
-                  <div className="text-2xl mb-2">{f.icon}</div>
+                  <div className="text-2xl mb-2"><Emoji e={f.icon} /></div>
                   <h3 className="font-bold text-[#0b2545] mb-1">{f.title}</h3>
                   <p className="text-slate-600 text-sm leading-relaxed">{f.desc}</p>
                 </div>

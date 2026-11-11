@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -11,12 +12,12 @@ import { trAlternates } from "@/lib/i18n";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20elleçleme%20hizmeti%20hakkında%20bilgi%20almak%20istiyorum.";
 
 export const metadata: Metadata = {
-  title: "İngiltere Elleçleme Hizmeti | Yükleme, Boşaltma & Ürün Elleçleme | LondraDepo.com",
+  title: "İngiltere Elleçleme: Yükleme ve Boşaltma | LondraDepo",
   description:
     "İngiltere'de araç boşaltma, palet ve koli elleçleme, yeniden paketleme, etiketleme ve sevkiyat hazırlama. Essex merkezli UK elleçleme operasyonu.",
   alternates: trAlternates("/ellecleme"),
   openGraph: {
-    title: "İngiltere Elleçleme Hizmeti | LondraDepo.com",
+    title: "İngiltere Elleçleme Hizmeti | LondraDepo",
     description: "UK yükleme, boşaltma ve ürün elleçleme hizmetleri. Paketleme, etiketleme, sevkiyat hazırlama.",
     url: `${SITE_URL}/ellecleme`,
     siteName: "LondraDepo.com",
@@ -42,6 +43,7 @@ const faqs = [
     q: "Elleçleme hizmetinin fiyatlandırması nasıl işliyor?",
     a: "Fiyatlandırma işlem türüne, ürün hacmine ve hizmet kapsamına göre belirlenir. Operasyonunuza özel teklif için WhatsApp üzerinden bize ulaşın.",
   },
+  { q: "Ürünler müşteriye veya Amazon'a gitmeden yeniden etiketlenebilir mi?", a: "Evet. Yeniden etiketleme, yeniden paketleme ve SKU'ya göre ayırma Essex deposundaki elleçleme hizmetinin parçasıdır; UK müşterilerine veya Amazon FBA'ya gönderilmeden önce etiketli stok hazırlanır." },
 ];
 
 const jsonLd = {
@@ -109,7 +111,7 @@ export default function EllecelermePage() {
               href={WHATSAPP}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
+              className="inline-flex items-center gap-2 bg-[#d62839] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
             >
               Elleçleme Fiyatı Al
             </a>
@@ -123,7 +125,7 @@ export default function EllecelermePage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {features.map((f) => (
                 <div key={f.title} className="border border-slate-200 rounded-2xl p-5">
-                  <div className="text-2xl mb-2">{f.icon}</div>
+                  <div className="text-2xl mb-2"><Emoji e={f.icon} /></div>
                   <h3 className="font-bold text-[#0b2545] mb-1">{f.title}</h3>
                   <p className="text-slate-600 text-sm leading-relaxed">{f.desc}</p>
                 </div>

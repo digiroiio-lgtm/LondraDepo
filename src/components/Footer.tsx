@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 import Link from "next/link";
 import CookieSettingsButton from "./CookieSettingsButton";
 
@@ -27,6 +28,15 @@ export default function Footer() {
             <li><a href="/ingiltere-e-ticaret-lojistigi" className="hover:text-white transition">İngiltere E-Ticaret Lojistiği</a></li>
             <li><a href="/siparis-toplama-paketleme" className="hover:text-white transition">Sipariş Toplama & Paketleme</a></li>
             <li><a href="/ingiltere-depo-fiyatlari" className="hover:text-white transition">İngiltere Depo Fiyatları</a></li>
+            <li><a href="/ingiltere-depo-maliyet-hesaplama" className="hover:text-white transition">Depo Maliyet Hesaplama</a></li>
+            <li><a href="/konteyner-varis-planlayici" className="hover:text-white transition">Konteyner Varış Planlayıcı</a></li>
+            <li><a href="/ingiltere-ithalat-lojistigi" className="hover:text-white transition">İngiltere İthalat Lojistiği</a></li>
+            <li><a href="/konteyner-bosaltma" className="hover:text-white transition">Konteyner Boşaltma</a></li>
+            <li><a href="/limandan-depoya-lojistik" className="hover:text-white transition">Limandan Depoya Lojistik</a></li>
+            <li><a href="/ambalaj-catering-depolama" className="hover:text-white transition">Ambalaj ve Catering Depolama</a></li>
+            <li><a href="/sektorler" className="hover:text-white transition">Sektörler</a></li>
+            <li><a href="/london-gateway-tilbury-depo" className="hover:text-white transition">London Gateway &amp; Tilbury Depo</a></li>
+            <li><a href="/felixstowe-liman-depo" className="hover:text-white transition">Felixstowe Liman Depo</a></li>
             <li><a href="/turkiyeden-ingiltereye-satis" className="hover:text-white transition">Türkiye&apos;den İngiltere&apos;ye Satış</a></li>
             <li><a href="/depolama" className="hover:text-white transition">Depolama & Stoklama</a></li>
             <li><a href="/gumrukleme" className="hover:text-white transition">Gümrükleme Desteği</a></li>
@@ -34,6 +44,7 @@ export default function Footer() {
             <li><a href="/shopify-ingiltere-depo" className="hover:text-white transition">Shopify Fulfillment</a></li>
             <li><a href="/amazon-fulfillment" className="hover:text-white transition">Amazon Fulfillment</a></li>
             <li><a href="/amazon-prep-uk" className="hover:text-white transition">Amazon Prep UK</a></li>
+            <li><a href="/amazon-ingiltere-depo-konumlari" className="hover:text-white transition">Amazon Depo Konumları</a></li>
           </ul>
         </div>
 
@@ -56,7 +67,7 @@ export default function Footer() {
               href={WHATSAPP}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white font-semibold px-5 py-3 rounded-full transition w-fit"
+              className="flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white font-semibold px-5 py-3 rounded-full transition w-fit"
             >
               WhatsApp&apos;tan Teklif Alın
             </a>
@@ -64,13 +75,13 @@ export default function Footer() {
               href={TEL}
               className="flex items-center gap-2 text-slate-300 hover:text-white transition"
             >
-              📞 Hemen Arayın
+              <Emoji e="📞" /> Hemen Arayın
             </a>
           </div>
         </div>
       </div>
 
-      <div className="border-t border-white/10 pt-6 text-center text-xs text-slate-500 space-y-2">
+      <div className="border-t border-white/10 pt-6 text-center text-xs text-slate-400 space-y-2">
         <p>
           © {new Date().getFullYear()} LondraDepo.com — Londra depo, İngiltere
           warehouse ve İngiltere fulfillment çözümleri. Tüm hakları saklıdır.

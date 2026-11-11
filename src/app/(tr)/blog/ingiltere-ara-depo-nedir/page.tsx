@@ -1,26 +1,30 @@
+import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 import ArticleHero from "@/components/ArticleHero";
+import ArticleSources from "@/components/ArticleSources";
+import { TR_ARTICLES } from "@/content/tr-articles";
 import CtaCards from "@/components/CtaCards";
 import AuthorBox from "@/components/AuthorBox";
 import RelatedArticles from "@/components/RelatedArticles";
 
 import { SITE_URL } from "@/lib/site";
 import { trAlternates } from "@/lib/i18n";
+const ARTICLE = TR_ARTICLES["/blog/ingiltere-ara-depo-nedir"];
 const PAGE_URL = `${SITE_URL}/blog/ingiltere-ara-depo-nedir`;
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20ara%20depo%20hakkinda%20bilgi%20almak%20istiyorum.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "İngiltere Ara Depo Nedir? | UK Transit Depolama Rehberi | LondraDepo.com",
+  title: "İngiltere Ara Depo (Transit Depo) Nedir? | LondraDepo",
   description:
     "İngiltere ara depo nedir, kimler için uygundur, normal depodan farkı nedir? UK transit depolama ve geçici depo çözümleri rehberi.",
   alternates: trAlternates("/blog/ingiltere-ara-depo-nedir"),
   openGraph: {
-    title: "İngiltere Ara Depo Nedir? | LondraDepo.com",
+    title: "İngiltere Ara Depo Nedir? | LondraDepo",
     description: "UK ara depo ve transit depolama hizmetinin ne olduğu, nasıl çalıştığı ve hangi firmalar için uygun olduğu.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
@@ -43,36 +47,17 @@ const jsonLd = {
     },
     {
       "@type": "Article",
-      headline: "İngiltere Ara Depo Nedir? Kimler İçin Uygundur?",
+      headline: ARTICLE.headline,
       description: "UK ara depo ve transit depolama hizmetinin ne olduğu ve hangi firmalar için uygun olduğu.",
       url: PAGE_URL,
-      author: { "@type": "Person", name: "Sertaç Yılmaz" },
+      author: { "@type": "Person", name: "Sertaç Yılmaz", jobTitle: "Arca Trade Group Kurucu Ortağı", url: `${SITE_URL}/hakkimizda` },
+      contributor: { "@type": "Person", name: "Yusuf Barış", jobTitle: "Operasyon Müdürü" },
       publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
       image: { "@type": "ImageObject", url: `${SITE_URL}/logo.svg`, width: 640, height: 160 },
-      datePublished: "2025-06-01",
-      dateModified: "2026-01-01",
+      datePublished: ARTICLE.published,
+      dateModified: ARTICLE.modified,
+      mainEntityOfPage: { "@type": "WebPage", "@id": PAGE_URL },
       inLanguage: "tr-TR",
-    },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "İngiltere ara depo ile normal depo arasındaki fark nedir?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Ara depo, ürünlerin kısa süreli (geçici) olarak stoklandığı ve buradan başka bir noktaya sevk edildiği transit depolama çözümüdür. Normal depoda ise ürünler uzun süreli tutulur ve sipariş bazlı dağıtım yapılır.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "İngiltere ara depo hizmeti hangi firmalar için uygundur?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Türkiye'den konteynerle toplu ürün gönderip bunları İngiltere içinde farklı noktalara dağıtmak isteyen firmalar, sezonluk stok yönetimi yapanlar ve UK ithalat sürecinde ürünlerini geçici olarak depolamak isteyenler için uygundur.",
-          },
-        },
-      ],
     },
   ],
 };
@@ -84,11 +69,21 @@ const relatedArticles = [
   { href: "/blog/ingiltere-palet-depolama-maliyetleri", title: "İngiltere Palet Depolama Maliyetleri", category: "Depolama", readTime: "5 dk", categoryColor: "bg-green-50 text-green-700" },
 ];
 
+
+const faqs = [
+  { q: "İngiltere ara depo nedir?", a: "İngiltere ara depo (cross-dock veya transit depo), Türkiye'den gelen toplu yükün kısa süre tutulup ayrıştırıldığı, etiketlendiği ve UK içinde farklı adreslere ya da Amazon depolarına sevk edildiği noktadır. LondraDepo bunu Essex'te sunar." },
+  { q: "Ara depo ile normal depo arasındaki fark nedir?", a: "Normal depoda ürünler uzun süre stoklanır ve siparişler geldikçe gönderilir. Ara depoda amaç stoklamak değil, gelen yükü hızla ayırıp sevk etmektir; ürünler genellikle kısa süre kalır." },
+  { q: "Ara depo hangi firmalar için uygun?", a: "Büyük toplu gönderimlerle İngiltere'ye gelip daha küçük miktarlarda veya birden fazla adrese satan, ürünlerin stoklanmadan hızla dağıtılmasını isteyen firmalar için uygundur." },
+  { q: "Ara depo ile Amazon prep birlikte yapılabilir mi?", a: "Evet. Ara depoya gelen yük ayrıştırılırken Amazon'a gidecek kısmı FNSKU etiketleme ve ambalaj kontrolüyle hazırlanıp atanan Amazon UK deposuna gönderilebilir, kalan kısım müşterilere sevk edilir." },
+  { q: "Ara depodaki ürünlerin bir kısmı depolanabilir mi?", a: "Evet. LondraDepo'da teslimatın bir kısmı doğrudan sevk edilirken kalanı haftalık palet başına £3,50 + KDV'den depolanıp siparişler geldikçe gönderilebilir." },
+];
+
 export default function AraDepoNedirPage() {
   return (
     <>
       <Header />
       <main>
+        <FaqJsonLd faqs={faqs} />
         <nav aria-label="breadcrumb" className="bg-slate-50 border-b border-slate-200">
           <div className="max-w-6xl mx-auto px-4 py-2 text-sm text-slate-500 flex flex-wrap gap-2">
             <Link href="/" className="hover:text-[#0b2545] transition">Ana Sayfa</Link>
@@ -102,11 +97,11 @@ export default function AraDepoNedirPage() {
         <article className="py-10 px-4 bg-white">
           <div className="max-w-3xl mx-auto">
             <ArticleHero
+              path="/blog/ingiltere-ara-depo-nedir"
               category="Depolama"
               categoryColor="text-green-700 bg-green-50"
               title="İngiltere Ara Depo Nedir? Kimler İçin Uygundur?"
               readTime="5 dakika"
-              date="Ocak 2026"
             />
 
             <p className="text-lg leading-relaxed text-slate-600 mb-8">
@@ -173,27 +168,15 @@ export default function AraDepoNedirPage() {
                 <li><strong>UK altyapısı:</strong> Essex&apos;ten tüm İngiltere&apos;ye hızlı erişim</li>
               </ul>
 
+              <ArticleSources path="/blog/ingiltere-ara-depo-nedir" />
+
               <h2>Sık Sorulan Sorular</h2>
-
-              <h3>İngiltere ara depo ile normal depo arasındaki fark nedir?</h3>
-              <p>
-                Ara depo, ürünlerin kısa süreli (geçici) olarak stoklandığı ve buradan başka
-                bir noktaya sevk edildiği transit depolama çözümüdür. Normal depoda ise ürünler
-                uzun süreli tutulur ve sipariş bazlı dağıtım yapılır.
-              </p>
-
-              <h3>İngiltere ara depo hizmeti hangi firmalar için uygundur?</h3>
-              <p>
-                Türkiye&apos;den konteynerle toplu ürün gönderip bunları İngiltere içinde farklı
-                noktalara dağıtmak isteyen firmalar, sezonluk stok yönetimi yapanlar ve UK
-                ithalat sürecinde ürünlerini geçici olarak depolamak isteyenler için uygundur.
-              </p>
-
-              <h3>Ara depo ile Amazon prep birlikte kullanılabilir mi?</h3>
-              <p>
-                Evet. Ürünleriniz Essex deposumuza geldiğinde hem ara depo hem Amazon prep
-                süreçleri aynı operasyon içinde yönetilebilir.
-              </p>
+              {faqs.map((f) => (
+                <div key={f.q}>
+                  <h3>{f.q}</h3>
+                  <p>{f.a}</p>
+                </div>
+              ))}
             </div>
 
             <div className="bg-[#0b2545] text-white rounded-2xl p-8 my-10 text-center">
@@ -208,7 +191,7 @@ export default function AraDepoNedirPage() {
                   href={WHATSAPP}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold px-7 py-3.5 rounded-full transition"
+                  className="inline-flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white font-bold px-7 py-3.5 rounded-full transition"
                 >
                   WhatsApp&apos;tan hızlı bilgi alın
                 </a>
@@ -221,7 +204,7 @@ export default function AraDepoNedirPage() {
               </div>
             </div>
 
-            <AuthorBox updatedDate="Ocak 2026" />
+            <AuthorBox path="/blog/ingiltere-ara-depo-nedir" />
 
             <RelatedArticles articles={relatedArticles} />
 

@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -11,12 +12,12 @@ import { trAlternates } from "@/lib/i18n";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20nakliye%20ve%20dağıtım%20hizmeti%20hakkında%20bilgi%20almak%20istiyorum.";
 
 export const metadata: Metadata = {
-  title: "İngiltere Nakliye ve Dağıtım Hizmeti | UK Distribution | LondraDepo.com",
+  title: "İngiltere Nakliye ve Dağıtım Hizmeti | UK Distribution | LondraDepo",
   description:
     "İngiltere içi nakliye ve dağıtım hizmetleri. Ürün toplama, depo transferleri, yerel dağıtım ve UK geneli teslimat koordinasyonu. Essex merkezli operasyon.",
   alternates: trAlternates("/nakliye-dagitim"),
   openGraph: {
-    title: "İngiltere Nakliye ve Dağıtım | LondraDepo.com",
+    title: "İngiltere Nakliye ve Dağıtım | LondraDepo",
     description: "UK içi nakliye ve dağıtım koordinasyonu. Ürün toplama, yerel dağıtım, UK geneli teslimat.",
     url: `${SITE_URL}/nakliye-dagitim`,
     siteName: "LondraDepo.com",
@@ -27,12 +28,12 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    q: "Başka bir UK konumundan ürün toplayabilir misiniz?",
+    q: "Başka bir UK deposundan veya tedarikçiden ürün alıp depoya getirebilir misiniz?",
     a: "Evet. UK içindeki farklı konumlardan ürün toplama ve Essex depomuza getirme operasyonlarını koordine edebiliyoruz. Detaylar için WhatsApp üzerinden bilgi alın.",
   },
   {
     q: "İngiltere'nin tüm bölgelerine dağıtım yapıyor musunuz?",
-    a: "Evet. Essex merkezli operasyonumuzdan Londra, Birmingham, Manchester ve İngiltere geneline teslimat koordinasyonu sağlıyoruz.",
+    a: "Evet. Essex merkezli operasyonumuzdan Londra, Birmingham, Manchester ve İngiltere geneline palet ve koli teslimat koordinasyonu sağlıyoruz; düzenli B2B müşteriler için programlı teslimat da kurulabilir.",
   },
   {
     q: "UK içi dağıtım için minimum sevkiyat hacmi var mı?",
@@ -42,6 +43,7 @@ const faqs = [
     q: "Nakliye ve dağıtım fiyatlandırması nasıl belirleniyor?",
     a: "Fiyatlandırma sevkiyat hacmine, mesafeye ve hizmet kapsamına göre belirlenir. Bespoke fiyat teklifi için WhatsApp'tan yazın.",
   },
+  { q: "Palet ve koli teslimatı yapıyor musunuz?", a: "Evet. Essex'ten toptan ve ticari müşterilere palet teslimatı, online alıcılara koli teslimatı koordine ediyoruz; düzenli B2B müşteriler için programlı teslimatlar da kurulabilir." },
 ];
 
 const jsonLd = {
@@ -105,7 +107,7 @@ export default function NakliyeDagitimPage() {
               href={WHATSAPP}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
+              className="inline-flex items-center gap-2 bg-[#d62839] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
             >
               Dağıtım Teklifi Al
             </a>
@@ -119,7 +121,7 @@ export default function NakliyeDagitimPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {features.map((f) => (
                 <div key={f.title} className="border border-slate-200 rounded-2xl p-5">
-                  <div className="text-2xl mb-2">{f.icon}</div>
+                  <div className="text-2xl mb-2"><Emoji e={f.icon} /></div>
                   <h3 className="font-bold text-[#0b2545] mb-1">{f.title}</h3>
                   <p className="text-slate-600 text-sm leading-relaxed">{f.desc}</p>
                 </div>

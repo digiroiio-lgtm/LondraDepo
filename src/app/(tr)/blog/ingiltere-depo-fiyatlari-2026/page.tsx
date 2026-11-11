@@ -5,25 +5,28 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 import ArticleHero from "@/components/ArticleHero";
+import ArticleSources from "@/components/ArticleSources";
+import { TR_ARTICLES } from "@/content/tr-articles";
 import CtaCards from "@/components/CtaCards";
 import AuthorBox from "@/components/AuthorBox";
 import RelatedArticles from "@/components/RelatedArticles";
 
 import { SITE_URL } from "@/lib/site";
 import { trAlternates } from "@/lib/i18n";
+const ARTICLE = TR_ARTICLES["/blog/ingiltere-depo-fiyatlari-2026"];
 const PAGE_URL = `${SITE_URL}/blog/ingiltere-depo-fiyatlari-2026`;
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20depo%20maliyet%20bilgisi%20almak%20istiyorum.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "İngiltere Depo Fiyatları 2026 | UK Palet Depolama Maliyeti | LondraDepo.com",
+  title: "İngiltere Depo Fiyatları 2026: Palet £3,50/Hafta | LondraDepo",
   description:
-    "İngiltere depo fiyatları 2026: palet depolama, fulfillment ve Amazon prep maliyetleri. UK warehouse ücret yapısı ve bütçe planlaması rehberi.",
+    "UK depo fiyatları 2026: palet depolama haftalık £3,50 + KDV'den, 10 palet 4 hafta £140 + KDV. Mal kabul, pick & pack ve teslimat kalemleri, ücretsiz hesaplayıcı.",
   alternates: trAlternates("/blog/ingiltere-depo-fiyatlari-2026"),
   openGraph: {
-    title: "İngiltere Depo Fiyatları 2026 | LondraDepo.com",
+    title: "İngiltere Depo Fiyatları 2026: Palet £3,50/Hafta",
     description:
-      "UK palet depolama, fulfillment ve Amazon prep maliyetleri. İngiltere depo ücret yapısı ve bütçe planlaması.",
+      "Palet depolama haftalık £3,50 + KDV'den. Maliyet kalemleri, örnek hesap ve ücretsiz hesaplayıcı.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
     locale: "tr_TR",
@@ -44,7 +47,9 @@ const faqs = [
   {
     "q": "Amazon prep ve fulfillment hizmetini birlikte alabilir miyim?",
     "a": "Evet. LondraDepo.com'da Amazon prep ve 3PL fulfillment hizmetlerini tek operasyon çatısı altında sunuyoruz. Bu yaklaşım çift işlem ücretini ortadan kaldırır."
-  }
+  },
+  { q: "Palet depolama fiyatına neler dahil değil?", a: "Depolama fiyatı yalnızca depolamayı kapsar. Mal kabul, konteyner boşaltma, yeniden paletleme, etiketleme, pick & pack, ambalaj, teslimat, iade ve gümrükleme operasyonunuza göre ayrıca tekliflendirilir." },
+  { q: "Aylık depo maliyetimi nasıl tahmin ederim?", a: "Palet sayınızı hafta sayısıyla ve haftalık palet fiyatıyla çarpın, ardından sipariş yapınıza göre elleçleme ve teslimat kalemlerini ekleyin. Depo Maliyet Hesaplama aracı depolama kısmını sizin için hesaplar." },
 ];
 
 const jsonLd = {
@@ -60,14 +65,16 @@ const jsonLd = {
     },
     {
       "@type": "Article",
-      headline: "İngiltere Depo Fiyatları 2026: Tam Maliyet Rehberi",
+      headline: ARTICLE.headline,
       description: "UK palet depolama, fulfillment ve Amazon prep maliyetleri. İngiltere depo ücret yapısı.",
       url: PAGE_URL,
-      author: { "@type": "Person", name: "Sertaç Yılmaz" },
+      author: { "@type": "Person", name: "Sertaç Yılmaz", jobTitle: "Arca Trade Group Kurucu Ortağı", url: `${SITE_URL}/hakkimizda` },
+      contributor: { "@type": "Person", name: "Yusuf Barış", jobTitle: "Operasyon Müdürü" },
       publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
       image: { "@type": "ImageObject", url: `${SITE_URL}/logo.svg`, width: 640, height: 160 },
-      datePublished: "2025-06-01",
-      dateModified: "2026-01-01",
+      datePublished: ARTICLE.published,
+      dateModified: ARTICLE.modified,
+      mainEntityOfPage: { "@type": "WebPage", "@id": PAGE_URL },
       inLanguage: "tr-TR",
     },
   ],
@@ -99,11 +106,11 @@ export default function DepoFiyatlariPage() {
         <article className="py-10 px-4 bg-white">
           <div className="max-w-3xl mx-auto">
             <ArticleHero
+              path="/blog/ingiltere-depo-fiyatlari-2026"
               category="Depolama"
               categoryColor="text-green-700 bg-green-50"
               title="İngiltere Depo Fiyatları 2026: Tam Maliyet Rehberi"
               readTime="7 dakika"
-              date="Ocak 2026"
             />
 
             <p className="text-lg leading-relaxed text-slate-600 mb-8">
@@ -184,6 +191,8 @@ export default function DepoFiyatlariPage() {
                 <li>Türkçe iletişim yapabilen bir partner seçerek operasyon hataları ve iletişim gecikmelerini minimize edin</li>
               </ul>
 
+              <ArticleSources path="/blog/ingiltere-depo-fiyatlari-2026" />
+
               <h2>Sık Sorulan Sorular</h2>
 
               {faqs.map(({ q, a }) => (
@@ -204,7 +213,7 @@ export default function DepoFiyatlariPage() {
                   href={WHATSAPP}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold px-7 py-3.5 rounded-full transition"
+                  className="inline-flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white font-bold px-7 py-3.5 rounded-full transition"
                 >
                   WhatsApp&apos;tan hızlı bilgi alın
                 </a>
@@ -217,7 +226,7 @@ export default function DepoFiyatlariPage() {
               </div>
             </div>
 
-            <AuthorBox updatedDate="Ocak 2026" />
+            <AuthorBox path="/blog/ingiltere-depo-fiyatlari-2026" />
 
             <RelatedArticles articles={relatedArticles} />
 

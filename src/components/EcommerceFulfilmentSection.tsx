@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20e-ticaret%20fulfillment%20operasyonumu%20kurmak%20istiyorum.";
 
 const workflow = [
@@ -24,7 +25,7 @@ export default function EcommerceFulfilmentSection() {
     <section className="py-20 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <p className="text-[#e63946] text-sm font-semibold uppercase tracking-widest mb-3">
+          <p className="text-[#d62839] text-sm font-semibold uppercase tracking-widest mb-3">
             E-Ticaret Fulfillment
           </p>
           <h2 className="text-3xl font-extrabold text-[#0b2545] mb-4">
@@ -38,7 +39,7 @@ export default function EcommerceFulfilmentSection() {
 
         {/* Workflow visual */}
         <div className="bg-[#f6f8fb] rounded-3xl p-8 mb-12">
-          <h3 className="text-center text-sm font-semibold text-slate-500 uppercase tracking-wide mb-8">
+          <h3 className="text-center text-sm font-semibold text-slate-600 uppercase tracking-wide mb-8">
             Fulfillment Süreci
           </h3>
           <div className="flex flex-wrap justify-center items-center gap-3">
@@ -46,12 +47,12 @@ export default function EcommerceFulfilmentSection() {
               <div key={step.label} className="flex items-center gap-3">
                 <div className="flex flex-col items-center text-center min-w-[80px]">
                   <div className="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-2xl mb-2 border border-slate-100">
-                    {step.icon}
+                    <Emoji e={step.icon} />
                   </div>
                   <span className="text-xs text-slate-600 font-medium leading-tight">{step.label}</span>
                 </div>
                 {i < workflow.length - 1 && (
-                  <svg className="w-4 h-4 text-slate-300 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" aria-hidden="true">
+                  <svg className="w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                   </svg>
                 )}
@@ -86,7 +87,7 @@ export default function EcommerceFulfilmentSection() {
               href={WHATSAPP}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white font-bold px-6 py-3 rounded-full transition text-sm"
+              className="inline-flex items-center gap-2 bg-[#d62839] hover:bg-[#c1121f] text-white font-bold px-6 py-3 rounded-full transition text-sm"
             >
               Fulfillment Operasyonumu Kuralım
             </a>

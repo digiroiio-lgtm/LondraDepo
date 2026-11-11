@@ -1,64 +1,37 @@
+import { TR_ARTICLES } from "@/content/tr-articles";
+import { ArticleDates, ShortAnswer } from "./ArticleMeta";
+import HeroArt, { themeFor } from "@/components/visual/HeroArt";
+
 interface ArticleHeroProps {
   category: string;
   categoryColor?: string;
   title: string;
   readTime: string;
   date?: string;
+  /** Article path; dates, short answer and reviewer come from src/content/tr-articles.ts. */
+  path?: string;
 }
 
 export default function ArticleHero({
   category,
-  categoryColor = "text-[#e63946] bg-red-50",
+  categoryColor = "text-[#d62839] bg-red-50",
   title,
   readTime,
   date,
+  path,
 }: ArticleHeroProps) {
+  const a = path ? TR_ARTICLES[path] : undefined;
   return (
     <>
-      {/* Hero banner */}
-      <div
-        className="w-full rounded-2xl mb-6 overflow-hidden"
-        style={{ aspectRatio: "16/6" }}
-      >
-        <div
-          className="w-full h-full relative flex items-center justify-center"
-          style={{
-            background: "linear-gradient(135deg, #0b2545 0%, #1e3a5f 55%, #2d5986 100%)",
-          }}
-        >
-          {/* Decorative grid */}
-          <svg
-            className="absolute inset-0 w-full h-full opacity-10"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <defs>
-              <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" strokeWidth="0.5" />
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#grid)" />
-          </svg>
-
-          {/* Warehouse icon group */}
-          <div className="relative z-10 flex flex-col items-center gap-3">
-            <div className="flex items-center gap-4">
-              <span className="text-5xl opacity-80">🏭</span>
-              <span className="text-3xl opacity-60">📦</span>
-              <span className="text-4xl opacity-80">🚚</span>
-            </div>
-            <p className="text-white/60 text-sm font-medium tracking-widest uppercase">
-              LondraDepo.com — İngiltere Depo & Lojistik
-            </p>
-          </div>
-
-          {/* Bottom fade */}
-          <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-white/5 to-transparent" />
-        </div>
+      {/* Hero banner: original illustration matched to the article topic (decorative) */}
+      <div className="w-full rounded-2xl mb-6 overflow-hidden bg-[#f6f8fb] border border-slate-100 flex items-center justify-center" style={{ aspectRatio: "16/6" }}>
+        <HeroArt theme={path ? themeFor(path, "article-topic") : "guide"} className="h-full w-auto max-w-full" />
       </div>
 
       {/* Author line */}
-      <p className="text-[#e63946] text-sm font-medium mb-4">
+      <p className="text-[#d62839] text-sm font-medium mb-4">
         Sertaç Yılmaz — Arca Trade Group Kurucu Ortağı
+        {a && <span className="text-slate-500 font-normal"> · İnceleyen: Yusuf Barış, Operasyon Müdürü</span>}
       </p>
 
       {/* Category badge + title */}
@@ -70,10 +43,17 @@ export default function ArticleHero({
       </h1>
 
       {/* Meta */}
-      <p className="text-slate-500 text-sm mb-8">
-        {date && <span>Güncellendi: {date} · </span>}
-        ⏱ {readTime} okuma
-      </p>
+      {a && path ? (
+        <>
+          <ArticleDates path={path} suffix={<> · ⏱ {readTime} okuma</>} />
+          <ShortAnswer path={path} />
+        </>
+      ) : (
+        <p className="text-slate-500 text-sm mb-8">
+          {date && <span>Güncellendi: {date} · </span>}
+          ⏱ {readTime} okuma
+        </p>
+      )}
     </>
   );
 }

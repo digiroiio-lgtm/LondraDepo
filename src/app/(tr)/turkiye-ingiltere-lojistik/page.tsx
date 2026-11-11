@@ -1,4 +1,6 @@
+import Emoji from "@/components/visual/Emoji";
 import FaqJsonLd from "@/components/FaqJsonLd";
+import TrClusterNav from "@/components/TrClusterNav";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -11,7 +13,7 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20Türkiye%20İngil
 const TEL = "tel:+447554195190";
 
 export const metadata: Metadata = {
-  title: "Türkiye'den İngiltere'ye Lojistik | UK Ürün Gönderimi | LondraDepo.com",
+  title: "Türkiye'den İngiltere'ye Lojistik | UK Ürün Gönderimi | LondraDepo",
   description:
     "Türkiye'den İngiltere'ye lojistik ve ürün gönderimi: UK gümrük desteği, depolama ve sipariş karşılama. İhracat yapan işletmeler için rehber.",
   keywords: [
@@ -28,7 +30,7 @@ export const metadata: Metadata = {
   ],
   alternates: trAlternates("/turkiye-ingiltere-lojistik"),
   openGraph: {
-    title: "Türkiye'den İngiltere'ye Lojistik | LondraDepo.com",
+    title: "Türkiye'den İngiltere'ye Lojistik | LondraDepo",
     description: "TR → UK lojistik zinciri: gönderim, gümrük, depolama, fulfillment.",
     url: `${SITE_URL}/turkiye-ingiltere-lojistik`,
     siteName: "LondraDepo.com",
@@ -131,6 +133,7 @@ const faqs = [
     q: "UK ithalatı için hangi belgeler gerekiyor?",
     a: "UK ithalatı için genellikle: ticari fatura (commercial invoice), konşimento veya taşıma belgesi, ambalaj listesi (packing list) ve ürüne bağlı olarak ek belgeler gerekebilir. Bu konuda gümrük uzmanınızdan veya taşıyıcınızdan destek almanızı öneririz.",
   },
+  { q: "Türkiye'den İngiltere'ye taşıma şekli nasıl seçilir?", a: "Taşıma şekli hacminize, süre ihtiyacınıza ve bütçenize göre seçilir: deniz, kara veya intermodal. Arca Trade Group Türkiye–İngiltere hattında nakliye ve gümrüklemeyi birlikte planlayıp ürünleri Essex depomuza teslim eder." },
 ];
 
 export default function TurkiyeIngiltere() {
@@ -153,7 +156,7 @@ export default function TurkiyeIngiltere() {
             </nav>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4 leading-tight">
               Türkiye&apos;den İngiltere&apos;ye{" "}
-              <span className="text-[#e63946]">Lojistik</span>{" "}
+              <span className="text-[#d62839]">Lojistik</span>{" "}
               ve Ürün Gönderimi
             </h1>
             <p className="text-slate-300 text-lg leading-relaxed max-w-3xl mb-4">
@@ -171,7 +174,7 @@ export default function TurkiyeIngiltere() {
                 href={WHATSAPP}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
+                className="inline-flex items-center justify-center gap-2 bg-[#d62839] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
               >
                 UK Deposu Hakkında Bilgi Al
               </a>
@@ -224,7 +227,7 @@ export default function TurkiyeIngiltere() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {londradepoScope.map((s) => (
                 <div key={s.title} className="border border-slate-200 rounded-2xl p-5">
-                  <div className="text-2xl mb-2">{s.icon}</div>
+                  <div className="text-2xl mb-2"><Emoji e={s.icon} /></div>
                   <h3 className="font-bold text-[#0b2545] mb-1">{s.title}</h3>
                   <p className="text-slate-600 text-sm leading-relaxed">{s.desc}</p>
                 </div>
@@ -247,7 +250,7 @@ export default function TurkiyeIngiltere() {
               href={WHATSAPP}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
+              className="inline-flex items-center gap-2 bg-[#d62839] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
             >
               Teklif Al
             </a>
@@ -292,6 +295,7 @@ export default function TurkiyeIngiltere() {
             </div>
           </div>
         </section>
+        <TrClusterNav path="/turkiye-ingiltere-lojistik" />
       </main>
       <Footer />
       <StickyWhatsappCta />

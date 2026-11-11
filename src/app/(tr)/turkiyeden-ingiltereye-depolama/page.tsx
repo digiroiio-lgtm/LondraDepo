@@ -1,4 +1,6 @@
+import Emoji from "@/components/visual/Emoji";
 import FaqJsonLd from "@/components/FaqJsonLd";
+import TrClusterNav from "@/components/TrClusterNav";
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -10,7 +12,7 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20Türkiye'den%20İ
 const TEL = "tel:+447554195190";
 
 export const metadata: Metadata = {
-  title: "Türkiye'den İngiltere'ye Depolama ve Fulfillment | LondraDepo.com",
+  title: "Türkiye'den İngiltere'ye Depolama ve Fulfillment | LondraDepo",
   description:
     "Türkiye'den İngiltere'ye satış için eksiksiz UK operasyonu: gümrük desteği, Essex depo, Shopify/Amazon fulfillment, pick & pack ve dağıtım.",
   keywords: [
@@ -28,7 +30,7 @@ export const metadata: Metadata = {
   ],
   alternates: trAlternates("/turkiyeden-ingiltereye-depolama"),
   openGraph: {
-    title: "Türkiye'den İngiltere'ye Depolama ve Fulfillment | LondraDepo.com",
+    title: "Türkiye'den İngiltere'ye Depolama ve Fulfillment | LondraDepo",
     description:
       "İngiltere'de kendi deponuzu kurmadan satış yapın. Türkiye'den ürün gönderin, tüm UK operasyonunu bize bırakın.",
     url: `${SITE_URL}/turkiyeden-ingiltereye-depolama`,
@@ -92,15 +94,15 @@ const services = [
 const faqs = [
   {
     q: "Türkiye'den ürünlerimi İngiltere deposuna gönderebilir miyim?",
-    a: "Evet. Türkiye'deki tedarikçinizden veya üretim noktanızdan ürünlerinizi doğrudan depo adresimize gönderebilirsiniz.",
+    a: "Evet. Türkiye'deki tedarikçinizden veya üretim noktanızdan ürünlerinizi doğrudan Rayleigh, Essex'teki depo adresimize gönderebilirsiniz; nakliye ve UK gümrüklemesi Arca Trade Group üzerinden yapılabilir.",
   },
   {
     q: "İngiltere'de kendi depomu kurmadan satış yapabilir miyim?",
-    a: "Evet. LondraDepo aracılığıyla kendi depo yatırımı yapmadan UK depolama ve fulfillment altyapısından yararlanabilirsiniz.",
+    a: "Evet. LondraDepo ile kira, personel ve yazılım yatırımı yapmadan UK depolama ve fulfillment altyapısını kullanırsınız; depolama haftalık palet başına £3,50 + KDV'den başlar.",
   },
   {
     q: "Shopify ve Amazon üzerinden satış yapıyorum. Destek sağlıyor musunuz?",
-    a: "Evet. Shopify ve Amazon üzerinden satış yapan işletmeler için fulfillment desteği sunuyoruz.",
+    a: "Evet. Shopify siparişleri, Amazon FBM siparişleri ve Amazon FBA'ya gidecek hazırlanmış partiler aynı UK stoğundan karşılanabilir; sipariş aktarımı ve entegrasyon kapsamı teklif öncesinde netleştirilir.",
   },
   {
     q: "Gümrükleme konusunda yardımcı olabilir misiniz?",
@@ -138,7 +140,7 @@ export default function TurkiyeILandingPage() {
         <section className="bg-gradient-to-br from-[#0b2545] via-[#1e3a5f] to-[#0b2545] text-white py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-green-400 text-sm font-semibold uppercase tracking-widest mb-4">
-              🇹🇷 → 🇬🇧 Türkiye'den İngiltere'ye
+              <Emoji e="🇹🇷" /> → <Emoji e="🇬🇧" /> Türkiye'den İngiltere'ye
             </p>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight mb-6 text-balance">
               Türkiye'den İngiltere'ye Satış İçin{" "}
@@ -157,7 +159,7 @@ export default function TurkiyeILandingPage() {
                 href={WHATSAPP}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full text-base transition shadow-lg"
+                className="inline-flex items-center justify-center gap-2 bg-[#d62839] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full text-base transition shadow-lg"
               >
                 Teklif Al
               </a>
@@ -165,7 +167,7 @@ export default function TurkiyeILandingPage() {
                 href={TEL}
                 className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold px-8 py-4 rounded-full text-base transition"
               >
-                📞 Hemen Arayın
+                <Emoji e="📞" /> Hemen Arayın
               </a>
             </div>
           </div>
@@ -181,8 +183,8 @@ export default function TurkiyeILandingPage() {
               {journey.map((step, i) => (
                 <div key={step.label} className="flex items-center gap-3">
                   <div className="flex flex-col items-center text-center w-28">
-                    <div className="w-14 h-14 bg-white/10 border border-white/20 rounded-2xl flex items-center justify-center text-2xl mb-2">
-                      {step.icon}
+                    <div className="w-14 h-14 bg-white/10 text-white border border-white/20 rounded-2xl flex items-center justify-center text-2xl mb-2">
+                      <Emoji e={step.icon} />
                     </div>
                     <span className="text-white text-xs font-bold mb-1">{step.label}</span>
                     <span className="text-slate-400 text-xs leading-tight">{step.desc}</span>
@@ -224,7 +226,7 @@ export default function TurkiyeILandingPage() {
               </a>
             </div>
             <div className="mt-10 lg:mt-0">
-              <h3 className="text-sm font-semibold text-slate-500 uppercase tracking-wide mb-4">
+              <h3 className="text-sm font-semibold text-slate-600 uppercase tracking-wide mb-4">
                 Kapsamımızdaki hizmetler:
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -292,7 +294,7 @@ export default function TurkiyeILandingPage() {
                 href={WHATSAPP}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
+                className="inline-flex items-center justify-center gap-2 bg-[#d62839] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
               >
                 Teklif Al
               </a>
@@ -300,11 +302,12 @@ export default function TurkiyeILandingPage() {
                 href={TEL}
                 className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold px-8 py-4 rounded-full transition"
               >
-                📞 Arayın
+                <Emoji e="📞" /> Arayın
               </a>
             </div>
           </div>
         </section>
+        <TrClusterNav path="/turkiyeden-ingiltereye-depolama" />
       </main>
       <Footer />
       <StickyWhatsappCta />

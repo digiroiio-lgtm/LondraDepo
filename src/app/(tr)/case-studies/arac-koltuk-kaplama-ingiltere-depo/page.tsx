@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -5,11 +6,14 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 import CaseHero from "@/components/CaseHero";
+import AuthorBox from "@/components/AuthorBox";
+import { TR_ARTICLES } from "@/content/tr-articles";
 import OperationsFlow from "@/components/OperationsFlow";
 import RelatedCases from "@/components/RelatedCases";
 
 import { SITE_URL } from "@/lib/site";
 import { trAlternates } from "@/lib/i18n";
+const ARTICLE = TR_ARTICLES["/case-studies/arac-koltuk-kaplama-ingiltere-depo"];
 const PAGE_URL = `${SITE_URL}/case-studies/arac-koltuk-kaplama-ingiltere-depo`;
 const WHATSAPP =
   "https://wa.me/447554195190?text=Merhaba%2C%20otomotiv%20urun%20depolama%20ve%20dagitim%20hakkinda%20bilgi%20almak%20istiyorum.";
@@ -17,13 +21,13 @@ const WHATSAPP =
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title:
-    "Araç Koltuk Kaplama & Suni Deri İngiltere Depo Operasyonu | LondraDepo.com",
+    "Araç Koltuk Kaplama İngiltere Depo Operasyonu | LondraDepo",
   description:
     "Araç koltuk kaplama ve suni deri malzemelerinin İngiltere depo altyapısı, stok yönetimi, online sipariş fulfillment ve B2B dağıtım operasyonu.",
   alternates: trAlternates("/case-studies/arac-koltuk-kaplama-ingiltere-depo"),
   openGraph: {
     title:
-      "Araç Koltuk Kaplama & Suni Deri — İngiltere Depo & Satış Operasyonu | LondraDepo.com",
+      "Araç Koltuk Kaplama & Suni Deri — İngiltere Depo & Satış Operasyonu | LondraDepo",
     description:
       "Otomotiv döşeme malzemelerinin İngiltere deposunda stok yönetimi, online fulfillment ve B2B dağıtım operasyonu.",
     url: PAGE_URL,
@@ -58,11 +62,14 @@ const jsonLd = {
     {
       "@type": "Article",
       "@id": `${PAGE_URL}#article`,
-      headline:
-        "Araç Koltuk Kaplama & Suni Deri — İngiltere Depo & Satış Operasyonu",
+      headline: ARTICLE.headline,
       description:
         "Araç koltuk kaplama ve suni deri malzemelerinin İngiltere depo altyapısı, stok yönetimi, online fulfillment ve B2B dağıtım operasyonu.",
       url: PAGE_URL,
+      ...(ARTICLE.published ? { datePublished: ARTICLE.published } : {}),
+      dateModified: ARTICLE.modified,
+      author: { "@type": "Person", name: "Sertaç Yılmaz", jobTitle: "Arca Trade Group Kurucu Ortağı", url: `${SITE_URL}/hakkimizda` },
+      contributor: { "@type": "Person", name: "Yusuf Barış", jobTitle: "Operasyon Müdürü" },
       publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
       image: { "@type": "ImageObject", url: `${SITE_URL}/logo.svg`, width: 640, height: 160 },
       mainEntityOfPage: PAGE_URL,
@@ -128,7 +135,7 @@ const faqs = [
   },
   {
     q: "Stok raporlaması yapılıyor mu?",
-    a: "Evet. Düzenli aralıklarla stok hareketi, düşük stok uyarısı ve sipariş özeti Türkçe olarak iletilmektedir.",
+    a: "Evet. Stok Mintsoft WMS'te tutulur; düzenli aralıklarla stok hareketi, düşük stok uyarısı ve sipariş özeti Türkçe olarak iletilir, böylece hangi kaplama malzemesinin ne zaman yenileneceğini planlarsınız.",
   },
 ];
 
@@ -175,6 +182,7 @@ export default function AracKoltukKaplamaCaseStudyPage() {
         <article className="py-12 px-4 bg-white">
           <div className="max-w-4xl mx-auto">
             <CaseHero
+              path="/case-studies/arac-koltuk-kaplama-ingiltere-depo"
               industry="Otomotiv & Döşeme"
               industryColor="text-blue-700 bg-blue-50"
               brand="Araç Koltuk Kaplama & Suni Deri"
@@ -201,11 +209,11 @@ export default function AracKoltukKaplamaCaseStudyPage() {
                   ihtiyacını doğuruyordu.
                 </p>
                 <ul className="text-slate-700 text-sm space-y-2 list-none">
-                  <li>⚠️ Türkiye&apos;den sevkiyatta uzun teslimat süreleri</li>
-                  <li>⚠️ Rulo suni deri malzemelerin nakliyede hasar riski</li>
-                  <li>⚠️ İngiltere&apos;deki atölye ve bayilere hızlı karşılama gerekliliği</li>
-                  <li>⚠️ eBay ve Amazon kanallarında rekabetçi teslimat süresi baskısı</li>
-                  <li>⚠️ Stok takibi ve iade yönetimi için İngiltere operasyon noktası ihtiyacı</li>
+                  <li><Emoji e="⚠️" /> Türkiye&apos;den sevkiyatta uzun teslimat süreleri</li>
+                  <li><Emoji e="⚠️" /> Rulo suni deri malzemelerin nakliyede hasar riski</li>
+                  <li><Emoji e="⚠️" /> İngiltere&apos;deki atölye ve bayilere hızlı karşılama gerekliliği</li>
+                  <li><Emoji e="⚠️" /> eBay ve Amazon kanallarında rekabetçi teslimat süresi baskısı</li>
+                  <li><Emoji e="⚠️" /> Stok takibi ve iade yönetimi için İngiltere operasyon noktası ihtiyacı</li>
                 </ul>
               </div>
             </section>
@@ -260,7 +268,7 @@ export default function AracKoltukKaplamaCaseStudyPage() {
                     className="border border-slate-200 rounded-xl p-5 flex gap-4"
                   >
                     <span className="text-2xl flex-shrink-0" aria-hidden="true">
-                      {item.icon}
+                      <Emoji e={item.icon} />
                     </span>
                     <div>
                       <h3 className="font-bold text-[#0b2545] mb-1">{item.title}</h3>
@@ -325,7 +333,7 @@ export default function AracKoltukKaplamaCaseStudyPage() {
                   href={WHATSAPP}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold px-7 py-3.5 rounded-full transition"
+                  className="inline-flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white font-bold px-7 py-3.5 rounded-full transition"
                 >
                   WhatsApp&apos;tan Bilgi Alın
                 </a>
@@ -383,6 +391,9 @@ export default function AracKoltukKaplamaCaseStudyPage() {
                 </Link>
               </div>
             </div>
+
+            <AuthorBox path="/case-studies/arac-koltuk-kaplama-ingiltere-depo" />
+
 
             <RelatedCases cases={relatedCases} />
           </div>

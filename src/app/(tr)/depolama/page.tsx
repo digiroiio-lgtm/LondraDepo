@@ -1,4 +1,6 @@
+import Emoji from "@/components/visual/Emoji";
 import FaqJsonLd from "@/components/FaqJsonLd";
+import TrClusterNav from "@/components/TrClusterNav";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -12,13 +14,13 @@ import QuoteForm from "@/components/QuoteForm";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20depolama%20hizmeti%20hakkında%20bilgi%20almak%20istiyorum.";
 
 export const metadata: Metadata = {
-  title: "İngiltere Depolama Hizmeti | Palet & Koli Depolama, Mintsoft WMS | LondraDepo.com",
+  title: "İngiltere Depolama: Palet & Koli, £3,50/Palet | LondraDepo",
   description:
-    "UK depolama detayları: palet ve koli kabulü, Mintsoft WMS ile gerçek zamanlı stok takibi, FCL konteyner boşaltma, kısa ve uzun vadeli depo. Essex.",
+    "Essex'te palet ve koli depolama: mal kabul, FCL konteyner boşaltma, Mintsoft WMS ile gerçek zamanlı stok takibi, kısa ve uzun vadeli depo. Haftalık £3,50 + KDV'den.",
   alternates: trAlternates("/depolama"),
   openGraph: {
-    title: "İngiltere Depolama Hizmeti | LondraDepo.com",
-    description: "UK depolama çözümleri. Kısa/uzun vadeli depo, palet ve koli kabulü, stok yönetimi.",
+    title: "İngiltere Depolama: Palet ve Koli Depolama",
+    description: "Essex'te palet ve koli depolama, Mintsoft WMS stok takibi, konteyner boşaltma. Haftalık £3,50 + KDV'den.",
     url: `${SITE_URL}/depolama`,
     siteName: "LondraDepo.com",
     locale: "tr_TR",
@@ -61,20 +63,21 @@ const features = [
 const faqs = [
   {
     q: "Kısa vadeli depolama mümkün mü?",
-    a: "Evet. Hem kısa hem de uzun vadeli depolama seçenekleri mevcuttur.",
+    a: "Evet. Depolama haftalık palet başına £3,50 + KDV'den ücretlendirildiği için birkaç haftalık kısa süreli ve uzun süreli depolama mümkündür; doğrudan sevk edilecek ürünler için cross-dock da yapılabilir.",
   },
   {
     q: "Palet depolama kabul ediyor musunuz?",
-    a: "Evet. Hem paletli hem de kolili ürünleri kabul ediyoruz.",
+    a: "Evet. FCL ve LCL konteyner teslimatları dahil paletli ve kolili ürünleri kabul ediyoruz. Dökme koliler mal kabulde paletlenip etiketlenebilir ve ardından Mintsoft WMS'e kaydedilir.",
   },
   {
     q: "Stok takibi nasıl yapılıyor?",
-    a: "Mintsoft depo yönetim yazılımı (WMS) üzerinden stok seviyeleri ve ürün hareketleri kayıt altında tutulmaktadır.",
+    a: "Stok seviyeleri ve ürün hareketleri, ürünler mal kabulde sisteme alındığı andan itibaren Mintsoft depo yönetim yazılımında (WMS) kayıt altına alınır; rafta ne olduğunu görür ve düzenli stok raporu alırsınız.",
   },
   {
     q: "Türkiye'den gelen ürünleri kabul ediyor musunuz?",
-    a: "Evet. Türkiye veya herhangi bir tedarikçiden gelen ürünleri depo adresimizde kabul ediyoruz.",
+    a: "Evet. Türkiye veya herhangi bir ülkedeki tedarikçiden gelen ürünleri Rayleigh'deki depomuzda kabul ediyoruz. Nakliye ve UK gümrüklemesi Arca Trade Group üzerinden yapılabilir ya da kendi nakliyeciniz teslim edebilir.",
   },
+  { q: "Depolama nasıl ücretlendiriliyor?", a: "Standart palet depolama haftalık palet başına £3,50 + KDV'den başlar. Koli depolama, mal kabul, konteyner boşaltma ve elleçleme ürünlerinize ve hacminize göre ayrıca tekliflendirilir." },
 ];
 
 export default function DepolamaPage() {
@@ -108,7 +111,7 @@ export default function DepolamaPage() {
               href={WHATSAPP}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
+              className="inline-flex items-center gap-2 bg-[#d62839] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
             >
               Depo Fiyatı Al
             </a>
@@ -122,7 +125,7 @@ export default function DepolamaPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {features.map((f) => (
                 <div key={f.title} className="border border-slate-200 rounded-2xl p-5">
-                  <div className="text-2xl mb-2">{f.icon}</div>
+                  <div className="text-2xl mb-2"><Emoji e={f.icon} /></div>
                   <h3 className="font-bold text-[#0b2545] mb-1">{f.title}</h3>
                   <p className="text-slate-600 text-sm leading-relaxed">{f.desc}</p>
                 </div>
@@ -146,6 +149,7 @@ export default function DepolamaPage() {
           </div>
         </section>
 
+        <TrClusterNav path="/depolama" />
         <CtaCards />
         <QuoteForm formId="tr_inline_quote" heading="Depolama Teklifi Alın" intro="Ürün türünüzü, yaklaşık palet veya koli sayınızı ve ihtiyacınız olan hizmetleri yazın; ekibimiz size özel teklif hazırlasın. Standart palet depolama haftalık £3,50 + KDV'den başlar." presetServices={["Depolama"]} />
       </main>

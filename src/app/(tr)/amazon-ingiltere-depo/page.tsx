@@ -1,4 +1,8 @@
+import Emoji from "@/components/visual/Emoji";
+import TrackedLink from "@/components/TrackedLink";
+import { bookingUrl } from "@/lib/booking";
 import FaqJsonLd from "@/components/FaqJsonLd";
+import TrClusterNav from "@/components/TrClusterNav";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -11,9 +15,9 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20Amazon%20İngilte
 const TEL = "tel:+447554195190";
 
 export const metadata: Metadata = {
-  title: "Amazon İçin İngiltere Depo ve Sipariş Karşılama (FBM) | LondraDepo.com",
+  title: "Amazon İçin İngiltere Depo: FBM ve FBA Prep, Essex | LondraDepo",
   description:
-    "Amazon FBM için İngiltere'de depo ve sipariş karşılama. UK siparişlerinizi Essex depomuzdan karşılayın, kendi deponuz olmadan satış yapın.",
+    "Amazon UK satıcıları için Essex'te depo: FBM sipariş karşılama ve FBA prep, Londra'ya ve Amazon LCY2 Tilbury'ye yakın. Sabit minimum yok; tek paletle başlayın.",
   keywords: [
     "ingiltere amazon depo",
     "amazon fbm ingiltere",
@@ -28,7 +32,7 @@ export const metadata: Metadata = {
   ],
   alternates: trAlternates("/amazon-ingiltere-depo"),
   openGraph: {
-    title: "Amazon İçin İngiltere Depo (FBM) | LondraDepo.com",
+    title: "Amazon İçin İngiltere Depo (FBM) | LondraDepo",
     description: "Amazon FBM UK: Essex depomuzdan Amazon siparişi karşılama. FBM vs FBA rehberi.",
     url: `${SITE_URL}/amazon-ingiltere-depo`,
     siteName: "LondraDepo.com",
@@ -128,11 +132,11 @@ export default function AmazonIngiltereDepo() {
               <span className="text-white">Amazon İngiltere Depo (FBM)</span>
             </nav>
             <div className="inline-block bg-white/10 border border-white/20 rounded-full px-4 py-1.5 text-sm text-slate-300 mb-4">
-              📦 Amazon FBM satıcıları için UK depo çözümü
+              <Emoji e="📦" /> Amazon FBM satıcıları için UK depo çözümü
             </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4 leading-tight">
               Amazon İçin{" "}
-              <span className="text-[#e63946]">İngiltere Depo</span>{" "}
+              <span className="text-[#d62839]">İngiltere Depo</span>{" "}
               ve Sipariş Karşılama
             </h1>
             <p className="text-slate-300 text-lg leading-relaxed max-w-3xl mb-4">
@@ -148,7 +152,7 @@ export default function AmazonIngiltereDepo() {
                 href={WHATSAPP}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
+                className="inline-flex items-center justify-center gap-2 bg-[#d62839] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
               >
                 Amazon FBM Teklifi Al
               </a>
@@ -158,6 +162,9 @@ export default function AmazonIngiltereDepo() {
               >
                 Hemen Ara
               </a>
+              <TrackedLink kind="booking" source="amazon_depo_tr_hero" href={bookingUrl("tr", "amazon_depo_tr_hero")} className="inline-flex items-center justify-center gap-2 border border-white/30 hover:bg-white/10 text-white font-bold px-8 py-4 rounded-full transition">
+                15 dk görüşme ayarlayın
+              </TrackedLink>
             </div>
           </div>
         </section>
@@ -199,7 +206,7 @@ export default function AmazonIngiltereDepo() {
                   {!item.highlight && (
                     <Link
                       href="/amazon-prep-uk"
-                      className="inline-block mt-4 text-sm text-[#e63946] font-semibold hover:underline"
+                      className="inline-block mt-4 text-sm text-[#d62839] font-semibold hover:underline"
                     >
                       {item.cta}
                     </Link>
@@ -221,7 +228,7 @@ export default function AmazonIngiltereDepo() {
                 <div key={step.num} className="flex flex-col items-center text-center">
                   <div className="w-14 h-14 rounded-full bg-[#0b2545] text-white flex flex-col items-center justify-center mb-2">
                     <span className="text-xs font-bold opacity-60">{step.num}</span>
-                    <span className="text-lg leading-none">{step.icon}</span>
+                    <span className="text-lg leading-none"><Emoji e={step.icon} /></span>
                   </div>
                   <h3 className="font-bold text-[#0b2545] text-sm mb-1">{step.label}</h3>
                   <p className="text-slate-500 text-xs leading-relaxed">{step.desc}</p>
@@ -245,7 +252,7 @@ export default function AmazonIngiltereDepo() {
               href={WHATSAPP}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
+              className="inline-flex items-center gap-2 bg-[#d62839] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
             >
               Hemen Teklif Al
             </a>
@@ -298,6 +305,7 @@ export default function AmazonIngiltereDepo() {
               {[
                 { href: "/amazon-fulfillment", label: "Amazon Fulfillment" },
                 { href: "/amazon-prep-uk", label: "Amazon FBA Prep UK" },
+                { href: "/amazon-ingiltere-depo-konumlari", label: "Amazon İngiltere Depo Konumları" },
                 { href: "/ingiltere-depo", label: "İngiltere Depo" },
                 { href: "/siparis-toplama-paketleme", label: "Pick & Pack" },
                 { href: "/ingiltere-depo-fiyatlari", label: "Depo Fiyatları" },
@@ -313,6 +321,7 @@ export default function AmazonIngiltereDepo() {
             </div>
           </div>
         </section>
+        <TrClusterNav path="/amazon-ingiltere-depo" />
       </main>
       <Footer />
       <StickyWhatsappCta />

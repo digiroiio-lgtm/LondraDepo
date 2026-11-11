@@ -1,4 +1,5 @@
 import type { EnPage } from "./types";
+import { teamQuote } from "@/content/quotes";
 
 export const PRICE_NOTE =
   "Standard pallet storage starts from £3.50 + VAT per pallet per week. Goods-in, handling, unloading, re-palletising, customs coordination, fulfilment and delivery are quoted separately for each operation.";
@@ -58,6 +59,7 @@ export const corePages: EnPage[] = [
           ["Port of Felixstowe (IP11)", "62 miles / 99 km", "~1¼ hours"],
         ],
       },
+      { type: "routemap" },
       {
         type: "text",
         h2: "How much does UK warehousing cost at LondraDepo?",
@@ -121,6 +123,7 @@ export const corePages: EnPage[] = [
           "Regular stock reports and movement summaries are sent on an agreed schedule in English or Turkish. Lot-level records are available for clients who need traceability, as our packaging client does for recall readiness.",
         ],
       },
+      teamQuote("yusufStock"),
       {
         type: "text",
         h2: "Who runs LondraDepo?",
@@ -130,6 +133,7 @@ export const corePages: EnPage[] = [
           "You can verify the company on Companies House, in the BIFA member directory and on LinkedIn.",
         ],
       },
+      teamQuote("sertacFounder"),
       {
         type: "quote",
         text: "At Arca Trade Group, our aim is to make the logistics process as smooth as possible for our business partners.",
@@ -228,6 +232,8 @@ export const corePages: EnPage[] = [
           "Our founder is a member of the Global Logistics Alliance (GLA) network and is taking part in the 15th GLA Global Logistics Conference in Bangkok in 2026.",
         ],
       },
+      teamQuote("sertacFounder"),
+      teamQuote("yusufGoodsIn"),
       {
         type: "list",
         h2: "Where you can verify us",
@@ -237,6 +243,12 @@ export const corePages: EnPage[] = [
           "LinkedIn: linkedin.com/company/arcatradegroup",
         ],
       },
+    ],
+    faqs: [
+      { q: "Who runs LondraDepo?", a: "LondraDepo is the warehousing brand of Arca Trade Group Ltd, a UK company (No. 13247691) and BIFA member. It was founded by Sertaç Yılmaz, who has 18 years of logistics experience, and day-to-day warehouse operations are led by Yusuf Barış, Operations Manager." },
+      { q: "Where is LondraDepo based?", a: "The warehouse is at Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY. It is about 13 miles by road from London Gateway, 16 miles from the Port of Tilbury and 37 miles from central London." },
+      { q: "What services does LondraDepo provide?", a: "LondraDepo provides goods-in and container unloading, pallet and carton storage, stock control in Mintsoft WMS, pick and pack, Amazon FBA prep and UK distribution. International freight and UK customs clearance are available through Arca Trade Group." },
+      { q: "Can I verify LondraDepo before working with you?", a: "Yes. Arca Trade Group Ltd is listed on Companies House under company number 13247691 and appears in the BIFA member directory and on LinkedIn. You can also book a 15-minute call with the team before sending stock." },
     ],
     related: ["/en/essex-warehouse", "/en/uk-warehousing", "/en/case-studies", "/en/contact"],
     cta: { h2: "Let's plan your UK operation", text: "We will design a set-up around your products, volumes and channels." },
@@ -272,6 +284,12 @@ export const corePages: EnPage[] = [
           "How the goods will arrive (FCL, LCL, pallets, parcels) and from which country",
         ],
       },
+    ],
+    faqs: [
+      { q: "What is the fastest way to contact LondraDepo?", a: "WhatsApp on +44 7554 195190 is usually the fastest way to reach the team. You can also call the same number, call the office on +44 1268 203 283, use the quote form or book a 15-minute call." },
+      { q: "What are your office hours?", a: "The office is open from 07:45 to 17:30 UK time. Messages and quote requests sent outside these hours are answered by the team once the office opens." },
+      { q: "Do you speak Turkish as well as English?", a: "Yes. The LondraDepo team works in English and Turkish, so you can discuss your UK operation, documents and stock reports in either language." },
+      { q: "Can I see the warehouse before sending stock?", a: "Contact the team to ask about a visit or a video walk-through of the warehouse at Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY. You can also book a 15-minute call to discuss your operation first." },
     ],
     related: ["/en/uk-warehousing-pricing", "/en/about-us", "/en/essex-warehouse"],
   },
@@ -315,8 +333,9 @@ export const corePages: EnPage[] = [
     faqs: [
       { q: "How much does a UK warehouse cost?", a: "LondraDepo standard pallet storage starts from £3.50 + VAT per pallet per week. Handling, loading and unloading, re-palletising, customs coordination and distribution are quoted per shipment." },
       { q: "Do you arrange international shipping to the UK?", a: "LondraDepo's warehouse service starts when goods arrive in the UK. International freight by sea, air, road and rail, and customs clearance, are available from our parent company Arca Trade Group, so transport and storage can be quoted together. You can also use your own freight forwarder." },
-      { q: "Can I start with a small volume?", a: "Yes. Pallet-based and part-load models are accepted, and there is no full-truckload requirement." },
+      { q: "Can I test the UK market with a small shipment?", a: "Yes. Pallet-based and part-load deliveries are accepted and there is no full-truckload requirement or fixed minimum, so you can start with a single trial pallet and scale as UK sales grow." },
       { q: "Do you help with UK labelling compliance?", a: "Depending on the product group, we can guide you on English labelling, UK market requirements and operational suitability. Legal compliance of the product remains the seller's responsibility." },
+      { q: "What are the main benefits of a UK warehouse for overseas sellers?", a: "Holding stock in the UK lets overseas businesses offer domestic delivery times and simple UK returns, serve wholesale and online customers from one place and avoid shipping each order from abroad. LondraDepo provides this from Rayleigh, Essex." },
     ],
     related: ["/en/uk-market-entry", "/en/uk-warehousing-pricing", "/en/pallet-storage", "/en/uk-import-logistics", "/en/uk-warehousing"],
     cta: { h2: "Start your UK operation", text: "Share your product and volumes and we will suggest the simplest way to start." },
@@ -380,8 +399,9 @@ export const corePages: EnPage[] = [
       { q: "How much does pallet storage cost in the UK?", a: "Standard pallet storage starts from £3.50 + VAT per week. For example, 10 standard pallets for 4 weeks costs from £140 + VAT for storage only. Other services are quoted separately." },
       { q: "How much does pick and pack cost in the UK?", a: "Pick and pack is charged per order and depends on the product, the number of items per order and the packaging. Share your monthly order volume for a tailored quote." },
       { q: "What information do you need for a quote?", a: "Product type, estimated pallets or cartons, monthly order volume, the services you need and your sales channels such as Shopify, Amazon or wholesale." },
+      { q: "Is there a monthly minimum charge?", a: "LondraDepo has no fixed minimum volume, and you can start with a single trial pallet. Storage starts from £3.50 + VAT per pallet per week; other services are quoted for your products and order profile." },
     ],
-    related: ["/en/pallet-storage", "/en/pick-and-pack", "/en/blog/uk-warehousing-prices-2026", "/en/blog/uk-pallet-storage-costs"],
+    related: ["/en/blog/uk-import-costs", "/en/uk-storage-cost-calculator", "/en/pallet-storage", "/en/pick-and-pack", "/en/blog/uk-warehousing-prices-2026", "/en/blog/uk-pallet-storage-costs"],
     cta: { h2: "Get a tailored quote", text: "Send us your product type, pallet or carton count, monthly orders and sales channels." },
   },
 ];

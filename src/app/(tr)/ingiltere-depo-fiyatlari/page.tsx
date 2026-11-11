@@ -1,3 +1,4 @@
+import Emoji from "@/components/visual/Emoji";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -12,7 +13,7 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20İngiltere%20depo
 const TEL = "tel:+447554195190";
 
 export const metadata: Metadata = {
-  title: "İngiltere Depo Fiyatları 2026 | UK Depolama Maliyeti | LondraDepo.com",
+  title: "İngiltere Depo Fiyatları 2026 | UK Depolama Maliyeti | LondraDepo",
   description:
     "İngiltere'de standart palet depolama haftalık £3,50 + KDV'den başlar. Elleçleme, yükleme, yeniden paletleme, gümrükleme ve fulfillment için özel teklif alın.",
   keywords: [
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
   ],
   alternates: trAlternates("/ingiltere-depo-fiyatlari"),
   openGraph: {
-    title: "İngiltere Depo Fiyatları 2026 | LondraDepo.com",
+    title: "İngiltere Depo Fiyatları 2026 | LondraDepo",
     description: "UK depolama ve fulfillment maliyet kalemleri. Özel teklif için iletişime geçin.",
     url: `${SITE_URL}/ingiltere-depo-fiyatlari`,
     siteName: "LondraDepo.com",
@@ -218,7 +219,7 @@ export default function IngiltereDepoFiyatlari() {
             </nav>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4 leading-tight">
               İngiltere Depo Fiyatları{" "}
-              <span className="text-[#e63946]">2026</span>
+              <span className="text-[#d62839]">2026</span>
             </h1>
             <p className="text-slate-300 text-lg leading-relaxed max-w-3xl mb-4">
               Depolama, pick & pack, mal kabul, kargo ve sipariş karşılama hizmetlerinin
@@ -234,7 +235,7 @@ export default function IngiltereDepoFiyatlari() {
                 href={WHATSAPP}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
+                className="inline-flex items-center justify-center gap-2 bg-[#d62839] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
               >
                 Fiyat Teklifi Al
               </a>
@@ -260,7 +261,7 @@ export default function IngiltereDepoFiyatlari() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {costCategories.map((cat) => (
                 <div key={cat.title} className="bg-white border border-slate-200 rounded-2xl p-5">
-                  <div className="text-2xl mb-2">{cat.icon}</div>
+                  <div className="text-2xl mb-2"><Emoji e={cat.icon} /></div>
                   <h3 className="font-bold text-[#0b2545] mb-3">{cat.title}</h3>
                   <ul className="space-y-1">
                     {cat.items.map((item) => (
@@ -333,7 +334,7 @@ export default function IngiltereDepoFiyatlari() {
               href={WHATSAPP}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
+              className="inline-flex items-center gap-2 bg-[#d62839] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full transition"
             >
               WhatsApp ile Teklif İste
             </a>

@@ -1,26 +1,30 @@
+import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 import ArticleHero from "@/components/ArticleHero";
+import ArticleSources from "@/components/ArticleSources";
+import { TR_ARTICLES } from "@/content/tr-articles";
 import CtaCards from "@/components/CtaCards";
 import AuthorBox from "@/components/AuthorBox";
 import RelatedArticles from "@/components/RelatedArticles";
 
 import { SITE_URL } from "@/lib/site";
 import { trAlternates } from "@/lib/i18n";
+const ARTICLE = TR_ARTICLES["/blog/amazon-prep-uk-rehberi"];
 const PAGE_URL = `${SITE_URL}/blog/amazon-prep-uk-rehberi`;
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20Amazon%20Prep%20hizmeti%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Amazon Prep UK: Adım Adım Rehber 2025 | LondraDepo.com",
+  title: "Amazon Prep UK: Adım Adım Rehber | LondraDepo",
   description:
     "Amazon FBA için İngiltere'de prep hizmeti nedir, nasıl alınır, FNSKU etiketleme ve FBA hazırlık süreci. Türk ihracatçıları için kapsamlı Amazon Prep UK rehberi.",
   alternates: trAlternates("/blog/amazon-prep-uk-rehberi"),
   openGraph: {
-    title: "Amazon Prep UK Rehberi | LondraDepo.com",
+    title: "Amazon Prep UK Rehberi | LondraDepo",
     description: "Amazon FBA prep hizmeti nedir, nasıl çalışır? Türk ihracatçılar için UK Amazon prep rehberi.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
@@ -43,35 +47,17 @@ const jsonLd = {
     },
     {
       "@type": "Article",
-      headline: "Amazon Prep UK: Adım Adım Rehber 2025",
+      headline: ARTICLE.headline,
       description: "Amazon FBA için İngiltere prep hizmeti rehberi. FNSKU etiketleme, FBA hazırlık ve sevk süreçleri.",
       url: PAGE_URL,
-      datePublished: "2025-06-01",
-      dateModified: "2026-01-15",
-      author: { "@type": "Person", name: "Sertaç Yılmaz" },
+      datePublished: ARTICLE.published,
+      dateModified: ARTICLE.modified,
+      mainEntityOfPage: { "@type": "WebPage", "@id": PAGE_URL },
+      author: { "@type": "Person", name: "Sertaç Yılmaz", jobTitle: "Arca Trade Group Kurucu Ortağı", url: `${SITE_URL}/hakkimizda` },
+      contributor: { "@type": "Person", name: "Yusuf Barış", jobTitle: "Operasyon Müdürü" },
       publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
       image: { "@type": "ImageObject", url: `${SITE_URL}/logo.svg`, width: 640, height: 160 },
       inLanguage: "tr-TR",
-    },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "Amazon prep için Türkiye'den mi göndermeliyim?",
-          acceptedAnswer: { "@type": "Answer", text: "Ürünlerinizi doğrudan Türkiye'den İngiltere'deki depomuza gönderebilirsiniz. Biz oradan prep işlemlerini yapıp Amazon'a sevk ediyoruz." },
-        },
-        {
-          "@type": "Question",
-          name: "Shipment plan oluşturmaya yardım ediyor musunuz?",
-          acceptedAnswer: { "@type": "Answer", text: "Evet. Amazon Seller Central üzerindeki shipment plan oluşturma sürecinde rehberlik ediyoruz." },
-        },
-        {
-          "@type": "Question",
-          name: "Kaç adet ürün için minimum sipariş var mı?",
-          acceptedAnswer: { "@type": "Answer", text: "Sabit bir minimum yoktur. İhtiyacınıza göre esneklik sunuyoruz — hem küçük batch'ler hem büyük konteyner operasyonları için çalışıyoruz." },
-        },
-      ],
     },
   ],
 };
@@ -83,11 +69,21 @@ const relatedArticles = [
   { href: "/blog/ingiltere-depo-rehberi", title: "İngiltere Depo Hizmeti: Kapsamlı Rehber", category: "Depolama", readTime: "6 dk", categoryColor: "bg-green-50 text-green-700" },
 ];
 
+
+const faqs = [
+  { q: "Amazon prep için ürünleri Türkiye'den doğrudan gönderebilir miyim?", a: "Evet. Ürünlerinizi Türkiye'deki tedarikçinizden doğrudan Essex'teki depomuza gönderebilirsiniz. LondraDepo prep işlemlerini yapar ve ürünleri sevkiyat planındaki Amazon UK deposuna teslim eder; nakliye ve gümrükleme Arca Trade Group'tan alınabilir." },
+  { q: "Sevkiyat planı (shipment plan) oluşturmaya yardım ediyor musunuz?", a: "Evet. Amazon Seller Central'da sevkiyat planı oluşturma sürecinde rehberlik ediyor ve planı kimin oluşturacağını birlikte netleştiriyoruz; böylece etiketli stok Amazon'un atadığı depoya gider." },
+  { q: "Amazon prep için minimum ürün adedi var mı?", a: "Sabit bir minimum yoktur. Prep işi ürünlerinize, adedinize ve gereken işlemlere göre tekliflendirilir; SKU listenizi ve tahmini adetlerinizi paylaşmanız yeterlidir." },
+  { q: "Prep kurallarına uyulmazsa ne olur?", a: "Amazon, etiketleme ve ambalaj kurallarına uymayan stoğu reddedebilir veya düzeltmek için ek ücret alabilir. Ürünleri Amazon'a göndermeden önce bir UK deposunda hazırlamak, sorunların Amazon teslim almadan düzeltilmesini sağlar." },
+  { q: "FNSKU etiketi her ürüne gerekir mi?", a: "Genellikle evet. Ürün üretici barkodunu kullanmaya uygun değilse her üründe Amazon barkodu, normalde FNSKU olmalıdır. Ürün ayarlarını Seller Central'dan kontrol edin; etiketlemeyi Essex'te biz yapabiliriz." },
+];
+
 export default function AmazonPrepRehberiPage() {
   return (
     <>
       <Header />
       <main>
+        <FaqJsonLd faqs={faqs} />
         <nav aria-label="breadcrumb" className="bg-slate-50 border-b border-slate-200">
           <div className="max-w-6xl mx-auto px-4 py-2 text-sm text-slate-500 flex flex-wrap gap-2">
             <Link href="/" className="hover:text-[#0b2545] transition">Ana Sayfa</Link>
@@ -101,11 +97,11 @@ export default function AmazonPrepRehberiPage() {
         <article className="py-10 px-4 bg-white">
           <div className="max-w-3xl mx-auto">
             <ArticleHero
+              path="/blog/amazon-prep-uk-rehberi"
               category="Amazon"
               categoryColor="text-orange-700 bg-orange-50"
               title="Amazon Prep UK: Adım Adım Rehber"
               readTime="7 dakika"
-              date="Ocak 2026"
             />
 
             <p className="text-lg leading-relaxed text-slate-600 mb-8">
@@ -187,25 +183,15 @@ export default function AmazonPrepRehberiPage() {
                 bize ulaşabilirsiniz.
               </p>
 
+              <ArticleSources path="/blog/amazon-prep-uk-rehberi" />
+
               <h2>Sık Sorulan Sorular</h2>
-
-              <h3>Amazon prep için Türkiye&apos;den mi göndermeliyim?</h3>
-              <p>
-                Ürünlerinizi doğrudan Türkiye&apos;den İngiltere&apos;deki depomuza
-                gönderebilirsiniz. Biz oradan prep işlemlerini yapıp Amazon&apos;a sevk ediyoruz.
-              </p>
-
-              <h3>Shipment plan oluşturmaya yardım ediyor musunuz?</h3>
-              <p>
-                Evet. Amazon Seller Central üzerindeki shipment plan oluşturma sürecinde
-                rehberlik ediyoruz.
-              </p>
-
-              <h3>Kaç adet ürün için minimum sipariş var mı?</h3>
-              <p>
-                Sabit bir minimum yoktur. İhtiyacınıza göre esneklik sunuyoruz — hem küçük
-                batch&apos;ler hem büyük konteyner operasyonları için çalışıyoruz.
-              </p>
+              {faqs.map((f) => (
+                <div key={f.q}>
+                  <h3>{f.q}</h3>
+                  <p>{f.a}</p>
+                </div>
+              ))}
             </div>
 
             <div className="bg-[#0b2545] text-white rounded-2xl p-8 my-10 text-center">
@@ -218,7 +204,7 @@ export default function AmazonPrepRehberiPage() {
                   href={WHATSAPP}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold px-7 py-3.5 rounded-full transition"
+                  className="inline-flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white font-bold px-7 py-3.5 rounded-full transition"
                 >
                   WhatsApp&apos;tan hızlı bilgi alın
                 </a>
@@ -231,7 +217,7 @@ export default function AmazonPrepRehberiPage() {
               </div>
             </div>
 
-            <AuthorBox updatedDate="Ocak 2026" />
+            <AuthorBox path="/blog/amazon-prep-uk-rehberi" />
 
             <RelatedArticles articles={relatedArticles} />
 

@@ -557,6 +557,83 @@ export const TR_PAGES: Record<string, TrPage> = {
     ],
     form: { id: "tr_guide_quote", heading: "İthalat ve Depolama Teklifi Alın", intro: "Teslim şeklini, çıkış noktasını ve tahmini hacmi yazın; navlun, gümrükleme, taşıma ve depolamayı fiyatlandıralım.", services: ["Gümrükleme Koordinasyonu", "Nakliye", "Depolama"] },
   },
+  "/konteyner-tipleri": {
+    path: "/konteyner-tipleri",
+    kind: "service",
+    serviceType: "Container unloading and storage",
+    title: "Konteyner Tipleri: 20ft, 40ft ve 40ft HC | LondraDepo",
+    description:
+      "20ft, 40ft ve 40ft high-cube konteyner karşılaştırması: tipik hacim, konteynere sığan palet sayısı, FCL ile LCL farkı ve Essex depomuzda boşaltma.",
+    crumb: "Konteyner Tipleri",
+    eyebrow: "İthalat rehberi",
+    h1: "Konteyner Tipleri: 20ft, 40ft ve 40ft High-Cube",
+    lead:
+      "İngiltere'ye deniz yoluyla gelen yüklerin çoğu üç kuru yük konteyneriyle taşınır: 20ft, 40ft ve 40ft high-cube (40HC). 20ft konteynerin tipik iç hacmi yaklaşık 33 m³'tür ve tabanına yaklaşık 10 standart UK paleti sığar; 40ft yaklaşık 67 m³'tür ve yaklaşık 20 palet alır; 40ft high-cube aynı tabana sahiptir ama yaklaşık 30 cm daha yüksektir, yaklaşık 76 m³ ile hafif ve hacimli kolilere uygundur. Küçük yükler LCL (parsiyel) olarak başka gönderilerle aynı konteynerde taşınır. LondraDepo üç tipi de, dökme veya paletli, London Gateway ve Tilbury'ye 13–16 mil uzaklıktaki Rayleigh, Essex deposunda boşaltır.",
+    facts: [
+      "20ft: ~33 m³, tek kat ~10 UK paleti",
+      "40ft: ~67 m³, tek kat ~20 UK paleti",
+      "40ft HC: ~76 m³, 40ft ile aynı taban, ~30 cm daha yüksek",
+      "LCL: konteyneri paylaşır, hacme veya ağırlığa göre ödersiniz",
+      "FCL ve LCL Essex'te teslim alınır ve boşaltılır",
+    ],
+    sections: [
+      {
+        type: "table",
+        h2: "20ft, 40ft ve 40ft high-cube karşılaştırması",
+        head: ["Konteyner", "Tipik iç hacim", "Tabana sığan UK paleti", "Genellikle uygun olduğu yük"],
+        rows: [
+          ["20ft kuru yük", "~33 m³", "~10", "Ağır, yoğun ürünler; küçük siparişler"],
+          ["40ft kuru yük", "~67 m³", "~20", "Büyük, karışık veya paletli siparişler"],
+          ["40ft high-cube (40HC)", "~76 m³", "~20", "Ek yüksekliği kullanan hafif, hacimli koliler"],
+          ["LCL (parsiyel)", "Kullandığınız m³ kadar ödersiniz", "Her hacim", "Tam konteynerin çok altındaki yükler"],
+        ],
+        note: "Standart kuru yük konteynerleri için tipik değerlerdir; kesin ölçü ve taşıma kapasitesi taşıyıcıya ve konteynere göre değişir. Palet sayıları tek kat standart UK paleti (1200 × 1000 mm) içindir ve palet ölçüsüne ve yükleme şekline bağlıdır.",
+      },
+      {
+        type: "text",
+        h2: "FCL mi, LCL mi?",
+        paras: [
+          "Tam konteyner (FCL) ile konteynerin tamamını, dolu olsun olmasın, kiralarsınız ve yük tedarikçinizden İngiltere'ye mühürlü gelir. Parsiyel yükte (LCL) kolileriniz başka gönderilerle aynı konteyneri paylaşır, genellikle hacme veya ağırlığa göre fiyatlanır ve varıştan sonra bir konsolidasyon deposunda ayrılır.",
+          "Pratik kural olarak gönderiniz yarım 20ft'e yaklaştığında LCL fiyatını 20ft konteyner fiyatıyla karşılaştırın. Koli ölçülerinden hacminizi CBM hesaplayıcıyla bulabilirsiniz.",
+        ],
+      },
+      {
+        type: "steps",
+        h2: "Konteyner depomuza geldiğinde ne olur?",
+        items: [
+          ["Ön bildirim", "Konteyner numarası, ETA, ambalaj listesi ve SKU başına koli sayısı varıştan önce gönderilir."],
+          ["Gümrük ve taşıma", "İthalat beyannamesi verilir, konteyner limandan Rayleigh'e kararlaştırılan saatte taşınır."],
+          ["Boşaltma", "Dökme koliler elle, paletli yükler forkliftle boşaltılır."],
+          ["Sayım ve kontrol", "Ürünler ambalaj listesiyle karşılaştırılarak sayılır, görünür hasar fotoğraflanır."],
+          ["Stoğa kayıt", "Koliler gerekirse paletlenir ve Mintsoft WMS'e kaydedilir; depolama, sipariş veya Amazon için hazırdır."],
+        ],
+      },
+      {
+        type: "links",
+        h2: "Konteynerinizi planlayın",
+        items: [
+          { href: "/cbm-palet-hesaplama", title: "CBM ve Palet Hesaplama", text: "Koli ölçüsünden metreküp, palet ve konteyner doluluğu.", tag: "Ücretsiz araç" },
+          { href: "/konteyner-varis-planlayici", title: "Konteyner Varış Planlayıcı", text: "Limandan depomuza tarihli kontrol listesi.", tag: "Ücretsiz araç" },
+          { href: "/konteyner-bosaltma", title: "Konteyner Boşaltma", text: "Essex'te FCL ve LCL boşaltma, sayım ve paletleme.", tag: "Hizmet" },
+        ],
+      },
+    ],
+    faqs: [
+      { q: "40ft ile 40ft high-cube konteyner arasındaki fark nedir?", a: "40ft high-cube, standart 40ft ile aynı tabana sahiptir ama yaklaşık 30 cm daha yüksektir; tipik iç hacmi yaklaşık 67 m³ yerine yaklaşık 76 m³'tür. Ek yüksekliği kullanabilen hafif ve hacimli kolilere uygundur; ağır ürünlerde genellikle önce ağırlık sınırı dolar." },
+      { q: "20ft konteynere kaç palet sığar?", a: "Tek kat yüklemede 20ft konteynerin tabanına yaklaşık 10, 40ft ve 40ft high-cube'a yaklaşık 20 standart UK paleti (1200 × 1000 mm) sığar. Gerçek sayı palet ölçüsüne, yüksekliğe ve yükleme şekline bağlıdır." },
+      { q: "Ne zaman LCL yerine FCL göndermeliyim?", a: "Gönderiniz yarım 20ft'e, yani yaklaşık 15 m³'e ulaştığında LCL fiyatını tam 20ft konteyner fiyatıyla karşılaştırın; bunun üzerinde FCL çoğunlukla daha ucuzdur ve yük mühürlü gelir. LondraDepo Essex'te hem FCL hem LCL teslim alır." },
+      { q: "LondraDepo dökme yüklenmiş konteyner boşaltır mı?", a: "Evet. LondraDepo dökme (zemine yüklenmiş) ve paletli 20ft, 40ft ve 40ft high-cube konteynerleri Rayleigh, Essex deposunda boşaltır, kolileri ambalaj listesine göre sayar, görünür hasarı fotoğraflar ve depolama için paletler." },
+      { q: "Depo konteyner limanlarına ne kadar uzak?", a: "LondraDepo'nun Rayleigh, Essex'teki deposu karayoluyla DP World London Gateway'e yaklaşık 13 mil, Tilbury Limanı'na 16 mil ve Felixstowe Limanı'na 62 mil uzaklıktadır." },
+    ],
+    related: [
+      { href: "/cbm-palet-hesaplama", label: "CBM ve Palet Hesaplama" },
+      { href: "/konteyner-bosaltma", label: "Konteyner Boşaltma" },
+      { href: "/konteyner-varis-planlayici", label: "Konteyner Varış Planlayıcı" },
+      { href: "/london-gateway-tilbury-depo", label: "London Gateway & Tilbury Depo" },
+      { href: "/blog/incoterms-rehberi", label: "Incoterms Rehberi" },
+    ],
+    form: { id: "tr_container_types_quote", heading: "Konteyneriniz İçin Teklif Alın", intro: "Konteyner tipini, limanı, ETA'yı ve ambalaj listesini yazın; taşıma, boşaltma, depolama ve sevkiyatı fiyatlandıralım.", services: ["Yükleme / Boşaltma", "Depolama"] },
+  },
   "/cbm-palet-hesaplama": {
     path: "/cbm-palet-hesaplama",
     kind: "service",
@@ -604,6 +681,7 @@ export const TR_PAGES: Record<string, TrPage> = {
           { href: "/ingiltere-depo-maliyet-hesaplama", title: "Depo Maliyet Hesaplama", text: "Palet × hafta × £3,50 + KDV; KDV dahil toplam.", tag: "Ücretsiz araç" },
           { href: "/konteyner-varis-planlayici", title: "Konteyner Varış Planlayıcı", text: "Limandan depomuza tarihli kontrol listesi.", tag: "Ücretsiz araç" },
           { href: "/blog/incoterms-rehberi", title: "Incoterms Rehberi", text: "FOB, CIF, DAP ve DDP'de navlunu, vergiyi ve KDV'yi kim öder.", tag: "Rehber" },
+          { href: "/konteyner-tipleri", title: "Konteyner Tipleri", text: "20ft, 40ft ve 40HC karşılaştırması; FCL ve LCL.", tag: "Rehber" },
         ],
       },
     ],
@@ -762,6 +840,7 @@ export const TR_PAGES: Record<string, TrPage> = {
       { q: "Boşaltılan ürünler doğrudan sevk edilebilir mi?", a: "Evet. Ürünler UK müşterilerine veya Amazon'a cross-dock edilebilir ya da depolanıp siparişler geldikçe sevk edilebilir." },
     ],
     related: [
+      { href: "/konteyner-tipleri", label: "Konteyner Tipleri" },
       { href: "/ellecleme", label: "Elleçleme" },
       { href: "/palet-depolama", label: "Palet Depolama" },
       { href: "/felixstowe-liman-depo", label: "Felixstowe Liman Depo" },

@@ -21,6 +21,7 @@ const TR: ReadonlyArray<readonly [string, Freq, number]> = [
   ["/ingiltere-depo-maliyet-hesaplama", "monthly", 0.8],
   ["/konteyner-varis-planlayici", "monthly", 0.8],
   ["/cbm-palet-hesaplama", "monthly", 0.8],
+  ["/konteyner-tipleri", "monthly", 0.7],
   ["/london-gateway-tilbury-depo", "monthly", 0.8],
   ["/felixstowe-liman-depo", "monthly", 0.8],
   ["/konteyner-bosaltma", "monthly", 0.8],

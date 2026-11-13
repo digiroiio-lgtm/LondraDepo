@@ -140,7 +140,7 @@ export const growthPages: EnPage[] = [
       { q: "Can you arrange haulage from the port?", a: "Yes. Arca Trade Group, the company that operates LondraDepo, can arrange transport from the port to our warehouse, or your own forwarder can deliver." },
       { q: "Can unloaded goods go straight out again?", a: "Yes. Goods can be cross-docked to UK customers or Amazon, or stored and released as orders arrive." },
     ],
-    related: ["/en/london-gateway-tilbury-warehousing", "/en/felixstowe-port-warehousing", "/en/container-arrival-planner", "/en/uk-import-logistics", "/en/locations/port-to-warehouse-logistics", "/en/pallet-storage", "/en/essex-warehouse", "/en/cargo-handling"],
+    related: ["/en/shipping-container-types", "/en/london-gateway-tilbury-warehousing", "/en/felixstowe-port-warehousing", "/en/container-arrival-planner", "/en/uk-import-logistics", "/en/locations/port-to-warehouse-logistics", "/en/pallet-storage", "/en/essex-warehouse", "/en/cargo-handling"],
     cta: { h2: "Book a container unloading quote", text: "Send the container size, ETA, packing list and whether goods are palletised or loose-loaded." },
   },
   {
@@ -492,6 +492,79 @@ export const growthPagesP2: EnPage[] = [
 // Lead magnet: storage cost calculator (paired with the Turkish calculator page).
 export const calculatorPages: EnPage[] = [
   {
+    slug: "/en/shipping-container-types",
+    tr: "/konteyner-tipleri",
+    kind: "service",
+    serviceType: "Container unloading and storage",
+    modified: "2026-11-13",
+    title: "Shipping Container Types: 20ft, 40ft and 40ft HC",
+    description:
+      "20ft, 40ft and 40ft high-cube shipping containers compared: typical volume, pallets per container, FCL versus LCL, and unloading at our Essex warehouse.",
+    label: "Shipping Container Types",
+    eyebrow: "Importing guide",
+    h1: "Shipping Container Types: 20ft, 40ft and 40ft High-Cube",
+    lead:
+      "Most sea freight to the UK travels in three dry container sizes: the 20ft, the 40ft and the 40ft high-cube (40HC). A 20ft container has a typical internal volume of about 33 m³ and takes roughly 10 standard UK pallets on the floor; a 40ft has about 67 m³ and takes roughly 20 pallets; a 40ft high-cube has the same floor but is about 30 cm taller, giving about 76 m³, which suits light, bulky cartons. Smaller loads travel as LCL (groupage), sharing a container with other shippers. LondraDepo unloads all three sizes, loose or palletised, at its warehouse in Rayleigh, Essex, 13 to 16 miles from London Gateway and Tilbury.",
+    facts: [
+      "20ft: ~33 m³, ~10 UK pallets single-stacked",
+      "40ft: ~67 m³, ~20 UK pallets single-stacked",
+      "40ft HC: ~76 m³, same floor as a 40ft, about 30 cm taller",
+      "LCL: share a container and pay by volume or weight",
+      "FCL and LCL received and unloaded in Essex",
+    ],
+    sections: [
+      {
+        type: "table",
+        h2: "20ft vs 40ft vs 40ft high-cube",
+        head: ["Container", "Typical internal volume", "UK pallets on the floor", "Usually suits"],
+        rows: [
+          ["20ft dry", "~33 m³", "~10", "Heavy, dense goods; smaller orders"],
+          ["40ft dry", "~67 m³", "~20", "Larger orders of mixed or palletised goods"],
+          ["40ft high-cube (40HC)", "~76 m³", "~20", "Light, bulky cartons that use the extra height"],
+          ["LCL (groupage)", "Pay for the m³ you use", "Any", "Loads well below a full container"],
+        ],
+        note: "Typical figures for standard dry containers; exact dimensions and payload vary by carrier and container. Pallet counts are single-stacked standard UK pallets (1200 × 1000 mm) and depend on pallet size and how they are loaded.",
+      },
+      {
+        type: "text",
+        h2: "FCL or LCL?",
+        paras: [
+          "With a full container load (FCL) you book the whole box, whether or not it is full, and it travels sealed from your supplier to the UK. With less than container load (LCL, or groupage) your cartons share a container and are usually priced by volume or weight, then separated at a consolidation depot after arrival.",
+          "As a rule of thumb, compare the LCL price for your cubic metres with the price of a 20ft container once a shipment reaches about half a 20ft. Use the CBM calculator to work out your volume from carton sizes.",
+        ],
+      },
+      {
+        type: "steps",
+        h2: "What happens when a container arrives at our warehouse",
+        items: [
+          { title: "Pre-advice", text: "Container number, ETA, packing list and carton counts per SKU are sent before arrival." },
+          { title: "Clearance and haulage", text: "The import declaration is lodged and the container is hauled from the port to Rayleigh in an agreed slot." },
+          { title: "Unloading", text: "Loose-loaded cartons are hand-unloaded; palletised loads are unloaded by forklift." },
+          { title: "Count and check", text: "Goods are counted against the packing list and visible damage is photographed." },
+          { title: "Book into stock", text: "Cartons are palletised where needed and booked into Mintsoft WMS, ready for storage, fulfilment or Amazon." },
+        ],
+      },
+      {
+        type: "links",
+        h2: "Plan your container",
+        items: [
+          { href: "/en/cbm-pallet-calculator", title: "CBM and pallet calculator", text: "Carton size to cubic metres, pallets and container fill.", tag: "Free tool" },
+          { href: "/en/container-arrival-planner", title: "Container arrival planner", text: "A dated checklist from UK port to our warehouse.", tag: "Free tool" },
+          { href: "/en/container-unloading", title: "Container unloading", text: "FCL and LCL devanning, counting and re-palletising in Essex.", tag: "Service" },
+        ],
+      },
+    ],
+    faqs: [
+      { q: "What is the difference between a 40ft and a 40ft high-cube container?", a: "A 40ft high-cube has the same floor as a standard 40ft but is about 30 cm taller, so its typical internal volume is about 76 m³ against about 67 m³. It suits light, bulky cartons that can use the extra height; heavy goods usually fill the weight limit first." },
+      { q: "How many pallets fit in a 20ft container?", a: "About 10 standard UK pallets (1200 × 1000 mm) fit on the floor of a 20ft container when single-stacked, and about 20 in a 40ft or 40ft high-cube. The real number depends on pallet size, height and loading pattern." },
+      { q: "When should I ship FCL instead of LCL?", a: "Compare the LCL price for your cubic metres with a full 20ft container once your shipment reaches about half a 20ft, roughly 15 m³. Above that, FCL is often cheaper and the goods travel sealed. LondraDepo receives both FCL and LCL in Essex." },
+      { q: "Can LondraDepo unload loose-loaded containers?", a: "Yes. LondraDepo unloads loose-loaded (floor-loaded) and palletised 20ft, 40ft and 40ft high-cube containers at its Rayleigh, Essex warehouse, counts the cartons against the packing list, photographs visible damage and palletises them for storage." },
+      { q: "How far is your warehouse from the container ports?", a: "LondraDepo's warehouse in Rayleigh, Essex is about 13 miles by road from DP World London Gateway, 16 miles from the Port of Tilbury and 62 miles from the Port of Felixstowe." },
+    ],
+    related: ["/en/cbm-pallet-calculator", "/en/container-unloading", "/en/container-arrival-planner", "/en/london-gateway-tilbury-warehousing", "/en/felixstowe-port-warehousing", "/en/blog/incoterms-for-uk-imports"],
+    cta: { h2: "Get a container unloading quote", text: "Send the container size, port, ETA and packing list, and we will price haulage, unloading, storage and delivery." },
+  },
+  {
     slug: "/en/cbm-pallet-calculator",
     tr: "/cbm-palet-hesaplama",
     kind: "service",
@@ -546,6 +619,7 @@ export const calculatorPages: EnPage[] = [
           { href: "/en/uk-storage-cost-calculator", title: "Storage cost calculator", text: "Pallets × weeks at £3.50 + VAT, with VAT shown.", tag: "Free tool" },
           { href: "/en/container-arrival-planner", title: "Container arrival planner", text: "A dated checklist from UK port to our warehouse.", tag: "Free tool" },
           { href: "/en/blog/incoterms-for-uk-imports", title: "Incoterms for UK imports", text: "Who pays freight, duty and VAT under FOB, CIF, DAP and DDP.", tag: "Guide" },
+          { href: "/en/shipping-container-types", title: "Shipping container types", text: "20ft, 40ft and 40ft HC compared, and FCL versus LCL.", tag: "Guide" },
         ],
       },
       {

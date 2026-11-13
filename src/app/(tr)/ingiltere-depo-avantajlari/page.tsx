@@ -1,10 +1,12 @@
 import Emoji from "@/components/visual/Emoji";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
+import TrBreadcrumb from "@/components/TrBreadcrumb";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 
+import { ORG_ID } from "@/lib/org";
 import { SITE_URL } from "@/lib/site";
 import { trAlternates } from "@/lib/i18n";
 const PAGE_URL = `${SITE_URL}/ingiltere-depo-avantajlari`;
@@ -32,21 +34,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": ["LocalBusiness", "Organization"],
-      "@id": `${SITE_URL}/#organization`,
-      name: "LondraDepo.com",
-      url: SITE_URL,
-      description:
-        "İngiltere depo, fulfillment ve dağıtım çözümleri sunan operasyon partneri.",
-      areaServed: ["Londra", "Essex", "Birmingham", "Manchester", "United Kingdom"],
-      contactPoint: {
-        "@type": "ContactPoint",
-        contactType: "customer service",
-        availableLanguage: ["Turkish", "English"],
-        url: WHATSAPP,
-      },
-    },
+    { "@id": ORG_ID },
     {
       "@type": "WebSite",
       "@id": `${SITE_URL}/#website`,
@@ -284,6 +272,7 @@ export default function IngiltereDepoAvantajlariPage() {
       <Header />
 
       <main>
+        <TrBreadcrumb path="/ingiltere-depo-avantajlari" label="İngiltere Depo Avantajları" />
         <FaqJsonLd faqs={faqs} />
         {/* JSON-LD */}
         <script

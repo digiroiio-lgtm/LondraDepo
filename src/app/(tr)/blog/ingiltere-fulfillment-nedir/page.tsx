@@ -46,7 +46,7 @@ const jsonLd = {
       ],
     },
     {
-      "@type": "Article",
+      "@type": "BlogPosting",
       headline: ARTICLE.headline,
       description: "UK fulfillment hizmeti rehberi — e-ticaret satıcıları için sipariş hazırlama ve sevk süreçleri.",
       url: PAGE_URL,

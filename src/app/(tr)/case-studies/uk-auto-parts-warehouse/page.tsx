@@ -289,6 +289,7 @@ export default function AutoPartsCaseStudyPage() {
             <div className="pt-6 border-t border-slate-200 mb-8">
               <p className="text-slate-500 text-sm mb-3">İlgili hizmetler:</p>
               <div className="flex flex-wrap gap-3">
+                <Link href="/otomotiv-yedek-parca-depolama" className="text-sm text-[#0b2545] hover:underline">→ Otomotiv Yedek Parça Depolama</Link>
                 <Link href="/palet-depolama" className="text-sm text-[#0b2545] hover:underline">→ Palet Depolama</Link>
                 <Link href="/ingiltere-fulfillment" className="text-sm text-[#0b2545] hover:underline">→ İngiltere Fulfillment</Link>
                 <Link href="/ingiltere-depo-avantajlari" className="text-sm text-[#0b2545] hover:underline">→ Depo Avantajları</Link>

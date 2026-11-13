@@ -2,6 +2,7 @@ import Emoji from "@/components/visual/Emoji";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import TrClusterNav from "@/components/TrClusterNav";
 import type { Metadata } from "next";
+import TrBreadcrumb from "@/components/TrBreadcrumb";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
@@ -135,6 +136,7 @@ export default function TurkiyeILandingPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <main>
+        <TrBreadcrumb path="/turkiyeden-ingiltereye-depolama" label="Türkiye'den İngiltere'ye Depolama" />
         <FaqJsonLd faqs={faqs} />
         {/* Hero */}
         <section className="bg-gradient-to-br from-[#0b2545] via-[#1e3a5f] to-[#0b2545] text-white py-20 px-4">

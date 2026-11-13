@@ -6,6 +6,7 @@ import TeamQuote from "@/components/TeamQuote";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import TrBreadcrumb from "@/components/TrBreadcrumb";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
@@ -139,6 +140,7 @@ export default function IngiltereDepoPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <main>
+        <TrBreadcrumb path="/ingiltere-depo" label="İngiltere Depo" />
         <FaqJsonLd faqs={faqs} />
         {/* Hero */}
         <section className="bg-gradient-to-br from-[#0b2545] via-[#1e3a5f] to-[#0b2545] text-white py-20 px-4">

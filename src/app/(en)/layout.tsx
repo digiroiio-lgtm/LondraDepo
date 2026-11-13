@@ -5,6 +5,7 @@ import GaConsentListener from "@/components/GoogleAnalytics";
 import "../globals.css";
 import { geist } from "../font";
 import { GA_ID, GA_CONSENT_SCRIPT } from "@/lib/consent-script";
+import { orgNode } from "@/lib/org";
 import { SITE_URL } from "@/lib/site";
 
 export const viewport: Viewport = {
@@ -28,42 +29,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": ["Organization", "LocalBusiness"],
-      "@id": `${SITE_URL}/#organization`,
-      name: "LondraDepo.com",
-      legalName: "Arca Trade Group Ltd",
-      url: `${SITE_URL}/en`,
-      logo: { "@type": "ImageObject", url: `${SITE_URL}/logo.svg` },
-      description:
-        "UK third-party logistics warehouse in Rayleigh, Essex, near London, providing warehousing, pallet storage, container unloading, ecommerce fulfilment, Amazon FBA prep and UK-wide distribution for international brands. Operated by Arca Trade Group Ltd, which also provides international freight and customs clearance.",
-      foundingDate: "2021",
-      areaServed: ["London", "Essex", "Birmingham", "Manchester", "United Kingdom"],
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "Unit 19 Arterial Park, Arterial Road",
-        addressLocality: "Rayleigh",
-        addressRegion: "Essex",
-        postalCode: "SS6 7FY",
-        addressCountry: "GB",
-      },
-      telephone: "+447554195190",
-      email: "Sales@arcatrade.co.uk",
-      vatID: "GB353315322",
-      knowsAbout: ["UK warehousing", "Ecommerce fulfilment", "Pallet storage", "Amazon FBA prep", "UK distribution", "Customs clearance coordination"],
-      contactPoint: {
-        "@type": "ContactPoint",
-        contactType: "customer service",
-        telephone: "+447554195190",
-        availableLanguage: ["English", "Turkish"],
-      },
-      knowsLanguage: ["en", "tr"],
-      sameAs: [
-        "https://find-and-update.company-information.service.gov.uk/company/13247691",
-        "https://www.linkedin.com/company/arcatradegroup/",
-        "https://bifa.org/members/arca-trade-group-ltd/",
-      ],
-    },
+    orgNode("en"),
     {
       "@type": "WebSite",
       "@id": `${SITE_URL}/en#website`,

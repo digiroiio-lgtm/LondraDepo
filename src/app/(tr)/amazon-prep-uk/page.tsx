@@ -166,6 +166,7 @@ export default function AmazonPrepPage() {
               <p className="text-slate-500 text-sm mb-3">İlgili hizmetler:</p>
               <div className="flex flex-wrap gap-3">
                 <Link href="/amazon-ingiltere-depo-konumlari" className="text-sm text-[#0b2545] hover:underline">→ Amazon İngiltere Depo Konumları</Link>
+                <Link href="/blog/amazon-private-label-toptan" className="text-sm text-[#0b2545] hover:underline">→ Private Label ve Toptan Rehberi</Link>
                 <Link href="/ingiltere-fulfillment" className="text-sm text-[#0b2545] hover:underline">→ İngiltere Fulfillment</Link>
                 <Link href="/palet-depolama" className="text-sm text-[#0b2545] hover:underline">→ Palet Depolama</Link>
                 <Link href="/essex-depo" className="text-sm text-[#0b2545] hover:underline">→ Essex Depo</Link>

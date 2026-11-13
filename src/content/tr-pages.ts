@@ -108,6 +108,7 @@ export const TR_PAGES: Record<string, TrPage> = {
       { q: "Konteyner London Gateway veya Tilbury'ye geldikten sonra ne olur?", a: "İthalat beyannamesi verilip konteyner tahliye edildikten sonra taşıyıcı onu yaklaşık 13–16 mil uzaklıktaki Rayleigh deposuna getirir. Boşaltır, ambalaj listesiyle sayar, görünür hasarı fotoğraflar ve stoğu Mintsoft WMS'e kaydederiz." },
     ],
     related: [
+      { href: "/limandan-depoya-lojistik", label: "Limandan Depoya Lojistik" },
       { href: "/felixstowe-liman-depo", label: "Felixstowe Liman Depo" },
       { href: "/konteyner-varis-planlayici", label: "Konteyner Varış Planlayıcı" },
       { href: "/gumrukleme", label: "Gümrükleme" },
@@ -203,6 +204,8 @@ export const TR_PAGES: Record<string, TrPage> = {
       { q: "LondraDepo, Amazon LCY2 Tilbury'ye ne kadar uzak?", a: "Unit 19 Arterial Park, Rayleigh, Essex SS6 7FY'deki depomuzdan Amazon'un Tilbury'deki LCY2 deposuna karayoluyla yaklaşık 16 mil (25 km), araçla yaklaşık 20 dakikadır; Kasım 2026'da karayolu rotasıyla ölçülmüştür." },
     ],
     related: [
+      { href: "/hakkimizda", label: "Hakkımızda" },
+      { href: "/blog/amazon-private-label-toptan", label: "Private Label ve Toptan Rehberi" },
       { href: "/amazon-prep-uk", label: "Amazon Prep UK" },
       { href: "/amazon-fulfillment", label: "Amazon Fulfillment" },
       { href: "/amazon-ingiltere-depo", label: "Amazon İçin İngiltere Depo" },
@@ -263,6 +266,7 @@ export const TR_PAGES: Record<string, TrPage> = {
       { q: "Felixstowe konteynerleri için neden Essex'te depo?", a: "Aynı stok Londra ve Güneydoğu müşterilerine, e-ticaret, Amazon veya toptan siparişlere de hizmet verecekse Essex mantıklıdır: ürün Rayleigh'de bir kez boşaltılır ve Londra merkezine yaklaşık 37 mil mesafededir." },
     ],
     related: [
+      { href: "/limandan-depoya-lojistik", label: "Limandan Depoya Lojistik" },
       { href: "/london-gateway-tilbury-depo", label: "London Gateway & Tilbury Depo" },
       { href: "/konteyner-varis-planlayici", label: "Konteyner Varış Planlayıcı" },
       { href: "/gumrukleme", label: "Gümrükleme" },
@@ -477,6 +481,7 @@ export const TR_PAGES: Record<string, TrPage> = {
       { q: "Türkiye'den ihracat yapan bir üretici için hangi Amazon modeli uygun?", a: "Amazon UK'de kendi markasını satan bir Türk üretici private label modelini izler: markalı ürünlerini konteyner veya paletle ithal eder, İngiltere gümrüğünden çeker ve LondraDepo gibi bir UK deposunda tutar; Amazon'a partiler gönderir ve diğer kanallara da hizmet verir." },
     ],
     related: [
+      { href: "/blog/ingiltere-3pl-nasil-secilir", label: "3PL Depo Nasıl Seçilir?" },
       { href: "/amazon-prep-uk", label: "Amazon Prep UK" },
       { href: "/amazon-ingiltere-depo-konumlari", label: "Amazon Depo Konumları" },
       { href: "/amazon-ingiltere-depo", label: "Amazon İçin İngiltere Depo" },
@@ -637,6 +642,7 @@ export const TR_PAGES: Record<string, TrPage> = {
       { q: "Antrepo ne zaman mantıklı?", a: "Gümrük vergisi yüksek ürünlerde, alkol gibi özel tüketim vergili mallarda, satıştan önce aylarca bekleyecek stokta veya yeniden ihraç edilebilecek ürünlerde antrepo düşünülmeye değer. Kısa sürede İngiltere'de satılacak stok için gümrüklenmiş depo genellikle daha basittir." },
     ],
     related: [
+      { href: "/blog/ithalat-belgeleri", label: "İthalat Belgeleri" },
       { href: "/gumrukleme", label: "Gümrükleme" },
       { href: "/blog/ingiltere-ithalat-maliyetleri", label: "İthalat Maliyetleri" },
       { href: "/blog/incoterms-rehberi", label: "Incoterms Rehberi" },
@@ -714,6 +720,8 @@ export const TR_PAGES: Record<string, TrPage> = {
       { q: "FOB hava veya kara yolunda kullanılabilir mi?", a: "Hayır. ICC Incoterms 2020'ye göre FOB, FAS, CFR ve CIF yalnızca deniz ve iç su yolu taşımacılığı içindir. Hava veya kara yolunda FCA, CPT, CIP, DAP veya DDP gibi bir teslim şekli kullanılmalıdır." },
     ],
     related: [
+      { href: "/blog/ingiltere-3pl-nasil-secilir", label: "3PL Depo Nasıl Seçilir?" },
+      { href: "/blog/ithalat-belgeleri", label: "İthalat Belgeleri" },
       { href: "/blog/turkiyeden-ingiltereye-ihracat-rehberi", label: "İhracat Rehberi" },
       { href: "/blog/ingiltere-ithalat-maliyetleri", label: "İthalat Maliyetleri" },
       { href: "/blog/antrepo-nedir", label: "Antrepo Nedir?" },
@@ -791,6 +799,9 @@ export const TR_PAGES: Record<string, TrPage> = {
       { q: "Depo konteyner limanlarına ne kadar uzak?", a: "LondraDepo'nun Rayleigh, Essex'teki deposu karayoluyla DP World London Gateway'e yaklaşık 13 mil, Tilbury Limanı'na 16 mil ve Felixstowe Limanı'na 62 mil uzaklıktadır." },
     ],
     related: [
+      { href: "/teklif-al", label: "Teklif Al" },
+      { href: "/blog/ithalat-belgeleri", label: "İthalat Belgeleri" },
+      { href: "/limandan-depoya-lojistik", label: "Limandan Depoya Lojistik" },
       { href: "/cbm-palet-hesaplama", label: "CBM ve Palet Hesaplama" },
       { href: "/konteyner-bosaltma", label: "Konteyner Boşaltma" },
       { href: "/konteyner-varis-planlayici", label: "Konteyner Varış Planlayıcı" },
@@ -858,6 +869,7 @@ export const TR_PAGES: Record<string, TrPage> = {
       { q: "Hesaplayıcının sonucu teklif mi?", a: "Hayır, planlama tahminidir. LondraDepo ambalaj listenizi gördükten sonra mal kabulü, paletlemeyi, palet başına haftalık £3,50 + KDV'den depolamayı ve teslimatı fiyatlandırır." },
     ],
     related: [
+      { href: "/teklif-al", label: "Teklif Al" },
       { href: "/ingiltere-depo-maliyet-hesaplama", label: "Depo Maliyet Hesaplama" },
       { href: "/konteyner-varis-planlayici", label: "Konteyner Varış Planlayıcı" },
       { href: "/konteyner-bosaltma", label: "Konteyner Boşaltma" },
@@ -1107,6 +1119,7 @@ export const TR_PAGES: Record<string, TrPage> = {
         items: [
           { href: "/case-studies/tortilla-uk-distribution", title: "Tortilla üreticisi", text: "1 deneme paletinden aylık 6 × 40HC konteynere.", tag: "Operasyon örneği" },
           { href: "/case-studies/pizza-box-distribution-uk", title: "Pizza kutusu üreticisi", text: "Paletli UK stoğu ve restoranlara programlı dağıtım.", tag: "Operasyon örneği" },
+          { href: "/ambalaj-catering-depolama", title: "Ambalaj ve catering depolama", text: "Ambalaj ve catering ürünleri için paletli stok ve programlı B2B teslimat.", tag: "Sektör" },
           { href: "/palet-depolama", title: "Palet depolama", text: "Haftalık palet başına £3,50 + KDV'den.", tag: "Hizmet" },
         ],
       },
@@ -1146,6 +1159,8 @@ export const TR_PAGES: Record<string, TrPage> = {
       { q: "Sektörüm için nasıl teklif alırım?", a: "Bu sayfadaki formu ürün tipiniz, ambalajınız, tahmini palet veya koli sayınız, aylık siparişleriniz ve satış kanallarınızla doldurun. Ekibimiz depolama, elleçleme ve teslimat için e-postayla teklif gönderir." },
     ],
     related: [
+      { href: "/teklif-al", label: "Teklif Al" },
+      { href: "/hakkimizda", label: "Hakkımızda" },
       { href: "/ingiltere-depo", label: "İngiltere Depo" },
       { href: "/ingiltere-fulfillment", label: "İngiltere Fulfillment" },
       { href: "/case-studies", label: "Operasyon Örnekleri" },

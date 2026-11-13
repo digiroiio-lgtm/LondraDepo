@@ -46,7 +46,7 @@ const jsonLd = {
       ],
     },
     {
-      "@type": "Article",
+      "@type": "BlogPosting",
       headline: ARTICLE.headline,
       description: "Türkiye'den İngiltere'ye ihracat yapan markalar için UK depolama süreçleri, maliyetler ve partner seçimi.",
       url: PAGE_URL,

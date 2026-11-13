@@ -434,7 +434,7 @@ export const servicePages: EnPage[] = [
       { q: "Can I meet Amazon's FBM performance requirements?", a: "Amazon sets FBM delivery time and performance requirements. Fulfilling from a UK warehouse helps you meet UK delivery times, but the final performance assessment is made by Amazon." },
       { q: "Can the same stock serve Amazon FBM and my other channels?", a: "Yes. Stock held at LondraDepo can fulfil Amazon FBM orders, be prepared and sent into Amazon FBA, and serve Shopify or wholesale orders, all from one UK warehouse in Essex." },
     ],
-    related: ["/en/amazon-fulfilment-uk", "/en/amazon-prep-uk", "/en/amazon-uk-fulfilment-centres", "/en/uk-warehousing", "/en/blog/amazon-fba-vs-uk-fulfilment"],
+    related: ["/en/blog/amazon-private-label-wholesale-uk", "/en/amazon-fulfilment-uk", "/en/amazon-prep-uk", "/en/amazon-uk-fulfilment-centres", "/en/uk-warehousing", "/en/blog/amazon-fba-vs-uk-fulfilment"],
   },
   {
     slug: "/en/uk-fulfilment",
@@ -594,7 +594,7 @@ export const servicePages: EnPage[] = [
       { q: "Can you hold my stock and send it to Amazon in smaller batches?", a: "Yes. LondraDepo can store the balance of your stock in Essex from £3.50 + VAT per pallet per week and prepare further batches for Amazon as your inventory sells, so slow-moving units are not left in Amazon's storage." },
       { q: "Should I send stock to Amazon by parcel or by pallet?", a: "It depends on volume. A few cartons usually go as small parcel delivery (SPD); Amazon Freight describes less-than-truckload (LTL) as usually one to six pallets; larger regular loads can justify a full truck. We advise on the option for each shipment plan." },
     ],
-    related: ["/en/amazon-uk-fulfilment-centres", "/en/blog/amazon-fba-prep-checklist", "/en/blog/amazon-prep-uk-guide", "/en/amazon-seller-warehousing-uk", "/en/amazon-fulfilment-uk", "/en/essex-warehouse"],
+    related: ["/en/blog/amazon-private-label-wholesale-uk", "/en/amazon-uk-fulfilment-centres", "/en/blog/amazon-fba-prep-checklist", "/en/blog/amazon-prep-uk-guide", "/en/amazon-seller-warehousing-uk", "/en/amazon-fulfilment-uk", "/en/essex-warehouse"],
   },
   {
     slug: "/en/storage-services",
@@ -671,7 +671,7 @@ export const servicePages: EnPage[] = [
       { q: "How are goods received after customs?", a: "Once clearance is complete, your goods are delivered to our warehouse address, counted and booked into the warehouse system." },
       { q: "Do I need a GB EORI number to clear goods into the UK?", a: "Yes. The importer needs an EORI number starting with GB to import goods into Great Britain. Arca Trade Group's customs team can lodge the declaration, but the importer remains responsible for duty and import VAT." },
     ],
-    related: ["/en/blog/uk-import-costs", "/en/uk-import-logistics", "/en/blog/uk-importing-guide", "/en/container-unloading", "/en/uk-warehousing", "/en/essex-warehouse"],
+    related: ["/en/blog/uk-import-documents", "/en/blog/uk-import-costs", "/en/uk-import-logistics", "/en/blog/uk-importing-guide", "/en/container-unloading", "/en/uk-warehousing", "/en/essex-warehouse"],
   },
   {
     slug: "/en/cargo-handling",

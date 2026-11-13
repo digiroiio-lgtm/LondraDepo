@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
+import TrBreadcrumb from "@/components/TrBreadcrumb";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 
@@ -23,6 +24,7 @@ export default function CookiePolicyPage() {
     <>
       <Header />
       <main>
+        <TrBreadcrumb path="/cookie-policy" label="Çerez Politikası" visible={false} jsonLd />
         <nav aria-label="breadcrumb" className="bg-slate-50 border-b border-slate-200">
           <div className="max-w-4xl mx-auto px-4 py-2 text-sm text-slate-500 flex gap-2">
             <Link href="/" className="hover:text-[#0b2545] transition">Ana Sayfa</Link>

@@ -1028,7 +1028,7 @@ export const blogPages: EnPage[] = [
       { q: "Which Incoterm is best for importing into the UK?", a: "Many UK importers prefer FOB for sea freight or FCA for containers handed over at a terminal, because they control the main freight, the arrival port and the customs broker. LondraDepo's operator Arca Trade Group can arrange freight and clearance on those terms." },
       { q: "Can I use FOB for air freight or road freight?", a: "No. Under the ICC's Incoterms 2020, FOB, FAS, CFR and CIF are for sea and inland waterway transport only. For air or road freight, use a term such as FCA, CPT, CIP, DAP or DDP." },
     ],
-    related: ["/en/blog/uk-importing-guide", "/en/blog/uk-import-costs", "/en/blog/bonded-warehouse-vs-duty-paid-storage", "/en/uk-customs-clearance", "/en/uk-import-logistics", "/en/cbm-pallet-calculator"],
+    related: ["/en/blog/uk-import-documents", "/en/blog/uk-importing-guide", "/en/blog/uk-import-costs", "/en/blog/bonded-warehouse-vs-duty-paid-storage", "/en/uk-customs-clearance", "/en/uk-import-logistics", "/en/cbm-pallet-calculator"],
   },
 ];
 

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import TrBreadcrumb from "@/components/TrBreadcrumb";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
@@ -41,6 +42,7 @@ export default function MaliyetHesaplamaPage() {
     <>
       <Header />
       <FaqJsonLd faqs={faqs} />
+      <TrBreadcrumb path="/ingiltere-depo-maliyet-hesaplama" label="Depo Maliyet Hesaplama" visible={false} jsonLd />
       <main className="bg-white">
         <section className="bg-[#0b2545] text-white py-14 px-4">
           <div className="max-w-5xl mx-auto">

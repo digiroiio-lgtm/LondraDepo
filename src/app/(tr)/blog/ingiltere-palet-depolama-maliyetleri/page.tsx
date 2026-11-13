@@ -63,7 +63,7 @@ const jsonLd = {
       ],
     },
     {
-      "@type": "Article",
+      "@type": "BlogPosting",
       headline: ARTICLE.headline,
       description: "UK palet depolama ücretleri, fiyatı etkileyen faktörler ve bütçe planlaması.",
       url: PAGE_URL,

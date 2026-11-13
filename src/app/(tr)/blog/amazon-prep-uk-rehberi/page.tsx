@@ -46,7 +46,7 @@ const jsonLd = {
       ],
     },
     {
-      "@type": "Article",
+      "@type": "BlogPosting",
       headline: ARTICLE.headline,
       description: "Amazon FBA için İngiltere prep hizmeti rehberi. FNSKU etiketleme, FBA hazırlık ve sevk süreçleri.",
       url: PAGE_URL,

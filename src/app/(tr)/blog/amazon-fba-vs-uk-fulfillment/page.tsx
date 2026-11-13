@@ -46,7 +46,7 @@ const jsonLd = {
       ],
     },
     {
-      "@type": "Article",
+      "@type": "BlogPosting",
       headline: ARTICLE.headline,
       description: "Amazon FBA ve 3PL UK fulfillment karşılaştırması — maliyet, esneklik ve kontrol.",
       url: PAGE_URL,

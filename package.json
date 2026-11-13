@@ -10,7 +10,9 @@
     "seo:verify": "python3 scripts/verify-seo.py",
     "seo:meta": "python3 scripts/audit-meta.py",
     "seo:faq": "python3 scripts/audit-faq.py",
-    "seo:smoke": "SEO_LIVE=1 SEO_BASE_URL=https://www.londradepo.com python3 scripts/verify-seo.py"
+    "seo:smoke": "SEO_LIVE=1 SEO_BASE_URL=https://www.londradepo.com python3 scripts/verify-seo.py",
+    "llms:gen": "python3 scripts/gen-llms.py",
+    "seo:llms": "python3 scripts/audit-llms.py"
   },
   "dependencies": {
     "@formspree/react": "^3.0.0",

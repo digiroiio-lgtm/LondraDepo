@@ -64,7 +64,7 @@ const jsonLd = {
       ],
     },
     {
-      "@type": "Article",
+      "@type": "BlogPosting",
       headline: ARTICLE.headline,
       description: "UK palet depolama, fulfillment ve Amazon prep maliyetleri. İngiltere depo ücret yapısı.",
       url: PAGE_URL,

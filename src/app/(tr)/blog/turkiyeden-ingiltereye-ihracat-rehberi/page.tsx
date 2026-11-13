@@ -64,7 +64,7 @@ const jsonLd = {
       ],
     },
     {
-      "@type": "Article",
+      "@type": "BlogPosting",
       headline: ARTICLE.headline,
       description: "Türk ihracatçılar için UK ihracat süreçleri, gümrük ve operasyon rehberi.",
       url: PAGE_URL,

@@ -343,6 +343,7 @@ export default function AmazonIngiltereDepo() {
                 { href: "/amazon-fulfillment", label: "Amazon Fulfillment" },
                 { href: "/amazon-prep-uk", label: "Amazon FBA Prep UK" },
                 { href: "/amazon-ingiltere-depo-konumlari", label: "Amazon İngiltere Depo Konumları" },
+                { href: "/blog/amazon-private-label-toptan", label: "Private Label ve Toptan Rehberi" },
                 { href: "/ingiltere-depo", label: "İngiltere Depo" },
                 { href: "/siparis-toplama-paketleme", label: "Pick & Pack" },
                 { href: "/ingiltere-depo-fiyatlari", label: "Depo Fiyatları" },

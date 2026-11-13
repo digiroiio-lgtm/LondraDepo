@@ -46,7 +46,7 @@ const jsonLd = {
       ],
     },
     {
-      "@type": "Article",
+      "@type": "BlogPosting",
       headline: ARTICLE.headline,
       description: "UK ara depo ve transit depolama hizmetinin ne olduğu ve hangi firmalar için uygun olduğu.",
       url: PAGE_URL,

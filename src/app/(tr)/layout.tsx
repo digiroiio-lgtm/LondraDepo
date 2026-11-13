@@ -7,6 +7,7 @@ import "../globals.css";
 import { geist } from "../font";
 import { GA_ID, GA_CONSENT_SCRIPT } from "@/lib/consent-script";
 
+import { orgNode } from "@/lib/org";
 import { SITE_URL } from "@/lib/site";
 
 export const viewport: Viewport = {
@@ -59,42 +60,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": ["Organization", "LocalBusiness"],
-      "@id": `${SITE_URL}/#organization`,
-      name: "LondraDepo.com",
-      url: SITE_URL,
-      logo: {
-        "@type": "ImageObject",
-        url: `${SITE_URL}/logo.svg`,
-      },
-      description:
-        "UK depolama, gümrükleme koordinasyonu, elleçleme, e-ticaret fulfillment, Shopify ve Amazon fulfillment, pick & pack ve UK dağıtım hizmetleri sunan operasyon partneri. İngiltere'de kendi deponuzu kurmadan satış yapın.",
-      areaServed: ["London", "Essex", "Birmingham", "Manchester", "United Kingdom"],
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "Unit 19 Arterial Park, Arterial Road",
-        addressLocality: "Rayleigh",
-        addressRegion: "Essex",
-        postalCode: "SS6 7FY",
-        addressCountry: "GB",
-      },
-      telephone: "+447554195190",
-      knowsAbout: ["UK Warehousing", "Fulfillment", "Pallet Storage", "Amazon Prep", "UK Distribution", "Turkish Export to UK"],
-      contactPoint: {
-        "@type": "ContactPoint",
-        contactType: "customer service",
-        availableLanguage: ["Turkish", "English"],
-        url: "https://wa.me/447554195190?text=Merhaba%2C%20depo%20teklifi%20almak%20istiyorum.",
-      },
-      sameAs: [
-        "https://find-and-update.company-information.service.gov.uk/company/13247691",
-        "https://www.linkedin.com/company/arcatradegroup/",
-        "https://bifa.org/members/arca-trade-group-ltd/",
-        "https://in.kompass.com/c/arca-trade-group-ltd/gbcs13970309/",
-        "https://open.endole.co.uk/insight/company/13247691-arca-trade-group-ltd",
-      ],
-    },
+    orgNode("tr"),
     {
       "@type": "WebSite",
       "@id": `${SITE_URL}/#website`,

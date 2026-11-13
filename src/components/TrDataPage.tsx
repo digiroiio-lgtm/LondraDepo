@@ -49,7 +49,7 @@ function jsonLd(p: TrPage) {
   const a = TR_ARTICLES[p.path];
   if (p.kind === "article" && a) {
     graph.push({
-      "@type": "Article",
+      "@type": p.path.startsWith("/blog/") ? "BlogPosting" : "Article",
       "@id": `${url}#article`,
       headline: a.headline,
       description: p.description,

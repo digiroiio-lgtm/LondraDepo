@@ -74,7 +74,7 @@ export const growthPages: EnPage[] = [
       { q: "Is LondraDepo the importer of record?", a: "No, not by default. Using our warehouse or our group's customs service does not make LondraDepo or Arca Trade Group the importer of record, and duty and import VAT remain the importer's responsibility." },
       { q: "Is your warehouse a bonded warehouse?", a: "No. LondraDepo is not an HMRC-authorised customs warehouse. Goods are stored after they have been cleared into free circulation." },
     ],
-    related: ["/en/blog/uk-import-costs", "/en/container-unloading", "/en/locations/port-to-warehouse-logistics", "/en/blog/uk-importing-guide", "/en/uk-customs-clearance", "/en/uk-market-entry", "/en/pallet-storage"],
+    related: ["/en/blog/uk-import-documents", "/en/blog/uk-import-costs", "/en/container-unloading", "/en/locations/port-to-warehouse-logistics", "/en/blog/uk-importing-guide", "/en/uk-customs-clearance", "/en/uk-market-entry", "/en/pallet-storage"],
     cta: { h2: "Plan your next UK import", text: "Tell us the product, origin, volumes and how the goods will arrive. We will quote freight, customs, unloading and storage together or separately." },
   },
   {
@@ -561,7 +561,7 @@ export const calculatorPages: EnPage[] = [
       { q: "Can LondraDepo unload loose-loaded containers?", a: "Yes. LondraDepo unloads loose-loaded (floor-loaded) and palletised 20ft, 40ft and 40ft high-cube containers at its Rayleigh, Essex warehouse, counts the cartons against the packing list, photographs visible damage and palletises them for storage." },
       { q: "How far is your warehouse from the container ports?", a: "LondraDepo's warehouse in Rayleigh, Essex is about 13 miles by road from DP World London Gateway, 16 miles from the Port of Tilbury and 62 miles from the Port of Felixstowe." },
     ],
-    related: ["/en/cbm-pallet-calculator", "/en/container-unloading", "/en/container-arrival-planner", "/en/london-gateway-tilbury-warehousing", "/en/felixstowe-port-warehousing", "/en/blog/incoterms-for-uk-imports"],
+    related: ["/en/blog/uk-import-documents", "/en/cbm-pallet-calculator", "/en/container-unloading", "/en/container-arrival-planner", "/en/london-gateway-tilbury-warehousing", "/en/felixstowe-port-warehousing", "/en/blog/incoterms-for-uk-imports"],
     cta: { h2: "Get a container unloading quote", text: "Send the container size, port, ETA and packing list, and we will price haulage, unloading, storage and delivery." },
   },
   {
@@ -1049,7 +1049,7 @@ export const portPages: EnPage[] = [
       { q: "Do Amazon UK fulfilment centres need a delivery appointment?", a: "Yes. Amazon Freight's UK guidance says deliveries into Amazon fulfilment centres are by appointment, and loads that miss the slot or do not match the booking can be refused and charged for redelivery. We prepare stock in Essex so it matches the shipment plan before collection." },
       { q: "How far is LondraDepo from Amazon LCY2 Tilbury?", a: "About 16 miles (25 km) by road, roughly 20 minutes by car, from our warehouse at Unit 19 Arterial Park, Rayleigh, Essex SS6 7FY to Amazon's LCY2 site at Tilbury, measured by road routing in November 2026." },
     ],
-    related: ["/en/amazon-prep-uk", "/en/amazon-fulfilment-uk", "/en/amazon-seller-warehousing-uk", "/en/blog/amazon-fba-prep-checklist", "/en/london-gateway-tilbury-warehousing", "/en/essex-warehouse"],
+    related: ["/en/blog/amazon-private-label-wholesale-uk", "/en/amazon-prep-uk", "/en/amazon-fulfilment-uk", "/en/amazon-seller-warehousing-uk", "/en/blog/amazon-fba-prep-checklist", "/en/london-gateway-tilbury-warehousing", "/en/essex-warehouse"],
     cta: { h2: "Get an Amazon FBA prep quote", text: "Send your SKUs, unit and carton counts and the fulfilment centres in your shipment plan, and we will price prep, storage and delivery to Amazon." },
   },
 ];

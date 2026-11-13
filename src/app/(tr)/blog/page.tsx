@@ -186,6 +186,16 @@ const posts: Post[] = [
     tag: "Yeni",
   },
   {
+    title: "İngiltere İthalat Belgeleri",
+    desc: "Ticari fatura, ambalaj listesi, konşimento ve menşe ispatı; ücretsiz ambalaj listesi şablonu.",
+    href: "/blog/ithalat-belgeleri",
+    category: "İhracat",
+    badge: "purple",
+    readTime: "6 dk",
+    icon: "📋",
+    tag: "Yeni",
+  },
+  {
     title: "Antrepo (Bonded Warehouse) Nedir?",
     desc: "Gümrük vergisi ve KDV'nin askıya alındığı antrepo ile gümrüklenmiş depo farkı; ertelenmiş KDV.",
     href: "/blog/antrepo-nedir",

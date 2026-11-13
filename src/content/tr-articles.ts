@@ -157,6 +157,17 @@ export const TR_ARTICLES: Record<string, TrArticle> = {
       { label: "Amazon Freight: UK LTL to Amazon FCs, shipper's checklist", href: "https://freight.amazon.co.uk/newsroom/uk-ltl-amazon-fcs-checklist" },
     ],
   },
+  "/blog/ithalat-belgeleri": {
+    headline: "İngiltere İthalat Belgeleri: Neler Gerekir, Her Biri Neyi Göstermeli?",
+    published: "2026-11-13",
+    modified: "2026-11-13",
+    summary:
+      "İngiltere'ye ithalatta dört temel belge gerekir: ticari fatura, ambalaj listesi, konşimento veya hava yolu senedi ve tercihli vergi talep ediliyorsa menşe ispatı. Beyannamede ayrıca GB EORI, GTİP ve mal değeri yer alır. Ambalaj listesi depoda mal kabulünün de temelidir; ücretsiz şablon sayfada.",
+    sources: [
+      { label: "GOV.UK: Import goods into the UK, step by step", href: "https://www.gov.uk/import-goods-into-uk" },
+      { label: "GOV.UK: Pay less Customs Duty on goods from a country with a UK trade agreement (menşe ispatı)", href: "https://www.gov.uk/guidance/import-and-export-goods-using-preference-agreements" },
+    ],
+  },
   "/blog/antrepo-nedir": {
     headline: "Antrepo (Bonded Warehouse) Nedir? Gümrüklenmiş Depodan Farkı",
     published: "2026-11-11",

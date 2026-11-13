@@ -781,6 +781,93 @@ export const blogPages: EnPage[] = [
     related: ["/en/amazon-prep-uk", "/en/amazon-uk-fulfilment-centres", "/en/amazon-seller-warehousing-uk", "/en/blog/amazon-fba-prep-checklist", "/en/container-unloading", "/en/cbm-pallet-calculator"],
   },
   {
+    slug: "/en/blog/uk-import-documents",
+    tr: "/blog/ithalat-belgeleri",
+    kind: "article",
+    parent: "/en/blog",
+    article: { published: "2026-11-13", modified: "2026-11-13", readMins: 6, section: "Importing" },
+    title: "UK Import Documents: Invoice, Packing List, B/L",
+    description:
+      "Documents to import goods into the UK: commercial invoice, packing list, bill of lading or air waybill and proof of origin, plus a free packing list template.",
+    label: "UK Import Documents",
+    h1: "UK Import Documents: What You Need and What Each Must Show",
+    lead:
+      "To import goods into Great Britain you need four core documents: a commercial invoice showing the value of the goods, a packing list showing what is in each carton, a transport document (a bill of lading for sea freight or an air waybill for air), and proof of origin if you claim a lower duty rate under a UK trade agreement. Your customs agent uses them for the import declaration, which also needs a GB EORI number, the commodity code and the value of the goods. LondraDepo uses the same packing list to count your goods in at our Essex warehouse, so a clear one saves time at both steps.",
+    facts: [
+      "GB EORI number needed to import into Great Britain",
+      "Commodity code and value of goods go on the import declaration",
+      "Proof of origin needed to claim a preferential (lower) duty rate",
+      "Keep preference records for at least 4 years (HMRC)",
+      "Free packing list template (CSV) below",
+    ],
+    sections: [
+      {
+        type: "table",
+        h2: "The core UK import documents",
+        head: ["Document", "Usually issued by", "What it is used for"],
+        rows: [
+          ["Commercial invoice", "Seller or exporter", "Value of the goods for duty and import VAT; buyer, seller and Incoterm"],
+          ["Packing list", "Seller or exporter", "Contents of every carton and pallet; used for customs checks and warehouse goods-in"],
+          ["Bill of lading (sea) or air waybill (air)", "Shipping line, airline or forwarder", "Proof of shipment and, for an original bill of lading, the right to collect the goods"],
+          ["Proof of origin", "Exporter, under the rules of the trade agreement", "Claiming a preferential duty rate, for example under the UK–Turkey trade agreement"],
+          ["Licences or certificates", "Relevant authority", "Only for controlled goods such as food, plants, medicines or chemicals"],
+        ],
+        note: "Your customs agent may ask for more for specific goods. Check controlled goods on GOV.UK before shipping.",
+      },
+      {
+        type: "list",
+        h2: "What a good commercial invoice shows",
+        items: [
+          "Seller and buyer names and addresses, and the importer's GB EORI number",
+          "Invoice number and date",
+          "A clear description of each product, with quantity and unit price",
+          "Commodity code for each product, where known",
+          "Total value and currency",
+          "Incoterm and named place, for example FOB Mersin",
+          "Country of origin of the goods",
+        ],
+      },
+      {
+        type: "list",
+        h2: "What a good packing list shows",
+        intro: "The packing list is what our team counts against when your container or pallets arrive in Rayleigh, Essex.",
+        items: [
+          "Shipment reference, matching the invoice and transport document",
+          "Every carton numbered, with the SKU and units per carton",
+          "Total cartons and total units per SKU",
+          "Carton dimensions and gross and net weight",
+          "Which pallet each carton is on, if palletised",
+        ],
+        outro: "A free packing list template in English (and Turkish) is linked below.",
+      },
+      {
+        type: "links",
+        h2: "Free templates and tools",
+        items: [
+          { href: "/templates/packing-list-template.csv", title: "Packing list template (CSV)", text: "Open in Excel or Google Sheets; one row per carton or SKU.", tag: "Download" },
+          { href: "/en/cbm-pallet-calculator", title: "CBM and pallet calculator", text: "Carton sizes to cubic metres, pallets and container fill.", tag: "Free tool" },
+          { href: "/en/blog/uk-importing-guide", title: "UK importing guide", text: "The full import process, with a printable checklist.", tag: "Guide" },
+        ],
+      },
+      {
+        type: "sources",
+        h2: "Sources",
+        items: [
+          { label: "GOV.UK: Import goods into the UK, step by step", href: "https://www.gov.uk/import-goods-into-uk" },
+          { label: "GOV.UK: Pay less Customs Duty on goods from a country with a UK trade agreement", href: "https://www.gov.uk/guidance/import-and-export-goods-using-preference-agreements" },
+        ],
+      },
+    ],
+    faqs: [
+      { q: "What documents do I need to import goods into the UK?", a: "You normally need a commercial invoice, a packing list, a transport document such as a bill of lading or air waybill, and proof of origin if you claim a lower duty rate. The import declaration also needs a GB EORI number, the commodity code and the value of the goods." },
+      { q: "What is the difference between a commercial invoice and a packing list?", a: "The commercial invoice shows the value of the goods, which customs uses to work out duty and import VAT. The packing list shows what is physically in each carton and pallet, which customs and the receiving warehouse use to check the shipment." },
+      { q: "Do I need proof of origin to import from Turkey?", a: "Only if you want a preferential, lower duty rate under the UK–Turkey trade agreement. GOV.UK says you must hold valid proof of origin for the claim and keep it, with supporting records, for at least 4 years. Without it, the standard duty rate applies." },
+      { q: "Why does the warehouse need my packing list?", a: "LondraDepo counts every delivery against the packing list when it arrives in Rayleigh, Essex, records discrepancies and books stock into Mintsoft WMS by SKU. A packing list with carton numbers, SKUs and units per carton makes goods-in faster and more accurate." },
+      { q: "Is there a free packing list template?", a: "Yes. LondraDepo offers a free packing list template as a CSV file with columns for carton number, SKU, units, dimensions, weights, pallet number and country of origin. It opens in Excel or Google Sheets, in English or Turkish." },
+    ],
+    related: ["/en/blog/uk-importing-guide", "/en/blog/incoterms-for-uk-imports", "/en/uk-customs-clearance", "/en/cbm-pallet-calculator", "/en/shipping-container-types", "/en/container-unloading"],
+  },
+  {
     slug: "/en/blog/bonded-warehouse-vs-duty-paid-storage",
     tr: "/blog/antrepo-nedir",
     kind: "article",
@@ -991,7 +1078,7 @@ export const blogHub: EnPage = {
     {
       type: "links",
       h2: "Importing into the UK",
-      items: [guide("/en/blog/uk-importing-guide"), guide("/en/blog/uk-import-costs"), guide("/en/blog/incoterms-for-uk-imports"), guide("/en/blog/bonded-warehouse-vs-duty-paid-storage")],
+      items: [guide("/en/blog/uk-importing-guide"), guide("/en/blog/uk-import-costs"), guide("/en/blog/uk-import-documents"), guide("/en/blog/incoterms-for-uk-imports"), guide("/en/blog/bonded-warehouse-vs-duty-paid-storage")],
     },
     {
       type: "links",

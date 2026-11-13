@@ -55,6 +55,7 @@ export const PAIRS: ReadonlyArray<readonly [tr: string, en: string]> = [
   ["/cbm-palet-hesaplama", "/en/cbm-pallet-calculator"],
   ["/konteyner-tipleri", "/en/shipping-container-types"],
   ["/blog/amazon-private-label-toptan", "/en/blog/amazon-private-label-wholesale-uk"],
+  ["/blog/ithalat-belgeleri", "/en/blog/uk-import-documents"],
   ["/konteyner-bosaltma", "/en/container-unloading"],
   ["/otomotiv-yedek-parca-depolama", "/en/industries/automotive-parts"],
   ["/sektorler", "/en/industries"],

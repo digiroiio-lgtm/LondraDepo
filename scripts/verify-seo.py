@@ -124,6 +124,8 @@ for r in rows:
  for link in r['links']:
   if link.startswith('/') or link.startswith(SITE):
    path = urllib.parse.urlsplit(link).path or '/'
+   # Downloadable static files (templates, PDFs, images) are not pages and are not in the sitemaps.
+   if re.search(r'\.(csv|pdf|png|jpe?g|svg|webp|xlsx)$', path): continue
    if path not in paths: failures.append([r['target'], 'noncanonical internal link', link])
  path=urllib.parse.urlsplit(r['target']).path or '/'
  sources=[s['target'] for s in rows if s['target']!=r['target'] and any((urllib.parse.urlsplit(a).path or '/')==path for a in s['links'] if a.startswith('/') or a.startswith(SITE))]

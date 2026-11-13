@@ -46,6 +46,30 @@ def urls_from_sitemaps():
     return out
 
 
+def _text(fragment: str) -> str:
+    return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", fragment))).strip()
+
+
+def short_answer(s: str) -> str:
+    """The page's answer-first text: the TR "Kısa cevap" box when present, else the opening paragraph(s) of <main>."""
+    m = re.search(r"Kısa cevap</div>(.*?)</p>", s, re.S)
+    if m:
+        return _text(m.group(1))
+    m = re.search(r"<main.*?</main>", s, re.S)
+    body = re.sub(r"<nav.*?</nav>|<svg.*?</svg>|<header.*?</header>", "", m.group(0) if m else s, flags=re.S)
+    out = []
+    for p in re.findall(r"<p(?:\s[^>]*)?>(.*?)</p>", body, re.S):
+        t = _text(p)
+        if len(t) < 60 or t.startswith(("Last updated", "Son güncelleme", "By ", "Yazar")):
+            if out:
+                break
+            continue
+        out.append(t)
+        if sum(map(len, out)) > 300:
+            break
+    return " ".join(out)
+
+
 def page_info(url: str):
     path = url.replace(SITE, "") or "/"
     s = html_file(path).read_text(encoding="utf-8")
@@ -69,8 +93,9 @@ def page_info(url: str):
         for n in d.get("@graph", [d]):
             if n.get("@type") == "FAQPage":
                 faqs += [(q["name"], q["acceptedAnswer"]["text"]) for q in n.get("mainEntity", [])]
+    answer = short_answer(s)
     group = next(g for g, rx in GROUPS if rx.search(path)) if path not in ("/", "/en") else "Home"
-    return {"url": url.rstrip("/") if path != "/" else SITE, "path": path, "lang": lang, "title": title, "desc": desc, "pair": pair, "faqs": faqs, "group": group}
+    return {"url": url.rstrip("/") if path != "/" else SITE, "path": path, "lang": lang, "title": title, "desc": desc, "pair": pair, "faqs": faqs, "group": group, "answer": answer}
 
 
 def main():
@@ -117,6 +142,8 @@ def main():
                 if p["pair"]:
                     full.append(f"{'Turkish' if lang == 'en' else 'English'} version: {p['pair']}")
                 full.append(f"Summary: {p['desc']}")
+                if p["answer"] and p["answer"] != p["desc"]:
+                    full.append(f"Short answer: {p['answer']}")
                 for q, a in p["faqs"]:
                     full += [f"Q: {q}", f"A: {a}"]
     (ROOT / "public" / "llms-full.txt").write_text("\n".join(full) + "\n", encoding="utf-8")

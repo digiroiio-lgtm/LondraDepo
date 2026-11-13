@@ -198,6 +198,7 @@ export default function PaletDepolamaPage() {
                 <Link href="/ingiltere-fulfillment" className="text-sm text-[#0b2545] hover:underline">→ İngiltere Fulfillment</Link>
                 <Link href="/amazon-prep-uk" className="text-sm text-[#0b2545] hover:underline">→ Amazon Prep UK</Link>
                 <Link href="/essex-depo" className="text-sm text-[#0b2545] hover:underline">→ Essex Depo Hizmeti</Link>
+                <Link href="/ambalaj-catering-depolama" className="text-sm text-[#0b2545] hover:underline">→ Ambalaj ve Catering Depolama</Link>
               </div>
             </div>
           </div>

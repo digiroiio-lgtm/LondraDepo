@@ -76,6 +76,7 @@ const faqs = [
   { q: "Amazon FBA ve UK 3PL birlikte kullanılabilir mi?", a: "Evet. Ana stoğu UK 3PL deposunda tutup Amazon FBA'ya ihtiyaç kadar hazırlanmış parti gönderebilirsiniz; diğer kanalların siparişleri aynı depodan karşılanır." },
   { q: "LondraDepo Amazon prep hizmeti veriyor mu?", a: "Evet. LondraDepo Essex'te FNSKU etiketleme, ambalaj kontrolü ve koli hazırlığı yapar ve stoğu sevkiyat planındaki Amazon UK deposuna teslim eder. LondraDepo resmi Amazon partneri değildir." },
   { q: "İngiltere'deki Amazon deposundaki stok AB pazaryerlerinde satılabilir mi?", a: "Gümrük sınırını geçmeden hayır. Büyük Britanya'dan AB'ye mal göndermek İngiltere'den ihracat ve AB'ye ithalattır; beyanname, vergi ve KDV gerekir. Satıcıların çoğu İngiltere ve AB için ayrı stok tutar; LondraDepo İngiltere tarafını Essex'ten yönetir." },
+  { q: "İngiltere'de Amazon FBA ücretleri ne kadar?", a: "Amazon İngiltere FBA ücretlerini fiyat sayfasında yayımlar: boyut ve ağırlığa göre ürün başı fulfillment ücreti, aylık depolama ücreti, olası uzun süreli depolama ücreti ve satış başına komisyon. Amazon bunları düzenli değiştirir; güncel sayfayı kontrol edip LondraDepo'daki palet başına haftalık £3,50 + KDV'den başlayan 3PL depolamayla karşılaştırın." },
   { q: "FBA ve 3PL maliyetleri nasıl karşılaştırılır?", a: "Kendi ürünleriniz ve hacminiz için toplam maliyeti karşılaştırın: depolama, hazırlık, sipariş başına gönderim ve iade. LondraDepo'da depolama haftalık palet başına £3,50 + KDV'den başlar; diğer kalemler tekliflendirilir." },
 ];
 

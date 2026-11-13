@@ -21,7 +21,10 @@ export const TR_ARTICLES: Record<string, TrArticle> = {
     modified: "2026-11-11",
     summary:
       "Yalnızca Amazon'da satıyorsanız ve Prime rozeti sizin için öncelikliyse Amazon FBA güçlü bir seçenektir. Web siteniz, B2B müşterileriniz veya birden fazla pazaryeriniz varsa stoğu bağımsız bir UK deposunda (3PL) tutup tüm kanalları tek merkezden yönetmek daha esnek ve kontrollüdür. İki modeli birlikte kullanmak da mümkündür: ana stok UK deposunda kalır, Amazon'a ihtiyaç kadar sevk edilir.",
-    sources: [{ label: "GOV.UK: Export goods from the UK, step by step (AB'ye ihracat dahil)", href: "https://www.gov.uk/export-goods" }],
+    sources: [
+      { label: "GOV.UK: Export goods from the UK, step by step (AB'ye ihracat dahil)", href: "https://www.gov.uk/export-goods" },
+      { label: "Amazon: Satış ve FBA ücretleri (sell.amazon.co.uk/pricing)", href: "https://sell.amazon.co.uk/pricing" },
+    ],
   },
   "/blog/amazon-prep-uk-rehberi": {
     headline: "Amazon Prep UK: Adım Adım Rehber",

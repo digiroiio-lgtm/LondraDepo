@@ -195,6 +195,7 @@ export const TR_PAGES: Record<string, TrPage> = {
       },
     ],
     faqs: [
+      { q: "Amazon deposu ile fulfillment merkezi arasındaki fark nedir?", a: "Fulfillment merkezi, Amazon'un FBA satıcılarının stoğunu teslim aldığı, depoladığı ve gönderdiği depolara verdiği addır. Amazon ağında satıcı stoğu kabul etmeyen ayrıştırma merkezleri ve dağıtım istasyonları gibi başka tesisler de vardır; FBA stoğunu yalnızca sevkiyat planındaki merkeze gönderin." },
       { q: "Amazon'un İngiltere'deki depoları nerede?", a: "Amazon'un UK depoları İngiltere, İskoçya ve Galler'e yayılmıştır; örneğin LCY2 Tilbury'de, LCY1 doğu Londra'da, LTN1 Bedfordshire'da, EUK5 Peterborough'da, BHX1 Staffordshire'da, MAN1 Manchester Havalimanı'nda ve CWL1 Swansea'dadır. Kesin adres sevkiyat planınızda yazar." },
       { q: "Londra'ya en yakın Amazon deposu hangisi?", a: "LCY1 doğu Londra'da Bow'da, LCY2 ise Thames kıyısında Tilbury, Essex'tedir. LondraDepo'nun Rayleigh'deki deposundan LCY2 karayoluyla yaklaşık 16 mil, LCY1 yaklaşık 32 mil uzaklıktadır; bizde hazırlanan stok ikisine de kısa sürede ulaşır." },
       { q: "Stoğumun hangi Amazon deposuna gideceğini seçebilir miyim?", a: "Hayır. Hedef depoyu Amazon, Seller Central'da sevkiyat planını oluşturduğunuzda belirler ve tek planı birden fazla depoya bölebilir. LondraDepo planın her parçasını etiketleyip Amazon'un belirttiği depoya gönderir." },

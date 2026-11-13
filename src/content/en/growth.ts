@@ -1042,6 +1042,7 @@ export const portPages: EnPage[] = [
       },
     ],
     faqs: [
+      { q: "What is the difference between an Amazon warehouse and a fulfilment centre?", a: "A fulfilment centre is Amazon's name for the warehouses that receive, store and ship FBA sellers' stock. Amazon's network also has other sites, such as sort centres and delivery stations, that do not take seller inventory, so ship FBA stock only to the centre named in your shipment plan." },
       { q: "Where are Amazon's fulfilment centres in the UK?", a: "Amazon's UK fulfilment centres are spread across England, Scotland and Wales, for example LCY2 in Tilbury, LCY1 in east London, LTN1 in Bedfordshire, EUK5 in Peterborough, BHX1 in Staffordshire, MAN1 at Manchester Airport and CWL1 in Swansea. Your shipment plan names the exact address." },
       { q: "Which Amazon fulfilment centre is closest to London?", a: "LCY1 is in Bow, east London, and LCY2 is in Tilbury, Essex, on the Thames. From LondraDepo's warehouse in Rayleigh, LCY2 is about 16 miles by road and LCY1 about 32 miles, so stock prepared with us reaches both quickly." },
       { q: "Can I choose which Amazon fulfilment centre my stock goes to?", a: "No. Amazon assigns the destination fulfilment centre when you create the shipment plan in Seller Central, and it may split one plan across several centres. LondraDepo labels and sends each part of the plan to the centre Amazon names." },

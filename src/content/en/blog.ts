@@ -418,10 +418,14 @@ export const blogPages: EnPage[] = [
       {
         type: "sources",
         h2: "Sources",
-        items: [{ label: "GOV.UK: Export goods from the UK, step by step (including to the EU)", href: "https://www.gov.uk/export-goods" }],
+        items: [
+          { label: "GOV.UK: Export goods from the UK, step by step (including to the EU)", href: "https://www.gov.uk/export-goods" },
+          { label: "Amazon: Selling fees and FBA fees (sell.amazon.co.uk/pricing)", href: "https://sell.amazon.co.uk/pricing" },
+        ],
       },
     ],
     faqs: [
+      { q: "How much are Amazon FBA fees in the UK?", a: "Amazon publishes its UK FBA fees on its pricing page: a fulfilment fee per unit based on size and weight, monthly storage fees, possible long-term storage fees and a referral fee per sale. Amazon changes them regularly, so check the current page and compare with 3PL storage from £3.50 + VAT per pallet per week at LondraDepo." },
       { q: "Can stock in a UK Amazon fulfilment centre be sold on Amazon's EU marketplaces?", a: "Not without crossing a customs border. Moving goods from Great Britain to the EU is an export from the UK and an import into the EU, with declarations, duty and VAT. Most sellers hold separate UK and EU stock; LondraDepo handles the UK side from Essex." },
       { q: "What is the advantage of 3PL fulfilment over Amazon FBA?", a: "With 3PL fulfilment you can run non-Amazon channels such as your website, Etsy and B2B customers from one warehouse, customise packaging and avoid Amazon's long-term storage fees." },
       { q: "Can Amazon FBA and a UK 3PL be used together?", a: "Yes. In a hybrid model some products are held in FBA and others are fulfilled by a 3PL, which can help on both cost and reach." },

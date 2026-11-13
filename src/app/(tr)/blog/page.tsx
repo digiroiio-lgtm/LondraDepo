@@ -196,6 +196,16 @@ const posts: Post[] = [
     tag: "Yeni",
   },
   {
+    title: "Amazon Private Label, Toptan ve Arbitraj",
+    desc: "Her satıcı modelinde stok İngiltere'ye nasıl gelir, depo ne yapar, Amazon'a partiler nasıl gönderilir.",
+    href: "/blog/amazon-private-label-toptan",
+    category: "Amazon",
+    badge: "amber",
+    readTime: "6 dk",
+    icon: "📦",
+    tag: "Yeni",
+  },
+  {
     title: "Amazon FBA Prep Kontrol Listesi",
     desc: "FNSKU etiketleri, ambalaj, koli etiketleri ve Amazon UK deposuna teslimat adım adım.",
     href: "/blog/amazon-fba-prep-kontrol-listesi",

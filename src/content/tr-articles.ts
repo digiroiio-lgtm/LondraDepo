@@ -146,6 +146,17 @@ export const TR_ARTICLES: Record<string, TrArticle> = {
       { label: "US International Trade Administration (trade.gov): United Kingdom import requirements and documentation", href: "https://www.trade.gov/country-commercial-guides/united-kingdom-import-requirements-and-documentation" },
     ],
   },
+  "/blog/amazon-private-label-toptan": {
+    headline: "Amazon Private Label, Toptan ve Arbitraj: Her Model UK Deposundan Ne İster?",
+    published: "2026-11-13",
+    modified: "2026-11-13",
+    summary:
+      "Private label satıcıları kendi markasını konteynerle ithal eder; boşaltma, FNSKU etiket ve Amazon'a partiler halinde sevk gerekir. Toptan satıcılar çok SKU'lu karışık paletler alır; doğru sayım ve listelemeye göre etiketleme önemlidir. Arbitraj stoğu küçük kolilerle gelir. LondraDepo konteyner, palet ve koli hacimlerine göre kuruludur ve en iyi private label ile toptan modeline uyar.",
+    sources: [
+      { label: "Amazon: Fulfilment by Amazon (sell.amazon.co.uk)", href: "https://sell.amazon.co.uk/fulfilment-by-amazon" },
+      { label: "Amazon Freight: UK LTL to Amazon FCs, shipper's checklist", href: "https://freight.amazon.co.uk/newsroom/uk-ltl-amazon-fcs-checklist" },
+    ],
+  },
   "/blog/antrepo-nedir": {
     headline: "Antrepo (Bonded Warehouse) Nedir? Gümrüklenmiş Depodan Farkı",
     published: "2026-11-11",

@@ -403,6 +403,87 @@ export const TR_PAGES: Record<string, TrPage> = {
     ],
     form: { id: "tr_guide_quote", heading: "İthalat ve Depolama Teklifi Alın", intro: "Ürününüzü, çıkış noktasını ve tahmini hacmi yazın; nakliye, gümrükleme ve depolama için teklif hazırlayalım.", services: ["Gümrükleme Koordinasyonu", "Depolama"] },
   },
+  "/blog/amazon-private-label-toptan": {
+    path: "/blog/amazon-private-label-toptan",
+    kind: "article",
+    title: "Amazon Private Label mı, Toptan mı? UK Depo Kurgusu",
+    description:
+      "Private label, toptan ve arbitraj Amazon satıcılarında stok İngiltere'ye nasıl gelir, prep deposu ne yapar, depolama ve FBA partileri nasıl planlanır?",
+    crumb: "Amazon Private Label ve Toptan",
+    eyebrow: "Amazon",
+    h1: "Amazon Private Label, Toptan ve Arbitraj: Her Model UK Deposundan Ne İster?",
+    lead:
+      "Amazon satıcıları üç ana modelde çalışır ve her model stoğu İngiltere'deki depoya farklı gönderir. Private label (kendi markası) satıcıları kendi markalı ürünlerini çoğunlukla konteynerle ithal eder; boşaltma, FNSKU etiketleme ve depolama ile stoğu Amazon'a partiler halinde gönderme ihtiyacı vardır. Toptan (wholesale) satıcılar markalı ürünleri distribütörlerden çok SKU'lu karışık paletlerle alır; doğru sayım, koli içi adet (case pack) yönetimi ve gerektiğinde etiketleme ister. Online arbitraj satıcıları perakendecilerden alır; stok çok sayıda küçük koli olarak gelir. LondraDepo Essex'te konteyner, palet ve koli hacimlerine göre kuruludur; en iyi private label ve toptan modeline uyar.",
+    readTime: "6 dakika",
+    facts: [
+      "Private label: konteyner ithalatı, FNSKU etiket, Amazon'a partiler halinde sevk",
+      "Toptan: karışık paletler, çok SKU, koli içi adet",
+      "Online arbitraj: çok sayıda küçük perakende kolisi",
+      "LondraDepo: Essex'te konteyner, palet ve koli hacimleri",
+      "Depolama palet başına haftalık £3,50 + KDV'den; sabit minimum yok",
+    ],
+    sections: [
+      {
+        type: "table",
+        h2: "Üç Amazon satıcı modelinin karşılaştırması",
+        head: ["", "Private label", "Toptan (wholesale)", "Online arbitraj"],
+        rows: [
+          ["Stok nereden gelir", "Kendi üreticiniz, çoğunlukla yurt dışı", "Marka distribütörleri ve toptancılar", "Mağazalar ve online perakendeciler"],
+          ["Nasıl gelir", "20ft veya 40ft konteyner, dökme veya paletli", "Karışık palet veya koli teslimatı", "Çok sayıda küçük koli"],
+          ["Barkod", "Genellikle her üründe FNSKU etiketi", "Listelemeye göre üretici barkodu veya FNSKU", "FNSKU etiketi; perakende etiketleri kapatılır veya sökülür"],
+          ["Depodaki ana iş", "Boşaltma, sayım, etiketleme, paletleme, partiler halinde sevk", "SKU bazında sayım, koli içi adet, etiketleme", "Kolileri açma, kontrol, etiketleme, paketleme"],
+          ["LondraDepo'ya uyumu", "Güçlü: London Gateway, Tilbury ve Felixstowe'dan konteyner", "Güçlü: palet ve koli mal kabulü", "Önce hacmi konuşalım: palet ve koli için kuruluyuz"],
+        ],
+      },
+      {
+        type: "text",
+        h2: "Private label: konteynerden Amazon'a",
+        paras: [
+          "Private label sevkiyatı genellikle İngiltere limanına konteynerle gelir. Gümrükten çekildikten sonra London Gateway ve Tilbury'ye 13–16 mil uzaklıktaki Rayleigh, Essex depomuza taşınır, boşaltılır, ambalaj listesine göre sayılır ve Mintsoft WMS'e kaydedilir.",
+          "Satıcıların çoğu konteynerin tamamını Amazon'a göndermek yerine kalanını bizde palet başına haftalık £3,50 + KDV'den tutar ve Amazon stoğu eridikçe hazırlanmış partiler gönderir. Böylece yavaş satan ürünler Amazon depolama ücretine takılmaz ve aynı stok diğer kanallara da hizmet eder.",
+        ],
+      },
+      {
+        type: "text",
+        h2: "Toptan: çok SKU, doğru sayım",
+        paras: [
+          "Toptan stok genellikle birkaç tedarikçiden, çok SKU'lu ve küçük adetli karışık paletlerle gelir. Kritik adım, etiketlemeden önce her SKU'yu irsaliye ve Amazon sevkiyat planıyla karşılaştırarak saymaktır; böylece farklar Amazon deposunda değil İngiltere'de yakalanır.",
+          "Ürünlere FNSKU etiketi mi gerekeceği, yoksa üretici barkodunun mu kullanılacağı her listelemenin Seller Central'daki ayarına bağlıdır; her SKU için verdiğiniz talimata uyarız.",
+        ],
+      },
+      {
+        type: "text",
+        h2: "Online arbitraj: önce hacmi konuşalım",
+        paras: [
+          "Arbitraj stoğu tek tek açılıp kontrol edilmesi ve etiketlenmesi gereken küçük perakende kolileri olarak gelir. LondraDepo ağırlıklı olarak konteyner, palet ve koli hacimlerine göre kuruludur; modeliniz arbitrajsa önce haftalık koli sayınızı paylaşın, uygun olup olmadığını açıkça söyleriz.",
+        ],
+      },
+      {
+        type: "links",
+        h2: "Amazon kurgunuzu planlayın",
+        items: [
+          { href: "/amazon-prep-uk", title: "Essex'te Amazon FBA Prep", text: "FNSKU etiket, paketleme, palet kuralları ve Amazon'a teslim.", tag: "Hizmet" },
+          { href: "/amazon-ingiltere-depo-konumlari", title: "Amazon İngiltere Depo Konumları", text: "Kodlar, konumlar ve depomuza karayolu mesafeleri.", tag: "Rehber" },
+          { href: "/cbm-palet-hesaplama", title: "CBM ve Palet Hesaplama", text: "Koli ölçüsünden metreküp, palet ve konteyner doluluğu.", tag: "Ücretsiz araç" },
+        ],
+      },
+    ],
+    faqs: [
+      { q: "Amazon private label ile toptan satış arasındaki fark nedir?", a: "Private label satıcısı bir üreticiye ürettirdiği kendi markasını satar ve genellikle konteynerle ithal eder. Toptan satıcı mevcut markaları distribütörlerden alıp Amazon'da yeniden satar ve genellikle çok SKU'lu karışık paletler teslim alır." },
+      { q: "Toptan ürünlere FNSKU etiketi gerekir mi?", a: "Listelemeye bağlıdır. Bazı toptan listelemeler üretici barkoduyla satılabilir, bazıları her üründe FNSKU etiketi ister; bu ayar Seller Central'da seçilir. LondraDepo stok Amazon'a gitmeden önce her SKU'yu talimatınıza göre etiketler." },
+      { q: "Private label konteynerimi İngiltere'de depolayıp Amazon'a partiler halinde gönderebilir miyim?", a: "Evet. LondraDepo konteyneri Rayleigh, Essex'te boşaltır, stoğu palet başına haftalık £3,50 + KDV'den depolar ve Amazon stoğunuz eridikçe partiler hazırlar; böylece yavaş satan ürünler Amazon deposunda beklemez." },
+      { q: "LondraDepo online arbitraj satıcılarıyla çalışıyor mu?", a: "LondraDepo ağırlıklı olarak konteyner, palet ve koli hacimlerine göre kuruludur; bu en iyi private label ve toptan modeline uyar. Arbitraj stoğu çok sayıda küçük koli olarak geldiği için önce haftalık koli sayınızı paylaşın, uygun olup olmadığını teyit edelim." },
+      { q: "Türkiye'den ihracat yapan bir üretici için hangi Amazon modeli uygun?", a: "Amazon UK'de kendi markasını satan bir Türk üretici private label modelini izler: markalı ürünlerini konteyner veya paletle ithal eder, İngiltere gümrüğünden çeker ve LondraDepo gibi bir UK deposunda tutar; Amazon'a partiler gönderir ve diğer kanallara da hizmet verir." },
+    ],
+    related: [
+      { href: "/amazon-prep-uk", label: "Amazon Prep UK" },
+      { href: "/amazon-ingiltere-depo-konumlari", label: "Amazon Depo Konumları" },
+      { href: "/amazon-ingiltere-depo", label: "Amazon İçin İngiltere Depo" },
+      { href: "/blog/amazon-fba-prep-kontrol-listesi", label: "FBA Prep Kontrol Listesi" },
+      { href: "/konteyner-bosaltma", label: "Konteyner Boşaltma" },
+    ],
+    form: { id: "tr_guide_quote", heading: "Amazon Kurgunuz İçin Teklif Alın", intro: "Satıcı modelinizi, SKU sayınızı ve stoğun nasıl geleceğini yazın; boşaltma, prep, depolama ve Amazon'a teslimatı fiyatlandıralım.", services: ["Ürün Elleçleme", "Depolama", "Yükleme / Boşaltma"] },
+  },
   "/blog/antrepo-nedir": {
     path: "/blog/antrepo-nedir",
     kind: "article",

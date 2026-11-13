@@ -68,6 +68,7 @@ const TR: ReadonlyArray<readonly [string, Freq, number]> = [
   ["/blog/ingiltere-3pl-nasil-secilir", "monthly", 0.7],
   ["/blog/ingiltere-ithalat-maliyetleri", "monthly", 0.7],
   ["/blog/antrepo-nedir", "monthly", 0.7],
+  ["/blog/amazon-private-label-toptan", "monthly", 0.7],
   ["/blog/incoterms-rehberi", "monthly", 0.7],
   ["/blog/amazon-fba-prep-kontrol-listesi", "monthly", 0.7],
   ["/privacy-policy", "yearly", 0.4],

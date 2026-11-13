@@ -698,6 +698,89 @@ export const blogPages: EnPage[] = [
     related: ["/en/amazon-prep-uk", "/en/amazon-fulfilment-uk", "/en/amazon-seller-warehousing-uk", "/en/blog/amazon-prep-uk-guide", "/en/blog/amazon-fba-vs-uk-fulfilment"],
   },
   {
+    slug: "/en/blog/amazon-private-label-wholesale-uk",
+    tr: "/blog/amazon-private-label-toptan",
+    kind: "article",
+    parent: "/en/blog",
+    article: { published: "2026-11-13", modified: "2026-11-13", readMins: 6, section: "Amazon" },
+    title: "Amazon Private Label vs Wholesale: UK Warehousing",
+    description:
+      "How private label, wholesale and arbitrage Amazon sellers get stock into the UK, what a prep warehouse does for each, and how to plan storage and FBA batches.",
+    label: "Private Label vs Wholesale on Amazon UK",
+    h1: "Amazon Private Label, Wholesale and Arbitrage: What Each Needs from a UK Warehouse",
+    lead:
+      "Amazon sellers fall into three main models, and each sends stock to a UK warehouse differently. Private label sellers import their own branded products, often by the container, so they need unloading, FNSKU labelling and storage with stock sent to Amazon in batches. Wholesale sellers buy branded goods from distributors on mixed pallets with many SKUs, so they need accurate counting, case-pack handling and labelling where required. Online arbitrage sellers buy from retailers, so stock arrives as many small parcels. LondraDepo in Essex is set up for container, pallet and carton volumes, which fits private label and wholesale best.",
+    facts: [
+      "Private label: container imports, FNSKU labelling, batch sends to Amazon",
+      "Wholesale: mixed pallets, many SKUs, case packs",
+      "Online arbitrage: many small retail parcels",
+      "LondraDepo: container, pallet and carton volumes in Essex",
+      "Storage from £3.50 + VAT per pallet per week; no fixed minimum",
+    ],
+    sections: [
+      {
+        type: "table",
+        h2: "Three Amazon seller models compared",
+        head: ["", "Private label", "Wholesale", "Online arbitrage"],
+        rows: [
+          ["Where stock comes from", "Your own manufacturer, often overseas", "Brand distributors and wholesalers", "High-street and online retailers"],
+          ["How it arrives", "20ft or 40ft container, loose or palletised", "Mixed pallets or carton deliveries", "Many small parcels"],
+          ["Barcodes", "Usually FNSKU labels on every unit", "Manufacturer barcode or FNSKU, depending on the listing", "FNSKU labels; retail stickers covered or removed"],
+          ["Main warehouse work", "Unloading, counting, labelling, palletising, batch sends", "SKU-level counting, case packs, labelling", "Opening parcels, checking, labelling, packing"],
+          ["Fit with LondraDepo", "Strong: containers from London Gateway, Tilbury and Felixstowe", "Strong: pallet and carton goods-in", "Discuss volumes first: we are set up for pallets and cartons"],
+        ],
+      },
+      {
+        type: "text",
+        h2: "Private label: from container to Amazon",
+        paras: [
+          "A private label shipment usually lands at a UK port in a container. After customs clearance it is hauled to our warehouse in Rayleigh, Essex, 13 to 16 miles from London Gateway and Tilbury, unloaded, counted against the packing list and booked into Mintsoft WMS.",
+          "Rather than sending the whole container to Amazon, many sellers keep the balance with us from £3.50 + VAT per pallet per week and send prepared batches as Amazon inventory sells. That keeps slow-moving units out of Amazon's storage fees and lets the same stock serve other channels.",
+        ],
+      },
+      {
+        type: "text",
+        h2: "Wholesale: many SKUs, accurate counts",
+        paras: [
+          "Wholesale stock tends to arrive on mixed pallets from several suppliers, with many SKUs in small quantities. The critical step is counting each SKU against the delivery note and Amazon shipment plan before anything is labelled, so discrepancies are caught in the UK rather than at the Amazon fulfilment centre.",
+          "Whether units need FNSKU labels or can use the manufacturer barcode depends on how each listing is set up in Seller Central; we follow the instructions for each SKU.",
+        ],
+      },
+      {
+        type: "text",
+        h2: "Online arbitrage: talk to us about volumes first",
+        paras: [
+          "Arbitrage stock arrives as a stream of small retail parcels that must be opened, checked and labelled one by one. LondraDepo is set up mainly for container, pallet and carton volumes, so if your model is arbitrage, tell us your weekly parcel numbers first and we will confirm honestly whether it fits.",
+        ],
+      },
+      {
+        type: "links",
+        h2: "Plan your Amazon set-up",
+        items: [
+          { href: "/en/amazon-prep-uk", title: "Amazon FBA prep in Essex", text: "FNSKU labelling, packing, pallet rules and delivery to Amazon.", tag: "Service" },
+          { href: "/en/amazon-uk-fulfilment-centres", title: "Amazon UK fulfilment centres", text: "Codes, locations and road distances from our warehouse.", tag: "Guide" },
+          { href: "/en/cbm-pallet-calculator", title: "CBM and pallet calculator", text: "Carton sizes to cubic metres, pallets and container fill.", tag: "Free tool" },
+        ],
+      },
+      {
+        type: "sources",
+        h2: "Sources",
+        items: [
+          { label: "Amazon: Fulfilment by Amazon (sell.amazon.co.uk)", href: "https://sell.amazon.co.uk/fulfilment-by-amazon" },
+          { label: "Amazon Freight: UK LTL to Amazon FCs, shipper's checklist", href: "https://freight.amazon.co.uk/newsroom/uk-ltl-amazon-fcs-checklist" },
+        ],
+      },
+    ],
+    faqs: [
+      { q: "What is the difference between Amazon private label and wholesale?", a: "Private label sellers sell their own brand, made to order by a manufacturer, and usually import it by the container. Wholesale sellers buy existing brands from distributors and resell them on Amazon, usually receiving mixed pallets with many SKUs." },
+      { q: "Do wholesale products need FNSKU labels?", a: "It depends on the listing. Some wholesale listings can use the manufacturer barcode, while others need an FNSKU label on every unit; the setting is chosen in Seller Central. LondraDepo labels each SKU according to your instructions before stock goes to Amazon." },
+      { q: "Can I store a private label container in the UK and send it to Amazon in batches?", a: "Yes. LondraDepo unloads containers in Rayleigh, Essex, stores the stock from £3.50 + VAT per pallet per week and prepares batches for Amazon as your inventory sells, so slow-moving units are not left in Amazon's storage." },
+      { q: "Does LondraDepo work with online arbitrage sellers?", a: "LondraDepo is set up mainly for container, pallet and carton volumes, which suits private label and wholesale best. Arbitrage stock arrives as many small parcels, so tell us your weekly parcel volumes first and we will confirm whether it fits." },
+      { q: "Which Amazon seller model suits a manufacturer exporting from Turkey?", a: "A Turkish manufacturer selling its own brand on Amazon UK follows the private label model: it imports its own branded goods by container or pallet, clears them through UK customs and keeps stock in a UK warehouse such as LondraDepo, sending batches to Amazon and serving other channels." },
+    ],
+    related: ["/en/amazon-prep-uk", "/en/amazon-uk-fulfilment-centres", "/en/amazon-seller-warehousing-uk", "/en/blog/amazon-fba-prep-checklist", "/en/container-unloading", "/en/cbm-pallet-calculator"],
+  },
+  {
     slug: "/en/blog/bonded-warehouse-vs-duty-paid-storage",
     tr: "/blog/antrepo-nedir",
     kind: "article",
@@ -903,7 +986,7 @@ export const blogHub: EnPage = {
     {
       type: "links",
       h2: "Amazon sellers",
-      items: [guide("/en/blog/amazon-prep-uk-guide"), guide("/en/blog/amazon-fba-prep-checklist"), guide("/en/blog/amazon-fba-vs-uk-fulfilment")],
+      items: [guide("/en/blog/amazon-prep-uk-guide"), guide("/en/blog/amazon-fba-prep-checklist"), guide("/en/blog/amazon-fba-vs-uk-fulfilment"), guide("/en/blog/amazon-private-label-wholesale-uk")],
     },
     {
       type: "links",

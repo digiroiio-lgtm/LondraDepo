@@ -15,11 +15,25 @@ function hasAnalyticsConsent(): boolean {
 
 type Params = Record<string, string | number | undefined>;
 
+/** Topic of the page an event fires on, so GA4 can split leads by cluster (register as an event-scoped custom dimension). */
+export function pageGroup(path: string): string {
+  const p = path.toLowerCase();
+  if (/amazon|fba|private-label/.test(p)) return "amazon";
+  if (/shopify/.test(p)) return "shopify";
+  if (/import|ithalat|gumruk|customs|konteyner|container|incoterms|antrepo|bonded|cbm|liman|port|felixstowe|tilbury/.test(p)) return "import";
+  if (/fulfil|e-ticaret|ecommerce|pick|siparis/.test(p)) return "fulfilment";
+  if (/depo|warehous|storage|pallet|palet/.test(p)) return "storage";
+  return "other";
+}
+
 function send(event: string, params: Params) {
   if (!hasAnalyticsConsent()) return;
   const page_lang = typeof document !== "undefined" ? document.documentElement.lang : undefined;
   const page_path = typeof location !== "undefined" ? location.pathname : undefined;
-  (window as any).gtag?.("event", event, { page_lang, page_path, ...params });
+  // On the standalone quote page, attribute to the page the visitor came from (?from=/en/amazon-prep-uk).
+  const from = typeof location !== "undefined" ? new URLSearchParams(location.search).get("from") : null;
+  const page_group = from ? pageGroup(from) : page_path ? pageGroup(page_path) : undefined;
+  (window as any).gtag?.("event", event, { page_lang, page_path, page_group, ...params });
 }
 
 export function trackWhatsappClick(source: string) {

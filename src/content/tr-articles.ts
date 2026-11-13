@@ -18,9 +18,13 @@ export const TR_ARTICLES: Record<string, TrArticle> = {
   "/blog/amazon-fba-vs-uk-fulfillment": {
     headline: "Amazon FBA mı, UK Fulfillment mı? Hangisi Daha Avantajlı?",
     published: "2025-06-01",
-    modified: "2026-11-10",
+    modified: "2026-11-11",
     summary:
       "Yalnızca Amazon'da satıyorsanız ve Prime rozeti sizin için öncelikliyse Amazon FBA güçlü bir seçenektir. Web siteniz, B2B müşterileriniz veya birden fazla pazaryeriniz varsa stoğu bağımsız bir UK deposunda (3PL) tutup tüm kanalları tek merkezden yönetmek daha esnek ve kontrollüdür. İki modeli birlikte kullanmak da mümkündür: ana stok UK deposunda kalır, Amazon'a ihtiyaç kadar sevk edilir.",
+    sources: [
+      { label: "GOV.UK: Export goods from the UK, step by step (AB'ye ihracat dahil)", href: "https://www.gov.uk/export-goods" },
+      { label: "Amazon: Satış ve FBA ücretleri (sell.amazon.co.uk/pricing)", href: "https://sell.amazon.co.uk/pricing" },
+    ],
   },
   "/blog/amazon-prep-uk-rehberi": {
     headline: "Amazon Prep UK: Adım Adım Rehber",
@@ -143,6 +147,51 @@ export const TR_ARTICLES: Record<string, TrArticle> = {
       { label: "GOV.UK: The UK's integrated tariff schedule (UK gümrük tarifesi, %0 MFN satırları)", href: "https://www.gov.uk/government/publications/the-uks-integrated-tariff-schedule/the-uks-integrated-tariff-schedule" },
       VAT_RATES,
       { label: "US International Trade Administration (trade.gov): United Kingdom import requirements and documentation", href: "https://www.trade.gov/country-commercial-guides/united-kingdom-import-requirements-and-documentation" },
+    ],
+  },
+  "/blog/amazon-private-label-toptan": {
+    headline: "Amazon Private Label, Toptan ve Arbitraj: Her Model UK Deposundan Ne İster?",
+    published: "2026-11-13",
+    modified: "2026-11-13",
+    summary:
+      "Private label satıcıları kendi markasını konteynerle ithal eder; boşaltma, FNSKU etiket ve Amazon'a partiler halinde sevk gerekir. Toptan satıcılar çok SKU'lu karışık paletler alır; doğru sayım ve listelemeye göre etiketleme önemlidir. Arbitraj stoğu küçük kolilerle gelir. LondraDepo konteyner, palet ve koli hacimlerine göre kuruludur ve en iyi private label ile toptan modeline uyar.",
+    sources: [
+      { label: "Amazon: Fulfilment by Amazon (sell.amazon.co.uk)", href: "https://sell.amazon.co.uk/fulfilment-by-amazon" },
+      { label: "Amazon Freight: UK LTL to Amazon FCs, shipper's checklist", href: "https://freight.amazon.co.uk/newsroom/uk-ltl-amazon-fcs-checklist" },
+    ],
+  },
+  "/blog/ithalat-belgeleri": {
+    headline: "İngiltere İthalat Belgeleri: Neler Gerekir, Her Biri Neyi Göstermeli?",
+    published: "2026-11-13",
+    modified: "2026-11-13",
+    summary:
+      "İngiltere'ye ithalatta dört temel belge gerekir: ticari fatura, ambalaj listesi, konşimento veya hava yolu senedi ve tercihli vergi talep ediliyorsa menşe ispatı. Beyannamede ayrıca GB EORI, GTİP ve mal değeri yer alır. Ambalaj listesi depoda mal kabulünün de temelidir; ücretsiz şablon sayfada.",
+    sources: [
+      { label: "GOV.UK: Import goods into the UK, step by step", href: "https://www.gov.uk/import-goods-into-uk" },
+      { label: "GOV.UK: Pay less Customs Duty on goods from a country with a UK trade agreement (menşe ispatı)", href: "https://www.gov.uk/guidance/import-and-export-goods-using-preference-agreements" },
+    ],
+  },
+  "/blog/antrepo-nedir": {
+    headline: "Antrepo (Bonded Warehouse) Nedir? Gümrüklenmiş Depodan Farkı",
+    published: "2026-11-11",
+    modified: "2026-11-11",
+    summary:
+      "Antrepo (customs / bonded warehouse), ithal ürünün gümrük vergisi ve ithalat KDV'si askıdayken depolandığı HMRC onaylı tesistir; vergiler ürün serbest dolaşıma girince doğar. KDV kayıtlı ithalatçılar ertelenmiş KDV ile sınırda KDV ödemediği için, kısa sürede İngiltere'de satılacak stokta gümrüklenmiş depo genellikle yeterli ve daha basittir.",
+    sources: [
+      { label: "GOV.UK: Special procedure, customs warehousing (antrepo prosedürü)", href: "https://www.gov.uk/guidance/special-procedure-customs-warehousing/introduction" },
+      { label: "GOV.UK: Check when you can account for import VAT on your VAT Return (ertelenmiş KDV)", href: "https://www.gov.uk/guidance/check-when-you-can-account-for-import-vat-on-your-vat-return" },
+      { label: "GOV.UK: The UK's integrated tariff schedule (UK gümrük tarifesi)", href: "https://www.gov.uk/government/publications/the-uks-integrated-tariff-schedule/the-uks-integrated-tariff-schedule" },
+    ],
+  },
+  "/blog/incoterms-rehberi": {
+    headline: "Incoterms Rehberi: İngiltere'ye Satışta Kim Neyi Öder?",
+    published: "2026-11-11",
+    modified: "2026-11-11",
+    summary:
+      "Incoterms 2020, satıcının ve alıcının navlun, sigorta, gümrük ve risk sorumluluğunu belirleyen ICC kurallarıdır. İngiltere'ye satışta EXW, FCA, FOB, CIF ve DAP'ta İngiltere gümrüğünü, vergiyi ve ithalat KDV'sini alıcı öder; yalnızca DDP'de satıcı öder. FOB, FAS, CFR ve CIF yalnızca deniz yolu içindir.",
+    sources: [
+      { label: "International Chamber of Commerce: Incoterms rules (Incoterms 2020)", href: "https://iccwbo.org/business-solutions/incoterms-rules/" },
+      { label: "GOV.UK: Check when you can account for import VAT on your VAT Return (ertelenmiş KDV)", href: "https://www.gov.uk/guidance/check-when-you-can-account-for-import-vat-on-your-vat-return" },
     ],
   },
   "/blog/amazon-fba-prep-kontrol-listesi": {

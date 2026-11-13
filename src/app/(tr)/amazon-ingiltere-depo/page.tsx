@@ -90,6 +90,16 @@ const howItWorks = [
   { num: "06", icon: "🚚", label: "Sevk Edilir", desc: "Sipariş UK müşterinize teslim edilir." },
 ];
 
+const TR_AMAZON_STEPS: [string, string][] = [
+  ["GB EORI numarası", "İngiltere'ye ithalat beyannamesi için ithalatçının GB ile başlayan EORI numarası olmalıdır."],
+  ["UK KDV kaydı", "GOV.UK'ye göre İngiltere dışında kurulu bir işletme İngiltere'ye mal tedarik ediyorsa ciro eşiği beklemeden KDV kaydı yapmalıdır; muhasebecinizle teyit edin."],
+  ["Gümrük tarife kodu (GTİP)", "Her ürünün UK commodity code'u belirlenir; gümrük vergisi oranı ve menşe kuralları buna göre çıkar."],
+  ["İthalat ve ertelenmiş KDV", "Arca Trade Group veya gümrük müşaviriniz beyannameyi verir; KDV kayıtlıysanız ithalat KDV'sini sınırda ödemek yerine ertelenmiş KDV ile beyan edebilirsiniz."],
+  ["Essex'te mal kabul", "Konteyner veya paletler Rayleigh depomuza gelir, sayılır ve Mintsoft WMS'e kaydedilir."],
+  ["FBA prep veya FBM", "FBA için FNSKU etiket, paketleme ve paletleme (palet dahil 1,8 m, yaklaşık 1.000 kg); FBM için stok depoda kalır, siparişler buradan gönderilir."],
+  ["Amazon deposuna teslim", "Sevkiyat planında Amazon'un atadığı depoya randevulu teslim; Tilbury'deki LCY2 depomuza yaklaşık 16 mil."],
+];
+
 const faqs = [
   {
     q: "FBM (Fulfilled by Merchant) nedir?",
@@ -278,6 +288,33 @@ export default function AmazonIngiltereDepo() {
               Teklif için SKU ve ürün adedi, ölçüler, etiketleme veya paketleme ihtiyaçları,
               palet sayısı ve FBA mı FBM mi kullanılacağını paylaşın.
               FBA prep ücretsiz değildir; depo, hazırlık ve sevkiyat işlemleri ayrı fiyatlandırılır.
+            </p>
+          </div>
+        </section>
+
+        {/* Türkiye'den Amazon UK: adım adım */}
+        <section className="py-16 px-4 bg-[#f6f8fb]">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-extrabold text-[#0b2545] mb-3">Türkiye&apos;den Amazon UK&apos;ye Adım Adım</h2>
+            <p className="text-slate-600 mb-6">Türkiye&apos;den İngiltere&apos;ye stok gönderip Amazon.co.uk&apos;de satmak için izlenen tipik sıra:</p>
+            <ol className="space-y-3">
+              {TR_AMAZON_STEPS.map(([h, p], i) => (
+                <li key={h} className="flex gap-3">
+                  <span className="flex-shrink-0 w-7 h-7 rounded-full bg-[#0b2545] text-white text-sm font-bold flex items-center justify-center">{i + 1}</span>
+                  <span className="text-slate-700 text-sm leading-relaxed"><strong className="text-[#0b2545]">{h}:</strong> {p}</span>
+                </li>
+              ))}
+            </ol>
+            <p className="text-xs text-slate-500 mt-5">
+              Kaynaklar:{" "}
+              <a href="https://www.gov.uk/register-for-vat" target="_blank" rel="noopener noreferrer" className="underline">GOV.UK: Register for VAT</a> ·{" "}
+              <a href="https://www.gov.uk/guidance/check-when-you-can-account-for-import-vat-on-your-vat-return" target="_blank" rel="noopener noreferrer" className="underline">GOV.UK: ertelenmiş KDV</a> ·{" "}
+              <a href="https://www.gov.uk/export-goods" target="_blank" rel="noopener noreferrer" className="underline">GOV.UK: EORI</a> ·{" "}
+              <a href="https://freight.amazon.co.uk/newsroom/uk-ltl-amazon-fcs-checklist" target="_blank" rel="noopener noreferrer" className="underline">Amazon Freight: UK teslimat kontrol listesi</a>
+            </p>
+            <p className="text-sm text-slate-600 mt-4">
+              Canlı örnek: <Link href="/case-studies/arac-koltuk-kaplama-ingiltere-depo" className="font-semibold text-[#0b2545] underline">araç koltuk kılıfı üreticisi</Link> eBay, Amazon ve web siparişlerini Essex depomuzdan aynı gün gönderiyor.
+              Operasyonu Operasyon Müdürü Yusuf Barış&apos;ın ekibi Türkçe ve İngilizce yönetir.
             </p>
           </div>
         </section>

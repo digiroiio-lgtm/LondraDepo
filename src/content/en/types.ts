@@ -21,6 +21,8 @@ export type Section =
   | { type: "checklist"; variant?: "import" | "fba" }
   /** Schematic route map: warehouse, London and the three container ports. */
   | { type: "routemap"; h2?: string }
+  /** Carton CBM, pallet and container-fill calculator. */
+  | { type: "cbm"; h2: string; intro?: string }
   /** Interactive container arrival planner. */
   | { type: "planner"; h2: string; intro?: string };
 

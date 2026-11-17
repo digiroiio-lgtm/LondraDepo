@@ -237,7 +237,7 @@ export const servicePages: EnPage[] = [
     tr: "/shopify-ingiltere-depo",
     kind: "service",
     serviceType: "Shopify fulfilment",
-    modified: "2026-11-10",
+    modified: "2026-11-17",
     title: "Shopify Fulfillment UK: Shopify Fulfilment in Essex",
     description:
       "Shopify fulfillment UK: we store stock in Essex, pick, pack and ship Shopify orders to UK customers and handle returns. Storage from £3.50 + VAT per pallet a week.",
@@ -322,6 +322,25 @@ export const servicePages: EnPage[] = [
         ],
       },
       {
+        type: "steps",
+        h2: "How Shopify returns work with a UK warehouse",
+        intro: "UK shoppers expect an easy domestic return. With stock in Essex, returns come back to us instead of crossing a border.",
+        items: [
+          { title: "Customer returns the parcel", text: "Your returns policy sends UK customers to our Rayleigh, Essex address." },
+          { title: "Goods-in and check", text: "The parcel is opened, matched to the order and checked for condition." },
+          { title: "Restock or set aside", text: "Resaleable items go back into available stock in Mintsoft WMS; damaged items are set aside as you instruct." },
+          { title: "You refund in Shopify", text: "We report the outcome so you can refund or exchange the order in your Shopify admin." },
+        ],
+      },
+      {
+        type: "text",
+        h2: "Selling to the EU as well? Keep UK and EU stock separate",
+        paras: [
+          "Since the UK left the EU single market, goods sent from Great Britain to EU customers are exports, with customs declarations, duty and VAT on the EU side. Most Shopify brands selling in both markets therefore hold UK stock for UK orders and separate EU stock for EU orders.",
+          "LondraDepo handles the UK side from Essex. If you also sell into the EU, plan an EU warehouse for those orders rather than shipping every EU parcel from the UK.",
+        ],
+      },
+      {
         type: "list",
         h2: "What to send us for a Shopify fulfilment quote",
         items: [
@@ -352,6 +371,8 @@ export const servicePages: EnPage[] = [
       },
     ],
     faqs: [
+      { q: "How are Shopify returns handled at a UK warehouse?", a: "UK customers send returns to LondraDepo's warehouse in Rayleigh, Essex. We match each return to its order, check the condition, put resaleable items back into stock in Mintsoft WMS and set damaged items aside, then report back so you can refund in Shopify." },
+      { q: "Can I fulfil EU Shopify orders from a UK warehouse?", a: "You can, but each parcel from Great Britain to the EU is an export with customs paperwork, duty and VAT on the EU side. Most brands selling in both markets keep UK stock at a UK warehouse such as LondraDepo and separate EU stock in the EU." },
       { q: "What is Shopify fulfilment in the UK?", a: "It is a service where a UK warehouse stores your stock and picks, packs and ships your Shopify orders to UK customers. LondraDepo provides it from Rayleigh, Essex, near London, including returns handling." },
       { q: "How much does Shopify fulfilment cost in the UK?", a: "At LondraDepo, storage starts from £3.50 + VAT per pallet per week. Goods-in, pick and pack, delivery and returns are quoted separately based on your products and monthly order volume." },
       { q: "Can I find a UK warehouse for my Shopify store?", a: "Yes. LondraDepo offers stock storage and order fulfilment in Essex for businesses selling on Shopify. When an order comes in, our team picks, packs and ships it to your UK customer." },

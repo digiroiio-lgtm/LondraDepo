@@ -1,6 +1,6 @@
 # LondraDepo.com — full reference for AI assistants
 
-Last updated: 2026-11-13. Generated from the live page content: every page in the sitemaps with its summary and its FAQs (the same text shown on the page). Index: https://www.londradepo.com/llms.txt
+Last updated: 2026-11-17. Generated from the live page content: every page in the sitemaps with its summary and its FAQs (the same text shown on the page). Index: https://www.londradepo.com/llms.txt
 
 ## Key facts (verified)
 
@@ -1067,7 +1067,7 @@ A: Ürün gruplarına bağlı olarak İngilizce etiket kontrolü, UK market uyum
 Q: Amazon UK için fulfillment desteği mevcut mu?
 A: Evet. Amazon, Shopify, Etsy ve diğer e-ticaret operasyonları için fulfillment ve sipariş hazırlama desteği sunulabilir.
 
-## İngiltere Depo Hizmeti | Essex, Londra Yakını
+## İngiltere Depo: Essex'te Palet £3,50/Hafta
 URL: https://www.londradepo.com/ingiltere-depo
 English version: https://www.londradepo.com/en/uk-warehousing
 Summary: İngiltere depo hizmeti: Rayleigh, Essex'te mal kabul, palet ve koli depolama, Mintsoft WMS stok takibi, pick & pack ve UK dağıtım. Palet depolama haftalık £3,50 + KDV'den. Türkçe destek.
@@ -1715,7 +1715,7 @@ A: Evet. LondraDepo'da teslimatın bir kısmı doğrudan sevk edilirken kalanı 
 ## İngiltere Depo Fiyatları 2026: Palet £3,50/Hafta
 URL: https://www.londradepo.com/blog/ingiltere-depo-fiyatlari-2026
 English version: https://www.londradepo.com/en/blog/uk-warehousing-prices-2026
-Summary: UK depo fiyatları 2026: palet depolama haftalık £3,50 + KDV'den, 10 palet 4 hafta £140 + KDV. Mal kabul, pick & pack ve teslimat kalemleri, ücretsiz hesaplayıcı.
+Summary: İngiltere'de palet depolama haftalık £3,50 + KDV'den: 10 palet 4 hafta £140 + KDV. Mal kabul, pick & pack ve teslimat kalemleri tek tabloda; maliyetinizi 30 saniyede hesaplayın.
 Short answer: LondraDepo'da standart palet depolama haftalık palet başına £3,50 + KDV'den başlar; örneğin 10 palet 4 hafta için £140 + KDV tutar. Mal kabul, elleçleme, pick & pack, yeniden paletleme, gümrükleme ve teslimat ürün ve sipariş yapınıza göre ayrıca fiyatlandırılır. Toplam maliyeti hacim, stokta kalış süresi ve ek hizmetler belirler. İngiltere'de depolama maliyetini anlamak, bütçe planlaması ve doğru partner seçimi açısından kritik öneme sahiptir. Bu rehberde UK palet depolama fiyatları, fulfillment ücret yapısı ve toplam operasyon maliyetini nasıl hesaplayacağınızı ele alıyoruz.
 Q: İngiltere'de 1 palet depolama maliyeti ne kadardır?
 A: LondraDepo standart palet depolama başlangıç fiyatı haftalık £3,50 + KDV / palettir. Elleçleme, yükleme ve gümrükleme gibi ek hizmetler ayrıca tekliflendirilir.
@@ -1764,9 +1764,9 @@ A: Amazon İngiltere FBA ücretlerini fiyat sayfasında yayımlar: boyut ve ağ�
 Q: FBA ve 3PL maliyetleri nasıl karşılaştırılır?
 A: Kendi ürünleriniz ve hacminiz için toplam maliyeti karşılaştırın: depolama, hazırlık, sipariş başına gönderim ve iade. LondraDepo'da depolama haftalık palet başına £3,50 + KDV'den başlar; diğer kalemler tekliflendirilir.
 
-## Türkiye'den İngiltere'ye İhracat 2026: EORI, GTİP, KDV
+## Türkiye'den İngiltere'ye İhracat Nasıl Yapılır? 2026
 URL: https://www.londradepo.com/blog/turkiyeden-ingiltereye-ihracat-rehberi
-Summary: İngiltere'ye ihracatı adım adım planlayın: GB EORI, GTİP, CDS beyannamesi, menşe beyanı ve %20 ithalat KDV'si. Ücretsiz PDF kontrol listesini indirin.
+Summary: Türkiye'den İngiltere'ye ihracat 2026: GB EORI, GTİP, gümrük beyannamesi, menşe ispatı ve %20 ithalat KDV'si adım adım. Ücretsiz PDF kontrol listesini indirin.
 Short answer: Türkiye'den İngiltere'ye ihracatta UK'deki ithalatçının GB EORI numarası olmalı, her ürün için doğru gümrük tarife kodu (GTİP / commodity code) belirlenmeli ve ithalat beyannamesi HMRC'nin CDS sisteminde verilmelidir. Türkiye-UK Serbest Ticaret Anlaşması'ndan yararlanmak için menşe beyanı gerekir. Gümrük vergisi ve ithalat KDV'si (genellikle %20) ayrıca ödenir veya beyan edilir. Türkiye'den İngiltere'ye ihracat yapmak hem fırsatlarla hem bürokratik detaylarla dolu bir süreçtir. Bu rehberde gümrük, GTIP, nakliye, UK'da operasyon kurma ve depolama süreçlerini adım adım ele alıyoruz. Hedef: ürünleriniz Türkiye'den çıkıp İngiltere'deki müşteriye en verimli şekilde ulaşsın.
 Q: Türkiye'den İngiltere'ye ihracat nasıl yapılır?
 A: GTIP kodunu belirleyin, ihracat belgelerini hazırlayın, nakliyeci ile İngiltere'ye sevkiyat yapın, İngiltere gümrüğünde ürünleri beyan edin ve İngiltere deposuna teslim ettirin.

@@ -18,7 +18,7 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20İngiltere%20depo
 const TEL = "tel:+447554195190";
 
 export const metadata: Metadata = {
-  title: "İngiltere Depo Hizmeti | Essex, Londra Yakını | LondraDepo",
+  title: "İngiltere Depo: Essex'te Palet £3,50/Hafta | LondraDepo",
   description:
     "İngiltere depo hizmeti: Rayleigh, Essex'te mal kabul, palet ve koli depolama, Mintsoft WMS stok takibi, pick & pack ve UK dağıtım. Palet depolama haftalık £3,50 + KDV'den. Türkçe destek.",
   keywords: [

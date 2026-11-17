@@ -1070,7 +1070,7 @@ A: Evet. Amazon, Shopify, Etsy ve diğer e-ticaret operasyonları için fulfillm
 ## İngiltere Depo: Essex'te Palet £3,50/Hafta
 URL: https://www.londradepo.com/ingiltere-depo
 English version: https://www.londradepo.com/en/uk-warehousing
-Summary: İngiltere depo hizmeti: Rayleigh, Essex'te mal kabul, palet ve koli depolama, Mintsoft WMS stok takibi, pick & pack ve UK dağıtım. Palet depolama haftalık £3,50 + KDV'den. Türkçe destek.
+Summary: İngiltere depo hizmeti: Rayleigh, Essex'te mal kabul, palet ve koli depolama, Mintsoft WMS, pick & pack ve UK dağıtım. Palet haftalık £3,50 + KDV'den. Türkçe destek.
 Short answer: İngiltere depo hizmeti, ürünlerinizin UK'de teslim alınıp depolandığı ve siparişlerinizin buradan gönderildiği hazır altyapıdır. LondraDepo bunu Rayleigh, Essex'teki deposundan yapar: mal kabul, palet ve koli depolama, Mintsoft WMS stok takibi, pick & pack ve UK dağıtım. Palet depolama haftalık £3,50 + KDV'den başlar.
 Q: İngiltere'deki depo nerede, limanlara ne kadar uzak?
 A: Depomuz Unit 19 Arterial Park, Rayleigh, Essex SS6 7FY adresindedir. Karayoluyla DP World London Gateway'e yaklaşık 13 mil, Tilbury Limanı'na 16 mil, Londra merkezine 37 mil ve Felixstowe Limanı'na 62 mil uzaklıktadır.
@@ -1715,7 +1715,7 @@ A: Evet. LondraDepo'da teslimatın bir kısmı doğrudan sevk edilirken kalanı 
 ## İngiltere Depo Fiyatları 2026: Palet £3,50/Hafta
 URL: https://www.londradepo.com/blog/ingiltere-depo-fiyatlari-2026
 English version: https://www.londradepo.com/en/blog/uk-warehousing-prices-2026
-Summary: İngiltere'de palet depolama haftalık £3,50 + KDV'den: 10 palet 4 hafta £140 + KDV. Mal kabul, pick & pack ve teslimat kalemleri tek tabloda; maliyetinizi 30 saniyede hesaplayın.
+Summary: İngiltere'de palet depolama haftalık £3,50 + KDV'den: 10 palet 4 hafta £140 + KDV. Mal kabul, pick & pack ve teslimat kalemleri tek tabloda; hemen hesaplayın.
 Short answer: LondraDepo'da standart palet depolama haftalık palet başına £3,50 + KDV'den başlar; örneğin 10 palet 4 hafta için £140 + KDV tutar. Mal kabul, elleçleme, pick & pack, yeniden paletleme, gümrükleme ve teslimat ürün ve sipariş yapınıza göre ayrıca fiyatlandırılır. Toplam maliyeti hacim, stokta kalış süresi ve ek hizmetler belirler. İngiltere'de depolama maliyetini anlamak, bütçe planlaması ve doğru partner seçimi açısından kritik öneme sahiptir. Bu rehberde UK palet depolama fiyatları, fulfillment ücret yapısı ve toplam operasyon maliyetini nasıl hesaplayacağınızı ele alıyoruz.
 Q: İngiltere'de 1 palet depolama maliyeti ne kadardır?
 A: LondraDepo standart palet depolama başlangıç fiyatı haftalık £3,50 + KDV / palettir. Elleçleme, yükleme ve gümrükleme gibi ek hizmetler ayrıca tekliflendirilir.

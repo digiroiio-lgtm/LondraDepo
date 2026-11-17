@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "İngiltere Depo Fiyatları 2026: Palet £3,50/Hafta | LondraDepo",
   description:
-    "İngiltere'de palet depolama haftalık £3,50 + KDV'den: 10 palet 4 hafta £140 + KDV. Mal kabul, pick & pack ve teslimat kalemleri tek tabloda; maliyetinizi 30 saniyede hesaplayın.",
+    "İngiltere'de palet depolama haftalık £3,50 + KDV'den: 10 palet 4 hafta £140 + KDV. Mal kabul, pick & pack ve teslimat kalemleri tek tabloda; hemen hesaplayın.",
   alternates: trAlternates("/blog/ingiltere-depo-fiyatlari-2026"),
   openGraph: {
     title: "İngiltere Depo Fiyatları 2026: Palet £3,50/Hafta",

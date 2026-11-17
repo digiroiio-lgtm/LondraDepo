@@ -203,6 +203,7 @@ export default function DepoRehberiPage() {
 
             <AuthorBox path="/blog/ingiltere-depo-rehberi" />
 
+            <p className="text-slate-700 my-6">Rayleigh, Essex&apos;teki deposumuzun hizmetleri, fiyatları ve limanlara mesafesi için: <Link href="/ingiltere-depo" className="font-semibold text-[#0b2545] underline">İngiltere depo hizmetimiz</Link>.</p>
             <RelatedArticles articles={relatedArticles} />
 
             <div className="pt-8 border-t border-slate-200">

@@ -138,6 +138,10 @@ URL: https://www.londradepo.com/en/shopify-fulfilment-uk
 Turkish version: https://www.londradepo.com/shopify-ingiltere-depo
 Summary: Shopify fulfillment UK: we store stock in Essex, pick, pack and ship Shopify orders to UK customers and handle returns. Storage from £3.50 + VAT per pallet a week.
 Short answer: Shopify fulfilment in the UK means a third-party warehouse holds your stock and ships your Shopify orders to UK customers for you. LondraDepo does this from Rayleigh, Essex, near London: we receive and store your stock, pick and pack each order, dispatch it to the customer and process returns, so you can sell to the UK from any country without opening your own UK warehouse.
+Q: How are Shopify returns handled at a UK warehouse?
+A: UK customers send returns to LondraDepo's warehouse in Rayleigh, Essex. We match each return to its order, check the condition, put resaleable items back into stock in Mintsoft WMS and set damaged items aside, then report back so you can refund in Shopify.
+Q: Can I fulfil EU Shopify orders from a UK warehouse?
+A: You can, but each parcel from Great Britain to the EU is an export with customs paperwork, duty and VAT on the EU side. Most brands selling in both markets keep UK stock at a UK warehouse such as LondraDepo and separate EU stock in the EU.
 Q: What is Shopify fulfilment in the UK?
 A: It is a service where a UK warehouse stores your stock and picks, packs and ships your Shopify orders to UK customers. LondraDepo provides it from Rayleigh, Essex, near London, including returns handling.
 Q: How much does Shopify fulfilment cost in the UK?
@@ -1084,6 +1088,10 @@ Q: İngiltere depo fiyatlarınız nedir?
 A: Standart palet depolama haftalık palet başına £3,50 + KDV'den başlar. Elleçleme, yükleme-boşaltma, yeniden paletleme, gümrükleme ve dağıtım hizmetleri operasyon kapsamına göre ayrıca tekliflendirilir.
 Q: Sadece depolama mı yapıyorsunuz yoksa sipariş karşılama da var mı?
 A: Hem depolama hem de tam sipariş karşılama (fulfilment) hizmeti sunuyoruz. Sipariş geldiğinde ürünü depomuzdan toplar, paketler, etiketler ve UK müşterilerinize sevk ederiz.
+Q: İngiltere'de kendi depomu mu kiralamalıyım, 3PL depo mu kullanmalıyım?
+A: Hacim çok yüksek ve sabit değilse 3PL depo genellikle daha ekonomiktir: kira, personel ve ekipman yatırımı olmadan yalnızca kullandığınız palet kadar ödersiniz. LondraDepo'da sabit minimum yoktur, palet depolama haftalık £3,50 + KDV'den başlar ve 1 paletle başlanabilir.
+Q: İngiltere depo seçerken nelere dikkat etmeliyim?
+A: Limanlara ve Londra'ya mesafe, yazılı fiyat kalemleri, minimum hacim şartı, gerçek zamanlı stok görünürlüğü, gümrükleme desteği ve operasyon örnekleri en önemli ölçütlerdir. LondraDepo'nun Rayleigh, Essex deposu London Gateway'e 13 mil uzaklıktadır ve stok Mintsoft WMS'te izlenir.
 Q: Palet ve koli depolama kabul ediyor musunuz?
 A: Evet. Hem paletli hem de kolili ürünler için depolama hizmeti sunuyoruz. Kısa ve uzun dönemli depolama seçenekleri mevcuttur.
 

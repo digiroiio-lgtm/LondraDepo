@@ -234,6 +234,7 @@ export default function IhracatRehberiPage() {
 
             <AuthorBox path="/blog/turkiyeden-ingiltereye-ihracat-rehberi" />
 
+            <p className="text-slate-700 my-6">Ürünleriniz İngiltere&apos;ye ulaştıktan sonra depolama ve dağıtım için: <Link href="/ingiltere-depo" className="font-semibold text-[#0b2545] underline">İngiltere depo hizmetimiz</Link>.</p>
             <RelatedArticles articles={relatedArticles} />
 
             <div className="mt-8 pt-6 border-t border-slate-200">

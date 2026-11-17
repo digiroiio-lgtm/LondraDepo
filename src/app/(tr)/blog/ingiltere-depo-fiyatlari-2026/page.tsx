@@ -228,6 +228,7 @@ export default function DepoFiyatlariPage() {
 
             <AuthorBox path="/blog/ingiltere-depo-fiyatlari-2026" />
 
+            <p className="text-slate-700 my-6">Fiyat örnekleri, mesafe tablosu ve teklif formu için: <Link href="/ingiltere-depo" className="font-semibold text-[#0b2545] underline">İngiltere depo hizmetimiz</Link>.</p>
             <RelatedArticles articles={relatedArticles} />
 
             <div className="mt-8 pt-6 border-t border-slate-200">

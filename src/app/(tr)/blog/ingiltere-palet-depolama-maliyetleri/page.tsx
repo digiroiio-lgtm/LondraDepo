@@ -217,6 +217,7 @@ export default function PaletDepolamaPage() {
 
             <AuthorBox path="/blog/ingiltere-palet-depolama-maliyetleri" />
 
+            <p className="text-slate-700 my-6">Palet depolamanın yanında mal kabul, pick & pack ve UK dağıtım için: <Link href="/ingiltere-depo" className="font-semibold text-[#0b2545] underline">İngiltere depo hizmetimiz</Link>.</p>
             <RelatedArticles articles={relatedArticles} />
 
             <div className="mt-8 pt-6 border-t border-slate-200">

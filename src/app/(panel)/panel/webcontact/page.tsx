@@ -14,7 +14,7 @@ import {
   type Approval, type BlockType, type Contact, type FormStatus, type Reply,
 } from "@/lib/panel/webcontact";
 import { listContactRuns, listContacts } from "@/lib/panel/webcontact-store";
-import { TEMPLATE_GROUPS, segmentById, targetFrom } from "@/lib/panel/wizard";
+import { TEMPLATE_GROUPS, countryInfo, segmentById, shuffleTarget, targetFrom } from "@/lib/panel/wizard";
 import { allDomains, listLeads } from "@/lib/panel/wizard-store";
 import { addNote, changeReply, closeWithReason, confirmDelivery, followUp, importLog, markEmailed, markSent, markSkipped } from "./actions";
 
@@ -239,6 +239,7 @@ export default async function WebContactPage({ searchParams }: { searchParams: P
           touched={[...touched]}
           existing={contacts.map((c) => ({ ...c, message: "", subject: "", reason: "" }))}
           leadStatus={Object.fromEntries(leads.map((l) => [l.domain, l.status]))}
+          shuffle={shuffleTarget(leads)}
         />
       )}
     </PanelShell>
@@ -592,13 +593,18 @@ function ReportTab({ contacts, groups, sp }: { contacts: Contact[]; groups: Reco
 
 // ---------- Run (agent tasks + import) ----------
 
-function RunTab({ go, n, ap, t, db, candidates, blocked, runs, known, touched, existing, leadStatus }: {
+function RunTab({ go, n, ap, t, db, candidates, blocked, runs, known, touched, existing, leadStatus, shuffle }: {
   go: string; n: number; ap: Approval; t: ReturnType<typeof targetFrom>; db: boolean; existing: Contact[]; leadStatus: Record<string, string>;
+  shuffle: { countries: string[]; segments: string[] };
   candidates: Awaited<ReturnType<typeof listLeads>>; blocked: Contact[];
   runs: Awaited<ReturnType<typeof listContactRuns>>; known: string[]; touched: string[];
 }) {
   let prompt = "";
   let chosen: typeof candidates = [];
+  const sq = new URLSearchParams({ tab: "calistir", go: "b", region: "global", n: String(n), ap });
+  shuffle.segments.forEach((s) => sq.append("s", s));
+  shuffle.countries.forEach((c) => sq.append("c", c));
+  const shuffleHref = `/panel/webcontact?${sq.toString()}#gorev`;
   if (go === "a") {
     chosen = candidates.slice(0, n);
     prompt = chosen.length ? buildContactPromptFromLeads(chosen, { count: n, approval: ap }) : "";
@@ -644,6 +650,19 @@ function RunTab({ go, n, ap, t, db, candidates, blocked, runs, known, touched, e
             <p className="text-xs text-[var(--pnl-muted)] mt-2">Ajan ilk iki onayda her şirket için kullandığı kanalı ve formun satışa uygun olup olmadığını gösterir; vergi numarası, üyelik veya yalnız destek isteyen formları göndermez.</p>
           </div>
         )}
+      </Card>
+
+      <Card title="1c. Karışık form görevi (shuffle)">
+        <div id="karisik" />
+        <p className="text-sm text-[var(--pnl-muted)] mb-3">Ajan, rastgele ama mantıklı seçilmiş ülke ve segmentlerde yeni şirket bulur, doğrular ve formlarını doldurur. Seçim her seferinde değişir: 6 P1 + 3 P2 + 1 P3 ülke ve 2 segment; yüksek skorlu ve şimdiye kadar az aranan ülke/segmentler daha sık gelir. Listede olan şirketler otomatik hariç tutulur.</p>
+        <div className="grid sm:grid-cols-2 gap-3 text-sm mb-3">
+          <div><div className="text-xs font-semibold text-[var(--pnl-muted)] mb-1">Ülkeler</div><div className="flex flex-wrap gap-1.5">{shuffle.countries.map((c) => <span key={c} className="pnl-chip">{countryInfo(c)?.flag} {c}</span>)}</div></div>
+          <div><div className="text-xs font-semibold text-[var(--pnl-muted)] mb-1">Segmentler</div><div className="flex flex-wrap gap-1.5">{shuffle.segments.map((s) => <span key={s} className="pnl-chip">{segmentById(s)?.label ?? s}</span>)}</div></div>
+        </div>
+        <div className="flex flex-wrap gap-2">
+          <a href={shuffleHref} className="pnl-btn-primary">Bu karışımla görev metni oluştur ({n} şirket)</a>
+          <a href={`/panel/webcontact?tab=calistir&n=${n}&ap=${ap}&r=${Date.now().toString(36)}#karisik`} className="pnl-btn">Yeniden karıştır 🎲</a>
+        </div>
       </Card>
 
       <Card title="1b. Yeni araştırma + form">

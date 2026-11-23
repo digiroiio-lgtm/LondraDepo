@@ -681,3 +681,34 @@ export function leadsToCsv(leads: Lead[]): string {
   const rows = leads.map((l) => [l.priority, l.tier, l.fit, l.value, l.revenue ?? "", STATUSES[l.status], ...COLUMNS.map((c) => l[c]), l.flags.join(" | "), l.added_at].map(esc).join(","));
   return "﻿" + [head.join(","), ...rows].join("\r\n");
 }
+
+// ---------- Shuffle (random but weighted research + form task) ----------
+
+/** Segments that make sense in any source country (not UK-only, not Turkey-only, not partners or micro sellers). */
+export const SHUFFLE_SEGMENTS = ["amazon_uk", "shopify_dtc", "packaging", "auto_parts", "market_entry", "furniture_home", "electronics_energy"] as const;
+
+/** Weighted pick without replacement: higher weight, higher chance. */
+function weightedPick<T>(items: T[], weight: (x: T) => number, n: number, rnd: () => number): T[] {
+  const pool = items.map((x) => ({ x, w: Math.max(0.01, weight(x)) }));
+  const out: T[] = [];
+  while (out.length < n && pool.length) {
+    let r = rnd() * pool.reduce((a, p) => a + p.w, 0);
+    const i = pool.findIndex((p) => (r -= p.w) <= 0);
+    out.push(pool.splice(i < 0 ? pool.length - 1 : i, 1)[0].x);
+  }
+  return out;
+}
+
+/**
+ * A random but sensible target: 6 P1 + 3 P2 + 1 P3 countries and 2 segments. Higher scores and countries /
+ * segments with fewer leads so far come up more often, so repeated shuffles spread the search.
+ */
+export function shuffleTarget(leads: Pick<Lead, "country" | "segment">[], rnd: () => number = Math.random): { countries: string[]; segments: string[] } {
+  const perCountry = (name: string) => leads.filter((l) => l.country.trim().toLocaleLowerCase("tr") === name.toLocaleLowerCase("tr")).length;
+  const perSegment = (id: string) => leads.filter((l) => l.segment === id).length;
+  const w = (c: CountryInfo) => ((c.score - 70) ** 2) / (1 + perCountry(c.name) / 5);
+  const tier = (t: CountryInfo["tier"], n: number) => weightedPick(COUNTRY_INFO.filter((c) => c.tier === t), w, n, rnd).map((c) => c.name);
+  const countries = [...tier("P1", 6), ...tier("P2", 3), ...tier("P3", 1)];
+  const segments = weightedPick([...SHUFFLE_SEGMENTS], (id) => ((segmentById(id)?.prior ?? 80) - 75) / (1 + perSegment(id) / 10), 2, rnd);
+  return { countries, segments };
+}

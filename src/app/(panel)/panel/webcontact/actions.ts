@@ -62,7 +62,7 @@ export async function importLog(f: FormData) {
     const run = { id: runId, at, mode: mode as "a" | "b" | "c", sent: count(["sent"]), blocked: count(["captcha"]), manual: count(["error", "phone_rejected"]), noForm: count(["no_form"]), skipped: count(["skipped", "no_solicitation"]), duplicates, errors: errors.length };
     await addContactRun(run);
     importedOk = true;
-    msg = `ok:${run.sent} form gönderildi, ${run.blocked} doğrulama engeline takıldı, ${run.manual} elle gönderilecek, ${run.noForm} formsuz, ${run.skipped} atlandı; ${duplicates} tekrar atlandı${newLeads.length ? `; ${newLeads.length} yeni şirket müşteri listesine eklendi` : ""}${errors.length ? `; ${errors.length} satır okunamadı` : ""}.`;
+    msg = `ok:Son çalıştırma · ${run.sent + (run.blocked ?? 0) + run.manual + run.noForm + run.skipped} şirket: ${run.sent} form gönderildi, ${run.blocked} doğrulama engeline takıldı, ${run.manual} elle gönderilecek, ${run.noForm} formsuz, ${run.skipped} atlandı; ${duplicates} tekrar atlandı${newLeads.length ? `; ${newLeads.length} yeni şirket müşteri listesine eklendi` : ""}${errors.length ? `; ${errors.length} satır okunamadı` : ""}.`;
   } catch (e) {
     msg = e instanceof Error ? e.message : "hata";
   }
@@ -166,6 +166,31 @@ export async function addNote(f: FormData) {
     const c = await getContact(d);
     if (!c) throw new Error("Kayıt bulunamadı");
     await updateContact(d, { notes: [c.notes, note].filter(Boolean).join(" · ") }, { type: "note", note });
+  } catch (e) {
+    msg = e instanceof Error ? e.message : "hata";
+  }
+  back(msg, "isler", retOf(f));
+}
+
+/** An uncertain form send was checked and did reach the company (no second send). */
+export async function confirmDelivery(f: FormData) {
+  const d = String(f.get("d"));
+  let msg = "ok:Ulaştı olarak işaretlendi; takip tarihi buna göre hesaplanır.";
+  try {
+    if (!(await updateContact(d, { delivery_ok: true }, { type: "note", note: "Gönderim kontrol edildi: ulaştı" }))) throw new Error("Kayıt bulunamadı");
+  } catch (e) {
+    msg = e instanceof Error ? e.message : "hata";
+  }
+  back(msg, "isler", retOf(f));
+}
+
+/** A reply was a no: the company leaves active follow-up with the reason, and stays on record. */
+export async function closeWithReason(f: FormData) {
+  const d = String(f.get("d"));
+  const reason = String(f.get("reason") ?? "").trim().slice(0, 120) || "İlgilenmiyor";
+  let msg = `ok:Kapatıldı: ${reason}. Şirket aktif takipten çıktı, kaydı duruyor.`;
+  try {
+    if (!(await updateContact(d, { reply: "ilgisiz", close_reason: reason }, { type: "reply", note: `Olumsuz: ${reason}` }))) throw new Error("Kayıt bulunamadı");
   } catch (e) {
     msg = e instanceof Error ? e.message : "hata";
   }

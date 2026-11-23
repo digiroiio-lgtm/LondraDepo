@@ -3,7 +3,7 @@ import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { GMAIL_USER, gmailConfigured, sendMail } from "@/lib/panel/gmail";
 import { remainingPlaceholders } from "@/lib/panel/mail-compose";
-import { DAILY_SEND_LIMIT, countSend, sentToday, syncInbox } from "@/lib/panel/mail-sync";
+import { DAILY_SEND_LIMIT, countSend, ignoreInboxItem, linkInboxItem, sentToday, syncInbox } from "@/lib/panel/mail-sync";
 import { getContact, updateContact } from "@/lib/panel/webcontact-store";
 import { getLead, updateLead } from "@/lib/panel/wizard-store";
 
@@ -18,7 +18,7 @@ export async function syncNow() {
   try {
     if (!gmailConfigured()) throw new Error("Gmail bağlı değil");
     const r = await syncInbox(30);
-    msg = `ok:${r.scanned} e-posta tarandı; ${r.fresh} yeni. ${r.replies} şirket yanıtı, ${r.acks} otomatik teyit eşleşti${r.rematched ? `; önceki ${r.rematched} e-posta şimdi şirketiyle eşleşti` : ""}${r.unmatched ? `; ${r.unmatched} e-posta bir şirketle eşleşmedi` : ""}.`;
+    msg = `ok:${r.scanned} e-posta tarandı; ${r.fresh} yeni. ${r.replies} şirket yanıtı, ${r.acks} otomatik teyit eşleşti${r.rematched ? `; önceki ${r.rematched} e-posta şimdi şirketiyle eşleşti` : ""}${r.suggested ? `; ${r.suggested} e-posta için şirket önerisi var (onayınızı bekliyor)` : ""}${r.unmatched ? `; ${r.unmatched} e-posta bir şirketle eşleşmedi` : ""}${r.system ? `; ${r.system} sistem/deneme e-postası satış sayılarına katılmadı` : ""}.`;
   } catch (e) {
     msg = e instanceof Error ? e.message : "hata";
   }
@@ -61,4 +61,30 @@ export async function sendEmail(f: FormData) {
     msg = e instanceof Error ? e.message : "hata";
   }
   back(msg, ok ? "gelen" : "yaz", ok || !d ? "" : `d=${encodeURIComponent(d)}`);
+}
+
+/** Links an inbox email to a company (panel record only; nothing is sent). */
+export async function linkMail(f: FormData) {
+  const id = String(f.get("id") ?? "");
+  const d = String(f.get("d") ?? "");
+  const as = f.get("as") === "auto_ack" ? "auto_ack" : "reply";
+  let msg: string;
+  try {
+    if (!d) throw new Error("Bağlanacak şirketi seçin");
+    const { company } = await linkInboxItem(id, d, as);
+    msg = as === "reply" ? `ok:Yanıt ${company} geçmişine eklendi; şirket "Yanıt geldi" oldu. WebContact → Yanıtı değerlendir'den sonucunu işaretleyin.` : `ok:${company} geçmişine otomatik form teyidi olarak eklendi (yanıt sayılmadı).`;
+  } catch (e) {
+    msg = e instanceof Error ? e.message : "hata";
+  }
+  back(msg);
+}
+
+export async function ignoreMail(f: FormData) {
+  let msg = "ok:E-posta listeden gizlendi.";
+  try {
+    await ignoreInboxItem(String(f.get("id") ?? ""));
+  } catch (e) {
+    msg = e instanceof Error ? e.message : "hata";
+  }
+  back(msg);
 }

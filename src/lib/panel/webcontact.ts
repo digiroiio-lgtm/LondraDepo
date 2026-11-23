@@ -109,7 +109,13 @@ export type Contact = {
   thread_id?: string;
   /** Everything that happened to this company, oldest first. */
   events?: ContactEvent[];
+  /** The user checked an uncertain send and confirmed it reached the company. */
+  delivery_ok?: boolean;
+  /** Why the company left active follow-up (e.g. "UK distribütörü var"). */
+  close_reason?: string;
 };
+
+export const CLOSE_REASONS = ["UK distribütörü var", "Şu an ihtiyaç yok", "Kendi UK deposu var", "Yanlış kişi / kanal"] as const;
 
 export const EVENT_LABELS = {
   imported: "Ajan inceledi",

@@ -3,7 +3,7 @@
  * company needs (one task list for everything done and not yet done), and day / week / month reports.
  * Pure functions; no storage.
  */
-import { BLOCK_TYPES, EVENT_LABELS, FORM_STATUSES, REPLIES, workdaysSince, type BlockType, type Contact, type ContactEvent, type EventType } from "@/lib/panel/webcontact";
+import { BLOCK_TYPES, EVENT_LABELS, FORM_STATUSES, REPLIES, type BlockType, type Contact, type ContactEvent, type EventType } from "@/lib/panel/webcontact";
 
 // ---------- Events ----------
 
@@ -44,33 +44,118 @@ export const lastEvent = (c: Contact) => eventsOf(c).at(-1);
 export const ACTIONS = {
   reply: { label: "Yanıtı değerlendir", hint: "Şirket yanıt verdi; okuyup dönüş yapın.", open: true },
   meeting: { label: "Görüşme / teklif", hint: "Olumlu dönüş; görüşme ayarlayın veya teklif gönderin.", open: true },
+  verify: { label: "Gönderim belirsiz · İncele", hint: "Formun ulaştığı teyit edilmedi; ikinci gönderimden önce kontrol edin.", open: true },
   followup: { label: "Takip et", hint: "5 iş günü geçti, yanıt yok; kısa bir takip yapın.", open: true },
   email: { label: "E-posta gönder", hint: "Formu yok; kayıtlı kurumsal adrese hazır mesajı gönderin.", open: true },
   blocked: { label: "Birlikte gönder (doğrulama)", hint: "CAPTCHA / güvenlik kodu; formu birlikte gönderin.", open: true },
-  fix: { label: "Hatayı incele", hint: "Site hata verdi, teyit gelmedi veya telefon kabul edilmedi.", open: true },
-  channel: { label: "Başka kanal bul", hint: "Form ve e-posta yok; LinkedIn veya telefonla ulaşın.", open: true },
+  fix: { label: "Hatayı incele", hint: "Site hata verdi veya telefon kabul edilmedi.", open: true },
+  channel: { label: "B2B kanal bul", hint: "Uygun bir satış kanalı yok; LinkedIn, satış e-postası veya telefon bulun.", open: true },
   wait: { label: "Yanıt bekleniyor", hint: "Mesaj ulaştı; takip zamanı gelmedi.", open: false },
   closed: { label: "Kapandı", hint: "Atlandı, satış mesajı kabul etmiyor veya ilgilenmiyor.", open: false },
 } as const;
 export type ActionKey = keyof typeof ACTIONS;
+/** Sales priority: real replies first, then uncertain sends, due follow-ups, new sends, fixes. */
 export const ACTION_ORDER = Object.keys(ACTIONS) as ActionKey[];
 
-/** Last time we reached the company (form or email). */
-export const reachedAt = (c: Contact) => (c.channel === "email" ? c.emailed_at : c.form_status === "sent" ? c.sent_at || c.imported_at : undefined);
+// ---------- Delivery (did our message actually reach the company?) ----------
 
-export function nextAction(c: Contact): { key: ActionKey; due?: string } {
+export const DELIVERY = {
+  email_sent: "E-posta gönderildi",
+  confirmed: "Form teyitli",
+  user_reported: "Gönderdiğinizi bildirdiniz",
+  uncertain: "Gönderim belirsiz",
+  none: "Henüz ulaşılmadı",
+} as const;
+export type Delivery = keyof typeof DELIVERY;
+
+const NO_CONFIRM = /^(|-|—|yok|none|no|unknown|n\/a|görülmedi|teyit yok|belirsiz|emin değil(im)?)$/i;
+const UNCERTAIN_NOTE = /teyit|confirm|emin değil|belirsiz|unclear|uncertain|not sure|doğrulanamadı/i;
+const SUPPORT_FORM = /destek|support|müşteri hizmetleri|customer service|reklamac|returns?\b|iade/i;
+
+/** Delivery state and where it comes from; separate from the form status the agent reported. */
+export function deliveryOf(c: Contact): { key: Delivery; source: string; at?: string } {
+  const ev = eventsOf(c);
+  const last = (t: EventType) => [...ev].reverse().find((e) => e.type === t);
+  if (c.channel === "email" && c.emailed_at) {
+    return c.thread_id ? { key: "email_sent", source: "Gmail konuşması (panelden)", at: c.emailed_at } : { key: "user_reported", source: "E-postayı kendi programınızdan gönderdiğinizi bildirdiniz", at: c.emailed_at };
+  }
+  if (c.reply !== "yok") return { key: c.channel === "email" && c.thread_id ? "email_sent" : "confirmed", source: "Şirket yanıt verdi", at: last("reply")?.at };
+  const ack = last("auto_ack");
+  if (ack && c.form_status === "sent") return { key: "confirmed", source: `Otomatik teyit e-postası (${ack.note ?? ""})`.trim(), at: ack.at };
+  if (c.delivery_ok) return { key: "user_reported", source: "Ulaştı olarak işaretlediniz", at: reachedRaw(c) };
+  if (c.form_status === "sent") {
+    const manual = [...ev].reverse().find((e) => e.type === "form_sent" && /elle/i.test(e.note ?? ""));
+    if (manual) return { key: "user_reported", source: "\"Gönderdim\"e bastınız", at: manual.at };
+    if (!NO_CONFIRM.test((c.confirmation_text ?? "").trim())) return { key: "confirmed", source: `Sayfadaki teyit: ${c.confirmation_text.slice(0, 80)}`, at: reachedRaw(c) };
+    return { key: "uncertain", source: "Gönderildi denildi ama teyit mesajı görülmedi", at: reachedRaw(c) };
+  }
+  if (c.form_status === "error" && UNCERTAIN_NOTE.test(`${c.notes} ${c.block_detail} ${c.confirmation_text}`)) return { key: "uncertain", source: "Site hata verdi; formun ulaşıp ulaşmadığı belli değil" };
+  return { key: "none", source: "" };
+}
+
+const reachedRaw = (c: Contact) => (c.channel === "email" ? c.emailed_at : c.sent_at || c.imported_at);
+
+/** Last time we reached the company (form or email); uncertain sends do not count. */
+export function reachedAt(c: Contact): string | undefined {
+  const d = deliveryOf(c);
+  return d.key === "none" || d.key === "uncertain" ? undefined : d.at || reachedRaw(c);
+}
+
+/** The latest contact in either direction (send, follow-up or reply). */
+export function lastTouchAt(c: Contact): string | undefined {
+  const ev = [...eventsOf(c)].reverse().find((e) => ["form_sent", "email_sent", "followup", "reply", "auto_ack"].includes(e.type))?.at;
+  const reached = reachedAt(c);
+  return ev && reached ? (ev > reached ? ev : reached) : ev || reached;
+}
+
+function addWorkdays(iso: string, n: number): string {
+  const d = new Date(iso.includes("T") ? iso : iso.replace(" ", "T"));
+  if (Number.isNaN(d.getTime())) return "";
+  while (n > 0) {
+    d.setUTCDate(d.getUTCDate() + 1);
+    if (![0, 6].includes(d.getUTCDay())) n--;
+  }
+  return d.toISOString();
+}
+
+export function nextAction(c: Contact): { key: ActionKey; due?: string; reason?: string } {
   if (c.reply === "yanit") return { key: "reply" };
   if (c.reply === "olumlu") return { key: "meeting" };
-  if (c.reply === "ilgisiz" || c.form_status === "skipped" || c.form_status === "no_solicitation") return { key: "closed" };
+  if (c.reply === "ilgisiz" || c.form_status === "skipped" || c.form_status === "no_solicitation") return { key: "closed", reason: c.close_reason };
+  const d = deliveryOf(c);
+  if (d.key === "uncertain") return { key: "verify", reason: d.source };
   const reached = reachedAt(c);
   if (reached) {
-    if (!c.followup_at && workdaysSince(reached) >= 5) return { key: "followup" };
-    return { key: "wait" };
+    if (!c.followup_at) {
+      const due = addWorkdays(reached, 5);
+      return due && due <= new Date().toISOString() ? { key: "followup", due } : { key: "wait", due };
+    }
+    return { key: "wait", due: addWorkdays(c.followup_at, 5) };
   }
+  if (SUPPORT_FORM.test(`${c.contact_page_url} ${c.notes}`) && c.form_status !== "captcha") return { key: "channel", reason: "Yalnız müşteri destek formu var; satış/B2B kanalı bulun" };
   if (c.form_status === "captcha") return { key: "blocked" };
   if (c.form_status === "error" || c.form_status === "phone_rejected") return { key: "fix" };
-  if (c.form_status === "no_form") return c.email_fallback ? { key: "email" } : { key: "channel" };
+  if (c.form_status === "no_form") return c.email_fallback ? { key: "email" } : { key: "channel", reason: "Form ve e-posta yok" };
   return { key: "fix" };
+}
+
+/** One-line status for a company card, e.g. "E-posta gönderildi · Yanıt bekleniyor". */
+export function statusLine(c: Contact): string {
+  const d = deliveryOf(c);
+  const a = nextAction(c);
+  if (c.reply === "yanit") return `${DELIVERY[d.key]} · Yanıt geldi`;
+  if (c.reply === "olumlu") return "Olumlu yanıt · Görüşme / teklif";
+  if (a.key === "closed") return `Kapandı${a.reason ? ` · ${a.reason}` : ""}`;
+  if (d.key === "none") return ACTIONS[a.key].label;
+  if (a.key === "verify") return "Gönderim belirsiz · İncele";
+  return `${DELIVERY[d.key]} · ${a.key === "followup" ? "Takip zamanı geldi" : "Yanıt bekleniyor"}`;
+}
+
+/** Today's list in sales order; inside a group, the most overdue / oldest first. */
+export function sortByPriority(cs: Contact[]): Contact[] {
+  const rank = (c: Contact) => ACTION_ORDER.indexOf(nextAction(c).key);
+  const when = (c: Contact) => nextAction(c).due || lastTouchAt(c) || c.imported_at;
+  return [...cs].sort((a, b) => rank(a) - rank(b) || when(a).localeCompare(when(b)));
 }
 
 export function groupByAction(cs: Contact[]): Record<ActionKey, Contact[]> {

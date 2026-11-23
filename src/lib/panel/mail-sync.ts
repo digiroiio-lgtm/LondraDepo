@@ -1,6 +1,6 @@
 import "server-only";
 import { GMAIL_USER, listMessages } from "@/lib/panel/gmail";
-import { classify, matchContact, metaOf, type InboxItem } from "@/lib/panel/mail-match";
+import { autoMatch, classify, isSystemMail, metaOf, rankContacts, type InboxItem } from "@/lib/panel/mail-match";
 import type { Contact } from "@/lib/panel/webcontact";
 import { kv, kvPipeline } from "@/lib/panel/kv";
 import { getContact, listContacts, updateContact } from "@/lib/panel/webcontact-store";
@@ -22,59 +22,105 @@ export async function lastSync(): Promise<string | null> {
 }
 
 export async function recentInbox(): Promise<InboxItem[]> {
-  return ((await kv<string[]>("LRANGE", INBOX, 0, 99)) ?? []).map((s) => JSON.parse(s) as InboxItem);
+  return readInbox();
 }
 
-export async function syncInbox(days = 30): Promise<{ scanned: number; fresh: number; replies: number; acks: number; unmatched: number; rematched: number }> {
+type SyncResult = { scanned: number; fresh: number; replies: number; acks: number; unmatched: number; suggested: number; rematched: number; system: number };
+
+/** Writes a matched email into the company's history (reply → "Yanıt geldi"; auto_ack → history only). */
+async function record(domain: string, as: "reply" | "auto_ack", it: Pick<InboxItem, "subject" | "snippet" | "fromEmail">) {
+  if (as === "reply") {
+    const current = await getContact(domain);
+    await updateContact(domain, current && current.reply === "yok" ? { reply: "yanit" } : {}, { type: "reply", note: `E-posta yanıtı: ${it.subject || it.snippet.slice(0, 80)} (${it.fromEmail}): ${it.snippet.slice(0, 200)}` });
+  } else {
+    await updateContact(domain, {}, { type: "auto_ack", note: `${it.subject} (${it.fromEmail})` });
+  }
+}
+
+/** Matches one inbox row: links it when certain, otherwise stores suggestions for the user. */
+async function place(it: InboxItem, contacts: Contact[]): Promise<"linked" | "suggested" | "none"> {
+  if (it.kind === "own" || it.kind === "system" || it.domain || it.ignored) return "none";
+  const ranked = rankContacts(metaOf(it), contacts);
+  const hit = autoMatch(ranked);
+  if (hit) {
+    const as = it.kind === "auto_ack" ? "auto_ack" : "reply";
+    await record(hit.domain, as, it);
+    Object.assign(it, { domain: hit.domain, company: hit.company, linked_by: "auto", linked_as: as, kind: as, suggest: undefined });
+    return "linked";
+  }
+  it.suggest = ranked.slice(0, 3);
+  return ranked.length ? "suggested" : "none";
+}
+
+export async function syncInbox(days = 30): Promise<SyncResult> {
   const [messages, contacts] = await Promise.all([listMessages(`in:inbox newer_than:${days}d -from:${GMAIL_USER}`, 100), listContacts()]);
   const seenFlags = messages.length ? ((await kvPipeline(messages.map((m) => ["SISMEMBER", SEEN, m.id]))) as number[]) : [];
   const fresh = messages.filter((_, i) => !seenFlags[i]).reverse(); // oldest first, so history stays in order
-  let replies = 0;
-  let acks = 0;
-  let unmatched = 0;
+  const r: SyncResult = { scanned: messages.length, fresh: fresh.length, replies: 0, acks: 0, unmatched: 0, suggested: 0, rematched: 0, system: 0 };
+
+  // Earlier rows that are still unlinked are tried again (e.g. after the WebContact log was imported).
+  const old = await readInbox();
+  for (const it of old) {
+    if (it.domain || it.ignored || it.kind === "own") continue;
+    // Rows stored before system mail was recognised are re-classified.
+    if (it.kind !== "system" && isSystemMail(it)) { it.kind = "system"; it.suggest = undefined; continue; }
+    if (it.kind === "system") continue;
+    if ((await place(it, contacts)) === "linked") r.rematched++;
+  }
+
   const items: InboxItem[] = [];
   for (const m of fresh) {
-    const kind = classify(m, GMAIL_USER);
-    const c = kind === "own" ? undefined : matchContact(m, contacts);
-    if (c) {
-      const current = (await getContact(c.domain)) ?? c;
-      if (kind === "reply") {
-        await updateContact(c.domain, current.reply === "yok" ? { reply: "yanit" } : {}, { type: "reply", note: `E-posta yanıtı: ${m.subject || m.snippet.slice(0, 80)} (${m.fromEmail})` });
-        replies++;
-      } else {
-        await updateContact(c.domain, {}, { type: "auto_ack", note: `${m.subject} (${m.fromEmail})` });
-        acks++;
-      }
-    } else if (kind !== "own") unmatched++;
-    items.push({ id: m.id, threadId: m.threadId, date: m.date, from: m.from, fromEmail: m.fromEmail, subject: m.subject, snippet: m.snippet.slice(0, 240), kind: !c && kind === "reply" ? "other" : kind, domain: c?.domain, company: c?.company });
+    const it: InboxItem = { id: m.id, threadId: m.threadId, date: m.date, from: m.from, fromEmail: m.fromEmail, subject: m.subject, snippet: m.snippet.slice(0, 240), kind: classify(m, GMAIL_USER) };
+    if (it.kind === "system") r.system++;
+    const res = await place(it, contacts);
+    if (res === "linked") {
+      if (it.linked_as === "reply") r.replies++;
+      else r.acks++;
+    } else if (res === "suggested") r.suggested++;
+    else if (it.kind !== "own" && it.kind !== "system") r.unmatched++;
+    if (!it.domain && it.kind === "reply") it.kind = "other";
+    items.push(it);
   }
-  const rematched = await rematchOld(contacts);
+  const merged = [...items.reverse(), ...old].slice(0, 200);
   const cmds: (string | number)[][] = [];
   if (fresh.length) cmds.push(["SADD", SEEN, ...fresh.map((m) => m.id)]);
-  for (const it of items) cmds.push(["LPUSH", INBOX, JSON.stringify(it)]);
-  cmds.push(["LTRIM", INBOX, 0, 199], ["SET", LAST, new Date().toISOString()]);
+  cmds.push(["DEL", INBOX]);
+  if (merged.length) cmds.push(["RPUSH", INBOX, ...merged.map((i) => JSON.stringify(i))]);
+  cmds.push(["SET", LAST, new Date().toISOString()]);
   await kvPipeline(cmds);
-  return { scanned: messages.length, fresh: fresh.length, replies, acks, unmatched, rematched };
+  return r;
 }
 
-/** Earlier emails that matched no company are tried again, e.g. after the WebContact log was imported. */
-async function rematchOld(contacts: Contact[]): Promise<number> {
-  const raw = (await kv<string[]>("LRANGE", INBOX, 0, 199)) ?? [];
-  const items = raw.map((s) => JSON.parse(s) as InboxItem);
-  let n = 0;
-  for (const it of items) {
-    if (it.domain || it.kind === "own") continue;
-    const c = matchContact(metaOf(it), contacts);
-    if (!c) continue;
-    const kind = it.kind === "other" ? "reply" : it.kind;
-    const current = (await getContact(c.domain)) ?? c;
-    if (kind === "reply") await updateContact(c.domain, current.reply === "yok" ? { reply: "yanit" } : {}, { type: "reply", note: `E-posta yanıtı: ${it.subject || it.snippet.slice(0, 80)} (${it.fromEmail})` });
-    else await updateContact(c.domain, {}, { type: "auto_ack", note: `${it.subject} (${it.fromEmail})` });
-    Object.assign(it, { kind, domain: c.domain, company: c.company });
-    n++;
-  }
-  if (n) await kvPipeline([["DEL", INBOX], ["RPUSH", INBOX, ...items.map((i) => JSON.stringify(i))]]);
-  return n;
+async function readInbox(): Promise<InboxItem[]> {
+  return ((await kv<string[]>("LRANGE", INBOX, 0, 199)) ?? []).map((s) => JSON.parse(s) as InboxItem);
+}
+async function writeInbox(items: InboxItem[]) {
+  const cmds: (string | number)[][] = [["DEL", INBOX]];
+  if (items.length) cmds.push(["RPUSH", INBOX, ...items.map((i) => JSON.stringify(i))]);
+  await kvPipeline(cmds);
+}
+
+/** The user links an email to a company by hand. Only the panel record changes; nothing is sent. */
+export async function linkInboxItem(id: string, domain: string, as: "reply" | "auto_ack"): Promise<{ company: string }> {
+  const [items, c] = await Promise.all([readInbox(), getContact(domain)]);
+  const it = items.find((i) => i.id === id);
+  if (!it) throw new Error("E-posta bulunamadı (listeden düşmüş olabilir)");
+  if (!c) throw new Error("Şirket bulunamadı");
+  if (it.domain === domain && it.linked_as === as) return { company: c.company };
+  await record(domain, as, it);
+  Object.assign(it, { domain, company: c.company, linked_by: "user", linked_as: as, kind: as, suggest: undefined, ignored: false });
+  await writeInbox(items);
+  return { company: c.company };
+}
+
+/** Hides an email from the inbox list and from the "unmatched" count. */
+export async function ignoreInboxItem(id: string) {
+  const items = await readInbox();
+  const it = items.find((i) => i.id === id);
+  if (!it) throw new Error("E-posta bulunamadı");
+  it.ignored = true;
+  it.suggest = undefined;
+  await writeInbox(items);
 }
 
 /** Daily send counter (a simple guard against accidental bulk sending). */

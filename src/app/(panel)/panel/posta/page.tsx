@@ -7,7 +7,7 @@ import { fmtDate, safe } from "@/lib/panel/safe";
 import { ADDRESS_TYPES, personalize, rankAddresses, recommendService, remainingPlaceholders, ukSignal } from "@/lib/panel/mail-compose";
 import { isSystemMail, type InboxItem } from "@/lib/panel/mail-match";
 import type { Contact } from "@/lib/panel/webcontact";
-import { contactTemplate } from "@/lib/panel/webcontact";
+import { contactTemplate, followUpTemplate, meetingTemplate } from "@/lib/panel/webcontact";
 import { getContact, listContacts } from "@/lib/panel/webcontact-store";
 import { segmentById } from "@/lib/panel/wizard";
 import { getLead } from "@/lib/panel/wizard-store";
@@ -16,6 +16,8 @@ import { ignoreMail, linkMail, sendEmail, syncNow } from "./actions";
 export const dynamic = "force-dynamic";
 
 type SP = Record<string, string | string[] | undefined>;
+type MailKindOut = "first" | "followup" | "meeting";
+const KIND_OUT: Record<MailKindOut, string> = { first: "İlk mesaj", followup: "Takip (5 iş günü)", meeting: "Görüşme linki" };
 const one = (v: string | string[] | undefined) => (Array.isArray(v) ? v[0] : v) ?? "";
 
 const KIND: Record<MailKind, [string, string]> = {
@@ -46,6 +48,7 @@ export default async function MailPage({ searchParams }: { searchParams: Promise
   const sp = await searchParams;
   const m = one(sp.m);
   const d = one(sp.d);
+  const t = one(sp.t);
   const db = kvConfigured();
   const on = gmailConfigured() && db;
 
@@ -70,13 +73,25 @@ export default async function MailPage({ searchParams }: { searchParams: Promise
   const leadR = c ? await safe(() => getLead(c.domain)) : null;
   const lead = leadR?.ok ? leadR.data : null;
   const facts = c ? { company: c.company, lang, contactName: lead?.contact_name, products: lead?.products, ukEvidence: lead?.uk_evidence, amazonUk: /^yes$/i.test(lead?.amazon_uk ?? "") } as const : null;
-  const body = c && facts ? personalize(c.message || contactTemplate(segmentById(c.segment)?.group, lang), facts) : "";
-  const todo = remainingPlaceholders(body);
-  const subject = c ? c.subject || (lang === "tr" ? "İngiltere'de depolama ve dağıtım: LondraDepo" : "UK warehousing and distribution: LondraDepo") : "";
-  const addresses = c ? rankAddresses(c.email_fallback) : [];
-  const to = addresses[0]?.email ?? "";
   const signal = ukSignal(lead);
   const service = recommendService(lead, segmentById(c?.segment ?? "")?.group);
+  const kind: MailKindOut = t === "followup" || t === "meeting" ? t : "first";
+  const baseSubject = c ? c.subject || (lang === "tr" ? "İngiltere'de depolama ve dağıtım: LondraDepo" : "UK warehousing and distribution: LondraDepo") : "";
+  // The person who replied is the best recipient for a meeting link or follow-up.
+  const replyFrom = c ? ([...eventsOf(c)].reverse().find((e) => e.type === "reply" && /@/.test(e.note ?? ""))?.note?.match(/\(([^()\s]+@[^()\s]+)\)/)?.[1] ?? "") : "";
+  const firstAt = c ? (c.channel === "email" ? c.emailed_at : c.sent_at || c.imported_at) : undefined;
+  const body = !c || !facts
+    ? ""
+    : kind === "followup"
+      ? followUpTemplate({ company: c.company, contactName: lead?.contact_name, lang, channel: c.channel === "email" ? "email" : "form", firstAt, service: service.service })
+      : kind === "meeting"
+        ? meetingTemplate({ company: c.company, contactName: lead?.contact_name, lang })
+        : personalize(c.message || contactTemplate(segmentById(c.segment)?.group, lang), facts);
+  const todo = remainingPlaceholders(body);
+  const subject = !c ? "" : kind === "first" ? baseSubject : c.thread_id || kind === "meeting" ? `Re: ${baseSubject}` : lang === "tr" ? `Kısa hatırlatma: ${baseSubject}` : `Quick follow-up: ${baseSubject}`;
+  const addresses = c ? rankAddresses([replyFrom, c.email_fallback].filter(Boolean).join(", ")) : [];
+  if (replyFrom) addresses.sort((a, b) => (a.email === replyFrom.toLowerCase() ? -1 : b.email === replyFrom.toLowerCase() ? 1 : 0));
+  const to = addresses[0]?.email ?? "";
   // Rows stored before system mail was recognised are shown as system right away.
   const shownInbox = inbox.filter((i) => !i.ignored).map((i) => (!i.domain && i.kind !== "own" && isSystemMail(i) ? { ...i, kind: "system" as const, suggest: undefined } : i));
   const withEmail = contacts.filter((x) => x.email_fallback);
@@ -135,8 +150,16 @@ export default async function MailPage({ searchParams }: { searchParams: Promise
           </label>
           <button className="pnl-btn">Hazırla</button>
         </form>
+        {c && (
+          <nav aria-label="E-posta türü" className="pnl-segment mb-4">
+            {(Object.keys(KIND_OUT) as MailKindOut[]).map((k) => (
+              <a key={k} href={`/panel/posta?d=${encodeURIComponent(c.domain)}${k === "first" ? "" : `&t=${k}`}#yaz`} aria-current={kind === k ? "true" : undefined}>{KIND_OUT[k]}</a>
+            ))}
+          </nav>
+        )}
         <form action={sendEmail} className="grid gap-3">
           <input type="hidden" name="d" value={c?.domain ?? ""} />
+          <input type="hidden" name="kind" value={kind} />
           <label className="text-sm">Alıcı<input name="to" type="email" defaultValue={to} placeholder="info@firma.com" className="pnl-input" /></label>
           <label className="text-sm">Konu<input name="subject" required defaultValue={subject} maxLength={200} className="pnl-input" /></label>
           <label className="text-sm">Mesaj (köşeli parantezleri doldurun, ilk cümleyi şirkete göre kişiselleştirin)

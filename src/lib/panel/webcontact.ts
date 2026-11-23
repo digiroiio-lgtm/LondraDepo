@@ -3,6 +3,7 @@
  * message from Yusuf Barış. Pure functions only. Reuses the customer wizard's segments, research brief and
  * parser so both wizards share one prospect list. Only verified facts; no CAPTCHA bypass; no email sending.
  */
+import { bookingUrl } from "@/lib/booking";
 import { rankAddresses, recommendService, ukSignal } from "@/lib/panel/mail-compose";
 import { COLUMNS, POSITIONING_EN, buildPrompt, normDomain, segmentById, type Group, type Lead, type Target } from "@/lib/panel/wizard";
 
@@ -190,6 +191,78 @@ ${SIGNATURE}`;
 Would a 15-minute call about your UK operation be useful?
 
 If this isn't relevant, a short reply is enough and we won't write again.
+
+${SIGNATURE}`;
+}
+
+// ---------- Follow-up and meeting emails (sent from the panel) ----------
+
+const dateText = (iso: string | undefined, lang: "tr" | "en") => {
+  if (!iso) return "";
+  const d = new Date(iso.includes("T") ? iso : iso.replace(" ", "T"));
+  if (Number.isNaN(d.getTime())) return "";
+  return new Intl.DateTimeFormat(lang === "tr" ? "tr-TR" : "en-GB", { day: "numeric", month: "long", timeZone: "Europe/London" }).format(d);
+};
+
+/** Calendly link for the 15-minute call, tagged with where it was sent from. */
+export const meetingLink = (lang: "tr" | "en", source: string) => bookingUrl(lang, source).replace("utm_medium=website", "utm_medium=email");
+
+/**
+ * Short follow-up after 5 working days without a reply: refers to the first message and its channel,
+ * repeats one concrete offer, gives the booking link and keeps the opt-out line.
+ */
+export function followUpTemplate(o: { company: string; contactName?: string; lang: "tr" | "en"; channel: "form" | "email"; firstAt?: string; service?: string }): string {
+  const first = (o.contactName ?? "").trim().split(" ")[0];
+  const when = dateText(o.firstAt, o.lang);
+  if (o.lang === "tr") {
+    return `Merhaba ${first || `${o.company} ekibi`},
+
+${when ? `${when} tarihinde ` : ""}${o.channel === "form" ? "web sitenizdeki iletişim formundan" : "e-postayla"} İngiltere'de depolama ve dağıtım konusunda yazmıştım; kısa bir hatırlatma olarak tekrar yazıyorum.
+
+Essex'teki depomuzda (London Gateway limanına yaklaşık 13 mil) stoğunuzu tutup İngiltere içindeki siparişlerinizi yerelden hazırlayıp gönderebiliriz.${o.service ? ` Sizin için uygun başlangıç: ${o.service.toLocaleLowerCase("tr")}.` : ""} Palet depolama haftalık £3.50 + KDV'den başlar; tek paletle başlanabilir.
+
+Uygunsa 15 dakikalık görüşme için size uyan saati buradan seçebilirsiniz: ${meetingLink("tr", "followup_email")}
+
+Şu an gündeminizde değilse kısa bir yanıt yeterli; tekrar yazmayız.
+
+${SIGNATURE}`;
+  }
+  return `Hello ${first || `${o.company} team`},
+
+I wrote ${o.channel === "form" ? "through the contact form on your website" : "by email"}${when ? ` on ${when}` : ""} about UK warehousing and distribution, so here is a short follow-up.
+
+We can hold your stock at our Essex warehouse (about 13 miles from London Gateway) and fulfil your UK orders locally.${o.service ? ` A good starting point for you: ${o.service}.` : ""} Pallet storage starts from £3.50 + VAT per week, and you can start with a single pallet.
+
+If useful, you can pick a time for a 15-minute call here: ${meetingLink("en", "followup_email")}
+
+If this isn't relevant right now, a short reply is enough and we won't write again.
+
+${SIGNATURE}`;
+}
+
+/** Reply to a positive answer: booking link plus the three facts that make the call useful. */
+export function meetingTemplate(o: { company: string; contactName?: string; lang: "tr" | "en" }): string {
+  const first = (o.contactName ?? "").trim().split(" ")[0];
+  if (o.lang === "tr") {
+    return `Merhaba ${first || `${o.company} ekibi`},
+
+Dönüşünüz için teşekkür ederiz. 15 dakikalık görüşme için size uyan saati buradan seçebilirsiniz: ${meetingLink("tr", "meeting_email")}
+
+Görüşmeden önce paylaşabilirseniz hazırlıklı geliriz:
+- ürün türü ve ambalaj (palet / koli),
+- tahmini palet sayısı veya aylık sipariş adedi,
+- ürünlerin nereden ve hangi sıklıkla geleceği.
+
+${SIGNATURE}`;
+  }
+  return `Hello ${first || `${o.company} team`},
+
+Thank you for getting back to us. You can pick a time for a 15-minute call here: ${meetingLink("en", "meeting_email")}
+
+If you can share these beforehand, we will come prepared:
+- product type and packaging (pallets / cartons),
+- estimated pallets or monthly orders,
+- where the goods ship from and how often.
 
 ${SIGNATURE}`;
 }

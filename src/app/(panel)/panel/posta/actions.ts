@@ -28,6 +28,7 @@ export async function syncNow() {
 export async function sendEmail(f: FormData) {
   const d = String(f.get("d") ?? "");
   const test = f.get("mode") === "test";
+  const kind = String(f.get("kind") ?? "first");
   let msg: string;
   let ok = false;
   try {
@@ -50,17 +51,20 @@ export async function sendEmail(f: FormData) {
       const res = await sendMail({ to, subject, body, threadId: c?.thread_id || undefined });
       await countSend();
       if (c) {
-        await updateContact(d, { channel: "email", emailed_at: new Date().toISOString(), thread_id: res.threadId }, { type: "email_sent", note: `Panelden: ${subject} → ${to}` });
+        const now = new Date().toISOString();
+        if (kind === "followup") await updateContact(d, { channel: "email", emailed_at: now, thread_id: res.threadId, followup_at: now }, { type: "followup", note: `Takip e-postası: ${subject} → ${to}` });
+        else if (kind === "meeting") await updateContact(d, { thread_id: res.threadId }, { type: "email_sent", note: `Görüşme linki gönderildi → ${to}` });
+        else await updateContact(d, { channel: "email", emailed_at: now, thread_id: res.threadId }, { type: "email_sent", note: `Panelden: ${subject} → ${to}` });
         const l = await getLead(d);
         if (l && (l.status === "yeni" || l.status === "apollo")) await updateLead(d, { status: "iletisim" });
       }
       ok = true;
-      msg = `ok:E-posta ${to} adresine gönderildi${c ? ` ve ${c.company} geçmişine işlendi` : ""}.`;
+      msg = `ok:${kind === "followup" ? "Takip e-postası" : kind === "meeting" ? "Görüşme linki" : "E-posta"} ${to} adresine gönderildi${c ? ` ve ${c.company} geçmişine işlendi` : ""}.`;
     }
   } catch (e) {
     msg = e instanceof Error ? e.message : "hata";
   }
-  back(msg, ok ? "gelen" : "yaz", ok || !d ? "" : `d=${encodeURIComponent(d)}`);
+  back(msg, ok ? "gelen" : "yaz", ok || !d ? "" : `d=${encodeURIComponent(d)}${kind !== "first" ? `&t=${kind}` : ""}`);
 }
 
 /** Links an inbox email to a company (panel record only; nothing is sent). */

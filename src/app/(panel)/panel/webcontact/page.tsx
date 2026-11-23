@@ -113,10 +113,13 @@ function StageButtons({ c, ret }: { c: Contact; ret: string }) {
   const next: [Reply, string][] = c.reply === "yanit" ? [["olumlu", "Olumlu → Görüşme planla"]] : c.reply === "olumlu" ? [["gorusme", "Görüşme yapıldı"]] : c.reply === "gorusme" ? [["teklif", "Teklif gönderildi"]] : [];
   if (!next.length) return null;
   return (
-    <form action={changeReply} className="flex flex-wrap gap-1.5 mb-2">
-      <Hidden d={c.domain} ret={ret} />
-      {next.map(([v, l]) => <button key={v} name="reply" value={v} className="pnl-btn-primary !py-1.5 !px-3 text-xs">{l}</button>)}
-    </form>
+    <div className="flex flex-wrap gap-1.5 mb-2">
+      {c.reply === "olumlu" && <a href={`/panel/posta?d=${encodeURIComponent(c.domain)}&t=meeting#yaz`} className="pnl-btn-primary !py-1.5 !px-3 text-xs">Görüşme linkini gönder</a>}
+      <form action={changeReply} className="flex flex-wrap gap-1.5">
+        <Hidden d={c.domain} ret={ret} />
+        {next.map(([v, l]) => <button key={v} name="reply" value={v} className={`${c.reply === "olumlu" ? "pnl-btn" : "pnl-btn-primary"} !py-1.5 !px-3 text-xs`}>{l}</button>)}
+      </form>
+    </div>
   );
 }
 
@@ -392,14 +395,17 @@ function EmailList({ list, ret }: { list: Contact[]; ret: string }) {
 function FollowList({ list, ret }: { list: Contact[]; ret: string }) {
   return (
     <>
-      <p className="text-sm text-[var(--pnl-muted)] mb-3">Mesaj en az 5 iş günü önce ulaştı, yanıt yok. Apollo&apos;da ertesi iş günü için takip görevi açılır (kredi harcamaz) ya da kısa bir e-posta/telefonla takip edip not düşebilirsiniz.</p>
+      <p className="text-sm text-[var(--pnl-muted)] mb-3">Mesaj en az 5 iş günü önce ulaştı, yanıt yok. Adresi kayıtlı şirketlere &quot;Takip e-postası hazırla&quot; ile kısa, kişiselleştirilmiş bir takip (görüşme linkiyle) panelden gider ve geçmişe işlenir. Adres yoksa Apollo&apos;da takip görevi açın ya da telefonla takip edip not düşün.</p>
       <Table
         head={["Şirket", "Ulaşıldı", "Yedek e-posta", "Not / yanıt"]}
         rows={list.slice(0, 50).map((c) => [
           <Company key="c" c={c} />,
           <Where key="w" c={c} />,
           <div key="e" className="text-xs min-w-[9rem]">{c.email_fallback || "—"}<div className="mt-1"><History c={c} /></div></div>,
-          <div key="n"><ReplyForm c={c} ret={ret} /><NoteForm c={c} ret={ret} /></div>,
+          <div key="n" className="min-w-[12rem]">
+            {c.email_fallback || c.thread_id ? <a href={`/panel/posta?d=${encodeURIComponent(c.domain)}&t=followup#yaz`} className="pnl-btn-primary !py-1.5 !px-3 text-xs inline-block mb-2">Takip e-postası hazırla</a> : <span className="text-xs text-[var(--pnl-muted)] block mb-2">E-posta adresi yok</span>}
+            <ReplyForm c={c} ret={ret} /><NoteForm c={c} ret={ret} />
+          </div>,
         ])}
       />
       <form action={followUp} className="mt-3">

@@ -5,13 +5,13 @@ import { kvConfigured } from "@/lib/panel/kv";
 import { fmtDate, safe } from "@/lib/panel/safe";
 import {
   APPROVAL, FORM_STATUSES, LOG_COLUMNS, PHONE_FORMATS, REPLIES, SENDER, SIGNATURE,
-  buildContactPromptFromLeads, buildContactPromptResearch, contactTemplate, followUpDue, needsManual, workdaysSince,
-  type Approval, type Contact, type FormStatus, type Reply,
+  BLOCK_TYPES, buildBlockedPrompt, buildContactPromptFromLeads, buildContactPromptResearch, contactTemplate, followUpDue, isBlocked, needsManual, workdaysSince,
+  type Approval, type BlockType, type Contact, type FormStatus, type Reply,
 } from "@/lib/panel/webcontact";
 import { listContactRuns, listContacts } from "@/lib/panel/webcontact-store";
 import { TEMPLATE_GROUPS, segmentById, targetFrom } from "@/lib/panel/wizard";
 import { allDomains, listLeads } from "@/lib/panel/wizard-store";
-import { changeReply, followUp, importLog, markSent } from "./actions";
+import { changeReply, followUp, importLog, markSent, markSkipped } from "./actions";
 
 export const dynamic = "force-dynamic";
 
@@ -74,11 +74,14 @@ export default async function WebContactPage({ searchParams }: { searchParams: P
   const touched = new Set(contacts.map((c) => c.domain));
   const candidates = leads.filter((l) => l.status === "yeni" && l.tier !== "C" && !touched.has(l.domain)).sort((a, b) => b.priority - a.priority);
 
+  const blocked = contacts.filter(isBlocked);
   let prompt = "";
   let chosen: typeof candidates = [];
   if (go === "a") {
     chosen = candidates.slice(0, n);
     prompt = chosen.length ? buildContactPromptFromLeads(chosen, { count: n, approval: ap }) : "";
+  } else if (go === "c") {
+    prompt = blocked.length ? buildBlockedPrompt(blocked.slice(0, n)) : "";
   } else if (go === "b") {
     const known = db ? await safe(allDomains) : null;
     prompt = buildContactPromptResearch(t, [...new Set([...(known?.ok ? known.data : []), ...touched])], { count: n, approval: ap });
@@ -102,9 +105,10 @@ export default async function WebContactPage({ searchParams }: { searchParams: P
       </p>
 
       {db && contactsR?.ok && (
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+        <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 mb-6">
           <Stat label="Gönderilen form" value={contacts.filter((c) => c.form_status === "sent").length} hint={`toplam ${contacts.length} şirket denendi`} />
-          <Stat label="Elle gönderilecek" value={manual.length} hint="CAPTCHA veya hata" />
+          <Stat label="Doğrulama engeli" value={blocked.length} hint="CAPTCHA / güvenlik kodu" />
+          <Stat label="Elle gönderilecek" value={manual.length} hint="Telefon formatı veya hata" />
           <Stat label="Yanıt geldi" value={contacts.filter((c) => c.reply === "yanit" || c.reply === "olumlu").length} hint={`olumlu: ${contacts.filter((c) => c.reply === "olumlu").length}`} />
           <Stat label="Takip zamanı gelen" value={due.length} hint="5+ iş günü, yanıt yok" />
         </div>
@@ -133,7 +137,8 @@ export default async function WebContactPage({ searchParams }: { searchParams: P
       </Card>
 
       {go && (
-        <Card title="2. Görev metnini ajana ver">
+        <Card title={go === "c" ? "2. Doğrulama engelleri: birlikte gönderme görev metni" : "2. Görev metnini ajana ver"}>
+          <div id="gorev" />
           {go === "a" && chosen.length > 0 && (
             <details className="mb-3">
               <summary className="cursor-pointer text-sm">Seçilen {chosen.length} şirket</summary>
@@ -159,7 +164,7 @@ export default async function WebContactPage({ searchParams }: { searchParams: P
       <Card title="3. Ajanın kaydını içeri al">
         {db ? (
           <form action={importLog} className="grid gap-3">
-            <input type="hidden" name="mode" value={go === "b" ? "b" : "a"} />
+            <input type="hidden" name="mode" value={go === "b" ? "b" : go === "c" ? "c" : "a"} />
             {go === "b" && (
               <>
                 <input type="hidden" name="region" value={t.region} />
@@ -177,10 +182,68 @@ export default async function WebContactPage({ searchParams }: { searchParams: P
         ) : <p className="text-sm text-slate-500">Önce veritabanını bağlayın.</p>}
       </Card>
 
+      {db && contactsR?.ok && (
+        <Card
+          title={`Doğrulama engelleri: CAPTCHA / güvenlik kodu (${blocked.length})`}
+          action={blocked.length > 0 ? (
+            <div className="flex flex-wrap gap-2">
+              <a href={`/panel/webcontact?go=c&n=${Math.min(30, Math.max(10, blocked.length))}#gorev`} className="pnl-btn-primary">Birlikte gönderme görev metni</a>
+              <a href="/api/panel/webcontact/csv?f=blocked" className="pnl-btn-ghost">CSV indir</a>
+            </div>
+          ) : undefined}
+        >
+          <div id="engel" />
+          {blocked.length === 0 ? (
+            <p className="text-sm text-[var(--pnl-muted)]">Şu an doğrulamaya takılan form yok. Ajan CAPTCHA, resimdeki güvenlik kodu, Cloudflare kontrolü veya SMS kodu gördüğünde formu burada saklar; hiçbir kayıt kaybolmaz.</p>
+          ) : (
+            <>
+              <p className="text-sm text-[var(--pnl-muted)] mb-3">
+                Ajan bu formları doldurdu ama doğrulama yüzünden göndermedi. &quot;Birlikte gönderme görev metni&quot; ile ajan her formu yeniden doldurur, doğrulama adımında durup kontrolü size verir; siz çözünce gönderir. Elle de gönderebilirsiniz: formu açın, mesajı kopyalayın, gönderin ve &quot;Gönderdim&quot;e basın.
+              </p>
+              <div className="flex flex-wrap gap-1.5 mb-4">
+                {Object.entries(BLOCK_TYPES).map(([k, v]) => {
+                  const n2 = blocked.filter((c) => (c.block_type || "other") === k).length;
+                  return n2 ? <span key={k} className="pnl-chip">{v}: {n2}</span> : null;
+                })}
+              </div>
+              <Table
+                head={["Şirket", "Nerede takıldı", "Form ve deneme", "Mesaj", "İşlem"]}
+                rows={blocked.slice(0, 100).map((c) => [
+                  <div key="c" className="min-w-[10rem] text-sm">
+                    <div className="font-semibold">{link(c.website, c.company) ?? c.company}</div>
+                    <div className="text-xs text-[var(--pnl-muted)]">{[c.country, segmentById(c.segment)?.label].filter(Boolean).join(" · ")}</div>
+                  </div>,
+                  <div key="b" className="min-w-[12rem] text-xs">
+                    <span className="inline-block rounded-full px-2 py-0.5 bg-amber-100 text-amber-800">{BLOCK_TYPES[(c.block_type || "other") as BlockType] ?? c.block_type}</span>
+                    {c.block_detail && <div className="mt-1">{c.block_detail}</div>}
+                    {c.notes && <div className="mt-1 text-[var(--pnl-muted)]">{c.notes}</div>}
+                  </div>,
+                  <div key="f" className="min-w-[8rem] text-xs">
+                    <div>{link(c.contact_page_url || c.website, "Formu aç ↗")}</div>
+                    <div className="mt-1 text-[var(--pnl-muted)]">{fmtDate(c.imported_at)}</div>
+                    <div className="mt-1 text-[var(--pnl-muted)]">{c.attempts ?? 1}. deneme · {c.language === "tr" ? "TR" : "EN"}</div>
+                  </div>,
+                  <details key="m" className="min-w-[14rem] text-xs">
+                    <summary className="cursor-pointer">Mesajı göster</summary>
+                    <textarea id={`bm-${c.domain}`} readOnly rows={6} value={c.message || contactTemplate(segmentById(c.segment)?.group, c.language === "tr" ? "tr" : "en")} className="pnl-input text-xs mt-2" />
+                    <div className="mt-2"><CopyButton target={`bm-${c.domain}`} label="Mesajı kopyala" /></div>
+                  </details>,
+                  <div key="a" className="flex flex-col gap-2 min-w-[7rem]">
+                    <form action={markSent}><input type="hidden" name="d" value={c.domain} /><input type="hidden" name="from" value="engel" /><button className="pnl-btn w-full">Gönderdim</button></form>
+                    <form action={markSkipped}><input type="hidden" name="d" value={c.domain} /><button className="pnl-btn-ghost w-full">Vazgeç</button></form>
+                  </div>,
+                ])}
+              />
+              <PhoneChips />
+            </>
+          )}
+        </Card>
+      )}
+
       {db && manual.length > 0 && (
         <Card title={`Elle gönderilecekler (${manual.length})`}>
           <div id="elle" />
-          <p className="text-sm text-slate-600 mb-3">Form CAPTCHA istediği veya hata verdiği için ajan göndermedi. Formu açın, mesajı kopyalayıp yapıştırın, gönderin ve &quot;Gönderdim&quot;e basın.</p>
+          <p className="text-sm text-slate-600 mb-3">Telefon formatı kabul edilmediği veya site hata verdiği için ajan göndermedi. Formu açın, mesajı kopyalayıp yapıştırın, gönderin ve &quot;Gönderdim&quot;e basın.</p>
           <div className="grid gap-4">
             {manual.slice(0, 30).map((c) => (
               <div key={c.domain} className="pnl-card p-4 !shadow-none">
@@ -290,8 +353,8 @@ export default async function WebContactPage({ searchParams }: { searchParams: P
       {db && runsR?.ok && runsR.data.length > 0 && (
         <Card title="Son çalışmalar">
           <Table
-            head={["Tarih", "Kaynak", "Gönderildi", "Elle", "Formsuz", "Atlandı", "Tekrar"]}
-            rows={runsR.data.map((r) => [fmtDate(r.at), r.mode === "a" ? "Müşteri listesi" : "Yeni araştırma", r.sent, r.manual, r.noForm, r.skipped, r.duplicates])}
+            head={["Tarih", "Kaynak", "Gönderildi", "Doğrulama", "Elle", "Formsuz", "Atlandı", "Tekrar"]}
+            rows={runsR.data.map((r) => [fmtDate(r.at), r.mode === "a" ? "Müşteri listesi" : r.mode === "c" ? "Doğrulama engelleri" : "Yeni araştırma", r.sent, r.blocked ?? "—", r.manual, r.noForm, r.skipped, r.duplicates])}
           />
         </Card>
       )}

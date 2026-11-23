@@ -159,6 +159,21 @@ Bazı formlar +44'lü İngiltere numarasını kabul etmez: "+" işaretine, boşl
    - zorunluysa formu göndermez ve "Telefon formatı kabul edilmedi" olarak işaretler. Bu formlar "Elle gönderilecekler" listesine düşer. Listede her biçim tek tıkla kopyalanabilir.
 5. Yalnızca Türkiye numarası kabul eden zorunlu alanlara numara uydurmaz.
 
+### Doğrulama engelleri (CAPTCHA / güvenlik kodu)
+Ajan, doğrulama isteyen bir formda formu doldurur ama göndermez. Doğrulama şunlardan biri olabilir: reCAPTCHA, hCaptcha, Cloudflare kontrolü, resimdeki güvenlik kodu, matematik sorusu, SMS/e-posta kodu ya da üyelik şartı. Ajan formu kaydeder ve kayıt şu bilgileri içerir:
+- engelin türü;
+- nerede takıldığı;
+- hazır mesaj;
+- form adresi;
+- kaçıncı deneme olduğu.
+
+Bu formlar panelde **Doğrulama engelleri** listesinde ayrıca tutulur; hiçbir kayıt kaybolmaz. Listedeki seçenekler:
+1. **Birlikte gönderme görev metni:** ajan her formu yeniden doldurur. Doğrulama adımında durur ve tarayıcının kontrolünü size verir. Siz doğrulamayı çözünce formu gönderir ve teyidi kaydeder. Her form için onayınızı ister.
+2. **CSV indir:** yalnız engellenen formların listesi.
+3. **Gönderdim / Vazgeç:** formu elle gönderdiyseniz ya da bırakmak istiyorsanız işaretleyin.
+
+Aynı şirket tekrar içe aktarılırsa deneme sayısı artar. Form gönderilene kadar şirket listede kalır.
+
 ### Ajanın uyduğu kurallar
 - CAPTCHA'yı geçmeye çalışmaz. Formu göndermez, "elle gönder" olarak işaretler.
 - E-posta göndermez. Formu olmayan şirketin yalnızca e-posta adresini kaydeder.

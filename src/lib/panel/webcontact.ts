@@ -25,7 +25,7 @@ londradepo.com`;
 
 export const FORM_STATUSES = {
   sent: "Gönderildi",
-  captcha: "CAPTCHA: elle gönder",
+  captcha: "Doğrulama engeli (CAPTCHA / güvenlik kodu)",
   error: "Hata: elle gönder",
   phone_rejected: "Telefon formatı kabul edilmedi: elle gönder",
   no_form: "Form yok (yalnız e-posta)",
@@ -59,9 +59,23 @@ export const APPROVAL = {
 } as const;
 export type Approval = keyof typeof APPROVAL;
 
+/** What stopped the agent on a "captcha" row, so blocked forms can be worked through later by hand. */
+export const BLOCK_TYPES = {
+  recaptcha: "Google reCAPTCHA (\"Ben robot değilim\" / resim seçme)",
+  recaptcha_invisible: "Görünmez reCAPTCHA v3 (gönderim reddedildi)",
+  hcaptcha: "hCaptcha",
+  turnstile: "Cloudflare Turnstile / güvenlik kontrolü",
+  image_code: "Resimdeki güvenlik kodu (harf/rakam)",
+  math: "Matematik / soru doğrulaması",
+  otp: "E-posta veya SMS doğrulama kodu",
+  login: "Giriş / üyelik gerekiyor",
+  other: "Diğer doğrulama",
+} as const;
+export type BlockType = keyof typeof BLOCK_TYPES;
+
 export const LOG_COLUMNS = [
   "company", "website", "segment", "country", "contact_page_url", "form_status", "language", "subject", "message",
-  "sent_at", "confirmation_text", "email_fallback", "phone_used", "notes", "reason",
+  "sent_at", "confirmation_text", "email_fallback", "phone_used", "notes", "block_type", "block_detail", "reason",
 ] as const;
 
 export type Contact = {
@@ -79,6 +93,9 @@ export type Contact = {
   confirmation_text: string;
   phone_used: string;
   notes: string;
+  block_type: string;
+  block_detail: string;
+  attempts?: number;
   email_fallback: string;
   reason: string;
   reply: Reply;
@@ -173,7 +190,12 @@ ${PHONE_FORMATS.map((f, i) => `      ${i + 1}) ${f.value}  — ${f.when}`).join(
    f. Gönder'e bastıktan sonra genel bir hata çıkarsa ("An error occurred", "Bir hata oluştu") bir kez daha sıradaki telefon biçimiyle dene; yine olursa form_status = error yaz ve hata metnini notes sütununa kopyala.
    g. Kabul edilen biçimi phone_used sütununa yaz; denediğin ama reddedilen biçimleri kısaca notes sütununa yaz.
 6. Zorunlu gizlilik/KVKK/şartlar onay kutusunu işaretleyebilirsin. Bülten, pazarlama veya üçüncü taraf onay kutularını İŞARETLEME.
-7. CAPTCHA, "robot değilim" veya benzeri doğrulama çıkarsa geçmeye ÇALIŞMA: gönderme, form_status = captcha yaz, mesajı yine message sütununa koy (elle göndereceğiz) ve sonraki şirkete geç.
+7. CAPTCHA, "robot değilim", resimdeki güvenlik kodu, matematik sorusu, Cloudflare kontrolü, SMS/e-posta kodu veya üyelik şartı gibi bir doğrulama çıkarsa geçmeye ÇALIŞMA ve çözmeye uğraşma:
+   - Formun diğer alanlarını ve mesajı doldurmuş olsan bile Gönder'e basma.
+   - form_status = captcha yaz, mesajı yine message sütununa koy (sonra birlikte elle göndereceğiz).
+   - block_type sütununa şunlardan birini yaz: ${Object.keys(BLOCK_TYPES).join(", ")}.
+   - block_detail sütununa nerede takıldığını kısaca yaz (ör. "Gönder düğmesinin üstünde reCAPTCHA kutusu", "Formun altında 5 haneli resim kodu", "Gönderince 'spam şüphesi' hatası").
+   - Sonraki şirkete geç.
 8. Form yoksa yalnızca sayfada yayımlanan kurumsal e-posta adresini email_fallback sütununa yaz, form_status = no_form. E-POSTA GÖNDERME.
 9. Her şirkete yalnızca BİR kez gönder. Gönderimden sonra çıkan teyit mesajını confirmation_text sütununa kopyala.
 10. Bu çalışmada en fazla ${o.count} form gönder.
@@ -199,6 +221,7 @@ Bitince TEK bir CSV kod bloğu ver (ayrıca indirilebilir .csv dosyası da oluş
 ${[...new Set([...LOG_COLUMNS, ...extra])].join(",")}
 Kurallar:
 - form_status: sent, captcha, phone_rejected, error, no_form, no_solicitation veya skipped.
+- block_type / block_detail: yalnızca captcha satırlarında; türü ve nerede takıldığın.
 - phone_used: formda kabul edilen telefon biçimi (boş bıraktıysan "boş").
 - notes: hata mesajı, reddedilen telefon biçimleri veya kısa açıklama.
 - language: tr veya en.
@@ -253,7 +276,11 @@ export function toContact(rec: Record<string, string>, runId: string, at: string
   if (website && !/^https?:\/\//i.test(website)) website = `https://${website}`;
   const domain = normDomain(website) || normDomain(get("contact_page_url"));
   if (!domain) return { error: `${get("company") || "?"}: web sitesi yok` };
-  const st = get("form_status").toLowerCase().replace(/[\s-]+/g, "_") as FormStatus;
+  let st = get("form_status").toLowerCase().replace(/[\s-]+/g, "_") as FormStatus;
+  const rawBlock = get("block_type").toLowerCase().replace(/[\s-]+/g, "_");
+  const hint = `${rawBlock} ${get("block_detail")} ${get("notes")}`.toLowerCase();
+  if (st !== "captcha" && st !== "sent" && /captcha|güvenlik kodu|guvenlik kodu|security code|robot/.test(hint)) st = "captcha";
+  const blockType: string = st !== "captcha" ? "" : rawBlock in BLOCK_TYPES ? rawBlock : guessBlock(hint);
   return {
     domain,
     company: get("company") || domain,
@@ -270,11 +297,54 @@ export function toContact(rec: Record<string, string>, runId: string, at: string
     email_fallback: get("email_fallback"),
     phone_used: get("phone_used").slice(0, 40),
     notes: get("notes").slice(0, 500),
+    block_type: blockType,
+    block_detail: get("block_detail").slice(0, 300),
     reason: get("reason").slice(0, 600),
     reply: "yok",
     run_id: runId,
     imported_at: at,
   };
+}
+
+/** Best guess of the block type from the agent's words when it did not use one of the codes. */
+function guessBlock(t: string): BlockType {
+  if (/hcaptcha/.test(t)) return "hcaptcha";
+  if (/turnstile|cloudflare/.test(t)) return "turnstile";
+  if (/invisible|görünmez|v3|spam/.test(t)) return "recaptcha_invisible";
+  if (/recaptcha|robot/.test(t)) return "recaptcha";
+  if (/güvenlik kodu|guvenlik kodu|security code|resim|image|kod/.test(t)) return "image_code";
+  if (/matemat|math|toplam|soru/.test(t)) return "math";
+  if (/sms|otp|doğrulama kodu|verification code/.test(t)) return "otp";
+  if (/login|giriş|üye|sign in/.test(t)) return "login";
+  return "other";
+}
+
+export const isBlocked = (c: Contact) => c.form_status === "captcha";
+
+/**
+ * Task text for working through blocked forms together: the agent fills each form, stops at the
+ * verification step and hands control to the user, then submits after the user has solved it.
+ */
+export function buildBlockedPrompt(cs: Contact[]): string {
+  const rows = cs.map((c, i) => `${i + 1}. ${c.company} — form: ${c.contact_page_url || c.website}
+   Engel: ${BLOCK_TYPES[(c.block_type || "other") as BlockType] ?? c.block_type}${c.block_detail ? ` · ${c.block_detail}` : ""}
+   Dil: ${c.language === "tr" ? "Türkçe" : "İngilizce"}
+   Gönderilecek mesaj (aynen kullan, gerekirse yalnızca karakter sınırına göre kısalt):
+${(c.message || "—").split("\n").map((l) => `   | ${l}`).join("\n")}`);
+  return `GÖREV: Aşağıdaki ${cs.length} şirketin iletişim formunda daha önce bir doğrulama (CAPTCHA / güvenlik kodu) yüzünden takıldık. Şimdi birlikte, tek tek ve benim onayımla göndereceğiz.
+
+## Çalışma şekli (her şirket için)
+1. Form sayfasını aç ve alanları LondraDepo bilgileriyle doldur (kurallar aşağıda), mesajı yapıştır.
+2. Doğrulama adımına gelince DUR. Doğrulamayı kendin çözmeye ÇALIŞMA. Tarayıcının kontrolünü bana ver ve "Doğrulamayı çözüp bana haber ver" de.
+3. Ben çözüp haber verince alanların hâlâ dolu olduğunu kontrol et, Gönder'e bas ve teyit mesajını kaydet.
+4. Teyit gelmezse ya da yeni bir doğrulama çıkarsa bana sor; yine olmuyorsa form_status = captcha bırak ve block_detail'e ne olduğunu yaz.
+5. Sonraki şirkete geçmeden önce bana kısa bir özet ver.
+
+## Şirketler
+${rows.join("\n\n")}
+
+${fieldRules({ count: cs.length, approval: "each" })}
+${output([])}`;
 }
 
 /** Working days between a date and now (weekends excluded). */
@@ -291,15 +361,15 @@ export function workdaysSince(iso: string): number {
   return n;
 }
 
-export const needsManual = (c: Contact) => c.form_status === "captcha" || c.form_status === "error" || c.form_status === "phone_rejected";
+export const needsManual = (c: Contact) => c.form_status === "error" || c.form_status === "phone_rejected";
 export const followUpDue = (c: Contact) => c.form_status === "sent" && c.reply === "yok" && !c.followup_at && workdaysSince(c.sent_at || c.imported_at) >= 5;
 
 export function contactsToCsv(cs: Contact[]): string {
-  const head = [...LOG_COLUMNS, "reply", "imported_at", "followup_at"];
+  const head = [...LOG_COLUMNS, "block_type_label", "attempts", "reply", "imported_at", "followup_at"];
   const esc = (v: unknown) => {
     const s = String(v ?? "");
     return /[",\n;]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
   };
-  const rows = cs.map((c) => [...LOG_COLUMNS.map((k) => (k === "form_status" ? FORM_STATUSES[c.form_status] : c[k])), REPLIES[c.reply], c.imported_at, c.followup_at ?? ""].map(esc).join(","));
+  const rows = cs.map((c) => [...LOG_COLUMNS.map((k) => (k === "form_status" ? FORM_STATUSES[c.form_status] : c[k] ?? "")), c.block_type ? BLOCK_TYPES[c.block_type as BlockType] ?? c.block_type : "", c.attempts ?? 1, REPLIES[c.reply], c.imported_at, c.followup_at ?? ""].map(esc).join(","));
   return "﻿" + [head.join(","), ...rows].join("\r\n");
 }

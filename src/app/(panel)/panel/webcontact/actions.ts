@@ -23,7 +23,7 @@ export async function importLog(f: FormData) {
   let msg: string;
   try {
     const raw = String(f.get("data") ?? "").slice(0, 2_000_000);
-    const mode = f.get("mode") === "b" ? "b" : "a";
+    const mode = f.get("mode") === "b" ? "b" : f.get("mode") === "c" ? "c" : "a";
     const t = targetFrom((k) => (["s", "c", "k"].includes(k) ? (f.getAll(k) as string[]) : (f.get(k) as string | undefined) ?? undefined));
     const { records, error } = parseAgentOutput(raw);
     if (error) throw new Error(error);
@@ -53,9 +53,9 @@ export async function importLog(f: FormData) {
     if (newLeads.length) await saveLeads(newLeads);
 
     const count = (s: string[]) => saved.filter((c) => s.includes(c.form_status)).length;
-    const run = { id: runId, at, mode: mode as "a" | "b", sent: count(["sent"]), manual: count(["captcha", "error", "phone_rejected"]), noForm: count(["no_form"]), skipped: count(["skipped", "no_solicitation"]), duplicates, errors: errors.length };
+    const run = { id: runId, at, mode: mode as "a" | "b" | "c", sent: count(["sent"]), blocked: count(["captcha"]), manual: count(["error", "phone_rejected"]), noForm: count(["no_form"]), skipped: count(["skipped", "no_solicitation"]), duplicates, errors: errors.length };
     await addContactRun(run);
-    msg = `ok:${run.sent} form gönderildi, ${run.manual} elle gönderilecek, ${run.noForm} formsuz, ${run.skipped} atlandı; ${duplicates} tekrar atlandı${newLeads.length ? `; ${newLeads.length} yeni şirket müşteri listesine eklendi` : ""}${errors.length ? `; ${errors.length} satır okunamadı` : ""}.`;
+    msg = `ok:${run.sent} form gönderildi, ${run.blocked} doğrulama engeline takıldı, ${run.manual} elle gönderilecek, ${run.noForm} formsuz, ${run.skipped} atlandı; ${duplicates} tekrar atlandı${newLeads.length ? `; ${newLeads.length} yeni şirket müşteri listesine eklendi` : ""}${errors.length ? `; ${errors.length} satır okunamadı` : ""}.`;
   } catch (e) {
     msg = e instanceof Error ? e.message : "hata";
   }
@@ -89,7 +89,21 @@ export async function markSent(f: FormData) {
   } catch (e) {
     msg = e instanceof Error ? e.message : "hata";
   }
-  back(msg, "elle");
+  back(msg, f.get("from") === "engel" ? "engel" : "elle");
+}
+
+/** Give up on a blocked/failed form (kept in the list as skipped, with the reason). */
+export async function markSkipped(f: FormData) {
+  const d = String(f.get("d"));
+  let msg = "ok:Atlandı olarak işaretlendi.";
+  try {
+    const c = await getContact(d);
+    if (!c) throw new Error("Kayıt bulunamadı");
+    await updateContact(d, { form_status: "skipped", notes: [c.notes, "Elle vazgeçildi"].filter(Boolean).join(" · ") });
+  } catch (e) {
+    msg = e instanceof Error ? e.message : "hata";
+  }
+  back(msg, "engel");
 }
 
 /** No reply after 5 working days: Apollo follow-up task for the next working day (no credits). */

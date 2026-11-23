@@ -10,7 +10,7 @@ const KEY = (d: string) => `wc:contact:${d}`;
 const INDEX = "wc:contacts";
 const RUNS = "wc:runs";
 
-export type ContactRun = { id: string; at: string; mode: "a" | "b"; sent: number; manual: number; noForm: number; skipped: number; duplicates: number; errors: number };
+export type ContactRun = { id: string; at: string; mode: "a" | "b" | "c"; sent: number; blocked?: number; manual: number; noForm: number; skipped: number; duplicates: number; errors: number };
 
 export async function listContacts(limit = 2000): Promise<Contact[]> {
   const domains = (await kv<string[]>("ZRANGE", INDEX, 0, limit - 1, "REV")) ?? [];
@@ -44,14 +44,15 @@ export async function saveContacts(cs: Contact[]): Promise<{ saved: Contact[]; d
     seen.add(c.domain);
     const prev = await getContact(c.domain);
     if (prev && prev.form_status === "sent") { duplicates++; continue; }
-    saved.push(c);
+    // Keep the history of earlier blocked attempts on the same company.
+    saved.push(prev ? { ...c, attempts: (prev.attempts ?? 1) + 1, reply: prev.reply, block_detail: c.block_detail || prev.block_detail } : c);
   }
   const now = Date.now();
   await kvPipeline(saved.flatMap((c, i) => [["SET", KEY(c.domain), JSON.stringify(c)], ["ZADD", INDEX, now + i, c.domain]]));
   return { saved, duplicates };
 }
 
-export async function updateContact(domain: string, patch: Partial<Pick<Contact, "reply" | "form_status" | "sent_at" | "followup_at">>): Promise<Contact | null> {
+export async function updateContact(domain: string, patch: Partial<Pick<Contact, "reply" | "form_status" | "sent_at" | "followup_at" | "notes">>): Promise<Contact | null> {
   const c = await getContact(domain);
   if (!c) return null;
   const next = { ...c, ...patch };

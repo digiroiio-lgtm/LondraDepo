@@ -114,6 +114,36 @@ Panel en çok eksik olan grubu **Sıradaki önerilen arama** düğmesiyle göste
 
 Otomatik arama (panelden "Ara" butonu) sonraki aşamada gelecek; bunun için bir yapay zekâ API anahtarı gerekecek.
 
+## 6. WebContact sihirbazı (iletişim formları)
+Ajan, şirketlerin web sitesindeki iletişim formunu şirkete özel kısa bir mesajla doldurur. Gönderen bilgileri sabittir: **Yusuf Barış, LondraDepo Operations Manager**, support@londradepo.com, +44 7554 195190, londradepo.com. Yanıtlar support@londradepo.com adresine gelir.
+
+Müşteri sihirbazıyla aynı veritabanını ve aynı aday listesini kullanır, ek bir kurulum gerekmez. Aynı şirkete iki kez yazılmaz.
+
+### Kullanım
+1. Kaynağı seçin:
+   - **1a. Müşteri sihirbazı listesinden (önerilen):** daha önce araştırılmış, henüz temas edilmemiş A ve B öncelikli şirketler, en değerliden başlayarak.
+   - **1b. Yeni araştırma + form:** segment ve bölge seçilir; ajan önce şirketleri bulur, sonra formlarını doldurur.
+2. Kaç form gönderileceğini (10, 20 veya 30) ve onay biçimini seçin. Varsayılan: ajan ilk 2 formu göndermeden önce size gösterir.
+3. **Görev metnini kopyala** ile metni alın, ChatGPT'de **Agent** modunda yapıştırıp gönderin. İlk formlarda ajan sizden onay ister.
+4. Ajanın verdiği CSV kaydını **3. Ajanın kaydını içeri al** kutusuna yapıştırın.
+   - Gönderilen şirketler müşteri listesinde "İletişime geçildi" olur.
+   - Yeni araştırmadan gelen şirketler müşteri listesine de eklenir.
+5. **Elle gönderilecekler:** CAPTCHA isteyen veya hata veren formlar burada listelenir.
+   1. **Formu aç**'a basın.
+   2. **Mesajı kopyala** ile mesajı alıp forma yapıştırın ve gönderin.
+   3. **Gönderdim**'e basın.
+6. **Takip zamanı gelenler:** formu 5 iş günü önce gönderilmiş ve yanıt gelmemiş şirketler. Bu şirketler için Apollo'da ertesi iş günüyle tarihli bir takip görevi açılır; kredi harcamaz.
+7. Yanıt geldikçe şirketin durumunu güncelleyin (Yanıt geldi / Olumlu / İlgilenmiyor). "Olumlu" ve "İlgilenmiyor" müşteri listesine de yansır.
+
+### Ajanın uyduğu kurallar
+- CAPTCHA'yı geçmeye çalışmaz. Formu göndermez, "elle gönder" olarak işaretler.
+- E-posta göndermez. Formu olmayan şirketin yalnızca e-posta adresini kaydeder.
+- "Satış mesajı kabul etmiyoruz" yazan formlara ve iş başvurusu, şikâyet ya da destek formlarına göndermez.
+- Bülten ve pazarlama onay kutularını işaretlemez. Yalnızca zorunlu gizlilik onayını işaretler.
+- Her şirkete en fazla bir kez gönderir.
+- Mesaj yalnızca doğrulanmış bilgileri içerir: Essex deposu, palet başına haftada £3.50 + KDV'den başlayan fiyat, asgari hacim yok.
+- Her mesajın sonunda bir çıkma cümlesi vardır.
+
 ---
 
 ## Ekranlar
@@ -125,6 +155,7 @@ Otomatik arama (panelden "Ara" butonu) sonraki aşamada gelecek; bunun için bir
 | Performans | GA4 kanalları ve giriş sayfaları; Search Console'da son 28 gün ile önceki 28 gün karşılaştırması, sorgular ve sayfalar |
 | SEO sağlığı | Site haritasındaki sayfa sayısı, llms dosyalarının tarihi ve eksik sayfaları; tüm sayfaların canlı 200 kontrolü |
 | Müşteri sihirbazı | Segment ve bölgeye göre ajan görev metni; ajan sonucunu içe aktarma; öncelik puanı (A/B/C) ve tahmini depolama geliri; en değerli 10; ilk 100 dağılımı; segment performansı; Apollo'ya aktarma; segmente göre e-posta şablonları |
+| WebContact sihirbazı | Şirket iletişim formlarını Yusuf Barış adına dolduran ajan görev metni; kaydı içe aktarma; elle gönderilecekler; 5 iş günü sonra takip; yanıt durumu; örnek mesajlar |
 | Adaylar | Apollo kişileri, aşama, son aktivite; yeni aday formu |
 | Görevler | Apollo görevleri: geciken, bugün ve bu hafta; tamamla ve takip ekle |
 | Linkler | GA4, Search Console, Formspree, Calendly, Vercel, Apollo ve site araçları |

@@ -198,6 +198,7 @@ export const corePages: EnPage[] = [
       "Warehouse: Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY",
       "Languages: English and Turkish",
       "Service area: the whole of the UK",
+      "Email: support@londradepo.com",
       "Office: +44 1268 203 283 · Sales@arcatrade.co.uk · 07:45–17:30 UK time",
     ],
     sections: [
@@ -266,6 +267,7 @@ export const corePages: EnPage[] = [
       "The fastest way to reach us is WhatsApp or phone on +44 7554 195190. Tell us your product type, volume and the services you need, and we will come back with a tailored quote. Support is available in English and Turkish.",
     facts: [
       "WhatsApp and phone: +44 7554 195190",
+      "Email: support@londradepo.com",
       "Warehouse: Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY, United Kingdom",
       "Arca Trade Group office: +44 1268 203 283 · Sales@arcatrade.co.uk · 07:45–17:30 UK time",
       "Delivery area: the whole of the UK, including London, Birmingham, Manchester and Leeds",

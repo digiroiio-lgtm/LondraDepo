@@ -7,6 +7,7 @@ const NAV = [
   ["/panel/performans", "Performans"],
   ["/panel/seo", "SEO sağlığı"],
   ["/panel/sihirbaz", "Müşteri sihirbazı"],
+  ["/panel/webcontact", "WebContact sihirbazı"],
   ["/panel/adaylar", "Adaylar"],
   ["/panel/gorevler", "Görevler"],
   ["/panel/linkler", "Linkler"],

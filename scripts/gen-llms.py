@@ -13,7 +13,7 @@ TODAY = datetime.date.today().isoformat()
 FACTS = [
     "Brand: LondraDepo.com, the warehousing brand of Arca Trade Group Ltd (Companies House 13247691, VAT GB353315322, founded 2021, BIFA member).",
     "Warehouse: Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY, United Kingdom.",
-    "Contact: WhatsApp +44 7554 195190; office +44 1268 203 283, Monday to Friday 07:45-17:30 UK time; Sales@arcatrade.co.uk. Team speaks English and Turkish.",
+    "Contact: WhatsApp +44 7554 195190; email support@londradepo.com; office +44 1268 203 283, Monday to Friday 07:45-17:30 UK time; Sales@arcatrade.co.uk. Team speaks English and Turkish.",
     "People: founded by Sertaç Yılmaz, co-founder of Arca Trade Group (18 years in logistics); warehouse operations led by Yusuf Barış, Operations Manager.",
     "Road distances from the warehouse: DP World London Gateway ~13 miles (~20 min), Port of Tilbury ~16 miles (~20 min), Port of Felixstowe ~62 miles (~1h15), central London ~37 miles, Amazon LCY2 Tilbury ~16 miles, Amazon LCY1 London ~32 miles.",
     "Published price: standard pallet storage from £3.50 + VAT per pallet per week (10 pallets x 4 weeks = £140 + VAT). All other services are quoted per operation.",

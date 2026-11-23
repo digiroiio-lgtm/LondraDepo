@@ -302,7 +302,7 @@ function FixList({ list, ret }: { list: Contact[]; ret: string }) {
             <div className="mt-2 flex flex-wrap gap-2 items-center">
               <CopyButton target={`msg-${c.domain}`} label="Mesajı kopyala" />
               <form action={markSent}><Hidden d={c.domain} ret={ret} /><button className="pnl-btn">Gönderdim</button></form>
-              {mailtoFor(c, msgOf(c)) && <a href={mailtoFor(c, msgOf(c))!} className="pnl-btn-ghost">E-posta taslağını aç</a>}
+              {c.email_fallback && <a href={`/panel/posta?d=${encodeURIComponent(c.domain)}#yaz`} className="pnl-btn-ghost">Panelden e-posta gönder</a>}
               {c.email_fallback && <form action={markEmailed}><Hidden d={c.domain} ret={ret} /><button className="pnl-btn-ghost">E-postayla gönderdim</button></form>}
               <form action={markSkipped}><Hidden d={c.domain} ret={ret} /><button className="pnl-btn-ghost">Vazgeç</button></form>
             </div>
@@ -320,7 +320,7 @@ function EmailList({ list, ret }: { list: Contact[]; ret: string }) {
   return (
     <>
       <p className="text-sm text-[var(--pnl-muted)] mb-3">
-        Bu şirketlerin sitesinde iletişim formu yok; ajan kurumsal e-posta adresini kaydetti. &quot;E-posta taslağını aç&quot; kendi e-posta programınızda hazır mesajı açar. Kontrol edip gönderin ve &quot;Gönderdim&quot;e basın. Panel e-posta göndermez.
+        Bu şirketlerin sitesinde iletişim formu yok; ajan kurumsal e-posta adresini kaydetti. &quot;Panelden gönder&quot; hazır mesajı support@ kutusundan göndermeniz için açar ve gönderimi kendiliğinden kaydeder. Kendi e-posta programınızdan gönderirseniz sonra &quot;Gönderdim&quot;e basın.
       </p>
       <Table
         head={["Şirket", "Adres", "Mesaj", "İşlem"]}
@@ -339,7 +339,8 @@ function EmailList({ list, ret }: { list: Contact[]; ret: string }) {
               <div className="mt-2"><CopyButton target={`em-${c.domain}`} label="Mesajı kopyala" /></div>
             </details>,
             <div key="a" className="flex flex-col gap-2 min-w-[9rem]">
-              {href ? <a href={href} className="pnl-btn-primary">E-posta taslağını aç</a> : <span className="text-xs text-amber-800">Adres geçersiz</span>}
+              {href ? <a href={`/panel/posta?d=${encodeURIComponent(c.domain)}#yaz`} className="pnl-btn-primary">Panelden gönder</a> : <span className="text-xs text-amber-800">Adres geçersiz</span>}
+              {href && <a href={href} className="pnl-btn-ghost">Kendi e-postamda aç</a>}
               <form action={markEmailed}><Hidden d={c.domain} ret={ret} /><button className="pnl-btn w-full">Gönderdim</button></form>
               <form action={markSkipped}><Hidden d={c.domain} ret={ret} /><button className="pnl-btn-ghost w-full">Vazgeç</button></form>
             </div>,

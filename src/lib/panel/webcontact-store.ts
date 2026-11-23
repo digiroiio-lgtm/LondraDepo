@@ -67,7 +67,7 @@ export async function saveContacts(cs: Contact[]): Promise<{ saved: Contact[]; d
   return { saved, duplicates };
 }
 
-type Patch = Partial<Pick<Contact, "reply" | "form_status" | "sent_at" | "followup_at" | "notes" | "channel" | "emailed_at">>;
+type Patch = Partial<Pick<Contact, "reply" | "form_status" | "sent_at" | "followup_at" | "notes" | "channel" | "emailed_at" | "thread_id">>;
 
 /** Updates a record and appends what happened to its history. */
 export async function updateContact(domain: string, patch: Patch, event?: Omit<ContactEvent, "at">): Promise<Contact | null> {

@@ -18,6 +18,7 @@ const ICONS: Record<string, React.ReactNode> = {
   warehouse: <><path d="M3 10 12 4l9 6v10H3z" /><path d="M7 20v-6h10v6" /><path d="M7 17h10" /></>,
   calendar: <><rect x="3" y="5" width="18" height="16" rx="3" /><path d="M3 10h18M8 3v4M16 3v4" /></>,
   chevron: <><path d="m6 9 6 6 6-6" /></>,
+  mail: <><rect x="3" y="5" width="18" height="14" rx="3" /><path d="m4 7 8 6 8-6" /></>,
 };
 
 export function PIcon({ name, className = "h-5 w-5" }: { name: keyof typeof ICONS | string; className?: string }) {
@@ -36,6 +37,7 @@ const NAV: [string, string, string][] = [
   ["/panel/seo", "SEO sağlığı", "pulse"],
   ["/panel/sihirbaz", "Müşteri sihirbazı", "wand"],
   ["/panel/webcontact", "WebContact sihirbazı", "send"],
+  ["/panel/posta", "E-posta", "mail"],
   ["/panel/adaylar", "Adaylar", "users"],
   ["/panel/gorevler", "Görevler", "tasks"],
   ["/panel/linkler", "Linkler", "link"],

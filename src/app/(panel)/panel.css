@@ -1,0 +1,218 @@
+/*
+ * Panel design system: soft lavender canvas, white rounded cards, violet gradient accents,
+ * circular icon buttons and pill controls. Scoped to the private panel layout only.
+ */
+:root {
+  --pnl-canvas: #e9e6fb;
+  --pnl-shell: #ffffff;
+  --pnl-main: #f6f5ff;
+  --pnl-card: #ffffff;
+  --pnl-line: #ecebf7;
+  --pnl-line-strong: #dedcf0;
+  --pnl-ink: #1c1a3a;
+  --pnl-muted: #6f6d8a;
+  --pnl-faint: #a3a1bd;
+  --pnl-primary: #6a4cff;
+  --pnl-primary-2: #8a6bff;
+  --pnl-primary-ink: #5435e8;
+  --pnl-primary-soft: #efecff;
+  --pnl-success: #1f9d55;
+  --pnl-success-soft: #e6f7ee;
+  --pnl-warn: #e8590c;
+  --pnl-warn-soft: #fff1e6;
+  --pnl-danger: #e03131;
+  --pnl-danger-soft: #fff0f0;
+  --pnl-radius: 24px;
+  --pnl-radius-sm: 16px;
+  --pnl-shadow: 0 1px 2px rgba(28, 26, 58, 0.04), 0 8px 24px -12px rgba(76, 56, 200, 0.12);
+  --pnl-grad: linear-gradient(135deg, #5b3cf0 0%, #7a5cff 55%, #9b7dff 100%);
+}
+
+body.pnl {
+  background: radial-gradient(1200px 600px at 0% 0%, #d9d2ff 0%, transparent 60%), radial-gradient(900px 500px at 100% 100%, #e7defd 0%, transparent 60%), var(--pnl-canvas);
+  color: var(--pnl-ink);
+}
+
+/* Cards */
+.pnl-card {
+  background: var(--pnl-card);
+  border: 1px solid var(--pnl-line);
+  border-radius: var(--pnl-radius);
+  box-shadow: var(--pnl-shadow);
+}
+.pnl-card-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--pnl-ink);
+}
+
+/* Buttons */
+.pnl-btn,
+.pnl-btn-primary,
+.pnl-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  padding: 0.55rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  transition: background-color 0.15s, box-shadow 0.15s, transform 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+.pnl-btn {
+  background: var(--pnl-primary-soft);
+  color: var(--pnl-primary-ink);
+}
+.pnl-btn:hover { background: #e4dfff; }
+.pnl-btn-primary {
+  background: var(--pnl-grad);
+  color: #fff;
+  box-shadow: 0 8px 18px -8px rgba(106, 76, 255, 0.65);
+}
+.pnl-btn-primary:hover { box-shadow: 0 10px 22px -8px rgba(106, 76, 255, 0.8); transform: translateY(-1px); }
+.pnl-btn-ghost {
+  background: #fff;
+  color: var(--pnl-ink);
+  border: 1px solid var(--pnl-line-strong);
+}
+.pnl-btn-ghost:hover { border-color: var(--pnl-primary); color: var(--pnl-primary-ink); }
+.pnl-btn:disabled,
+.pnl-btn-primary:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+/* Inputs */
+.pnl-input,
+.pnl-select-sm {
+  width: 100%;
+  background: #fff;
+  border: 1px solid var(--pnl-line-strong);
+  border-radius: 14px;
+  padding: 0.55rem 0.85rem;
+  font-size: 0.875rem;
+  color: var(--pnl-ink);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.pnl-select-sm {
+  width: auto;
+  border-radius: 9999px;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.75rem;
+}
+.pnl-input:focus,
+.pnl-select-sm:focus {
+  outline: none;
+  border-color: var(--pnl-primary);
+  box-shadow: 0 0 0 4px rgba(106, 76, 255, 0.14);
+}
+.pnl input[type="checkbox"],
+.pnl input[type="radio"] { accent-color: var(--pnl-primary); }
+
+/* Sidebar navigation */
+.pnl-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  border-radius: 9999px;
+  padding: 0.35rem 1rem 0.35rem 0.35rem;
+  font-size: 0.95rem;
+  color: var(--pnl-ink);
+  white-space: nowrap;
+  transition: background-color 0.15s;
+}
+.pnl-nav-link:hover { background: #f5f3ff; }
+.pnl-nav-icon {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  flex: none;
+  border-radius: 9999px;
+  background: #fff;
+  border: 1px solid var(--pnl-line-strong);
+  color: var(--pnl-ink);
+  box-shadow: 0 2px 6px -3px rgba(28, 26, 58, 0.15);
+}
+.pnl-nav-link[aria-current="page"] {
+  background: var(--pnl-grad);
+  color: #fff;
+  box-shadow: 0 12px 24px -12px rgba(106, 76, 255, 0.9);
+}
+.pnl-nav-link[aria-current="page"] .pnl-nav-icon {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #fff;
+  box-shadow: none;
+}
+
+/* Pills, chips, segmented control */
+.pnl-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #fff;
+  border: 1px solid var(--pnl-line-strong);
+  border-radius: 9999px;
+  padding: 0.35rem 0.9rem 0.35rem 0.35rem;
+}
+.pnl-segment {
+  display: inline-flex;
+  gap: 0.25rem;
+  background: #ebe8ff;
+  border-radius: 9999px;
+  padding: 0.25rem;
+}
+.pnl-segment > * {
+  border-radius: 9999px;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.875rem;
+  color: var(--pnl-ink);
+}
+.pnl-segment > [aria-current="true"],
+.pnl-segment > .is-active { background: #fff; box-shadow: 0 2px 8px -4px rgba(28, 26, 58, 0.25); }
+.pnl-chip {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 8px;
+  padding: 0.15rem 0.55rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background: var(--pnl-primary-soft);
+  color: var(--pnl-primary-ink);
+}
+
+/* Tables */
+.pnl-table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 0.875rem; }
+.pnl-table thead th {
+  background: #f7f6ff;
+  color: var(--pnl-muted);
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-align: left;
+  padding: 0.7rem 0.85rem;
+  white-space: nowrap;
+}
+.pnl-table thead th:first-child { border-radius: 14px 0 0 14px; }
+.pnl-table thead th:last-child { border-radius: 0 14px 14px 0; }
+.pnl-table tbody td { padding: 0.8rem 0.85rem; vertical-align: top; border-bottom: 1px solid var(--pnl-line); }
+.pnl-table tbody tr:last-child td { border-bottom: 0; }
+.pnl-table tbody tr:hover td { background: #fbfaff; }
+
+/* Tooltip-style callout */
+.pnl-callout {
+  background: var(--pnl-grad);
+  color: #fff;
+  border-radius: 14px;
+  padding: 0.6rem 0.9rem;
+  font-size: 0.85rem;
+  box-shadow: 0 12px 24px -12px rgba(106, 76, 255, 0.9);
+}
+
+/* Links inside the panel */
+.pnl main a.underline { color: var(--pnl-primary-ink); text-decoration-color: rgba(84, 53, 232, 0.35); }
+.pnl details > summary { list-style: none; }
+.pnl details > summary::-webkit-details-marker { display: none; }
+.pnl details > summary::before { content: "›"; display: inline-block; margin-right: 0.4rem; color: var(--pnl-primary); transition: transform 0.15s; }
+.pnl details[open] > summary::before { transform: rotate(90deg); }

@@ -19,7 +19,7 @@ export default function CopyButton({ target, label = "Kopyala" }: { target: stri
         setDone(true);
         setTimeout(() => setDone(false), 2500);
       }}
-      className="bg-[#d62839] hover:bg-[#c1121f] text-white rounded-full px-6 py-2 text-sm font-semibold"
+      className="pnl-btn-primary"
     >
       <span aria-live="polite">{done ? "Kopyalandı ✓" : label}</span>
     </button>

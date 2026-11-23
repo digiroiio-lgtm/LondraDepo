@@ -16,9 +16,9 @@ import { changeReply, followUp, importLog, markSent } from "./actions";
 export const dynamic = "force-dynamic";
 
 type SP = Record<string, string | string[] | undefined>;
-const input = "rounded-xl border border-slate-300 px-3 py-2 text-sm w-full";
-const btn = "bg-[#0b2545] text-white rounded-full px-5 py-2 text-sm font-semibold";
-const redBtn = "bg-[#d62839] hover:bg-[#c1121f] text-white rounded-full px-5 py-2 text-sm font-semibold";
+const input = "pnl-input";
+const btn = "pnl-btn";
+const redBtn = "pnl-btn-primary";
 const one = (v: string | string[] | undefined) => (Array.isArray(v) ? v[0] : v) ?? "";
 
 const STATUS_CLASS: Record<FormStatus, string> = {
@@ -82,7 +82,7 @@ export default async function WebContactPage({ searchParams }: { searchParams: P
 
   return (
     <PanelShell active="/panel/webcontact" title="WebContact sihirbazı">
-      {m && (m.startsWith("ok:") ? <p role="status" className="mb-4 rounded-xl bg-green-50 border border-green-200 text-green-800 text-sm p-3">{m.slice(3)}</p> : <ErrorBox message={m} />)}
+      {m && (m.startsWith("ok:") ? <p role="status" className="mb-4 rounded-2xl bg-[var(--pnl-success-soft)] border border-[#b2f2bb] text-[#1b6b3a] text-sm p-3">{m.slice(3)}</p> : <ErrorBox message={m} />)}
 
       <p className="text-sm text-slate-600 mb-6 max-w-3xl">
         Ajan, şirketlerin web sitesindeki iletişim formunu şirkete özel bir mesajla <strong>{SENDER.name}</strong> adına doldurur. Yanıtlar <strong>{SENDER.email}</strong> adresine gelir. Bu sihirbaz, müşteri sihirbazıyla aynı aday listesini kullanır; bir şirkete iki kez yazılmaz.
@@ -105,14 +105,14 @@ export default async function WebContactPage({ searchParams }: { searchParams: P
         <form method="get" className="grid gap-4">
           <input type="hidden" name="go" value="a" />
           <SettingsFields n={n} ap={ap} />
-          <div><button className={btn} disabled={!candidates.length}>Görev metnini oluştur</button></div>
+          <div><button className={redBtn} disabled={!candidates.length}>Görev metnini oluştur</button></div>
         </form>
         {!candidates.length && db && <p className="text-xs text-slate-500 mt-2">Uygun şirket yok: önce Müşteri sihirbazında liste oluşturun ya da 1b ile yeni araştırma yapın.</p>}
       </Card>
 
       <Card title="1b. Yeni araştırma + form">
         <details>
-          <summary className="cursor-pointer text-sm font-semibold text-[#0b2545]">Hedef seçimini aç</summary>
+          <summary className="cursor-pointer text-sm font-semibold text-[#1c1a3a]">Hedef seçimini aç</summary>
           <div className="mt-4">
             <TargetForm t={t} hidden={<input type="hidden" name="go" value="b" />} count={<SettingsFields n={n} ap={ap} />} />
           </div>
@@ -159,7 +159,7 @@ export default async function WebContactPage({ searchParams }: { searchParams: P
               <textarea name="data" required rows={8} className={`${input} font-mono text-xs`} placeholder={LOG_COLUMNS.join(",")} />
             </label>
             <p className="text-xs text-slate-500">Gönderilen formlar müşteri listesinde &quot;İletişime geçildi&quot; olur. Yeni araştırmadan gelen şirketler müşteri listesine de eklenir. Formu daha önce gönderilmiş şirketler atlanır.</p>
-            <div><button className={btn}>İçeri al</button></div>
+            <div><button className={redBtn}>İçeri al</button></div>
           </form>
         ) : <p className="text-sm text-slate-500">Önce veritabanını bağlayın.</p>}
       </Card>
@@ -170,7 +170,7 @@ export default async function WebContactPage({ searchParams }: { searchParams: P
           <p className="text-sm text-slate-600 mb-3">Form CAPTCHA istediği veya hata verdiği için ajan göndermedi. Formu açın, mesajı kopyalayıp yapıştırın, gönderin ve &quot;Gönderdim&quot;e basın.</p>
           <div className="grid gap-4">
             {manual.slice(0, 30).map((c) => (
-              <div key={c.domain} className="rounded-xl border border-slate-200 p-4">
+              <div key={c.domain} className="pnl-card p-4 !shadow-none">
                 <div className="flex flex-wrap items-center gap-3 mb-2 text-sm">
                   <strong>{c.company}</strong>
                   <span className={`rounded-full px-2 py-0.5 text-xs ${STATUS_CLASS[c.form_status]}`}>{FORM_STATUSES[c.form_status]}</span>
@@ -214,7 +214,7 @@ export default async function WebContactPage({ searchParams }: { searchParams: P
               <label className="text-sm">Yanıt<select name="fr" defaultValue={fr} className={input}><option value="">Tümü</option>{Object.entries(REPLIES).map(([k, v]) => <option key={k} value={k}>{v}</option>)}</select></label>
               <div className="sm:col-span-4 flex flex-wrap gap-3">
                 <button className={btn}>Filtrele</button>
-                <a href="/api/panel/webcontact/csv" className="rounded-full border border-slate-300 px-5 py-2 text-sm font-semibold">Tümünü CSV indir</a>
+                <a href="/api/panel/webcontact/csv" className="pnl-btn-ghost">Tümünü CSV indir</a>
               </div>
             </form>
             <Table
@@ -239,7 +239,7 @@ export default async function WebContactPage({ searchParams }: { searchParams: P
                 <form key="r" action={changeReply} className="flex gap-2 items-center">
                   <input type="hidden" name="d" value={c.domain} />
                   <label className="sr-only" htmlFor={`rp-${c.domain}`}>Yanıt</label>
-                  <select id={`rp-${c.domain}`} name="reply" defaultValue={c.reply} className="rounded-lg border border-slate-300 px-2 py-1 text-xs">{Object.entries(REPLIES).map(([k, v]) => <option key={k} value={k}>{v}</option>)}</select>
+                  <select id={`rp-${c.domain}`} name="reply" defaultValue={c.reply} className="pnl-select-sm">{Object.entries(REPLIES).map(([k, v]) => <option key={k} value={k}>{v}</option>)}</select>
                   <button className="text-xs underline">Kaydet</button>
                 </form>,
               ])}
@@ -251,10 +251,10 @@ export default async function WebContactPage({ searchParams }: { searchParams: P
 
       <Card title="Örnek form mesajları ve imza">
         <p className="text-sm text-slate-600 mb-3">Ajan bu yapıyı her şirkete göre kişiselleştirir. Elle gönderirken de kullanabilirsiniz.</p>
-        <pre className="text-xs bg-slate-50 rounded-xl p-3 mb-3 whitespace-pre-wrap">{SIGNATURE}</pre>
+        <pre className="text-xs bg-[var(--pnl-main)] rounded-2xl p-4 mb-3 whitespace-pre-wrap">{SIGNATURE}</pre>
         {TEMPLATE_GROUPS.map(({ group, label }) => (
-          <details key={group} className="border-t border-slate-100 py-2">
-            <summary className="cursor-pointer font-semibold text-sm text-[#0b2545]">{label}</summary>
+          <details key={group} className="border-t border-[var(--pnl-line)] py-2">
+            <summary className="cursor-pointer font-semibold text-sm text-[#1c1a3a]">{label}</summary>
             <div className="grid lg:grid-cols-2 gap-4 mt-3">
               {(["tr", "en"] as const).map((lang) => (
                 <div key={lang}>

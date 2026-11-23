@@ -3,6 +3,7 @@
  * message from Yusuf Barış. Pure functions only. Reuses the customer wizard's segments, research brief and
  * parser so both wizards share one prospect list. Only verified facts; no CAPTCHA bypass; no email sending.
  */
+import { rankAddresses, recommendService, ukSignal } from "@/lib/panel/mail-compose";
 import { COLUMNS, POSITIONING_EN, buildPrompt, normDomain, segmentById, type Group, type Lead, type Target } from "@/lib/panel/wizard";
 
 export const SENDER = {
@@ -50,7 +51,7 @@ export const PHONE_FORMATS: { value: string; when: string }[] = [
   { value: "0044 7554 195190", when: "örnek/placeholder 00 ile gruplu gösteriyorsa" },
 ];
 
-export const REPLIES = { yok: "Yanıt yok", yanit: "Yanıt geldi", olumlu: "Olumlu", ilgisiz: "İlgilenmiyor" } as const;
+export const REPLIES = { yok: "Yanıt yok", yanit: "Yanıt geldi", olumlu: "Olumlu", gorusme: "Görüşme yapıldı", teklif: "Teklif gönderildi", ilgisiz: "İlgilenmiyor" } as const;
 export type Reply = keyof typeof REPLIES;
 
 export const APPROVAL = {
@@ -109,7 +110,13 @@ export type Contact = {
   thread_id?: string;
   /** Everything that happened to this company, oldest first. */
   events?: ContactEvent[];
+  /** The user checked an uncertain send and confirmed it reached the company. */
+  delivery_ok?: boolean;
+  /** Why the company left active follow-up (e.g. "UK distribütörü var"). */
+  close_reason?: string;
 };
+
+export const CLOSE_REASONS = ["Şu an ihtiyaç yok", "UK distribütörü var", "Kendi UK deposu var", "Yanlış kişi / kanal"] as const;
 
 export const EVENT_LABELS = {
   imported: "Ajan inceledi",
@@ -224,7 +231,7 @@ ${PHONE_FORMATS.map((f, i) => `      ${i + 1}) ${f.value}  — ${f.when}`).join(
 8. Form yoksa yalnızca sayfada yayımlanan kurumsal e-posta adresini email_fallback sütununa yaz, form_status = no_form. E-POSTA GÖNDERME.
 9. Her şirkete yalnızca BİR kez gönder. Gönderimden sonra çıkan teyit mesajını confirmation_text sütununa kopyala.
 10. Bu çalışmada en fazla ${o.count} form gönder.
-11. Onay: ${o.approval === "each" ? "Her formu Gönder'e basmadan önce doldurulmuş hâlini bana göster ve onayımı bekle." : "İlk 2 formu Gönder'e basmadan önce doldurulmuş hâlini bana göster ve onayımı bekle; onaylarsam kalanları aynı kurallarla onay sormadan gönder."}
+11. Onay: ${o.approval === "each" ? "Her formu Gönder'e basmadan önce doldurulmuş hâlini bana göster ve onayımı bekle." : "İlk 2 formu Gönder'e basmadan önce doldurulmuş hâlini bana göster ve onayımı bekle; onaylarsam kalanları aynı kurallarla onay sormadan gönder."} Onay isterken her şirket için şunu da yaz: kullandığın kanal (iletişim formu / satış formu / yalnız e-posta), formun URL'si ve form satış talebine uygun mu (ör. vergi numarası, üyelik veya yalnız müşteri desteği istiyorsa uygun değildir: gönderme, form_status=skipped, notes alanına sebebini yaz).
 
 ## Mesaj kuralları
 - Dil: Türkiye merkezli şirketlere Türkçe, diğerlerine İngilizce.
@@ -270,6 +277,7 @@ export function buildContactPromptFromLeads(leads: Lead[], o: ContactOpts): stri
     const seg = segmentById(l.segment);
     return `${i + 1}. ${l.company} — ${l.website} — ${l.country || "?"} — segment: ${l.segment || "?"}${seg ? ` (${seg.label})` : ""}
    Neden uygun: ${l.reason || "—"}${l.uk_evidence ? ` · İngiltere kanıtı: ${l.uk_evidence}` : ""}${l.products ? ` · Ürünler: ${l.products}` : ""}
+   Önerilen hizmet: ${recommendService(l, seg?.group).service} · Kanal: ${channelPlan(l)}
    Mesajda kullanılacak açı: ${seg?.angle ?? GENERIC.tr}`;
   });
   return `${header(Math.min(o.count, leads.length))}
@@ -279,6 +287,16 @@ ${rows.join("\n")}
 ${fieldRules(o)}
 ${output([])}`;
 }
+
+/** Planned channel for a prospect: the contact form, with the best saved address as fallback. */
+export function channelPlan(l: Pick<Lead, "email">): string {
+  const best = rankAddresses(l.email ?? "")[0];
+  if (!best) return "iletişim formu";
+  const label = { sales: "satış", person: "kişi", general: "genel", support: "destek" }[best.type];
+  return `iletişim formu; form yoksa veya uygun değilse ${best.email} (${label} adresi)`;
+}
+
+export { ukSignal, recommendService };
 
 /** Mode b: research new companies first (same brief as the customer wizard), then fill their forms. */
 export function buildContactPromptResearch(t: Target, existing: string[], o: ContactOpts): string {

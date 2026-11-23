@@ -8,6 +8,7 @@ import {
   allocate, buildPrompt, emailTemplate, mixProgress, nextSearch, segmentById, segmentPerformance, targetFrom,
   type Lead, type Status, type Tier,
 } from "@/lib/panel/wizard";
+import { contactedDomains } from "@/lib/panel/webcontact-store";
 import { allDomains, listLeads, listRuns } from "@/lib/panel/wizard-store";
 import { changeStatus, importLeads, pushToApollo } from "./actions";
 
@@ -82,14 +83,16 @@ export default async function WizardPage({ searchParams }: { searchParams: Promi
   const m = one(sp.m);
   const db = kvConfigured();
 
-  const [leadsR, runsR, domainsR] = db ? await Promise.all([safe(() => listLeads()), safe(listRuns), go ? safe(allDomains) : Promise.resolve(null)]) : [null, null, null];
+  const [leadsR, runsR, domainsR, contactedR] = db ? await Promise.all([safe(() => listLeads()), safe(listRuns), go ? safe(allDomains) : Promise.resolve(null), safe(contactedDomains)]) : [null, null, null, null];
   const leads = (leadsR?.ok ? leadsR.data : []).sort((a, b) => b.priority - a.priority);
-  const prompt = go ? buildPrompt(t, domainsR?.ok ? domainsR.data : []) : "";
+  // One history per company: anything WebContact / E-posta already touched is not a first-contact candidate.
+  const contacted = new Set(contactedR?.ok ? contactedR.data : []);
+  const prompt = go ? buildPrompt(t, [...new Set([...(domainsR?.ok ? domainsR.data : []), ...contacted])]) : "";
   const alloc = go ? allocate(t.segments.length ? t.segments : ["tr_exporter"], t.count) : {};
 
   const active = leads.filter((l) => l.status !== "elendi");
   const pipeline = active.filter((l) => l.tier !== "C").reduce((a, l) => a + (l.revenue ?? 0), 0);
-  const top = active.filter((l) => l.status === "yeni" && l.tier !== "C").slice(0, 10);
+  const top = active.filter((l) => l.status === "yeni" && l.tier !== "C" && !contacted.has(l.domain)).slice(0, 10);
   const mix = mixProgress(leads);
   const next = nextSearch(leads);
   const perf = segmentPerformance(leads);
@@ -156,7 +159,7 @@ export default async function WizardPage({ searchParams }: { searchParams: Promi
             ))}
           </div>
           <p className="text-xs text-slate-500 mt-3">Önerilen dağılım iş analizine göre tahmindir. Hem düzenli depo sözleşmesi hem sipariş başına operasyon geliri getirecek gruplara ağırlık verir.</p>
-          {next && <a href={next.href} className={`${btn} inline-block mt-3`}>Sıradaki önerilen arama: {next.label}</a>}
+          {next && <a href={next.href} className={`${btn} inline-block mt-3 max-w-full !whitespace-normal`}>Sıradaki önerilen arama: {next.label}</a>}
         </Card>
       )}
 

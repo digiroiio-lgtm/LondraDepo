@@ -1,21 +1,22 @@
 import PanelShell, { Bars, Card, ErrorBox, NotConnected, Stat, Table } from "@/components/panel/PanelShell";
 import CopyButton from "@/components/panel/CopyButton";
+import ImportPreview from "@/components/panel/ImportPreview";
 import TargetForm from "@/components/panel/TargetForm";
 import { kvConfigured } from "@/lib/panel/kv";
 import {
-  ACTIONS, ACTION_ORDER, PERIODS, REPORT_METRICS, buildReport, eventLabel, eventsOf, groupByAction, lastEvent, mailtoFor, nextAction, reachedAt, reportSummary, today,
+  ACTIONS, ACTION_ORDER, PERIODS, REPORT_METRICS, backlogLines, buildReport, funnel, deliveryOf, eventLabel, eventsOf, groupByAction, lastTouchAt, mailtoFor, nextAction, reachedAt, reportSummary, sortByPriority, statusLine, today,
   type ActionKey, type Period,
 } from "@/lib/panel/outreach";
 import { fmtDate, safe } from "@/lib/panel/safe";
 import {
-  APPROVAL, BLOCK_TYPES, FORM_STATUSES, LOG_COLUMNS, PHONE_FORMATS, REPLIES, SENDER, SIGNATURE,
-  buildBlockedPrompt, buildContactPromptFromLeads, buildContactPromptResearch, contactTemplate, isBlocked, workdaysSince,
+  APPROVAL, BLOCK_TYPES, CLOSE_REASONS, FORM_STATUSES, PHONE_FORMATS, REPLIES, SENDER, SIGNATURE,
+  buildBlockedPrompt, buildContactPromptFromLeads, channelPlan, recommendService, ukSignal, buildContactPromptResearch, contactTemplate, isBlocked,
   type Approval, type BlockType, type Contact, type FormStatus, type Reply,
 } from "@/lib/panel/webcontact";
 import { listContactRuns, listContacts } from "@/lib/panel/webcontact-store";
 import { TEMPLATE_GROUPS, segmentById, targetFrom } from "@/lib/panel/wizard";
 import { allDomains, listLeads } from "@/lib/panel/wizard-store";
-import { addNote, changeReply, followUp, importLog, markEmailed, markSent, markSkipped } from "./actions";
+import { addNote, changeReply, closeWithReason, confirmDelivery, followUp, importLog, markEmailed, markSent, markSkipped } from "./actions";
 
 export const dynamic = "force-dynamic";
 
@@ -35,6 +36,8 @@ const STATUS_CLASS: Record<FormStatus, string> = {
 const ACTION_CLASS: Partial<Record<ActionKey, string>> = {
   reply: "bg-green-100 text-green-800",
   meeting: "bg-green-100 text-green-800",
+  quote: "bg-green-100 text-green-800",
+  verify: "bg-amber-100 text-amber-800",
   followup: "bg-[var(--pnl-primary-soft)] text-[var(--pnl-primary-ink)]",
   email: "bg-[var(--pnl-primary-soft)] text-[var(--pnl-primary-ink)]",
   blocked: "bg-amber-100 text-amber-800",
@@ -84,17 +87,47 @@ function Company({ c }: { c: Contact }) {
   );
 }
 
-/** Where the company stands: form status, last event and channel. */
+/** Where the company stands: one status line, then last contact, channel, confirmation source and follow-up date. */
 function Where({ c }: { c: Contact }) {
-  const last = lastEvent(c);
-  const reached = reachedAt(c);
+  const d = deliveryOf(c);
+  const a = nextAction(c);
+  const touch = lastTouchAt(c);
   return (
-    <div className="min-w-[10rem] text-xs">
-      <span className={`inline-block rounded-full px-2 py-0.5 ${STATUS_CLASS[c.form_status]}`}>{FORM_STATUSES[c.form_status]}</span>
-      {last && <div className="mt-1">{eventLabel(last.type)} · {fmtDate(last.at)}</div>}
-      {reached && <div className="mt-1 text-[var(--pnl-muted)]">Kanal: {c.channel === "email" ? "e-posta" : "form"} · {workdaysSince(reached)} iş günü önce</div>}
+    <div className="min-w-[12rem] text-xs">
+      <div className="font-semibold text-sm">{statusLine(c)}</div>
+      <div className="mt-1 text-[var(--pnl-muted)]">
+        {touch ? `Son temas: ${fmtDate(touch)}` : "Henüz temas yok"}
+        {d.key !== "none" && ` · Kanal: ${c.channel === "email" ? "e-posta" : "form"}`}
+      </div>
+      {d.source && <div className="mt-1 text-[var(--pnl-muted)]">Teyit: {d.source}</div>}
+      {a.due && (a.key === "wait" || a.key === "followup") && <div className="mt-1">Takip tarihi: {fmtDate(a.due)}</div>}
+      {a.reason && a.key !== "verify" && <div className="mt-1 text-amber-800">{a.reason}</div>}
+      <div className="mt-1"><span className={`inline-block rounded-full px-2 py-0.5 ${STATUS_CLASS[c.form_status]}`}>Form: {FORM_STATUSES[c.form_status]}</span></div>
       {c.notes && <div className="mt-1 text-amber-800">{c.notes}</div>}
     </div>
+  );
+}
+
+/** One-click next sales stage: reply → positive (book a call) → call held → quote sent. */
+function StageButtons({ c, ret }: { c: Contact; ret: string }) {
+  const next: [Reply, string][] = c.reply === "yanit" ? [["olumlu", "Olumlu → Görüşme planla"]] : c.reply === "olumlu" ? [["gorusme", "Görüşme yapıldı"]] : c.reply === "gorusme" ? [["teklif", "Teklif gönderildi"]] : [];
+  if (!next.length) return null;
+  return (
+    <form action={changeReply} className="flex flex-wrap gap-1.5 mb-2">
+      <Hidden d={c.domain} ret={ret} />
+      {next.map(([v, l]) => <button key={v} name="reply" value={v} className="pnl-btn-primary !py-1.5 !px-3 text-xs">{l}</button>)}
+    </form>
+  );
+}
+
+/** Quick "no" with a reason: leaves active follow-up, keeps the record. */
+function CloseForm({ c, ret }: { c: Contact; ret: string }) {
+  return (
+    <form action={closeWithReason} className="flex flex-wrap gap-1.5 items-center mt-2">
+      <Hidden d={c.domain} ret={ret} />
+      <span className="text-xs text-[var(--pnl-muted)]">Olumsuz:</span>
+      {CLOSE_REASONS.map((r) => <button key={r} name="reason" value={r} className="pnl-chip text-xs hover:bg-[var(--pnl-primary-soft)]">{r}</button>)}
+    </form>
   );
 }
 
@@ -174,13 +207,16 @@ export default async function WebContactPage({ searchParams }: { searchParams: P
       </p>
 
       {db && contactsR?.ok && (
+        <>
+        <p className="text-xs uppercase tracking-wide text-[var(--pnl-muted)] mb-2">Tüm kayıtlar · {contacts.length} şirket</p>
         <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 mb-6">
-          <Stat label="Ulaşılan şirket" value={reachedCount} hint={`form ${contacts.filter((c) => c.form_status === "sent").length} · e-posta ${contacts.filter((c) => c.channel === "email").length} · toplam ${contacts.length} incelendi`} />
+          <Stat label="Ulaşılan şirket" value={reachedCount} hint={`teyitli ${contacts.filter((c) => deliveryOf(c).key === "confirmed").length} · bildirilen ${contacts.filter((c) => deliveryOf(c).key === "user_reported").length} · e-posta ${contacts.filter((c) => deliveryOf(c).key === "email_sent").length} · belirsiz ${groups.verify.length}`} />
           <Stat label="Açık iş" value={openCount} hint="yapılması gereken" />
           <Stat label="Doğrulama engeli" value={blocked.length} hint="CAPTCHA / güvenlik kodu" />
           <Stat label="E-posta bekleyen" value={groups.email.length} hint="form yok, adres kayıtlı" />
           <Stat label="Yanıt geldi" value={contacts.filter((c) => c.reply === "yanit" || c.reply === "olumlu").length} hint={`olumlu: ${contacts.filter((c) => c.reply === "olumlu").length}`} />
         </div>
+        </>
       )}
       {!db && <div className="mb-6"><NotConnected what="Sihirbaz veritabanı (Upstash Redis)" vars={["KV_REST_API_URL", "KV_REST_API_TOKEN"]} /></div>}
 
@@ -198,6 +234,8 @@ export default async function WebContactPage({ searchParams }: { searchParams: P
           runs={runsR?.ok ? runsR.data : []}
           known={go === "b" && db ? await safe(allDomains).then((r) => (r.ok ? r.data : [])) : []}
           touched={[...touched]}
+          existing={contacts.map((c) => ({ ...c, message: "", subject: "", reason: "" }))}
+          leadStatus={Object.fromEntries(leads.map((l) => [l.domain, l.status]))}
         />
       )}
     </PanelShell>
@@ -210,7 +248,7 @@ function TaskTab({ contacts, groups, sp, ok, error }: { contacts: Contact[]; gro
   const firstOpen = ACTION_ORDER.find((k) => ACTIONS[k].open && groups[k].length) ?? "wait";
   const g = (ACTION_ORDER as string[]).includes(one(sp.g)) ? (one(sp.g) as ActionKey) : firstOpen;
   const ret = `tab=is&g=${g}`;
-  const list = groups[g];
+  const list = sortByPriority(groups[g]);
   if (error) return <ErrorBox message={error} />;
   if (!ok) return <Card><p className="text-sm text-[var(--pnl-muted)]">Veritabanı bağlı değil.</p></Card>;
 
@@ -231,7 +269,7 @@ function TaskTab({ contacts, groups, sp, ok, error }: { contacts: Contact[]; gro
       </Card>
 
       <Card title={`${ACTIONS[g].label} (${list.length})`}>
-        {list.length === 0 ? <p className="text-sm text-[var(--pnl-muted)]">Bu grupta şirket yok.</p> : g === "blocked" ? <BlockedList list={list} ret={ret} /> : g === "fix" ? <FixList list={list} ret={ret} /> : g === "email" ? <EmailList list={list} ret={ret} /> : g === "followup" ? <FollowList list={list} ret={ret} /> : <GenericList list={list} ret={ret} />}
+        {list.length === 0 ? <p className="text-sm text-[var(--pnl-muted)]">Bu grupta şirket yok.</p> : g === "blocked" ? <BlockedList list={list} ret={ret} /> : g === "fix" ? <FixList list={list} ret={ret} /> : g === "email" ? <EmailList list={list} ret={ret} /> : g === "followup" ? <FollowList list={list} ret={ret} /> : g === "verify" ? <VerifyList list={list} ret={ret} /> : g === "reply" ? <ReplyList list={list} ret={ret} /> : <GenericList list={list} ret={ret} />}
       </Card>
 
       <AllContacts contacts={contacts} sp={sp} />
@@ -373,6 +411,50 @@ function FollowList({ list, ret }: { list: Contact[]; ret: string }) {
   );
 }
 
+function ReplyList({ list, ret }: { list: Contact[]; ret: string }) {
+  return (
+    <>
+      <p className="text-sm text-[var(--pnl-muted)] mb-3">Gelen yanıtı okuyun (geçmişte e-postanın özeti var). Olumluysa &quot;Olumlu&quot; seçin; olumsuzsa gerekçeyi tıklayın: şirket aktif takipten çıkar ama kaydı kalır.</p>
+      <Table
+        head={["Şirket", "Durum", "Yanıt ve geçmiş", "İşlem"]}
+        rows={list.map((c) => {
+          const lastReply = [...eventsOf(c)].reverse().find((e) => e.type === "reply");
+          return [
+            <Company key="c" c={c} />,
+            <Where key="w" c={c} />,
+            <div key="h" className="min-w-[14rem] text-xs">{lastReply?.note && <p className="mb-2 whitespace-pre-line">{lastReply.note}</p>}<History c={c} /></div>,
+            <div key="r" className="min-w-[14rem]"><StageButtons c={c} ret={ret} /><ReplyForm c={c} ret={ret} /><CloseForm c={c} ret={ret} /><NoteForm c={c} ret={ret} /></div>,
+          ];
+        })}
+      />
+    </>
+  );
+}
+
+function VerifyList({ list, ret }: { list: Contact[]; ret: string }) {
+  return (
+    <>
+      <p className="text-sm text-[var(--pnl-muted)] mb-3">Bu formların ulaştığı teyit edilmedi. Aynı şirkete ikinci kez yazmadan önce kontrol edin: gelen kutusunda otomatik teyit var mı, sitede &quot;mesajınız alındı&quot; görüldü mü? Ulaştıysa &quot;Ulaştı say&quot;, ulaşmadıysa formu tekrar gönderin.</p>
+      <Table
+        head={["Şirket", "Neden belirsiz", "Form", "İşlem"]}
+        rows={list.map((c) => [
+          <Company key="c" c={c} />,
+          <div key="w" className="min-w-[12rem] text-xs"><div className="font-semibold">{deliveryOf(c).source}</div>{c.notes && <div className="mt-1 text-amber-800">{c.notes}</div>}<div className="mt-1"><History c={c} /></div></div>,
+          <div key="f" className="min-w-[10rem] text-xs">
+            <div>{link(c.contact_page_url || c.website, "Formu aç ↗")}</div>
+            <details className="mt-1"><summary className="cursor-pointer">Mesajı göster</summary><textarea id={`vm-${c.domain}`} readOnly rows={5} value={msgOf(c)} className="pnl-input text-xs mt-2" /><div className="mt-2"><CopyButton target={`vm-${c.domain}`} label="Mesajı kopyala" /></div></details>
+          </div>,
+          <div key="a" className="flex flex-col gap-2 min-w-[8rem]">
+            <form action={confirmDelivery}><Hidden d={c.domain} ret={ret} /><button className="pnl-btn-primary w-full">Ulaştı say</button></form>
+            <form action={markSent}><Hidden d={c.domain} ret={ret} /><button className="pnl-btn w-full">Tekrar gönderdim</button></form>
+            <form action={markSkipped}><Hidden d={c.domain} ret={ret} /><button className="pnl-btn-ghost w-full">Vazgeç</button></form>
+          </div>,
+        ])}
+      />
+    </>
+  );
+}
+
 function GenericList({ list, ret }: { list: Contact[]; ret: string }) {
   return (
     <Table
@@ -381,7 +463,7 @@ function GenericList({ list, ret }: { list: Contact[]; ret: string }) {
         <Company key="c" c={c} />,
         <Where key="w" c={c} />,
         <History key="h" c={c} />,
-        <div key="r"><ReplyForm c={c} ret={ret} /><NoteForm c={c} ret={ret} /></div>,
+        <div key="r"><StageButtons c={c} ret={ret} /><ReplyForm c={c} ret={ret} />{["meeting", "quote"].includes(nextAction(c).key) && <CloseForm c={c} ret={ret} />}<NoteForm c={c} ret={ret} /></div>,
       ])}
     />
   );
@@ -442,7 +524,8 @@ function ReportTab({ contacts, groups, sp }: { contacts: Contact[]; groups: Reco
   const period: Period = (["day", "week", "month"] as string[]).includes(one(sp.p)) ? (one(sp.p) as Period) : "week";
   const anchor = /^\d{4}-\d{2}-\d{2}$/.test(one(sp.d)) ? one(sp.d) : today();
   const rep = buildReport(contacts, period, anchor);
-  const summary = reportSummary(rep, groups);
+  const backlog = backlogLines(contacts);
+  const summary = `${funnel(contacts).map((f) => `${f.label}: ${f.value}`).join(" → ")}\n${backlog.map((b) => `- ${b.text}`).join("\n")}\n\n${reportSummary(rep, groups)}`;
   const href = (p: Period, d: string) => `/panel/webcontact?tab=rapor&p=${p}&d=${d}`;
   return (
     <>
@@ -458,6 +541,23 @@ function ReportTab({ contacts, groups, sp }: { contacts: Contact[]; groups: Reco
         {anchor !== today() && <a href={href(period, today())} className="text-sm underline">Bugüne dön ↩</a>}
       </div>
 
+      <Card title="Satış sonucu (tüm kayıtlar)">
+        <ol className="grid grid-cols-2 sm:grid-cols-5 gap-3">
+          {funnel(contacts).map((f, i) => (
+            <li key={f.label} className="rounded-2xl bg-[var(--pnl-main)] px-3 py-2.5">
+              <div className="text-xs text-[var(--pnl-muted)]">{i ? "→ " : ""}{f.label}</div>
+              <div className="text-2xl font-semibold">{f.value}</div>
+            </li>
+          ))}
+        </ol>
+        {backlog.length > 0 && (
+          <ul className="mt-4 grid gap-1.5 text-sm">
+            {backlog.map((b) => <li key={b.text}><a href={b.href} className="underline decoration-[var(--pnl-line-strong)] hover:decoration-[var(--pnl-primary)]">{b.text}</a></li>)}
+          </ul>
+        )}
+      </Card>
+
+      <h2 className="text-sm font-semibold text-[var(--pnl-muted)] mb-3">Bu dönemde yapılanlar · {rep.range.label}</h2>
       <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 mb-6">
         {REPORT_METRICS.map((mt) => <Stat key={mt.key} label={mt.label} value={rep.counts[mt.key] ?? 0} />)}
       </div>
@@ -486,8 +586,8 @@ function ReportTab({ contacts, groups, sp }: { contacts: Contact[]; groups: Reco
 
 // ---------- Run (agent tasks + import) ----------
 
-function RunTab({ go, n, ap, t, db, candidates, blocked, runs, known, touched }: {
-  go: string; n: number; ap: Approval; t: ReturnType<typeof targetFrom>; db: boolean;
+function RunTab({ go, n, ap, t, db, candidates, blocked, runs, known, touched, existing, leadStatus }: {
+  go: string; n: number; ap: Approval; t: ReturnType<typeof targetFrom>; db: boolean; existing: Contact[]; leadStatus: Record<string, string>;
   candidates: Awaited<ReturnType<typeof listLeads>>; blocked: Contact[];
   runs: Awaited<ReturnType<typeof listContactRuns>>; known: string[]; touched: string[];
 }) {
@@ -513,7 +613,31 @@ function RunTab({ go, n, ap, t, db, candidates, blocked, runs, known, touched }:
           <SettingsFields n={n} ap={ap} />
           <div><button className="pnl-btn-primary" disabled={!candidates.length}>Görev metnini oluştur</button></div>
         </form>
-        {!candidates.length && db && <p className="text-xs text-[var(--pnl-muted)] mt-2">Uygun şirket yok: önce Müşteri sihirbazında liste oluşturun ya da 1b ile yeni araştırma yapın.</p>}
+        {!candidates.length && db && (
+          <div className="pnl-callout mt-3 flex flex-wrap items-center justify-between gap-3 !py-3">
+            <span className="text-sm">Temas edilmemiş uygun aday kalmadı.</span>
+            <a href="/panel/sihirbaz" className="rounded-full bg-white/20 px-3 py-1 text-sm font-semibold">Aday bul →</a>
+          </div>
+        )}
+        {candidates.length > 0 && (
+          <div className="mt-4">
+            <h3 className="text-sm font-semibold mb-2">Önizleme: sıradaki {Math.min(n, candidates.length)} şirket ve kanal</h3>
+            <Table
+              head={["Şirket", "UK satış sinyali", "Önerilen hizmet", "Alıcı ve kanal"]}
+              rows={(chosen.length ? chosen : candidates.slice(0, n)).map((l) => {
+                const sig = ukSignal(l);
+                const svc = recommendService(l, segmentById(l.segment)?.group);
+                return [
+                  <div key="c" className="min-w-[9rem] text-sm"><div className="font-semibold">{l.company}</div><div className="text-xs text-[var(--pnl-muted)]">{l.tier} · {l.priority} · {l.country}</div></div>,
+                  <div key="s" className="min-w-[10rem] text-xs">{sig ? <>{sig.signal}{sig.source && <> · <a href={sig.source} target="_blank" rel="noopener noreferrer" className="underline">kaynak ↗</a></>}</> : <span className="text-amber-800">Sinyal yok · önce doğrulayın</span>}</div>,
+                  <div key="h" className="min-w-[10rem] text-xs"><strong>{svc.service}</strong>{svc.note && <div className="text-[var(--pnl-muted)]">{svc.note}</div>}</div>,
+                  <div key="k" className="min-w-[10rem] text-xs">{channelPlan(l)}</div>,
+                ];
+              })}
+            />
+            <p className="text-xs text-[var(--pnl-muted)] mt-2">Ajan ilk iki onayda her şirket için kullandığı kanalı ve formun satışa uygun olup olmadığını gösterir; vergi numarası, üyelik veya yalnız destek isteyen formları göndermez.</p>
+          </div>
+        )}
       </Card>
 
       <Card title="1b. Yeni araştırma + form">
@@ -563,10 +687,8 @@ function RunTab({ go, n, ap, t, db, candidates, blocked, runs, known, touched }:
                 {t.countries.map((c) => <input key={c} type="hidden" name="c" value={c} />)}
               </>
             )}
-            <label className="text-sm">Ajanın verdiği CSV
-              <textarea name="data" required rows={8} className="pnl-input font-mono text-xs" placeholder={LOG_COLUMNS.join(",")} />
-            </label>
-            <p className="text-xs text-[var(--pnl-muted)]">İçe aktarınca her şirket İş listesinde sıradaki işine göre yerini alır ve geçmişine işlenir. Formu daha önce gönderilmiş şirketler atlanır.</p>
+            <ImportPreview existing={existing} leadStatus={leadStatus} />
+            <p className="text-xs text-[var(--pnl-muted)]">İçe aktarınca her şirket İş listesinde sıradaki işine göre yerini alır ve geçmişine işlenir. Herhangi bir kanaldan (form, e-posta, yanıt) zaten ulaşılmış şirketlerin kaydı değişmez; Müşteri sihirbazı, WebContact ve E-posta aynı şirket kaydını kullanır.</p>
             <div><button className="pnl-btn-primary">İçeri al</button></div>
           </form>
         ) : <p className="text-sm text-[var(--pnl-muted)]">Önce veritabanını bağlayın.</p>}

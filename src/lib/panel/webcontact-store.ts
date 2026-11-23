@@ -1,6 +1,6 @@
 import "server-only";
 import { kv, kvPipeline } from "@/lib/panel/kv";
-import { eventsOf, importEvents } from "@/lib/panel/outreach";
+import { eventsOf, importDecision, importEvents } from "@/lib/panel/outreach";
 import type { Contact, ContactEvent, Reply } from "@/lib/panel/webcontact";
 
 /**
@@ -36,15 +36,23 @@ export async function getContact(domain: string): Promise<Contact | null> {
  * Saves a run's rows. A domain whose form was already sent is never overwritten (duplicate);
  * an earlier captcha/error/no_form row is replaced by the newer attempt.
  */
-export async function saveContacts(cs: Contact[]): Promise<{ saved: Contact[]; duplicates: number }> {
+export async function saveContacts(cs: Contact[]): Promise<{ saved: Contact[]; duplicates: number; reviewed: number }> {
   const saved: Contact[] = [];
   let duplicates = 0;
+  let reviewed = 0;
   const seen = new Set<string>();
   for (const c of cs) {
     if (seen.has(c.domain)) { duplicates++; continue; }
     seen.add(c.domain);
     const prev = await getContact(c.domain);
-    if (prev && prev.form_status === "sent") { duplicates++; continue; }
+    const decision = importDecision(prev, c);
+    if (prev && decision.kind === "contacted") { duplicates++; continue; }
+    if (prev && decision.kind === "review") {
+      // Already reached through another channel: keep the record, only log the agent's extra send.
+      reviewed++;
+      await kv("SET", KEY(c.domain), JSON.stringify({ ...prev, events: [...eventsOf(prev), { at: new Date().toISOString(), type: "note", note: `İnceleyin: ajan yeniden form gönderdi (${c.sent_at || "tarih yok"}) ama şirkete zaten ulaşılmıştı` }] }));
+      continue;
+    }
     // Keep the history of earlier blocked attempts on the same company.
     saved.push(
       prev
@@ -64,10 +72,10 @@ export async function saveContacts(cs: Contact[]): Promise<{ saved: Contact[]; d
   }
   const now = Date.now();
   await kvPipeline(saved.flatMap((c, i) => [["SET", KEY(c.domain), JSON.stringify(c)], ["ZADD", INDEX, now + i, c.domain]]));
-  return { saved, duplicates };
+  return { saved, duplicates, reviewed };
 }
 
-type Patch = Partial<Pick<Contact, "reply" | "form_status" | "sent_at" | "followup_at" | "notes" | "channel" | "emailed_at" | "thread_id">>;
+type Patch = Partial<Pick<Contact, "reply" | "form_status" | "sent_at" | "followup_at" | "notes" | "channel" | "emailed_at" | "thread_id" | "delivery_ok" | "close_reason">>;
 
 /** Updates a record and appends what happened to its history. */
 export async function updateContact(domain: string, patch: Patch, event?: Omit<ContactEvent, "at">): Promise<Contact | null> {

@@ -4,12 +4,14 @@ import { kvConfigured } from "@/lib/panel/kv";
 import { DAILY_SEND_LIMIT, lastSync, recentInbox, sentToday, syncInbox, type MailKind } from "@/lib/panel/mail-sync";
 import { eventsOf } from "@/lib/panel/outreach";
 import { fmtDate, safe } from "@/lib/panel/safe";
-import { personalize, remainingPlaceholders } from "@/lib/panel/mail-compose";
+import { ADDRESS_TYPES, personalize, rankAddresses, recommendService, remainingPlaceholders, ukSignal } from "@/lib/panel/mail-compose";
+import { isSystemMail, type InboxItem } from "@/lib/panel/mail-match";
+import type { Contact } from "@/lib/panel/webcontact";
 import { contactTemplate } from "@/lib/panel/webcontact";
 import { getContact, listContacts } from "@/lib/panel/webcontact-store";
 import { segmentById } from "@/lib/panel/wizard";
 import { getLead } from "@/lib/panel/wizard-store";
-import { sendEmail, syncNow } from "./actions";
+import { ignoreMail, linkMail, sendEmail, syncNow } from "./actions";
 
 export const dynamic = "force-dynamic";
 
@@ -21,6 +23,7 @@ const KIND: Record<MailKind, [string, string]> = {
   auto_ack: ["Otomatik teyit", "bg-[var(--pnl-primary-soft)] text-[var(--pnl-primary-ink)]"],
   other: ["Diğer", "bg-slate-100 text-slate-600"],
   own: ["Bizden", "bg-slate-100 text-slate-500"],
+  system: ["Sistem / deneme", "bg-slate-100 text-slate-500"],
 };
 
 const SYNC_EVERY_MS = 10 * 60 * 1000;
@@ -70,7 +73,12 @@ export default async function MailPage({ searchParams }: { searchParams: Promise
   const body = c && facts ? personalize(c.message || contactTemplate(segmentById(c.segment)?.group, lang), facts) : "";
   const todo = remainingPlaceholders(body);
   const subject = c ? c.subject || (lang === "tr" ? "İngiltere'de depolama ve dağıtım: LondraDepo" : "UK warehousing and distribution: LondraDepo") : "";
-  const to = c ? (c.email_fallback.match(/[^\s,;<>]+@[^\s,;<>]+\.[^\s,;<>]+/) ?? [""])[0] : "";
+  const addresses = c ? rankAddresses(c.email_fallback) : [];
+  const to = addresses[0]?.email ?? "";
+  const signal = ukSignal(lead);
+  const service = recommendService(lead, segmentById(c?.segment ?? "")?.group);
+  // Rows stored before system mail was recognised are shown as system right away.
+  const shownInbox = inbox.filter((i) => !i.ignored).map((i) => (!i.domain && i.kind !== "own" && isSystemMail(i) ? { ...i, kind: "system" as const, suggest: undefined } : i));
   const withEmail = contacts.filter((x) => x.email_fallback);
   const sentLog = contacts
     .flatMap((x) => eventsOf(x).filter((e) => e.type === "email_sent").map((e) => ({ ...e, company: x.company, domain: x.domain })))
@@ -92,7 +100,7 @@ export default async function MailPage({ searchParams }: { searchParams: Promise
         <>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
             <Stat label="Son tarama" value={lastR?.ok && lastR.data ? fmtDate(lastR.data) : "—"} hint="10 dakikada bir kendiliğinden" />
-            <Stat label="Şirket yanıtı (son 100)" value={inbox.filter((i) => i.kind === "reply" && i.domain).length} />
+            <Stat label="Şirket yanıtı (son 100)" value={inbox.filter((i) => i.kind === "reply" && i.domain).length} hint={`${shownInbox.filter((i) => !i.domain && i.kind !== "own" && i.kind !== "system").length} e-posta bağlanmayı bekliyor`} />
             <Stat label="Otomatik teyit" value={inbox.filter((i) => i.kind === "auto_ack" && i.domain).length} />
             <Stat label="Bugün gönderilen" value={`${sentR?.ok ? sentR.data : 0} / ${DAILY_SEND_LIMIT}`} hint="günlük güvenlik sınırı" />
           </div>
@@ -101,12 +109,12 @@ export default async function MailPage({ searchParams }: { searchParams: Promise
             <div id="gelen" />
             <Table
               head={["Tarih", "Gönderen", "Konu", "Tür", "Şirket"]}
-              rows={inbox.slice(0, 60).map((i) => [
+              rows={shownInbox.slice(0, 60).map((i) => [
                 <span key="t" className="text-xs whitespace-nowrap">{fmtDate(i.date)}</span>,
-                <span key="f" className="text-xs break-all min-w-[10rem] inline-block">{i.from}</span>,
-                <div key="s" className="min-w-[14rem] text-xs"><div className="font-semibold">{i.subject || "(konu yok)"}</div><div className="text-[var(--pnl-muted)] mt-0.5">{i.snippet}</div></div>,
+                <span key="f" className={`text-xs break-all min-w-[10rem] inline-block ${i.kind === "system" ? "text-[var(--pnl-faint)]" : ""}`}>{i.from}</span>,
+                <div key="s" className={`min-w-[14rem] text-xs ${i.kind === "system" ? "text-[var(--pnl-faint)]" : ""}`}><div className="font-semibold">{i.subject || "(konu yok)"}</div><div className="text-[var(--pnl-muted)] mt-0.5">{i.snippet}</div></div>,
                 <span key="k" className={`inline-block whitespace-nowrap rounded-full px-2 py-0.5 text-xs ${KIND[i.kind][1]}`}>{KIND[i.kind][0]}</span>,
-                i.domain ? <a key="c" href={`/panel/webcontact?tab=is&fq=${encodeURIComponent(i.domain)}#temaslar`} className="text-xs underline">{i.company ?? i.domain}</a> : <span key="c" className="text-xs text-[var(--pnl-faint)]">eşleşmedi</span>,
+                <LinkCell key="c" i={i} contacts={contacts} />,
               ])}
               empty="Henüz taranan e-posta yok. &quot;Şimdi tara&quot;ya basın."
             />
@@ -140,6 +148,13 @@ export default async function MailPage({ searchParams }: { searchParams: Promise
               {c.thread_id ? " · Aynı e-posta dizisine yanıt olarak gider." : ""}
             </p>
           )}
+          {c && (
+            <div className="rounded-2xl border border-[var(--pnl-line-strong)] bg-[var(--pnl-main)] p-3 text-xs grid gap-1.5">
+              <div><strong>UK sinyali:</strong> {signal ? <>{signal.signal}{signal.source && <> · <a href={signal.source} target="_blank" rel="noopener noreferrer" className="underline">kaynak ↗</a></>}</> : "kayıtlı sinyal yok; ilk cümleyi genel tutun"}</div>
+              <div><strong>Önerilen hizmet:</strong> {service.service}{service.note ? ` · ${service.note}` : ""}</div>
+              <div><strong>Alıcı türü:</strong> {addresses.length ? addresses.map((a, k) => <span key={a.email} className={`ml-1 ${a.type === "support" ? "text-amber-800" : ""}`}>{k ? " · " : ""}{a.email} ({ADDRESS_TYPES[a.type]}{a.type === "support" ? " ⚠ satış ekibine ulaşmayabilir" : ""})</span>) : "adres yok"}</div>
+            </div>
+          )}
           {c && (todo.length ? (
             <p className="pnl-callout text-xs text-amber-800">Elle doldurulacak: {todo.map((t) => <code key={t} className="mx-1">{t}</code>)}. Bunlar kalırken şirkete gönderilmez (kendinize deneme gönderebilirsiniz).</p>
           ) : (
@@ -161,5 +176,42 @@ export default async function MailPage({ searchParams }: { searchParams: Promise
         </Card>
       )}
     </PanelShell>
+  );
+}
+
+/** Company cell of an inbox row: the linked company, or suggestions with "Şirkete bağla" (panel record only). */
+function LinkCell({ i, contacts }: { i: InboxItem; contacts: Contact[] }) {
+  if (i.kind === "own" || i.kind === "system") return <span className="text-xs text-[var(--pnl-faint)]">satışa sayılmaz</span>;
+  if (i.domain) {
+    return (
+      <div className="text-xs min-w-[9rem]">
+        <a href={`/panel/webcontact?tab=is&fq=${encodeURIComponent(i.domain)}#temaslar`} className="underline">{i.company ?? i.domain}</a>
+        <div className="text-[var(--pnl-muted)] mt-0.5">{i.linked_by === "user" ? "elle bağlandı" : "otomatik bağlandı"}</div>
+      </div>
+    );
+  }
+  const suggested = new Set((i.suggest ?? []).map((s) => s.domain));
+  const rest = contacts.filter((c) => !suggested.has(c.domain)).sort((a, b) => a.company.localeCompare(b.company, "tr"));
+  return (
+    <div className="min-w-[14rem] text-xs">
+      {i.suggest?.[0] && <div className="mb-1">Öneri: <strong>{i.suggest[0].company}</strong> <span className="text-[var(--pnl-muted)]">({i.suggest[0].why})</span></div>}
+      <form action={linkMail} className="grid gap-1.5">
+        <input type="hidden" name="id" value={i.id} />
+        <label className="sr-only" htmlFor={`lk-${i.id}`}>Şirket</label>
+        <select id={`lk-${i.id}`} name="d" defaultValue={i.suggest?.[0]?.domain ?? ""} className="pnl-select-sm">
+          <option value="">Şirket seçin…</option>
+          {(i.suggest ?? []).map((s) => <option key={s.domain} value={s.domain}>{s.company} (öneri)</option>)}
+          {rest.map((c) => <option key={c.domain} value={c.domain}>{c.company}</option>)}
+        </select>
+        <label className="sr-only" htmlFor={`as-${i.id}`}>Tür</label>
+        <select id={`as-${i.id}`} name="as" defaultValue={i.kind === "auto_ack" ? "auto_ack" : "reply"} className="pnl-select-sm">
+          <option value="reply">İnsan yanıtı</option>
+          <option value="auto_ack">Otomatik form teyidi</option>
+        </select>
+        <button className="pnl-btn !py-1 !px-3 text-xs">Şirkete bağla</button>
+      </form>
+      <form action={ignoreMail} className="mt-1"><input type="hidden" name="id" value={i.id} /><button className="underline text-[var(--pnl-muted)]">Yoksay</button></form>
+      <div className="text-[var(--pnl-faint)] mt-1">Yalnız panel kaydı; e-posta gönderilmez.</div>
+    </div>
   );
 }

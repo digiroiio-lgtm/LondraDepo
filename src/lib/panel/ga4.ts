@@ -1,4 +1,5 @@
 import "server-only";
+import { getAnalyticsSnapshot } from "./analytics-snapshot";
 import { googleConfigured, googleToken } from "./google";
 
 export const GA4_PROPERTY = process.env.GA4_PROPERTY_ID || "538800744";
@@ -8,7 +9,13 @@ type Row = { dimensionValues?: { value: string }[]; metricValues?: { value: stri
 export type Ga4Result = { rows: { dims: string[]; mets: number[] }[] };
 
 /** GA4 Data API runReport. body follows https://developers.google.com/analytics/devguides/reporting/data/v1/rest/v1beta/properties/runReport */
-export async function ga4Report(body: Record<string, unknown>): Promise<Ga4Result> {
+export async function ga4Report(body: Record<string, unknown>, snapshotKey?: string): Promise<Ga4Result> {
+  if (!googleConfigured()) {
+    const snap = await getAnalyticsSnapshot();
+    const hit = snapshotKey ? snap?.ga4[snapshotKey] : undefined;
+    if (!hit) throw new Error("Bu veri anlık görüntüde yok");
+    return hit;
+  }
   const res = await fetch(`https://analyticsdata.googleapis.com/v1beta/properties/${GA4_PROPERTY}:runReport`, {
     method: "POST",
     headers: { Authorization: `Bearer ${await googleToken()}`, "Content-Type": "application/json" },

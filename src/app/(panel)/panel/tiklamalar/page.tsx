@@ -1,5 +1,6 @@
-import PanelShell, { Bars, Card, ErrorBox, NotConnected, Stat, Table } from "@/components/panel/PanelShell";
-import { eventFilter, ga4Configured, ga4Report } from "@/lib/panel/ga4";
+import PanelShell, { Bars, Card, DataSource, ErrorBox, NotConnected, Stat, Table } from "@/components/panel/PanelShell";
+import { analyticsSource } from "@/lib/panel/analytics-snapshot";
+import { eventFilter, ga4Report } from "@/lib/panel/ga4";
 import { safe } from "@/lib/panel/safe";
 
 export const dynamic = "force-dynamic";
@@ -7,16 +8,18 @@ export const dynamic = "force-dynamic";
 const LABEL: Record<string, string> = { whatsapp_click: "WhatsApp", phone_call: "Telefon", cta_click: "Teklif / görüşme butonu", generate_lead: "Form gönderimi", form_start: "Form başlatma" };
 
 export default async function ClicksPage() {
-  if (!ga4Configured()) return <PanelShell active="/panel/tiklamalar" title="Tıklamalar"><NotConnected what="Google Analytics" vars={["GOOGLE_SERVICE_ACCOUNT_JSON", "GA4_PROPERTY_ID"]} /></PanelShell>;
+  const src = await analyticsSource();
+  if (!src.mode) return <PanelShell active="/panel/tiklamalar" title="Tıklamalar"><NotConnected what="Google Analytics" vars={["GOOGLE_SERVICE_ACCOUNT_JSON", "GA4_PROPERTY_ID"]} /></PanelShell>;
   const range = [{ startDate: "28daysAgo", endDate: "today" }];
   const [totals, daily, bySource] = await Promise.all([
-    safe(() => ga4Report({ dateRanges: range, dimensions: [{ name: "eventName" }], metrics: [{ name: "eventCount" }], dimensionFilter: eventFilter(Object.keys(LABEL)) })),
-    safe(() => ga4Report({ dateRanges: range, dimensions: [{ name: "date" }], metrics: [{ name: "eventCount" }], dimensionFilter: eventFilter(["whatsapp_click"]), orderBys: [{ dimension: { dimensionName: "date" } }] })),
-    safe(() => ga4Report({ dateRanges: range, dimensions: [{ name: "eventName" }, { name: "pagePath" }, { name: "customEvent:click_source" }], metrics: [{ name: "eventCount" }], dimensionFilter: eventFilter(["whatsapp_click", "phone_call", "cta_click"]), orderBys: [{ metric: { metricName: "eventCount" }, desc: true }], limit: 50 })),
+    safe(() => ga4Report({ dateRanges: range, dimensions: [{ name: "eventName" }], metrics: [{ name: "eventCount" }], dimensionFilter: eventFilter(Object.keys(LABEL)) }, "clicks_totals")),
+    safe(() => ga4Report({ dateRanges: range, dimensions: [{ name: "date" }], metrics: [{ name: "eventCount" }], dimensionFilter: eventFilter(["whatsapp_click"]), orderBys: [{ dimension: { dimensionName: "date" } }] }, "clicks_daily")),
+    safe(() => ga4Report({ dateRanges: range, dimensions: [{ name: "eventName" }, { name: "pagePath" }, { name: "customEvent:click_source" }], metrics: [{ name: "eventCount" }], dimensionFilter: eventFilter(["whatsapp_click", "phone_call", "cta_click"]), orderBys: [{ metric: { metricName: "eventCount" }, desc: true }], limit: 50 }, "clicks_by_source")),
   ]);
   const count = (n: string) => (totals.ok ? totals.data.rows.find((r) => r.dims[0] === n)?.mets[0] ?? 0 : 0);
   return (
     <PanelShell active="/panel/tiklamalar" title="Tıklamalar (son 28 gün)">
+      <DataSource mode={src.mode} generatedAt={src.snapshot?.generated_at} />
       {totals.ok ? (
         <div className="grid gap-4 grid-cols-2 lg:grid-cols-5 mb-6">{Object.keys(LABEL).map((k) => <Stat key={k} label={LABEL[k]} value={count(k)} />)}</div>
       ) : <ErrorBox message={totals.error} />}

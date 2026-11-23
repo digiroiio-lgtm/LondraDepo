@@ -205,3 +205,15 @@ export function Bars({ data, label }: { data: { x: string; y: number }[]; label:
     </figure>
   );
 }
+
+/** Small note on analytics pages: live Google API or a dated Claude (MCP) snapshot. */
+export function DataSource({ mode, generatedAt }: { mode: "live" | "snapshot"; generatedAt?: string }) {
+  if (mode === "live") return null;
+  const when = generatedAt ? new Intl.DateTimeFormat("tr-TR", { day: "numeric", month: "long", year: "numeric", hour: "2-digit", minute: "2-digit", timeZone: "Europe/London" }).format(new Date(generatedAt)) : "?";
+  return (
+    <p className="mb-5 inline-flex flex-wrap items-center gap-2 rounded-full bg-[var(--pnl-primary-soft)] px-4 py-1.5 text-xs text-[var(--pnl-primary-ink)]">
+      <span className="font-semibold">Anlık görüntü: {when}</span>
+      <span>· Google Analytics ve Search Console verileri Claude bağlantısıyla alındı; yenilemek için Claude&apos;a &quot;analitiği yenile&quot; yazın.</span>
+    </p>
+  );
+}

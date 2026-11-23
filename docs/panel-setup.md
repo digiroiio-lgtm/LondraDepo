@@ -46,6 +46,17 @@ Oturum 7 gün açık kalır. Çıkmak için sol menüdeki **Çıkış**'a basın
 
 GA4 yalnızca çerez onayı veren ziyaretçileri sayar. Panelde gördüğünüz tıklamalar gerçek sayının altındadır.
 
+### Servis hesabı yoksa: Claude anlık görüntüsü
+Servis hesabı eklenmeden de Performans, Tıklamalar ve Özet sayfaları dolar.
+- Claude, Google Analytics ve Search Console bağlantılarından (MCP) veriyi çeker.
+- Veriyi panelin özel veritabanına yazar; repoya yazmaz, çünkü repo herkese açık.
+- Sayfaların üstünde anlık görüntünün tarihi görünür.
+- Yenilemek için Claude'a **"analitiği yenile"** yazmanız yeterli.
+
+Bunun için Vercel'de `PANEL_SNAPSHOT_TOKEN` değişkeni (32+ karakter) bulunmalı. Claude bu değişkeni kendisi ekler; değeri kimseyle paylaşılmaz.
+
+Servis hesabı (`GOOGLE_SERVICE_ACCOUNT_JSON`) eklenirse panel otomatik olarak canlı veriye geçer ve anlık görüntü kullanılmaz.
+
 ## 3. Gelen talepler (Formspree)
 1. Formspree'ye giriş yapın.
 2. **Account → Settings → API** bölümünden bir API anahtarı oluşturun. Submissions API, Formspree'nin API destekleyen planlarında açıktır; anahtar sekmesi yoksa planınız desteklemiyordur.

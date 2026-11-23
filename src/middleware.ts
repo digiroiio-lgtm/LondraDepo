@@ -4,7 +4,8 @@ import { PANEL_COOKIE, verifySession } from "@/lib/panel/auth";
 /** Password gate for the private panel. Everything under /panel and /api/panel needs a valid session cookie. */
 export async function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
-  const open = pathname === "/panel/giris" || pathname === "/api/panel/login";
+  // The snapshot endpoint authenticates with its own bearer token (Claude writes analytics snapshots there).
+  const open = pathname === "/panel/giris" || pathname === "/api/panel/login" || pathname === "/api/panel/snapshot";
   const ok = open || (await verifySession(req.cookies.get(PANEL_COOKIE)?.value));
   if (ok) {
     const res = NextResponse.next();

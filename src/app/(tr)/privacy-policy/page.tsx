@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-const LAST_UPDATED = "Eylül 2026";
+const LAST_UPDATED = "23 Kasım 2026";
 
 export default function PrivacyPolicyPage() {
   return (
@@ -74,7 +74,7 @@ export default function PrivacyPolicyPage() {
                     Analitik çerezlere onay vermeniz halinde, Google Analytics 4 ve Vercel
                     Analytics üzerinden ziyaret ettiğiniz sayfalar ve site içi etkileşimler gibi
                     kullanım verileri işlenebilir. Bu verileri site performansını anlamak ve
-                    geliştirmek için kullanırız.
+                    geliştirmek için kullanırız. Analitik çerezlere onay vermezseniz Google Analytics, Google Consent Mode ile çalışır: yalnızca çerezsiz sinyaller alır (ör. bir sayfanın görüntülendiği veya bir düğmeye tıklandığı), cihazınıza çerez veya kimlik bilgisi kaydetmez; bu veriler yalnızca toplu, modellenmiş istatistikler için kullanılır. Reklam amaçlı depolama her zaman kapalıdır.
                   </p>
                 </div>
                 <div>

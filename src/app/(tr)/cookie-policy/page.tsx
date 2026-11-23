@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-const LAST_UPDATED = "27 Eylül 2026";
+const LAST_UPDATED = "23 Kasım 2026";
 
 export default function CookiePolicyPage() {
   return (
@@ -76,7 +76,8 @@ export default function CookiePolicyPage() {
                   <p className="text-slate-600 text-sm leading-relaxed">
                     Ziyaretçi sayısı, en çok ziyaret edilen sayfalar ve kullanım süreleri gibi
                     istatistiksel verileri anonim olarak toplamamıza yardımcı olur. Bu veriler
-                    siteyi geliştirmek için kullanılır; kişisel kimliğinizi ifşa etmez.
+                    siteyi geliştirmek için kullanılır; kişisel kimliğinizi ifşa etmez. Onay vermezseniz
+                    Google Analytics çerez kullanmadan, yalnızca anonim ve toplu ölçüm için çalışır.
                   </p>
                   <div className="mt-3 text-sm">
                     <strong className="text-slate-700">Sağlayıcı:</strong>{" "}
@@ -137,8 +138,10 @@ export default function CookiePolicyPage() {
               <h2 className="text-xl font-bold text-[#0b2545] mb-3">5. Üçüncü Taraf Çerezler</h2>
               <p className="text-slate-600 leading-relaxed">
                 Sitemiz bazı üçüncü taraf hizmetlerini kullanabilir. Bu hizmetlerin kendi çerez
-                politikaları geçerlidir. Yalnızca analitik veya pazarlama çerezlerine onay
-                verdiğinizde bu üçüncü taraf bağlantıları aktif hale gelir.
+                politikaları geçerlidir. Bu hizmetlerin çerezleri yalnızca analitik veya pazarlama
+                çerezlerine onay verdiğinizde yerleştirilir. Google Analytics tüm ziyaretçiler için
+                Consent Mode ile yüklenir; onayınız yoksa yalnızca çerezsiz, anonim sinyaller gönderir
+                ve cihazınıza hiçbir şey kaydetmez.
               </p>
             </section>
 

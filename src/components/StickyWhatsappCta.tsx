@@ -1,6 +1,6 @@
 "use client";
 
-import { trackWhatsappClick } from "@/lib/gtag";
+import { trackWhatsappClick, waVariant } from "@/lib/gtag";
 
 const TEXT = {
   tr: { href: "https://wa.me/447554195190?text=Merhaba%2C%20depo%20teklifi%20almak%20istiyorum.", aria: "WhatsApp'tan yazın", label: "Hemen Yazın" },
@@ -16,8 +16,10 @@ export default function StickyWhatsappCta({ lang = "tr" }: { lang?: "tr" | "en" 
       rel="noopener noreferrer"
       aria-label={t.aria}
       data-tracked="1"
-      onClick={() => trackWhatsappClick("sticky_cta")}
-      className="fixed bottom-6 right-5 z-50 flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white font-bold text-sm px-4 py-3 rounded-full shadow-xl transition"
+      data-cta-source="sticky_cta"
+      onClick={() => trackWhatsappClick("sticky_cta", waVariant(t.href))}
+      style={{ bottom: "calc(1.5rem + var(--cookie-banner-h, 0px))" }}
+      className="fixed right-5 z-50 flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white font-bold text-sm px-4 py-3 rounded-full shadow-xl transition"
     >
       <svg
         className="w-6 h-6 fill-white flex-shrink-0"

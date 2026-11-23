@@ -2,7 +2,7 @@
 
 import { useMemo, useRef, useState } from "react";
 import Link from "next/link";
-import { trackCtaClick, trackFormStart, trackWhatsappClick } from "@/lib/gtag";
+import { trackCtaClick, trackFormStart, trackWhatsappClick, waVariant } from "@/lib/gtag";
 
 /**
  * Carton → CBM, weight, estimated pallets and container fill. Planning estimate only.
@@ -146,8 +146,8 @@ export default function CbmCalculator({ lang = "en" }: { lang?: "en" | "tr" }) {
         <p className="mt-4 text-sm text-white/85">{t.storage} {gbp.format(pallets * RATE_GBP)} {t.perWeek}</p>
         <p className="mt-3 text-xs text-white/70">{t.note}</p>
         <div className="mt-auto pt-6 flex flex-col gap-3">
-          <Link href={quoteHref} data-tracked="1" onClick={() => trackCtaClick(quoteHref, t.source)} className="text-center bg-[#d62839] hover:bg-[#c1121f] text-white font-semibold px-6 py-3 rounded-full transition">{t.cta}</Link>
-          <a href={waHref} target="_blank" rel="noopener noreferrer" data-tracked="1" onClick={() => trackWhatsappClick(t.source)} className="text-center bg-green-700 hover:bg-green-800 text-white font-semibold px-6 py-3 rounded-full transition">{t.wa}</a>
+          <Link href={quoteHref} data-tracked="1" data-cta-source={t.source} onClick={() => trackCtaClick(quoteHref, t.source)} className="text-center bg-[#d62839] hover:bg-[#c1121f] text-white font-semibold px-6 py-3 rounded-full transition">{t.cta}</Link>
+          <a href={waHref} target="_blank" rel="noopener noreferrer" data-tracked="1" data-cta-source={t.source} onClick={() => trackWhatsappClick(t.source, waVariant(waHref))} className="text-center bg-green-700 hover:bg-green-800 text-white font-semibold px-6 py-3 rounded-full transition">{t.wa}</a>
         </div>
       </div>
     </div>

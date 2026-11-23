@@ -502,6 +502,10 @@ export default function EnPageView({ page }: { page: EnPage }) {
                 <h2 className="font-semibold text-[#0b2545] mb-1">Phone</h2>
                 <p className="text-sm text-slate-600">+44 7554 195190 · English and Turkish</p>
               </TrackedLink>
+              <TrackedLink kind="email" source="contact_card" href="mailto:support@londradepo.com" className="rounded-xl border border-slate-200 p-5 hover:border-[#0b2545] transition">
+                <h2 className="font-semibold text-[#0b2545] mb-1">Email</h2>
+                <p className="text-sm text-slate-600">support@londradepo.com · replies during UK office hours</p>
+              </TrackedLink>
               <TrackedLink kind="phone" source="contact_card_office" href="tel:+441268203283" className="rounded-xl border border-slate-200 p-5 hover:border-[#0b2545] transition">
                 <h2 className="font-semibold text-[#0b2545] mb-1">Arca Trade Group office</h2>
                 <p className="text-sm text-slate-600">+44 1268 203 283 · Sales@arcatrade.co.uk · 07:45–17:30 UK time</p>

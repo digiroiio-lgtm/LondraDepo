@@ -87,7 +87,7 @@ export default function FooterEn() {
         <div>
           <div className="text-white font-semibold mb-3">Contact</div>
           <div className="space-y-3 text-sm">
-            <p>Reach our UK operations team on WhatsApp or by phone. English and Turkish spoken.</p>
+            <p>Reach our UK operations team on WhatsApp, by phone or by email. English and Turkish spoken.</p>
             <TrackedLink
               kind="whatsapp"
               source="footer"
@@ -98,6 +98,9 @@ export default function FooterEn() {
             </TrackedLink>
             <TrackedLink kind="phone" source="footer" href={TEL} className="flex items-center gap-2 text-slate-300 hover:text-white transition">
               <Emoji e="📞" /> +44 7554 195190
+            </TrackedLink>
+            <TrackedLink kind="email" source="footer" href="mailto:support@londradepo.com" className="flex items-center gap-2 text-slate-300 hover:text-white transition">
+              <Emoji e="📧" /> support@londradepo.com
             </TrackedLink>
             <p className="text-xs text-slate-400">Office: +44 1268 203 283 · 07:45–17:30 UK time</p>
           </div>

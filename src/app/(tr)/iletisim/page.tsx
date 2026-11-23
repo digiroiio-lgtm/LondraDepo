@@ -50,6 +50,7 @@ const jsonLd = {
         "@type": "ContactPoint",
         contactType: "customer service",
         telephone: "+447554195190",
+        email: "support@londradepo.com",
         availableLanguage: ["Turkish", "English"],
         url: WHATSAPP,
       },
@@ -59,7 +60,7 @@ const jsonLd = {
 
 
 const faqs = [
-  { q: "LondraDepo'ya en hızlı nasıl ulaşırım?", a: "En hızlı yol WhatsApp: +44 7554 195190. Aynı numarayı arayabilir, ofisi +44 1268 203 283 numarasından arayabilir, teklif formunu doldurabilir veya 15 dakikalık bir görüşme ayarlayabilirsiniz." },
+  { q: "LondraDepo'ya en hızlı nasıl ulaşırım?", a: "En hızlı yol WhatsApp: +44 7554 195190. Aynı numarayı arayabilir, ofisi +44 1268 203 283 numarasından arayabilir, support@londradepo.com adresine e-posta gönderebilir, teklif formunu doldurabilir veya 15 dakikalık bir görüşme ayarlayabilirsiniz." },
   { q: "Ofis çalışma saatleriniz nedir?", a: "Ofisimiz İngiltere saatiyle 07:45–17:30 arası açıktır. Bu saatler dışında gönderilen mesaj ve teklif talepleri, ofis açıldığında ekibimiz tarafından cevaplanır." },
   { q: "Türkçe destek veriyor musunuz?", a: "Evet. LondraDepo ekibi Türkçe ve İngilizce çalışır; UK operasyonunuzu, belgelerinizi ve stok raporlarınızı Türkçe konuşabilir, UK müşterileriniz ve taşıyıcılarla İngilizce iletişim kurulmasını bize bırakabilirsiniz." },
   { q: "Depoyu ürün göndermeden önce görebilir miyim?", a: "Unit 19 Arterial Park, Rayleigh, Essex SS6 7FY adresindeki depomuzu ziyaret veya görüntülü tur için ekibimizle iletişime geçin. Önce operasyonunuzu konuşmak isterseniz 15 dakikalık görüşme de ayarlayabilirsiniz." },
@@ -109,6 +110,18 @@ export default function IletisimPage() {
                 <span className="text-[#0b2545] text-sm">+44 7554 195190</span>
                 <span className="text-slate-500 text-xs">Türkçe destek mevcut</span>
               </a>
+
+              <TrackedLink
+                kind="email"
+                source="tr_contact_card"
+                href="mailto:support@londradepo.com"
+                className="sm:col-span-2 flex flex-col items-center gap-2 bg-white border border-slate-200 rounded-2xl p-6 hover:bg-slate-50 transition text-center"
+              >
+                <span className="text-3xl"><Emoji e="📧" /></span>
+                <span className="font-bold text-[#0b2545] text-lg">E-posta Gönderin</span>
+                <span className="text-[#0b2545] text-sm">support@londradepo.com</span>
+                <span className="text-slate-500 text-xs">Ürün, hacim ve ihtiyacınızı yazın; iş saatlerinde yanıt veriyoruz</span>
+              </TrackedLink>
 
               <TrackedLink
                 kind="booking"

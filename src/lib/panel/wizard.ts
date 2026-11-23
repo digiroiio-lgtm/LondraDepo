@@ -604,7 +604,7 @@ ${POSITIONING_TR} Palet depolama haftalık £3.50 + KDV'den başlar. Asgari haci
 Uygunsa 15 dakikalık bir görüşmede mevcut İngiltere operasyonunuzu konuşabiliriz: https://www.londradepo.com/teklif-al
 
 Saygılarımızla,
-[Ad Soyad] · LondraDepo · +44 7554 195190
+[Ad Soyad] · LondraDepo · +44 7554 195190 · support@londradepo.com
 
 Bu tür e-postalar almak istemiyorsanız "çıkar" yazmanız yeterli; tekrar yazmayız.`;
   return `Subject: ${subject}
@@ -618,7 +618,7 @@ ${POSITIONING_EN} Pallet storage starts from £3.50 + VAT per week, with no fixe
 Would a 15-minute call about your current UK operation be useful? https://www.londradepo.com/en/request-a-quote
 
 Best regards,
-[Name] · LondraDepo · +44 7554 195190
+[Name] · LondraDepo · +44 7554 195190 · support@londradepo.com
 
 If you'd rather not hear from us, just reply "remove" and we won't email again.`;
 }

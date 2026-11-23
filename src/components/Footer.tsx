@@ -1,4 +1,5 @@
 import Emoji from "@/components/visual/Emoji";
+import TrackedLink from "@/components/TrackedLink";
 import Link from "next/link";
 import CookieSettingsButton from "./CookieSettingsButton";
 
@@ -62,7 +63,7 @@ export default function Footer() {
         <div>
           <div className="text-white font-semibold mb-3">İletişim</div>
           <div className="space-y-3 text-sm">
-            <p>İngiltere operasyonu için WhatsApp veya telefon yoluyla ulaşabilirsiniz. Türkçe destek.</p>
+            <p>İngiltere operasyonu için WhatsApp, telefon veya e-posta ile ulaşabilirsiniz. Türkçe destek.</p>
             <a
               href={WHATSAPP}
               target="_blank"
@@ -77,6 +78,9 @@ export default function Footer() {
             >
               <Emoji e="📞" /> Hemen Arayın
             </a>
+            <TrackedLink kind="email" source="footer" href="mailto:support@londradepo.com" className="flex items-center gap-2 text-slate-300 hover:text-white transition">
+              <Emoji e="📧" /> support@londradepo.com
+            </TrackedLink>
           </div>
         </div>
       </div>

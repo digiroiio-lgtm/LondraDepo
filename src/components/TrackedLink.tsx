@@ -4,9 +4,9 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { trackCtaClick, trackPhoneClick, trackWhatsappClick } from "@/lib/gtag";
 
-type Kind = "whatsapp" | "phone" | "cta" | "booking";
+type Kind = "whatsapp" | "phone" | "cta" | "booking" | "email";
 
-/** Anchor that reports WhatsApp, phone and quote-CTA clicks to GA4 (consent-gated). */
+/** Anchor that reports WhatsApp, phone, email and quote-CTA clicks to GA4 (consent-gated). */
 export default function TrackedLink({
   href,
   kind,
@@ -24,6 +24,7 @@ export default function TrackedLink({
     if (kind === "whatsapp") trackWhatsappClick(source);
     else if (kind === "phone") trackPhoneClick(source);
     else if (kind === "booking") trackCtaClick("book_call", source);
+    else if (kind === "email") trackCtaClick("email", source);
     else trackCtaClick(href, source);
   };
   if (kind === "cta") {

@@ -44,13 +44,13 @@ export function orgNode(lang: "en" | "tr") {
       },
     ],
     telephone: "+447554195190",
-    email: "Sales@arcatrade.co.uk",
+    email: "support@londradepo.com",
     vatID: "GB353315322",
     knowsAbout: ["UK warehousing", "Ecommerce fulfilment", "Pallet storage", "Container unloading", "Amazon FBA prep", "UK distribution", "Customs clearance coordination"],
     knowsLanguage: ["en", "tr"],
     contactPoint: [
-      { "@type": "ContactPoint", contactType: "customer service", telephone: "+447554195190", availableLanguage: ["English", "Turkish"] },
-      { "@type": "ContactPoint", contactType: "sales", telephone: "+441268203283", availableLanguage: ["English", "Turkish"], hoursAvailable: { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "07:45", closes: "17:30" } },
+      { "@type": "ContactPoint", contactType: "customer service", telephone: "+447554195190", email: "support@londradepo.com", availableLanguage: ["English", "Turkish"] },
+      { "@type": "ContactPoint", contactType: "sales", telephone: "+441268203283", email: "Sales@arcatrade.co.uk", availableLanguage: ["English", "Turkish"], hoursAvailable: { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "07:45", closes: "17:30" } },
     ],
     sameAs: [
       "https://find-and-update.company-information.service.gov.uk/company/13247691",

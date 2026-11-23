@@ -53,7 +53,7 @@ export async function importLog(f: FormData) {
     if (newLeads.length) await saveLeads(newLeads);
 
     const count = (s: string[]) => saved.filter((c) => s.includes(c.form_status)).length;
-    const run = { id: runId, at, mode: mode as "a" | "b", sent: count(["sent"]), manual: count(["captcha", "error"]), noForm: count(["no_form"]), skipped: count(["skipped", "no_solicitation"]), duplicates, errors: errors.length };
+    const run = { id: runId, at, mode: mode as "a" | "b", sent: count(["sent"]), manual: count(["captcha", "error", "phone_rejected"]), noForm: count(["no_form"]), skipped: count(["skipped", "no_solicitation"]), duplicates, errors: errors.length };
     await addContactRun(run);
     msg = `ok:${run.sent} form gönderildi, ${run.manual} elle gönderilecek, ${run.noForm} formsuz, ${run.skipped} atlandı; ${duplicates} tekrar atlandı${newLeads.length ? `; ${newLeads.length} yeni şirket müşteri listesine eklendi` : ""}${errors.length ? `; ${errors.length} satır okunamadı` : ""}.`;
   } catch (e) {

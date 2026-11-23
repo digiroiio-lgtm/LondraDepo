@@ -27,11 +27,28 @@ export const FORM_STATUSES = {
   sent: "Gönderildi",
   captcha: "CAPTCHA: elle gönder",
   error: "Hata: elle gönder",
+  phone_rejected: "Telefon formatı kabul edilmedi: elle gönder",
   no_form: "Form yok (yalnız e-posta)",
   no_solicitation: "Satış mesajı kabul etmiyor",
   skipped: "Atlandı",
 } as const;
 export type FormStatus = keyof typeof FORM_STATUSES;
+
+/**
+ * The same UK mobile written the ways contact forms accept it, most common first. Forms differ: some reject
+ * "+", spaces or the country code, some want 10/11 digits, some have a separate country-code dropdown.
+ */
+export const PHONE_FORMATS: { value: string; when: string }[] = [
+  { value: "+44 7554 195190", when: "varsayılan, uluslararası" },
+  { value: "+447554195190", when: "boşluk kabul edilmiyorsa" },
+  { value: "+44-7554-195190", when: "tire kabul ediliyor, boşluk edilmiyorsa" },
+  { value: "00447554195190", when: "\"+\" kabul edilmiyorsa (TR/AB formlarında yaygın)" },
+  { value: "447554195190", when: "yalnız rakam, ülke koduyla" },
+  { value: "07554 195190", when: "İngiltere yerel biçimi" },
+  { value: "07554195190", when: "yerel biçim, 11 hane, boşluksuz" },
+  { value: "7554195190", when: "ülke kodu ayrı listeden United Kingdom (+44) seçildiyse ya da alan 10 hane istiyorsa" },
+  { value: "0044 7554 195190", when: "örnek/placeholder 00 ile gruplu gösteriyorsa" },
+];
 
 export const REPLIES = { yok: "Yanıt yok", yanit: "Yanıt geldi", olumlu: "Olumlu", ilgisiz: "İlgilenmiyor" } as const;
 export type Reply = keyof typeof REPLIES;
@@ -44,7 +61,7 @@ export type Approval = keyof typeof APPROVAL;
 
 export const LOG_COLUMNS = [
   "company", "website", "segment", "country", "contact_page_url", "form_status", "language", "subject", "message",
-  "sent_at", "confirmation_text", "email_fallback", "reason",
+  "sent_at", "confirmation_text", "email_fallback", "phone_used", "notes", "reason",
 ] as const;
 
 export type Contact = {
@@ -60,6 +77,8 @@ export type Contact = {
   message: string;
   sent_at: string;
   confirmation_text: string;
+  phone_used: string;
+  notes: string;
   email_fallback: string;
   reason: string;
   reply: Reply;
@@ -139,17 +158,26 @@ const fieldRules = (o: ContactOpts) => `## Form doldurma kuralları
    - Şirket / Company: ${SENDER.company}
    - Unvan / Job title: ${SENDER.title}
    - E-posta / Email: ${SENDER.email}
-   - Telefon / Phone: ${SENDER.phone}
+   - Telefon / Phone: ${SENDER.phone} (alan bu biçimi kabul etmezse aşağıdaki "Telefon alanı" kurallarını uygula)
    - Web sitesi / Website: ${SENDER.website}
    - Ülke / Country: ${SENDER.country}
    - Konu / Subject veya "Nedeniniz" listesi: Business / Partnership / Sales / Other (hangisi en uygunsa)
    - Mesaj: aşağıdaki mesaj kurallarına göre bu şirkete özel yaz.
-5. Zorunlu gizlilik/KVKK/şartlar onay kutusunu işaretleyebilirsin. Bülten, pazarlama veya üçüncü taraf onay kutularını İŞARETLEME.
-6. CAPTCHA, "robot değilim" veya benzeri doğrulama çıkarsa geçmeye ÇALIŞMA: gönderme, form_status = captcha yaz, mesajı yine message sütununa koy (elle göndereceğiz) ve sonraki şirkete geç.
-7. Form yoksa yalnızca sayfada yayımlanan kurumsal e-posta adresini email_fallback sütununa yaz, form_status = no_form. E-POSTA GÖNDERME.
-8. Her şirkete yalnızca BİR kez gönder. Gönderimden sonra çıkan teyit mesajını confirmation_text sütununa kopyala.
-9. Bu çalışmada en fazla ${o.count} form gönder.
-10. Onay: ${o.approval === "each" ? "Her formu Gönder'e basmadan önce doldurulmuş hâlini bana göster ve onayımı bekle." : "İlk 2 formu Gönder'e basmadan önce doldurulmuş hâlini bana göster ve onayımı bekle; onaylarsam kalanları aynı kurallarla onay sormadan gönder."}
+5. Telefon alanı (formların çoğu burada takılır; dikkatle uygula):
+   a. Yazmadan ÖNCE alanın placeholder'ına, etiketine, örneğine ve karakter sınırına bak; gösterilen biçime en uygun seçeneği kullan.
+   b. Ülke kodu için ayrı bir liste/bayrak varsa United Kingdom (+44) seç ve numara alanına 7554195190 yaz.
+   c. Yoksa şu biçimleri sırayla dene; her denemeden sonra alanın altındaki/üstündeki doğrulama mesajını kontrol et, hata varken Gönder'e BASMA (en fazla 6 deneme):
+${PHONE_FORMATS.map((f, i) => `      ${i + 1}) ${f.value}  — ${f.when}`).join("\n")}
+   d. Alan yalnızca Türkiye cep telefonu maskesi kabul ediyorsa (ör. 0 (5__) ___ __ __) Türk numarası UYDURMA veya numarayı maskeye uydurmaya çalışma: alan isteğe bağlıysa boş bırak; zorunluysa gönderme, form_status = phone_rejected yaz.
+   e. Telefon alanı isteğe bağlıysa ve hiçbir biçim kabul edilmezse alanı boş bırakıp gönder.
+   f. Gönder'e bastıktan sonra genel bir hata çıkarsa ("An error occurred", "Bir hata oluştu") bir kez daha sıradaki telefon biçimiyle dene; yine olursa form_status = error yaz ve hata metnini notes sütununa kopyala.
+   g. Kabul edilen biçimi phone_used sütununa yaz; denediğin ama reddedilen biçimleri kısaca notes sütununa yaz.
+6. Zorunlu gizlilik/KVKK/şartlar onay kutusunu işaretleyebilirsin. Bülten, pazarlama veya üçüncü taraf onay kutularını İŞARETLEME.
+7. CAPTCHA, "robot değilim" veya benzeri doğrulama çıkarsa geçmeye ÇALIŞMA: gönderme, form_status = captcha yaz, mesajı yine message sütununa koy (elle göndereceğiz) ve sonraki şirkete geç.
+8. Form yoksa yalnızca sayfada yayımlanan kurumsal e-posta adresini email_fallback sütununa yaz, form_status = no_form. E-POSTA GÖNDERME.
+9. Her şirkete yalnızca BİR kez gönder. Gönderimden sonra çıkan teyit mesajını confirmation_text sütununa kopyala.
+10. Bu çalışmada en fazla ${o.count} form gönder.
+11. Onay: ${o.approval === "each" ? "Her formu Gönder'e basmadan önce doldurulmuş hâlini bana göster ve onayımı bekle." : "İlk 2 formu Gönder'e basmadan önce doldurulmuş hâlini bana göster ve onayımı bekle; onaylarsam kalanları aynı kurallarla onay sormadan gönder."}
 
 ## Mesaj kuralları
 - Dil: Türkiye merkezli şirketlere Türkçe, diğerlerine İngilizce.
@@ -170,7 +198,9 @@ const output = (extra: readonly string[]) => `## Çıktı formatı
 Bitince TEK bir CSV kod bloğu ver (ayrıca indirilebilir .csv dosyası da oluşturabilirsin). İlk satır tam olarak şu başlık olsun:
 ${[...new Set([...LOG_COLUMNS, ...extra])].join(",")}
 Kurallar:
-- form_status: sent, captcha, error, no_form, no_solicitation veya skipped.
+- form_status: sent, captcha, phone_rejected, error, no_form, no_solicitation veya skipped.
+- phone_used: formda kabul edilen telefon biçimi (boş bıraktıysan "boş").
+- notes: hata mesajı, reddedilen telefon biçimleri veya kısa açıklama.
 - language: tr veya en.
 - sent_at: gönderim zamanı (YYYY-MM-DD HH:MM), gönderilmediyse boş.
 - message: gönderdiğin (veya captcha/error ise göndereceğin) mesajın tam metni.
@@ -238,6 +268,8 @@ export function toContact(rec: Record<string, string>, runId: string, at: string
     sent_at: get("sent_at"),
     confirmation_text: get("confirmation_text").slice(0, 500),
     email_fallback: get("email_fallback"),
+    phone_used: get("phone_used").slice(0, 40),
+    notes: get("notes").slice(0, 500),
     reason: get("reason").slice(0, 600),
     reply: "yok",
     run_id: runId,
@@ -259,7 +291,7 @@ export function workdaysSince(iso: string): number {
   return n;
 }
 
-export const needsManual = (c: Contact) => c.form_status === "captcha" || c.form_status === "error";
+export const needsManual = (c: Contact) => c.form_status === "captcha" || c.form_status === "error" || c.form_status === "phone_rejected";
 export const followUpDue = (c: Contact) => c.form_status === "sent" && c.reply === "yok" && !c.followup_at && workdaysSince(c.sent_at || c.imported_at) >= 5;
 
 export function contactsToCsv(cs: Contact[]): string {

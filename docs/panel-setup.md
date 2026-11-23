@@ -135,6 +135,30 @@ Müşteri sihirbazıyla aynı veritabanını ve aynı aday listesini kullanır, 
 6. **Takip zamanı gelenler:** formu 5 iş günü önce gönderilmiş ve yanıt gelmemiş şirketler. Bu şirketler için Apollo'da ertesi iş günüyle tarihli bir takip görevi açılır; kredi harcamaz.
 7. Yanıt geldikçe şirketin durumunu güncelleyin (Yanıt geldi / Olumlu / İlgilenmiyor). "Olumlu" ve "İlgilenmiyor" müşteri listesine de yansır.
 
+### Telefon formatı
+Bazı formlar +44'lü İngiltere numarasını kabul etmez: "+" işaretine, boşluğa ya da hane sayısına takılır. Ajan bu durumda şunları yapar:
+
+1. Önce alanın örneğine ve karakter sınırına bakar.
+2. Ülke kodu ayrı bir listeden seçiliyorsa United Kingdom (+44) seçer ve numara alanına 7554195190 yazar.
+3. Değilse şu biçimleri sırayla dener:
+
+| Sıra | Biçim |
+|---|---|
+| 1 | +44 7554 195190 |
+| 2 | +447554195190 |
+| 3 | +44-7554-195190 |
+| 4 | 00447554195190 |
+| 5 | 447554195190 |
+| 6 | 07554 195190 |
+| 7 | 07554195190 |
+| 8 | 7554195190 |
+| 9 | 0044 7554 195190 |
+
+4. Hiçbir biçim kabul edilmezse:
+   - telefon alanı isteğe bağlıysa alanı boş bırakır;
+   - zorunluysa formu göndermez ve "Telefon formatı kabul edilmedi" olarak işaretler. Bu formlar "Elle gönderilecekler" listesine düşer. Listede her biçim tek tıkla kopyalanabilir.
+5. Yalnızca Türkiye numarası kabul eden zorunlu alanlara numara uydurmaz.
+
 ### Ajanın uyduğu kurallar
 - CAPTCHA'yı geçmeye çalışmaz. Formu göndermez, "elle gönder" olarak işaretler.
 - E-posta göndermez. Formu olmayan şirketin yalnızca e-posta adresini kaydeder.

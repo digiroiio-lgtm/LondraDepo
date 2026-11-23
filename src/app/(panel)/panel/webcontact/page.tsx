@@ -4,7 +4,7 @@ import TargetForm from "@/components/panel/TargetForm";
 import { kvConfigured } from "@/lib/panel/kv";
 import { fmtDate, safe } from "@/lib/panel/safe";
 import {
-  APPROVAL, FORM_STATUSES, LOG_COLUMNS, REPLIES, SENDER, SIGNATURE,
+  APPROVAL, FORM_STATUSES, LOG_COLUMNS, PHONE_FORMATS, REPLIES, SENDER, SIGNATURE,
   buildContactPromptFromLeads, buildContactPromptResearch, contactTemplate, followUpDue, needsManual, workdaysSince,
   type Approval, type Contact, type FormStatus, type Reply,
 } from "@/lib/panel/webcontact";
@@ -25,6 +25,7 @@ const STATUS_CLASS: Record<FormStatus, string> = {
   sent: "bg-green-100 text-green-800",
   captcha: "bg-amber-100 text-amber-800",
   error: "bg-amber-100 text-amber-800",
+  phone_rejected: "bg-amber-100 text-amber-800",
   no_form: "bg-slate-100 text-slate-700",
   no_solicitation: "bg-slate-100 text-slate-500",
   skipped: "bg-slate-100 text-slate-500",
@@ -32,6 +33,18 @@ const STATUS_CLASS: Record<FormStatus, string> = {
 
 const link = (href: string, text: string) =>
   /^https?:\/\//i.test(href) ? <a href={href} target="_blank" rel="noopener noreferrer nofollow" className="underline break-all">{text}</a> : null;
+
+function PhoneChips() {
+  return (
+    <div className="mt-3">
+      <div className="text-xs font-semibold text-[var(--pnl-muted)] mb-1.5">Telefon formatları (form kabul etmezse sırayla deneyin; tıklayınca kopyalanır)</div>
+      <div className="flex flex-wrap gap-1.5">
+        {PHONE_FORMATS.map((f) => <CopyButton key={f.value} value={f.value} label={f.value} variant="chip" title={f.when} />)}
+      </div>
+      <p className="text-xs text-[var(--pnl-muted)] mt-1.5">Ülke kodu ayrı seçiliyorsa: United Kingdom (+44) seçin, numaraya 7554195190 yazın. Yalnız Türkiye numarası kabul eden zorunlu alanlarda numara uydurmayın.</p>
+    </div>
+  );
+}
 
 function SettingsFields({ n, ap }: { n: number; ap: Approval }) {
   return (
@@ -183,6 +196,8 @@ export default async function WebContactPage({ searchParams }: { searchParams: P
                   <form action={markSent}><input type="hidden" name="d" value={c.domain} /><button className={btn}>Gönderdim</button></form>
                   <span className="text-xs text-slate-500">Ad: {SENDER.name} · {SENDER.email} · {SENDER.phone}</span>
                 </div>
+                {c.notes && <p className="text-xs text-amber-800 mt-2">Not: {c.notes}</p>}
+                <PhoneChips />
               </div>
             ))}
           </div>
@@ -229,6 +244,8 @@ export default async function WebContactPage({ searchParams }: { searchParams: P
                   <span className={`inline-block rounded-full px-2 py-0.5 ${STATUS_CLASS[c.form_status]}`}>{FORM_STATUSES[c.form_status]}</span>
                   <div className="mt-1">{c.sent_at || fmtDate(c.imported_at)}</div>
                   <div className="mt-1">{link(c.contact_page_url, "form ↗")}</div>
+                  {c.phone_used && <div className="mt-1 text-[var(--pnl-muted)]">Tel: <span className="font-mono">{c.phone_used}</span></div>}
+                  {c.notes && <div className="mt-1 text-amber-800">{c.notes}</div>}
                   {c.followup_at && <div className="mt-1 text-slate-500">Takip: {fmtDate(c.followup_at)}</div>}
                 </div>,
                 <details key="m" className="min-w-[16rem] text-xs">
@@ -252,6 +269,8 @@ export default async function WebContactPage({ searchParams }: { searchParams: P
       <Card title="Örnek form mesajları ve imza">
         <p className="text-sm text-slate-600 mb-3">Ajan bu yapıyı her şirkete göre kişiselleştirir. Elle gönderirken de kullanabilirsiniz.</p>
         <pre className="text-xs bg-[var(--pnl-main)] rounded-2xl p-4 mb-3 whitespace-pre-wrap">{SIGNATURE}</pre>
+        <PhoneChips />
+        <div className="mb-3" />
         {TEMPLATE_GROUPS.map(({ group, label }) => (
           <details key={group} className="border-t border-[var(--pnl-line)] py-2">
             <summary className="cursor-pointer font-semibold text-sm text-[#1c1a3a]">{label}</summary>

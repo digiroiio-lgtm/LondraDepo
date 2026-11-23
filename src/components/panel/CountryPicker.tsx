@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import CopyButton from "@/components/panel/CopyButton";
-import { COUNTRY_INFO, RECOMMENDED_COUNTRIES } from "@/lib/panel/wizard";
+import { COUNTRY_INFO, RECOMMENDED_COUNTRIES, shuffleTarget } from "@/lib/panel/wizard";
 
 const TIERS = [
   { tier: "P1", label: "P1 · İlk satış dalgası", cls: "bg-green-100 text-green-800" },
@@ -20,6 +20,7 @@ export default function CountryPicker({ initial }: { initial: string[] }) {
       <div className="flex flex-wrap items-center gap-2 mb-3">
         <span className="text-sm font-semibold mr-1">{sel.length} / {all.length} seçili</span>
         <button type="button" onClick={() => setSel([...RECOMMENDED_COUNTRIES])} className="pnl-btn-primary !py-1.5 !px-3 text-xs">Önerilen 10</button>
+        <button type="button" onClick={() => setSel(shuffleTarget([]).countries)} className="pnl-btn !py-1.5 !px-3 text-xs" title="6 P1 + 3 P2 + 1 P3 ülke, yüksek skorlular daha sık">Karıştır 🎲</button>
         <button type="button" onClick={() => setSel(all)} className="pnl-btn !py-1.5 !px-3 text-xs">Tümünü seç</button>
         <button type="button" onClick={() => setSel([])} className="pnl-btn-ghost !py-1.5 !px-3 text-xs">Temizle</button>
       </div>

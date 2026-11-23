@@ -18,7 +18,7 @@ export async function syncNow() {
   try {
     if (!gmailConfigured()) throw new Error("Gmail bağlı değil");
     const r = await syncInbox(30);
-    msg = `ok:${r.scanned} e-posta tarandı; ${r.fresh} yeni. ${r.replies} şirket yanıtı, ${r.acks} otomatik teyit eşleşti${r.unmatched ? `; ${r.unmatched} e-posta bir şirketle eşleşmedi` : ""}.`;
+    msg = `ok:${r.scanned} e-posta tarandı; ${r.fresh} yeni. ${r.replies} şirket yanıtı, ${r.acks} otomatik teyit eşleşti${r.rematched ? `; önceki ${r.rematched} e-posta şimdi şirketiyle eşleşti` : ""}${r.unmatched ? `; ${r.unmatched} e-posta bir şirketle eşleşmedi` : ""}.`;
   } catch (e) {
     msg = e instanceof Error ? e.message : "hata";
   }

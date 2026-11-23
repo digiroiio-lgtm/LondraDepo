@@ -34,6 +34,23 @@ export function matchContact(m: MailMeta, contacts: Contact[]): Contact | undefi
     if (hit) return hit;
   }
   // Sender on a free mailbox that we emailed directly.
-  return contacts.find((c) => c.email_fallback && c.email_fallback.toLowerCase().includes(m.fromEmail));
+  const byAddress = contacts.find((c) => c.email_fallback && c.email_fallback.toLowerCase().includes(m.fromEmail));
+  if (byAddress) return byAddress;
+  // Company name in the subject or sender name (e.g. "Re: Fonex Cosmetics — New contact form message").
+  const text = fold(`${m.fromName} ${m.subject}`);
+  return contacts.find((c) => {
+    const n = fold(c.company).replace(/\b(ltd|limited|sa|s\.a|a\.s|as|gmbh|inc|llc|sp\. z o\.o|group|grup|san|tic|ve)\b\.?/g, " ").replace(/\(.*?\)/g, " ").replace(/\s+/g, " ").trim();
+    return n.length >= 4 && new RegExp(`(^|[^a-z0-9])${n.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}([^a-z0-9]|$)`).test(text);
+  });
+}
+
+/** Lower-case, Turkish letters folded, so "UĞUR" and "ugur" compare equal. */
+function fold(s: string): string {
+  return s.toLocaleLowerCase("tr").replace(/[çğıöşü]/g, (ch) => ({ ç: "c", ğ: "g", ı: "i", ö: "o", ş: "s", ü: "u" })[ch] as string).normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
+/** Rebuilds the matching fields from a stored inbox row (used to re-match after new companies are imported). */
+export function metaOf(i: InboxItem): MailMeta {
+  return { id: i.id, threadId: i.threadId, from: i.from, fromName: i.from.replace(/<[^>]+>/, "").replace(/"/g, "").trim(), fromEmail: i.fromEmail, subject: i.subject, date: i.date, snippet: i.snippet, autoSubmitted: false, listUnsubscribe: "", messageId: "", inReplyTo: "" };
 }
 

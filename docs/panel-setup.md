@@ -135,6 +135,71 @@ Müşteri sihirbazıyla aynı veritabanını ve aynı aday listesini kullanır, 
 6. **Takip zamanı gelenler:** formu 5 iş günü önce gönderilmiş ve yanıt gelmemiş şirketler. Bu şirketler için Apollo'da ertesi iş günüyle tarihli bir takip görevi açılır; kredi harcamaz.
 7. Yanıt geldikçe şirketin durumunu güncelleyin (Yanıt geldi / Olumlu / İlgilenmiyor). "Olumlu" ve "İlgilenmiyor" müşteri listesine de yansır.
 
+### İş listesi ve raporlar
+WebContact sayfasında üç bölüm var: **İş listesi**, **Rapor** ve **Çalıştır**.
+
+**İş listesi:** her şirket kendi durumuna göre otomatik olarak bir işe düşer.
+
+| İş | Ne zaman |
+|---|---|
+| Yanıtı değerlendir | Şirket yanıt verdi |
+| Görüşme / teklif | Olumlu dönüş geldi |
+| Takip et | Form ya da e-posta ulaştı, 5 iş günü geçti, yanıt yok |
+| E-posta gönder | Formu yok, kurumsal e-posta kayıtlı. "E-posta taslağını aç" hazır mesajı kendi e-posta programınızda açar. Gönderdikten sonra "Gönderdim"e basın. |
+| Birlikte gönder (doğrulama) | CAPTCHA veya güvenlik kodu var |
+| Hatayı incele | Site hata verdi, teyit gelmedi ya da telefon biçimi kabul edilmedi |
+| Başka kanal bul | Form da e-posta da yok |
+| Yanıt bekleniyor | Mesaj ulaştı, takip zamanı gelmedi |
+| Kapandı | Atlandı ya da ilgilenmiyor |
+
+- Her şirketin **geçmişi** tutulur: incelendi, form gönderildi, doğrulama engeli, hata, e-posta gönderildi, takip, yanıt ve notlar.
+- Her şirkete not ekleyebilirsiniz (ör. "Telefonla arandı").
+
+**Rapor:**
+- Gün / Hafta / Ay seçilir; ok düğmeleriyle önceki ve sonraki döneme geçilir.
+- Sayılar: incelenen, ulaşılan, form, e-posta, doğrulama, hata, formsuz, atlandı, takip, yanıt.
+- Haftalık ve aylık görünümde günlük grafik vardır.
+- Dönemde yapılan her işin listesi ve WhatsApp ya da e-postaya yapıştırılabilir bir özet metin bulunur.
+
+### Telefon formatı
+Bazı formlar +44'lü İngiltere numarasını kabul etmez: "+" işaretine, boşluğa ya da hane sayısına takılır. Ajan bu durumda şunları yapar:
+
+1. Önce alanın örneğine ve karakter sınırına bakar.
+2. Ülke kodu ayrı bir listeden seçiliyorsa United Kingdom (+44) seçer ve numara alanına 7554195190 yazar.
+3. Değilse şu biçimleri sırayla dener:
+
+| Sıra | Biçim |
+|---|---|
+| 1 | +44 7554 195190 |
+| 2 | +447554195190 |
+| 3 | +44-7554-195190 |
+| 4 | 00447554195190 |
+| 5 | 447554195190 |
+| 6 | 07554 195190 |
+| 7 | 07554195190 |
+| 8 | 7554195190 |
+| 9 | 0044 7554 195190 |
+
+4. Hiçbir biçim kabul edilmezse:
+   - telefon alanı isteğe bağlıysa alanı boş bırakır;
+   - zorunluysa formu göndermez ve "Telefon formatı kabul edilmedi" olarak işaretler. Bu formlar "Elle gönderilecekler" listesine düşer. Listede her biçim tek tıkla kopyalanabilir.
+5. Yalnızca Türkiye numarası kabul eden zorunlu alanlara numara uydurmaz.
+
+### Doğrulama engelleri (CAPTCHA / güvenlik kodu)
+Ajan, doğrulama isteyen bir formda formu doldurur ama göndermez. Doğrulama şunlardan biri olabilir: reCAPTCHA, hCaptcha, Cloudflare kontrolü, resimdeki güvenlik kodu, matematik sorusu, SMS/e-posta kodu ya da üyelik şartı. Ajan formu kaydeder ve kayıt şu bilgileri içerir:
+- engelin türü;
+- nerede takıldığı;
+- hazır mesaj;
+- form adresi;
+- kaçıncı deneme olduğu.
+
+Bu formlar panelde **Doğrulama engelleri** listesinde ayrıca tutulur; hiçbir kayıt kaybolmaz. Listedeki seçenekler:
+1. **Birlikte gönderme görev metni:** ajan her formu yeniden doldurur. Doğrulama adımında durur ve tarayıcının kontrolünü size verir. Siz doğrulamayı çözünce formu gönderir ve teyidi kaydeder. Her form için onayınızı ister.
+2. **CSV indir:** yalnız engellenen formların listesi.
+3. **Gönderdim / Vazgeç:** formu elle gönderdiyseniz ya da bırakmak istiyorsanız işaretleyin.
+
+Aynı şirket tekrar içe aktarılırsa deneme sayısı artar. Form gönderilene kadar şirket listede kalır.
+
 ### Ajanın uyduğu kurallar
 - CAPTCHA'yı geçmeye çalışmaz. Formu göndermez, "elle gönder" olarak işaretler.
 - E-posta göndermez. Formu olmayan şirketin yalnızca e-posta adresini kaydeder.

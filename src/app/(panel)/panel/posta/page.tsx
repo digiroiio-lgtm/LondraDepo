@@ -4,9 +4,11 @@ import { kvConfigured } from "@/lib/panel/kv";
 import { DAILY_SEND_LIMIT, lastSync, recentInbox, sentToday, syncInbox, type MailKind } from "@/lib/panel/mail-sync";
 import { eventsOf } from "@/lib/panel/outreach";
 import { fmtDate, safe } from "@/lib/panel/safe";
+import { personalize, remainingPlaceholders } from "@/lib/panel/mail-compose";
 import { contactTemplate } from "@/lib/panel/webcontact";
 import { getContact, listContacts } from "@/lib/panel/webcontact-store";
 import { segmentById } from "@/lib/panel/wizard";
+import { getLead } from "@/lib/panel/wizard-store";
 import { sendEmail, syncNow } from "./actions";
 
 export const dynamic = "force-dynamic";
@@ -62,7 +64,11 @@ export default async function MailPage({ searchParams }: { searchParams: Promise
   const contacts = contactsR?.ok ? contactsR.data : [];
   const c = contactR?.ok ? contactR.data : null;
   const lang = c?.language === "tr" ? "tr" : "en";
-  const body = c ? c.message || contactTemplate(segmentById(c.segment)?.group, lang) : "";
+  const leadR = c ? await safe(() => getLead(c.domain)) : null;
+  const lead = leadR?.ok ? leadR.data : null;
+  const facts = c ? { company: c.company, lang, contactName: lead?.contact_name, products: lead?.products, ukEvidence: lead?.uk_evidence, amazonUk: /^yes$/i.test(lead?.amazon_uk ?? "") } as const : null;
+  const body = c && facts ? personalize(c.message || contactTemplate(segmentById(c.segment)?.group, lang), facts) : "";
+  const todo = remainingPlaceholders(body);
   const subject = c ? c.subject || (lang === "tr" ? "İngiltere'de depolama ve dağıtım: LondraDepo" : "UK warehousing and distribution: LondraDepo") : "";
   const to = c ? (c.email_fallback.match(/[^\s,;<>]+@[^\s,;<>]+\.[^\s,;<>]+/) ?? [""])[0] : "";
   const withEmail = contacts.filter((x) => x.email_fallback);
@@ -123,7 +129,7 @@ export default async function MailPage({ searchParams }: { searchParams: Promise
         </form>
         <form action={sendEmail} className="grid gap-3">
           <input type="hidden" name="d" value={c?.domain ?? ""} />
-          <label className="text-sm">Alıcı<input name="to" type="email" required defaultValue={to} placeholder="info@firma.com" className="pnl-input" /></label>
+          <label className="text-sm">Alıcı<input name="to" type="email" defaultValue={to} placeholder="info@firma.com" className="pnl-input" /></label>
           <label className="text-sm">Konu<input name="subject" required defaultValue={subject} maxLength={200} className="pnl-input" /></label>
           <label className="text-sm">Mesaj (köşeli parantezleri doldurun, ilk cümleyi şirkete göre kişiselleştirin)
             <textarea name="body" required rows={14} defaultValue={body} className="pnl-input text-sm" />
@@ -134,8 +140,17 @@ export default async function MailPage({ searchParams }: { searchParams: Promise
               {c.thread_id ? " · Aynı e-posta dizisine yanıt olarak gider." : ""}
             </p>
           )}
+          {c && (todo.length ? (
+            <p className="pnl-callout text-xs text-amber-800">Elle doldurulacak: {todo.map((t) => <code key={t} className="mx-1">{t}</code>)}. Bunlar kalırken şirkete gönderilmez (kendinize deneme gönderebilirsiniz).</p>
+          ) : (
+            <p className="text-xs text-[#1b6b3a]">Şirket adı{lead?.products ? ", ürün bilgisi" : ""}{lead?.contact_name ? ", kişi adı" : ""} otomatik yerleştirildi. Yine de okuyun.</p>
+          ))}
           <label className="flex items-start gap-2 text-sm"><input type="checkbox" name="confirm" className="mt-1" /> Mesajı kontrol ettim; köşeli parantez kalmadı ve çıkma cümlesi duruyor.</label>
-          <div><button className="pnl-btn-primary" disabled={!on}>Gönder ({GMAIL_USER})</button></div>
+          <div className="flex flex-wrap gap-2">
+            <button name="mode" value="test" className="pnl-btn" disabled={!on}>Önce kendime deneme gönder</button>
+            <button name="mode" value="send" className="pnl-btn-primary" disabled={!on}>Şirkete gönder</button>
+          </div>
+          <p className="text-xs text-[var(--pnl-muted)]">Deneme yalnızca {GMAIL_USER} kutusuna &quot;[DENEME]&quot; başlığıyla gider; şirket kaydına işlenmez.</p>
           {!on && <p className="text-xs text-amber-800">Gmail bağlanınca gönderim açılır.</p>}
         </form>
       </Card>

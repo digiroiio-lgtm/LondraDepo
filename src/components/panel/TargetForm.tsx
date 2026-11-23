@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import CountryPicker from "@/components/panel/CountryPicker";
 import { CATEGORIES, COUNTRIES, REGIONS, SEGMENTS, SIZES, type Target } from "@/lib/panel/wizard";
 
 const input = "pnl-input";
@@ -42,11 +43,9 @@ export default function TargetForm({ t, hidden, count, submitLabel = "Görev met
         <p className="text-xs text-slate-500 mt-1">&quot;Segmente göre&quot;: Türk ihracatçılar Türkiye&apos;de, UK ithalatçılar ve sezonluk perakendeciler İngiltere&apos;de, yeni giren markalar diğer ülkelerde aranır.</p>
       </fieldset>
       <fieldset>
-        <legend className="text-sm font-semibold mb-2">Ülkeler (diğer ülkeler için)</legend>
-        <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm">
-          {COUNTRIES.map((c) => <label key={c} className="flex items-center gap-2"><input type="checkbox" name="c" value={c} defaultChecked={t.countries.includes(c)} /> {c}</label>)}
-        </div>
-        <label className="text-sm block mt-3">Başka ülke (virgülle)<input name="cx" defaultValue={t.countries.filter((c) => !(COUNTRIES as readonly string[]).includes(c)).join(", ")} className={input} /></label>
+        <legend className="text-sm font-semibold mb-2">Hedef ülkeler (diğer ülkeler için)</legend>
+        <CountryPicker initial={t.countries} />
+        <label className="text-sm block mt-3">Başka ülke (virgülle)<input name="cx" defaultValue={t.countries.filter((c) => !COUNTRIES.includes(c)).join(", ")} className={input} /></label>
       </fieldset>
       <div className="grid sm:grid-cols-2 gap-4">
         <label className="text-sm">Şirket büyüklüğü

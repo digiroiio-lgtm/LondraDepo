@@ -71,7 +71,43 @@ export const CATEGORIES = [
   { id: "electronics", label: "Elektronik ve aksesuar", prior: 80 },
 ] as const;
 
-export const COUNTRIES = ["Almanya", "Hollanda", "Polonya", "İtalya", "İspanya", "Fransa", "Portekiz", "Yunanistan", "Çin", "Hindistan", "Pakistan", "Vietnam", "ABD", "BAE"] as const;
+/**
+ * Source countries for "other countries" searches, scored for LondraDepo (strategic estimate, not trade data):
+ * import size 25% · storage/fulfilment need 35% · reachability 25% · operational fit 15%.
+ * P1: active first sales wave · P2: second wave · P3: selective.
+ */
+export type CountryInfo = { name: string; flag: string; score: number; tier: "P1" | "P2" | "P3"; products: string };
+export const COUNTRY_INFO: CountryInfo[] = [
+  { name: "Türkiye", flag: "🇹🇷", score: 99, tier: "P1", products: "tekstil, mobilya, ev eşyası, ambalaj" },
+  { name: "Çin", flag: "🇨🇳", score: 98, tier: "P1", products: "elektronik, ev ürünleri, aksesuar (Amazon/Shopify satıcıları)" },
+  { name: "Almanya", flag: "🇩🇪", score: 95, tier: "P1", products: "makine, otomotiv yan sanayi, tüketim ürünleri" },
+  { name: "Hollanda", flag: "🇳🇱", score: 94, tier: "P1", products: "e-ticaret, distribütörlük, transit (AB depoları)" },
+  { name: "Belçika", flag: "🇧🇪", score: 94, tier: "P1", products: "Antwerp lojistik merkezi, AB→UK dağıtım, ihracat distribütörleri" },
+  { name: "Polonya", flag: "🇵🇱", score: 93, tier: "P1", products: "mobilya, ev eşyası, ambalaj" },
+  { name: "İtalya", flag: "🇮🇹", score: 91, tier: "P1", products: "mobilya, moda, tasarım ürünleri" },
+  { name: "Hindistan", flag: "🇮🇳", score: 90, tier: "P1", products: "tekstil, ev ürünleri, aksesuar" },
+  { name: "Çekya", flag: "🇨🇿", score: 90, tier: "P1", products: "üretim, otomotiv parçaları, endüstriyel ürünler" },
+  { name: "Güney Kore", flag: "🇰🇷", score: 89, tier: "P1", products: "K-beauty, elektronik, tüketim markaları" },
+  { name: "Fransa", flag: "🇫🇷", score: 88, tier: "P2", products: "kozmetik, moda, tüketim ürünleri" },
+  { name: "Vietnam", flag: "🇻🇳", score: 88, tier: "P2", products: "mobilya, tekstil, tüketim elektroniği" },
+  { name: "İsveç", flag: "🇸🇪", score: 87, tier: "P2", products: "mobilya, ev yaşam, DTC markaları" },
+  { name: "İspanya", flag: "🇪🇸", score: 86, tier: "P2", products: "ev ürünleri, seramik, moda" },
+  { name: "Danimarka", flag: "🇩🇰", score: 86, tier: "P2", products: "tasarım, mobilya, yaşam ürünleri" },
+  { name: "ABD", flag: "🇺🇸", score: 85, tier: "P2", products: "DTC markaları, kozmetik, teknoloji" },
+  { name: "İrlanda", flag: "🇮🇪", score: 85, tier: "P2", products: "UK ile entegre distribütörler" },
+  { name: "Tayvan", flag: "🇹🇼", score: 85, tier: "P2", products: "elektronik, aksesuar, endüstriyel parçalar" },
+  { name: "Japonya", flag: "🇯🇵", score: 84, tier: "P2", products: "elektronik, yaşam ürünleri, aksesuar" },
+  { name: "Romanya", flag: "🇷🇴", score: 83, tier: "P2", products: "mobilya, tekstil, yan sanayi" },
+  { name: "Portekiz", flag: "🇵🇹", score: 82, tier: "P2", products: "tekstil, ayakkabı, ev tekstili" },
+  { name: "BAE", flag: "🇦🇪", score: 80, tier: "P2", products: "uluslararası ticaret, yeniden ihracat" },
+  { name: "Pakistan", flag: "🇵🇰", score: 79, tier: "P3", products: "tekstil, ev tekstili, spor ürünleri" },
+  { name: "Yunanistan", flag: "🇬🇷", score: 75, tier: "P3", products: "gıda, kozmetik, tüketim ürünleri" },
+  { name: "Bangladeş", flag: "🇧🇩", score: 82, tier: "P3", products: "hazır giyim, tekstil üreticileri" },
+  { name: "Malezya", flag: "🇲🇾", score: 79, tier: "P3", products: "elektronik, kauçuk ve tüketim ürünleri" },
+];
+export const COUNTRIES = COUNTRY_INFO.map((c) => c.name);
+export const RECOMMENDED_COUNTRIES = COUNTRY_INFO.filter((c) => c.tier === "P1").map((c) => c.name);
+export const countryInfo = (name: string) => COUNTRY_INFO.find((c) => c.name.toLocaleLowerCase("tr") === name.trim().toLocaleLowerCase("tr"));
 
 export const SIZES = {
   any: { label: "Fark etmez (10–500 çalışan)", min: 10, max: 500 },
@@ -152,7 +188,7 @@ export function targetFrom(get: (k: string) => string | string[] | undefined): T
     segments: list(get("s")).filter((id) => segmentById(id)),
     cats: list(get("k")).filter((id) => CATEGORIES.some((c) => c.id === id)),
     other: String(get("other") ?? "").trim().slice(0, 200),
-    countries: [...new Set([...list(get("c")), ...extra])].slice(0, 20),
+    countries: [...new Set([...list(get("c")), ...extra])].slice(0, 30),
     size: size in SIZES ? size : "any",
     count: [25, 50, 100].includes(n) ? n : 50,
     exclude: String(get("ex") ?? "").split(/[\s,;]+/).map(normDomain).filter(Boolean).slice(0, 500),
@@ -220,7 +256,17 @@ export function buildPrompt(t: Target, existing: string[] = []): string {
       ? "Türkiye merkezli şirketler"
       : r === "uk"
         ? "İngiltere merkezli şirketler"
-        : `Türkiye ve İngiltere dışındaki şirketler${t.countries.length ? ` (${t.countries.join(", ")})` : ""}`;
+        : t.countries.length
+          ? `İngiltere dışındaki şirketler, yalnız şu ülkelerde: ${t.countries.join(", ")} (ülke odağı bölümüne bak)`
+          : "Türkiye ve İngiltere dışındaki şirketler";
+  const countryFocus = t.countries.length
+    ? `## Ülke odağı (her ülkede sektör + şirket profili + UK depo ihtiyacı birlikte aranır)
+${t.countries.map((n) => { const ci = countryInfo(n); return `- ${n}${ci ? ` (${ci.tier}, skor ${ci.score}): UK'ye giden olası ürünler: ${ci.products}` : ""}`; }).join("\n")}
+Öncelik sinyalleri: UK'ye gönderim veya UK fiyatı (£), İngilizce web sitesi, UK distribütörü / bayi arayışı, mevcut UK satış kanalı (Amazon.co.uk, UK perakendeci, UK distribütörü).
+Hariç tut: yalnız hizmet satan firmalar; tehlikeli veya özel izin gerektiren ürünler (ADR sınıfı kimyasal, ilaç, soğuk zincir gıda); UK'de zaten kendi deposu olan ve depo ihtiyacı görünmeyen şirketler.
+Ülke başına adetleri dengeli dağıt; bir ülkede yeterli nitelikli aday yoksa sayıyı doldurmak için zayıf aday ekleme.
+`
+    : "";
 
   const segBlocks = segs
     .map((s, i) => {
@@ -256,6 +302,7 @@ Standart palet depolama haftalık £3.50 + KDV'den başlar. Asgari hacim yok; te
 ## Aranacak segmentler ve adetler
 ${segBlocks}
 
+${countryFocus}
 Şirket büyüklüğü: ${size.label}.
 İdeal aday: İngiltere'ye zaten düzenli satan veya ithalat yapan; ürünleri palet ya da koli ile depolanabilen; İngiltere'de kendi deposu olmayan şirket. Ticari değeri en yüksek olanlar, düzenli konteyner veya palet hacmi olanlardır.
 

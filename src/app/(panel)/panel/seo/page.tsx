@@ -19,7 +19,7 @@ export default async function SeoPage({ searchParams }: { searchParams: Promise<
       </div>
       <Card title="Canlı sayfa kontrolü">
         <p className="text-sm text-slate-600 mb-4">Site haritasındaki tüm sayfalar canlı sitede tek tek açılır; 200 dönmeyenler listelenir (~30 sn).</p>
-        <form><input type="hidden" name="run" value="1" /><button className="bg-[#0b2545] text-white rounded-full px-5 py-2 text-sm font-semibold">Kontrolü çalıştır</button></form>
+        <form><input type="hidden" name="run" value="1" /><button className="pnl-btn-primary">Kontrolü çalıştır</button></form>
         {bad && <div className="mt-4">{bad.length ? <Table head={["Sayfa", "Durum"]} rows={bad.map((b) => [b.url, b.status || "bağlanamadı"])} /> : <p className="text-green-700 font-semibold">✓ {urls.length} sayfanın tamamı 200 dönüyor.</p>}</div>}
       </Card>
       <Card title="Uyarı kuralları">

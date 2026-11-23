@@ -14,9 +14,9 @@ import { changeStatus, importLeads, pushToApollo } from "./actions";
 export const dynamic = "force-dynamic";
 
 type SP = Record<string, string | string[] | undefined>;
-const input = "rounded-xl border border-slate-300 px-3 py-2 text-sm w-full";
-const btn = "bg-[#0b2545] text-white rounded-full px-5 py-2 text-sm font-semibold";
-const redBtn = "bg-[#d62839] hover:bg-[#c1121f] text-white rounded-full px-5 py-2 text-sm font-semibold";
+const input = "pnl-input";
+const btn = "pnl-btn";
+const redBtn = "pnl-btn-primary";
 const one = (v: string | string[] | undefined) => (Array.isArray(v) ? v[0] : v) ?? "";
 const gbp = (n: number) => `£${n.toLocaleString("en-GB")}`;
 
@@ -42,7 +42,7 @@ function CompanyCell({ l }: { l: Lead }) {
     <div className="min-w-[12rem]">
       <div className="font-semibold">{link(l.website, l.company) ?? l.company}</div>
       <div className="text-xs text-slate-500">{[l.city, l.country].filter(Boolean).join(", ")}{l.employees ? ` · ${l.employees} çalışan` : ""}</div>
-      {seg && <div className="text-xs text-[#0b2545] mt-1">{seg.label}</div>}
+      {seg && <div className="text-xs text-[#1c1a3a] mt-1">{seg.label}</div>}
       <div className="text-xs text-slate-500">{[l.sector, l.products].filter(Boolean).join(" — ")}</div>
       <div className="text-xs mt-1 flex gap-2">{link(l.linkedin_url, "LinkedIn")}{link(l.ecommerce_url, "Mağaza")}</div>
     </div>
@@ -114,7 +114,7 @@ export default async function WizardPage({ searchParams }: { searchParams: Promi
 
   return (
     <PanelShell active="/panel/sihirbaz" title="Müşteri bulma sihirbazı">
-      {m && (m.startsWith("ok:") ? <p role="status" className="mb-4 rounded-xl bg-green-50 border border-green-200 text-green-800 text-sm p-3">{m.slice(3)}</p> : <ErrorBox message={m} />)}
+      {m && (m.startsWith("ok:") ? <p role="status" className="mb-4 rounded-2xl bg-[var(--pnl-success-soft)] border border-[#b2f2bb] text-[#1b6b3a] text-sm p-3">{m.slice(3)}</p> : <ErrorBox message={m} />)}
 
       {db && leadsR?.ok && (
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
@@ -150,7 +150,7 @@ export default async function WizardPage({ searchParams }: { searchParams: Promi
             {mix.map((r) => (
               <div key={r.group} className="grid grid-cols-[9rem_1fr_4rem] items-center gap-3 text-sm">
                 <span>{r.label}</span>
-                <span className="h-3 rounded-full bg-slate-100 overflow-hidden" aria-hidden="true"><span className="block h-full bg-[#0b2545]" style={{ width: `${Math.min(100, (r.have / r.target) * 100)}%` }} /></span>
+                <span className="h-3 rounded-full bg-[#efedfa] overflow-hidden" aria-hidden="true"><span className="block h-full rounded-full bg-[image:var(--pnl-grad)]" style={{ width: `${Math.min(100, (r.have / r.target) * 100)}%` }} /></span>
                 <span className="text-right tabular-nums">{r.have}/{r.target}</span>
               </div>
             ))}
@@ -195,7 +195,7 @@ export default async function WizardPage({ searchParams }: { searchParams: Promi
             <p className="text-xs text-slate-500">
               Panel öncelik puanını kendisi hesaplar: %45 uygunluk + %35 hacim değeri + %20 segment önceliği. A: 75+, B: 60–74, C: 60 altı. Depolama potansiyeli, palet tahmininin alt sınırı × {gbp(Math.round(PALLET_MONTH_GBP * 100) / 100)}/ay ile hesaplanır. Listede zaten olan şirketler atlanır.
             </p>
-            <div><button className={btn}>İçeri al</button></div>
+            <div><button className={redBtn}>İçeri al</button></div>
           </form>
         ) : <p className="text-sm text-slate-500">Sonuçları kaydetmek için önce veritabanını bağlayın (yukarıdaki uyarı).</p>}
       </Card>
@@ -211,7 +211,7 @@ export default async function WizardPage({ searchParams }: { searchParams: Promi
               <label className="text-sm">Segment<select name="fg" defaultValue={fg} className={input}><option value="">Tümü</option>{SEGMENTS.map((s) => <option key={s.id} value={s.id}>{s.label}</option>)}</select></label>
               <div className="sm:col-span-5 flex flex-wrap gap-3">
                 <button className={btn}>Filtrele</button>
-                <a href="/api/panel/sihirbaz/csv" className="rounded-full border border-slate-300 px-5 py-2 text-sm font-semibold">Tümünü CSV indir</a>
+                <a href="/api/panel/sihirbaz/csv" className="pnl-btn-ghost">Tümünü CSV indir</a>
               </div>
             </form>
 
@@ -231,7 +231,7 @@ export default async function WizardPage({ searchParams }: { searchParams: Promi
                 <form key="st" action={changeStatus} className="flex gap-2 items-center">
                   <input type="hidden" name="d" value={l.domain} />
                   <label className="sr-only" htmlFor={`st-${l.domain}`}>Durum</label>
-                  <select id={`st-${l.domain}`} name="status" defaultValue={l.status} className="rounded-lg border border-slate-300 px-2 py-1 text-xs">{Object.entries(STATUSES).map(([k, v]) => <option key={k} value={k}>{v}</option>)}</select>
+                  <select id={`st-${l.domain}`} name="status" defaultValue={l.status} className="pnl-select-sm">{Object.entries(STATUSES).map(([k, v]) => <option key={k} value={k}>{v}</option>)}</select>
                   <button className="text-xs underline">Kaydet</button>
                 </form>,
               ])}
@@ -255,8 +255,8 @@ export default async function WizardPage({ searchParams }: { searchParams: Promi
       <Card title="İlk e-posta şablonları (segmente göre)">
         <p className="text-sm text-slate-600 mb-3">Apollo&apos;dan veya kendi e-postanızdan gönderin. Köşeli parantezleri doldurun. Her e-postada çıkma satırı kalsın.</p>
         {TEMPLATE_GROUPS.map(({ group, label }) => (
-          <details key={group} className="border-t border-slate-100 py-2">
-            <summary className="cursor-pointer font-semibold text-sm text-[#0b2545]">{label}</summary>
+          <details key={group} className="border-t border-[var(--pnl-line)] py-2">
+            <summary className="cursor-pointer font-semibold text-sm text-[#1c1a3a]">{label}</summary>
             <div className="grid lg:grid-cols-2 gap-4 mt-3">
               {(["tr", "en"] as const).map((lang) => (
                 <div key={lang}>

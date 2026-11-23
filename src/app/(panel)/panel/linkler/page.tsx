@@ -15,7 +15,7 @@ export default function LinksPage() {
           <Card key={g.title} title={g.title} className="mb-0">
             <ul className="space-y-2">
               {g.links.map(([label, href]) => (
-                <li key={href}><a href={href} target={href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer" className="text-[#0b2545] underline">{label}</a></li>
+                <li key={href}><a href={href} target={href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer" className="text-[#1c1a3a] underline">{label}</a></li>
               ))}
             </ul>
           </Card>

@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { CATEGORIES, COUNTRIES, REGIONS, SEGMENTS, SIZES, type Target } from "@/lib/panel/wizard";
 
-const input = "rounded-xl border border-slate-300 px-3 py-2 text-sm w-full";
+const input = "pnl-input";
 const TIER_CLASS = { A: "bg-green-100 text-green-800", B: "bg-amber-100 text-amber-800", C: "bg-slate-100 text-slate-700" };
 
 /**
@@ -17,7 +17,7 @@ export default function TargetForm({ t, hidden, count, submitLabel = "Görev met
         <legend className="text-sm font-semibold mb-2">Segment (ticari öncelik sırasıyla; birden fazla seçilebilir)</legend>
         <div className="grid sm:grid-cols-2 gap-2">
           {SEGMENTS.map((s) => (
-            <label key={s.id} className={`flex items-start gap-2 rounded-xl border border-slate-200 p-3 text-sm ${s.low ? "opacity-70" : ""}`}>
+            <label key={s.id} className={`flex items-start gap-2 pnl-card p-3 text-sm !shadow-none ${s.low ? "opacity-70" : ""}`}>
               <input type="checkbox" name="s" value={s.id} defaultChecked={t.segments.includes(s.id)} className="mt-1" />
               <span>
                 <span className="font-semibold">{s.label}</span> <span className={`ml-1 rounded-full px-2 py-0.5 text-xs font-bold ${s.prior >= 90 ? TIER_CLASS.A : s.prior >= 80 ? TIER_CLASS.B : TIER_CLASS.C}`}>{s.prior}</span>
@@ -62,7 +62,7 @@ export default function TargetForm({ t, hidden, count, submitLabel = "Görev met
         <textarea name="ex" defaultValue={t.exclude.join(", ")} rows={2} className={input} placeholder="ornekfirma.com, digerfirma.com.tr" />
         <span className="text-xs text-slate-500">Listede zaten olan şirketler otomatik olarak hariç tutulur.</span>
       </label>
-      <div><button className="bg-[#0b2545] text-white rounded-full px-5 py-2 text-sm font-semibold">{submitLabel}</button></div>
+      <div><button className="pnl-btn-primary">{submitLabel}</button></div>
     </form>
   );
 }

@@ -36,7 +36,7 @@ export default async function TasksPage({ searchParams }: { searchParams: Promis
           <form action={followUp} className="flex gap-1">
             <input type="hidden" name="contact_id" value={t.contact_id} />
             <label className="sr-only" htmlFor={`d-${t.id}`}>Takip tarihi</label>
-            <input id={`d-${t.id}`} type="date" name="due" defaultValue={tomorrow} className="rounded-lg border border-slate-300 px-2 py-1 text-xs" />
+            <input id={`d-${t.id}`} type="date" name="due" defaultValue={tomorrow} className="pnl-select-sm" />
             <input type="hidden" name="note" value={`Takip: ${t.note ?? ""}`.slice(0, 200)} />
             <button className="text-xs underline">Takip ekle</button>
           </form>
@@ -46,7 +46,7 @@ export default async function TasksPage({ searchParams }: { searchParams: Promis
   const head = ["Tarih", "Kişi", "Şirket", "Not", "İşlem"];
   return (
     <PanelShell active="/panel/gorevler" title="Görevler (Apollo)">
-      {m && (m === "ok" ? <p role="status" className="mb-4 rounded-xl bg-green-50 border border-green-200 text-green-800 text-sm p-3">Güncellendi.</p> : <ErrorBox message={m} />)}
+      {m && (m === "ok" ? <p role="status" className="mb-4 rounded-2xl bg-[var(--pnl-success-soft)] border border-[#b2f2bb] text-[#1b6b3a] text-sm p-3">Güncellendi.</p> : <ErrorBox message={m} />)}
       {!r.ok ? <ErrorBox message={r.error} /> : (
         <>
           <div className="grid gap-4 grid-cols-2 lg:grid-cols-4 mb-6">

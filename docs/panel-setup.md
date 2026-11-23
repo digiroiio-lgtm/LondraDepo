@@ -65,6 +65,55 @@ Panelden yapılabilenler:
 
 Kredi harcayan işlemler (e-posta açma, zenginleştirme) **panelde yoktur**.
 
+## 5. Müşteri bulma sihirbazı (veritabanı)
+Sihirbaz bulunan şirketleri kalıcı olarak saklamak için ücretsiz bir Upstash Redis veritabanı kullanır. Aday verileri yalnızca bu veritabanında ve Apollo'da tutulur, koda yazılmaz.
+1. **Vercel → londra-depo projesi → Storage** sekmesini açın.
+2. **Create Database → Upstash → Redis** seçin. Bölge olarak **London (eu-west-2)** önerilir. Ücretsiz planı seçip oluşturun.
+3. Bağlantı ekranında **londra-depo** projesini ve **Production** ortamını işaretleyip **Connect**'e basın. Vercel `KV_REST_API_URL` ve `KV_REST_API_TOKEN` değişkenlerini kendisi ekler.
+4. **Deployments → en son yayın → Redeploy** ile yeniden yayınlayın.
+
+### Kullanım
+1. **Müşteri sihirbazı → 1. Hedefi seç** bölümünde şunları seçin:
+   - segment (12 segment, ticari öncelik sırasıyla);
+   - isteğe bağlı ürün kategorisi;
+   - bölge ("Segmente göre" önerilir);
+   - büyüklük ve aranacak şirket sayısı.
+2. **Görev metnini oluştur → Kopyala** adımlarını izleyin. Birden fazla segment seçtiyseniz adet, önerilen dağılıma göre bölünür.
+3. ChatGPT'de **Agent** modunda metni yapıştırıp gönderin.
+4. Ajanın verdiği CSV'yi **3. Sonucu içeri al** kutusuna yapıştırın.
+5. **Bugün ilk temas: en değerli 10** kartından ya da listeden seçtiklerinizi **Apollo'ya aktar**'a basarak gönderin.
+   - Apollo'da kişi açılır ve segment ile öncelik etiketleri eklenir.
+   - İlk e-posta görevi önceliğe göre tarihlenir: A ertesi iş günü, B 3 iş günü, C 7 iş günü.
+   - Görev notunda karar verici, satış açısı ve tahmini depolama geliri yer alır. Kredi harcamaz.
+6. Görüştükçe durumları (İletişime geçildi / Olumlu / Elendi) güncelleyin. **Segment performansı** tablosu hangi segmentin satışa döndüğünü gösterir.
+
+### Öncelik puanı (ticari değer)
+| Bileşen | Ağırlık | Ne ölçer |
+|---|---|---|
+| Uygunluk | %45 | İngiltere kanıtı, palet/koli ürün, e-ticaret varlığı, İngiltere deposu olmaması, bölge, büyüklük, kaynaklı e-posta. Forwarder'larda: İngiltere deposu olmaması ve hacim kanıtı. |
+| Hacim değeri | %35 | Tahmini palet, yıllık konteyner, aylık sipariş, düzenli akış |
+| Segment önceliği | %20 | İş analizindeki segment puanı (65–97) |
+
+- **A:** 75 ve üzeri; **B:** 60–74; **C:** 60'ın altı.
+- **Tahmini depolama geliri:** palet tahmininin alt sınırı × £15.17/ay. Bu tutar £3.50/palet/hafta fiyatından hesaplanır, yalnızca depolamayı kapsar ve KDV hariçtir.
+- Diğer hizmetlere fiyat konmaz.
+
+### İlk 100 aday için önerilen dağılım
+Bu dağılım iş analizine dayalı bir tahmindir.
+
+| Grup | Hedef |
+|---|---|
+| Türk ihracatçılar | 30 |
+| Amazon UK | 20 |
+| Shopify / DTC | 15 |
+| UK ithalatçılar | 15 |
+| Ambalaj / otomotiv | 12 |
+| Freight forwarder (partner) | 8 |
+
+Panel en çok eksik olan grubu **Sıradaki önerilen arama** düğmesiyle gösterir.
+
+Otomatik arama (panelden "Ara" butonu) sonraki aşamada gelecek; bunun için bir yapay zekâ API anahtarı gerekecek.
+
 ---
 
 ## Ekranlar
@@ -75,6 +124,7 @@ Kredi harcayan işlemler (e-posta açma, zenginleştirme) **panelde yoktur**.
 | Tıklamalar | WhatsApp, telefon, teklif butonu ve form tıklamaları; günlük grafik; sayfa ve buton kırılımı |
 | Performans | GA4 kanalları ve giriş sayfaları; Search Console'da son 28 gün ile önceki 28 gün karşılaştırması, sorgular ve sayfalar |
 | SEO sağlığı | Site haritasındaki sayfa sayısı, llms dosyalarının tarihi ve eksik sayfaları; tüm sayfaların canlı 200 kontrolü |
+| Müşteri sihirbazı | Segment ve bölgeye göre ajan görev metni; ajan sonucunu içe aktarma; öncelik puanı (A/B/C) ve tahmini depolama geliri; en değerli 10; ilk 100 dağılımı; segment performansı; Apollo'ya aktarma; segmente göre e-posta şablonları |
 | Adaylar | Apollo kişileri, aşama, son aktivite; yeni aday formu |
 | Görevler | Apollo görevleri: geciken, bugün ve bu hafta; tamamla ve takip ekle |
 | Linkler | GA4, Search Console, Formspree, Calendly, Vercel, Apollo ve site araçları |

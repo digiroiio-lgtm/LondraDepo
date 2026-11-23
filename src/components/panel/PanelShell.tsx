@@ -6,6 +6,7 @@ const NAV = [
   ["/panel/tiklamalar", "Tıklamalar"],
   ["/panel/performans", "Performans"],
   ["/panel/seo", "SEO sağlığı"],
+  ["/panel/sihirbaz", "Müşteri sihirbazı"],
   ["/panel/adaylar", "Adaylar"],
   ["/panel/gorevler", "Görevler"],
   ["/panel/linkler", "Linkler"],
@@ -70,7 +71,7 @@ export function ErrorBox({ message }: { message: string }) {
 export function Table({ head, rows, empty = "Kayıt yok." }: { head: string[]; rows: (string | number | React.ReactNode)[][]; empty?: string }) {
   if (!rows.length) return <p className="text-sm text-slate-500">{empty}</p>;
   return (
-    <div className="overflow-x-auto">
+    <div className="overflow-x-auto relative">
       <table className="w-full text-sm text-left">
         <thead className="bg-slate-50 text-[#0b2545]"><tr>{head.map((h) => <th key={h} scope="col" className="px-3 py-2 whitespace-nowrap">{h}</th>)}</tr></thead>
         <tbody>

@@ -1,8 +1,9 @@
 import Link from "next/link";
-import PanelShell, { Bars, Card, ErrorBox, Stat, Table } from "@/components/panel/PanelShell";
+import PanelShell, { Bars, Card, DataSource, ErrorBox, Stat, Table } from "@/components/panel/PanelShell";
+import { analyticsSource } from "@/lib/panel/analytics-snapshot";
 import { apolloConfigured, contactName, searchTasks } from "@/lib/panel/apollo";
 import { field, formspreeConfigured, formspreeSubmissions } from "@/lib/panel/formspree";
-import { eventFilter, ga4Configured, ga4Report } from "@/lib/panel/ga4";
+import { eventFilter, ga4Report } from "@/lib/panel/ga4";
 import { kvConfigured } from "@/lib/panel/kv";
 import { ACTIONS, buildReport, groupByAction, today, type ActionKey } from "@/lib/panel/outreach";
 import { fmtDate, safe } from "@/lib/panel/safe";
@@ -20,9 +21,10 @@ const notSet = (what: string, href: string) => <p className="text-sm text-amber-
 
 export default async function PanelHome() {
   const db = kvConfigured();
+  const src = await analyticsSource();
   const [ga, leads, tasks, llms, contactsR, prospectsR] = await Promise.all([
-    ga4Configured()
-      ? safe(() => ga4Report({ dateRanges: [{ startDate: "7daysAgo", endDate: "today", name: "w" }, { startDate: "28daysAgo", endDate: "today", name: "m" }], dimensions: [{ name: "eventName" }], metrics: [{ name: "eventCount" }], dimensionFilter: eventFilter(["session_start", "whatsapp_click", "phone_call", "generate_lead"]) }))
+    src.mode
+      ? safe(() => ga4Report({ dateRanges: [{ startDate: "7daysAgo", endDate: "today", name: "w" }, { startDate: "28daysAgo", endDate: "today", name: "m" }], dimensions: [{ name: "eventName" }], metrics: [{ name: "eventCount" }], dimensionFilter: eventFilter(["session_start", "whatsapp_click", "phone_call", "generate_lead"]) }, "ozet_events"))
       : null,
     formspreeConfigured() ? safe(() => formspreeSubmissions(5)) : null,
     apolloConfigured() ? safe(searchTasks) : null,
@@ -93,6 +95,7 @@ export default async function PanelHome() {
           </div>
         </>
       )}
+      {src.mode && <DataSource mode={src.mode} generatedAt={src.snapshot?.generated_at} />}
       <div className="grid gap-4 grid-cols-2 lg:grid-cols-4 mb-6">
         <Stat label="Oturum (7 / 28 gün)" value={ga?.ok ? `${g("session_start", "w")} / ${g("session_start", "m")}` : "—"} />
         <Stat label="WhatsApp tıklama (7 / 28 gün)" value={ga?.ok ? `${g("whatsapp_click", "w")} / ${g("whatsapp_click", "m")}` : "—"} />

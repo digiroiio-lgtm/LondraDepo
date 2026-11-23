@@ -1,4 +1,5 @@
 import "server-only";
+import { getAnalyticsSnapshot } from "./analytics-snapshot";
 import { googleConfigured, googleToken } from "./google";
 
 export const GSC_SITE = process.env.GSC_SITE || "sc-domain:londradepo.com";
@@ -6,7 +7,13 @@ export const gscConfigured = googleConfigured;
 
 export type GscRow = { keys: string[]; clicks: number; impressions: number; ctr: number; position: number };
 
-export async function gscQuery(startDate: string, endDate: string, dimensions: string[], rowLimit = 25): Promise<GscRow[]> {
+export async function gscQuery(startDate: string, endDate: string, dimensions: string[], rowLimit = 25, snapshotKey?: string): Promise<GscRow[]> {
+  if (!googleConfigured()) {
+    const snap = await getAnalyticsSnapshot();
+    const hit = snapshotKey ? snap?.gsc[snapshotKey] : undefined;
+    if (!hit) throw new Error("Bu veri anlık görüntüde yok");
+    return hit.slice(0, rowLimit);
+  }
   const res = await fetch(`https://www.googleapis.com/webmasters/v3/sites/${encodeURIComponent(GSC_SITE)}/searchAnalytics/query`, {
     method: "POST",
     headers: { Authorization: `Bearer ${await googleToken()}`, "Content-Type": "application/json" },

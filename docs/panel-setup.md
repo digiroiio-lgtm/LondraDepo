@@ -46,6 +46,59 @@ Oturum 7 gün açık kalır. Çıkmak için sol menüdeki **Çıkış**'a basın
 
 GA4 yalnızca çerez onayı veren ziyaretçileri sayar. Panelde gördüğünüz tıklamalar gerçek sayının altındadır.
 
+### Servis hesabı yoksa: Claude anlık görüntüsü
+Servis hesabı eklenmeden de Performans, Tıklamalar ve Özet sayfaları dolar.
+- Claude, Google Analytics ve Search Console bağlantılarından (MCP) veriyi çeker.
+- Veriyi panelin özel veritabanına yazar; repoya yazmaz, çünkü repo herkese açık.
+- Sayfaların üstünde anlık görüntünün tarihi görünür.
+- Yenilemek için Claude'a **"analitiği yenile"** yazmanız yeterli.
+
+Bunun için Vercel'de `PANEL_SNAPSHOT_TOKEN` değişkeni (32+ karakter) bulunmalı. Claude bu değişkeni kendisi ekler; değeri kimseyle paylaşılmaz.
+
+Servis hesabı (`GOOGLE_SERVICE_ACCOUNT_JSON`) eklenirse panel otomatik olarak canlı veriye geçer ve anlık görüntü kullanılmaz.
+
+## 2b. Gmail: support@londradepo.com (yanıt yakalama ve panelden gönderme)
+Aynı Google servis hesabı Gmail'i de açar. Kutu Google Workspace'te olduğu için **alan genelinde yetkilendirme** (domain-wide delegation) kullanılır. Panel yalnızca `GMAIL_USER` kutusunu okur ve bu kutudan gönderir; e-posta silemez, ayar değiştiremez.
+
+1. **Google Cloud** (console.cloud.google.com), Workspace yönetici hesabıyla giriş yapın.
+   1. Bir proje oluşturun (ör. "londradepo-panel").
+   2. **APIs & Services → Library** bölümünde şu üç API'yi etkinleştirin:
+      - **Gmail API**;
+      - **Google Analytics Data API**;
+      - **Google Search Console API**.
+   3. **IAM & Admin → Service Accounts → Create** ile "panel" adlı bir servis hesabı oluşturun. Rol vermeniz gerekmez.
+   4. Servis hesabının sayfasında **Keys → Add key → JSON** ile anahtar dosyasını indirin.
+      - "Key creation is disabled" hatası çıkarsa: **IAM & Admin → Organization Policies** bölümünde `iam.disableServiceAccountKeyCreation` kuralını bu proje için kapatın (Override → Not enforced). Bunun için gereken "Organization Policy Administrator" rolünü kendinize verin.
+   5. Servis hesabının **Unique ID** (Client ID) numarasını kopyalayın.
+2. **Workspace Yönetici Konsolu** (admin.google.com):
+   1. **Güvenlik → Erişim ve veri kontrolü → API kontrolleri → Alan genelinde yetkilendirmeyi yönet → Yeni ekle** yolunu izleyin.
+   2. İstemci kimliği: servis hesabının Unique ID numarası.
+   3. OAuth kapsamları:
+      `https://www.googleapis.com/auth/gmail.readonly,https://www.googleapis.com/auth/gmail.send`
+   4. **Yetkilendir**'e basın. Etkinleşmesi birkaç dakika sürebilir.
+3. **Google Analytics ve Search Console** için servis hesabının e-postasını (…@….iam.gserviceaccount.com) ekleyin:
+   - GA4'te **Görüntüleyici**;
+   - Search Console'da **Kısıtlı kullanıcı**.
+4. **Vercel → Settings → Environment Variables** (Production) bölümüne şunları ekleyin:
+   - `GOOGLE_SERVICE_ACCOUNT_JSON` = indirilen JSON dosyasının **tüm içeriği**;
+   - `GMAIL_USER` = `support@londradepo.com`;
+   - isteğe bağlı: `GMAIL_SENDER_NAME` (varsayılan "Yusuf Barış · LondraDepo").
+
+   Sonra **Redeploy** yapın.
+
+**Panelde (E-posta sayfası):**
+- **Gelen kutusu:** sayfa açılınca, en fazla 10 dakikada bir, son 30 günün e-postaları taranır. Şimdi tara düğmesi de vardır.
+  - Gönderen alan adı, e-postada geçen alan adı ya da bizim başlattığımız e-posta dizisi bir şirketle eşleşirse:
+    - gerçek yanıt şirketi "Yanıt geldi" yapar ve geçmişine işlenir;
+    - "talebiniz alındı" gibi otomatik e-postalar "Otomatik teyit" olarak geçmişe işlenir.
+  - Her e-posta yalnızca bir kez işlenir.
+- **E-posta yaz:**
+  - Şirket seçilince alıcı, konu ve şirkete göre hazırlanmış mesaj gelir.
+  - "Mesajı kontrol ettim" kutusu işaretlenmeden gönderim yapılmaz.
+  - Günlük gönderim sınırı 40'tır.
+  - Gönderilen e-posta şirketin geçmişine işlenir. Gmail dizisi saklandığı için gelen yanıt doğrudan o şirkete eşleşir.
+- Servis hesabı eklenince Performans ve Tıklamalar sayfaları da anlık görüntü yerine canlı veriye geçer.
+
 ## 3. Gelen talepler (Formspree)
 1. Formspree'ye giriş yapın.
 2. **Account → Settings → API** bölümünden bir API anahtarı oluşturun. Submissions API, Formspree'nin API destekleyen planlarında açıktır; anahtar sekmesi yoksa planınız desteklemiyordur.

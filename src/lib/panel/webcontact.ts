@@ -105,6 +105,8 @@ export type Contact = {
   /** Channel that actually reached the company (form or a manual email). */
   channel?: "form" | "email";
   emailed_at?: string;
+  /** Gmail thread of the last email we sent from the panel (replies in it are matched to this company). */
+  thread_id?: string;
   /** Everything that happened to this company, oldest first. */
   events?: ContactEvent[];
 };
@@ -121,6 +123,8 @@ export const EVENT_LABELS = {
   followup: "Takip görevi açıldı",
   reply: "Yanıt durumu",
   note: "Not",
+  auto_ack: "Otomatik teyit e-postası",
+  mail_in: "Gelen e-posta",
 } as const;
 export type EventType = keyof typeof EVENT_LABELS;
 export type ContactEvent = { at: string; type: EventType; note?: string };

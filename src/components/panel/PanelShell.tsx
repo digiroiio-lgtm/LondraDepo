@@ -18,6 +18,7 @@ const ICONS: Record<string, React.ReactNode> = {
   warehouse: <><path d="M3 10 12 4l9 6v10H3z" /><path d="M7 20v-6h10v6" /><path d="M7 17h10" /></>,
   calendar: <><rect x="3" y="5" width="18" height="16" rx="3" /><path d="M3 10h18M8 3v4M16 3v4" /></>,
   chevron: <><path d="m6 9 6 6 6-6" /></>,
+  mail: <><rect x="3" y="5" width="18" height="14" rx="3" /><path d="m4 7 8 6 8-6" /></>,
 };
 
 export function PIcon({ name, className = "h-5 w-5" }: { name: keyof typeof ICONS | string; className?: string }) {
@@ -36,6 +37,7 @@ const NAV: [string, string, string][] = [
   ["/panel/seo", "SEO sağlığı", "pulse"],
   ["/panel/sihirbaz", "Müşteri sihirbazı", "wand"],
   ["/panel/webcontact", "WebContact sihirbazı", "send"],
+  ["/panel/posta", "E-posta", "mail"],
   ["/panel/adaylar", "Adaylar", "users"],
   ["/panel/gorevler", "Görevler", "tasks"],
   ["/panel/linkler", "Linkler", "link"],
@@ -203,5 +205,17 @@ export function Bars({ data, label }: { data: { x: string; y: number }[]; label:
       </svg>
       <figcaption className="flex justify-between text-xs text-[var(--pnl-muted)] mt-1.5"><span>{data[0].x}</span><span>en yüksek: {max}</span><span>{data[data.length - 1].x}</span></figcaption>
     </figure>
+  );
+}
+
+/** Small note on analytics pages: live Google API or a dated Claude (MCP) snapshot. */
+export function DataSource({ mode, generatedAt }: { mode: "live" | "snapshot"; generatedAt?: string }) {
+  if (mode === "live") return null;
+  const when = generatedAt ? new Intl.DateTimeFormat("tr-TR", { day: "numeric", month: "long", year: "numeric", hour: "2-digit", minute: "2-digit", timeZone: "Europe/London" }).format(new Date(generatedAt)) : "?";
+  return (
+    <p className="mb-5 inline-flex flex-wrap items-center gap-2 rounded-full bg-[var(--pnl-primary-soft)] px-4 py-1.5 text-xs text-[var(--pnl-primary-ink)]">
+      <span className="font-semibold">Anlık görüntü: {when}</span>
+      <span>· Google Analytics ve Search Console verileri Claude bağlantısıyla alındı; yenilemek için Claude&apos;a &quot;analitiği yenile&quot; yazın.</span>
+    </p>
   );
 }

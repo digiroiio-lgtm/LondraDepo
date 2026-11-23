@@ -76,7 +76,7 @@ export default async function PanelHome() {
                         <div className="font-semibold truncate">{c.company}</div>
                         <div className="text-xs text-[var(--pnl-muted)]">{touch ? `Son temas ${fmtDate(touch)}` : "Henüz temas yok"}{a.due ? ` · Takip ${fmtDate(a.due)}` : ""}{a.reason && a.key === "channel" ? ` · ${a.reason}` : ""}</div>
                       </div>
-                      <a href={a.key === "email" ? `/panel/posta?d=${encodeURIComponent(c.domain)}#yaz` : `/panel/webcontact?tab=is&g=${a.key}&fq=${encodeURIComponent(c.domain)}#isler`} className="pnl-btn !py-1.5 !px-3 text-xs whitespace-nowrap">{ACTIONS[a.key].label}</a>
+                      <a href={a.key === "email" ? `/panel/posta?d=${encodeURIComponent(c.domain)}#yaz` : a.key === "followup" && (c.email_fallback || c.thread_id) ? `/panel/posta?d=${encodeURIComponent(c.domain)}&t=followup#yaz` : a.key === "meeting" ? `/panel/posta?d=${encodeURIComponent(c.domain)}&t=meeting#yaz` : `/panel/webcontact?tab=is&g=${a.key}&fq=${encodeURIComponent(c.domain)}#isler`} className="pnl-btn !py-1.5 !px-3 text-xs whitespace-nowrap">{ACTIONS[a.key].label}</a>
                     </li>
                   );
                 })}

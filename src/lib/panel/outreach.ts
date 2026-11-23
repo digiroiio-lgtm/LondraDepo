@@ -250,7 +250,7 @@ export function statusLine(c: Contact): string {
   const d = deliveryOf(c);
   const a = nextAction(c);
   if (c.reply === "yanit") return `${DELIVERY[d.key]} · Yanıt geldi`;
-  if (c.reply === "olumlu") return "Olumlu yanıt · Görüşme planla";
+  if (c.reply === "olumlu") return eventsOf(c).some((e) => /Görüşme linki gönderildi/.test(e.note ?? "")) ? "Olumlu yanıt · Görüşme linki gönderildi, randevu bekleniyor" : "Olumlu yanıt · Görüşme planla";
   if (c.reply === "gorusme") return "Görüşme yapıldı · Teklif gönder";
   if (c.reply === "teklif") return `Teklif gönderildi · ${a.key === "followup" ? "Takip zamanı geldi" : "Yanıt bekleniyor"}`;
   if (a.key === "closed") return `Kapandı${a.reason ? ` · ${a.reason}` : ""}`;

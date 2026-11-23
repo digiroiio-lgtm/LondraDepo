@@ -39,7 +39,7 @@ export async function searchContacts(q = "", page = 1): Promise<{ contacts: Apol
   return { contacts: j.contacts ?? [], total: j.pagination?.total_entries ?? 0 };
 }
 
-export async function createContact(c: { first_name: string; last_name: string; organization_name?: string; title?: string; email?: string; contact_stage_id?: string }): Promise<ApolloContact> {
+export async function createContact(c: { first_name: string; last_name: string; organization_name?: string; title?: string; email?: string; contact_stage_id?: string; website_url?: string; linkedin_url?: string; label_names?: string[] }): Promise<ApolloContact> {
   const j = await call<{ contact: ApolloContact }>("/contacts", { method: "POST", body: c });
   return j.contact;
 }

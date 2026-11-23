@@ -65,6 +65,29 @@ Panelden yapılabilenler:
 
 Kredi harcayan işlemler (e-posta açma, zenginleştirme) **panelde yoktur**.
 
+## 5. Müşteri bulma sihirbazı (veritabanı)
+Sihirbaz bulunan şirketleri kalıcı olarak saklamak için ücretsiz bir Upstash Redis veritabanı kullanır. Aday verileri yalnızca bu veritabanında ve Apollo'da tutulur, koda yazılmaz.
+1. **Vercel → londra-depo projesi → Storage** sekmesini açın.
+2. **Create Database → Upstash → Redis** seçin. Bölge olarak **London (eu-west-2)** önerilir. Ücretsiz planı seçip oluşturun.
+3. Bağlantı ekranında **londra-depo** projesini ve **Production** ortamını işaretleyip **Connect**'e basın. Vercel `KV_REST_API_URL` ve `KV_REST_API_TOKEN` değişkenlerini kendisi ekler.
+4. **Deployments → en son yayın → Redeploy** ile yeniden yayınlayın.
+
+### Kullanım
+1. **Müşteri sihirbazı → 1. Hedefi seç** bölümünde ayarları yapın:
+   - bölge (Türkiye → İngiltere ya da diğer ülkeler);
+   - sektör;
+   - büyüklük;
+   - kaç şirket aranacağı.
+2. **Görev metnini oluştur → Kopyala** adımlarını izleyin.
+3. ChatGPT'de **Agent** modunda metni yapıştırıp gönderin.
+4. Ajanın verdiği CSV'yi **3. Sonucu içeri al** kutusuna yapıştırın. Panel şunları yapar:
+   - skoru kendi kurallarıyla hesaplar;
+   - tekrarları atlar;
+   - kaynağı olmayan e-postaları işaretler.
+5. Listeden seçtiğiniz şirketleri **Apollo'ya aktar**'a basarak gönderin. Apollo'da her şirket için bir kişi ve ertesi iş günü için bir "ilk e-posta" görevi açılır. Bu işlem kredi harcamaz.
+
+Otomatik arama (panelden "Ara" butonu) sonraki aşamada gelecek; bunun için bir yapay zekâ API anahtarı gerekecek.
+
 ---
 
 ## Ekranlar
@@ -75,6 +98,7 @@ Kredi harcayan işlemler (e-posta açma, zenginleştirme) **panelde yoktur**.
 | Tıklamalar | WhatsApp, telefon, teklif butonu ve form tıklamaları; günlük grafik; sayfa ve buton kırılımı |
 | Performans | GA4 kanalları ve giriş sayfaları; Search Console'da son 28 gün ile önceki 28 gün karşılaştırması, sorgular ve sayfalar |
 | SEO sağlığı | Site haritasındaki sayfa sayısı, llms dosyalarının tarihi ve eksik sayfaları; tüm sayfaların canlı 200 kontrolü |
+| Müşteri sihirbazı | Sektör ve bölgeye göre ajan görev metni; ajan sonucunu içe aktarma; uygunluk skoru (0–100), durum takibi, CSV ve Apollo'ya aktarma; ilk e-posta şablonu |
 | Adaylar | Apollo kişileri, aşama, son aktivite; yeni aday formu |
 | Görevler | Apollo görevleri: geciken, bugün ve bu hafta; tamamla ve takip ekle |
 | Linkler | GA4, Search Console, Formspree, Calendly, Vercel, Apollo ve site araçları |

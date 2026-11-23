@@ -102,7 +102,28 @@ export type Contact = {
   run_id: string;
   imported_at: string;
   followup_at?: string;
+  /** Channel that actually reached the company (form or a manual email). */
+  channel?: "form" | "email";
+  emailed_at?: string;
+  /** Everything that happened to this company, oldest first. */
+  events?: ContactEvent[];
 };
+
+export const EVENT_LABELS = {
+  imported: "Ajan inceledi",
+  form_sent: "Form gönderildi",
+  blocked: "Doğrulama engeli",
+  error: "Hata / teyit yok",
+  phone_rejected: "Telefon formatı reddedildi",
+  no_form: "Form yok, e-posta kaydedildi",
+  skipped: "Atlandı",
+  email_sent: "E-posta gönderildi",
+  followup: "Takip görevi açıldı",
+  reply: "Yanıt durumu",
+  note: "Not",
+} as const;
+export type EventType = keyof typeof EVENT_LABELS;
+export type ContactEvent = { at: string; type: EventType; note?: string };
 
 // ---------- Message guidance per segment group ----------
 
@@ -226,7 +247,8 @@ Kurallar:
 - notes: hata mesajı, reddedilen telefon biçimleri veya kısa açıklama.
 - language: tr veya en.
 - sent_at: gönderim zamanı (YYYY-MM-DD HH:MM), gönderilmediyse boş.
-- message: gönderdiğin (veya captcha/error ise göndereceğin) mesajın tam metni.
+- message: gönderdiğin mesajın tam metni; captcha/error/phone_rejected ise göndereceğin mesaj; no_form ise e-postayla göndereceğimiz mesaj (konu satırını subject sütununa yaz).
+- error satırlarında notes sütununa ne olduğunu ayrıntılı yaz: ekranda çıkan hata metni, Gönder'e bastıktan sonra ne oldu (sayfa değişmedi, teyit çıkmadı, alan kırmızı oldu vb.).
 - Virgül veya satır sonu içeren değerleri çift tırnak içine al.
 - Gönderemediğin şirketleri de listede tut.
 `;

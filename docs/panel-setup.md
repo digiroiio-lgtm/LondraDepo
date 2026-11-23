@@ -135,6 +135,32 @@ Müşteri sihirbazıyla aynı veritabanını ve aynı aday listesini kullanır, 
 6. **Takip zamanı gelenler:** formu 5 iş günü önce gönderilmiş ve yanıt gelmemiş şirketler. Bu şirketler için Apollo'da ertesi iş günüyle tarihli bir takip görevi açılır; kredi harcamaz.
 7. Yanıt geldikçe şirketin durumunu güncelleyin (Yanıt geldi / Olumlu / İlgilenmiyor). "Olumlu" ve "İlgilenmiyor" müşteri listesine de yansır.
 
+### İş listesi ve raporlar
+WebContact sayfasında üç bölüm var: **İş listesi**, **Rapor** ve **Çalıştır**.
+
+**İş listesi:** her şirket kendi durumuna göre otomatik olarak bir işe düşer.
+
+| İş | Ne zaman |
+|---|---|
+| Yanıtı değerlendir | Şirket yanıt verdi |
+| Görüşme / teklif | Olumlu dönüş geldi |
+| Takip et | Form ya da e-posta ulaştı, 5 iş günü geçti, yanıt yok |
+| E-posta gönder | Formu yok, kurumsal e-posta kayıtlı. "E-posta taslağını aç" hazır mesajı kendi e-posta programınızda açar. Gönderdikten sonra "Gönderdim"e basın. |
+| Birlikte gönder (doğrulama) | CAPTCHA veya güvenlik kodu var |
+| Hatayı incele | Site hata verdi, teyit gelmedi ya da telefon biçimi kabul edilmedi |
+| Başka kanal bul | Form da e-posta da yok |
+| Yanıt bekleniyor | Mesaj ulaştı, takip zamanı gelmedi |
+| Kapandı | Atlandı ya da ilgilenmiyor |
+
+- Her şirketin **geçmişi** tutulur: incelendi, form gönderildi, doğrulama engeli, hata, e-posta gönderildi, takip, yanıt ve notlar.
+- Her şirkete not ekleyebilirsiniz (ör. "Telefonla arandı").
+
+**Rapor:**
+- Gün / Hafta / Ay seçilir; ok düğmeleriyle önceki ve sonraki döneme geçilir.
+- Sayılar: incelenen, ulaşılan, form, e-posta, doğrulama, hata, formsuz, atlandı, takip, yanıt.
+- Haftalık ve aylık görünümde günlük grafik vardır.
+- Dönemde yapılan her işin listesi ve WhatsApp ya da e-postaya yapıştırılabilir bir özet metin bulunur.
+
 ### Telefon formatı
 Bazı formlar +44'lü İngiltere numarasını kabul etmez: "+" işaretine, boşluğa ya da hane sayısına takılır. Ajan bu durumda şunları yapar:
 

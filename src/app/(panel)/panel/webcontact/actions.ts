@@ -43,7 +43,7 @@ export async function importLog(f: FormData) {
       if ("error" in c) errors.push(c.error);
       else { contacts.push(c); recByDomain.set(c.domain, rec); }
     }
-    const { saved, duplicates } = await saveContacts(contacts);
+    const { saved, duplicates, reviewed } = await saveContacts(contacts);
 
     // Keep one shared prospect list: new companies from research runs join the customer wizard list.
     const newLeads: Lead[] = [];
@@ -62,7 +62,7 @@ export async function importLog(f: FormData) {
     const run = { id: runId, at, mode: mode as "a" | "b" | "c", sent: count(["sent"]), blocked: count(["captcha"]), manual: count(["error", "phone_rejected"]), noForm: count(["no_form"]), skipped: count(["skipped", "no_solicitation"]), duplicates, errors: errors.length };
     await addContactRun(run);
     importedOk = true;
-    msg = `ok:Son çalıştırma · ${run.sent + (run.blocked ?? 0) + run.manual + run.noForm + run.skipped} şirket: ${run.sent} form gönderildi, ${run.blocked} doğrulama engeline takıldı, ${run.manual} elle gönderilecek, ${run.noForm} formsuz, ${run.skipped} atlandı; ${duplicates} tekrar atlandı${newLeads.length ? `; ${newLeads.length} yeni şirket müşteri listesine eklendi` : ""}${errors.length ? `; ${errors.length} satır okunamadı` : ""}.`;
+    msg = `ok:Son çalıştırma · ${run.sent + (run.blocked ?? 0) + run.manual + run.noForm + run.skipped} şirket: ${run.sent} form gönderildi, ${run.blocked} doğrulama engeline takıldı, ${run.manual} elle gönderilecek, ${run.noForm} formsuz, ${run.skipped} atlandı; ${duplicates} daha önce temas edilmiş olduğu için atlandı${reviewed ? `; ${reviewed} kayıt incelenmeli (zaten ulaşılmıştı, ajan yeniden gönderdi)` : ""}${newLeads.length ? `; ${newLeads.length} yeni şirket müşteri listesine eklendi` : ""}${errors.length ? `; ${errors.length} satır okunamadı` : ""}.`;
   } catch (e) {
     msg = e instanceof Error ? e.message : "hata";
   }
@@ -77,7 +77,7 @@ export async function changeReply(f: FormData) {
     if (!(reply in REPLIES)) throw new Error("Geçersiz durum");
     await setReply(d, reply, REPLIES[reply]);
     const l = await getLead(d);
-    if (l && reply === "olumlu") await updateLead(d, { status: "olumlu" });
+    if (l && ["olumlu", "gorusme", "teklif"].includes(reply)) await updateLead(d, { status: "olumlu" });
     if (l && reply === "ilgisiz") await updateLead(d, { status: "elendi" });
   } catch (e) {
     msg = e instanceof Error ? e.message : "hata";
@@ -191,6 +191,8 @@ export async function closeWithReason(f: FormData) {
   let msg = `ok:Kapatıldı: ${reason}. Şirket aktif takipten çıktı, kaydı duruyor.`;
   try {
     if (!(await updateContact(d, { reply: "ilgisiz", close_reason: reason }, { type: "reply", note: `Olumsuz: ${reason}` }))) throw new Error("Kayıt bulunamadı");
+    // The shared prospect leaves the first-contact list too.
+    if (await getLead(d)) await updateLead(d, { status: "elendi" });
   } catch (e) {
     msg = e instanceof Error ? e.message : "hata";
   }

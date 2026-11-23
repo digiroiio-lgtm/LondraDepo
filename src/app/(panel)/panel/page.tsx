@@ -13,7 +13,7 @@ import { nextSearch } from "@/lib/panel/wizard";
 import { listLeads } from "@/lib/panel/wizard-store";
 
 /** Order in which open work should be done: replies first, then anything that turns into a reached company. */
-const WORK_ORDER: ActionKey[] = ["reply", "meeting", "verify", "followup", "email", "blocked", "fix", "channel"];
+const WORK_ORDER: ActionKey[] = ["reply", "meeting", "quote", "verify", "followup", "email", "channel", "fix", "blocked"];
 
 export const dynamic = "force-dynamic";
 
@@ -36,7 +36,8 @@ export default async function PanelHome() {
   const prospects = prospectsR?.ok ? prospectsR.data : [];
   const groups = groupByAction(contacts);
   const week = buildReport(contacts, "week", today());
-  const firstContact = prospects.filter((l) => l.status === "yeni" && l.tier !== "C");
+  const touched = new Set(contacts.map((c) => c.domain));
+  const firstContact = prospects.filter((l) => l.status === "yeni" && l.tier !== "C" && !touched.has(l.domain));
   const work = WORK_ORDER.filter((k) => groups[k].length);
   const todayList = sortByPriority(contacts.filter((c) => WORK_ORDER.includes(nextAction(c).key))).slice(0, 8);
   const next = nextSearch(prospects);

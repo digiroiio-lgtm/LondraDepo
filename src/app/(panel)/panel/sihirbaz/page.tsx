@@ -1,9 +1,10 @@
 import PanelShell, { Card, ErrorBox, NotConnected, Stat, Table } from "@/components/panel/PanelShell";
 import CopyButton from "@/components/panel/CopyButton";
+import TargetForm from "@/components/panel/TargetForm";
 import { kvConfigured } from "@/lib/panel/kv";
 import { fmtDate, safe } from "@/lib/panel/safe";
 import {
-  CATEGORIES, COLUMNS, COUNTRIES, PALLET_MONTH_GBP, REGIONS, SEGMENTS, SIZES, STATUSES, TEMPLATE_GROUPS,
+  COLUMNS, PALLET_MONTH_GBP, REGIONS, SEGMENTS, STATUSES, TEMPLATE_GROUPS,
   allocate, buildPrompt, emailTemplate, mixProgress, nextSearch, segmentById, segmentPerformance, targetFrom,
   type Lead, type Status, type Tier,
 } from "@/lib/panel/wizard";
@@ -160,57 +161,7 @@ export default async function WizardPage({ searchParams }: { searchParams: Promi
       )}
 
       <Card title="1. Hedefi seç">
-        <form method="get" className="grid gap-4">
-          <input type="hidden" name="go" value="1" />
-          <fieldset>
-            <legend className="text-sm font-semibold mb-2">Segment (ticari öncelik sırasıyla; birden fazla seçilebilir)</legend>
-            <div className="grid sm:grid-cols-2 gap-2">
-              {SEGMENTS.map((s) => (
-                <label key={s.id} className={`flex items-start gap-2 rounded-xl border p-3 text-sm ${s.low ? "border-slate-200 opacity-70" : "border-slate-200"}`}>
-                  <input type="checkbox" name="s" value={s.id} defaultChecked={t.segments.includes(s.id)} className="mt-1" />
-                  <span>
-                    <span className="font-semibold">{s.label}</span> <span className={`ml-1 rounded-full px-2 py-0.5 text-xs font-bold ${s.prior >= 90 ? TIER_CLASS.A : s.prior >= 80 ? TIER_CLASS.B : TIER_CLASS.C}`}>{s.prior}</span>
-                    <span className="block text-xs text-slate-500">{s.services} · Potansiyel: {s.potential}{s.low ? " · düşük öncelik" : ""}</span>
-                  </span>
-                </label>
-              ))}
-            </div>
-          </fieldset>
-          <fieldset>
-            <legend className="text-sm font-semibold mb-2">Ürün kategorisi (isteğe bağlı)</legend>
-            <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm">
-              {CATEGORIES.map((c) => <label key={c.id} className="flex items-center gap-2"><input type="checkbox" name="k" value={c.id} defaultChecked={t.cats.includes(c.id)} /> {c.label}</label>)}
-            </div>
-            <label className="text-sm block mt-3">Başka kategori (serbest metin)<input name="other" defaultValue={t.other} placeholder="Örn. bahçe mobilyası, oyuncak" className={input} /></label>
-          </fieldset>
-          <fieldset>
-            <legend className="text-sm font-semibold mb-2">Bölge</legend>
-            <div className="flex flex-wrap gap-4 text-sm">
-              {Object.entries(REGIONS).map(([k, v]) => <label key={k} className="flex items-center gap-2"><input type="radio" name="region" value={k} defaultChecked={t.region === k} /> {v}</label>)}
-            </div>
-            <p className="text-xs text-slate-500 mt-1">&quot;Segmente göre&quot;: Türk ihracatçılar Türkiye&apos;de, UK ithalatçılar ve sezonluk perakendeciler İngiltere&apos;de, yeni giren markalar diğer ülkelerde aranır.</p>
-          </fieldset>
-          <fieldset>
-            <legend className="text-sm font-semibold mb-2">Ülkeler (diğer ülkeler için)</legend>
-            <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm">
-              {COUNTRIES.map((c) => <label key={c} className="flex items-center gap-2"><input type="checkbox" name="c" value={c} defaultChecked={t.countries.includes(c)} /> {c}</label>)}
-            </div>
-            <label className="text-sm block mt-3">Başka ülke (virgülle)<input name="cx" defaultValue={t.countries.filter((c) => !(COUNTRIES as readonly string[]).includes(c)).join(", ")} className={input} /></label>
-          </fieldset>
-          <div className="grid sm:grid-cols-2 gap-4">
-            <label className="text-sm">Şirket büyüklüğü
-              <select name="size" defaultValue={t.size} className={input}>{Object.entries(SIZES).map(([k, v]) => <option key={k} value={k}>{v.label}</option>)}</select>
-            </label>
-            <label className="text-sm">Kaç şirket
-              <select name="n" defaultValue={String(t.count)} className={input}>{[25, 50, 100].map((n) => <option key={n} value={n}>{n}</option>)}</select>
-            </label>
-          </div>
-          <label className="text-sm">Hariç tutulacak alan adları (mevcut müşteriler; boşluk veya virgülle)
-            <textarea name="ex" defaultValue={t.exclude.join(", ")} rows={2} className={input} placeholder="ornekfirma.com, digerfirma.com.tr" />
-            <span className="text-xs text-slate-500">Listede zaten olan şirketler otomatik olarak hariç tutulur.</span>
-          </label>
-          <div><button className={btn}>Görev metnini oluştur</button></div>
-        </form>
+        <TargetForm t={t} hidden={<input type="hidden" name="go" value="1" />} />
       </Card>
 
       {go && (

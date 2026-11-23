@@ -38,6 +38,19 @@ const nextConfig = {
         ],
       },
       {
+        // Private panel: never indexed (the middleware also sets this and requires a password).
+        source: "/panel/:path*",
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
+      },
+      {
+        source: "/panel",
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
+      },
+      {
+        source: "/api/panel/:path*",
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
+      },
+      {
         // Gated lead-magnet PDFs: keep out of search results.
         source: "/downloads/(.*)",
         headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],

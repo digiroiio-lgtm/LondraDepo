@@ -20,9 +20,9 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20ihracat%20operasy
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Türkiye'den İngiltere'ye İhracat 2026: EORI, GTİP, KDV",
+  title: "Türkiye'den İngiltere'ye İhracat Nasıl Yapılır? 2026",
   description:
-    "İngiltere'ye ihracatı adım adım planlayın: GB EORI, GTİP, CDS beyannamesi, menşe beyanı ve %20 ithalat KDV'si. Ücretsiz PDF kontrol listesini indirin.",
+    "Türkiye'den İngiltere'ye ihracat 2026: GB EORI, GTİP, gümrük beyannamesi, menşe ispatı ve %20 ithalat KDV'si adım adım. Ücretsiz PDF kontrol listesini indirin.",
   alternates: trAlternates("/blog/turkiyeden-ingiltereye-ihracat-rehberi"),
   openGraph: {
     title: "Türkiye'den İngiltere'ye İhracat 2026: Adım Adım Rehber",
@@ -234,6 +234,7 @@ export default function IhracatRehberiPage() {
 
             <AuthorBox path="/blog/turkiyeden-ingiltereye-ihracat-rehberi" />
 
+            <p className="text-slate-700 my-6">Ürünleriniz İngiltere&apos;ye ulaştıktan sonra depolama ve dağıtım için: <Link href="/ingiltere-depo" className="font-semibold text-[#0b2545] underline">İngiltere depo hizmetimiz</Link>.</p>
             <RelatedArticles articles={relatedArticles} />
 
             <div className="mt-8 pt-6 border-t border-slate-200">

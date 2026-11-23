@@ -18,9 +18,9 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20İngiltere%20depo
 const TEL = "tel:+447554195190";
 
 export const metadata: Metadata = {
-  title: "İngiltere Depo Hizmeti | Essex, Londra Yakını | LondraDepo",
+  title: "İngiltere Depo: Essex'te Palet £3,50/Hafta | LondraDepo",
   description:
-    "İngiltere depo hizmeti: Rayleigh, Essex'te mal kabul, palet ve koli depolama, Mintsoft WMS stok takibi, pick & pack ve UK dağıtım. Palet depolama haftalık £3,50 + KDV'den. Türkçe destek.",
+    "İngiltere depo hizmeti: Rayleigh, Essex'te mal kabul, palet ve koli depolama, Mintsoft WMS, pick & pack ve UK dağıtım. Palet haftalık £3,50 + KDV'den. Türkçe destek.",
   keywords: [
     "ingiltere depo",
     "ingiltere depo hizmeti",
@@ -124,6 +124,14 @@ const faqs = [
   {
     q: "Sadece depolama mı yapıyorsunuz yoksa sipariş karşılama da var mı?",
     a: "Hem depolama hem de tam sipariş karşılama (fulfilment) hizmeti sunuyoruz. Sipariş geldiğinde ürünü depomuzdan toplar, paketler, etiketler ve UK müşterilerinize sevk ederiz.",
+  },
+  {
+    q: "İngiltere'de kendi depomu mu kiralamalıyım, 3PL depo mu kullanmalıyım?",
+    a: "Hacim çok yüksek ve sabit değilse 3PL depo genellikle daha ekonomiktir: kira, personel ve ekipman yatırımı olmadan yalnızca kullandığınız palet kadar ödersiniz. LondraDepo'da sabit minimum yoktur, palet depolama haftalık £3,50 + KDV'den başlar ve 1 paletle başlanabilir.",
+  },
+  {
+    q: "İngiltere depo seçerken nelere dikkat etmeliyim?",
+    a: "Limanlara ve Londra'ya mesafe, yazılı fiyat kalemleri, minimum hacim şartı, gerçek zamanlı stok görünürlüğü, gümrükleme desteği ve operasyon örnekleri en önemli ölçütlerdir. LondraDepo'nun Rayleigh, Essex deposu London Gateway'e 13 mil uzaklıktadır ve stok Mintsoft WMS'te izlenir.",
   },
   {
     q: "Palet ve koli depolama kabul ediyor musunuz?",
@@ -309,6 +317,57 @@ export default function IngiltereDepoPage() {
         </section>
         <section className="pb-12 px-4 bg-white">
           <div className="max-w-3xl mx-auto"><RouteMap lang="tr" /></div>
+        </section>
+
+        {/* Choosing a UK warehouse model */}
+        <section className="py-16 px-4 bg-white border-t border-slate-100">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-2xl font-extrabold text-[#0b2545] mb-3">İngiltere&apos;de depo: kendi depo mu, 3PL mi, Türkiye&apos;den gönderim mi?</h2>
+            <p className="text-slate-600 mb-5">
+              İngiltere&apos;ye satış yapan Türk firmaları genellikle üç yoldan birini seçer. Hacim düzenli ve küçük-orta ölçekliyse
+              3PL depo (LondraDepo gibi) en düşük başlangıç maliyetini ve en hızlı teslimatı sağlar.
+            </p>
+            <div className="overflow-x-auto rounded-xl border border-slate-200">
+              <table className="w-full text-sm text-left">
+                <thead className="bg-slate-100 text-[#0b2545]">
+                  <tr><th scope="col" className="px-4 py-3"></th><th scope="col" className="px-4 py-3">Kendi deponuzu kiralamak</th><th scope="col" className="px-4 py-3">3PL İngiltere depo</th><th scope="col" className="px-4 py-3">Her siparişi Türkiye&apos;den göndermek</th></tr>
+                </thead>
+                <tbody>
+                  {[
+                    ["Başlangıç", "Kira sözleşmesi, personel, ekipman ve sigorta", "Sabit minimum yok; 1 paletle başlanabilir", "Depo gerekmez"],
+                    ["Maliyet yapısı", "Sabit; hacim düşükken pahalı", "Kullandığınız palet kadar: haftalık £3,50 + KDV'den", "Her koli için uluslararası kargo"],
+                    ["Gümrük", "Toplu ithalat, bir kez", "Toplu ithalat, bir kez (Arca Trade Group ile)", "Her koli ayrı sınır geçer"],
+                    ["Müşteriye teslimat", "UK içi", "UK içi, Essex'ten", "Uluslararası, daha uzun"],
+                    ["İade", "Kendi ekibiniz", "Essex'e döner, stoğa alınır", "Türkiye'ye dönüş veya kayıp"],
+                    ["Uygun olduğu durum", "Çok yüksek ve sabit hacim", "Düzenli satış, Amazon, Shopify, B2B", "Çok düşük, deneme amaçlı satış"],
+                  ].map((r) => (
+                    <tr key={r[0]} className="border-t border-slate-200">
+                      <th scope="row" className="px-4 py-3 font-medium text-slate-800">{r[0]}</th>
+                      <td className="px-4 py-3 text-slate-700">{r[1]}</td>
+                      <td className="px-4 py-3 text-slate-700">{r[2]}</td>
+                      <td className="px-4 py-3 text-slate-700">{r[3]}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <h3 className="text-lg font-bold text-[#0b2545] mt-8 mb-3">İngiltere&apos;de depo seçerken sorulacak 6 soru</h3>
+            <ul className="grid gap-2 sm:grid-cols-2 text-sm text-slate-700">
+              {[
+                "Depo limanlara ve Londra'ya ne kadar uzak?",
+                "Palet başı haftalık fiyat ve diğer kalemler yazılı mı?",
+                "Minimum hacim veya minimum aylık ücret var mı?",
+                "Stoğu gerçek zamanlı görebileceğiniz bir sistem (WMS) var mı?",
+                "Gümrükleme ve limandan taşıma aynı yerden ayarlanabiliyor mu?",
+                "Türkçe konuşan bir ekip ve somut operasyon örnekleri var mı?",
+              ].map((q) => (
+                <li key={q} className="flex gap-2"><span className="text-green-700" aria-hidden="true">✓</span><span>{q}</span></li>
+              ))}
+            </ul>
+            <p className="text-sm text-slate-600 mt-4">
+              Ayrıntılı karşılaştırma: <Link href="/blog/ingiltere-3pl-nasil-secilir" className="underline">İngiltere&apos;de 3PL depo nasıl seçilir?</Link>
+            </p>
+          </div>
         </section>
 
         {/* Proof: case studies */}

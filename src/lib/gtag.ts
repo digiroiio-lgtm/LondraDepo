@@ -13,6 +13,8 @@ function hasAnalyticsConsent(): boolean {
   }
 }
 
+// Never use GA4 reserved names (source, medium, campaign, term, content) as event parameters:
+// GA4 reads them as traffic-source fields and rewrites the session's attribution.
 type Params = Record<string, string | number | undefined>;
 
 /** Topic of the page an event fires on, so GA4 can split leads by cluster (register as an event-scoped custom dimension). */
@@ -37,11 +39,11 @@ function send(event: string, params: Params) {
 }
 
 export function trackWhatsappClick(source: string) {
-  send("whatsapp_click", { event_category: "engagement", source });
+  send("whatsapp_click", { event_category: "engagement", click_source: source });
 }
 
 export function trackPhoneClick(source: string) {
-  send("phone_call", { event_category: "engagement", source });
+  send("phone_call", { event_category: "engagement", click_source: source });
 }
 
 export function trackCtaClick(cta_id: string, position: string) {

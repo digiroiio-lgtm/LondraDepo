@@ -21,6 +21,8 @@ The value of `page_group` is the topic of the page the visitor was on:
 
 On `/en/request-a-quote`, the group comes from the `?from=` page. This means a lead started on an Amazon page counts as `amazon` even though the form is submitted on the quote page.
 
+Click events send the link position as `click_source` (WhatsApp, phone) or `position` (CTA). They no longer use `source`, which GA4 reserves for traffic source and which had turned "contact_card" into a fake session source.
+
 ## 2. One-time setup in GA4 (owner, about 5 minutes)
 1. **Register the dimension.** Go to GA4, then **Admin**, **Custom definitions**, **Create custom dimension**.
    - Name: `Page group`.

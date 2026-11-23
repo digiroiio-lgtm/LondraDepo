@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "İngiltere Depo Fiyatları 2026: Palet £3,50/Hafta | LondraDepo",
   description:
-    "UK depo fiyatları 2026: palet depolama haftalık £3,50 + KDV'den, 10 palet 4 hafta £140 + KDV. Mal kabul, pick & pack ve teslimat kalemleri, ücretsiz hesaplayıcı.",
+    "İngiltere'de palet depolama haftalık £3,50 + KDV'den: 10 palet 4 hafta £140 + KDV. Mal kabul, pick & pack ve teslimat kalemleri tek tabloda; hemen hesaplayın.",
   alternates: trAlternates("/blog/ingiltere-depo-fiyatlari-2026"),
   openGraph: {
     title: "İngiltere Depo Fiyatları 2026: Palet £3,50/Hafta",
@@ -228,6 +228,7 @@ export default function DepoFiyatlariPage() {
 
             <AuthorBox path="/blog/ingiltere-depo-fiyatlari-2026" />
 
+            <p className="text-slate-700 my-6">Fiyat örnekleri, mesafe tablosu ve teklif formu için: <Link href="/ingiltere-depo" className="font-semibold text-[#0b2545] underline">İngiltere depo hizmetimiz</Link>.</p>
             <RelatedArticles articles={relatedArticles} />
 
             <div className="mt-8 pt-6 border-t border-slate-200">

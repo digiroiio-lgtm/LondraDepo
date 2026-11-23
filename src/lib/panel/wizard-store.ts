@@ -1,6 +1,6 @@
 import "server-only";
 import { kv, kvPipeline } from "@/lib/panel/kv";
-import type { Lead, Status, Target } from "@/lib/panel/wizard";
+import { normaliseLead, type Lead, type Region, type Status } from "@/lib/panel/wizard";
 
 /**
  * Storage for wizard leads (Upstash Redis). Prospect data lives only here and in Apollo, never in the repo.
@@ -10,7 +10,7 @@ const LEAD = (d: string) => `wiz:lead:${d}`;
 const INDEX = "wiz:leads";
 const RUNS = "wiz:runs";
 
-export type Run = { id: string; at: string; region: Target["region"]; sectors: string[]; countries: string[]; added: number; duplicates: number; errors: number };
+export type Run = { id: string; at: string; region: Region | "auto"; sectors: string[]; countries: string[]; added: number; duplicates: number; errors: number };
 
 export async function allDomains(): Promise<string[]> {
   return (await kv<string[]>("ZRANGE", INDEX, 0, -1)) ?? [];
@@ -21,14 +21,14 @@ export async function listLeads(limit = 1000): Promise<Lead[]> {
   const out: Lead[] = [];
   for (let i = 0; i < domains.length; i += 100) {
     const vals = (await kv<(string | null)[]>("MGET", ...domains.slice(i, i + 100).map(LEAD))) ?? [];
-    for (const v of vals) if (v) out.push(JSON.parse(v) as Lead);
+    for (const v of vals) if (v) out.push(normaliseLead(JSON.parse(v)));
   }
   return out;
 }
 
 export async function getLead(domain: string): Promise<Lead | null> {
   const v = await kv<string | null>("GET", LEAD(domain));
-  return v ? (JSON.parse(v) as Lead) : null;
+  return v ? normaliseLead(JSON.parse(v)) : null;
 }
 
 /** Saves new leads; domains already stored are skipped (never overwritten) and counted as duplicates. */

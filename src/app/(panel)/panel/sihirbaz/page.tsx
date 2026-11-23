@@ -2,7 +2,11 @@ import PanelShell, { Card, ErrorBox, NotConnected, Stat, Table } from "@/compone
 import CopyButton from "@/components/panel/CopyButton";
 import { kvConfigured } from "@/lib/panel/kv";
 import { fmtDate, safe } from "@/lib/panel/safe";
-import { COLUMNS, COUNTRIES, SECTORS, SIZES, STATUSES, buildPrompt, targetFrom, type Lead, type Status } from "@/lib/panel/wizard";
+import {
+  CATEGORIES, COLUMNS, COUNTRIES, PALLET_MONTH_GBP, REGIONS, SEGMENTS, SIZES, STATUSES, TEMPLATE_GROUPS,
+  allocate, buildPrompt, emailTemplate, mixProgress, nextSearch, segmentById, segmentPerformance, targetFrom,
+  type Lead, type Status, type Tier,
+} from "@/lib/panel/wizard";
 import { allDomains, listLeads, listRuns } from "@/lib/panel/wizard-store";
 import { changeStatus, importLeads, pushToApollo } from "./actions";
 
@@ -11,14 +15,64 @@ export const dynamic = "force-dynamic";
 type SP = Record<string, string | string[] | undefined>;
 const input = "rounded-xl border border-slate-300 px-3 py-2 text-sm w-full";
 const btn = "bg-[#0b2545] text-white rounded-full px-5 py-2 text-sm font-semibold";
+const redBtn = "bg-[#d62839] hover:bg-[#c1121f] text-white rounded-full px-5 py-2 text-sm font-semibold";
 const one = (v: string | string[] | undefined) => (Array.isArray(v) ? v[0] : v) ?? "";
+const gbp = (n: number) => `£${n.toLocaleString("en-GB")}`;
 
-function scoreClass(s: number) {
-  return s >= 70 ? "bg-green-100 text-green-800" : s >= 50 ? "bg-amber-100 text-amber-800" : "bg-slate-100 text-slate-700";
-}
+const TIER_CLASS: Record<Tier, string> = { A: "bg-green-100 text-green-800", B: "bg-amber-100 text-amber-800", C: "bg-slate-100 text-slate-700" };
 
 const link = (href: string, text: string) =>
   /^https?:\/\//i.test(href) ? <a href={href} target="_blank" rel="noopener noreferrer nofollow" className="underline break-all">{text}</a> : null;
+
+function PriorityCell({ l }: { l: Lead }) {
+  return (
+    <div className="min-w-[6rem]">
+      <span className={`inline-block rounded-full px-2 py-0.5 font-bold ${TIER_CLASS[l.tier]}`}>{l.tier} · {l.priority}</span>
+      <div className="text-xs text-slate-500 mt-1">uygunluk {l.fit} · hacim {l.value}{l.agent != null ? ` · ajan ${l.agent}` : ""}</div>
+      {l.revenue != null && <div className="text-xs text-green-800 mt-1">~{gbp(l.revenue)}/ay depolama</div>}
+      {l.flags.map((f) => <div key={f} className="text-xs text-amber-700 mt-1">⚠ {f}</div>)}
+    </div>
+  );
+}
+
+function CompanyCell({ l }: { l: Lead }) {
+  const seg = segmentById(l.segment);
+  return (
+    <div className="min-w-[12rem]">
+      <div className="font-semibold">{link(l.website, l.company) ?? l.company}</div>
+      <div className="text-xs text-slate-500">{[l.city, l.country].filter(Boolean).join(", ")}{l.employees ? ` · ${l.employees} çalışan` : ""}</div>
+      {seg && <div className="text-xs text-[#0b2545] mt-1">{seg.label}</div>}
+      <div className="text-xs text-slate-500">{[l.sector, l.products].filter(Boolean).join(" — ")}</div>
+      <div className="text-xs mt-1 flex gap-2">{link(l.linkedin_url, "LinkedIn")}{link(l.ecommerce_url, "Mağaza")}</div>
+    </div>
+  );
+}
+
+function ContactCell({ l }: { l: Lead }) {
+  return (
+    <div className="min-w-[11rem] text-xs">
+      {l.decision_maker_title && <div className="font-semibold">🎯 {l.decision_maker_title}</div>}
+      {l.contact_name && <div>{l.contact_name}{l.contact_title ? `, ${l.contact_title}` : ""}</div>}
+      {l.email ? <a href={`mailto:${l.email}`} className="underline break-all">{l.email}</a> : <span className="text-slate-400">e-posta yok</span>}
+      {l.email_source_url && <span> {link(l.email_source_url, "(kaynak)")}</span>}
+      {l.phone && <div className="mt-1">{l.phone}</div>}
+    </div>
+  );
+}
+
+function ReasonCell({ l }: { l: Lead }) {
+  const vol = [l.est_pallets && `${l.est_pallets} palet`, l.containers_per_year && `${l.containers_per_year} konteyner/yıl`, l.monthly_orders && `${l.monthly_orders} sipariş/ay`]
+    .filter((x) => x && !/unknown/i.test(x))
+    .join(" · ");
+  return (
+    <div className="min-w-[16rem] text-xs">
+      <p>{l.reason}</p>
+      {vol && <p className="mt-1 text-slate-700">📦 {vol} {link(l.volume_evidence_url, "↗")}</p>}
+      {l.uk_evidence && <p className="mt-1 text-slate-600">🇬🇧 {l.uk_evidence} {link(l.uk_evidence_url, "↗")}</p>}
+      <p className="mt-1 text-slate-400">{fmtDate(l.added_at)}</p>
+    </div>
+  );
+}
 
 export default async function WizardPage({ searchParams }: { searchParams: Promise<SP> }) {
   const sp = await searchParams;
@@ -28,24 +82,31 @@ export default async function WizardPage({ searchParams }: { searchParams: Promi
   const db = kvConfigured();
 
   const [leadsR, runsR, domainsR] = db ? await Promise.all([safe(() => listLeads()), safe(listRuns), go ? safe(allDomains) : Promise.resolve(null)]) : [null, null, null];
-  const leads = leadsR?.ok ? leadsR.data : [];
+  const leads = (leadsR?.ok ? leadsR.data : []).sort((a, b) => b.priority - a.priority);
   const prompt = go ? buildPrompt(t, domainsR?.ok ? domainsR.data : []) : "";
+  const alloc = go ? allocate(t.segments.length ? t.segments : ["tr_exporter"], t.count) : {};
+
+  const active = leads.filter((l) => l.status !== "elendi");
+  const pipeline = active.filter((l) => l.tier !== "C").reduce((a, l) => a + (l.revenue ?? 0), 0);
+  const top = active.filter((l) => l.status === "yeni" && l.tier !== "C").slice(0, 10);
+  const mix = mixProgress(leads);
+  const next = nextSearch(leads);
+  const perf = segmentPerformance(leads);
 
   // Filters for the list
   const fs = one(sp.fs) as Status | "";
-  const fmin = Number(one(sp.fmin)) || 0;
+  const ft = one(sp.ft) as Tier | "";
+  const fg = one(sp.fg);
   const fq = one(sp.fq).toLowerCase();
-  const fr = one(sp.fr);
   const shown = leads
-    .filter((l) => (!fs || l.status === fs) && l.score >= fmin && (!fr || l.region === fr))
-    .filter((l) => !fq || [l.company, l.domain, l.sector, l.country, l.products, l.reason].join(" ").toLowerCase().includes(fq))
-    .sort((a, b) => b.score - a.score);
+    .filter((l) => (!fs || l.status === fs) && (!ft || l.tier === ft) && (!fg || l.segment === fg))
+    .filter((l) => !fq || [l.company, l.domain, l.sector, l.country, l.products, l.reason, l.decision_maker_title].join(" ").toLowerCase().includes(fq));
 
   const hidden = (
     <>
       <input type="hidden" name="region" value={t.region} />
       <input type="hidden" name="size" value={t.size} />
-      {t.sectors.map((s) => <input key={s} type="hidden" name="s" value={s} />)}
+      {t.segments.map((s) => <input key={s} type="hidden" name="s" value={s} />)}
       {t.countries.map((c) => <input key={c} type="hidden" name="c" value={c} />)}
     </>
   );
@@ -56,8 +117,8 @@ export default async function WizardPage({ searchParams }: { searchParams: Promi
 
       {db && leadsR?.ok && (
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-          <Stat label="Toplam aday şirket" value={leads.length} />
-          <Stat label="Skor 70 ve üzeri" value={leads.filter((l) => l.score >= 70).length} />
+          <Stat label="A öncelikli aday" value={active.filter((l) => l.tier === "A").length} hint={`B: ${active.filter((l) => l.tier === "B").length} · toplam ${leads.length}`} />
+          <Stat label="A+B depolama potansiyeli" value={`${gbp(pipeline)}/ay`} hint="Yalnız palet depolama, KDV hariç, tahmini" />
           <Stat label="Apollo'ya aktarılan" value={leads.filter((l) => l.apollo_contact_id).length} />
           <Stat label="Olumlu dönüş" value={leads.filter((l) => l.status === "olumlu").length} />
         </div>
@@ -69,31 +130,70 @@ export default async function WizardPage({ searchParams }: { searchParams: Promi
         </div>
       )}
 
+      {db && leadsR?.ok && top.length > 0 && (
+        <Card title="Bugün ilk temas: en değerli 10">
+          <Table
+            head={["Öncelik", "Şirket", "Kime yazılacak", "Satış açısı"]}
+            rows={top.map((l) => [<PriorityCell key="p" l={l} />, <CompanyCell key="c" l={l} />, <ContactCell key="k" l={l} />, <p key="a" className="text-xs min-w-[14rem]">{segmentById(l.segment)?.angle ?? l.reason}</p>])}
+          />
+          <form action={pushToApollo} className="mt-4">
+            {top.map((l) => <input key={l.domain} type="hidden" name="d" value={l.domain} />)}
+            <button className={redBtn}>Bu {top.length} şirketi Apollo&apos;ya aktar</button>
+          </form>
+        </Card>
+      )}
+
+      {db && leadsR?.ok && (
+        <Card title="İlk 100 aday: önerilen dağılım">
+          <div className="grid gap-2">
+            {mix.map((r) => (
+              <div key={r.group} className="grid grid-cols-[9rem_1fr_4rem] items-center gap-3 text-sm">
+                <span>{r.label}</span>
+                <span className="h-3 rounded-full bg-slate-100 overflow-hidden" aria-hidden="true"><span className="block h-full bg-[#0b2545]" style={{ width: `${Math.min(100, (r.have / r.target) * 100)}%` }} /></span>
+                <span className="text-right tabular-nums">{r.have}/{r.target}</span>
+              </div>
+            ))}
+          </div>
+          <p className="text-xs text-slate-500 mt-3">Önerilen dağılım iş analizine göre tahmindir. Hem düzenli depo sözleşmesi hem sipariş başına operasyon geliri getirecek gruplara ağırlık verir.</p>
+          {next && <a href={next.href} className={`${btn} inline-block mt-3`}>Sıradaki önerilen arama: {next.label}</a>}
+        </Card>
+      )}
+
       <Card title="1. Hedefi seç">
         <form method="get" className="grid gap-4">
           <input type="hidden" name="go" value="1" />
           <fieldset>
+            <legend className="text-sm font-semibold mb-2">Segment (ticari öncelik sırasıyla; birden fazla seçilebilir)</legend>
+            <div className="grid sm:grid-cols-2 gap-2">
+              {SEGMENTS.map((s) => (
+                <label key={s.id} className={`flex items-start gap-2 rounded-xl border p-3 text-sm ${s.low ? "border-slate-200 opacity-70" : "border-slate-200"}`}>
+                  <input type="checkbox" name="s" value={s.id} defaultChecked={t.segments.includes(s.id)} className="mt-1" />
+                  <span>
+                    <span className="font-semibold">{s.label}</span> <span className={`ml-1 rounded-full px-2 py-0.5 text-xs font-bold ${s.prior >= 90 ? TIER_CLASS.A : s.prior >= 80 ? TIER_CLASS.B : TIER_CLASS.C}`}>{s.prior}</span>
+                    <span className="block text-xs text-slate-500">{s.services} · Potansiyel: {s.potential}{s.low ? " · düşük öncelik" : ""}</span>
+                  </span>
+                </label>
+              ))}
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend className="text-sm font-semibold mb-2">Ürün kategorisi (isteğe bağlı)</legend>
+            <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm">
+              {CATEGORIES.map((c) => <label key={c.id} className="flex items-center gap-2"><input type="checkbox" name="k" value={c.id} defaultChecked={t.cats.includes(c.id)} /> {c.label}</label>)}
+            </div>
+            <label className="text-sm block mt-3">Başka kategori (serbest metin)<input name="other" defaultValue={t.other} placeholder="Örn. bahçe mobilyası, oyuncak" className={input} /></label>
+          </fieldset>
+          <fieldset>
             <legend className="text-sm font-semibold mb-2">Bölge</legend>
             <div className="flex flex-wrap gap-4 text-sm">
-              <label className="flex items-center gap-2"><input type="radio" name="region" value="tr" defaultChecked={t.region === "tr"} /> Türkiye → İngiltere (öncelikli)</label>
-              <label className="flex items-center gap-2"><input type="radio" name="region" value="global" defaultChecked={t.region === "global"} /> Diğer ülkeler → İngiltere</label>
+              {Object.entries(REGIONS).map(([k, v]) => <label key={k} className="flex items-center gap-2"><input type="radio" name="region" value={k} defaultChecked={t.region === k} /> {v}</label>)}
             </div>
+            <p className="text-xs text-slate-500 mt-1">&quot;Segmente göre&quot;: Türk ihracatçılar Türkiye&apos;de, UK ithalatçılar ve sezonluk perakendeciler İngiltere&apos;de, yeni giren markalar diğer ülkelerde aranır.</p>
           </fieldset>
           <fieldset>
-            <legend className="text-sm font-semibold mb-2">Sektör (birden fazla seçilebilir)</legend>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-2 text-sm">
-              {SECTORS.map((s) => (
-                <label key={s.id} className="flex items-start gap-2"><input type="checkbox" name="s" value={s.id} defaultChecked={t.sectors.includes(s.id)} className="mt-1" /> {s.label}</label>
-              ))}
-            </div>
-            <label className="text-sm block mt-3">Başka sektör (serbest metin)<input name="other" defaultValue={t.other} placeholder="Örn. bahçe mobilyası, oyuncak" className={input} /></label>
-          </fieldset>
-          <fieldset>
-            <legend className="text-sm font-semibold mb-2">Ülkeler (yalnız &quot;Diğer ülkeler&quot; için)</legend>
+            <legend className="text-sm font-semibold mb-2">Ülkeler (diğer ülkeler için)</legend>
             <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm">
-              {COUNTRIES.map((c) => (
-                <label key={c} className="flex items-center gap-2"><input type="checkbox" name="c" value={c} defaultChecked={t.countries.includes(c)} /> {c}</label>
-              ))}
+              {COUNTRIES.map((c) => <label key={c} className="flex items-center gap-2"><input type="checkbox" name="c" value={c} defaultChecked={t.countries.includes(c)} /> {c}</label>)}
             </div>
             <label className="text-sm block mt-3">Başka ülke (virgülle)<input name="cx" defaultValue={t.countries.filter((c) => !(COUNTRIES as readonly string[]).includes(c)).join(", ")} className={input} /></label>
           </fieldset>
@@ -115,10 +215,13 @@ export default async function WizardPage({ searchParams }: { searchParams: Promi
 
       {go && (
         <Card title="2. Görev metnini ajana ver">
+          <p className="text-sm mb-3">
+            Dağılım: {Object.entries(alloc).map(([id, n], i) => <span key={id}>{i > 0 && " · "}{segmentById(id)?.label} <strong>{n}</strong></span>)}
+          </p>
           <ol className="list-decimal pl-5 text-sm text-slate-700 mb-4 space-y-1">
             <li>Aşağıdaki metni <strong>Kopyala</strong> ile kopyalayın.</li>
-            <li>ChatGPT&apos;de yeni sohbet açın, araçlardan <strong>Agent</strong> modunu seçin ve metni yapıştırıp gönderin.</li>
-            <li>Ajan bitirince verdiği CSV&apos;nin tamamını (başlık satırı dahil) kopyalayın ve 3. adıma yapıştırın.</li>
+            <li>ChatGPT&apos;de yeni sohbet açın, araçlardan <strong>Agent</strong> modunu seçin, metni yapıştırıp gönderin.</li>
+            <li>Ajan bitirince verdiği CSV&apos;nin tamamını (başlık satırı dahil) kopyalayıp 3. adıma yapıştırın.</li>
           </ol>
           <label htmlFor="prompt" className="sr-only">Görev metni</label>
           <textarea id="prompt" readOnly value={prompt} rows={16} className={`${input} font-mono text-xs`} />
@@ -132,29 +235,29 @@ export default async function WizardPage({ searchParams }: { searchParams: Promi
             {go && hidden}
             {!go && (
               <label className="text-sm">Bu sonuç hangi bölge için?
-                <select name="region" defaultValue={t.region} className={input}><option value="tr">Türkiye → İngiltere</option><option value="global">Diğer ülkeler</option></select>
+                <select name="region" defaultValue={t.region} className={input}>{Object.entries(REGIONS).map(([k, v]) => <option key={k} value={k}>{v}</option>)}</select>
               </label>
             )}
             <label className="text-sm">Ajanın verdiği CSV (veya JSON)
               <textarea name="data" required rows={8} className={`${input} font-mono text-xs`} placeholder={COLUMNS.join(",")} />
             </label>
             <p className="text-xs text-slate-500">
-              Panel skoru kendi kurallarıyla yeniden hesaplar. Listede zaten olan şirketleri atlar. Kaynağı olmayan e-postaları işaretler.
+              Panel öncelik puanını kendisi hesaplar: %45 uygunluk + %35 hacim değeri + %20 segment önceliği. A: 75+, B: 60–74, C: 60 altı. Depolama potansiyeli, palet tahmininin alt sınırı × {gbp(Math.round(PALLET_MONTH_GBP * 100) / 100)}/ay ile hesaplanır. Listede zaten olan şirketler atlanır.
             </p>
             <div><button className={btn}>İçeri al</button></div>
           </form>
         ) : <p className="text-sm text-slate-500">Sonuçları kaydetmek için önce veritabanını bağlayın (yukarıdaki uyarı).</p>}
       </Card>
 
-      <Card title={`4. Aday şirketler${db && leadsR?.ok ? ` (${shown.length})` : ""}`} className="scroll-mt-4">
+      <Card title={`4. Aday şirketler${db && leadsR?.ok ? ` (${shown.length})` : ""}`}>
         <div id="liste" />
         {!db ? <p className="text-sm text-slate-500">Veritabanı bağlı değil.</p> : !leadsR?.ok ? <ErrorBox message={leadsR?.error ?? "?"} /> : (
           <>
             <form method="get" className="grid sm:grid-cols-5 gap-3 mb-4 items-end" role="search">
-              <label className="text-sm sm:col-span-2">Ara<input name="fq" defaultValue={fq} placeholder="Şirket, sektör, ülke, ürün…" className={input} /></label>
+              <label className="text-sm sm:col-span-2">Ara<input name="fq" defaultValue={fq} placeholder="Şirket, ürün, ülke, karar verici…" className={input} /></label>
+              <label className="text-sm">Öncelik<select name="ft" defaultValue={ft} className={input}><option value="">Tümü</option><option value="A">A</option><option value="B">B</option><option value="C">C</option></select></label>
               <label className="text-sm">Durum<select name="fs" defaultValue={fs} className={input}><option value="">Tümü</option>{Object.entries(STATUSES).map(([k, v]) => <option key={k} value={k}>{v}</option>)}</select></label>
-              <label className="text-sm">En düşük skor<select name="fmin" defaultValue={String(fmin)} className={input}>{[0, 50, 60, 70, 80].map((n) => <option key={n} value={n}>{n}</option>)}</select></label>
-              <label className="text-sm">Bölge<select name="fr" defaultValue={fr} className={input}><option value="">Tümü</option><option value="tr">Türkiye</option><option value="global">Diğer</option></select></label>
+              <label className="text-sm">Segment<select name="fg" defaultValue={fg} className={input}><option value="">Tümü</option>{SEGMENTS.map((s) => <option key={s.id} value={s.id}>{s.label}</option>)}</select></label>
               <div className="sm:col-span-5 flex flex-wrap gap-3">
                 <button className={btn}>Filtrele</button>
                 <a href="/api/panel/sihirbaz/csv" className="rounded-full border border-slate-300 px-5 py-2 text-sm font-semibold">Tümünü CSV indir</a>
@@ -162,36 +265,18 @@ export default async function WizardPage({ searchParams }: { searchParams: Promi
             </form>
 
             <form id="bulk" action={pushToApollo} className="mb-3 flex flex-wrap items-center gap-3">
-              <button className="bg-[#d62839] hover:bg-[#c1121f] text-white rounded-full px-5 py-2 text-sm font-semibold">Seçilenleri Apollo&apos;ya aktar</button>
-              <span className="text-xs text-slate-500">Her biri için Apollo&apos;da kişi ve ertesi iş günü için &quot;ilk e-posta&quot; görevi açılır (en fazla 25; kredi harcamaz).</span>
+              <button className={redBtn}>Seçilenleri Apollo&apos;ya aktar</button>
+              <span className="text-xs text-slate-500">Apollo&apos;da kişi açılır, etiketlenir ve ilk e-posta görevi önceliğe göre tarihlenir: A ertesi iş günü, B 3 iş günü, C 7 iş günü. En fazla 25; kredi harcamaz.</span>
             </form>
 
             <Table
-              head={["Seç", "Skor", "Şirket", "E-posta", "Neden / İngiltere kanıtı", "Durum"]}
+              head={["Seç", "Öncelik", "Şirket", "Kime yazılacak", "Neden / hacim / İngiltere kanıtı", "Durum"]}
               rows={shown.slice(0, 300).map((l: Lead) => [
                 l.apollo_contact_id ? <span key="a" title="Apollo'da">✓</span> : <input key="c" type="checkbox" name="d" value={l.domain} form="bulk" aria-label={`${l.company} seç`} />,
-                <div key="s" className="min-w-[5rem]">
-                  <span className={`inline-block rounded-full px-2 py-0.5 font-bold ${scoreClass(l.score)}`}>{l.score}</span>
-                  {l.agent != null && <div className="text-xs text-slate-500 mt-1">ajan: {l.agent}</div>}
-                  {l.flags.map((f) => <div key={f} className="text-xs text-amber-700 mt-1">⚠ {f}</div>)}
-                </div>,
-                <div key="co" className="min-w-[12rem]">
-                  <div className="font-semibold">{link(l.website, l.company) ?? l.company}</div>
-                  <div className="text-xs text-slate-500">{[l.city, l.country].filter(Boolean).join(", ")}{l.employees ? ` · ${l.employees} çalışan` : ""}</div>
-                  <div className="text-xs text-slate-500">{[l.sector, l.products].filter(Boolean).join(" — ")}</div>
-                  {l.contact_name && <div className="text-xs mt-1">{l.contact_name}{l.contact_title ? `, ${l.contact_title}` : ""}</div>}
-                  <div className="text-xs mt-1 flex gap-2">{link(l.linkedin_url, "LinkedIn")}{link(l.ecommerce_url, "Mağaza")}</div>
-                </div>,
-                <div key="e" className="min-w-[10rem] text-xs">
-                  {l.email ? <a href={`mailto:${l.email}`} className="underline break-all">{l.email}</a> : <span className="text-slate-400">—</span>}
-                  {l.email_source_url && <div className="mt-1">{link(l.email_source_url, "kaynak")}</div>}
-                  {l.phone && <div className="mt-1">{l.phone}</div>}
-                </div>,
-                <div key="r" className="min-w-[16rem] text-xs">
-                  <p>{l.reason}</p>
-                  {l.uk_evidence && <p className="mt-1 text-slate-600">🇬🇧 {l.uk_evidence} {link(l.uk_evidence_url, "↗")}</p>}
-                  <p className="mt-1 text-slate-400">{fmtDate(l.added_at)}</p>
-                </div>,
+                <PriorityCell key="p" l={l} />,
+                <CompanyCell key="co" l={l} />,
+                <ContactCell key="e" l={l} />,
+                <ReasonCell key="r" l={l} />,
                 <form key="st" action={changeStatus} className="flex gap-2 items-center">
                   <input type="hidden" name="d" value={l.domain} />
                   <label className="sr-only" htmlFor={`st-${l.domain}`}>Durum</label>
@@ -206,53 +291,39 @@ export default async function WizardPage({ searchParams }: { searchParams: Promi
         )}
       </Card>
 
-      <Card title="İlk e-posta şablonu">
+      {db && perf.length > 0 && (
+        <Card title="Segment performansı">
+          <Table
+            head={["Segment", "Aday", "A", "Temas", "Olumlu", "Olumlu %", "A+B depolama potansiyeli"]}
+            rows={perf.map((r) => [r.seg.label, r.total, r.a, r.contacted, r.positive, r.rate == null ? "—" : `%${r.rate}`, r.revenue ? `${gbp(r.revenue)}/ay` : "—"])}
+          />
+          <p className="text-xs text-slate-500 mt-2">Olumlu oranı yüksek olan segmentlere daha çok arama ayırın. Durumları güncel tuttukça bu tablo, hangi segmentin gerçekten satışa döndüğünü gösterir.</p>
+        </Card>
+      )}
+
+      <Card title="İlk e-posta şablonları (segmente göre)">
         <p className="text-sm text-slate-600 mb-3">Apollo&apos;dan veya kendi e-postanızdan gönderin. Köşeli parantezleri doldurun. Her e-postada çıkma satırı kalsın.</p>
-        <div className="grid lg:grid-cols-2 gap-4">
-          <div>
-            <h3 className="font-semibold text-sm mb-1">Türkçe</h3>
-            <textarea id="tpl-tr" readOnly rows={12} className={`${input} text-xs`} value={`Konu: İngiltere'de stok ve sevkiyat: Essex'teki depomuz
-
-Merhaba [İsim / ekip],
-
-[Şirket]'in İngiltere'ye [ürün] sattığını gördük. LondraDepo olarak Essex, Rayleigh'deki depomuzda (London Gateway limanına ~13 mil) Türk ve uluslararası markaların İngiltere stoğunu tutuyor, konteyner boşaltıyor, Amazon ve e-ticaret siparişlerini ve mağaza/toptancı sevkiyatlarını yönetiyoruz.
-
-Palet depolama haftalık £3.50 + KDV'den başlar; asgari hacim yok, tek paletle deneyebilirsiniz. Nakliye ve gümrüklemeyi de Arca Trade Group üzerinden tek elden sağlıyoruz.
-
-Uygunsa 15 dakikalık bir görüşmede mevcut İngiltere sevkiyatınızı konuşabiliriz: https://www.londradepo.com/teklif-al
-
-Saygılarımızla,
-[Ad Soyad] · LondraDepo · +44 7554 195190
-
-Bu tür e-postalar almak istemiyorsanız "çıkar" yazmanız yeterli; tekrar yazmayız.`} />
-            <div className="mt-2"><CopyButton target="tpl-tr" /></div>
-          </div>
-          <div>
-            <h3 className="font-semibold text-sm mb-1">English</h3>
-            <textarea id="tpl-en" readOnly rows={12} className={`${input} text-xs`} value={`Subject: UK stock and fulfilment from our Essex warehouse
-
-Hi [Name / team],
-
-I noticed [Company] sells [product] into the UK. LondraDepo runs a warehouse in Rayleigh, Essex (about 13 miles from London Gateway) where we hold UK stock for international brands, unload containers, and handle Amazon, ecommerce and store/wholesale deliveries.
-
-Pallet storage starts from £3.50 + VAT per week, with no fixed minimum, so you can start with a single trial pallet. Freight and UK customs clearance are available through Arca Trade Group.
-
-Would a 15-minute call to look at your current UK flow be useful? https://www.londradepo.com/en/request-a-quote
-
-Best regards,
-[Name] · LondraDepo · +44 7554 195190
-
-If you'd rather not hear from us, just reply "remove" and we won't email again.`} />
-            <div className="mt-2"><CopyButton target="tpl-en" /></div>
-          </div>
-        </div>
+        {TEMPLATE_GROUPS.map(({ group, label }) => (
+          <details key={group} className="border-t border-slate-100 py-2">
+            <summary className="cursor-pointer font-semibold text-sm text-[#0b2545]">{label}</summary>
+            <div className="grid lg:grid-cols-2 gap-4 mt-3">
+              {(["tr", "en"] as const).map((lang) => (
+                <div key={lang}>
+                  <h3 className="font-semibold text-sm mb-1">{lang === "tr" ? "Türkçe" : "English"}</h3>
+                  <textarea id={`tpl-${group}-${lang}`} readOnly rows={12} className={`${input} text-xs`} value={emailTemplate(group, lang)} />
+                  <div className="mt-2"><CopyButton target={`tpl-${group}-${lang}`} /></div>
+                </div>
+              ))}
+            </div>
+          </details>
+        ))}
       </Card>
 
       {db && runsR?.ok && runsR.data.length > 0 && (
         <Card title="Son içe aktarmalar">
           <Table
-            head={["Tarih", "Bölge", "Sektörler", "Eklenen", "Tekrar", "Okunamayan"]}
-            rows={runsR.data.map((r) => [fmtDate(r.at), r.region === "tr" ? "Türkiye" : `Diğer${r.countries.length ? ` (${r.countries.join(", ")})` : ""}`, r.sectors.map((s) => SECTORS.find((x) => x.id === s)?.label ?? s).join(", ") || "—", r.added, r.duplicates, r.errors])}
+            head={["Tarih", "Bölge", "Segmentler", "Eklenen", "Tekrar", "Okunamayan"]}
+            rows={runsR.data.map((r) => [fmtDate(r.at), REGIONS[r.region] ?? r.region, r.sectors.map((s) => segmentById(s)?.label ?? s).join(", ") || "—", r.added, r.duplicates, r.errors])}
           />
         </Card>
       )}

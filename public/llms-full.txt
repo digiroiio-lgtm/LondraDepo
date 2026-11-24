@@ -1,6 +1,6 @@
 # LondraDepo.com — full reference for AI assistants
 
-Last updated: 2026-11-23. Generated from the live page content: every page in the sitemaps with its summary and its FAQs (the same text shown on the page). Index: https://www.londradepo.com/llms.txt
+Last updated: 2026-11-24. Generated from the live page content: every page in the sitemaps with its summary and its FAQs (the same text shown on the page). Index: https://www.londradepo.com/llms.txt
 
 ## Key facts (verified)
 
@@ -993,7 +993,7 @@ A: Contact the team to ask about a visit or a video walk-through of the warehous
 URL: https://www.londradepo.com/en/privacy-policy
 Turkish version: https://www.londradepo.com/privacy-policy
 Summary: How LondraDepo.com (Arca Trade Group Ltd) collects, uses and protects personal data under UK GDPR and PECR, and how to exercise your rights.
-Short answer: This privacy policy explains how LondraDepo.com, operated by Arca Trade Group Ltd, collects and uses personal data when you visit our website or contact us, and the rights you have under UK GDPR. This policy is issued by LondraDepo.com, which provides logistics and warehousing services in the United Kingdom. LondraDepo.com operates on behalf of Arca Trade Group Ltd (company no. 13247691, VAT GB353315322), a company registered in England. We comply with our obligations under UK GDPR and the Privacy and Electronic Communications Regulations (PECR).
+Short answer: This privacy policy explains how LondraDepo.com, operated by Arca Trade Group Ltd, collects and uses personal data when you visit our website or contact us, and the rights you have under UK GDPR. This policy is issued by LondraDepo.com, which provides logistics and warehousing services in the United Kingdom. LondraDepo.com operates on behalf of Arca Trade Group Ltd (company no. 13247691, VAT GB353315322), a company registered in England and Wales. Arca Trade Group Ltd is the data controller for the personal data described here and complies with UK GDPR, the Data Protection Act 2018 and the Privacy and Electronic Communications Regulations (PECR).
 
 ## Cookie Policy
 URL: https://www.londradepo.com/en/cookie-policy
@@ -1005,7 +1005,7 @@ Short answer: This policy explains what cookies are, which cookies LondraDepo.co
 URL: https://www.londradepo.com/en/terms-and-conditions
 Turkish version: https://www.londradepo.com/sozlesme-kosullari
 Summary: General terms for storage, fulfilment, handling, customs coordination and distribution services provided by Arca Trade Group Ltd under the LondraDepo.com brand.
-Short answer: These terms set out the general conditions for the warehousing, fulfilment, handling, customs coordination and distribution services provided by Arca Trade Group Ltd under the LondraDepo.com brand. These terms govern the storage, fulfilment, handling, customs clearance coordination and distribution services provided under the LondraDepo.com brand by Arca Trade Group Ltd (company no. 13247691, Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY, United Kingdom).
+Short answer: These terms set out the general conditions for the warehousing, fulfilment, handling, customs coordination and distribution services provided by Arca Trade Group Ltd under the LondraDepo.com brand. These terms govern the storage, fulfilment, handling, customs clearance coordination and distribution services provided under the LondraDepo.com brand by Arca Trade Group Ltd, registered in England and Wales (company no. 13247691, VAT GB353315322; registered office: Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY, United Kingdom).
 
 ## Request a UK Warehousing & Fulfilment Quote
 URL: https://www.londradepo.com/en/request-a-quote
@@ -2081,16 +2081,16 @@ A: Evet. WhatsApp'tan +44 7554 195190'a yazabilir, İngiltere saatiyle 07:45–1
 URL: https://www.londradepo.com/privacy-policy
 English version: https://www.londradepo.com/en/privacy-policy
 Summary: LondraDepo.com gizlilik politikası. Kişisel verilerinizin nasıl toplandığı, kullanıldığı, korunduğu ve UK GDPR kapsamındaki haklarınız hakkında bilgi.
-Short answer: Bu gizlilik politikası, İngiltere merkezli lojistik ve depolama hizmetleri sunan LondraDepo.com tarafından hazırlanmıştır. LondraDepo.com, Arca Trade Group Ltd (şirket no: 13247691, VAT: GB353315322) adına faaliyet göstermekte olup İngiltere'de kayıtlı bir şirkettir. Kişisel verilerinizin işlenmesinden sorumlu veri işleyici olarak UK GDPR ve PECR kapsamındaki yükümlülüklere uymaktayız.
+Short answer: Bu gizlilik politikası, İngiltere merkezli lojistik ve depolama hizmetleri sunan LondraDepo.com tarafından hazırlanmıştır. LondraDepo.com, Arca Trade Group Ltd (şirket no: 13247691, VAT: GB353315322) adına faaliyet göstermekte olup İngiltere'de kayıtlı bir şirkettir. Kişisel verilerinizin işlenmesinden sorumlu veri sorumlusu (data controller) olarak UK GDPR, Data Protection Act 2018 ve PECR kapsamındaki yükümlülüklere uymaktayız.
 
 ## Çerez Politikası
 URL: https://www.londradepo.com/cookie-policy
 English version: https://www.londradepo.com/en/cookie-policy
 Summary: LondraDepo.com çerez politikası. Sitemizde kullandığımız çerez türleri, amaçları ve çerez tercihlerinizi nasıl yönetebileceğiniz hakkında bilgi.
-Short answer: Çerezler (cookies), bir web sitesini ziyaret ettiğinizde tarayıcınız tarafından cihazınıza kaydedilen küçük metin dosyalarıdır. Çerezler, site tercihlerinizi hatırlamak, sitenin düzgün çalışmasını sağlamak ve kullanım alışkanlıklarını analiz etmek için kullanılır. Sitenin temel işlevleri için gereklidir. Oturum güvenliği, form koruması ve altyapı ayarları gibi kritik süreçleri kapsar. Bu çerezler sitenizin çalışabilmesi için zorunludur ve devre dışı bırakılamaz.
+Short answer: Çerezler (cookies), bir web sitesini ziyaret ettiğinizde tarayıcınız tarafından cihazınıza kaydedilen küçük metin dosyalarıdır. Çerezler, site tercihlerinizi hatırlamak, sitenin düzgün çalışmasını sağlamak ve kullanım alışkanlıklarını analiz etmek için kullanılır. Sitenin temel işlevleri için gereklidir; şu anda bu kapsamda yalnızca çerez tercihinizi hatırlayan kayıt (tarayıcının yerel depolamasında) kullanılır. Devre dışı bırakılamaz.
 
 ## Sözleşme Koşulları
 URL: https://www.londradepo.com/sozlesme-kosullari
 English version: https://www.londradepo.com/en/terms-and-conditions
 Summary: LondraDepo.com hizmet sözleşmesi koşulları. Hizmet kapsamı, ödeme koşulları, sorumluluk sınırlamaları ve uygulanacak hukuk hakkında bilgi.
-Short answer: Bu sözleşme koşulları, Arca Trade Group Ltd (şirket no: 13247691, Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY, İngiltere) tarafından LondraDepo.com markası altında sunulan depolama, fulfillment, elleçleme, gümrükleme koordinasyonu ve dağıtım hizmetlerine ilişkin genel koşulları düzenler.
+Short answer: Bu sözleşme koşulları, Arca Trade Group Ltd (İngiltere ve Galler'de kayıtlı, şirket no: 13247691, KDV: GB353315322; kayıtlı ofis: Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY, İngiltere) tarafından LondraDepo.com markası altında sunulan depolama, fulfillment, elleçleme, gümrükleme koordinasyonu ve dağıtım hizmetlerine ilişkin genel koşulları düzenler.

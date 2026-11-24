@@ -91,14 +91,16 @@ export default function Footer() {
           warehouse ve İngiltere fulfillment çözümleri. Tüm hakları saklıdır.
         </p>
         <p className="text-slate-400">
-          Arca Trade Group Ltd · Registered in England &amp; Wales · Company No: 13247691 · VAT: GB353315322
+          Arca Trade Group Ltd · İngiltere ve Galler&apos;de kayıtlı (Registered in England &amp; Wales) · Şirket No: 13247691 · KDV: GB353315322
+        </p>
+        <p className="text-slate-400">
+          Kayıtlı ofis ve depo: Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY, Birleşik Krallık ·{" "}
+          <a href="mailto:support@londradepo.com" className="hover:text-white transition">support@londradepo.com</a>
         </p>
         <div className="flex flex-wrap items-center justify-center gap-4">
           <a href="/privacy-policy" className="hover:text-white transition">Gizlilik Politikası</a>
           <a href="/cookie-policy" className="hover:text-white transition">Çerez Politikası</a>
           <a href="/sozlesme-kosullari" className="hover:text-white transition">Sözleşme Koşulları</a>
-          {/* TODO: confirm email — replace YOUR_EMAIL with actual address */}
-          {/* <a href="mailto:YOUR_EMAIL" className="hover:text-white transition">E-posta</a> */}
           <a href="https://www.linkedin.com/company/arcatradegroup/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">LinkedIn</a>
           <a href="https://bifa.org/members/arca-trade-group-ltd/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">BIFA Üyesi</a>
           <CookieSettingsButton />

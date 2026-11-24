@@ -112,6 +112,10 @@ export default function FooterEn() {
         <p className="text-slate-400">
           Arca Trade Group Ltd · Registered in England &amp; Wales · Company No: 13247691 · VAT: GB353315322
         </p>
+        <p className="text-slate-400">
+          Registered office and warehouse: Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY, United Kingdom ·{" "}
+          <a href="mailto:support@londradepo.com" className="hover:text-white transition">support@londradepo.com</a>
+        </p>
         <div className="flex flex-wrap items-center justify-center gap-4">
           <Link href="/en/privacy-policy" className="hover:text-white transition">Privacy Policy</Link>
           <Link href="/en/cookie-policy" className="hover:text-white transition">Cookie Policy</Link>

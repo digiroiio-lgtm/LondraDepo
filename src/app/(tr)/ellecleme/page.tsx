@@ -1,4 +1,5 @@
 import Emoji from "@/components/visual/Emoji";
+import RelatedLinks from "@/components/RelatedLinks";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -150,6 +151,7 @@ export default function EllecelermePage() {
         </section>
 
         <CtaCards />
+        <RelatedLinks links={[{ href: "/konteyner-bosaltma", label: "Konteyner boşaltma" }, { href: "/palet-depolama", label: "Palet depolama", note: "£3.50 + KDV / palet / hafta" }, { href: "/amazon-prep-uk", label: "Amazon prep (FBA hazırlık)" }, { href: "/otomotiv-yedek-parca-depolama", label: "Otomotiv yedek parça depolama" }, { href: "/case-studies/uk-walking-treadmill-distribution", label: "Vaka: koşu bandı dağıtımı" }, { href: "/teklif-al", label: "Teklif al", note: "24 saat içinde dönüş" }]} />
       </main>
       <Footer />
       <StickyWhatsappCta />

@@ -403,7 +403,7 @@ export const corePages: EnPage[] = [
       { q: "What information do you need for a quote?", a: "Product type, estimated pallets or cartons, monthly order volume, the services you need and your sales channels such as Shopify, Amazon or wholesale." },
       { q: "Is there a monthly minimum charge?", a: "LondraDepo has no fixed minimum volume, and you can start with a single trial pallet. Storage starts from £3.50 + VAT per pallet per week; other services are quoted for your products and order profile." },
     ],
-    related: ["/en/blog/uk-import-costs", "/en/uk-storage-cost-calculator", "/en/pallet-storage", "/en/pick-and-pack", "/en/blog/uk-warehousing-prices-2026", "/en/blog/uk-pallet-storage-costs"],
+    related: ["/en/blog/uk-import-costs", "/en/uk-storage-cost-calculator", "/en/pallet-storage", "/en/pick-and-pack", "/en/blog/uk-warehousing-prices-2026", "/en/blog/uk-pallet-storage-costs", "/en/uk-warehousing-benefits", "/en/blog/how-to-choose-a-uk-3pl", "/en/blog/uk-warehousing-guide"],
     cta: { h2: "Get a tailored quote", text: "Send us your product type, pallet or carton count, monthly orders and sales channels." },
   },
 ];

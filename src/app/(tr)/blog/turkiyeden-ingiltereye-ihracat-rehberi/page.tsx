@@ -1,4 +1,5 @@
 import FaqJsonLd from "@/components/FaqJsonLd";
+import { GuideNextLinks, GuideQuote } from "@/components/GuideNext";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -238,7 +239,7 @@ export default function IhracatRehberiPage() {
             <RelatedArticles articles={relatedArticles} />
 
             <div className="mt-8 pt-6 border-t border-slate-200">
-              <p className="text-slate-500 text-sm mb-3">İlgili hizmetler:</p>
+              <p className="text-slate-500 text-sm mb-3">İlgili rehber ve sayfalar:</p>
               <div className="flex flex-wrap gap-3">
                 <Link href="/ingiltere-fulfillment" className="text-sm text-[#0b2545] hover:underline">→ İngiltere Fulfillment</Link>
                 <Link href="/palet-depolama" className="text-sm text-[#0b2545] hover:underline">→ Palet Depolama</Link>
@@ -246,8 +247,10 @@ export default function IhracatRehberiPage() {
                 <Link href="/case-studies" className="text-sm text-[#0b2545] hover:underline">→ Operasyon Örnekleri</Link>
               </div>
             </div>
+            <GuideNextLinks slug="turkiyeden-ingiltereye-ihracat-rehberi" />
           </div>
         </article>
+        <GuideQuote slug="turkiyeden-ingiltereye-ihracat-rehberi" />
 
         <script
           type="application/ld+json"

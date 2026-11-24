@@ -1,4 +1,5 @@
 import FaqJsonLd from "@/components/FaqJsonLd";
+import { GuideNextLinks, GuideQuote } from "@/components/GuideNext";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -209,15 +210,17 @@ export default function AraDepoNedirPage() {
             <RelatedArticles articles={relatedArticles} />
 
             <div className="mt-8 pt-6 border-t border-slate-200">
-              <p className="text-slate-500 text-sm mb-3">İlgili hizmetler:</p>
+              <p className="text-slate-500 text-sm mb-3">İlgili rehber ve sayfalar:</p>
               <div className="flex flex-wrap gap-3">
                 <Link href="/ingiltere-depo-avantajlari" className="text-sm text-[#0b2545] hover:underline">→ Depo Avantajları</Link>
                 <Link href="/palet-depolama" className="text-sm text-[#0b2545] hover:underline">→ Palet Depolama</Link>
                 <Link href="/essex-depo" className="text-sm text-[#0b2545] hover:underline">→ Essex Depo</Link>
               </div>
             </div>
+            <GuideNextLinks slug="ingiltere-ara-depo-nedir" />
           </div>
         </article>
+        <GuideQuote slug="ingiltere-ara-depo-nedir" />
 
         <script
           type="application/ld+json"

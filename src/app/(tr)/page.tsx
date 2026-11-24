@@ -33,9 +33,15 @@ export default function Home() {
               { href: "/ingiltere-depo", label: "İngiltere Depo" },
               { href: "/londra-depo", label: "Londra Depo" },
               { href: "/ingiltere-depo-fiyatlari", label: "İngiltere Depo Fiyatları" },
+              { href: "/palet-depolama", label: "Palet Depolama" },
+              { href: "/e-ticaret-fulfillment", label: "E-Ticaret Fulfillment" },
               { href: "/ingiltere-e-ticaret-lojistigi", label: "E-Ticaret Lojistiği" },
+              { href: "/amazon-prep-uk", label: "Amazon Prep UK (FBA)" },
+              { href: "/turk-sirketleri-icin-ingiltere-depo", label: "Türk Şirketleri İçin İngiltere Depo" },
+              { href: "/sektorler", label: "Sektörler" },
+              { href: "/case-studies", label: "Vaka Çalışmaları" },
               { href: "/hakkimizda", label: "Hakkımızda" },
-              { href: "/iletisim", label: "İletişim" },
+              { href: "/teklif-al", label: "Teklif Al" },
             ].map((item) => (
               <Link key={item.href} href={item.href} className="rounded-lg border border-slate-200 bg-white p-4 font-semibold text-[#0b2545] transition hover:border-[#e63946] hover:text-[#c1121f]">
                 {item.label}

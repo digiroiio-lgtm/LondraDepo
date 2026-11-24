@@ -1,4 +1,5 @@
 import PageFaq from "@/components/PageFaq";
+import RelatedLinks from "@/components/RelatedLinks";
 import Emoji from "@/components/visual/Emoji";
 import type { Metadata } from "next";
 import TeamQuote from "@/components/TeamQuote";
@@ -215,6 +216,7 @@ export default function HakkimizdaPage() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <PageFaq faqs={faqs} />
+        <RelatedLinks links={[{ href: "/essex-depo", label: "Essex depomuz" }, { href: "/case-studies", label: "Vaka çalışmaları" }, { href: "/sektorler", label: "Hizmet verdiğimiz sektörler" }, { href: "/turk-sirketleri-icin-ingiltere-depo", label: "Türk şirketleri için İngiltere depo" }, { href: "/ingiltere-depo-fiyatlari", label: "Fiyatlar" }, { href: "/teklif-al", label: "Teklif al", note: "24 saat içinde dönüş" }]} />
       </main>
       <Footer />
       <StickyWhatsappCta />

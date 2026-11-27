@@ -25,7 +25,6 @@ const HERO_BOOKING = new Set([
 /** Pages that state the published pallet rate get it as Offer markup on their Service node. */
 const PALLET_OFFER = new Set([
   "/en/uk-warehousing-pricing", "/en/pallet-storage", "/en/uk-warehousing", "/en/3pl-uk", "/en/uk-storage-cost-calculator",
-  "/pl/cennik-magazynowania", "/pl/skladowanie-palet", "/pl/magazyn-w-wielkiej-brytanii", "/pl/3pl-wielka-brytania",
 ]);
 
 /** Highest-intent pages get the quote form inline (CRO plan, weeks 11–13). */
@@ -35,8 +34,7 @@ const INLINE_FORM = new Set([
   "/en/amazon-fulfilment-uk", "/en/amazon-seller-warehousing-uk", "/en/amazon-prep-uk", "/en/amazon-uk-fulfilment-centres", "/en/uk-distribution",
   "/en/london-gateway-tilbury-warehousing", "/en/felixstowe-port-warehousing", "/en/uk-warehousing-for-turkish-exporters",
   "/en/case-studies", "/en/industries", "/en/blog",
-  "/pl/magazyn-w-wielkiej-brytanii", "/pl/3pl-wielka-brytania", "/pl/skladowanie-palet", "/pl/fulfillment-ecommerce", "/pl/amazon-fba-prep",
-  "/pl/cennik-magazynowania", "/pl/import-do-wielkiej-brytanii", "/pl/magazyn-dla-polskich-firm",
+  "/pl/magazyn-dla-polskich-firm",
 ]);
 import HeaderEn from "@/components/HeaderEn";
 import FooterEn from "@/components/FooterEn";
@@ -47,6 +45,7 @@ import { getPlPage } from "@/content/pl";
 import { VIEW, type ViewLocale } from "@/i18n/view";
 import { UI } from "@/i18n/ui";
 import { LOCALES, localeOf } from "@/lib/locales";
+import { pageSet } from "@/lib/i18n-pairs";
 import type { EnPage, Section } from "@/content/en/types";
 import { absolute } from "@/lib/i18n";
 import { SITE_URL } from "@/lib/site";
@@ -67,6 +66,11 @@ function modifiedOf(page: EnPage): string {
 /** Template language of a page (EN or PL). */
 function langOf(page: Pick<EnPage, "slug">): ViewLocale {
   return localeOf(page.slug) === "pl" ? "pl" : "en";
+}
+
+/** English equivalent of a PL page (per-page settings below are keyed by the English slug). */
+function enKey(slug: string): string {
+  return localeOf(slug) === "pl" ? (pageSet(slug).en ?? slug) : slug;
 }
 
 /** Any template-language page by slug (parents and related links stay within the site's languages). */
@@ -132,7 +136,7 @@ function jsonLd(page: EnPage) {
       provider: ORG,
       areaServed: { "@type": "Country", name: "United Kingdom" },
       url,
-      ...(PALLET_OFFER.has(page.slug) ? { offers: palletOffer(langOf(page)) } : {}),
+      ...(PALLET_OFFER.has(enKey(page.slug)) ? { offers: palletOffer(langOf(page)) } : {}),
     });
   }
   if (page.kind === "home") {
@@ -353,8 +357,10 @@ export default function EnPageView({ page }: { page: EnPage }) {
   const crumbs = breadcrumbs(page);
   const related = (page.related ?? []).map((s) => getPage(s)).filter((p): p is EnPage => Boolean(p));
   const quote = ctaFor(page);
-  const inlineForm = INLINE_FORM.has(page.slug);
-  const cluster = clusterFor(page.slug);
+  const key = enKey(page.slug);
+  const inlineForm = INLINE_FORM.has(key);
+  // Cluster boxes are written in English only.
+  const cluster = lang === "en" ? clusterFor(page.slug) : undefined;
   const qHref = inlineForm ? "#quote" : quoteHref(quote.service, page.slug, lang);
   const cta = page.cta ?? v.ctaDefault;
 
@@ -403,7 +409,7 @@ export default function EnPageView({ page }: { page: EnPage }) {
                 <TrackedLink kind="whatsapp" source="hero" href={WHATSAPP} className="bg-green-700 hover:bg-green-800 text-white font-semibold px-6 py-3 rounded-full transition">
                   {v.whatsapp}
                 </TrackedLink>
-                {HERO_BOOKING.has(page.slug) && (
+                {HERO_BOOKING.has(key) && (
                   <TrackedLink kind="booking" source="hero" href={bookingUrl("en", page.slug)} className="border border-[#0b2545] text-[#0b2545] font-semibold px-6 py-3 rounded-full hover:bg-[#0b2545] hover:text-white transition">
                     {v.book}
                   </TrackedLink>
@@ -416,7 +422,7 @@ export default function EnPageView({ page }: { page: EnPage }) {
             </div>
             {page.kind !== "home" && page.kind !== "legal" && page.kind !== "contact" && (
               <div className="hidden lg:block">
-                <HeroArt theme={themeFor(page.slug, page.kind)} />
+                <HeroArt theme={themeFor(key, page.kind)} />
               </div>
             )}
             {page.kind === "home" && (

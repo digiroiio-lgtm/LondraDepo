@@ -2,7 +2,8 @@
 
 import { useState, useEffect, useRef, FormEvent } from "react";
 import { useForm } from "@formspree/react";
-import { trackCtaClick, trackFormStart, trackQuoteSubmit } from "@/lib/gtag";
+import { trackCtaClick } from "@/lib/gtag";
+import { useFormTracking } from "@/components/useFormTracking";
 import { bookingUrl } from "@/lib/booking";
 
 const WA_NUMBER = "447554195190";
@@ -83,11 +84,16 @@ export default function QuoteForm({
   });
   const [errors, setErrors] = useState<Partial<Record<keyof FormData, string>>>({});
   const [state, submitToFormspree] = useForm(FORMSPREE_ID);
+  const ft = useFormTracking(formId);
+  const ftSendError = ft.sendError;
+  useEffect(() => {
+    if (state.errors) ftSendError();
+  }, [state.errors, ftSendError]);
 
   function markStarted() {
     if (!started.current) {
       started.current = true;
-      trackFormStart(formId);
+      ft.start();
     }
   }
 
@@ -114,6 +120,7 @@ export default function QuoteForm({
     if (!form.email.trim()) e.email = "E-posta zorunludur.";
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) e.email = "Geçerli bir e-posta girin.";
     setErrors(e);
+    ft.invalid(Object.keys(e));
     return Object.keys(e).length === 0;
   }
 
@@ -143,7 +150,7 @@ export default function QuoteForm({
   }
 
   useEffect(() => {
-    if (state.succeeded) trackQuoteSubmit({ form_id: formId, services: form.services.join(", "), country: form.country });
+    if (state.succeeded) ft.success({ services: form.services.join(", "), country: form.country });
     // Fire once on success only.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state.succeeded]);
@@ -199,6 +206,7 @@ export default function QuoteForm({
             </p>
             <a
               href={whatsappUrl()}
+              data-cta-source="form_success_whatsapp"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-green-700 hover:bg-green-800 text-white font-extrabold py-3 px-8 rounded-full transition shadow-lg"
@@ -208,6 +216,7 @@ export default function QuoteForm({
           </div>
         ) : (
         <form
+          ref={ft.ref}
           onSubmit={handleSubmit}
           noValidate
           className="bg-white rounded-3xl p-6 sm:p-10 space-y-6"

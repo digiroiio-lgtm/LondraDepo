@@ -1,4 +1,5 @@
 import Emoji from "@/components/visual/Emoji";
+import RelatedLinks from "@/components/RelatedLinks";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import TrBreadcrumb from "@/components/TrBreadcrumb";
@@ -472,6 +473,7 @@ export default function IngiltereDepoAvantajlariPage() {
             </div>
           </div>
         </section>
+        <RelatedLinks links={[{ href: "/ingiltere-depo", label: "İngiltere depo hizmeti" }, { href: "/palet-depolama", label: "Palet depolama" }, { href: "/ingiltere-depo-fiyatlari", label: "İngiltere depo fiyatları" }, { href: "/blog/ingiltere-depo-rehberi", label: "İngiltere depo rehberi" }, { href: "/case-studies", label: "Vaka çalışmaları" }, { href: "/teklif-al", label: "Teklif al", note: "24 saat içinde dönüş" }]} />
       </main>
 
       <Footer />

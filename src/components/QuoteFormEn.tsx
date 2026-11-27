@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import Link from "next/link";
 import { useForm } from "@formspree/react";
-import { trackFormStart, trackQuoteSubmit } from "@/lib/gtag";
+import { useFormTracking } from "@/components/useFormTracking";
 import { QUOTE_SERVICES, type QuoteService } from "@/content/en/cta";
 
 const FORMSPREE_ID = "xoejvawy";
@@ -55,6 +55,11 @@ export default function QuoteFormEn({ defaultService, formId = "en_request_a_quo
   const [errors, setErrors] = useState<Partial<Record<keyof Fields, string>>>({});
   const [tracking, setTracking] = useState<Record<string, string>>({});
   const [state, submit] = useForm(FORMSPREE_ID);
+  const ft = useFormTracking(formId);
+  const ftSendError = ft.sendError;
+  useEffect(() => {
+    if (state.errors) ftSendError();
+  }, [state.errors, ftSendError]);
   const started = useRef(false);
 
   // Read service preset and attribution from the URL on the client (keeps the page static).
@@ -82,7 +87,7 @@ export default function QuoteFormEn({ defaultService, formId = "en_request_a_quo
 
   useEffect(() => {
     if (state.succeeded) {
-      trackQuoteSubmit({ service: f.service, product_category: f.category, country: f.country, pallet_band: f.pallets });
+      ft.success({ service: f.service, product_category: f.category, country: f.country, pallet_band: f.pallets });
     }
     // Fire once on success only.
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -91,7 +96,7 @@ export default function QuoteFormEn({ defaultService, formId = "en_request_a_quo
   const set = <K extends keyof Fields>(k: K, v: Fields[K]) => {
     if (!started.current) {
       started.current = true;
-      trackFormStart(formId);
+      ft.start();
     }
     setF((x) => ({ ...x, [k]: v }));
     if (errors[k]) setErrors((e) => ({ ...e, [k]: "" }));
@@ -111,6 +116,7 @@ export default function QuoteFormEn({ defaultService, formId = "en_request_a_quo
     if (showOrders && !f.orders) e.orders = "Please select your monthly order volume.";
     if (!f.consent) e.consent = "Please confirm so we can contact you about your enquiry.";
     setErrors(e);
+    ft.invalid(Object.keys(e));
     return Object.keys(e).length === 0;
   }
 
@@ -160,7 +166,7 @@ export default function QuoteFormEn({ defaultService, formId = "en_request_a_quo
   const aria = (k: keyof Fields) => ({ "aria-invalid": Boolean(errors[k]), "aria-describedby": errors[k] ? `${formId}-${k}-error` : undefined });
 
   return (
-    <form onSubmit={onSubmit} noValidate className="grid gap-5 sm:grid-cols-2 rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 shadow-sm">
+    <form ref={ft.ref} onSubmit={onSubmit} noValidate className="grid gap-5 sm:grid-cols-2 rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 shadow-sm">
       <div>
         <label htmlFor={`${formId}-name`} className={label}>Full name *</label>
         <input id={`${formId}-name`} autoComplete="name" className={input} value={f.name} onChange={(e) => set("name", e.target.value)} {...aria("name")} />

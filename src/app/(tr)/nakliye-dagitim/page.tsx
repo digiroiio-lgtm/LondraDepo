@@ -1,4 +1,5 @@
 import Emoji from "@/components/visual/Emoji";
+import RelatedLinks from "@/components/RelatedLinks";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -146,6 +147,7 @@ export default function NakliyeDagitimPage() {
         </section>
 
         <CtaCards />
+        <RelatedLinks links={[{ href: "/palet-depolama", label: "Palet depolama" }, { href: "/limandan-depoya-lojistik", label: "Limandan depoya lojistik" }, { href: "/ambalaj-catering-depolama", label: "Ambalaj ve catering depolama" }, { href: "/case-studies/tasinabilir-sarj-istasyonu-ingiltere-operasyonu", label: "Vaka: taşınabilir şarj istasyonu" }, { href: "/case-studies/uk-walking-treadmill-distribution", label: "Vaka: koşu bandı dağıtımı" }, { href: "/teklif-al", label: "Teklif al", note: "24 saat içinde dönüş" }]} />
       </main>
       <Footer />
       <StickyWhatsappCta />

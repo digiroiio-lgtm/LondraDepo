@@ -2,7 +2,8 @@ import type { Metadata, Viewport } from "next";
 import CookieConsent from "@/components/CookieConsent";
 import ConditionalAnalytics from "@/components/ConditionalAnalytics";
 import GaConsentListener from "@/components/GoogleAnalytics";
-import TrClickTracker from "@/components/TrClickTracker";
+import SiteTracker from "@/components/SiteTracker";
+import WebVitals from "@/components/WebVitals";
 import "../globals.css";
 import { geist } from "../font";
 import { GA_ID, GA_CONSENT_SCRIPT } from "@/lib/consent-script";
@@ -159,7 +160,8 @@ export default function RootLayout({
       <body className="antialiased">
         {children}
         <CookieConsent lang="tr" />
-        <TrClickTracker />
+        <SiteTracker />
+        <WebVitals />
         <ConditionalAnalytics gaId={GA_ID} />
         <GaConsentListener gaId={GA_ID} />
       </body>

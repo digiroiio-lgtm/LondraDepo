@@ -4,7 +4,7 @@ import Emoji from "@/components/visual/Emoji";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import Link from "next/link";
 import { useForm } from "@formspree/react";
-import { trackFormStart, trackQuoteSubmit } from "@/lib/gtag";
+import { useFormTracking } from "@/components/useFormTracking";
 
 const FORMSPREE_ID = "xoejvawy";
 
@@ -62,6 +62,11 @@ export default function ChecklistGate({ lang, variant = "import" }: { lang: "en"
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [tracking, setTracking] = useState<Record<string, string>>({});
   const [state, submit] = useForm(FORMSPREE_ID);
+  const ft = useFormTracking(formId);
+  const ftSendError = ft.sendError;
+  useEffect(() => {
+    if (state.errors) ftSendError();
+  }, [state.errors, ftSendError]);
   const started = useRef(false);
 
   useEffect(() => {
@@ -76,14 +81,14 @@ export default function ChecklistGate({ lang, variant = "import" }: { lang: "en"
   }, []);
 
   useEffect(() => {
-    if (state.succeeded) trackQuoteSubmit({ form_id: formId, lead_type: leadType });
+    if (state.succeeded) ft.success({ lead_type: leadType });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state.succeeded]);
 
   const set = <K extends keyof typeof f>(k: K, v: (typeof f)[K]) => {
     if (!started.current) {
       started.current = true;
-      trackFormStart(formId);
+      ft.start();
     }
     setF((x) => ({ ...x, [k]: v }));
     if (errors[k]) setErrors((e) => ({ ...e, [k]: "" }));
@@ -96,6 +101,7 @@ export default function ChecklistGate({ lang, variant = "import" }: { lang: "en"
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.email)) e.email = t.errEmail;
     if (!f.consent) e.consent = t.errConsent;
     setErrors(e);
+    ft.invalid(Object.keys(e));
     if (Object.keys(e).length) return;
     await submit({
       _subject: `${variant === "fba" ? "FBA prep checklist" : lang === "en" ? "Import checklist" : "İthalat kontrol listesi"} download: ${f.company || f.name}`,
@@ -127,7 +133,7 @@ export default function ChecklistGate({ lang, variant = "import" }: { lang: "en"
           </a>
         </div>
       ) : (
-        <form onSubmit={onSubmit} noValidate className="grid gap-4 sm:grid-cols-3">
+        <form ref={ft.ref} onSubmit={onSubmit} noValidate className="grid gap-4 sm:grid-cols-3">
           <div>
             <label htmlFor={`${formId}-name`} className={label}>{t.name} *</label>
             <input id={`${formId}-name`} autoComplete="name" className={input} value={f.name} onChange={(e) => set("name", e.target.value)} aria-invalid={Boolean(errors.name)} />

@@ -57,6 +57,39 @@ Bunun için Vercel'de `PANEL_SNAPSHOT_TOKEN` değişkeni (32+ karakter) bulunmal
 
 Servis hesabı (`GOOGLE_SERVICE_ACCOUNT_JSON`) eklenirse panel otomatik olarak canlı veriye geçer ve anlık görüntü kullanılmaz.
 
+## 2a. GA4 olayları, özel boyutlar ve dönüşümler
+
+Site, Google **Gelişmiş Consent Mode** ile ölçülür: gtag.js her ziyaretçide yüklenir; analitik onayı yoksa yalnızca çerezsiz, kimliksiz sinyaller gider (GA4 bunlardan modelleme yapar), onay varsa normal çerezler kullanılır. Reklam depolama her zaman kapalıdır. Olaylara kişisel veri (ad, e-posta, telefon, mesaj) yazılmaz.
+
+**Olaylar**
+
+| Olay | Ne zaman | Önemli parametreler |
+|---|---|---|
+| `whatsapp_click` | WhatsApp linki tıklandı | `click_source`, `wa_variant` (quote_summary / prefilled / empty) |
+| `phone_call`, `email_click`, `booking_click` | Telefon, e-posta, Calendly tıklandı | `click_source` |
+| `cta_click` | Teklif sayfası / #teklif linki | `cta_id`, `position` |
+| `cta_view` | WhatsApp / teklif / görüşme butonu 1 sn yarıdan fazla göründü (sayfa ve konum başına bir kez) | `cta_type`, `click_source` |
+| `form_view` → `form_start` → `form_field_complete` → `form_submit_attempt` → `generate_lead` | Form hunisi | `form_id`, `field_name`, `field_index`, `time_to_submit_s` |
+| `form_error` | Doğrulama veya gönderim hatası | `error_type` (validation / send), `field_name` |
+| `form_abandon` | Forma başlayıp göndermeden sayfadan / sekmeden ayrıldı | `last_field`, `fields_done`, `time_on_form_s` |
+| `scroll_depth` | %25 / 50 / 75 / 100 kaydırma | `percent` |
+| `section_view` | `section[id]` bölümü göründü | `section_id` |
+| `faq_open` | SSS / açılır kutu açıldı | `question` |
+| `page_engaged` | Sayfada görünür 30 / 60 / 120 sn | `seconds` |
+| `rage_click` | Aynı öğeye 1 sn içinde 3+ tık | `element`, `click_source` |
+| `web_vitals` | LCP / INP / CLS (kötüler her zaman, diğerleri %25 örnek) | `metric_name`, `metric_value`, `metric_rating` |
+| `consent_choice` | Çerez bandında seçim yapıldı | `analytics` (granted / denied) |
+
+**Özel boyutlar (bir kez, GA4 → Yönetici → Özel tanımlar → Özel boyut oluştur, kapsam: Etkinlik)**
+
+`click_source`, `cta_type`, `cta_id`, `position`, `form_id`, `field_name`, `last_field`, `error_type`, `section_id`, `page_group`, `wa_variant`, `metric_name`, `metric_rating`, `question`, `element`
+
+Her biri için "Boyut adı" ve "Etkinlik parametresi" aynı yazılır. Tanımlanana kadar paneldeki "Dönüşüm hunisi" kartında konum/alan kırılımları yerine uyarı görünür; veriler tanımlandıktan sonra birikmeye başlar.
+
+**Özel metrikler (Etkinlik, birim: Standart)**: `time_to_submit_s`, `time_on_form_s`, `fields_done`, `percent`.
+
+**Önemli etkinlikler (dönüşüm)**: GA4 → Yönetici → Etkinlikler → `generate_lead`, `whatsapp_click`, `phone_call`, `booking_click` için "Önemli etkinlik olarak işaretle".
+
 ## 2b. Gmail: support@londradepo.com (yanıt yakalama ve panelden gönderme)
 Aynı Google servis hesabı Gmail'i de açar. Kutu Google Workspace'te olduğu için **alan genelinde yetkilendirme** (domain-wide delegation) kullanılır. Panel yalnızca `GMAIL_USER` kutusunu okur ve bu kutudan gönderir; e-posta silemez, ayar değiştiremez.
 

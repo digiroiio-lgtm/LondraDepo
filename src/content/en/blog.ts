@@ -67,7 +67,7 @@ export const blogPages: EnPage[] = [
       { q: "What does UK warehousing typically cost?", a: "At LondraDepo, standard pallet storage starts from £3.50 + VAT per pallet per week, so 10 pallets for 4 weeks start at £140 + VAT. Goods-in, fulfilment and delivery are quoted separately." },
       { q: "How do I choose a UK warehouse partner?", a: "Compare providers on location, how each cost line is priced, stock visibility, sales channels, returns, minimums, contract terms, insurance, customs support and references. Our 3PL guide lists 12 questions to ask." },
     ],
-    related: ["/en/blog/uk-warehousing-prices-2026", "/en/blog/what-is-a-uk-transit-warehouse", "/en/blog/what-is-uk-fulfilment", "/en/uk-warehousing"],
+    related: ["/en/blog/uk-warehousing-prices-2026", "/en/blog/what-is-a-uk-transit-warehouse", "/en/blog/what-is-uk-fulfilment", "/en/uk-warehousing", "/en/pallet-storage", "/en/uk-warehousing-pricing", "/en/essex-warehouse", "/en/uk-fulfilment"],
   },
   {
     slug: "/en/blog/what-is-uk-fulfilment",
@@ -242,7 +242,7 @@ export const blogPages: EnPage[] = [
       { q: "Who should use a transit warehouse?", a: "A transit warehouse suits businesses that ship bulk consignments into the UK but sell in smaller quantities or to several destinations, and want goods split and sent on quickly rather than stored." },
       { q: "Can transit stock also be stored if needed?", a: "Yes. At LondraDepo, part of a delivery can be cross-docked straight on while the rest is stored from £3.50 + VAT per pallet per week and released as orders arrive." },
     ],
-    related: ["/en/storage-services", "/en/blog/uk-warehousing-guide", "/en/blog/uk-pallet-storage-costs", "/en/essex-warehouse"],
+    related: ["/en/storage-services", "/en/blog/uk-warehousing-guide", "/en/blog/uk-pallet-storage-costs", "/en/essex-warehouse", "/en/uk-warehousing", "/en/container-unloading", "/en/pallet-storage", "/en/locations/port-to-warehouse-logistics"],
   },
   {
     slug: "/en/blog/uk-warehousing-prices-2026",

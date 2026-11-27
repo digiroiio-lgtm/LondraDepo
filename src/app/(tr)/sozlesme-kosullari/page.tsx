@@ -7,7 +7,7 @@ import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 import { SITE_URL } from "@/lib/site";
 import { trAlternates } from "@/lib/i18n";
 const PAGE_URL = `${SITE_URL}/sozlesme-kosullari`;
-const LAST_UPDATED = "Eylül 2026";
+const LAST_UPDATED = "24 Kasım 2026";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -52,8 +52,8 @@ export default function SozlesmeKosullariPage() {
             <section className="mb-8">
               <h2 className="text-xl font-bold text-[#0b2545] mb-3">1. Taraflar ve Kapsam</h2>
               <p className="text-slate-600 leading-relaxed">
-                Bu sözleşme koşulları, <strong>Arca Trade Group Ltd</strong> (şirket no: 13247691,
-                Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY, İngiltere) tarafından
+                Bu sözleşme koşulları, <strong>Arca Trade Group Ltd</strong> (İngiltere ve Galler&apos;de kayıtlı, şirket no: 13247691, KDV: GB353315322;
+                kayıtlı ofis: Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY, İngiltere) tarafından
                 <strong> LondraDepo.com</strong> markası altında sunulan depolama, fulfillment,
                 elleçleme, gümrükleme koordinasyonu ve dağıtım hizmetlerine ilişkin genel koşulları
                 düzenler.
@@ -162,8 +162,8 @@ export default function SozlesmeKosullariPage() {
             <section className="mb-8">
               <h2 className="text-xl font-bold text-[#0b2545] mb-3">10. İletişim</h2>
               <p className="text-slate-600 leading-relaxed">
-                Bu koşullara ilişkin sorularınız için WhatsApp üzerinden veya aşağıdaki adres
-                aracılığıyla bizimle iletişime geçebilirsiniz:
+                Bu koşullara ilişkin sorularınız için support@londradepo.com adresine yazabilir,
+                WhatsApp üzerinden veya aşağıdaki adres aracılığıyla bizimle iletişime geçebilirsiniz:
               </p>
               <p className="text-slate-600 mt-3">
                 Arca Trade Group Ltd<br />

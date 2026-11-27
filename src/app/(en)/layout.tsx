@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import CookieConsent from "@/components/CookieConsent";
 import ConditionalAnalytics from "@/components/ConditionalAnalytics";
+import SiteTracker from "@/components/SiteTracker";
+import WebVitals from "@/components/WebVitals";
 import GaConsentListener from "@/components/GoogleAnalytics";
 import "../globals.css";
 import { geist } from "../font";
@@ -51,6 +53,8 @@ export default function EnglishRootLayout({ children }: { children: React.ReactN
       <body className="antialiased">
         {children}
         <CookieConsent lang="en" />
+        <SiteTracker />
+        <WebVitals />
         <ConditionalAnalytics gaId={GA_ID} />
         <GaConsentListener gaId={GA_ID} />
       </body>

@@ -98,7 +98,7 @@ export const servicePages: EnPage[] = [
       { q: "Do you only store goods, or fulfil orders too?", a: "Both. We offer storage and full order fulfilment: when an order arrives we pick, pack, label and dispatch it to your UK customer." },
       { q: "How quickly can I start using the UK warehouse?", a: "Once you accept the quote, you can ship goods to Unit 19 Arterial Park, Rayleigh. Send the packing list and SKU details before arrival so goods-in can be planned and stock booked into Mintsoft WMS on arrival." },
     ],
-    related: ["/en/blog/how-to-choose-a-uk-3pl", "/en/storage-services", "/en/pallet-storage", "/en/container-unloading", "/en/uk-import-logistics", "/en/ecommerce-fulfilment", "/en/essex-warehouse", "/en/uk-warehousing-pricing"],
+    related: ["/en/blog/how-to-choose-a-uk-3pl", "/en/storage-services", "/en/pallet-storage", "/en/container-unloading", "/en/uk-import-logistics", "/en/ecommerce-fulfilment", "/en/essex-warehouse", "/en/uk-warehousing-pricing", "/en/uk-warehousing-benefits", "/en/blog/uk-warehousing-guide", "/en/industries"],
     cta: { h2: "Sell in the UK without your own warehouse", text: "Use our ready-made warehouse and team, and focus on sales." },
   },
   {
@@ -546,7 +546,7 @@ export const servicePages: EnPage[] = [
       { q: "How are pallets kept secure?", a: "The warehouse is locked with controlled access. Every pallet is numbered and tracked in the stock system." },
       { q: "Can you store pallets short term?", a: "Yes. Pallet storage is charged weekly from £3.50 + VAT per pallet, so you can store for a few weeks or long term. Short stays such as cross-dock before delivery are also possible." },
     ],
-    related: ["/en/uk-warehousing-pricing", "/en/container-unloading", "/en/blog/uk-pallet-storage-costs", "/en/uk-fulfilment", "/en/essex-warehouse"],
+    related: ["/en/uk-warehousing-pricing", "/en/container-unloading", "/en/blog/uk-pallet-storage-costs", "/en/uk-fulfilment", "/en/essex-warehouse", "/en/industries/food-packaging", "/en/blog/uk-warehousing-guide"],
   },
   {
     slug: "/en/amazon-prep-uk",
@@ -657,7 +657,7 @@ export const servicePages: EnPage[] = [
       { q: "Do you accept goods from overseas suppliers?", a: "Yes. We receive goods from any supplier or country at our Rayleigh warehouse. Freight and UK customs clearance can be arranged through Arca Trade Group, or your own forwarder can deliver." },
       { q: "How is storage charged?", a: "Standard pallet storage starts from £3.50 + VAT per pallet per week. Carton storage, goods-in, container unloading and handling are quoted for your products and volumes." },
     ],
-    related: ["/en/uk-warehousing", "/en/pallet-storage", "/en/uk-warehousing-pricing", "/en/blog/what-is-a-uk-transit-warehouse"],
+    related: ["/en/uk-warehousing", "/en/pallet-storage", "/en/uk-warehousing-pricing", "/en/blog/what-is-a-uk-transit-warehouse", "/en/industries/food-packaging", "/en/blog/uk-warehousing-guide"],
   },
   {
     slug: "/en/uk-customs-clearance",
@@ -692,7 +692,7 @@ export const servicePages: EnPage[] = [
       { q: "How are goods received after customs?", a: "Once clearance is complete, your goods are delivered to our warehouse address, counted and booked into the warehouse system." },
       { q: "Do I need a GB EORI number to clear goods into the UK?", a: "Yes. The importer needs an EORI number starting with GB to import goods into Great Britain. Arca Trade Group's customs team can lodge the declaration, but the importer remains responsible for duty and import VAT." },
     ],
-    related: ["/en/blog/uk-import-documents", "/en/blog/uk-import-costs", "/en/uk-import-logistics", "/en/blog/uk-importing-guide", "/en/container-unloading", "/en/uk-warehousing", "/en/essex-warehouse"],
+    related: ["/en/blog/uk-import-documents", "/en/blog/uk-import-costs", "/en/uk-import-logistics", "/en/blog/uk-importing-guide", "/en/container-unloading", "/en/uk-warehousing", "/en/essex-warehouse", "/en/blog/bonded-warehouse-vs-duty-paid-storage"],
   },
   {
     slug: "/en/cargo-handling",
@@ -765,7 +765,7 @@ export const servicePages: EnPage[] = [
       { q: "How is distribution priced?", a: "Pricing depends on shipment volume, distance and service scope. Message us on WhatsApp for a bespoke quote." },
       { q: "Do you offer pallet and parcel delivery?", a: "Yes. From Essex we coordinate pallet deliveries to wholesale and trade customers and parcel deliveries to online shoppers across the UK, including regular delivery programmes for repeat B2B customers." },
     ],
-    related: ["/en/cargo-handling", "/en/uk-warehousing", "/en/essex-warehouse"],
+    related: ["/en/cargo-handling", "/en/uk-warehousing", "/en/essex-warehouse", "/en/industries/food-packaging", "/en/industries/automotive-parts", "/en/industries"],
   },
   {
     slug: "/en/ecommerce-fulfilment",
@@ -803,7 +803,7 @@ export const servicePages: EnPage[] = [
       { q: "How much does ecommerce fulfilment cost?", a: "Storage starts from £3.50 + VAT per pallet per week. Pick and pack, packaging, delivery and returns are quoted per order and item, based on your products and monthly order volume." },
       { q: "Do I need my own UK company for ecommerce fulfilment?", a: "Not necessarily. Many overseas sellers hold stock in a UK warehouse and sell to UK customers with their existing company and a GB EORI number. Take tax advice on the right structure for your business." },
     ],
-    related: ["/en/pick-and-pack", "/en/uk-ecommerce-logistics", "/en/shopify-fulfilment-uk", "/en/uk-warehousing-pricing"],
+    related: ["/en/pick-and-pack", "/en/uk-ecommerce-logistics", "/en/shopify-fulfilment-uk", "/en/uk-warehousing-pricing", "/en/blog/how-to-choose-a-uk-3pl"],
   },
   {
     slug: "/en/amazon-fulfilment-uk",
@@ -901,6 +901,6 @@ export const servicePages: EnPage[] = [
       { q: "Can the Essex warehouse receive full containers?", a: "Yes. The warehouse receives 20ft, 40ft and 40ft high-cube FCL containers as well as LCL and palletised part loads. Each delivery is counted, checked for visible damage and booked into Mintsoft WMS." },
       { q: "How much does storage cost at the Essex warehouse?", a: "Standard pallet storage starts from £3.50 + VAT per pallet per week, so 10 pallets for 4 weeks start at £140 + VAT. Goods-in, handling, fulfilment and delivery are quoted for your operation." },
     ],
-    related: ["/en/london-gateway-tilbury-warehousing", "/en/felixstowe-port-warehousing", "/en/locations/port-to-warehouse-logistics", "/en/container-unloading", "/en/uk-import-logistics", "/en/pallet-storage", "/en/uk-fulfilment", "/en/london-warehousing"],
+    related: ["/en/london-gateway-tilbury-warehousing", "/en/felixstowe-port-warehousing", "/en/locations/port-to-warehouse-logistics", "/en/container-unloading", "/en/uk-import-logistics", "/en/pallet-storage", "/en/uk-fulfilment", "/en/london-warehousing", "/en/uk-warehousing-benefits", "/en/about-us"],
   },
 ];

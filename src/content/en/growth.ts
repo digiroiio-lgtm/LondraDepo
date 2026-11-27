@@ -74,7 +74,7 @@ export const growthPages: EnPage[] = [
       { q: "Is LondraDepo the importer of record?", a: "No, not by default. Using our warehouse or our group's customs service does not make LondraDepo or Arca Trade Group the importer of record, and duty and import VAT remain the importer's responsibility." },
       { q: "Is your warehouse a bonded warehouse?", a: "No. LondraDepo is not an HMRC-authorised customs warehouse. Goods are stored after they have been cleared into free circulation." },
     ],
-    related: ["/en/blog/uk-import-documents", "/en/blog/uk-import-costs", "/en/container-unloading", "/en/locations/port-to-warehouse-logistics", "/en/blog/uk-importing-guide", "/en/uk-customs-clearance", "/en/uk-market-entry", "/en/pallet-storage"],
+    related: ["/en/blog/uk-import-documents", "/en/blog/uk-import-costs", "/en/container-unloading", "/en/locations/port-to-warehouse-logistics", "/en/blog/uk-importing-guide", "/en/uk-customs-clearance", "/en/uk-market-entry", "/en/pallet-storage", "/en/blog/bonded-warehouse-vs-duty-paid-storage", "/en/uk-warehousing-for-turkish-exporters"],
     cta: { h2: "Plan your next UK import", text: "Tell us the product, origin, volumes and how the goods will arrive. We will quote freight, customs, unloading and storage together or separately." },
   },
   {
@@ -140,7 +140,7 @@ export const growthPages: EnPage[] = [
       { q: "Can you arrange haulage from the port?", a: "Yes. Arca Trade Group, the company that operates LondraDepo, can arrange transport from the port to our warehouse, or your own forwarder can deliver." },
       { q: "Can unloaded goods go straight out again?", a: "Yes. Goods can be cross-docked to UK customers or Amazon, or stored and released as orders arrive." },
     ],
-    related: ["/en/shipping-container-types", "/en/london-gateway-tilbury-warehousing", "/en/felixstowe-port-warehousing", "/en/container-arrival-planner", "/en/uk-import-logistics", "/en/locations/port-to-warehouse-logistics", "/en/pallet-storage", "/en/essex-warehouse", "/en/cargo-handling"],
+    related: ["/en/shipping-container-types", "/en/london-gateway-tilbury-warehousing", "/en/felixstowe-port-warehousing", "/en/container-arrival-planner", "/en/uk-import-logistics", "/en/locations/port-to-warehouse-logistics", "/en/pallet-storage", "/en/essex-warehouse", "/en/cargo-handling", "/en/industries/automotive-parts"],
     cta: { h2: "Book a container unloading quote", text: "Send the container size, ETA, packing list and whether goods are palletised or loose-loaded." },
   },
   {

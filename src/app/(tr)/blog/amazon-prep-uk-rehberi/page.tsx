@@ -1,4 +1,5 @@
 import FaqJsonLd from "@/components/FaqJsonLd";
+import { GuideNextLinks, GuideQuote } from "@/components/GuideNext";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -222,15 +223,17 @@ export default function AmazonPrepRehberiPage() {
             <RelatedArticles articles={relatedArticles} />
 
             <div className="pt-8 border-t border-slate-200">
-              <p className="text-slate-500 text-sm mb-3">İlgili hizmetler:</p>
+              <p className="text-slate-500 text-sm mb-3">İlgili rehber ve sayfalar:</p>
               <div className="flex flex-wrap gap-3">
                 <Link href="/blog/ingiltere-depo-rehberi" className="text-sm text-[#0b2545] hover:underline">→ İngiltere Depo Rehberi</Link>
                 <Link href="/blog/ingiltere-fulfillment-nedir" className="text-sm text-[#0b2545] hover:underline">→ Fulfillment Nedir?</Link>
                 <Link href="/amazon-prep-uk" className="text-sm text-[#0b2545] hover:underline">→ Amazon Prep Hizmetimiz</Link>
               </div>
             </div>
+            <GuideNextLinks slug="amazon-prep-uk-rehberi" />
           </div>
         </article>
+        <GuideQuote slug="amazon-prep-uk-rehberi" />
 
         <script
           type="application/ld+json"

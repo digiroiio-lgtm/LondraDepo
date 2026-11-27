@@ -9,7 +9,7 @@ const TEL = "tel:+447554195190";
 export default function Footer() {
   return (
     <footer id="iletisim" className="bg-[#0b2545] text-slate-300 pt-16 pb-8 px-4">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
         <div>
           <div className="text-white font-bold text-xl mb-3">
             Londra<span className="text-red-400">Depo</span>.com
@@ -25,16 +25,18 @@ export default function Footer() {
           <div className="text-white font-semibold mb-3">Hizmetler</div>
           <ul className="space-y-2 text-sm">
             <li><a href="/ingiltere-depo" className="hover:text-white transition">İngiltere Depo</a></li>
+            <li><a href="/palet-depolama" className="hover:text-white transition">Palet Depolama</a></li>
             <li><a href="/londra-depo" className="hover:text-white transition">Londra Depo</a></li>
+            <li><a href="/essex-depo" className="hover:text-white transition">Essex Depo</a></li>
+            <li><a href="/turk-sirketleri-icin-ingiltere-depo" className="hover:text-white transition">Türk Şirketleri İçin İngiltere Depo</a></li>
             <li><a href="/ingiltere-e-ticaret-lojistigi" className="hover:text-white transition">İngiltere E-Ticaret Lojistiği</a></li>
             <li><a href="/siparis-toplama-paketleme" className="hover:text-white transition">Sipariş Toplama & Paketleme</a></li>
             <li><a href="/ingiltere-depo-fiyatlari" className="hover:text-white transition">İngiltere Depo Fiyatları</a></li>
-            <li><a href="/ingiltere-depo-maliyet-hesaplama" className="hover:text-white transition">Depo Maliyet Hesaplama</a></li>
-            <li><a href="/konteyner-varis-planlayici" className="hover:text-white transition">Konteyner Varış Planlayıcı</a></li>
             <li><a href="/ingiltere-ithalat-lojistigi" className="hover:text-white transition">İngiltere İthalat Lojistiği</a></li>
             <li><a href="/konteyner-bosaltma" className="hover:text-white transition">Konteyner Boşaltma</a></li>
             <li><a href="/limandan-depoya-lojistik" className="hover:text-white transition">Limandan Depoya Lojistik</a></li>
             <li><a href="/ambalaj-catering-depolama" className="hover:text-white transition">Ambalaj ve Catering Depolama</a></li>
+            <li><a href="/otomotiv-yedek-parca-depolama" className="hover:text-white transition">Otomotiv Yedek Parça Depolama</a></li>
             <li><a href="/sektorler" className="hover:text-white transition">Sektörler</a></li>
             <li><a href="/london-gateway-tilbury-depo" className="hover:text-white transition">London Gateway &amp; Tilbury Depo</a></li>
             <li><a href="/felixstowe-liman-depo" className="hover:text-white transition">Felixstowe Liman Depo</a></li>
@@ -57,6 +59,22 @@ export default function Footer() {
             <li><a href="/iletisim" className="hover:text-white transition">İletişim</a></li>
             <li><Link href="/en" className="hover:text-white transition" lang="en" hrefLang="en">English website</Link></li>
             <li><a href="/blog" className="hover:text-white transition">Blog & Rehberler</a></li>
+            <li><a href="/teklif-al" className="hover:text-white transition font-semibold text-white">Teklif Al</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div className="text-white font-semibold mb-3">Rehberler ve Araçlar</div>
+          <ul className="space-y-2 text-sm">
+            <li><a href="/blog/ingiltere-depo-rehberi" className="hover:text-white transition">İngiltere Depo Rehberi</a></li>
+            <li><a href="/blog/ingiltere-depo-fiyatlari-2026" className="hover:text-white transition">Depo Fiyatları 2026</a></li>
+            <li><a href="/blog/turkiyeden-ingiltereye-ihracat-rehberi" className="hover:text-white transition">İhracat Rehberi</a></li>
+            <li><a href="/blog/ingiltere-ithalat-maliyetleri" className="hover:text-white transition">İthalat Maliyetleri</a></li>
+            <li><a href="/blog/amazon-prep-uk-rehberi" className="hover:text-white transition">Amazon Prep Rehberi</a></li>
+            <li><a href="/ingiltere-depo-maliyet-hesaplama" className="hover:text-white transition">Depo Maliyet Hesaplama</a></li>
+            <li><a href="/cbm-palet-hesaplama" className="hover:text-white transition">CBM ve Palet Hesaplama</a></li>
+            <li><a href="/konteyner-varis-planlayici" className="hover:text-white transition">Konteyner Varış Planlayıcı</a></li>
+            <li><a href="/konteyner-tipleri" className="hover:text-white transition">Konteyner Tipleri</a></li>
           </ul>
         </div>
 
@@ -91,14 +109,16 @@ export default function Footer() {
           warehouse ve İngiltere fulfillment çözümleri. Tüm hakları saklıdır.
         </p>
         <p className="text-slate-400">
-          Arca Trade Group Ltd · Registered in England &amp; Wales · Company No: 13247691 · VAT: GB353315322
+          Arca Trade Group Ltd · İngiltere ve Galler&apos;de kayıtlı (Registered in England &amp; Wales) · Şirket No: 13247691 · KDV: GB353315322
+        </p>
+        <p className="text-slate-400">
+          Kayıtlı ofis ve depo: Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY, Birleşik Krallık ·{" "}
+          <a href="mailto:support@londradepo.com" className="hover:text-white transition">support@londradepo.com</a>
         </p>
         <div className="flex flex-wrap items-center justify-center gap-4">
           <a href="/privacy-policy" className="hover:text-white transition">Gizlilik Politikası</a>
           <a href="/cookie-policy" className="hover:text-white transition">Çerez Politikası</a>
           <a href="/sozlesme-kosullari" className="hover:text-white transition">Sözleşme Koşulları</a>
-          {/* TODO: confirm email — replace YOUR_EMAIL with actual address */}
-          {/* <a href="mailto:YOUR_EMAIL" className="hover:text-white transition">E-posta</a> */}
           <a href="https://www.linkedin.com/company/arcatradegroup/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">LinkedIn</a>
           <a href="https://bifa.org/members/arca-trade-group-ltd/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">BIFA Üyesi</a>
           <CookieSettingsButton />

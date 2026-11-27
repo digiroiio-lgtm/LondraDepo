@@ -37,13 +37,16 @@ export default function ConditionalAnalytics({ gaId }: { gaId: string }) {
     return () => window.removeEventListener("consentChange", handleConsentChange);
   }, []);
 
-  if (!analyticsEnabled) return null;
-
+  // Advanced Consent Mode: gtag.js always loads (cookieless pings until consent); Vercel analytics stay consent-gated.
   return (
     <>
       <GoogleAnalytics gaId={gaId} />
-      <Analytics />
-      <SpeedInsights />
+      {analyticsEnabled && (
+        <>
+          <Analytics />
+          <SpeedInsights />
+        </>
+      )}
     </>
   );
 }

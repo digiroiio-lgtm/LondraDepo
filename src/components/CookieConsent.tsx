@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import CookiePreferencesModal from "./CookiePreferencesModal";
 
@@ -77,6 +77,26 @@ export default function CookieConsent({ lang = "tr" }: { lang?: "tr" | "en" }) {
   const [prefs, setPrefs] = useState<CookiePrefs>(DEFAULT_PREFS);
   const [modalPrefs, setModalPrefs] = useState<CookiePrefs>(DEFAULT_PREFS);
 
+  // Keep floating buttons (WhatsApp) above the banner: publish its height as --cookie-banner-h on <html>.
+  const bannerRef = useRef<HTMLDivElement | null>(null);
+  useEffect(() => {
+    const root = document.documentElement;
+    const el = bannerRef.current;
+    if (!showBanner || !el) {
+      root.style.setProperty("--cookie-banner-h", "0px");
+      return;
+    }
+    const set = () => root.style.setProperty("--cookie-banner-h", `${el.offsetHeight}px`);
+    set();
+    const ro = new ResizeObserver(set);
+    ro.observe(el);
+    return () => {
+      ro.disconnect();
+      root.style.setProperty("--cookie-banner-h", "0px");
+    };
+  }, [showBanner]);
+
+
   // Hydration-safe mount
   useEffect(() => {
     setMounted(true);
@@ -138,6 +158,7 @@ export default function CookieConsent({ lang = "tr" }: { lang?: "tr" | "en" }) {
       {/* Cookie Banner */}
       {showBanner && (
         <div
+          ref={bannerRef}
           role="dialog"
           aria-modal="false"
           aria-label={t.aria}

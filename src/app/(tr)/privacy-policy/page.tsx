@@ -17,7 +17,17 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-const LAST_UPDATED = "Eylül 2026";
+const LAST_UPDATED = "24 Kasım 2026";
+
+/** Processors acting for us (name, purpose, where data is processed). */
+const PROCESSORS_TR: [string, string, string][] = [
+  ["Vercel Inc.", "Web sitesinin barındırılması, sunucu kayıtları, Vercel Analytics (onayla)", "ABD / AB"],
+  ["Google (Analytics 4, Workspace / Gmail)", "Site istatistikleri (Consent Mode ile), e-posta yazışmaları", "ABD / AB"],
+  ["Formspree", "Web sitesindeki teklif ve kontrol listesi formlarının iletilmesi", "ABD"],
+  ["Calendly", "Görüşme randevusu planlama", "ABD"],
+  ["WhatsApp (Meta)", "WhatsApp üzerinden yazışma (siz başlattığınızda)", "ABD / AB"],
+  ["Mintsoft", "Depo yönetim sistemi: müşterilerimizin stok ve sipariş verileri", "Birleşik Krallık"],
+];
 
 export default function PrivacyPolicyPage() {
   return (
@@ -45,15 +55,16 @@ export default function PrivacyPolicyPage() {
                 <strong> LondraDepo.com</strong> tarafından hazırlanmıştır. LondraDepo.com,
                 <strong> Arca Trade Group Ltd</strong> (şirket no: 13247691, VAT: GB353315322) adına faaliyet
                 göstermekte olup İngiltere&apos;de kayıtlı bir şirkettir. Kişisel verilerinizin
-                işlenmesinden sorumlu veri işleyici olarak UK GDPR ve PECR kapsamındaki
-                yükümlülüklere uymaktayız.
+                işlenmesinden sorumlu <strong>veri sorumlusu</strong> (data controller) olarak UK GDPR, Data
+                Protection Act 2018 ve PECR kapsamındaki yükümlülüklere uymaktayız.
               </p>
               <div className="mt-4 bg-slate-50 rounded-xl p-4 text-sm text-slate-600">
-                <strong>İletişim:</strong>{" "}
-                <Link href="/iletisim" className="text-[#0b2545] underline">
-                  londradepo.com/iletisim
-                </Link>{" "}
-                | Essex, İngiltere
+                <strong>Veri talepleri ve iletişim:</strong>{" "}
+                <a href="mailto:support@londradepo.com" className="text-[#0b2545] underline">support@londradepo.com</a>
+                {" "}·{" "}
+                <Link href="/iletisim" className="text-[#0b2545] underline">londradepo.com/iletisim</Link>
+                <br />
+                <strong>Kayıtlı ofis:</strong> Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY, Birleşik Krallık
               </div>
             </section>
 
@@ -74,7 +85,7 @@ export default function PrivacyPolicyPage() {
                     Analitik çerezlere onay vermeniz halinde, Google Analytics 4 ve Vercel
                     Analytics üzerinden ziyaret ettiğiniz sayfalar ve site içi etkileşimler gibi
                     kullanım verileri işlenebilir. Bu verileri site performansını anlamak ve
-                    geliştirmek için kullanırız.
+                    geliştirmek için kullanırız. Analitik çerezlere onay vermezseniz Google Analytics, Google Consent Mode ile çalışır: yalnızca çerezsiz sinyaller alır (ör. bir sayfanın görüntülendiği veya bir düğmeye tıklandığı), cihazınıza çerez veya kimlik bilgisi kaydetmez; bu veriler yalnızca toplu, modellenmiş istatistikler için kullanılır. Reklam amaçlı depolama her zaman kapalıdır.
                   </p>
                 </div>
                 <div>
@@ -123,10 +134,26 @@ export default function PrivacyPolicyPage() {
             <section className="mb-8">
               <h2 className="text-xl font-bold text-[#0b2545] mb-3">5. Verilerin Paylaşımı</h2>
               <p className="text-slate-600 leading-relaxed text-sm">
-                Kişisel verileriniz, hizmet altyapımızın bir parçası olan güvenilir üçüncü taraf
-                servis sağlayıcılarla (ör. barındırma, analitik) paylaşılabilir. Bu sağlayıcılar,
-                verileri yalnızca belirtilen amaçlar için kullanmakla yükümlüdür. Verileriniz
-                hiçbir koşulda reklam amaçlı üçüncü taraflara onayınız olmaksızın satılmaz.
+                Kişisel verileriniz, hizmet altyapımızın bir parçası olan ve bizim adımıza veri işleyen
+                (data processor) aşağıdaki sağlayıcılarla paylaşılabilir. Bu sağlayıcılar verileri yalnızca
+                belirtilen amaçlar için kullanmakla yükümlüdür. Verileriniz hiçbir koşulda satılmaz.
+              </p>
+              <div className="overflow-x-auto mt-4">
+                <table className="text-sm text-slate-600 w-full">
+                  <thead><tr className="text-left"><th className="pr-4 pb-2">Sağlayıcı</th><th className="pr-4 pb-2">Amaç</th><th className="pb-2">Konum</th></tr></thead>
+                  <tbody>
+                    {PROCESSORS_TR.map(([n, a, l]) => (
+                      <tr key={n} className="border-t border-slate-200"><td className="pr-4 py-2 font-medium">{n}</td><td className="pr-4 py-2">{a}</td><td className="py-2">{l}</td></tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <h3 className="font-semibold text-slate-800 mt-5 mb-1">Yurt dışına veri aktarımı</h3>
+              <p className="text-slate-600 leading-relaxed text-sm">
+                Yukarıdaki sağlayıcıların bir kısmı verileri ABD&apos;de veya Birleşik Krallık dışında işler.
+                Bu aktarımlar, Birleşik Krallık&apos;ın yeterlilik kararları (UK-ABD veri köprüsü dahil) veya
+                Uluslararası Veri Aktarım Sözleşmesi / Standart Sözleşme Hükümleri (IDTA / SCC ek protokolü)
+                gibi UK GDPR&apos;a uygun güvencelerle yapılır.
               </p>
             </section>
 
@@ -134,7 +161,7 @@ export default function PrivacyPolicyPage() {
               <h2 className="text-xl font-bold text-[#0b2545] mb-3">6. Veri Saklama Süreleri</h2>
               <ul className="list-disc pl-5 text-slate-600 space-y-2 text-sm leading-relaxed">
                 <li>İletişim formu verileri: Talep sonuçlanana kadar veya en fazla 2 yıl</li>
-                <li>Analitik veriler: Maksimum 26 ay (anonim)</li>
+                <li>Analitik veriler: Google Analytics&apos;te en fazla 14 ay; çerez ömrü en fazla 2 yıl</li>
                 <li>Teknik sunucu günlükleri: 90 güne kadar</li>
                 <li>Çerez onayı kaydı: 1 yıl veya tarayıcı verisi silinene kadar</li>
               </ul>

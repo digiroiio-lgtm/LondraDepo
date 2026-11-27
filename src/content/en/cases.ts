@@ -364,6 +364,6 @@ export const caseHub: EnPage = {
     { q: "Are these real operations?", a: "Yes. Each case study describes a live operation run from LondraDepo's warehouse in Rayleigh, Essex, with the starting point, how storage, fulfilment and distribution were set up and what changed." },
     { q: "How can I start an operation like these?", a: "Share your product, expected volumes and sales channels using the quote form. You can start small, with a single trial pallet, and the team will plan goods-in, storage and the order flow with you." },
   ],
-  related: ["/en/industries", "/en/uk-market-entry", "/en/uk-import-logistics", "/en/uk-fulfilment", "/en/pallet-storage"],
+  related: ["/en/industries", "/en/uk-market-entry", "/en/uk-import-logistics", "/en/uk-fulfilment", "/en/pallet-storage", "/en/about-us"],
   cta: { h2: "Setting up a UK operation?", text: "Share your operating model and we will plan the UK warehouse and logistics with you." },
 };

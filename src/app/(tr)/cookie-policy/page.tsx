@@ -17,7 +17,15 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-const LAST_UPDATED = "27 Eylül 2026";
+const LAST_UPDATED = "24 Kasım 2026";
+
+/** Cookies and storage the site sets (name, provider / purpose, lifetime, category). */
+const COOKIES_TR: [string, string, string, string][] = [
+  ["londradepo_cookie_consent", "LondraDepo: çerez tercihinizi hatırlar (yerel depolama)", "Siz silene kadar", "Zorunlu"],
+  ["_ga", "Google Analytics: ziyaretçileri ayırt eder", "2 yıl", "Analitik (onayla)"],
+  ["_ga_MTYWY5LWCW", "Google Analytics: oturum durumu", "2 yıl", "Analitik (onayla)"],
+  ["Vercel Analytics / Speed Insights", "Vercel: sayfa görüntüleme ve hız ölçümü, çerez kullanmaz", "—", "Analitik (onayla yüklenir)"],
+];
 
 export default function CookiePolicyPage() {
   return (
@@ -58,13 +66,13 @@ export default function CookiePolicyPage() {
                     <span className="text-xs px-2 py-0.5 rounded-full bg-green-100 text-green-700 font-medium">Her Zaman Aktif</span>
                   </div>
                   <p className="text-slate-600 text-sm leading-relaxed">
-                    Sitenin temel işlevleri için gereklidir. Oturum güvenliği, form koruması ve
-                    altyapı ayarları gibi kritik süreçleri kapsar. Bu çerezler sitenizin
-                    çalışabilmesi için zorunludur ve devre dışı bırakılamaz.
+                    Sitenin temel işlevleri için gereklidir; şu anda bu kapsamda yalnızca çerez
+                    tercihinizi hatırlayan kayıt (tarayıcının yerel depolamasında) kullanılır.
+                    Devre dışı bırakılamaz.
                   </p>
                   <div className="mt-3 text-sm">
                     <strong className="text-slate-700">Saklama süresi:</strong>{" "}
-                    <span className="text-slate-500">Oturum süresince veya maksimum 1 yıl</span>
+                    <span className="text-slate-500">Siz tarayıcı verilerinizi silene kadar</span>
                   </div>
                 </div>
 
@@ -76,7 +84,8 @@ export default function CookiePolicyPage() {
                   <p className="text-slate-600 text-sm leading-relaxed">
                     Ziyaretçi sayısı, en çok ziyaret edilen sayfalar ve kullanım süreleri gibi
                     istatistiksel verileri anonim olarak toplamamıza yardımcı olur. Bu veriler
-                    siteyi geliştirmek için kullanılır; kişisel kimliğinizi ifşa etmez.
+                    siteyi geliştirmek için kullanılır; kişisel kimliğinizi ifşa etmez. Onay vermezseniz
+                    Google Analytics çerez kullanmadan, yalnızca anonim ve toplu ölçüm için çalışır.
                   </p>
                   <div className="mt-3 text-sm">
                     <strong className="text-slate-700">Sağlayıcı:</strong>{" "}
@@ -84,7 +93,7 @@ export default function CookiePolicyPage() {
                   </div>
                   <div className="mt-1 text-sm">
                     <strong className="text-slate-700">Saklama süresi:</strong>{" "}
-                    <span className="text-slate-500">Maksimum 2 yıl</span>
+                    <span className="text-slate-500">Çerez ömrü en fazla 2 yıl; Google Analytics&apos;teki olay verisi en fazla 14 ay</span>
                   </div>
                 </div>
 
@@ -94,15 +103,29 @@ export default function CookiePolicyPage() {
                     <span className="text-xs px-2 py-0.5 rounded-full bg-orange-100 text-orange-700 font-medium">İzin Gerekli</span>
                   </div>
                   <p className="text-slate-600 text-sm leading-relaxed">
-                    İlgi alanlarınıza uygun reklamlar göstermek ve pazarlama kampanyalarının
-                    etkinliğini ölçmek için kullanılır. Google Ads ve Meta (Facebook/Instagram)
-                    gibi platformlarla paylaşılabilir. Bu çerezler yalnızca onayınız halinde aktif olur.
+                    Şu anda pazarlama veya reklam çerezi kullanmıyoruz; Google Analytics&apos;te reklam
+                    amaçlı depolama her zaman kapalıdır. İleride reklam ölçümü (ör. Google Ads, Meta)
+                    eklenirse bu çerezler yalnızca onayınızla etkinleşir ve bu sayfa güncellenir.
                   </p>
                   <div className="mt-3 text-sm">
                     <strong className="text-slate-700">Saklama süresi:</strong>{" "}
-                    <span className="text-slate-500">Maksimum 2 yıl</span>
+                    <span className="text-slate-500">Kullanılmıyor</span>
                   </div>
                 </div>
+              </div>
+            </section>
+
+            <section className="mb-8">
+              <h2 className="text-xl font-bold text-[#0b2545] mb-3">Kullanılan çerezler ve kayıtlar</h2>
+              <div className="overflow-x-auto">
+                <table className="text-sm text-slate-600 w-full">
+                  <thead><tr className="text-left"><th className="pr-4 pb-2">Ad</th><th className="pr-4 pb-2">Sağlayıcı / amaç</th><th className="pr-4 pb-2">Süre</th><th className="pb-2">Tür</th></tr></thead>
+                  <tbody>
+                    {COOKIES_TR.map(([n, a, d, t]) => (
+                      <tr key={n} className="border-t border-slate-200"><td className="pr-4 py-2 font-mono text-xs">{n}</td><td className="pr-4 py-2">{a}</td><td className="pr-4 py-2">{d}</td><td className="py-2">{t}</td></tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
             </section>
 
@@ -137,8 +160,10 @@ export default function CookiePolicyPage() {
               <h2 className="text-xl font-bold text-[#0b2545] mb-3">5. Üçüncü Taraf Çerezler</h2>
               <p className="text-slate-600 leading-relaxed">
                 Sitemiz bazı üçüncü taraf hizmetlerini kullanabilir. Bu hizmetlerin kendi çerez
-                politikaları geçerlidir. Yalnızca analitik veya pazarlama çerezlerine onay
-                verdiğinizde bu üçüncü taraf bağlantıları aktif hale gelir.
+                politikaları geçerlidir. Bu hizmetlerin çerezleri yalnızca analitik veya pazarlama
+                çerezlerine onay verdiğinizde yerleştirilir. Google Analytics tüm ziyaretçiler için
+                Consent Mode ile yüklenir; onayınız yoksa yalnızca çerezsiz, anonim sinyaller gönderir
+                ve cihazınıza hiçbir şey kaydetmez.
               </p>
             </section>
 
@@ -147,8 +172,8 @@ export default function CookiePolicyPage() {
               <p className="text-slate-600 leading-relaxed">
                 LondraDepo.com, İngiltere&apos;de faaliyet göstermekte olup UK GDPR ve Privacy and
                 Electronic Communications Regulations (PECR) kapsamındaki yükümlülüklere uymaktadır.
-                Zorunlu çerezler meşru menfaat temelinde, analitik ve pazarlama çerezleri ise
-                açık rızanıza (consent) dayanılarak kullanılmaktadır.
+                Zorunlu kayıtlar PECR&apos;deki &ldquo;kesinlikle gerekli&rdquo; (strictly necessary) istisnasına,
+                analitik ve pazarlama çerezleri ise açık rızanıza (consent) dayanılarak kullanılmaktadır.
               </p>
             </section>
 

@@ -3,7 +3,7 @@
 import Emoji from "@/components/visual/Emoji";
 import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
-import { trackCtaClick, trackFormStart, trackWhatsappClick } from "@/lib/gtag";
+import { trackCtaClick, trackFormStart, trackWhatsappClick, waVariant } from "@/lib/gtag";
 
 /**
  * Container arrival planner. Produces a suggested planning timeline from the ETA.
@@ -243,10 +243,10 @@ export default function ContainerPlanner({ lang = "en" }: { lang?: "en" | "tr" }
         {storeNote && <div className="mt-5 text-sm font-semibold text-[#0b2545]">{storeNote}</div>}
         <div className="mt-3 text-xs text-slate-500">{t.note}</div>
         <div className="mt-6 flex flex-col sm:flex-row flex-wrap gap-3 print:hidden">
-          <Link href={quoteHref} data-tracked="1" onClick={() => trackCtaClick(quoteHref, `container_planner_${lang}`)} className="text-center bg-[#d62839] hover:bg-[#c1121f] text-white font-semibold px-6 py-3 rounded-full transition">
+          <Link href={quoteHref} data-tracked="1" data-cta-source={`container_planner_${lang}`} onClick={() => trackCtaClick(quoteHref, `container_planner_${lang}`)} className="text-center bg-[#d62839] hover:bg-[#c1121f] text-white font-semibold px-6 py-3 rounded-full transition">
             {t.quote}
           </Link>
-          <a href={waHref} target="_blank" rel="noopener noreferrer" data-tracked="1" onClick={() => trackWhatsappClick(`container_planner_${lang}`)} className="text-center bg-green-700 hover:bg-green-800 text-white font-semibold px-6 py-3 rounded-full transition">
+          <a href={waHref} target="_blank" rel="noopener noreferrer" data-tracked="1" data-cta-source={`container_planner_${lang}`} onClick={() => trackWhatsappClick(`container_planner_${lang}`, waVariant(waHref))} className="text-center bg-green-700 hover:bg-green-800 text-white font-semibold px-6 py-3 rounded-full transition">
             {t.wa}
           </a>
           <button type="button" onClick={print} className="text-center border border-slate-300 hover:bg-white text-slate-700 font-semibold px-6 py-3 rounded-full transition">

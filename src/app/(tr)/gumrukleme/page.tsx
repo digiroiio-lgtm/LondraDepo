@@ -1,4 +1,5 @@
 import Emoji from "@/components/visual/Emoji";
+import RelatedLinks from "@/components/RelatedLinks";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -150,6 +151,7 @@ export default function GumruklernePage() {
         </section>
 
         <CtaCards />
+        <RelatedLinks links={[{ href: "/ingiltere-ithalat-lojistigi", label: "İngiltere ithalat lojistiği", note: "Limandan depoya tüm süreç" }, { href: "/blog/ithalat-belgeleri", label: "İthalat belgeleri rehberi" }, { href: "/blog/antrepo-nedir", label: "Antrepo nedir?", note: "Vergisi ödenmemiş depolama farkı" }, { href: "/blog/incoterms-rehberi", label: "Incoterms rehberi" }, { href: "/blog/ingiltere-ithalat-maliyetleri", label: "İthalat maliyetleri", note: "Gümrük vergisi ve KDV" }, { href: "/teklif-al", label: "Teklif al", note: "24 saat içinde dönüş" }]} />
       </main>
       <Footer />
       <StickyWhatsappCta />

@@ -2,7 +2,7 @@
 
 import Emoji from "@/components/visual/Emoji";
 import Image from "next/image";
-import { trackWhatsappClick, trackPhoneClick } from "@/lib/gtag";
+import { trackWhatsappClick, trackPhoneClick, waVariant } from "@/lib/gtag";
 
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20depo%20teklifi%20almak%20istiyorum.";
 const TEL = "tel:+447554195190";
@@ -41,7 +41,8 @@ export default function HeroSection() {
             target="_blank"
             rel="noopener noreferrer"
             data-tracked="1"
-            onClick={() => trackWhatsappClick("hero")}
+            data-cta-source="hero"
+            onClick={() => trackWhatsappClick("hero", waVariant(WHATSAPP))}
             className="inline-flex items-center justify-center gap-2 bg-[#d62839] hover:bg-[#c1121f] text-white font-bold px-8 py-4 rounded-full text-base transition shadow-lg"
           >
             <svg className="w-5 h-5 fill-white flex-shrink-0" viewBox="0 0 24 24" aria-hidden="true">
@@ -52,6 +53,7 @@ export default function HeroSection() {
           <a
             href={TEL}
             data-tracked="1"
+            data-cta-source="hero"
             onClick={() => trackPhoneClick("hero")}
             className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold px-8 py-4 rounded-full text-base transition"
           >

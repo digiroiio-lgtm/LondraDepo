@@ -2,27 +2,30 @@ import { MetadataRoute } from "next";
 
 import { SITE_URL } from "@/lib/site";
 
+/** Disallows repeated in every group: a crawler follows only the most specific group that names it. */
+const PRIVATE = ["/_next/", "/api/", "/panel"];
+
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/_next/", "/api/"],
+        disallow: PRIVATE,
       },
       // Explicitly welcome AI/LLM crawlers for GEO visibility
-      { userAgent: "GPTBot", allow: "/" },
-      { userAgent: "OAI-SearchBot", allow: "/" },
-      { userAgent: "ChatGPT-User", allow: "/" },
-      { userAgent: "ClaudeBot", allow: "/" },
-      { userAgent: "Claude-SearchBot", allow: "/" },
-      { userAgent: "Claude-User", allow: "/" },
-      { userAgent: "Claude-Web", allow: "/" },
-      { userAgent: "Anthropic-AI", allow: "/" },
-      { userAgent: "PerplexityBot", allow: "/" },
-      { userAgent: "Perplexity-User", allow: "/" },
-      { userAgent: "Google-Extended", allow: "/" },
-      { userAgent: "Bytespider", allow: "/" },
+      { userAgent: "GPTBot", allow: "/", disallow: PRIVATE },
+      { userAgent: "OAI-SearchBot", allow: "/", disallow: PRIVATE },
+      { userAgent: "ChatGPT-User", allow: "/", disallow: PRIVATE },
+      { userAgent: "ClaudeBot", allow: "/", disallow: PRIVATE },
+      { userAgent: "Claude-SearchBot", allow: "/", disallow: PRIVATE },
+      { userAgent: "Claude-User", allow: "/", disallow: PRIVATE },
+      { userAgent: "Claude-Web", allow: "/", disallow: PRIVATE },
+      { userAgent: "Anthropic-AI", allow: "/", disallow: PRIVATE },
+      { userAgent: "PerplexityBot", allow: "/", disallow: PRIVATE },
+      { userAgent: "Perplexity-User", allow: "/", disallow: PRIVATE },
+      { userAgent: "Google-Extended", allow: "/", disallow: PRIVATE },
+      { userAgent: "Bytespider", allow: "/", disallow: PRIVATE },
     ],
     sitemap: `${SITE_URL}/sitemap_index.xml`,
   };

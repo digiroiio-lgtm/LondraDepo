@@ -40,7 +40,6 @@ const company = [
   ["/en/felixstowe-port-warehousing", "Felixstowe Port Warehousing"],
   ["/en/uk-warehousing-benefits", "Why a UK Warehouse"],
   ["/en/uk-warehousing-pricing", "Pricing"],
-  ["/en/uk-storage-cost-calculator", "Storage Cost Calculator"],
   ["/en/container-arrival-planner", "Container Arrival Planner"],
   ["/en/case-studies", "Case Studies"],
   ["/en/blog", "Guides"],
@@ -48,10 +47,22 @@ const company = [
   ["/en/request-a-quote", "Request a Quote"],
 ] as const;
 
+const guides: [string, string][] = [
+  ["/en/blog/uk-warehousing-guide", "UK warehousing guide"],
+  ["/en/blog/how-to-choose-a-uk-3pl", "How to choose a UK 3PL"],
+  ["/en/blog/uk-warehousing-prices-2026", "UK warehousing prices 2026"],
+  ["/en/blog/uk-import-costs", "UK import costs"],
+  ["/en/blog/what-is-uk-fulfilment", "What is UK fulfilment?"],
+  ["/en/blog/amazon-prep-uk-guide", "Amazon prep guide"],
+  ["/en/uk-storage-cost-calculator", "Storage cost calculator"],
+  ["/en/cbm-pallet-calculator", "CBM and pallet calculator"],
+  ["/en/shipping-container-types", "Shipping container types"],
+];
+
 export default function FooterEn() {
   return (
     <footer className="bg-[#0b2545] text-slate-300 pt-16 pb-8 px-4">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
         <div>
           <div className="text-white font-bold text-xl mb-3">
             Londra<span className="text-red-400">Depo</span>.com
@@ -85,6 +96,15 @@ export default function FooterEn() {
         </div>
 
         <div>
+          <div className="text-white font-semibold mb-3">Guides and tools</div>
+          <ul className="space-y-2 text-sm">
+            {guides.map(([href, label]) => (
+              <li key={href}><Link href={href} className="hover:text-white transition">{label}</Link></li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
           <div className="text-white font-semibold mb-3">Contact</div>
           <div className="space-y-3 text-sm">
             <p>Reach our UK operations team on WhatsApp, by phone or by email. English and Turkish spoken.</p>
@@ -111,6 +131,10 @@ export default function FooterEn() {
         <p>© {new Date().getFullYear()} LondraDepo.com. UK warehousing and fulfilment. All rights reserved.</p>
         <p className="text-slate-400">
           Arca Trade Group Ltd · Registered in England &amp; Wales · Company No: 13247691 · VAT: GB353315322
+        </p>
+        <p className="text-slate-400">
+          Registered office and warehouse: Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY, United Kingdom ·{" "}
+          <a href="mailto:support@londradepo.com" className="hover:text-white transition">support@londradepo.com</a>
         </p>
         <div className="flex flex-wrap items-center justify-center gap-4">
           <Link href="/en/privacy-policy" className="hover:text-white transition">Privacy Policy</Link>

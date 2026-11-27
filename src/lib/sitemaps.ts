@@ -1,6 +1,7 @@
 import { EN_PAGES } from "@/content/en";
+import { PL_PAGES } from "@/content/pl";
 import type { PageKind } from "@/content/en/types";
-import { enAlternates, trAlternates, type Alternates } from "@/lib/i18n";
+import { enAlternates, localeAlternates, trAlternates, type Alternates } from "@/lib/i18n";
 import { SITE_URL } from "@/lib/site";
 import { TR_ARTICLES } from "@/content/tr-articles";
 
@@ -108,6 +109,17 @@ export function enEntries(): Entry[] {
   ];
 }
 
+/** Polish pages (wave 1) plus the standalone quote page. */
+export function plEntries(): Entry[] {
+  return [
+    ...PL_PAGES.map((p) => {
+      const [changefreq, priority] = EN_PRIORITY[p.kind];
+      return { path: p.slug, changefreq, priority, alternates: localeAlternates(p.slug), lastmod: p.modified };
+    }),
+    { path: "/pl/zapytanie-ofertowe", changefreq: "monthly" as Freq, priority: 0.8, alternates: localeAlternates("/pl/zapytanie-ofertowe"), lastmod: "2026-11-28" },
+  ];
+}
+
 const esc = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
 export function urlset(entries: Entry[]): string {
@@ -129,7 +141,7 @@ export function urlset(entries: Entry[]): string {
   ].join("\n");
 }
 
-export const CHILD_SITEMAPS = ["/sitemap-tr.xml", "/sitemap-en.xml"];
+export const CHILD_SITEMAPS = ["/sitemap-tr.xml", "/sitemap-en.xml", "/sitemap-pl.xml"];
 
 export function sitemapIndex(): string {
   return [

@@ -1,8 +1,8 @@
 # LondraDepo.com
 
-> UK warehousing, pallet storage, container unloading, ecommerce fulfilment, Amazon FBA prep and UK distribution from Rayleigh, Essex, near London, for Turkish and international businesses. Operated by Arca Trade Group Ltd. Turkish site at /, English at /en.
+> UK warehousing, pallet storage, container unloading, ecommerce fulfilment, Amazon FBA prep and UK distribution from Rayleigh, Essex, near London, for Turkish and international businesses. Operated by Arca Trade Group Ltd. Turkish site at /, English at /en, Polish at /pl.
 
-Last updated: 2026-11-27. 132 pages. Full text with every page's summary and FAQs: https://www.londradepo.com/llms-full.txt
+Last updated: 2026-11-27. 146 pages. Full text with every page's summary and FAQs: https://www.londradepo.com/llms-full.txt
 
 ## Key facts
 
@@ -17,7 +17,7 @@ Last updated: 2026-11-27. 132 pages. Full text with every page's summary and FAQ
 - Services: goods-in, pallet and carton storage, FCL/LCL container unloading, pick and pack, ecommerce fulfilment (Shopify, Amazon FBM, B2B), Amazon FBA prep, UK distribution. International freight and UK customs clearance are provided by Arca Trade Group.
 - Not a bonded (customs) warehouse: goods are stored after UK customs clearance.
 - Not an official Amazon or Shopify partner; LondraDepo provides independent storage and fulfilment.
-- Languages: Turkish site at /, English site at /en (UK spelling); every English page with a Turkish equivalent is linked by reciprocal hreflang.
+- Languages: Turkish site at /, English site at /en (UK spelling), Polish site at /pl; equivalent pages are linked by reciprocal hreflang.
 
 ## English pages (/en)
 
@@ -190,3 +190,28 @@ Last updated: 2026-11-27. 132 pages. Full text with every page's summary and FAQ
 - [Gizlilik Politikası](https://www.londradepo.com/privacy-policy): LondraDepo.com gizlilik politikası. Kişisel verilerinizin nasıl toplandığı, kullanıldığı, korunduğu ve UK GDPR kapsamındaki haklarınız hakkında bilgi. (pair: https://www.londradepo.com/en/privacy-policy)
 - [Çerez Politikası](https://www.londradepo.com/cookie-policy): LondraDepo.com çerez politikası. Sitemizde kullandığımız çerez türleri, amaçları ve çerez tercihlerinizi nasıl yönetebileceğiniz hakkında bilgi. (pair: https://www.londradepo.com/en/cookie-policy)
 - [Sözleşme Koşulları](https://www.londradepo.com/sozlesme-kosullari): LondraDepo.com hizmet sözleşmesi koşulları. Hizmet kapsamı, ödeme koşulları, sorumluluk sınırlamaları ve uygulanacak hukuk hakkında bilgi. (pair: https://www.londradepo.com/en/terms-and-conditions)
+
+## Polish pages (/pl)
+
+### Home
+
+- [Magazyn i fulfillment w Wielkiej Brytanii](https://www.londradepo.com/pl): Magazyn 3PL w Essex pod Londynem: składowanie palet od 3,50 £ + VAT tygodniowo, rozładunek kontenerów, fulfillment e-commerce, Amazon FBA prep i dystrybucja w UK. (pair: https://www.londradepo.com/en)
+
+### Services and locations
+
+- [Magazyn w Wielkiej Brytanii: Essex pod Londynem](https://www.londradepo.com/pl/magazyn-w-wielkiej-brytanii): Magazyn w Wielkiej Brytanii w Essex: przyjęcie towaru, składowanie palet i kartonów, WMS Mintsoft, realizacja zamówień i dostawy w UK. Palety od 3,50 £ + VAT. (pair: https://www.londradepo.com/en/uk-warehousing)
+- [Magazyn 3PL w Wielkiej Brytanii (Essex)](https://www.londradepo.com/pl/3pl-wielka-brytania): Operator 3PL w Wielkiej Brytanii: przyjęcie towaru, składowanie palet od 3,50 £ + VAT, pick and pack, fulfillment e-commerce i B2B, Amazon FBA prep i dostawy w UK. (pair: https://www.londradepo.com/en/3pl-uk)
+- [Składowanie palet w UK od 3,50 £ tygodniowo](https://www.londradepo.com/pl/skladowanie-palet): Składowanie palet w Essex pod Londynem od 3,50 £ + VAT za paletę tygodniowo: przyjęcie kontenerów i dostaw, bezpieczne składowanie, raporty i wysyłki B2B. (pair: https://www.londradepo.com/en/pallet-storage)
+- [Fulfillment e-commerce w Wielkiej Brytanii](https://www.londradepo.com/pl/fulfillment-ecommerce): Fulfillment e-commerce w UK z magazynu 3PL w Essex: Mintsoft WMS, pick and pack, pakowanie, etykiety wysyłkowe, dostawy w UK i obsługa zwrotów dla sklepów online. (pair: https://www.londradepo.com/en/ecommerce-fulfilment)
+- [Amazon FBA prep w Wielkiej Brytanii](https://www.londradepo.com/pl/amazon-fba-prep): Amazon FBA prep w UK: przyjęcie towaru, etykiety FNSKU, pakowanie zgodne z wymogami Amazon i planowe dostawy do centrów Amazon UK z magazynu w Essex. (pair: https://www.londradepo.com/en/amazon-prep-uk)
+- [Cennik magazynowania w UK 2026: palety od 3,50 £](https://www.londradepo.com/pl/cennik-magazynowania): Cennik magazynowania i fulfillmentu w Wielkiej Brytanii: składowanie palet od 3,50 £ + VAT tygodniowo, przykłady dla 5, 10 i 20 palet oraz pozycje oferty 3PL. (pair: https://www.londradepo.com/en/uk-warehousing-pricing)
+- [Import do Wielkiej Brytanii: transport i odprawa](https://www.londradepo.com/pl/import-do-wielkiej-brytanii): Import do Wielkiej Brytanii z jednej ręki: transport z UE, brytyjska odprawa celna, rozładunek, składowanie, fulfillment i dystrybucja z magazynu w Essex. (pair: https://www.londradepo.com/en/uk-import-logistics)
+- [Magazyn w UK dla polskich firm i producentów](https://www.londradepo.com/pl/magazyn-dla-polskich-firm): Jak polskie firmy sprzedają w Wielkiej Brytanii po Brexicie: transport z Polski, odprawa, magazyn w Essex, fulfillment i dystrybucja. Palety od 3,50 £ + VAT.
+
+### Company and legal
+
+- [Kontakt: magazyn LondraDepo w Essex](https://www.londradepo.com/pl/kontakt): Skontaktuj się z LondraDepo: formularz wyceny, WhatsApp +44 7554 195190, e-mail support@londradepo.com i adres magazynu w Rayleigh, Essex SS6 7FY. (pair: https://www.londradepo.com/en/contact)
+- [Polityka prywatności](https://www.londradepo.com/pl/polityka-prywatnosci): Jak LondraDepo.com (Arca Trade Group Ltd) zbiera, wykorzystuje i chroni dane osobowe zgodnie z UK GDPR i PECR oraz jak skorzystać ze swoich praw. (pair: https://www.londradepo.com/en/privacy-policy)
+- [Polityka cookies](https://www.londradepo.com/pl/polityka-cookies): Jakie pliki cookie i zapisy w przeglądarce stosuje LondraDepo.com (niezbędne i analityczne), jak przechowujemy zgodę i jak zmienić ustawienia plików cookie. (pair: https://www.londradepo.com/en/cookie-policy)
+- [Regulamin usług](https://www.londradepo.com/pl/regulamin): Ogólne warunki usług magazynowania, fulfillmentu, obsługi towaru, koordynacji odprawy celnej i dystrybucji świadczonych przez Arca Trade Group Ltd pod marką LondraDepo. (pair: https://www.londradepo.com/en/terms-and-conditions)
+- [Zapytanie ofertowe: magazyn w Wielkiej Brytanii](https://www.londradepo.com/pl/zapytanie-ofertowe): Poproś o wycenę magazynowania, składowania palet, rozładunku kontenerów, fulfillmentu, Amazon FBA prep lub dystrybucji w UK. Palety od 3,50 £ + VAT tygodniowo. (pair: https://www.londradepo.com/en/request-a-quote)

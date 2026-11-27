@@ -5,6 +5,8 @@ import Link from "next/link";
 import { useForm } from "@formspree/react";
 import { useFormTracking } from "@/components/useFormTracking";
 import { QUOTE_SERVICES, type QuoteService } from "@/content/en/cta";
+import { QF } from "@/i18n/quote-form";
+import type { ViewLocale } from "@/i18n/view";
 
 const FORMSPREE_ID = "xoejvawy";
 
@@ -50,7 +52,9 @@ const EMPTY: Fields = {
 
 const NEEDS_ORDERS: ReadonlyArray<QuoteService> = ["fulfilment", "amazon-prep"];
 
-export default function QuoteFormEn({ defaultService, formId = "en_request_a_quote" }: { defaultService?: QuoteService; formId?: string } = {}) {
+export default function QuoteFormEn({ defaultService, formId = "en_request_a_quote", lang = "en" }: { defaultService?: QuoteService; formId?: string; lang?: ViewLocale } = {}) {
+  const t = QF[lang];
+  const o = (v: string) => t.opt[v] ?? v;
   const [f, setF] = useState<Fields>({ ...EMPTY, service: defaultService ?? "" });
   const [errors, setErrors] = useState<Partial<Record<keyof Fields, string>>>({});
   const [tracking, setTracking] = useState<Record<string, string>>({});
@@ -106,15 +110,15 @@ export default function QuoteFormEn({ defaultService, formId = "en_request_a_quo
 
   function validate() {
     const e: Partial<Record<keyof Fields, string>> = {};
-    if (!f.name.trim()) e.name = "Please enter your full name.";
-    if (!f.company.trim()) e.company = "Please enter your business name.";
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.email)) e.email = "Please enter a valid business email.";
-    if (!f.country) e.country = "Please select your country.";
-    if (!f.service) e.service = "Please select the service you need.";
-    if (!f.category) e.category = "Please select a product category.";
-    if (!f.pallets) e.pallets = "Please select an estimate.";
-    if (showOrders && !f.orders) e.orders = "Please select your monthly order volume.";
-    if (!f.consent) e.consent = "Please confirm so we can contact you about your enquiry.";
+    if (!f.name.trim()) e.name = t.errors.name;
+    if (!f.company.trim()) e.company = t.errors.company;
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.email)) e.email = t.errors.email;
+    if (!f.country) e.country = t.errors.country;
+    if (!f.service) e.service = t.errors.service;
+    if (!f.category) e.category = t.errors.category;
+    if (!f.pallets) e.pallets = t.errors.pallets;
+    if (showOrders && !f.orders) e.orders = t.errors.orders;
+    if (!f.consent) e.consent = t.errors.consent;
     setErrors(e);
     ft.invalid(Object.keys(e));
     return Object.keys(e).length === 0;
@@ -124,9 +128,9 @@ export default function QuoteFormEn({ defaultService, formId = "en_request_a_quo
     ev.preventDefault();
     if (!validate()) return;
     await submit({
-      _subject: `New EN quote request: ${f.company} (${f.country})`,
+      _subject: `New ${lang.toUpperCase()} quote request: ${f.company} (${f.country})`,
       form: formId,
-      page_lang: "en",
+      page_lang: lang,
       page_path: window.location.pathname,
       name: f.name,
       company: f.company,
@@ -147,14 +151,12 @@ export default function QuoteFormEn({ defaultService, formId = "en_request_a_quo
   if (state.succeeded) {
     return (
       <div role="status" className="rounded-2xl border border-green-200 bg-green-50 p-8 text-center">
-        <h2 className="text-2xl font-bold text-[#0b2545] mb-3">Thank you, your enquiry has been sent</h2>
-        <p className="text-slate-700 mb-2">Our warehouse team will review your requirements and contact you by email.</p>
+        <h2 className="text-2xl font-bold text-[#0b2545] mb-3">{t.successTitle}</h2>
+        <p className="text-slate-700 mb-2">{t.successText}</p>
         <p className="text-slate-700">
-          Need to talk sooner? Message us on{" "}
           <a href="https://wa.me/447554195190" className="font-semibold text-green-700 underline" target="_blank" rel="noopener noreferrer">
-            WhatsApp
-          </a>{" "}
-          or call +44 7554 195190.
+            {t.successTalk("WhatsApp")}
+          </a>
         </p>
       </div>
     );
@@ -168,58 +170,58 @@ export default function QuoteFormEn({ defaultService, formId = "en_request_a_quo
   return (
     <form ref={ft.ref} onSubmit={onSubmit} noValidate className="grid gap-5 sm:grid-cols-2 rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 shadow-sm">
       <div>
-        <label htmlFor={`${formId}-name`} className={label}>Full name *</label>
+        <label htmlFor={`${formId}-name`} className={label}>{t.labels.name}</label>
         <input id={`${formId}-name`} autoComplete="name" className={input} value={f.name} onChange={(e) => set("name", e.target.value)} {...aria("name")} />
         {err("name")}
       </div>
       <div>
-        <label htmlFor={`${formId}-company`} className={label}>Business name *</label>
+        <label htmlFor={`${formId}-company`} className={label}>{t.labels.company}</label>
         <input id={`${formId}-company`} autoComplete="organization" className={input} value={f.company} onChange={(e) => set("company", e.target.value)} {...aria("company")} />
         {err("company")}
       </div>
       <div>
-        <label htmlFor={`${formId}-email`} className={label}>Business email *</label>
+        <label htmlFor={`${formId}-email`} className={label}>{t.labels.email}</label>
         <input id={`${formId}-email`} type="email" autoComplete="email" className={input} value={f.email} onChange={(e) => set("email", e.target.value)} {...aria("email")} />
         {err("email")}
       </div>
       <div>
-        <label htmlFor={`${formId}-country`} className={label}>Country *</label>
+        <label htmlFor={`${formId}-country`} className={label}>{t.labels.country}</label>
         <select id={`${formId}-country`} className={input} value={f.country} onChange={(e) => set("country", e.target.value)} {...aria("country")}>
-          <option value="">Select…</option>
-          {COUNTRIES.map((c) => <option key={c}>{c}</option>)}
+          <option value="">{t.select}</option>
+          {COUNTRIES.map((c) => <option key={c} value={c}>{o(c)}</option>)}
         </select>
         {err("country")}
       </div>
       <div>
-        <label htmlFor={`${formId}-service`} className={label}>Service needed *</label>
+        <label htmlFor={`${formId}-service`} className={label}>{t.labels.service}</label>
         <select id={`${formId}-service`} className={input} value={f.service} onChange={(e) => set("service", e.target.value as QuoteService)} {...aria("service")}>
-          <option value="">Select…</option>
-          {(Object.keys(QUOTE_SERVICES) as QuoteService[]).map((k) => <option key={k} value={k}>{QUOTE_SERVICES[k]}</option>)}
+          <option value="">{t.select}</option>
+          {(Object.keys(QUOTE_SERVICES) as QuoteService[]).map((k) => <option key={k} value={k}>{t.services[k] ?? QUOTE_SERVICES[k]}</option>)}
         </select>
         {err("service")}
       </div>
       <div>
-        <label htmlFor={`${formId}-category`} className={label}>Product category *</label>
+        <label htmlFor={`${formId}-category`} className={label}>{t.labels.category}</label>
         <select id={`${formId}-category`} className={input} value={f.category} onChange={(e) => set("category", e.target.value)} {...aria("category")}>
-          <option value="">Select…</option>
-          {PRODUCT_CATEGORIES.map((c) => <option key={c}>{c}</option>)}
+          <option value="">{t.select}</option>
+          {PRODUCT_CATEGORIES.map((c) => <option key={c} value={c}>{o(c)}</option>)}
         </select>
         {err("category")}
       </div>
       <div>
-        <label htmlFor={`${formId}-pallets`} className={label}>Estimated storage *</label>
+        <label htmlFor={`${formId}-pallets`} className={label}>{t.labels.pallets}</label>
         <select id={`${formId}-pallets`} className={input} value={f.pallets} onChange={(e) => set("pallets", e.target.value)} {...aria("pallets")}>
-          <option value="">Select…</option>
-          {PALLET_BANDS.map((c) => <option key={c}>{c}</option>)}
+          <option value="">{t.select}</option>
+          {PALLET_BANDS.map((c) => <option key={c} value={c}>{o(c)}</option>)}
         </select>
         {err("pallets")}
       </div>
       {showOrders ? (
         <div>
-          <label htmlFor={`${formId}-orders`} className={label}>Monthly orders *</label>
+          <label htmlFor={`${formId}-orders`} className={label}>{t.labels.orders}</label>
           <select id={`${formId}-orders`} className={input} value={f.orders} onChange={(e) => set("orders", e.target.value)} {...aria("orders")}>
-            <option value="">Select…</option>
-            {ORDER_BANDS.map((c) => <option key={c}>{c}</option>)}
+            <option value="">{t.select}</option>
+            {ORDER_BANDS.map((c) => <option key={c} value={c}>{o(c)}</option>)}
           </select>
           {err("orders")}
         </div>
@@ -227,32 +229,32 @@ export default function QuoteFormEn({ defaultService, formId = "en_request_a_quo
         <div className="hidden sm:block" aria-hidden="true" />
       )}
       <div>
-        <label htmlFor={`${formId}-phone`} className={label}>Phone / WhatsApp <span className="font-normal text-slate-500">(optional)</span></label>
+        <label htmlFor={`${formId}-phone`} className={label}>{t.labels.phone} <span className="font-normal text-slate-500">{t.optional}</span></label>
         <input id={`${formId}-phone`} type="tel" autoComplete="tel" className={input} value={f.phone} onChange={(e) => set("phone", e.target.value)} />
       </div>
       <div>
-        <label htmlFor={`${formId}-website`} className={label}>Website <span className="font-normal text-slate-500">(optional)</span></label>
+        <label htmlFor={`${formId}-website`} className={label}>{t.labels.website} <span className="font-normal text-slate-500">{t.optional}</span></label>
         <input id={`${formId}-website`} type="url" autoComplete="url" className={input} value={f.website} onChange={(e) => set("website", e.target.value)} placeholder="https://" />
       </div>
       <div className="sm:col-span-2">
-        <label htmlFor={`${formId}-notes`} className={label}>Anything else we should know? <span className="font-normal text-slate-500">(optional)</span></label>
-        <textarea id={`${formId}-notes`} rows={4} className={input} value={f.notes} onChange={(e) => set("notes", e.target.value)} placeholder="e.g. container sizes, arrival port, SKUs, special handling" />
+        <label htmlFor={`${formId}-notes`} className={label}>{t.labels.notes} <span className="font-normal text-slate-500">{t.optional}</span></label>
+        <textarea id={`${formId}-notes`} rows={4} className={input} value={f.notes} onChange={(e) => set("notes", e.target.value)} placeholder={t.notesPlaceholder} />
       </div>
       <div className="sm:col-span-2">
         <label className="flex items-start gap-3 text-sm text-slate-700">
           <input type="checkbox" className="mt-1 h-4 w-4" checked={f.consent} onChange={(e) => set("consent", e.target.checked)} {...aria("consent")} />
           <span>
-            I agree that LondraDepo (Arca Trade Group Ltd) may use these details to respond to my enquiry, as described in the{" "}
-            <Link href="/en/privacy-policy" className="underline">Privacy Policy</Link>. *
+            {t.consentBefore}{" "}
+            <Link href={t.privacyHref} className="underline">{t.privacy}</Link>. *
           </span>
         </label>
         {err("consent")}
       </div>
       <div className="sm:col-span-2 flex flex-col sm:flex-row sm:items-center gap-4">
         <button type="submit" disabled={state.submitting} className="bg-[#d62839] hover:bg-[#c1121f] disabled:opacity-60 text-white font-semibold px-8 py-3 rounded-full transition">
-          {state.submitting ? "Sending…" : "Request my quote"}
+          {state.submitting ? t.sending : t.submit}
         </button>
-        {state.errors && <p role="alert" className="text-sm text-red-600">Something went wrong. Please try again or message us on WhatsApp.</p>}
+        {state.errors && <p role="alert" className="text-sm text-red-600">{t.sendError}</p>}
       </div>
     </form>
   );

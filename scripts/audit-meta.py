@@ -4,7 +4,7 @@ import re,json,html,urllib.request,collections
 import os
 B=os.environ.get('SEO_BASE_URL','http://localhost:3100').rstrip('/')
 locs=[]
-for sm in ['/sitemap-tr.xml','/sitemap-en.xml']:
+for sm in ['/sitemap-tr.xml','/sitemap-en.xml','/sitemap-pl.xml']:
     locs+=re.findall(r'<loc>https://www.londradepo.com([^<]*)</loc>',urllib.request.urlopen(B+sm).read().decode())
 titles=collections.defaultdict(list); descs=collections.defaultdict(list); issues=[]
 for u in locs:

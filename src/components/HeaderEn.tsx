@@ -4,27 +4,23 @@ import Link from "next/link";
 import { useState } from "react";
 import LangSwitch from "./LangSwitch";
 import { trackCtaClick, trackPhoneClick } from "@/lib/gtag";
+import { NAV } from "@/i18n/nav";
+import { UI } from "@/i18n/ui";
+import type { ViewLocale } from "@/i18n/view";
 
 const TEL = "tel:+447554195190";
 
-const navLinks = [
-  { href: "/en/uk-warehousing", label: "Warehousing" },
-  { href: "/en/uk-import-logistics", label: "Import" },
-  { href: "/en/london-warehousing", label: "London" },
-  { href: "/en/uk-warehousing-pricing", label: "Pricing" },
-  { href: "/en/ecommerce-fulfilment", label: "Fulfilment" },
-  { href: "/en/amazon-prep-uk", label: "Amazon" },
-  { href: "/en/case-studies", label: "Cases" },
-  { href: "/en/contact", label: "Contact" },
-];
 
-export default function HeaderEn() {
+/** Header for the template languages (EN, PL); links and labels come from src/i18n/nav.ts and the UI dictionary. */
+export default function HeaderEn({ lang = "en" }: { lang?: ViewLocale }) {
+  const navLinks = NAV[lang].header;
+  const ui = UI[lang].header;
   const [open, setOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm">
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
-        <Link href="/en" className="flex items-center gap-2 flex-shrink-0">
+        <Link href={NAV[lang].home} className="flex items-center gap-2 flex-shrink-0">
           <span className="text-[#0b2545] font-extrabold text-xl tracking-tight">
             Londra<span className="text-[#d62839]">Depo</span>.com
           </span>
@@ -41,28 +37,29 @@ export default function HeaderEn() {
         <div className="flex items-center gap-2 flex-shrink-0">
           <LangSwitch />
           <Link
-            href="/en/request-a-quote?from=header"
-            onClick={() => trackCtaClick("/en/request-a-quote", "header")}
+            href={`${ui.quoteHref}?from=header`}
+            onClick={() => trackCtaClick(ui.quoteHref, "header")}
             className="hidden sm:inline-flex items-center bg-[#0b2545] hover:bg-[#13315c] text-white text-sm font-semibold px-4 py-2.5 rounded-full transition"
           >
-            Get a Quote
+            {ui.quote}
           </Link>
           <a
             href={TEL}
             onClick={() => trackPhoneClick("header")}
-            className="inline-flex items-center gap-2 bg-[#d62839] hover:bg-[#c1121f] text-white text-sm font-semibold px-4 py-2.5 rounded-full transition"
+            aria-label={`${ui.call} +44 7554 195190`}
+            className="inline-flex items-center gap-2 bg-[#d62839] hover:bg-[#c1121f] text-white text-sm font-semibold px-3 sm:px-4 py-2.5 rounded-full transition"
           >
             <svg className="w-4 h-4 fill-white flex-shrink-0" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.26.2 2.47.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z" />
             </svg>
             <span className="hidden sm:inline lg:hidden xl:inline">+44 7554 195190</span>
-            <span className="sm:hidden lg:inline xl:hidden">Call</span>
+            <span className="hidden min-[400px]:inline sm:hidden lg:inline xl:hidden">{ui.call}</span>
           </a>
 
           <button
             className="lg:hidden p-2 rounded-lg text-[#0b2545] hover:bg-slate-100 transition"
             onClick={() => setOpen((v) => !v)}
-            aria-label={open ? "Close menu" : "Open menu"}
+            aria-label={open ? NAV[lang].menu.close : NAV[lang].menu.open}
             aria-expanded={open}
           >
             {open ? (
@@ -91,11 +88,11 @@ export default function HeaderEn() {
             </Link>
           ))}
           <Link
-            href="/en/request-a-quote?from=header_mobile"
+            href={`${ui.quoteHref}?from=header_mobile`}
             className="block mt-2 py-2.5 px-3 rounded-lg text-sm font-semibold text-white bg-[#d62839] text-center"
-            onClick={() => { trackCtaClick("/en/request-a-quote", "header_mobile"); setOpen(false); }}
+            onClick={() => { trackCtaClick(ui.quoteHref, "header_mobile"); setOpen(false); }}
           >
-            Get a Quote
+            {ui.quote}
           </Link>
         </nav>
       )}

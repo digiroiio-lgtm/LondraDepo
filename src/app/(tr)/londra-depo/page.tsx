@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     description: "Londra yakını Essex depomuzda ürün depolama, stok yönetimi ve sipariş karşılama.",
     url: `${SITE_URL}/londra-depo`,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    locale: "tr_TR", alternateLocale: ["en_GB"],
     type: "website",
   },
 };

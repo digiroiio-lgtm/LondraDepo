@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     description: "UK ithalat gümrüklemesi ve depoya teslim. Türkiye'den İngiltere'ye ihracat için.",
     url: `${SITE_URL}/gumrukleme`,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    locale: "tr_TR", alternateLocale: ["en_GB"],
     type: "website",
   },
 };

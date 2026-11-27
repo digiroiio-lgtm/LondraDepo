@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     description: "Essex merkezli UK depo ve lojistik operasyonumuz hakkında bilgi alın.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    locale: "tr_TR", alternateLocale: ["en_GB"],
     type: "website",
   },
   robots: { index: true, follow: true },

@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     description: "Amazon FBA prep hizmeti nedir, nasıl çalışır? Türk ihracatçılar için UK Amazon prep rehberi.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    locale: "tr_TR", alternateLocale: ["en_GB"],
     type: "article",
   },
   robots: { index: true, follow: true },

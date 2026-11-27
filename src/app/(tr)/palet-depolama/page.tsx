@@ -27,7 +27,7 @@ export const metadata: Metadata = {
       "UK'da palet bazında depolama. İthalatçılar ve toptancılar için maliyet kontrollü İngiltere pallet storage.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    locale: "tr_TR", alternateLocale: ["en_GB"],
     type: "website",
   },
   robots: { index: true, follow: true },

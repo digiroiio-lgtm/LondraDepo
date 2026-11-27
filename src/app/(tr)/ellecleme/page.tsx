@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     description: "UK yükleme, boşaltma ve ürün elleçleme hizmetleri. Paketleme, etiketleme, sevkiyat hazırlama.",
     url: `${SITE_URL}/ellecleme`,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    locale: "tr_TR", alternateLocale: ["en_GB"],
     type: "website",
   },
 };

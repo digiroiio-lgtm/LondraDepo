@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     description: "İngiltere depo ve fulfillment için WhatsApp ile hızlı teklif alın. Türkçe destek.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    locale: "tr_TR", alternateLocale: ["en_GB"],
     type: "website",
   },
   robots: { index: true, follow: true },

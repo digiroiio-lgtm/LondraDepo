@@ -11,6 +11,10 @@ export const PAIRS: ReadonlyArray<readonly [tr: string, en: string]> = [
   ["/ingiltere-depo-fiyatlari", "/en/uk-warehousing-pricing"],
   ["/ingiltere-depo", "/en/uk-warehousing"],
   ["/ingiltere-3pl", "/en/3pl-uk"],
+  // Same question, audience-appropriate angle: selling into the UK (TR exporters) ↔ entering the UK market.
+  ["/turkiyeden-ingiltereye-satis", "/en/uk-market-entry"],
+  // Same process from both ends: exporting from Turkey to the UK ↔ importing goods into the UK.
+  ["/blog/turkiyeden-ingiltereye-ihracat-rehberi", "/en/blog/uk-importing-guide"],
   ["/londra-depo", "/en/london-warehousing"],
   ["/ingiltere-e-ticaret-lojistigi", "/en/uk-ecommerce-logistics"],
   ["/siparis-toplama-paketleme", "/en/pick-and-pack"],

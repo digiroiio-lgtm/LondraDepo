@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     description: "Shopify UK depo ve sipariş karşılama. Ürün depolama, pick & pack, UK teslimat.",
     url: `${SITE_URL}/shopify-ingiltere-depo`,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    locale: "tr_TR", alternateLocale: ["en_GB"],
     type: "website",
   },
 };

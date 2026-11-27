@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   title: `${TITLE} | LondraDepo`,
   description: DESCRIPTION,
   alternates: trAlternates(PATH),
-  openGraph: { title: TITLE, description: DESCRIPTION, url: `${SITE_URL}${PATH}`, siteName: "LondraDepo.com", locale: "tr_TR", type: "website" },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: `${SITE_URL}${PATH}`, siteName: "LondraDepo.com", locale: "tr_TR", alternateLocale: ["en_GB"], type: "website" },
 };
 
 const faqs = [

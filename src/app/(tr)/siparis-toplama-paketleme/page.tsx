@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     description: "UK'de sipariş toplama ve paketleme. Pick & pack, kargo etiketleme, sevkiyat.",
     url: `${SITE_URL}/siparis-toplama-paketleme`,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    locale: "tr_TR", alternateLocale: ["en_GB"],
     type: "website",
   },
 };

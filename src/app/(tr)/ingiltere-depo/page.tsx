@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     description: "UK depolama, mal kabul, stok yönetimi ve sipariş karşılama. Essex merkezli İngiltere depo hizmeti.",
     url: `${SITE_URL}/ingiltere-depo`,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    locale: "tr_TR", alternateLocale: ["en_GB"],
     type: "website",
   },
 };

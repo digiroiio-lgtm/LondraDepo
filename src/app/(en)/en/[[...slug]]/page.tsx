@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
       description: page.description,
       url: alternates.canonical,
       siteName: "LondraDepo.com",
-      locale: "en_GB",
+      locale: "en_GB", alternateLocale: ["tr_TR"],
       type: page.article ? "article" : "website",
     },
   };

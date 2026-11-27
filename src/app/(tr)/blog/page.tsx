@@ -25,7 +25,7 @@ export const metadata: Metadata = {
       "UK depo, fulfillment ve Amazon prep rehberleri. Türkiye'den İngiltere'ye ihracat bilgi merkezi.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    locale: "tr_TR", alternateLocale: ["en_GB"],
     type: "website",
   },
   robots: { index: true, follow: true },

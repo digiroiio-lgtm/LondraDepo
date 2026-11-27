@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description: "GB EORI, GTİP, CDS beyannamesi, menşe beyanı ve ithalat KDV'si. Ücretsiz PDF kontrol listesi.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    locale: "tr_TR", alternateLocale: ["en_GB"],
     type: "article",
   },
   robots: { index: true, follow: true },

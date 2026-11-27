@@ -30,7 +30,7 @@ export const metadata: Metadata = {
       "1 paletten aylık 6 x 40HC konteynere: Ankara tortilla üreticisinin İngiltere'de ölçeklenen operasyon hikayesi.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    locale: "tr_TR", alternateLocale: ["en_GB"],
     type: "article",
   },
   twitter: {

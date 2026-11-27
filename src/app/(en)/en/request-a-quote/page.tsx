@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   title: `${TITLE} | LondraDepo`,
   description: DESCRIPTION,
   alternates: enAlternates(PATH),
-  openGraph: { title: TITLE, description: DESCRIPTION, url: absolute(PATH), siteName: "LondraDepo.com", locale: "en_GB", type: "website" },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: absolute(PATH), siteName: "LondraDepo.com", locale: "en_GB", alternateLocale: ["tr_TR"], type: "website" },
 };
 
 const jsonLd = {

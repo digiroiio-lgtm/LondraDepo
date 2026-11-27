@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "UK Warehousing & Fulfilment near London | LondraDepo",
   description: "UK warehousing, fulfilment, pallet storage, Amazon prep and UK distribution from Rayleigh, Essex, near London.",
-  openGraph: { siteName: "LondraDepo.com", locale: "en_GB", type: "website" },
+  openGraph: { siteName: "LondraDepo.com", locale: "en_GB", alternateLocale: ["tr_TR"], type: "website" },
   icons: {
     icon: [{ url: "/icon.svg", type: "image/svg+xml" }, { url: "/icon.png", type: "image/png", sizes: "192x192" }],
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],

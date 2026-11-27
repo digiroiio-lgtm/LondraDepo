@@ -29,7 +29,7 @@ export const metadata: Metadata = {
       "Lüks araç yedek parçalarının İngiltere'de hasar kontrollü depolanması ve UK dağıtım operasyonu.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    locale: "tr_TR", alternateLocale: ["en_GB"],
     type: "article",
   },
   robots: { index: true, follow: true },

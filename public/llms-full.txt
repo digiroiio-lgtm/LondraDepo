@@ -393,6 +393,7 @@ A: Yes. Arca Trade Group, which operates LondraDepo, can arrange freight and UK 
 
 ## UK Market Entry Without Your Own Warehouse
 URL: https://www.londradepo.com/en/uk-market-entry
+Turkish version: https://www.londradepo.com/turkiyeden-ingiltereye-satis
 Summary: How international brands enter the UK market with outsourced warehousing: pick a sales model, set up imports, start with one pallet and scale to containers.
 Short answer: You do not need your own UK warehouse, staff or fleet to sell in the UK. International businesses can ship stock to LondraDepo in Essex, have it cleared and stored, and supply UK wholesale customers, online shoppers or Amazon from day one. One of our food clients started with a single trial pallet and now ships six 40ft high-cube containers a month.
 Q: Do I need a UK company to sell in the UK?
@@ -740,6 +741,7 @@ A: A UK 3PL suits sellers with several channels, such as a website, marketplaces
 
 ## How to Import Goods into the UK: A Practical Guide
 URL: https://www.londradepo.com/en/blog/uk-importing-guide
+Turkish version: https://www.londradepo.com/blog/turkiyeden-ingiltereye-ihracat-rehberi
 Summary: How to import goods into the UK: GB EORI, commodity codes, the UK Global Tariff, customs declarations, duty and import VAT, rules of origin and warehousing.
 Short answer: To import goods into Great Britain, the importer needs a GB EORI number, the correct commodity code for each product, a customs declaration lodged through HMRC's Customs Declaration Service, and payment or accounting of any customs duty and import VAT. Overseas businesses usually work with a freight forwarder or customs agent and a UK warehouse that receives the cleared goods.
 Q: Do I need an EORI number to import into the UK?
@@ -1360,6 +1362,7 @@ A: Taşıma şekli hacminize, süre ihtiyacınıza ve bütçenize göre seçilir
 
 ## İngiltere'de Nasıl Satış Yapılır? 2026 Rehberi
 URL: https://www.londradepo.com/turkiyeden-ingiltereye-satis
+English version: https://www.londradepo.com/en/uk-market-entry
 Summary: Türkiye'den İngiltere'ye satış rehberi 2026: ürün gönderimi, gümrük, depolama, Amazon ve Shopify satışı, pick & pack ve UK lojistik. Adım adım.
 Short answer: Satış modeli seçiminden gümrüğe, depolamadan sipariş karşılamaya — Türkiye'den UK pazarına girmenin tüm adımlarını bu rehberde bulabilirsiniz.
 Q: Türkiye'den İngiltere'de satış yapmak için UK şirketi gerekir mi?
@@ -1810,6 +1813,7 @@ A: Kendi ürünleriniz ve hacminiz için toplam maliyeti karşılaştırın: dep
 
 ## Türkiye'den İngiltere'ye İhracat Nasıl Yapılır? 2026
 URL: https://www.londradepo.com/blog/turkiyeden-ingiltereye-ihracat-rehberi
+English version: https://www.londradepo.com/en/blog/uk-importing-guide
 Summary: Türkiye'den İngiltere'ye ihracat 2026: GB EORI, GTİP, gümrük beyannamesi, menşe ispatı ve %20 ithalat KDV'si adım adım. Ücretsiz PDF kontrol listesini indirin.
 Short answer: Türkiye'den İngiltere'ye ihracatta UK'deki ithalatçının GB EORI numarası olmalı, her ürün için doğru gümrük tarife kodu (GTİP / commodity code) belirlenmeli ve ithalat beyannamesi HMRC'nin CDS sisteminde verilmelidir. Türkiye-UK Serbest Ticaret Anlaşması'ndan yararlanmak için menşe beyanı gerekir. Gümrük vergisi ve ithalat KDV'si (genellikle %20) ayrıca ödenir veya beyan edilir. Türkiye'den İngiltere'ye ihracat yapmak hem fırsatlarla hem bürokratik detaylarla dolu bir süreçtir. Bu rehberde gümrük, GTIP, nakliye, UK'da operasyon kurma ve depolama süreçlerini adım adım ele alıyoruz. Hedef: ürünleriniz Türkiye'den çıkıp İngiltere'deki müşteriye en verimli şekilde ulaşsın.
 Q: Türkiye'den İngiltere'ye ihracat nasıl yapılır?

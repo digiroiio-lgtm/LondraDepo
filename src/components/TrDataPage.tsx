@@ -26,7 +26,7 @@ export function trPageMetadata(p: TrPage): Metadata {
     title: p.title,
     description: p.description,
     alternates: trAlternates(p.path),
-    openGraph: { title: p.title, description: p.description, url: `${SITE_URL}${p.path}`, siteName: "LondraDepo.com", locale: "tr_TR", type: p.kind === "article" ? "article" : "website" },
+    openGraph: { title: p.title, description: p.description, url: `${SITE_URL}${p.path}`, siteName: "LondraDepo.com", locale: "tr_TR", alternateLocale: ["en_GB"], type: p.kind === "article" ? "article" : "website" },
   };
 }
 

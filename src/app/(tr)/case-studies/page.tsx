@@ -26,7 +26,7 @@ export const metadata: Metadata = {
       "İngiltere'de depo altyapısı, fulfillment ve dağıtım operasyonu kuran markaların gerçek operasyon örnekleri.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    locale: "tr_TR", alternateLocale: ["en_GB"],
     type: "website",
   },
   robots: { index: true, follow: true },

@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     description: "Amazon FBA ve 3PL UK fulfillment karşılaştırması — hangisi daha avantajlı?",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    locale: "tr_TR", alternateLocale: ["en_GB"],
     type: "article",
   },
   robots: { index: true, follow: true },

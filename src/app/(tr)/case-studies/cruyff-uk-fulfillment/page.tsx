@@ -32,7 +32,7 @@ export const metadata: Metadata = {
       "Johan Cruyff markasının Hollanda'dan UK fulfillment operasyonuna geçişi: warehouse, repackaging ve ecommerce distribution.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    locale: "tr_TR", alternateLocale: ["en_GB"],
     type: "article",
   },
   twitter: {

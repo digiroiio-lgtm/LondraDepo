@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     description: "UK'de şirket kurmadan İngiltere'de satış ve depolama. Türk işletmeler için fulfilment.",
     url: `${SITE_URL}/turk-sirketleri-icin-ingiltere-depo`,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    locale: "tr_TR", alternateLocale: ["en_GB"],
     type: "website",
   },
 };

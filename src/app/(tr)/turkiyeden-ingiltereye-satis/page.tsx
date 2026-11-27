@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     description: "TR→UK satış rehberi: gümrük, depo, Shopify, Amazon, pick & pack, teslimat. Adım adım 2026.",
     url: `${SITE_URL}/turkiyeden-ingiltereye-satis`,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    locale: "tr_TR", alternateLocale: ["en_GB"],
     type: "website",
   },
 };

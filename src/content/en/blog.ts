@@ -437,6 +437,7 @@ export const blogPages: EnPage[] = [
   },
   {
     slug: "/en/blog/uk-importing-guide",
+    tr: "/blog/turkiyeden-ingiltereye-ihracat-rehberi",
     kind: "article",
     parent: "/en/blog",
     article: { ...DATE, readMins: 9, section: "Importing" },

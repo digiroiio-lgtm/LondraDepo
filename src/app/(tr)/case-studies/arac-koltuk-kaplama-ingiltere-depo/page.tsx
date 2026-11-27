@@ -32,7 +32,7 @@ export const metadata: Metadata = {
       "Otomotiv döşeme malzemelerinin İngiltere deposunda stok yönetimi, online fulfillment ve B2B dağıtım operasyonu.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    locale: "tr_TR", alternateLocale: ["en_GB"],
     type: "article",
   },
   robots: { index: true, follow: true },

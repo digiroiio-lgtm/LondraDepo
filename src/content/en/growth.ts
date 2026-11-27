@@ -1,7 +1,7 @@
 import type { EnPage } from "./types";
 import { teamQuote } from "@/content/quotes";
 
-// English-only commercial pages (no Turkish counterpart yet → self-referencing `en` hreflang).
+// Growth pages. Every page here has a Turkish pair (see src/lib/i18n-pairs.ts).
 // Facts used here are limited to verified items: the Rayleigh site, FCL/LCL and 40HC receiving,
 // published pallet price, case-study figures and Arca Trade Group's published services.
 
@@ -212,6 +212,7 @@ export const growthPages: EnPage[] = [
   },
   {
     slug: "/en/uk-market-entry",
+    tr: "/turkiyeden-ingiltereye-satis",
     kind: "service",
     serviceType: "UK market entry logistics",
     title: "UK Market Entry Without Your Own Warehouse",
@@ -872,7 +873,7 @@ export const calculatorPages: EnPage[] = [
   },
 ];
 
-// Port location pages (EN only, no Turkish counterpart). Distances: road routing from SS6 7FY, 10 November 2026.
+// Port location pages. Distances: road routing from SS6 7FY, 10 November 2026.
 // Port descriptions limited to what is already stated on the site and its cited Wikipedia sources.
 // LondraDepo is not a bonded warehouse and is not at a port: never claim either.
 export const portPages: EnPage[] = [

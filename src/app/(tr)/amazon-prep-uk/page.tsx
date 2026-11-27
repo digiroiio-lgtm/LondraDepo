@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     description: "UK'da Amazon FBA prep, etiketleme ve sevk hizmeti. Türk ihracatçıları için İngiltere Amazon prep operasyonu.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    locale: "tr_TR", alternateLocale: ["en_GB"],
     type: "website",
   },
   robots: { index: true, follow: true },

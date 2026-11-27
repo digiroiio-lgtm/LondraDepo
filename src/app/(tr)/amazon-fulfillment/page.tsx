@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     description: "Amazon UK fulfillment. Stok depolama, pick & pack ve UK teslimat desteği.",
     url: `${SITE_URL}/amazon-fulfillment`,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    locale: "tr_TR", alternateLocale: ["en_GB"],
     type: "website",
   },
 };

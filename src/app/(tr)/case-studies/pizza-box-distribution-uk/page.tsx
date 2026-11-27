@@ -29,7 +29,7 @@ export const metadata: Metadata = {
       "Restoranlardan gelen toplu siparişlerin palet bazlı depolanması ve düzenli UK dağıtım planlaması.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    locale: "tr_TR", alternateLocale: ["en_GB"],
     type: "article",
   },
   robots: { index: true, follow: true },

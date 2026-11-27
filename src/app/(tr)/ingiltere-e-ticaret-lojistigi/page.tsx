@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     description: "UK e-ticaret lojistiği ve sipariş karşılama. Shopify, Amazon ve online mağaza entegrasyonu.",
     url: `${SITE_URL}/ingiltere-e-ticaret-lojistigi`,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    locale: "tr_TR", alternateLocale: ["en_GB"],
     type: "website",
   },
 };

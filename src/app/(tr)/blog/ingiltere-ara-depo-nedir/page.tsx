@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     description: "UK ara depo ve transit depolama hizmetinin ne olduğu, nasıl çalıştığı ve hangi firmalar için uygun olduğu.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    locale: "tr_TR", alternateLocale: ["en_GB"],
     type: "article",
   },
   robots: { index: true, follow: true },

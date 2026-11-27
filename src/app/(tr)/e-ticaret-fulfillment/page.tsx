@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     description: "UK e-ticaret fulfillment. Sipariş yönetimi, pick & pack, kargo ve UK teslimat.",
     url: `${SITE_URL}/e-ticaret-fulfillment`,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    locale: "tr_TR", alternateLocale: ["en_GB"],
     type: "website",
   },
 };

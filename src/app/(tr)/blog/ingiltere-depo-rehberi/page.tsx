@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     description: "UK depolama süreçleri, maliyetler ve doğru partner seçimi için kapsamlı rehber.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    locale: "tr_TR", alternateLocale: ["en_GB"],
     type: "article",
   },
   robots: { index: true, follow: true },

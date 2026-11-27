@@ -30,7 +30,7 @@ export const metadata: Metadata = {
       "Palet depolama haftalık £3,50 + KDV'den. Maliyet kalemleri, örnek hesap ve ücretsiz hesaplayıcı.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    locale: "tr_TR", alternateLocale: ["en_GB"],
     type: "article",
   },
   robots: { index: true, follow: true },

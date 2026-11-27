@@ -32,7 +32,7 @@ export const metadata: Metadata = {
       "Elektronik ürün fulfillment İngiltere: SIM aktivasyonu, şarj kontrolü, teknik hazırlık ve son kullanıcı sevkiyatı tek merkezden.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    locale: "tr_TR", alternateLocale: ["en_GB"],
     type: "article",
   },
   robots: { index: true, follow: true },

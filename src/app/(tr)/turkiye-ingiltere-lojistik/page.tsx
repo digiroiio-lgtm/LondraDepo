@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     description: "TR → UK lojistik zinciri: gönderim, gümrük, depolama, fulfillment.",
     url: `${SITE_URL}/turkiye-ingiltere-lojistik`,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    locale: "tr_TR", alternateLocale: ["en_GB"],
     type: "website",
   },
 };

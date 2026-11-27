@@ -13,7 +13,7 @@ export const growthPages: EnPage[] = [
     serviceType: "Import logistics",
     title: "UK Import Logistics for Overseas Businesses",
     description:
-      "Import into the UK with one group: sea, air, road and rail freight and customs clearance through Arca Trade Group, then unloading, storage, fulfilment and UK distribution at our Essex warehouse.",
+      "Import into the UK with one group: sea, air, road and rail freight plus customs clearance, then unloading, storage, fulfilment and UK distribution in Essex.",
     label: "UK Import Logistics",
     eyebrow: "For importers, manufacturers and distributors",
     h1: "UK Import Logistics: From Overseas Supplier to UK Customer",
@@ -84,7 +84,7 @@ export const growthPages: EnPage[] = [
     serviceType: "Container unloading",
     title: "Container Unloading in Essex – FCL & LCL Devanning",
     description:
-      "Container unloading at our Rayleigh, Essex warehouse: 20ft, 40ft and 40ft high-cube FCL plus LCL deliveries, counting, damage checks, re-palletising, WMS booking and storage or onward distribution.",
+      "Container unloading at our Essex warehouse: 20ft, 40ft and 40ft high-cube FCL and LCL, counting, damage checks, re-palletising, WMS booking and storage.",
     label: "Container Unloading",
     eyebrow: "Essex · near Tilbury, London Gateway and Felixstowe routes",
     h1: "Container Unloading in Essex (FCL and LCL)",
@@ -151,7 +151,7 @@ export const growthPages: EnPage[] = [
     serviceType: "Packaging warehousing and distribution",
     title: "Packaging & Catering Supplies Warehousing UK",
     description:
-      "UK warehousing and scheduled B2B delivery for pizza boxes, takeaway packaging and catering disposables: palletised storage, lot tracking, low-stock alerts and delivery to restaurants and wholesalers.",
+      "UK warehousing and scheduled B2B delivery for pizza boxes, takeaway packaging and catering disposables: pallet storage, lot tracking and low-stock alerts.",
     label: "Packaging & Catering Supplies",
     eyebrow: "Industry · packaging and restaurant supplies",
     h1: "Warehousing and Distribution for Packaging and Catering Supplies",
@@ -216,7 +216,7 @@ export const growthPages: EnPage[] = [
     serviceType: "UK market entry logistics",
     title: "UK Market Entry Without Your Own Warehouse",
     description:
-      "How international manufacturers and brands enter the UK market with outsourced warehousing: choose a sales model, set up imports, start with a trial pallet and scale to containers.",
+      "How international brands enter the UK market with outsourced warehousing: pick a sales model, set up imports, start with one pallet and scale to containers.",
     label: "UK Market Entry",
     eyebrow: "For international manufacturers and brands",
     h1: "Entering the UK Market with an Outsourced Warehouse",
@@ -273,6 +273,99 @@ export const growthPages: EnPage[] = [
     related: ["/en/uk-import-logistics", "/en/uk-warehousing-for-turkish-exporters", "/en/blog/uk-importing-guide", "/en/uk-warehousing-benefits", "/en/case-studies/tortilla-uk-distribution", "/en/uk-warehousing-pricing"],
     cta: { h2: "Plan your UK market entry", text: "Tell us what you sell, where you ship from and how you want to sell in the UK." },
   },
+  {
+    slug: "/en/3pl-uk",
+    tr: "/ingiltere-3pl",
+    kind: "service",
+    serviceType: "Third-party logistics (3PL)",
+    title: "3PL Warehouse UK: Essex 3PL near London",
+    description:
+      "UK 3PL warehouse in Rayleigh, Essex: goods-in, pallet storage from £3.50 + VAT a week, pick and pack, ecommerce and B2B fulfilment, Amazon prep and UK delivery.",
+    label: "3PL UK",
+    eyebrow: "Third-party logistics in the UK",
+    h1: "3PL Warehouse UK: Third-Party Logistics from Essex, near London",
+    lead:
+      "A UK 3PL (third-party logistics provider) receives your stock into its UK warehouse, stores it, fulfils your ecommerce and B2B orders and delivers them across the UK, so you sell in the UK without running a warehouse. LondraDepo is a 3PL in Rayleigh, Essex, 13 miles from London Gateway and 16 miles from Tilbury, operated by Arca Trade Group, a BIFA member that also handles international freight and UK customs. Pallet storage starts from £3.50 + VAT per pallet per week, with no fixed minimum.",
+    facts: [
+      "Warehouse: Unit 19 Arterial Park, Rayleigh, Essex SS6 7FY",
+      "13 miles from London Gateway, 16 miles from Tilbury, about 62 miles from Felixstowe",
+      "Pallet storage from £3.50 + VAT per pallet per week, no fixed minimum",
+      "Mintsoft WMS: live stock and order visibility",
+      "Ecommerce (Shopify, Amazon FBM), B2B pallet orders and Amazon FBA prep",
+      "Freight and UK customs available through Arca Trade Group",
+      "English and Turkish spoken",
+    ],
+    sections: [
+      {
+        type: "cards",
+        h2: "What our UK 3PL service covers",
+        items: [
+          { title: "Goods-in and container unloading", text: "FCL and LCL containers, pallets and cartons received, counted, checked for visible damage and booked into Mintsoft WMS." },
+          { title: "Pallet and carton storage", text: "Secure storage on pallets or shelving, priced per pallet per week, with regular stock reports." },
+          { title: "Pick and pack", text: "Ecommerce orders picked, packed and labelled from your stock, priced per order." },
+          { title: "B2B fulfilment", text: "Pallet and carton orders prepared for retailers, wholesalers, dealers and workshops." },
+          { title: "Amazon FBA prep", text: "Labelling, bagging and packing to Amazon's rules, then planned shipments into Amazon UK fulfilment centres." },
+          { title: "UK distribution and returns", text: "Parcel and pallet delivery across the UK, collections and returns handling." },
+        ],
+      },
+      {
+        type: "steps",
+        h2: "How starting with a UK 3PL works",
+        items: [
+          { title: "Tell us what you sell", text: "Products, packaging, expected pallets or monthly orders, and your sales channels." },
+          { title: "Get a quote", text: "Storage, goods-in, pick and pack and delivery are priced line by line, so you see every cost." },
+          { title: "Connect your channels", text: "Orders flow from Shopify, Amazon or your own system into Mintsoft WMS." },
+          { title: "Send your first stock", text: "Start with one trial pallet or a container. Freight and customs can be arranged through Arca Trade Group." },
+          { title: "Go live", text: "We receive the stock, fulfil orders and report stock levels; you scale volume up or down as sales change." },
+        ],
+      },
+      {
+        type: "table",
+        h2: "How UK 3PL pricing is built",
+        intro: "A 3PL quote is a set of lines, not one price. These are the lines you will see from us and from most UK 3PLs.",
+        head: ["Cost line", "What it covers", "LondraDepo"],
+        rows: [
+          ["Storage", "Space your stock occupies", "From £3.50 + VAT per pallet per week"],
+          ["Goods-in", "Unloading, counting, checks, WMS booking", "Quoted per container, pallet or carton"],
+          ["Pick and pack", "Picking and packing each order", "Quoted per order and per extra item"],
+          ["Packaging", "Boxes, mailers, void fill", "At cost or supplied by you"],
+          ["Carriage", "Parcel or pallet delivery", "Carrier rates by weight, size and service"],
+          ["Value-added services", "Labelling, FBA prep, kitting, returns", "Quoted per task"],
+        ],
+        note: "Only the pallet storage rate is published; other lines depend on your products and volumes.",
+      },
+      {
+        type: "list",
+        h2: "When a UK 3PL makes sense",
+        items: [
+          "You import into the UK and want stock close to UK customers without leasing a warehouse",
+          "You sell on Shopify, Amazon or your own website and need next-day UK delivery",
+          "You supply UK retailers, wholesalers or workshops and need pallets ready on demand",
+          "Your volumes change by season and you want to pay only for the space you use",
+          "You want freight, customs and warehousing handled by one group",
+        ],
+      },
+      {
+        type: "links",
+        h2: "Compare and plan",
+        items: [
+          { href: "/en/blog/how-to-choose-a-uk-3pl", title: "How to choose a UK 3PL", text: "12 questions to ask any UK 3PL before you sign.", tag: "Guide" },
+          { href: "/en/uk-warehousing-pricing", title: "UK warehousing pricing", text: "Worked examples for 5, 10 and 20 pallets.", tag: "Pricing" },
+          { href: "/en/uk-storage-cost-calculator", title: "Storage cost calculator", text: "Pallets × weeks at £3.50 + VAT.", tag: "Free tool" },
+          { href: "/en/case-studies", title: "Case studies", text: "Live 3PL operations run from our Essex warehouse.", tag: "Proof" },
+        ],
+      },
+    ],
+    faqs: [
+      { q: "What is a 3PL in the UK?", a: "A UK 3PL (third-party logistics provider) is a company that stores your stock in its UK warehouse and handles goods-in, order fulfilment and delivery for you. You keep ownership of the stock and pay for the space and services you use." },
+      { q: "How much does a UK 3PL cost?", a: "Costs are built from storage, goods-in, pick and pack, packaging and carriage. At LondraDepo pallet storage starts from £3.50 + VAT per pallet per week; the other lines are quoted for your products and volumes." },
+      { q: "Does your UK 3PL service have a minimum volume?", a: "No fixed minimum. Many clients start with one trial pallet and grow to regular containers." },
+      { q: "Can you handle both ecommerce and B2B orders?", a: "Yes. We fulfil Shopify and Amazon FBM orders as parcels and prepare pallet and carton orders for retailers, wholesalers and workshops from the same stock." },
+      { q: "Where is your 3PL warehouse?", a: "Unit 19 Arterial Park, Rayleigh, Essex SS6 7FY: 13 miles from London Gateway, 16 miles from Tilbury and about 62 miles from Felixstowe." },
+      { q: "Can you also arrange freight and customs?", a: "Yes. Arca Trade Group, which operates LondraDepo, arranges sea, air, road and rail freight and UK customs declarations. You can also use your own forwarder and only our warehouse." },
+    ],
+    related: ["/en/uk-warehousing", "/en/ecommerce-fulfilment", "/en/pick-and-pack", "/en/pallet-storage", "/en/uk-warehousing-pricing", "/en/blog/how-to-choose-a-uk-3pl", "/en/request-a-quote"],
+  },
 ];
 
 // Weeks 7–10 (P2). Road distances verified 10.11.2026 with OSRM car routing between postcode
@@ -286,7 +379,7 @@ export const growthPagesP2: EnPage[] = [
     serviceType: "Automotive parts warehousing",
     title: "Automotive Parts Warehousing & Distribution UK",
     description:
-      "UK warehousing for OEM and aftermarket parts: pallet and shelf storage by SKU, photo-documented damage checks, protective packing and next-day delivery to dealers and workshops.",
+      "UK warehousing for OEM and aftermarket car parts: storage by SKU, photo-documented damage checks, protective packing and next-day delivery to dealers.",
     label: "Automotive Parts Warehousing",
     eyebrow: "Industry · automotive and aftermarket",
     h1: "Automotive Parts Warehousing and Distribution in the UK",
@@ -339,7 +432,7 @@ export const growthPagesP2: EnPage[] = [
     serviceType: "UK warehousing for Turkish exporters",
     title: "UK Warehousing & Fulfilment for Turkish Exporters",
     description:
-      "UK warehousing, fulfilment and distribution for Turkish manufacturers and brands: Turkish-speaking team, Turkey–UK freight and customs through Arca Trade Group, and an Essex warehouse near London.",
+      "UK warehousing, fulfilment and distribution for Turkish manufacturers: Turkish-speaking team, Turkey–UK freight and customs, and an Essex warehouse.",
     label: "For Turkish Exporters",
     eyebrow: "Turkey → United Kingdom",
     h1: "UK Warehousing and Fulfilment for Turkish Exporters",
@@ -428,9 +521,9 @@ export const growthPagesP2: EnPage[] = [
     tr: "/limandan-depoya-lojistik",
     kind: "service",
     serviceType: "Port-to-warehouse logistics",
-    title: "Felixstowe, Tilbury & London Gateway to Essex Warehouse",
+    title: "UK Port to Warehouse Logistics: Felixstowe & Tilbury",
     description:
-      "Port-to-warehouse logistics from Felixstowe, London Gateway and Tilbury: verified road distances to our Rayleigh warehouse, customs, haulage, unloading and UK distribution.",
+      "Port-to-warehouse logistics from Felixstowe, London Gateway and Tilbury: distances to our Essex warehouse, customs, haulage, unloading and distribution.",
     label: "Port-to-Warehouse Logistics",
     eyebrow: "Felixstowe · London Gateway · Tilbury",
     h1: "From Felixstowe, London Gateway or Tilbury to Our Essex Warehouse",
@@ -648,7 +741,7 @@ export const calculatorPages: EnPage[] = [
     modified: "2026-11-10",
     title: "UK Pallet Storage Cost Calculator",
     description:
-      "Calculate UK pallet storage costs in seconds: pallets × weeks at £3.50 + VAT per pallet per week, with VAT shown. Then request a full quote for handling, fulfilment and delivery.",
+      "Calculate UK pallet storage costs in seconds: pallets × weeks at £3.50 + VAT per pallet per week, with VAT shown, then request a full quote.",
     label: "Storage Cost Calculator",
     eyebrow: "Free tool",
     h1: "UK Pallet Storage Cost Calculator",
@@ -718,7 +811,7 @@ export const calculatorPages: EnPage[] = [
     modified: "2026-11-10",
     title: "Container Arrival Planner: Port to Essex Warehouse",
     description:
-      "Plan your container's arrival in the UK: choose the port, container size, ETA and customs route and get a dated checklist from EORI and pre-advice to unloading and stock booking in Essex.",
+      "Plan your container's UK arrival: pick the port, container size, ETA and customs route, and get a dated checklist from EORI to unloading in Essex.",
     label: "Container Arrival Planner",
     eyebrow: "Free tool",
     h1: "Container Arrival Planner",
@@ -791,7 +884,7 @@ export const portPages: EnPage[] = [
     modified: "2026-11-10",
     title: "Warehouse near London Gateway & Tilbury",
     description:
-      "Essex warehouse 13 miles from DP World London Gateway and 16 miles from the Port of Tilbury: container unloading, pallet storage from £3.50 + VAT per week, fulfilment and UK distribution in Rayleigh.",
+      "Essex warehouse 13 miles from London Gateway and 16 from Tilbury: container unloading, pallet storage from £3.50 + VAT a week, fulfilment and UK distribution.",
     label: "London Gateway & Tilbury",
     eyebrow: "Thames ports · ~20 minutes by road",
     h1: "Warehousing near London Gateway and Tilbury",
@@ -875,7 +968,7 @@ export const portPages: EnPage[] = [
     modified: "2026-11-10",
     title: "Felixstowe Port Warehousing: Essex Warehouse",
     description:
-      "Containers landing at Felixstowe: haulage about 62 miles to our Rayleigh, Essex warehouse, unloading, pallet storage from £3.50 + VAT per week, fulfilment and London distribution.",
+      "Containers landing at Felixstowe: haulage about 62 miles to our Essex warehouse, unloading, pallets from £3.50 + VAT a week, fulfilment and distribution.",
     label: "Felixstowe Port Warehousing",
     eyebrow: "Port of Felixstowe · ~62 miles by road",
     h1: "Felixstowe Port Warehousing in Essex",

@@ -10,9 +10,9 @@ export const corePages: EnPage[] = [
     tr: "/",
     kind: "home",
     modified: "2026-11-10",
-    title: "UK Warehousing, Fulfilment & Distribution near London",
+    title: "UK Warehouse & Fulfilment near London (Essex 3PL)",
     description:
-      "UK 3PL warehouse in Rayleigh, Essex: pallet storage from £3.50 + VAT a week, container unloading, ecommerce fulfilment, Amazon prep and UK distribution, 13 miles from London Gateway.",
+      "UK 3PL warehouse in Rayleigh, Essex: pallet storage from £3.50 + VAT a week, container unloading, ecommerce fulfilment, Amazon prep and UK distribution.",
     label: "Home",
     eyebrow: "UK 3PL warehouse · Essex, near London",
     h1: "UK Warehousing and Fulfilment for International Brands",
@@ -299,6 +299,7 @@ export const corePages: EnPage[] = [
     slug: "/en/uk-warehousing-benefits",
     tr: "/ingiltere-depo-avantajlari",
     kind: "service",
+    serviceType: "Outsourced warehousing",
     title: "Benefits of a UK Warehouse Partner",
     description:
       "Why use a UK 3PL warehouse: low entry cost from £3.50 + VAT per pallet per week, pallet-based shipments, UK labelling guidance and commodity code pre-checks.",
@@ -346,9 +347,10 @@ export const corePages: EnPage[] = [
     slug: "/en/uk-warehousing-pricing",
     tr: "/ingiltere-depo-fiyatlari",
     kind: "service",
-    title: "UK Warehousing Pricing 2026 – Pallet Storage from £3.50",
+    serviceType: "Warehousing and fulfilment pricing",
+    title: "UK Warehousing Pricing 2026: Pallets from £3.50",
     description:
-      "UK warehouse and fulfilment pricing explained: pallet storage from £3.50 + VAT per pallet per week, worked examples for 5, 10 and 20 pallets, and the cost lines in a 3PL quote.",
+      "UK warehouse and fulfilment pricing: pallet storage from £3.50 + VAT per pallet per week, examples for 5, 10 and 20 pallets and every line in a 3PL quote.",
     label: "UK Warehousing Pricing",
     h1: "UK Warehousing Pricing 2026",
     lead:
@@ -403,7 +405,7 @@ export const corePages: EnPage[] = [
       { q: "What information do you need for a quote?", a: "Product type, estimated pallets or cartons, monthly order volume, the services you need and your sales channels such as Shopify, Amazon or wholesale." },
       { q: "Is there a monthly minimum charge?", a: "LondraDepo has no fixed minimum volume, and you can start with a single trial pallet. Storage starts from £3.50 + VAT per pallet per week; other services are quoted for your products and order profile." },
     ],
-    related: ["/en/blog/uk-import-costs", "/en/uk-storage-cost-calculator", "/en/pallet-storage", "/en/pick-and-pack", "/en/blog/uk-warehousing-prices-2026", "/en/blog/uk-pallet-storage-costs", "/en/uk-warehousing-benefits", "/en/blog/how-to-choose-a-uk-3pl", "/en/blog/uk-warehousing-guide"],
+    related: ["/en/3pl-uk", "/en/blog/uk-import-costs", "/en/uk-storage-cost-calculator", "/en/pallet-storage", "/en/pick-and-pack", "/en/blog/uk-warehousing-prices-2026", "/en/blog/uk-pallet-storage-costs", "/en/uk-warehousing-benefits", "/en/blog/how-to-choose-a-uk-3pl", "/en/blog/uk-warehousing-guide"],
     cta: { h2: "Get a tailored quote", text: "Send us your product type, pallet or carton count, monthly orders and sales channels." },
   },
 ];

@@ -11,7 +11,7 @@ export const casePages: EnPage[] = [
     article: { ...CASE_DATE, readMins: 4, section: "Fashion & premium apparel" },
     title: "Cruyff UK Fashion Fulfilment Case Study",
     description:
-      "How the Cruyff fashion brand moved UK online orders from the Netherlands to a UK warehouse in Essex: repackaging, hang-tag updates, ecommerce fulfilment and next-day or 2-day UK delivery.",
+      "How the Cruyff fashion brand moved UK online orders from the Netherlands to our Essex warehouse: repackaging, hang-tags, fulfilment and fast UK delivery.",
     label: "Cruyff – UK fashion fulfilment",
     eyebrow: "Case study · Fashion & premium apparel",
     h1: "Cruyff: Setting Up UK Fashion Fulfilment",
@@ -107,9 +107,9 @@ export const casePages: EnPage[] = [
     kind: "case",
     parent: "/en/case-studies",
     article: { ...CASE_DATE, readMins: 4, section: "Food & FMCG" },
-    title: "Tortilla Brand UK Warehouse & Distribution Case Study",
+    title: "Tortilla UK Warehousing & Distribution Case Study",
     description:
-      "How an Ankara-based tortilla and flatbread producer entered the UK with a single pallet and grew to six 40ft high-cube containers a month with UK warehousing, labelling guidance and distribution.",
+      "How a Turkish tortilla producer entered the UK with one pallet and grew to six 40ft containers a month with UK warehousing and distribution.",
     label: "Tortilla brand – UK distribution",
     eyebrow: "Case study · Food & FMCG",
     h1: "Tortilla Brand: From 1 Pallet to 6 Containers a Month",
@@ -153,7 +153,7 @@ export const casePages: EnPage[] = [
     article: { ...CASE_DATE, readMins: 3, section: "Automotive" },
     title: "OEM Auto Parts UK Warehouse Case Study",
     description:
-      "How a manufacturer of OEM and aftermarket parts for luxury cars set up UK stock, photo-documented damage checks, protective packing and next-day delivery to UK dealers and workshops.",
+      "How an OEM and aftermarket car parts maker set up UK stock, photo-documented damage checks, protective packing and next-day delivery to dealers and workshops.",
     label: "OEM auto parts – UK warehouse",
     eyebrow: "Case study · Automotive",
     h1: "OEM and Aftermarket Auto Parts: UK Warehouse",
@@ -226,9 +226,9 @@ export const casePages: EnPage[] = [
     kind: "case",
     parent: "/en/case-studies",
     article: { ...CASE_DATE, readMins: 3, section: "Automotive & upholstery" },
-    title: "Car Seat Cover & Faux Leather UK Warehousing Case Study",
+    title: "Car Seat Covers: UK Warehousing Case Study",
     description:
-      "How an automotive upholstery manufacturer stores faux leather rolls and seat covers in the UK, fulfils eBay and Amazon orders the same day and supplies UK workshops and dealers.",
+      "How an automotive upholstery maker stores faux leather and seat covers in the UK, ships eBay and Amazon orders the same day and supplies UK workshops.",
     label: "Car seat covers – UK warehousing",
     eyebrow: "Case study · Automotive & upholstery",
     h1: "Car Seat Covers and Faux Leather: UK Warehousing",
@@ -310,7 +310,7 @@ export const caseHub: EnPage = {
   modified: "2026-11-10",
   title: "UK Warehouse & Fulfilment Case Studies",
   description:
-    "Live UK warehousing, fulfilment and distribution operations run from our Essex warehouse: food, B2B packaging, automotive, fashion, bulky goods and electronics, from one trial pallet to monthly containers.",
+    "Live UK warehousing, fulfilment and distribution operations from our Essex warehouse: food, packaging, automotive, fashion, bulky goods and electronics.",
   label: "Case Studies",
   eyebrow: "Real operations",
   h1: "UK Warehouse and Fulfilment Case Studies",

@@ -25,6 +25,7 @@ export default function Footer() {
           <div className="text-white font-semibold mb-3">Hizmetler</div>
           <ul className="space-y-2 text-sm">
             <li><a href="/ingiltere-depo" className="hover:text-white transition">İngiltere Depo</a></li>
+            <li><a href="/ingiltere-3pl" className="hover:text-white transition">İngiltere 3PL Depo</a></li>
             <li><a href="/palet-depolama" className="hover:text-white transition">Palet Depolama</a></li>
             <li><a href="/londra-depo" className="hover:text-white transition">Londra Depo</a></li>
             <li><a href="/essex-depo" className="hover:text-white transition">Essex Depo</a></li>

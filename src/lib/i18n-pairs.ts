@@ -10,6 +10,7 @@ export const PAIRS: ReadonlyArray<readonly [tr: string, en: string]> = [
   ["/ingiltere-depo-avantajlari", "/en/uk-warehousing-benefits"],
   ["/ingiltere-depo-fiyatlari", "/en/uk-warehousing-pricing"],
   ["/ingiltere-depo", "/en/uk-warehousing"],
+  ["/ingiltere-3pl", "/en/3pl-uk"],
   ["/londra-depo", "/en/london-warehousing"],
   ["/ingiltere-e-ticaret-lojistigi", "/en/uk-ecommerce-logistics"],
   ["/siparis-toplama-paketleme", "/en/pick-and-pack"],

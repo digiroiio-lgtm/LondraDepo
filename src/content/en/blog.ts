@@ -9,13 +9,13 @@ export const blogPages: EnPage[] = [
     kind: "article",
     parent: "/en/blog",
     article: { ...DATE, readMins: 6, section: "Warehousing" },
-    title: "UK Warehousing Guide: How It Works",
+    title: "UK Warehousing Services Guide: How It Works",
     description:
-      "A practical guide to UK warehousing for overseas sellers: what a UK warehouse service is, who needs one, how the process works step by step and how to choose the right partner.",
+      "UK warehousing and logistics for overseas sellers: what warehousing services include, who needs them, how it works step by step and how to choose a partner.",
     label: "UK Warehousing Guide",
-    h1: "UK Warehousing: A Complete Guide for Overseas Sellers",
+    h1: "UK Warehousing Services: A Complete Guide for Overseas Sellers",
     lead:
-      "A UK warehousing service stores your goods securely once they arrive in the UK and prepares them for dispatch to customers or sales channels when needed. Holding physical stock in the UK shortens delivery times, simplifies imports and supports sales on marketplaces such as Amazon and Etsy. This guide explains how it works and how to choose a partner.",
+      "UK warehousing services store your goods securely once they arrive in the UK and prepare them for dispatch to customers or sales channels when needed; most providers combine warehousing and logistics (goods-in, storage, fulfilment and delivery) under one contract. Holding physical stock in the UK shortens delivery times, simplifies imports and supports sales on marketplaces such as Amazon and Etsy. This guide explains how it works and how to choose a partner.",
     sections: [
       {
         type: "list",
@@ -67,7 +67,7 @@ export const blogPages: EnPage[] = [
       { q: "What does UK warehousing typically cost?", a: "At LondraDepo, standard pallet storage starts from £3.50 + VAT per pallet per week, so 10 pallets for 4 weeks start at £140 + VAT. Goods-in, fulfilment and delivery are quoted separately." },
       { q: "How do I choose a UK warehouse partner?", a: "Compare providers on location, how each cost line is priced, stock visibility, sales channels, returns, minimums, contract terms, insurance, customs support and references. Our 3PL guide lists 12 questions to ask." },
     ],
-    related: ["/en/blog/uk-warehousing-prices-2026", "/en/blog/what-is-a-uk-transit-warehouse", "/en/blog/what-is-uk-fulfilment", "/en/uk-warehousing", "/en/pallet-storage", "/en/uk-warehousing-pricing", "/en/essex-warehouse", "/en/uk-fulfilment"],
+    related: ["/en/3pl-uk", "/en/blog/uk-warehousing-prices-2026", "/en/blog/what-is-a-uk-transit-warehouse", "/en/blog/what-is-uk-fulfilment", "/en/uk-warehousing", "/en/pallet-storage", "/en/uk-warehousing-pricing", "/en/essex-warehouse", "/en/uk-fulfilment"],
   },
   {
     slug: "/en/blog/what-is-uk-fulfilment",
@@ -75,13 +75,13 @@ export const blogPages: EnPage[] = [
     kind: "article",
     parent: "/en/blog",
     article: { ...DATE, readMins: 5, section: "Fulfilment" },
-    title: "What Is UK Fulfilment and How Does It Work?",
+    title: "UK Fulfilment Services Explained: How It Works",
     description:
-      "UK fulfilment explained: what fulfilment and 3PL mean, the benefits of fulfilling from a UK warehouse, how 3PL differs from Amazon FBA and which products suit it.",
+      "What UK fulfilment services and fulfilment centres do, why sellers fulfil from a UK warehouse, how a 3PL differs from Amazon FBA and which products suit it.",
     label: "What Is UK Fulfilment?",
-    h1: "What Is UK Fulfilment and How Does It Work?",
+    h1: "UK Fulfilment Services: What They Are and How They Work",
     lead:
-      "Fulfilment is the whole operational process from receiving an ecommerce order to delivering it to the customer: order capture, picking the product from the warehouse, packing it and shipping it. UK fulfilment means this happens from a warehouse in the UK, usually run by a third-party logistics (3PL) provider.",
+      "Fulfilment is the whole operational process from receiving an ecommerce order to delivering it to the customer: order capture, picking the product from the warehouse, packing it and shipping it. UK fulfilment services do this from a fulfilment centre in the UK, usually run by a third-party logistics (3PL) provider, so your customers get UK delivery times without you running a warehouse.",
     sections: [
       {
         type: "text",
@@ -121,7 +121,7 @@ export const blogPages: EnPage[] = [
       { q: "How much does UK fulfilment cost?", a: "Storage starts from £3.50 + VAT per pallet per week at LondraDepo. Pick and pack, packaging, delivery and returns are priced per order and item, based on your products and monthly volumes." },
       { q: "What is the difference between fulfilment and warehousing?", a: "Warehousing is receiving and storing stock. Fulfilment adds what happens when a customer orders: picking, packing, labelling, dispatch and returns. LondraDepo provides both from the same Essex warehouse." },
     ],
-    related: ["/en/shopify-fulfilment-uk", "/en/blog/uk-warehousing-guide", "/en/blog/amazon-fba-vs-uk-fulfilment", "/en/blog/amazon-prep-uk-guide", "/en/uk-fulfilment"],
+    related: ["/en/3pl-uk", "/en/shopify-fulfilment-uk", "/en/blog/uk-warehousing-guide", "/en/blog/amazon-fba-vs-uk-fulfilment", "/en/blog/amazon-prep-uk-guide", "/en/uk-fulfilment"],
   },
   {
     slug: "/en/blog/amazon-prep-uk-guide",
@@ -196,7 +196,7 @@ export const blogPages: EnPage[] = [
     article: { ...DATE, readMins: 5, section: "Warehousing" },
     title: "What Is a UK Transit Warehouse (Cross-Dock)?",
     description:
-      "What a UK transit warehouse or cross-dock is, how it differs from standard storage, how the process works and which businesses benefit from short-term transit warehousing.",
+      "What a UK transit warehouse or cross-dock is, how it differs from standard storage, how the process works and which businesses benefit from it.",
     label: "What Is a UK Transit Warehouse?",
     h1: "What Is a UK Transit Warehouse, and Who Is It For?",
     lead:
@@ -252,7 +252,7 @@ export const blogPages: EnPage[] = [
     article: { ...DATE, readMins: 7, section: "Warehousing" },
     title: "UK Warehousing Prices 2026: A Full Cost Guide",
     description:
-      "How UK warehouse and fulfilment costs are built in 2026: pallet storage from £3.50 + VAT per week, pick and pack, packaging, carriage, goods-in, Amazon prep and a worked example.",
+      "How UK warehouse and fulfilment costs add up in 2026: pallet storage from £3.50 + VAT a week, pick and pack, packaging, carriage, goods-in and Amazon prep.",
     label: "UK Warehousing Prices 2026",
     h1: "UK Warehousing Prices 2026: A Full Cost Guide",
     lead:
@@ -315,11 +315,11 @@ export const blogPages: EnPage[] = [
     kind: "article",
     parent: "/en/blog",
     article: { ...DATE, readMins: 5, section: "Warehousing" },
-    title: "UK Pallet Storage Costs 2026",
+    title: "Pallet Storage UK: Costs per Pallet in 2026",
     description:
-      "UK pallet storage costs in 2026: weekly rates from £3.50 + VAT per pallet, what affects the price, a 10-pallet worked example and practical ways to reduce your total cost.",
+      "Pallet storage costs in the UK for 2026: from £3.50 + VAT per pallet per week, what changes the price, a 10-pallet worked example and ways to cut your bill.",
     label: "UK Pallet Storage Costs",
-    h1: "UK Pallet Storage Costs 2026",
+    h1: "Pallet Storage UK: Costs per Pallet in 2026",
     lead:
       "UK pallet storage is usually charged per pallet per week. At LondraDepo, the starting rate for a standard pallet is £3.50 + VAT per week, which covers storage only; goods-in, handling and pick and pack are charged separately. Pallet size and weight, product type, duration and access frequency all affect the final price.",
     sections: [
@@ -442,7 +442,7 @@ export const blogPages: EnPage[] = [
     article: { ...DATE, readMins: 9, section: "Importing" },
     title: "How to Import Goods into the UK: A Practical Guide",
     description:
-      "How to import goods into the UK: GB EORI, commodity codes and the UK Global Tariff, customs declarations, duty and import VAT, rules of origin and choosing a UK warehouse.",
+      "How to import goods into the UK: GB EORI, commodity codes, the UK Global Tariff, customs declarations, duty and import VAT, rules of origin and warehousing.",
     label: "UK Importing Guide",
     h1: "How to Import Goods into the UK: A Practical Guide",
     lead:
@@ -510,9 +510,9 @@ export const blogPages: EnPage[] = [
     kind: "article",
     parent: "/en/blog",
     article: { ...DATE, readMins: 7, section: "Choosing a partner" },
-    title: "How to Choose a UK 3PL Warehouse: 12 Questions to Ask",
+    title: "How to Choose a UK 3PL: 12 Questions to Ask",
     description:
-      "A practical checklist for choosing a UK 3PL warehouse: location, pricing structure, stock visibility, channels, returns, minimums, contracts, insurance, customs support and references.",
+      "Choosing a UK 3PL warehouse? 12 questions on location, pricing, stock visibility, channels, returns, minimums, contracts, insurance and customs support.",
     label: "Choosing a UK 3PL",
     h1: "How to Choose a UK 3PL Warehouse: 12 Questions to Ask",
     lead:
@@ -568,7 +568,7 @@ export const blogPages: EnPage[] = [
       { q: "Should I visit a 3PL warehouse before choosing?", a: "Yes, if you can. A visit or video walk-through shows racking, cleanliness and security, and lets you meet the team who will handle your stock day to day." },
       { q: "What contract terms should I check with a 3PL?", a: "Check the contract length, the notice period and how stock is released if you leave, as well as any minimum monthly charges and what insurance applies to your goods." },
     ],
-    related: ["/en/shopify-fulfilment-uk", "/en/uk-warehousing", "/en/uk-fulfilment", "/en/uk-warehousing-pricing", "/en/uk-storage-cost-calculator", "/en/industries"],
+    related: ["/en/3pl-uk", "/en/shopify-fulfilment-uk", "/en/uk-warehousing", "/en/uk-fulfilment", "/en/uk-warehousing-pricing", "/en/uk-storage-cost-calculator", "/en/industries"],
   },
   {
     slug: "/en/blog/uk-import-costs",
@@ -578,7 +578,7 @@ export const blogPages: EnPage[] = [
     article: { ...DATE, readMins: 7, section: "Importing" },
     title: "UK Import Costs: Duty, VAT and Logistics",
     description:
-      "What it costs to import into the UK: freight, customs clearance, duty by commodity code, 20% import VAT, haulage, unloading, storage and fulfilment, with a worked example.",
+      "What it costs to import into the UK: freight, customs clearance, duty by commodity code, 20% import VAT, haulage, unloading and storage, with an example.",
     label: "UK Import Costs",
     h1: "What Does It Cost to Import Goods into the UK?",
     lead:

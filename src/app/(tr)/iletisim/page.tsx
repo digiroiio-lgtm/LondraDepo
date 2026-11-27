@@ -183,7 +183,7 @@ export default function IletisimPage() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <PageFaq faqs={faqs} />
-        <RelatedLinks links={[{ href: "/ingiltere-depo-fiyatlari", label: "İngiltere depo fiyatları" }, { href: "/ingiltere-depo-maliyet-hesaplama", label: "Depo maliyet hesaplama" }, { href: "/essex-depo", label: "Essex depomuz", note: "Adres ve ulaşım" }, { href: "/case-studies", label: "Vaka çalışmaları" }, { href: "/sektorler", label: "Sektörler" }, { href: "/teklif-al", label: "Teklif al", note: "24 saat içinde dönüş" }]} />
+        <RelatedLinks links={[{ href: "/ingiltere-depo-fiyatlari", label: "İngiltere depo fiyatları" }, { href: "/ingiltere-depo-maliyet-hesaplama", label: "Depo maliyet hesaplama" }, { href: "/essex-depo", label: "Essex depomuz", note: "Adres ve ulaşım" }, { href: "/case-studies", label: "Vaka çalışmaları" }, { href: "/sektorler", label: "Sektörler" }, { href: "/teklif-al", label: "Teklif al", note: "Size özel fiyat ve plan" }]} />
       </main>
       <Footer />
       <StickyWhatsappCta />

@@ -42,7 +42,7 @@ const jsonLd = {
     {
       "@type": ["LocalBusiness", "WarehouseOrDistributionFacility"],
       name: "LondraDepo.com — Essex Warehouse",
-      provider: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
+      parentOrganization: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
       description: "Essex merkezli UK depo ve lojistik operasyonu. Türkiye'den gelen yükler için İngiltere depolama ve dağıtım.",
       address: {
         "@type": "PostalAddress",

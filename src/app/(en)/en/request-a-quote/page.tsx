@@ -13,7 +13,7 @@ import { SITE_URL } from "@/lib/site";
 const PATH = "/en/request-a-quote";
 const TITLE = "Request a UK Warehousing & Fulfilment Quote";
 const DESCRIPTION =
-  "Request a quote for UK warehousing, pallet storage, container unloading, fulfilment, Amazon prep or distribution from our Essex warehouse. Pallet storage from £3.50 + VAT per week.";
+  "Request a quote for UK warehousing, pallet storage, container unloading, fulfilment, Amazon prep or distribution from Essex. Pallets from £3.50 + VAT a week.";
 
 export const metadata: Metadata = {
   title: `${TITLE} | LondraDepo`,

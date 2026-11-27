@@ -1,4 +1,5 @@
 import Icon, { iconFor } from "@/components/visual/Icon";
+import { palletOffer } from "@/lib/offers";
 import ProcessFlow from "@/components/visual/ProcessFlow";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import TrClusterNav from "@/components/TrClusterNav";
@@ -50,6 +51,7 @@ const jsonLd = {
       description: "UK'da palet bazında depolama hizmeti. Toptancı, ithalatçı ve üreticiler için maliyet kontrollü pallet storage.",
       areaServed: { "@type": "Country", name: "United Kingdom" },
       url: PAGE_URL,
+      offers: palletOffer("tr"),
     },
   ],
 };

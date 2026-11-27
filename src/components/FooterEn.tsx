@@ -8,6 +8,7 @@ const TEL = "tel:+447554195190";
 
 const services = [
   ["/en/uk-warehousing", "UK Warehousing"],
+  ["/en/3pl-uk", "3PL Warehouse UK"],
   ["/en/uk-import-logistics", "UK Import Logistics"],
   ["/en/container-unloading", "Container Unloading"],
   ["/en/london-warehousing", "London Warehousing"],

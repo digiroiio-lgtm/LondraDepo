@@ -5,12 +5,13 @@
 export type GuideLink = { href: string; label: string };
 export type GuideNext = { links: GuideLink[]; services: string[]; heading: string; intro: string };
 
-const QUOTE: GuideLink = { href: "/teklif-al", label: "Teklif al (24 saat içinde dönüş)" };
+const QUOTE: GuideLink = { href: "/teklif-al", label: "Teklif al" };
 
 export const GUIDE_NEXT: Record<string, GuideNext> = {
   "ingiltere-depo-rehberi": {
     links: [
       { href: "/ingiltere-depo", label: "İngiltere Depo hizmeti" },
+      { href: "/ingiltere-3pl", label: "İngiltere 3PL depo" },
       { href: "/palet-depolama", label: "Palet depolama (£3.50 + KDV / hafta)" },
       { href: "/ingiltere-depo-fiyatlari", label: "İngiltere depo fiyatları" },
       { href: "/essex-depo", label: "Essex depomuz" },
@@ -23,6 +24,7 @@ export const GUIDE_NEXT: Record<string, GuideNext> = {
   "ingiltere-fulfillment-nedir": {
     links: [
       { href: "/ingiltere-fulfillment", label: "İngiltere Fulfillment hizmeti" },
+      { href: "/ingiltere-3pl", label: "İngiltere 3PL depo" },
       { href: "/e-ticaret-fulfillment", label: "E-ticaret fulfillment" },
       { href: "/siparis-toplama-paketleme", label: "Sipariş toplama ve paketleme" },
       { href: "/shopify-ingiltere-depo", label: "Shopify için İngiltere depo" },

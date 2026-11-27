@@ -22,9 +22,12 @@ const HERO_BOOKING = new Set([
   "/en/amazon-prep-uk", "/en/amazon-fulfilment-uk", "/en/amazon-seller-warehousing-uk", "/en/amazon-uk-fulfilment-centres", "/en/shopify-fulfilment-uk",
 ]);
 
+/** Pages that state the published pallet rate get it as Offer markup on their Service node. */
+const PALLET_OFFER = new Set(["/en/uk-warehousing-pricing", "/en/pallet-storage", "/en/uk-warehousing", "/en/3pl-uk", "/en/uk-storage-cost-calculator"]);
+
 /** Highest-intent pages get the quote form inline (CRO plan, weeks 11–13). */
 const INLINE_FORM = new Set([
-  "/en/uk-import-logistics", "/en/container-unloading", "/en/uk-warehousing-pricing", "/en/pallet-storage", "/en/uk-warehousing",
+  "/en/3pl-uk", "/en/uk-import-logistics", "/en/container-unloading", "/en/uk-warehousing-pricing", "/en/pallet-storage", "/en/uk-warehousing",
   "/en/shopify-fulfilment-uk", "/en/uk-fulfilment", "/en/ecommerce-fulfilment", "/en/uk-ecommerce-logistics", "/en/pick-and-pack",
   "/en/amazon-fulfilment-uk", "/en/amazon-seller-warehousing-uk", "/en/amazon-prep-uk", "/en/amazon-uk-fulfilment-centres", "/en/uk-distribution",
   "/en/london-gateway-tilbury-warehousing", "/en/felixstowe-port-warehousing", "/en/uk-warehousing-for-turkish-exporters",
@@ -38,6 +41,7 @@ import { getEnPage } from "@/content/en";
 import type { EnPage, Section } from "@/content/en/types";
 import { absolute } from "@/lib/i18n";
 import { SITE_URL } from "@/lib/site";
+import { palletOffer } from "@/lib/offers";
 
 const WHATSAPP = "https://wa.me/447554195190?text=Hello%2C%20I%27d%20like%20a%20warehousing%20quote.";
 const TEL = "tel:+447554195190";
@@ -109,6 +113,7 @@ function jsonLd(page: EnPage) {
       provider: ORG,
       areaServed: { "@type": "Country", name: "United Kingdom" },
       url,
+      ...(PALLET_OFFER.has(page.slug) ? { offers: palletOffer("en") } : {}),
     });
   }
   if (page.kind === "home") {

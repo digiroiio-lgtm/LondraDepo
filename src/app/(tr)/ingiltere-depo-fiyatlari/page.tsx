@@ -1,4 +1,5 @@
 import Emoji from "@/components/visual/Emoji";
+import { palletOffer } from "@/lib/offers";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -59,6 +60,7 @@ const jsonLd = {
         "İngiltere depo ve fulfillment hizmet fiyatları. Mal kabul, depolama, pick & pack, kargo ve iade için maliyet kalemleri.",
       areaServed: { "@type": "Country", name: "United Kingdom" },
       url: `${SITE_URL}/ingiltere-depo-fiyatlari`,
+      offers: palletOffer("tr"),
     },
   ],
 };

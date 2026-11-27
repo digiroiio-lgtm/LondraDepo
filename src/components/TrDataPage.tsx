@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { palletOffer } from "@/lib/offers";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -72,6 +73,7 @@ function jsonLd(p: TrPage) {
       provider: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
       areaServed: { "@type": "Country", name: "United Kingdom" },
       url,
+      ...(p.path === "/ingiltere-3pl" ? { offers: palletOffer("tr") } : {}),
     });
   }
   return { "@context": "https://schema.org", "@graph": graph };

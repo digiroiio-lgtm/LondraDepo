@@ -101,7 +101,7 @@ export const plBlogB: EnPage[] = [
         head: ["Pytanie", "Dlaczego to ważne"],
         rows: [
           ["1. Gdzie jest magazyn i jak daleko od portu przybycia oraz od Twoich klientów?", "Odległość wpływa na koszt transportu i czas dostaw, zwłaszcza przy imporcie kontenerowym."],
-          ["2. Jak wyceniana jest każda pozycja kosztów?", "Składowanie, przyjęcie towaru, pick and pack, opakowania, dostawa i zwroty są zwykle wyceniane osobno; porównuj sumy dla rzeczywistych wolumenów, a nie stawki z nagłówka."],
+          ["2. Jak wyceniana jest każda pozycja kosztów?", "Składowanie, przyjęcie towaru, kompletacja i pakowanie, opakowania, dostawa i zwroty są zwykle wyceniane osobno; porównuj sumy dla rzeczywistych wolumenów, a nie stawki z nagłówka."],
           ["3. Jak będziesz widzieć swoje stany?", "Zapytaj, jakiego systemu WMS używa operator i jakie raporty lub dostęp otrzymasz."],
           ["4. Jakie kanały sprzedaży obsługuje?", "Sprawdź Shopify, Amazon FBA prep lub FBM, marketplace'y i hurtowe zamówienia paletowe, najlepiej z jednego zapasu."],
           ["5. Jak działają zwroty?", "Zapytaj, jak zwrócone produkty są sprawdzane, przywracane do sprzedaży lub odkładane i jak jesteś o tym informowany."],
@@ -141,7 +141,7 @@ export const plBlogB: EnPage[] = [
     faqs: [
       { q: "Czym jest magazyn 3PL?", a: "Magazyn 3PL (third-party logistics) przechowuje Twój zapas i w Twoim imieniu przyjmuje dostawy, kompletuje i pakuje zamówienia, wysyła je oraz obsługuje zwroty, więc nie potrzebujesz własnego magazynu ani pracowników." },
       { q: "Jakie informacje wysłać operatorowi 3PL, aby otrzymać dokładną wycenę?", a: "Podaj rodzaj i wymiary produktów, liczbę SKU, liczbę palet lub kartonów w zapasie, miesięczną liczbę zamówień i średnią liczbę sztuk w zamówieniu, kanały sprzedaży, przewidywany odsetek zwrotów i regiony dostaw." },
-      { q: "Czy najniższa stawka składowania oznacza najlepszą ofertę?", a: "Niekoniecznie. Składowanie, przyjęcie towaru, pick and pack, opakowania, dostawa i zwroty są zwykle wyceniane osobno, dlatego porównuj miesięczną sumę kosztów dla swoich rzeczywistych wolumenów." },
+      { q: "Czy najniższa stawka składowania oznacza najlepszą ofertę?", a: "Niekoniecznie. Składowanie, przyjęcie towaru, kompletacja i pakowanie, opakowania, dostawa i zwroty są zwykle wyceniane osobno, dlatego porównuj miesięczną sumę kosztów dla swoich rzeczywistych wolumenów." },
       { q: "Czy warto odwiedzić magazyn 3PL przed wyborem?", a: "Tak, jeśli to możliwe. Wizyta lub wideoprezentacja pokazuje regały, porządek i zabezpieczenia oraz pozwala poznać zespół, który będzie na co dzień obsługiwał Twój towar." },
       { q: "Jakie warunki umowy z 3PL warto sprawdzić?", a: "Sprawdź długość umowy, okres wypowiedzenia i sposób wydania towaru w razie rezygnacji, a także ewentualne minimalne opłaty miesięczne i zakres ubezpieczenia Twojego towaru w magazynie." },
     ],
@@ -460,13 +460,13 @@ export const plBlogB: EnPage[] = [
     modified: MODIFIED,
     title: "Skład celny czy magazyn towaru oclonego?",
     description:
-      "Czym jest skład celny (bonded warehouse), kiedy cło i VAT importowy są zawieszone i kiedy prostszy jest magazyn towaru oclonego z odroczonym rozliczeniem VAT.",
+      "Czym jest skład celny, kiedy cło i VAT importowy są zawieszone i kiedy prostszy jest magazyn towaru oclonego z odroczonym rozliczeniem VAT.",
     label: "Skład celny czy towar oclony",
-    h1: "Skład celny (bonded warehouse) czy magazyn towaru oclonego?",
+    h1: "Skład celny czy magazyn towaru oclonego?",
     lead:
-      "Skład celny (bonded warehouse), który HMRC nazywa customs warehouse, to miejsce zatwierdzone przez HMRC, w którym importowany towar można składować z zawieszonym cłem i VAT importowym; należności powstają dopiero przy dopuszczeniu towaru do obrotu w UK, a towar ponownie wywieziony ze składu może ich nigdy nie zapłacić. Magazyn towaru oclonego, taki jak LondraDepo, składuje towar po zgłoszeniu importowym, gdy cło i VAT importowy zostały zapłacone lub rozliczone. Dla importerów zarejestrowanych do VAT odroczone rozliczenie VAT już eliminuje wydatek gotówkowy na VAT importowy, więc skład celny opłaca się głównie przy wysokim cle lub gdy towar może opuścić UK.",
+      "Skład celny (ang. bonded warehouse) to miejsce objęte procedurą składowania celnego (w UK: customs warehousing), zatwierdzone przez HMRC, w którym importowany towar można składować z zawieszonym cłem i VAT importowym; należności powstają dopiero przy dopuszczeniu towaru do obrotu w UK, a towar ponownie wywieziony ze składu może ich nigdy nie zapłacić. Magazyn towaru oclonego, taki jak LondraDepo, składuje towar po zgłoszeniu importowym, gdy cło i VAT importowy zostały zapłacone lub rozliczone. Dla importerów zarejestrowanych do VAT odroczone rozliczenie VAT już eliminuje wydatek gotówkowy na VAT importowy, więc skład celny opłaca się głównie przy wysokim cle lub gdy towar może opuścić UK.",
     facts: [
-      "Skład celny = procedura specjalna HMRC „customs warehousing”",
+      "Skład celny = procedura składowania celnego (w UK: „customs warehousing”)",
       "Cło i VAT importowy zawieszone do czasu zwolnienia towaru",
       "Prowadzony przez prowadzących skład zatwierdzonych i nadzorowanych przez HMRC",
       "Odroczone rozliczenie VAT: brak płatności VAT importowego na granicy dla firm zarejestrowanych do VAT",
@@ -476,7 +476,7 @@ export const plBlogB: EnPage[] = [
       {
         type: "table",
         h2: "Skład celny a magazyn towaru oclonego",
-        head: ["", "Skład celny (customs warehouse)", "Magazyn towaru oclonego"],
+        head: ["", "Skład celny", "Magazyn towaru oclonego"],
         rows: [
           ["Status celny towaru", "Jeszcze niedopuszczony do obrotu; objęty procedurą składu celnego", "Dopuszczony do obrotu w Wielkiej Brytanii"],
           ["Cło", "Zawieszone do zwolnienia; nienależne, jeśli towar zostanie ponownie wywieziony", "Płacone przy zgłoszeniu importowym"],
@@ -524,8 +524,8 @@ export const plBlogB: EnPage[] = [
       },
     ],
     faqs: [
-      { q: "Co oznacza bonded warehouse?", a: "Bonded warehouse, przez HMRC nazywany customs warehouse, to zatwierdzone miejsce, w którym importowany towar jest składowany z zawieszonym cłem i VAT importowym. Należności powstają przy dopuszczeniu towaru do obrotu w UK i nie są należne, jeśli towar zostanie ponownie wywieziony." },
-      { q: "Czy bonded warehouse to to samo co skład celny?", a: "Tak, w brytyjskiej praktyce. HMRC używa terminu customs warehousing dla procedury specjalnej prowadzonej przez zatwierdzonych i nadzorowanych przez siebie prowadzących skład. Bonded warehouse to potoczna nazwa tego samego, używana też dla towarów akcyzowych, np. alkoholu." },
+      { q: "Co to jest skład celny?", a: "Skład celny (ang. bonded warehouse, w terminologii HMRC customs warehouse) to zatwierdzone miejsce, w którym importowany towar jest składowany z zawieszonym cłem i VAT importowym. Należności powstają przy dopuszczeniu towaru do obrotu w UK i nie są należne, jeśli towar zostanie ponownie wywieziony." },
+      { q: "Czy angielskie „bonded warehouse” oznacza skład celny?", a: "Tak, w brytyjskiej praktyce. HMRC używa terminu customs warehousing dla procedury specjalnej prowadzonej przez zatwierdzonych i nadzorowanych przez siebie prowadzących skład. Bonded warehouse to potoczna nazwa tego samego, używana też dla towarów akcyzowych, np. alkoholu." },
       { q: "Czy LondraDepo oferuje składowanie w składzie celnym?", a: "Nie. LondraDepo w Rayleigh w Essex to magazyn towaru oclonego: towar przechodzi brytyjską odprawę celną, zanim go przyjmiemy. Arca Trade Group, operator LondraDepo, może przygotować zgłoszenie importowe i zorganizować odbiór z portu." },
       { q: "Czy potrzebuję składu celnego, aby odroczyć płatność VAT importowego?", a: "Zwykle nie. Według GOV.UK importerzy zarejestrowani do VAT w Wielkiej Brytanii mogą korzystać z odroczonego rozliczenia VAT, deklarując i odliczając VAT importowy w tej samej deklaracji, bez potrzeby uzyskiwania zgody. Skład celny służy głównie zawieszeniu cła." },
       { q: "Kiedy skład celny się opłaca?", a: "Skład celny warto rozważyć dla towarów z wysokimi stawkami cła, towarów akcyzowych takich jak alkohol, zapasu składowanego wiele miesięcy przed sprzedażą lub towarów, które mogą zostać ponownie wywiezione. Dla zapasu sprzedawanego w UK szybko po przybyciu magazyn towaru oclonego jest zwykle prostszy." },

@@ -79,7 +79,7 @@ export const QF: Record<ViewLocale, QuoteFormStrings> = {
     services: {
       storage: "Magazynowanie i składowanie palet",
       "container-unloading": "Rozładunek kontenerów i przyjęcie towaru",
-      fulfilment: "Fulfillment e-commerce / pick and pack",
+      fulfilment: "Fulfillment e-commerce / kompletacja i pakowanie",
       "amazon-prep": "Amazon FBA prep",
       distribution: "Dystrybucja B2B / w Wielkiej Brytanii",
       repacking: "Przepakowanie, ponowne etykietowanie, obsługa",

@@ -91,7 +91,7 @@ export const plPages: EnPage[] = [
       "Składowanie na paletach lub półkach, raporty stanów",
       "Mintsoft WMS: stany i zamówienia na bieżąco",
       "Palety od 3,50 £ + VAT tygodniowo, bez stałego minimum",
-      "Nie jesteśmy magazynem celnym: składujemy towar po odprawie",
+      "Nie jesteśmy składem celnym: składujemy towar po odprawie",
     ],
     sections: [
       {
@@ -120,7 +120,7 @@ export const plPages: EnPage[] = [
       { q: "Ile kosztuje magazyn w Wielkiej Brytanii?", a: "Składowanie palety zaczyna się od 3,50 £ + VAT tygodniowo. Pozostałe pozycje, takie jak przyjęcie towaru, kompletacja i dostawa, wyceniamy według produktu i wolumenu." },
       { q: "Czy mogę zacząć od jednej palety?", a: "Tak. Nie ma stałego minimum, więc można zacząć od jednej palety testowej i zwiększać wolumen wraz ze sprzedażą w Wielkiej Brytanii." },
       { q: "Czy widzę stany magazynowe na bieżąco?", a: "Tak. Stany i zamówienia są prowadzone w systemie Mintsoft WMS, a regularne raporty pokazują, ile towaru jest w magazynie i co zostało wysłane." },
-      { q: "Czy towar może przyjechać bez odprawy celnej?", a: "Nie. Nie jesteśmy magazynem celnym, więc towar przyjmujemy po brytyjskiej odprawie celnej. Odprawę może wykonać Arca Trade Group lub Twoja agencja celna." },
+      { q: "Czy towar może przyjechać bez odprawy celnej?", a: "Nie. Nie jesteśmy składem celnym, więc towar przyjmujemy po brytyjskiej odprawie celnej. Odprawę może wykonać Arca Trade Group lub Twoja agencja celna." },
       { q: "Jak daleko jest magazyn od portów?", a: "Magazyn w Rayleigh jest 13 mil od London Gateway, 16 mil od Tilbury i około 62 mile od Felixstowe, co skraca transport kontenerów z portu." },
     ],
     related: ["/pl/3pl-wielka-brytania", "/pl/skladowanie-palet", "/pl/cennik-magazynowania", "/pl/import-do-wielkiej-brytanii", "/pl/zapytanie-ofertowe"],
@@ -132,7 +132,7 @@ export const plPages: EnPage[] = [
     serviceType: "Logistyka kontraktowa (3PL)",
     modified: MODIFIED,
     title: "Magazyn 3PL w Wielkiej Brytanii (Essex)",
-    description: "Operator 3PL w Wielkiej Brytanii: przyjęcie towaru, składowanie palet od 3,50 £ + VAT, pick and pack, fulfillment e-commerce i B2B, Amazon FBA prep i dostawy w UK.",
+    description: "Operator 3PL w Wielkiej Brytanii: przyjęcie towaru, składowanie palet od 3,50 £ + VAT, kompletacja zamówień, fulfillment e-commerce i B2B, Amazon FBA prep i dostawy w UK.",
     label: "3PL w Wielkiej Brytanii",
     eyebrow: "Logistyka zewnętrzna w UK",
     h1: "Magazyn 3PL w Wielkiej Brytanii: logistyka zewnętrzna z Essex pod Londynem",
@@ -141,7 +141,7 @@ export const plPages: EnPage[] = [
     facts: [
       "Przyjęcie towaru i rozładunek kontenerów",
       "Składowanie palet od 3,50 £ + VAT tygodniowo",
-      "Pick and pack wyceniany za zamówienie",
+      "Kompletacja i pakowanie wyceniane za zamówienie",
       "E-commerce (Shopify, Amazon FBM), zamówienia B2B i Amazon FBA prep",
       "Mintsoft WMS: stany i zamówienia na bieżąco",
     ],
@@ -154,7 +154,7 @@ export const plPages: EnPage[] = [
         rows: [
           ["Składowanie", "Miejsce zajmowane przez towar", "Od 3,50 £ + VAT za paletę tygodniowo"],
           ["Przyjęcie towaru", "Rozładunek, liczenie, kontrola, rejestracja w WMS", "Za kontener, paletę lub karton"],
-          ["Pick and pack", "Kompletacja i pakowanie zamówienia", "Za zamówienie i dodatkową sztukę"],
+          ["Kompletacja i pakowanie (pick and pack)", "Pobranie produktów z półki i spakowanie zamówienia", "Za zamówienie i dodatkową sztukę"],
           ["Opakowania", "Kartony, koperty, wypełniacze", "Według kosztu lub Twoje opakowania"],
           ["Transport", "Dostawa paczek lub palet", "Stawki przewoźników według wagi i usługi"],
         ],
@@ -235,7 +235,7 @@ export const plPages: EnPage[] = [
     serviceType: "Fulfillment e-commerce",
     modified: MODIFIED,
     title: "Fulfillment e-commerce w Wielkiej Brytanii",
-    description: "Fulfillment e-commerce w UK z magazynu 3PL w Essex: Mintsoft WMS, pick and pack, pakowanie, etykiety wysyłkowe, dostawy w UK i obsługa zwrotów dla sklepów online.",
+    description: "Fulfillment e-commerce w UK z magazynu 3PL w Essex: Mintsoft WMS, kompletacja, pakowanie, etykiety wysyłkowe, dostawy w UK i obsługa zwrotów dla sklepów online.",
     label: "Fulfillment e-commerce",
     eyebrow: "Dla sklepów internetowych",
     h1: "Fulfillment e-commerce w Wielkiej Brytanii: od zamówienia do dostawy",
@@ -243,7 +243,7 @@ export const plPages: EnPage[] = [
       "Fulfillment e-commerce to cały proces od otrzymania zamówienia ze sklepu internetowego do dostarczenia paczki klientowi: przyjęcie zamówienia, kompletacja, pakowanie i wysyłka. Gdy realizujesz go z magazynu w Wielkiej Brytanii, Twoi klienci w UK dostają krajowe terminy dostawy, a Ty unikasz wysyłki każdej paczki z Polski. LondraDepo obsługuje zamówienia z Shopify, Amazon FBM i własnych sklepów przez system Mintsoft WMS.",
     facts: [
       "Integracja zamówień przez Mintsoft WMS (Shopify, Amazon FBM i inne kanały)",
-      "Pick and pack wyceniany za zamówienie",
+      "Kompletacja i pakowanie wyceniane za zamówienie",
       "Etykiety wysyłkowe i przewoźnicy na terenie UK",
       "Obsługa zwrotów",
       "Zapas składowany w Essex pod Londynem",
@@ -383,7 +383,7 @@ export const plPages: EnPage[] = [
       "Brytyjskie zgłoszenia celne przez zespół celny Arca Trade Group",
       "Przyjęcie kontenerów FCL i LCL w Rayleigh, SS6 7FY",
       "Składowanie palet od 3,50 £ + VAT tygodniowo",
-      "Nie jesteśmy magazynem celnym: składujemy po odprawie",
+      "Nie jesteśmy składem celnym: składujemy po odprawie",
     ],
     sections: [
       {
@@ -409,7 +409,7 @@ export const plPages: EnPage[] = [
       { q: "Czy potrzebuję numeru GB EORI?", a: "Firma, która jest importerem do Wielkiej Brytanii, zwykle potrzebuje numeru GB EORI. Numer wnioskuje się w brytyjskim urzędzie HMRC przed pierwszą dostawą." },
       { q: "Kto płaci cło i VAT importowy?", a: "Cło i brytyjski VAT importowy (20%) płaci importer, zwykle Ty. LondraDepo nie staje się automatycznie importerem towaru, a koszty transportu wyceniamy osobno." },
       { q: "Czy mogę korzystać z własnego przewoźnika?", a: "Tak. Twój spedytor może dostarczyć towar na adres magazynu w Rayleigh, a od nas wziąć tylko rozładunek, składowanie, fulfillment i dystrybucję." },
-      { q: "Czy przechowujecie towar przed odprawą?", a: "Nie. Nie jesteśmy magazynem celnym, więc przyjmujemy towar po brytyjskiej odprawie celnej i dopiero wtedy go składujemy." },
+      { q: "Czy przechowujecie towar przed odprawą?", a: "Nie. Nie jesteśmy składem celnym, więc przyjmujemy towar po brytyjskiej odprawie celnej i dopiero wtedy go składujemy." },
     ],
     related: ["/pl/magazyn-dla-polskich-firm", "/pl/magazyn-w-wielkiej-brytanii", "/pl/zapytanie-ofertowe"],
     quote: { label: "Porozmawiajmy o imporcie", service: "freight-customs" },

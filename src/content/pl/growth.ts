@@ -134,7 +134,7 @@ export const plGrowth: EnPage[] = [
         intro: "Marki internetowe, które potrzebują kompletacji i pakowania, obsługi zwrotów i szybkiej dostawy w UK.",
         items: [
           { href: "/pl/studia-przypadkow/cruyff-fulfillment-uk", title: "Marka modowa Cruyff", text: "Zamówienia internetowe z UK przeniesione z Holandii do naszego magazynu w Essex.", tag: "Studium przypadku" },
-          { href: "/pl/fulfillment-shopify-uk", title: "Fulfillment Shopify w UK", text: "Składowanie, pick and pack i wysyłka w UK dla sklepów Shopify.", tag: "Usługa" },
+          { href: "/pl/fulfillment-shopify-uk", title: "Fulfillment Shopify w UK", text: "Składowanie, kompletacja, pakowanie i wysyłka w UK dla sklepów Shopify.", tag: "Usługa" },
           { href: "/pl/fulfillment-ecommerce", title: "Fulfillment e-commerce", text: "Od zamówienia online do drzwi klienta.", tag: "Usługa" },
         ],
       },
@@ -329,7 +329,7 @@ export const plGrowth: EnPage[] = [
         head: ["Model", "Typowy klient", "Co robi LondraDepo"],
         rows: [
           ["Hurt / B2B", "Sklepy, dystrybutorzy, odbiorcy branżowi", "Składowanie palet, kompletacja palet i kartonów, planowe dostawy w UK"],
-          ["E-commerce (DTC)", "Kupujący online przez Twoją stronę lub Shopify", "Pick and pack, wysyłka paczek, zwroty"],
+          ["E-commerce (DTC)", "Kupujący online przez Twoją stronę lub Shopify", "Kompletacja i pakowanie, wysyłka paczek, zwroty"],
           ["Amazon FBA", "Klienci Amazon, Prime", "FBA prep, etykiety FNSKU, dostawa do Amazon"],
           ["Amazon FBM", "Klienci Amazon obsługiwani przez Ciebie", "Składowanie zapasu i realizacja zamówień z Essex"],
         ],
@@ -504,13 +504,13 @@ export const plGrowth: EnPage[] = [
     eyebrow: "Porty na Tamizie · ok. 20 minut drogą",
     h1: "Magazyn blisko portów London Gateway i Tilbury",
     lead:
-      "Magazyn LondraDepo w Rayleigh w Essex leży około 13 mil (21 km) drogą od DP World London Gateway i 16 mil (26 km) od portu Tilbury, czyli około 20 minut autem od każdego z nich. Kontenery przypływające do obu portów na Tamizie można odprawić, przewieźć na krótkim odcinku do naszego obiektu, rozładować, policzyć i zarejestrować w stanach, a następnie składować od 3,50 £ + VAT za paletę tygodniowo lub wysłać dalej do klientów w UK. Magazyn nie znajduje się w porcie i nie jest magazynem celnym: towar składujemy po odprawie celnej.",
+      "Magazyn LondraDepo w Rayleigh w Essex leży około 13 mil (21 km) drogą od DP World London Gateway i 16 mil (26 km) od portu Tilbury, czyli około 20 minut autem od każdego z nich. Kontenery przypływające do obu portów na Tamizie można odprawić, przewieźć na krótkim odcinku do naszego obiektu, rozładować, policzyć i zarejestrować w stanach, a następnie składować od 3,50 £ + VAT za paletę tygodniowo lub wysłać dalej do klientów w UK. Magazyn nie znajduje się w porcie i nie jest składem celnym: towar składujemy po odprawie celnej.",
     facts: [
       "DP World London Gateway (SS17): ok. 13 mil / 21 km, ok. 20 minut",
       "Port Tilbury (RM18): ok. 16 mil / 26 km, ok. 20 minut",
       "Przyjęcie FCL 20ft, 40ft i 40ft high-cube oraz LCL",
       "Odprawa celna i transport przez Arca Trade Group",
-      "Nie jesteśmy magazynem celnym: składujemy towar po odprawie",
+      "Nie jesteśmy składem celnym: składujemy towar po odprawie",
     ],
     sections: [
       {
@@ -567,7 +567,7 @@ export const plGrowth: EnPage[] = [
     faqs: [
       { q: "Jak daleko jest magazyn od London Gateway?", a: "Magazyn w Rayleigh leży około 13 mil (21 km) drogą od DP World London Gateway, co przy płynnym ruchu oznacza około 20 minut jazdy samochodem osobowym." },
       { q: "Jak daleko jest magazyn od portu Tilbury?", a: "Około 16 mil (26 km) drogą, czyli około 20 minut autem przy płynnym ruchu. Ciężarówki z kontenerami potrzebują na ten odcinek więcej czasu." },
-      { q: "Czy magazyn blisko London Gateway jest magazynem celnym?", a: "Nie. LondraDepo nie jest magazynem celnym (bonded warehouse). Towar z London Gateway lub Tilbury jest odprawiany przez brytyjskie służby celne, zanim trafi do składowania w Rayleigh." },
+      { q: "Czy magazyn blisko London Gateway jest składem celnym?", a: "Nie. LondraDepo nie jest składem celnym. Towar z London Gateway lub Tilbury jest odprawiany przez brytyjskie służby celne, zanim trafi do składowania w Rayleigh." },
       { q: "Czy odbieracie kontenery z London Gateway lub Tilbury?", a: "Tak. Arca Trade Group, operator LondraDepo, może zorganizować odprawę celną i transport z obu portów, a alternatywnie Twój spedytor może dostarczyć kontener do naszego magazynu." },
       { q: "Co się dzieje po przypłynięciu kontenera do London Gateway lub Tilbury?", a: "Po złożeniu zgłoszenia importowego i zwolnieniu kontenera przewoźnik przywozi go 13–16 mil do Rayleigh. Rozładowujemy go, liczymy towar według listy pakunkowej, fotografujemy widoczne uszkodzenia i rejestrujemy stany w Mintsoft WMS." },
     ],
@@ -587,13 +587,13 @@ export const plGrowth: EnPage[] = [
     eyebrow: "Port Felixstowe · ok. 62 mile drogą",
     h1: "Magazyn dla kontenerów z portu Felixstowe w Essex",
     lead:
-      "Felixstowe to największy port kontenerowy w Wielkiej Brytanii, do którego zawija wiele serwisów oceanicznych z Azji. Magazyn LondraDepo nie znajduje się w porcie: leży w Rayleigh w Essex, około 62 mil (99 km) drogą, czyli około 1¼ godziny autem. Kontenery przypływające do Felixstowe można odprawić, przewieźć do naszego obiektu, rozładować i zarejestrować w stanach, a następnie składować od 3,50 £ + VAT za paletę tygodniowo, realizować z nich zamówienia lub dystrybuować w całej Wielkiej Brytanii; Londyn jest oddalony o około 37 mil. Nie jesteśmy magazynem celnym, więc towar składujemy po odprawie.",
+      "Felixstowe to największy port kontenerowy w Wielkiej Brytanii, do którego zawija wiele serwisów oceanicznych z Azji. Magazyn LondraDepo nie znajduje się w porcie: leży w Rayleigh w Essex, około 62 mil (99 km) drogą, czyli około 1¼ godziny autem. Kontenery przypływające do Felixstowe można odprawić, przewieźć do naszego obiektu, rozładować i zarejestrować w stanach, a następnie składować od 3,50 £ + VAT za paletę tygodniowo, realizować z nich zamówienia lub dystrybuować w całej Wielkiej Brytanii; Londyn jest oddalony o około 37 mil. Nie jesteśmy składem celnym, więc towar składujemy po odprawie.",
     facts: [
       "Port Felixstowe (IP11): ok. 62 mil / 99 km, ok. 1¼ godziny autem",
       "Centrum Londynu: ok. 37 mil od magazynu",
       "Przyjęcie FCL 20ft, 40ft i 40ft high-cube oraz LCL",
       "Odprawa celna i transport przez Arca Trade Group",
-      "Nie jesteśmy magazynem celnym i nie znajdujemy się w porcie",
+      "Nie jesteśmy składem celnym i nie znajdujemy się w porcie",
     ],
     sections: [
       {
@@ -649,7 +649,7 @@ export const plGrowth: EnPage[] = [
     faqs: [
       { q: "Jak daleko jest magazyn od Felixstowe?", a: "Z portu Felixstowe do Rayleigh w Essex jest około 62 mil (99 km) drogą, czyli około 1¼ godziny autem przy płynnym ruchu. Ciężarówki z kontenerami potrzebują więcej czasu." },
       { q: "Czy wasz magazyn znajduje się w porcie Felixstowe?", a: "Nie. Nasz magazyn jest w Rayleigh w Essex. Kontenery są przewożone z Felixstowe do naszego obiektu, gdzie odbywa się rozładunek, składowanie i realizacja zamówień." },
-      { q: "Czy oferujecie składowanie w składzie celnym dla kontenerów z Felixstowe?", a: "Nie. LondraDepo nie jest magazynem celnym. Towar z Felixstowe musi przejść brytyjską odprawę celną, zanim zostanie u nas składowany, a zgłoszenie może złożyć Arca Trade Group lub Twoja agencja." },
+      { q: "Czy oferujecie składowanie w składzie celnym dla kontenerów z Felixstowe?", a: "Nie. LondraDepo nie jest składem celnym. Towar z Felixstowe musi przejść brytyjską odprawę celną, zanim zostanie u nas składowany, a zgłoszenie może złożyć Arca Trade Group lub Twoja agencja." },
       { q: "Czy zorganizujecie transport i odprawę z Felixstowe?", a: "Tak. Arca Trade Group, operator LondraDepo, może zorganizować odprawę celną i transport z Felixstowe, a alternatywnie Twój własny spedytor może dostarczyć kontener do naszego magazynu." },
       { q: "Dlaczego wybrać magazyn w Essex dla kontenerów z Felixstowe?", a: "Magazyn w Essex sprawdza się u importerów, których zapas obsługuje też klientów w Londynie i na południowym wschodzie, e-commerce, Amazon lub hurt, ponieważ towar jest rozładowywany raz w Rayleigh, około 37 mil od centrum Londynu." },
     ],

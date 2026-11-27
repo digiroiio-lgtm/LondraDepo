@@ -54,7 +54,7 @@ export const plServicesB: EnPage[] = [
       { q: "Czym jest fulfillment w Wielkiej Brytanii?", a: "Fulfillment to kompletacja, pakowanie i wysyłka zamówień klientów z magazynu. Przechowujemy Twoje produkty w naszym magazynie w Wielkiej Brytanii, przygotowujemy zamówienia i wysyłamy je do Twoich klientów." },
       { q: "Czy wspieracie sprzedawców korzystających z Amazon FBA?", a: "Tak. W ramach usługi Amazon prep przygotowujemy produkty zgodnie z wymogami FBA, oznaczamy je etykietami i wysyłamy do centrum logistycznego Amazon wskazanego w planie dostawy." },
       { q: "Czy fulfillment wymaga minimalnego stanu magazynowego?", a: "Nie ma stałego minimalnego stanu magazynowego. Zakres usługi i wolumen dopasowujemy do Twoich potrzeb, więc można zacząć od niewielkiego zapasu i rosnąć wraz ze sprzedażą." },
-      { q: "Jak wyceniany jest fulfillment w Wielkiej Brytanii?", a: "Składowanie zaczyna się od 3,50 £ + VAT za paletę tygodniowo. Przyjęcie towaru, pick and pack, opakowania, dostawę i zwroty wyceniamy według produktów, miesięcznej liczby zamówień i średniej liczby sztuk w zamówieniu." },
+      { q: "Jak wyceniany jest fulfillment w Wielkiej Brytanii?", a: "Składowanie zaczyna się od 3,50 £ + VAT za paletę tygodniowo. Przyjęcie towaru, kompletację i pakowanie, opakowania, dostawę i zwroty wyceniamy według produktów, miesięcznej liczby zamówień i średniej liczby sztuk w zamówieniu." },
     ],
     related: ["/pl/3pl-wielka-brytania", "/pl/fulfillment-shopify-uk", "/pl/blog/jak-wybrac-3pl-w-uk", "/pl/skladowanie-palet", "/pl/amazon-fba-prep", "/pl/zalety-magazynu-w-uk", "/pl/blog/czym-jest-fulfillment-w-uk"],
     quote: { label: "Poproś o wycenę fulfillmentu", service: "fulfilment" },
@@ -114,7 +114,7 @@ export const plServicesB: EnPage[] = [
     lead:
       "Odprawę celną towarów importowanych do Wielkiej Brytanii prowadzi zespół celny Arca Trade Group, firmy będącej operatorem LondraDepo i członkiem BIFA. Zespół składa zgłoszenia w imieniu klientów i doradza w sprawie procedur celnych, kodów towarowych i preferencji. Po odprawie towar trafia do naszego magazynu w Essex, gdzie jest liczony i przyjmowany na stan.",
     note:
-      "Odprawę celną zapewnia Arca Trade Group i jest ona wyceniana osobno od magazynowania. LondraDepo nie jest magazynem celnym ani składem celnym zatwierdzonym przez HMRC: towar składujemy po odprawie. Możesz też skorzystać z własnej agencji celnej.",
+      "Odprawę celną zapewnia Arca Trade Group i jest ona wyceniana osobno od magazynowania. LondraDepo nie jest składem celnym zatwierdzonym przez HMRC: towar składujemy po odprawie. Możesz też skorzystać z własnej agencji celnej.",
     sections: [
       {
         type: "cards",
@@ -130,7 +130,7 @@ export const plServicesB: EnPage[] = [
     faqs: [
       { q: "Kto składa brytyjskie zgłoszenie celne?", a: "Zgłoszenia w imieniu klientów składa zespół celny Arca Trade Group, operatora LondraDepo. Możesz też pracować z własną agencją celną i po prostu dostarczyć odprawiony towar do naszego magazynu." },
       { q: "Czy odprawiacie towar wysłany z zagranicy?", a: "Tak. Arca Trade Group odprawia towary wysyłane do Wielkiej Brytanii z Europy, w tym z Polski, oraz z innych krajów, a także może zorganizować transport morski, lotniczy, drogowy lub kolejowy." },
-      { q: "Czy LondraDepo jest składem celnym?", a: "Nie. LondraDepo nie jest magazynem celnym zatwierdzonym przez HMRC. Towar składujemy dopiero po jego odprawie i dopuszczeniu do swobodnego obrotu w Wielkiej Brytanii." },
+      { q: "Czy LondraDepo jest składem celnym?", a: "Nie. LondraDepo nie jest składem celnym zatwierdzonym przez HMRC. Towar składujemy dopiero po jego odprawie i dopuszczeniu do swobodnego obrotu w Wielkiej Brytanii." },
       { q: "Jak przyjmowany jest towar po odprawie celnej?", a: "Po zakończeniu odprawy towar jest dostarczany na adres naszego magazynu w Rayleigh, liczony i przyjmowany na stan w systemie magazynowym Mintsoft WMS." },
       { q: "Jaki numer EORI jest potrzebny do odprawy w UK?", a: "Importer potrzebuje numeru EORI zaczynającego się od GB, aby importować towar do Wielkiej Brytanii. Zespół Arca Trade Group może złożyć zgłoszenie, ale za cło i VAT importowy odpowiada importer." },
     ],
@@ -223,7 +223,7 @@ export const plServicesB: EnPage[] = [
     eyebrow: "Dla sprzedawców Amazon UK",
     h1: "Fulfillment Amazon w Wielkiej Brytanii: FBA prep czy FBM?",
     lead:
-      "Sprzedawcy Amazon w Wielkiej Brytanii korzystają z jednego z dwóch modeli: Fulfilled by Amazon (FBA), w którym Amazon przechowuje i wysyła Twój towar, albo Fulfilled by Merchant (FBM), w którym każde zamówienie wysyłasz Ty lub Twój magazyn. LondraDepo wspiera firmy sprzedające na Amazon w UK: składowanie zapasu, obsługa zamówień, pick and pack, etykietowanie i dostawy w UK z Essex. Dla towaru wysyłanego do sieci Amazon nasza usługa Amazon FBA prep obejmuje etykiety FNSKU i zgodność z wymogami FBA. " + NOT_PARTNER_AMAZON,
+      "Sprzedawcy Amazon w Wielkiej Brytanii korzystają z jednego z dwóch modeli: Fulfilled by Amazon (FBA), w którym Amazon przechowuje i wysyła Twój towar, albo Fulfilled by Merchant (FBM), w którym każde zamówienie wysyłasz Ty lub Twój magazyn. LondraDepo wspiera firmy sprzedające na Amazon w UK: składowanie zapasu, obsługa zamówień, kompletacja i pakowanie, etykietowanie i dostawy w UK z Essex. Dla towaru wysyłanego do sieci Amazon nasza usługa Amazon FBA prep obejmuje etykiety FNSKU i zgodność z wymogami FBA. " + NOT_PARTNER_AMAZON,
     facts: [
       "Amazon FBA prep i realizacja zamówień FBM z jednego magazynu",
       "Składowanie od 3,50 £ + VAT za paletę tygodniowo",
@@ -238,7 +238,7 @@ export const plServicesB: EnPage[] = [
         items: [
           { title: "Składowanie zapasu", text: "Bezpieczne składowanie Twojego zapasu Amazon w Wielkiej Brytanii." },
           { title: "Obsługa zamówień", text: "Systematyczna obsługa zamówień z Amazon." },
-          { title: "Pick and pack", text: "Kompletacja i pakowanie każdego zamówienia." },
+          { title: "Kompletacja i pakowanie", text: "Pobranie produktów z półki i spakowanie każdego zamówienia." },
           { title: "Etykietowanie", text: "Etykietowanie produktów zgodnie z wymogami Amazon." },
           { title: "Kontrola stanów", text: "Stany magazynowe śledzone w Mintsoft WMS." },
           { title: "Dostawy w UK", text: "Wysyłka zamówień do klientów w Wielkiej Brytanii." },

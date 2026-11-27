@@ -89,7 +89,7 @@ export const plCoreServicesA: EnPage[] = [
     faqs: [
       { q: "Kto prowadzi LondraDepo?", a: "LondraDepo to marka magazynowa Arca Trade Group Ltd, brytyjskiej spółki (nr 13247691) i członka BIFA. Założył ją Sertaç Yılmaz z 18-letnim doświadczeniem w logistyce, a bieżącą pracą magazynu kieruje Yusuf Barış, Operations Manager." },
       { q: "Pod jakim adresem działa LondraDepo?", a: "Magazyn LondraDepo mieści się pod adresem Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY, około 13 mil drogą od London Gateway, 16 mil od portu Tilbury i 37 mil od centrum Londynu." },
-      { q: "Jakie usługi świadczy LondraDepo?", a: "LondraDepo zapewnia przyjęcie towaru i rozładunek kontenerów, składowanie palet i kartonów, kontrolę stanów w Mintsoft WMS, pick and pack, Amazon FBA prep i dystrybucję w UK. Fracht międzynarodowy i odprawę celną zapewnia Arca Trade Group." },
+      { q: "Jakie usługi świadczy LondraDepo?", a: "LondraDepo zapewnia przyjęcie towaru i rozładunek kontenerów, składowanie palet i kartonów, kontrolę stanów w Mintsoft WMS, kompletację i pakowanie zamówień, Amazon FBA prep i dystrybucję w UK. Fracht międzynarodowy i odprawę celną zapewnia Arca Trade Group." },
       { q: "Czy mogę zweryfikować LondraDepo przed rozpoczęciem współpracy?", a: "Tak. Arca Trade Group Ltd figuruje w Companies House pod numerem 13247691, w katalogu członków BIFA i na LinkedIn. Przed wysłaniem towaru możesz też umówić 15-minutową rozmowę z zespołem." },
       { q: "Od kiedy działa operator LondraDepo?", a: "Arca Trade Group Ltd, spółka prowadząca LondraDepo, działa od 2021 roku. Została założona w Basildon w Essex, a dziś pracuje w tej samej lokalizacji w Rayleigh co magazyn LondraDepo." },
     ],
@@ -160,7 +160,7 @@ export const plCoreServicesA: EnPage[] = [
     facts: [
       "Adres: Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY",
       "Ok. 40 minut do wschodniego Londynu, ok. 1 godziny do centrum, 20–30 minut do Tilbury",
-      "Przyjęcie towaru, składowanie palet i kartonów, Mintsoft WMS, pick and pack, dostawy w UK",
+      "Przyjęcie towaru, składowanie palet i kartonów, Mintsoft WMS, kompletacja i pakowanie zamówień, dostawy w UK",
     ],
     sections: [
       {
@@ -211,7 +211,7 @@ export const plCoreServicesA: EnPage[] = [
     serviceType: "Logistyka e-commerce",
     modified: MODIFIED,
     title: "Logistyka e-commerce w UK: zapas, dostawy, zwroty",
-    description: "Logistyka e-commerce w UK z Essex: składowanie, Mintsoft WMS, pick and pack, etykiety, dostawy w UK i zwroty dla Shopify, Amazon FBM i innych kanałów.",
+    description: "Logistyka e-commerce w UK z Essex: składowanie, Mintsoft WMS, kompletacja, etykiety, dostawy w UK i zwroty dla Shopify, Amazon FBM i innych kanałów.",
     label: "Logistyka e-commerce w UK",
     h1: "Logistyka e-commerce w UK: planowanie zapasu, dostaw i zwrotów",
     lead:
@@ -246,21 +246,21 @@ export const plCoreServicesA: EnPage[] = [
   {
     slug: "/pl/pick-and-pack",
     kind: "service",
-    serviceType: "Pick and pack (kompletacja i pakowanie)",
+    serviceType: "Kompletacja i pakowanie zamówień (pick and pack)",
     modified: MODIFIED,
-    title: "Pick and pack w UK: wycena za zamówienie",
-    description: "Pick and pack z magazynu 3PL w Essex: kompletacja, pakowanie, etykiety, kontrola zamówień, zwroty i synchronizacja stanów w Mintsoft, z wyceną za zamówienie.",
-    label: "Pick and pack",
-    h1: "Pick and pack w Wielkiej Brytanii: wycena za zamówienie",
+    title: "Kompletacja i pakowanie zamówień w UK",
+    description: "Kompletacja i pakowanie (pick and pack) w magazynie 3PL w Essex: etykiety, kontrola zamówień, zwroty i synchronizacja stanów w Mintsoft, z wyceną za zamówienie.",
+    label: "Kompletacja i pakowanie",
+    h1: "Kompletacja i pakowanie zamówień (pick and pack) w Wielkiej Brytanii",
     lead:
-      "Pick and pack to proces magazynowy, w którym pobiera się z półki właściwe produkty do zamówienia (pick), bezpiecznie je pakuje (pack) i przygotowuje paczkę do wysyłki. W LondraDepo nasz zespół w Essex kompletuje, pakuje, etykietuje i wysyła Twoje zamówienia internetowe, a każdy ruch towaru aktualizuje stany w Mintsoft WMS.",
+      "Kompletacja i pakowanie zamówień (ang. pick and pack) to proces magazynowy, w którym pobiera się z półki właściwe produkty do zamówienia (pick), bezpiecznie je pakuje (pack) i przygotowuje paczkę do wysyłki. W LondraDepo nasz zespół w Essex kompletuje, pakuje, etykietuje i wysyła Twoje zamówienia internetowe, a każdy ruch towaru aktualizuje stany w Mintsoft WMS.",
     facts: [
       "Wycena za zamówienie, zależnie od liczby sztuk i opakowania",
       "Odpowiednie dla tekstyliów, akcesoriów elektronicznych, artykułów domowych, kosmetyków i podobnych towarów",
       "Klient może dostarczyć własne opakowania z logo",
     ],
     sections: [
-      { type: "steps", h2: "Jak przebiega pick and pack", items: ORDER_STEPS },
+      { type: "steps", h2: "Jak przebiega kompletacja i pakowanie", items: ORDER_STEPS },
       {
         type: "cards",
         h2: "Co obejmuje usługa",
@@ -275,14 +275,14 @@ export const plCoreServicesA: EnPage[] = [
       },
     ],
     faqs: [
-      { q: "Czym jest pick and pack?", a: "Pick and pack to proces pobierania zamówionych produktów z półek magazynowych (pick), a następnie pakowania ich tak, aby były gotowe do przekazania przewoźnikowi (pack)." },
-      { q: "Jak działa pick and pack w Wielkiej Brytanii?", a: "Twój zapas jest w naszym magazynie w Essex. Zamówienie trafia do Mintsoft WMS, a nasz zespół je kompletuje, pakuje w odpowiednie opakowanie, tworzy etykietę przewozową i wysyła paczkę." },
-      { q: "Kto dostarcza opakowania do pick and pack?", a: "Opcje opakowań ustalamy indywidualnie przy wycenie. Część klientów wysyła do magazynu w Essex własne opakowania z logo marki, których używamy przy pakowaniu ich zamówień." },
-      { q: "Jak wyceniana jest usługa pick and pack?", a: "Cena pick and pack zależy od liczby zamówień, rodzaju produktu i wymagań dotyczących pakowania. Skontaktuj się z nami przez formularz lub WhatsApp, aby otrzymać indywidualną wycenę." },
+      { q: "Czym jest kompletacja i pakowanie zamówień (pick and pack)?", a: "To proces pobierania zamówionych produktów z półek magazynowych (pick), a następnie pakowania ich tak, aby były gotowe do przekazania przewoźnikowi (pack)." },
+      { q: "Jak działa kompletacja i pakowanie zamówień w Wielkiej Brytanii?", a: "Twój zapas jest w naszym magazynie w Essex. Zamówienie trafia do Mintsoft WMS, a nasz zespół je kompletuje, pakuje w odpowiednie opakowanie, tworzy etykietę przewozową i wysyła paczkę." },
+      { q: "Kto dostarcza opakowania do wysyłki zamówień?", a: "Opcje opakowań ustalamy indywidualnie przy wycenie. Część klientów wysyła do magazynu w Essex własne opakowania z logo marki, których używamy przy pakowaniu ich zamówień." },
+      { q: "Jak wyceniana jest kompletacja i pakowanie zamówień?", a: "Cena kompletacji i pakowania zależy od liczby zamówień, rodzaju produktu i wymagań dotyczących pakowania. Skontaktuj się z nami przez formularz lub WhatsApp, aby otrzymać indywidualną wycenę." },
       { q: "Czy kompletujecie zamówienia hurtowe oraz internetowe?", a: "Tak. Z tego samego zapasu kompletujemy paczki dla klientów internetowych oraz zamówienia paletowe i kartonowe dla klientów hurtowych, więc nie musisz dzielić towaru między kilku operatorów." },
     ],
     related: ["/pl/fulfillment-shopify-uk", "/pl/fulfillment-ecommerce", "/pl/logistyka-ecommerce-uk", "/pl/fulfillment-wielka-brytania", "/pl/cennik-magazynowania"],
-    quote: { label: "Poproś o wycenę pick and pack", service: "fulfilment" },
+    quote: { label: "Poproś o wycenę kompletacji", service: "fulfilment" },
   },
   {
     slug: "/pl/fulfillment-shopify-uk",
@@ -310,7 +310,7 @@ export const plCoreServicesA: EnPage[] = [
         h2: "Co obejmuje fulfillment Shopify w UK?",
         items: [
           { title: "Przyjęcie i składowanie", text: "Palety lub kartony przyjmujemy, liczymy według listy pakowej, rejestrujemy w Mintsoft WMS i składujemy w Essex." },
-          { title: "Pick and pack", text: "Każde zamówienie Shopify kompletujemy z zapasu i pakujemy w opakowanie dopasowane do produktu." },
+          { title: "Kompletacja i pakowanie", text: "Każde zamówienie Shopify kompletujemy z zapasu i pakujemy w opakowanie dopasowane do produktu." },
           { title: "Wysyłka w UK", text: "Paczki przekazujemy brytyjskim przewoźnikom, którzy dostarczają je klientom w całej Wielkiej Brytanii." },
           { title: "Zwroty", text: "Zwrócone produkty sprawdzamy i zgodnie z Twoją instrukcją przywracamy na stan lub odkładamy." },
           { title: "Inne kanały", text: "Ten sam zapas może obsłużyć Amazon FBA prep, Amazon FBM i zamówienia paletowe B2B, więc nie dzielisz towaru między operatorów." },
@@ -337,7 +337,7 @@ export const plCoreServicesA: EnPage[] = [
         rows: [
           ["Składowanie", "Od 3,50 £ + VAT za paletę tygodniowo (10 palet przez 4 tygodnie od 140 £ + VAT)"],
           ["Przyjęcie towaru", "Za dostawę: palety, kartony lub rozładunek kontenera"],
-          ["Pick and pack", "Za zamówienie i sztukę, zależnie od rozmiaru produktu i opakowania"],
+          ["Kompletacja i pakowanie", "Za zamówienie i sztukę, zależnie od rozmiaru produktu i opakowania"],
           ["Dostawa w UK", "Według rozmiaru i wagi paczki oraz poziomu usługi"],
           ["Zwroty", "Za zwróconą sztukę"],
         ],
@@ -348,7 +348,7 @@ export const plCoreServicesA: EnPage[] = [
         h2: "Planowanie dla 100 lub 200 zamówień miesięcznie",
         paras: [
           "Sam wolumen 100 czy 200 zamówień miesięcznie nie wyznacza stałej ceny fulfillmentu. Razem oceniamy rozmiar produktu, liczbę SKU, średnią liczbę sztuk w zamówieniu, liczbę palet lub kartonów na składzie, wymagania dotyczące opakowań, odsetek zwrotów i regiony dostaw.",
-          "Planujemy przyjęcie towaru, widoczność stanów, import zamówień, pick and pack i dostawy w UK. Zakres automatyzacji połączenia z Shopify weryfikujemy przed wyceną; nie obiecujemy z góry automatycznej integracji ani konkretnego czasu dostawy.",
+          "Planujemy przyjęcie towaru, widoczność stanów, import zamówień, kompletację i pakowanie oraz dostawy w UK. Zakres automatyzacji połączenia z Shopify weryfikujemy przed wyceną; nie obiecujemy z góry automatycznej integracji ani konkretnego czasu dostawy.",
         ],
       },
       {
@@ -424,7 +424,7 @@ export const plCoreServicesA: EnPage[] = [
       { q: "Jak obsługiwane są zwroty Shopify w magazynie w UK?", a: "Klienci z UK odsyłają zwroty do magazynu LondraDepo w Rayleigh w Essex. Przypisujemy każdy zwrot do zamówienia, sprawdzamy stan, produkty do sprzedaży przywracamy na stan w Mintsoft WMS, uszkodzone odkładamy i raportujemy wynik, abyś mógł zwrócić pieniądze w Shopify." },
       { q: "Czy mogę realizować zamówienia Shopify z UE z magazynu w UK?", a: "Można, ale każda paczka z Wielkiej Brytanii do UE jest eksportem z dokumentami celnymi, cłem i VAT po stronie unijnej. Większość marek sprzedających na obu rynkach trzyma zapas brytyjski w magazynie w UK, takim jak LondraDepo, a osobny zapas w UE." },
       { q: "Czym jest fulfillment Shopify w Wielkiej Brytanii?", a: "To usługa, w której magazyn w UK przechowuje Twój zapas oraz kompletuje, pakuje i wysyła zamówienia ze sklepu Shopify do klientów w Wielkiej Brytanii. LondraDepo świadczy ją z Rayleigh w Essex, pod Londynem, razem z obsługą zwrotów." },
-      { q: "Ile kosztuje fulfillment Shopify w UK?", a: "W LondraDepo składowanie zaczyna się od 3,50 £ + VAT za paletę tygodniowo. Przyjęcie towaru, pick and pack, dostawę i zwroty wyceniamy osobno, na podstawie Twoich produktów i miesięcznej liczby zamówień." },
+      { q: "Ile kosztuje fulfillment Shopify w UK?", a: "W LondraDepo składowanie zaczyna się od 3,50 £ + VAT za paletę tygodniowo. Przyjęcie towaru, kompletację i pakowanie, dostawę i zwroty wyceniamy osobno, na podstawie Twoich produktów i miesięcznej liczby zamówień." },
       { q: "Czy znajdę magazyn w UK dla mojego sklepu Shopify?", a: "Tak. LondraDepo oferuje składowanie zapasu i realizację zamówień w Essex dla firm sprzedających przez Shopify. Gdy wpływa zamówienie, nasz zespół je kompletuje, pakuje i wysyła do klienta w UK." },
       { q: "Czy LondraDepo jest oficjalnym partnerem Shopify?", a: "Nie. LondraDepo nie jest oficjalnym partnerem Shopify. Zapewniamy fulfillment i magazynowanie firmom, które sprzedają przez Shopify, z naszego magazynu w Essex." },
       { q: "Czy zamówienia Shopify są przetwarzane automatycznie?", a: "Opcje importu zamówień i integracji warto omówić z nami przed startem. Wspólnie planujemy proces operacyjny i potwierdzamy zakres automatyzacji przed przygotowaniem wyceny." },
@@ -434,7 +434,7 @@ export const plCoreServicesA: EnPage[] = [
       { q: "Mój sklep Shopify jest zarejestrowany poza UK. Czy mogę sprzedawać klientom w UK?", a: "Tak. Możesz sprzedawać do Wielkiej Brytanii ze sklepem zarejestrowanym w innym kraju. Potrzebujesz zapasu w magazynie w UK i spełnienia wymogów celnych przy imporcie towaru do Wielkiej Brytanii." },
     ],
     related: ["/pl/fulfillment-ecommerce", "/pl/pick-and-pack", "/pl/logistyka-ecommerce-uk", "/pl/fulfillment-amazon-uk", "/pl/cennik-magazynowania", "/pl/studia-przypadkow/cruyff-fulfillment-uk"],
-    cta: { h2: "Wycena fulfillmentu Shopify", text: "Podaj miesięczną liczbę zamówień, liczbę SKU i rozmiary produktów, a wycenimy składowanie, pick and pack i dostawy w UK." },
+    cta: { h2: "Wycena fulfillmentu Shopify", text: "Podaj miesięczną liczbę zamówień, liczbę SKU i rozmiary produktów, a wycenimy składowanie, kompletację i pakowanie oraz dostawy w UK." },
     quote: { label: "Poproś o wycenę fulfillmentu Shopify", service: "fulfilment" },
   },
   {

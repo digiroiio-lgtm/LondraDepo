@@ -295,7 +295,7 @@ export const plBlogA: EnPage[] = [
     modified: MODIFIED,
     title: "Ceny magazynowania w UK 2026: pełny przewodnik",
     description:
-      "Koszty magazynu i fulfillmentu w UK w 2026: palety od 3,50 £ + VAT tygodniowo, pick and pack, opakowania, dostawa, przyjęcie towaru i Amazon prep.",
+      "Koszty magazynu i fulfillmentu w UK w 2026: palety od 3,50 £ + VAT tygodniowo, kompletacja, opakowania, dostawa, przyjęcie towaru i Amazon prep.",
     label: "Ceny magazynowania w UK 2026",
     h1: "Ceny magazynowania w Wielkiej Brytanii w 2026 roku: pełny przewodnik po kosztach",
     lead:
@@ -306,7 +306,7 @@ export const plBlogA: EnPage[] = [
         h2: "Z czego składa się koszt fulfillmentu w UK",
         items: [
           "Składowanie: opłata tygodniowa za paletę lub za metr kwadratowy",
-          "Pick and pack: wyceniany według liczby zamówień, sztuk w zamówieniu i zakresu obsługi",
+          "Kompletacja i pakowanie (pick and pack): wyceniane według liczby zamówień, sztuk w zamówieniu i zakresu obsługi",
           "Materiały opakowaniowe: wyceniane według użytych kartonów i opakowań",
           "Dostawa: zależy od sieci przewoźnika w UK, np. Royal Mail, DPD lub DHL",
           "Przyjęcie towaru: wyceniane według pojazdu, ładunku, rozładunku i potrzebnej obsługi",
@@ -326,7 +326,7 @@ export const plBlogA: EnPage[] = [
         head: ["Pozycja kosztowa", "Kwota"],
         rows: [
           ["Składowanie: 10 palet × 3,50 £ × 4 tygodnie", "140 £ + VAT (cena wyjściowa)"],
-          ["Pick and pack dla 200 zamówień", "Wycena indywidualna"],
+          ["Kompletacja i pakowanie 200 zamówień", "Wycena indywidualna"],
           ["Materiały opakowaniowe dla 200 zamówień", "Wycena indywidualna"],
           ["Dostawa", "Według stref doręczeń i profilu paczek"],
         ],
@@ -347,7 +347,7 @@ export const plBlogA: EnPage[] = [
       { q: "Jaka jest cena wyjściowa składowania palety w UK?", a: "Standardowe składowanie palet w LondraDepo zaczyna się od 3,50 £ + VAT za paletę tygodniowo. Usługi dodatkowe, takie jak obsługa, załadunek i koordynacja celna, są wyceniane osobno." },
       { q: "Jak oblicza się koszt fulfillmentu w UK?", a: "Koszt fulfillmentu to suma składowania, kompletacji i pakowania za zamówienie, materiałów opakowaniowych oraz dostawy do klienta; każdą z tych pozycji wycenia się osobno." },
       { q: "Czy mogę połączyć Amazon prep i fulfillment?", a: "Tak. LondraDepo oferuje Amazon prep i fulfillment 3PL w ramach jednej operacji, dzięki czemu nie płacisz za podwójną obsługę tego samego towaru." },
-      { q: "Czego nie obejmuje cena składowania palety?", a: "Stawka za składowanie obejmuje tylko składowanie. Przyjęcie towaru, rozładunek kontenera, ponowna paletyzacja, etykietowanie, pick and pack, opakowania, dostawa, zwroty i odprawa celna są wyceniane osobno dla Twojej operacji." },
+      { q: "Czego nie obejmuje cena składowania palety?", a: "Stawka za składowanie obejmuje tylko składowanie. Przyjęcie towaru, rozładunek kontenera, ponowna paletyzacja, etykietowanie, kompletacja zamówień, opakowania, dostawa, zwroty i odprawa celna są wyceniane osobno dla Twojej operacji." },
       { q: "Jak oszacować miesięczny koszt magazynowania?", a: "Pomnóż liczbę palet przez liczbę tygodni i tygodniową stawkę za paletę, a następnie dodaj pozycje za obsługę i dostawę wynikające z profilu Twoich zamówień." },
     ],
     related: [
@@ -370,7 +370,7 @@ export const plBlogA: EnPage[] = [
     label: "Koszty składowania palet w UK",
     h1: "Składowanie palet w Wielkiej Brytanii: ile kosztuje paleta w 2026 roku",
     lead:
-      "Składowanie palet w Wielkiej Brytanii rozlicza się zwykle za paletę tygodniowo. W LondraDepo stawka wyjściowa za standardową paletę to 3,50 £ + VAT tygodniowo i obejmuje samo składowanie; przyjęcie towaru, obsługa oraz pick and pack są rozliczane osobno. Na ostateczną cenę wpływają rozmiar i waga palety, rodzaj produktu, czas składowania i częstotliwość dostępu.",
+      "Składowanie palet w Wielkiej Brytanii rozlicza się zwykle za paletę tygodniowo. W LondraDepo stawka wyjściowa za standardową paletę to 3,50 £ + VAT tygodniowo i obejmuje samo składowanie; przyjęcie towaru, obsługa oraz kompletacja i pakowanie są rozliczane osobno. Na ostateczną cenę wpływają rozmiar i waga palety, rodzaj produktu, czas składowania i częstotliwość dostępu.",
     sections: [
       {
         type: "list",
@@ -381,9 +381,9 @@ export const plBlogA: EnPage[] = [
           "Czas składowania: przy składowaniu długoterminowym stawka może być niższa",
           "Częstotliwość dostępu: bardzo częsty (codzienny) dostęp może oznaczać dodatkowe opłaty za obsługę",
           "Lokalizacja: ceny różnią się między Essex, okolicami Londynu i innymi regionami",
-          "Usługi dodatkowe: pick and pack, przepakowanie i etykietowanie zwiększają łączny koszt",
+          "Usługi dodatkowe: kompletacja i pakowanie zamówień, przepakowanie i etykietowanie zwiększają łączny koszt",
         ],
-        outro: "Pytanie wyłącznie o tygodniową stawkę za paletę nie wystarczy. Aby poznać rzeczywisty koszt, uwzględnij przyjęcie towaru, pick and pack i wszelkie usługi dodatkowe.",
+        outro: "Pytanie wyłącznie o tygodniową stawkę za paletę nie wystarczy. Aby poznać rzeczywisty koszt, uwzględnij przyjęcie towaru, kompletację i pakowanie oraz wszelkie usługi dodatkowe.",
       },
       {
         type: "table",
@@ -441,7 +441,7 @@ export const plBlogA: EnPage[] = [
         h2: "FBA a 3PL w skrócie",
         head: ["", "Amazon FBA", "Fulfillment 3PL w UK"],
         rows: [
-          ["Koszt", "Opłaty za składowanie, fulfillment i wysyłkę ustala Amazon według rozmiaru produktu; opłaty za długoterminowe składowanie mogą być wysokie przy wolno rotujących produktach", "Tygodniowa stawka za paletę plus pick and pack za zamówienie; zwykle bardziej przewidywalny"],
+          ["Koszt", "Opłaty za składowanie, fulfillment i wysyłkę ustala Amazon według rozmiaru produktu; opłaty za długoterminowe składowanie mogą być wysokie przy wolno rotujących produktach", "Tygodniowa stawka za paletę plus opłata za kompletację i pakowanie zamówienia; zwykle bardziej przewidywalny"],
           ["Kanały", "Tylko Amazon (wielokanałowość możliwa, ale skomplikowana)", "Amazon, Shopify, Etsy, własny sklep i B2B z jednego magazynu"],
           ["Opakowanie i marka", "Standardowe opakowania Amazon, ograniczone doświadczenie marki", "Możliwe opakowania z logo, ulotki i pakowanie na prezent"],
           ["Kontrola", "Amazon może odrzucić niezgodny towar; ograniczony dostęp do zapasu", "Pełna kontrola nad zapasem, natychmiastowy dostęp, elastyczne zwroty"],

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogLocale } from "@/lib/locales";
 import Link from "next/link";
 import HeaderEn from "@/components/HeaderEn";
 import FooterEn from "@/components/FooterEn";
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
   title: `${TITLE} | LondraDepo`,
   description: DESCRIPTION,
   alternates: enAlternates(PATH),
-  openGraph: { title: TITLE, description: DESCRIPTION, url: absolute(PATH), siteName: "LondraDepo.com", locale: "en_GB", alternateLocale: ["tr_TR"], type: "website" },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: absolute(PATH), siteName: "LondraDepo.com", ...ogLocale("en"), type: "website" },
 };
 
 const jsonLd = {

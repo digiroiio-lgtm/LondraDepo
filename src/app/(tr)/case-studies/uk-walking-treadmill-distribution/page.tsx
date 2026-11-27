@@ -1,4 +1,5 @@
 import Emoji from "@/components/visual/Emoji";
+import { ogLocale } from "@/lib/locales";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
       "Büyük hacimli walking treadmill ürünlerinin İngiltere deposu, online fulfillment ve discount store dağıtım operasyonu.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
-    locale: "tr_TR", alternateLocale: ["en_GB"],
+    ...ogLocale("tr"),
     type: "article",
   },
   twitter: {

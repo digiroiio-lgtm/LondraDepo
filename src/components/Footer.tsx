@@ -1,7 +1,7 @@
 import Emoji from "@/components/visual/Emoji";
+import FooterLegal from "@/components/FooterLegal";
 import TrackedLink from "@/components/TrackedLink";
 import Link from "next/link";
-import CookieSettingsButton from "./CookieSettingsButton";
 
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20depo%20teklifi%20almak%20istiyorum.";
 const TEL = "tel:+447554195190";
@@ -104,27 +104,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-white/10 pt-6 text-center text-xs text-slate-400 space-y-2">
-        <p>
-          © {new Date().getFullYear()} LondraDepo.com — Londra depo, İngiltere
-          warehouse ve İngiltere fulfillment çözümleri. Tüm hakları saklıdır.
-        </p>
-        <p className="text-slate-400">
-          Arca Trade Group Ltd · İngiltere ve Galler&apos;de kayıtlı (Registered in England &amp; Wales) · Şirket No: 13247691 · KDV: GB353315322
-        </p>
-        <p className="text-slate-400">
-          Kayıtlı ofis ve depo: Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY, Birleşik Krallık ·{" "}
-          <a href="mailto:support@londradepo.com" className="hover:text-white transition">support@londradepo.com</a>
-        </p>
-        <div className="flex flex-wrap items-center justify-center gap-4">
-          <a href="/privacy-policy" className="hover:text-white transition">Gizlilik Politikası</a>
-          <a href="/cookie-policy" className="hover:text-white transition">Çerez Politikası</a>
-          <a href="/sozlesme-kosullari" className="hover:text-white transition">Sözleşme Koşulları</a>
-          <a href="https://www.linkedin.com/company/arcatradegroup/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">LinkedIn</a>
-          <a href="https://bifa.org/members/arca-trade-group-ltd/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">BIFA Üyesi</a>
-          <CookieSettingsButton />
-        </div>
-      </div>
+      <FooterLegal lang="tr" intro="LondraDepo.com — Londra depo, İngiltere warehouse ve İngiltere fulfillment çözümleri." />
     </footer>
   );
 }

@@ -1,4 +1,5 @@
 import Emoji from "@/components/visual/Emoji";
+import { ogLocale } from "@/lib/locales";
 import RelatedLinks from "@/components/RelatedLinks";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
     description: "UK yükleme, boşaltma ve ürün elleçleme hizmetleri. Paketleme, etiketleme, sevkiyat hazırlama.",
     url: `${SITE_URL}/ellecleme`,
     siteName: "LondraDepo.com",
-    locale: "tr_TR", alternateLocale: ["en_GB"],
+    ...ogLocale("tr"),
     type: "website",
   },
 };

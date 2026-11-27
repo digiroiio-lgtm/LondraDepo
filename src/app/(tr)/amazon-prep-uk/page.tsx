@@ -1,4 +1,5 @@
 import FaqJsonLd from "@/components/FaqJsonLd";
+import { ogLocale } from "@/lib/locales";
 import TrClusterNav from "@/components/TrClusterNav";
 import ChecklistGate from "@/components/ChecklistGate";
 import AmazonInboundTr from "@/components/AmazonInboundTr";
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
     description: "UK'da Amazon FBA prep, etiketleme ve sevk hizmeti. Türk ihracatçıları için İngiltere Amazon prep operasyonu.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
-    locale: "tr_TR", alternateLocale: ["en_GB"],
+    ...ogLocale("tr"),
     type: "website",
   },
   robots: { index: true, follow: true },

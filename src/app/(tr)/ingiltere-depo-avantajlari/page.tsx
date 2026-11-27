@@ -1,4 +1,5 @@
 import Emoji from "@/components/visual/Emoji";
+import { ogLocale } from "@/lib/locales";
 import RelatedLinks from "@/components/RelatedLinks";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
       "Haftalık uygun maliyetli İngiltere depo çözümleri, Türkiye'den düzenli konteyner organizasyonu, GTIP danışmanlığı ve fulfillment operasyonları.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
-    locale: "tr_TR", alternateLocale: ["en_GB"],
+    ...ogLocale("tr"),
     type: "website",
   },
   robots: { index: true, follow: true },

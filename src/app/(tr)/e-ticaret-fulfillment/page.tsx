@@ -1,4 +1,5 @@
 import PageFaq from "@/components/PageFaq";
+import { ogLocale } from "@/lib/locales";
 import Emoji from "@/components/visual/Emoji";
 import type { Metadata } from "next";
 import TrClusterNav from "@/components/TrClusterNav";
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
     description: "UK e-ticaret fulfillment. Sipariş yönetimi, pick & pack, kargo ve UK teslimat.",
     url: `${SITE_URL}/e-ticaret-fulfillment`,
     siteName: "LondraDepo.com",
-    locale: "tr_TR", alternateLocale: ["en_GB"],
+    ...ogLocale("tr"),
     type: "website",
   },
 };

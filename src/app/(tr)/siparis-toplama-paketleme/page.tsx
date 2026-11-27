@@ -1,4 +1,5 @@
 import Emoji from "@/components/visual/Emoji";
+import { ogLocale } from "@/lib/locales";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import TrClusterNav from "@/components/TrClusterNav";
 import type { Metadata } from "next";
@@ -35,7 +36,7 @@ export const metadata: Metadata = {
     description: "UK'de sipariş toplama ve paketleme. Pick & pack, kargo etiketleme, sevkiyat.",
     url: `${SITE_URL}/siparis-toplama-paketleme`,
     siteName: "LondraDepo.com",
-    locale: "tr_TR", alternateLocale: ["en_GB"],
+    ...ogLocale("tr"),
     type: "website",
   },
 };

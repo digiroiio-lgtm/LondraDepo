@@ -1,4 +1,5 @@
 import FaqJsonLd from "@/components/FaqJsonLd";
+import { ogLocale } from "@/lib/locales";
 import { GuideNextLinks, GuideQuote } from "@/components/GuideNext";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
       "Palet depolama haftalık £3,50 + KDV'den. Maliyet kalemleri, örnek hesap ve ücretsiz hesaplayıcı.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
-    locale: "tr_TR", alternateLocale: ["en_GB"],
+    ...ogLocale("tr"),
     type: "article",
   },
   robots: { index: true, follow: true },

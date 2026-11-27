@@ -1,4 +1,5 @@
 import PageFaq from "@/components/PageFaq";
+import { ogLocale } from "@/lib/locales";
 import RelatedLinks from "@/components/RelatedLinks";
 import Emoji from "@/components/visual/Emoji";
 import type { Metadata } from "next";
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
     description: "Essex merkezli UK depo ve lojistik operasyonumuz hakkında bilgi alın.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
-    locale: "tr_TR", alternateLocale: ["en_GB"],
+    ...ogLocale("tr"),
     type: "website",
   },
   robots: { index: true, follow: true },

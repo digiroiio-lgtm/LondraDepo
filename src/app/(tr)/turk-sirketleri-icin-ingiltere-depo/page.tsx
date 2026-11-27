@@ -1,4 +1,5 @@
 import Emoji from "@/components/visual/Emoji";
+import { ogLocale } from "@/lib/locales";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import TrClusterNav from "@/components/TrClusterNav";
 import TeamQuote from "@/components/TeamQuote";
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
     description: "UK'de şirket kurmadan İngiltere'de satış ve depolama. Türk işletmeler için fulfilment.",
     url: `${SITE_URL}/turk-sirketleri-icin-ingiltere-depo`,
     siteName: "LondraDepo.com",
-    locale: "tr_TR", alternateLocale: ["en_GB"],
+    ...ogLocale("tr"),
     type: "website",
   },
 };

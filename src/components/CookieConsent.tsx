@@ -3,6 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import CookiePreferencesModal from "./CookiePreferencesModal";
+import { UI } from "@/i18n/ui";
+import type { Locale } from "@/lib/locales";
 
 export interface CookiePrefs {
   analytics: boolean;
@@ -10,36 +12,6 @@ export interface CookiePrefs {
   decided: boolean;
 }
 
-const BANNER_TEXT = {
-  tr: {
-    aria: "Çerez kullanım bildirimi",
-    title: "Çerez Kullanımı",
-    body: "Bu sitenin düzgün çalışmasını sağlamak ve kullanımını analiz ederek geliştirmek amacıyla sınırlı sayıda çerez kullanıyoruz. Analitik ve pazarlama çerezleri yalnızca onay vermeniz halinde aktif olur. Tercihinizi istediğiniz zaman footer alanındaki “Çerez Ayarları” bağlantısından değiştirebilirsiniz.",
-    cookie: "Çerez Politikası",
-    cookieHref: "/cookie-policy",
-    and: "ve",
-    privacy: "Gizlilik Politikası",
-    privacyHref: "/privacy-policy",
-    tail: " sayfalarını inceleyebilirsiniz.",
-    prefs: "Tercihler",
-    reject: "Tümünü Reddet",
-    accept: "Tümünü Kabul Et",
-  },
-  en: {
-    aria: "Cookie notice",
-    title: "Cookies",
-    body: "We use a small number of cookies to keep this site working and to understand how it is used. Analytics and marketing cookies are only activated with your consent. You can change your choice at any time via “Cookie Settings” in the footer. See our",
-    cookie: "Cookie Policy",
-    cookieHref: "/en/cookie-policy",
-    and: "and",
-    privacy: "Privacy Policy",
-    privacyHref: "/en/privacy-policy",
-    tail: ".",
-    prefs: "Preferences",
-    reject: "Reject All",
-    accept: "Accept All",
-  },
-} as const;
 
 const STORAGE_KEY = "londradepo_cookie_consent";
 
@@ -70,7 +42,7 @@ function dispatchConsentChange(prefs: CookiePrefs): void {
   window.dispatchEvent(new CustomEvent<CookiePrefs>("consentChange", { detail: prefs }));
 }
 
-export default function CookieConsent({ lang = "tr" }: { lang?: "tr" | "en" }) {
+export default function CookieConsent({ lang = "tr" }: { lang?: Locale }) {
   const [mounted, setMounted] = useState(false);
   const [showBanner, setShowBanner] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -151,7 +123,7 @@ export default function CookieConsent({ lang = "tr" }: { lang?: "tr" | "en" }) {
   };
 
   if (!mounted) return null;
-  const t = BANNER_TEXT[lang];
+  const t = UI[lang].cookie;
 
   return (
     <>

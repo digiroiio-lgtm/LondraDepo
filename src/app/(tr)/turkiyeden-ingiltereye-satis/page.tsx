@@ -1,4 +1,5 @@
 import PageFaq from "@/components/PageFaq";
+import { ogLocale } from "@/lib/locales";
 import Emoji from "@/components/visual/Emoji";
 import type { Metadata } from "next";
 import TrClusterNav from "@/components/TrClusterNav";
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
     description: "TR→UK satış rehberi: gümrük, depo, Shopify, Amazon, pick & pack, teslimat. Adım adım 2026.",
     url: `${SITE_URL}/turkiyeden-ingiltereye-satis`,
     siteName: "LondraDepo.com",
-    locale: "tr_TR", alternateLocale: ["en_GB"],
+    ...ogLocale("tr"),
     type: "website",
   },
 };

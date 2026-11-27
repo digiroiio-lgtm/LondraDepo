@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogLocale } from "@/lib/locales";
 import { notFound } from "next/navigation";
 import EnPageView from "@/components/EnPageView";
 import { EN_PAGES, getEnPage } from "@/content/en";
@@ -29,7 +30,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
       description: page.description,
       url: alternates.canonical,
       siteName: "LondraDepo.com",
-      locale: "en_GB", alternateLocale: ["tr_TR"],
+      ...ogLocale("en"),
       type: page.article ? "article" : "website",
     },
   };

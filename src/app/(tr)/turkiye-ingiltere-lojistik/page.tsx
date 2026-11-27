@@ -1,4 +1,5 @@
 import Emoji from "@/components/visual/Emoji";
+import { ogLocale } from "@/lib/locales";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import TrClusterNav from "@/components/TrClusterNav";
 import type { Metadata } from "next";
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
     description: "TR → UK lojistik zinciri: gönderim, gümrük, depolama, fulfillment.",
     url: `${SITE_URL}/turkiye-ingiltere-lojistik`,
     siteName: "LondraDepo.com",
-    locale: "tr_TR", alternateLocale: ["en_GB"],
+    ...ogLocale("tr"),
     type: "website",
   },
 };

@@ -1,4 +1,5 @@
 import Emoji from "@/components/visual/Emoji";
+import { ogLocale } from "@/lib/locales";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
       "Lüks araç yedek parçalarının İngiltere'de hasar kontrollü depolanması ve UK dağıtım operasyonu.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
-    locale: "tr_TR", alternateLocale: ["en_GB"],
+    ...ogLocale("tr"),
     type: "article",
   },
   robots: { index: true, follow: true },

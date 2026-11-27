@@ -1,6 +1,6 @@
 import Emoji from "@/components/visual/Emoji";
+import FooterLegal from "@/components/FooterLegal";
 import Link from "next/link";
-import CookieSettingsButton from "./CookieSettingsButton";
 import TrackedLink from "./TrackedLink";
 
 const WHATSAPP = "https://wa.me/447554195190?text=Hello%2C%20I%27d%20like%20a%20warehousing%20quote.";
@@ -128,24 +128,7 @@ export default function FooterEn() {
         </div>
       </div>
 
-      <div className="border-t border-white/10 pt-6 text-center text-xs text-slate-400 space-y-2">
-        <p>© {new Date().getFullYear()} LondraDepo.com. UK warehousing and fulfilment. All rights reserved.</p>
-        <p className="text-slate-400">
-          Arca Trade Group Ltd · Registered in England &amp; Wales · Company No: 13247691 · VAT: GB353315322
-        </p>
-        <p className="text-slate-400">
-          Registered office and warehouse: Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY, United Kingdom ·{" "}
-          <a href="mailto:support@londradepo.com" className="hover:text-white transition">support@londradepo.com</a>
-        </p>
-        <div className="flex flex-wrap items-center justify-center gap-4">
-          <Link href="/en/privacy-policy" className="hover:text-white transition">Privacy Policy</Link>
-          <Link href="/en/cookie-policy" className="hover:text-white transition">Cookie Policy</Link>
-          <Link href="/en/terms-and-conditions" className="hover:text-white transition">Terms and Conditions</Link>
-          <a href="https://www.linkedin.com/company/arcatradegroup/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">LinkedIn</a>
-          <a href="https://bifa.org/members/arca-trade-group-ltd/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">BIFA Member</a>
-          <CookieSettingsButton label="Cookie Settings" />
-        </div>
-      </div>
+      <FooterLegal lang="en" intro="LondraDepo.com. UK warehousing and fulfilment." />
     </footer>
   );
 }

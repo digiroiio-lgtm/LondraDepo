@@ -45,6 +45,93 @@ const PLANNER_LINKS = {
 };
 
 export const TR_PAGES: Record<string, TrPage> = {
+  "/ingiltere-3pl": {
+    path: "/ingiltere-3pl",
+    kind: "service",
+    serviceType: "Üçüncü taraf lojistik (3PL)",
+    title: "İngiltere 3PL Depo: Essex'te 3PL Hizmeti | LondraDepo",
+    description: "İngiltere'de 3PL depo: Essex'te mal kabul, haftalık £3,50 + KDV'den palet depolama, pick & pack, e-ticaret ve B2B fulfillment, Amazon prep ve UK teslimat.",
+    crumb: "İngiltere 3PL",
+    eyebrow: "İngiltere'de üçüncü taraf lojistik",
+    h1: "İngiltere 3PL Depo: Londra Yakınında Essex'ten Üçüncü Taraf Lojistik",
+    lead: "İngiltere'de bir 3PL (üçüncü taraf lojistik firması) stoğunuzu kendi deposuna kabul eder, depolar, e-ticaret ve B2B siparişlerinizi hazırlar ve İngiltere geneline teslim eder; siz depo işletmeden İngiltere'de satarsınız. LondraDepo, Rayleigh, Essex'te, London Gateway'e 13, Tilbury'ye 16 mil uzaklıkta bir 3PL'dir ve uluslararası nakliye ile İngiltere gümrüklemesini de yapan BIFA üyesi Arca Trade Group tarafından işletilir. Palet depolama haftalık £3,50 + KDV'den başlar; asgari hacim yoktur.",
+    facts: [
+      "Depo: Unit 19 Arterial Park, Rayleigh, Essex SS6 7FY",
+      "London Gateway 13 mil, Tilbury 16 mil, Felixstowe yaklaşık 62 mil",
+      "Palet depolama haftalık £3,50 + KDV'den, asgari hacim yok",
+      "Mintsoft WMS ile canlı stok ve sipariş takibi",
+      "E-ticaret (Shopify, Amazon FBM), B2B palet siparişleri ve Amazon FBA prep",
+      "Nakliye ve İngiltere gümrüklemesi Arca Trade Group üzerinden",
+      "Türkçe ve İngilizce destek",
+    ],
+    sections: [
+      {
+        type: "list",
+        h2: "İngiltere 3PL hizmetimiz neleri kapsar?",
+        items: [
+          "Mal kabul ve konteyner boşaltma: FCL ve LCL, sayım, hasar kontrolü, WMS kaydı",
+          "Palet ve koli depolama: palet başına haftalık fiyat, düzenli stok raporu",
+          "Pick & pack: e-ticaret siparişlerinin toplanması, paketlenmesi ve etiketlenmesi",
+          "B2B fulfillment: perakendeci, toptancı, bayi ve servislere palet ve koli siparişleri",
+          "Amazon FBA prep: etiketleme, paketleme ve Amazon UK depolarına planlı sevkiyat",
+          "İngiltere içi dağıtım ve iade yönetimi",
+        ],
+      },
+      {
+        type: "steps",
+        h2: "İngiltere'de 3PL ile çalışmaya nasıl başlanır?",
+        items: [
+          ["Ne sattığınızı anlatın", "Ürün, ambalaj, tahmini palet veya aylık sipariş sayısı ve satış kanallarınız."],
+          ["Teklif alın", "Depolama, mal kabul, pick & pack ve teslimat kalem kalem fiyatlanır; her maliyeti görürsünüz."],
+          ["Kanallarınızı bağlayın", "Shopify, Amazon veya kendi sisteminizden siparişler Mintsoft WMS'e akar."],
+          ["İlk stoğu gönderin", "Tek deneme paletiyle veya konteynerle başlayın; nakliye ve gümrük Arca Trade Group üzerinden ayarlanabilir."],
+          ["Canlıya geçin", "Stoğu kabul eder, siparişleri karşılar ve stok seviyesini raporlarız; hacmi satışa göre artırıp azaltırsınız."],
+        ],
+      },
+      {
+        type: "table",
+        h2: "İngiltere'de 3PL fiyatı nasıl oluşur?",
+        intro: "Bir 3PL teklifi tek fiyat değil, kalemlerden oluşur. Bizden ve çoğu İngiliz 3PL'den göreceğiniz kalemler:",
+        head: ["Kalem", "Kapsamı", "LondraDepo"],
+        rows: [
+          ["Depolama", "Stoğun kapladığı alan", "Palet başına haftalık £3,50 + KDV'den"],
+          ["Mal kabul", "Boşaltma, sayım, kontrol, WMS kaydı", "Konteyner, palet veya koli başına fiyatlanır"],
+          ["Pick & pack", "Her siparişin toplanıp paketlenmesi", "Sipariş ve ek ürün başına fiyatlanır"],
+          ["Ambalaj", "Kutu, zarf, dolgu malzemesi", "Maliyetinden veya sizin tedarikinizle"],
+          ["Taşıma", "Koli veya palet teslimatı", "Ağırlık, ölçü ve servise göre taşıyıcı fiyatı"],
+          ["Katma değerli hizmetler", "Etiketleme, FBA prep, set yapma, iade", "İş başına fiyatlanır"],
+        ],
+        note: "Yalnızca palet depolama fiyatı yayımlanmıştır; diğer kalemler ürün ve hacme göre belirlenir.",
+      },
+      {
+        type: "links",
+        h2: "Karşılaştırın ve planlayın",
+        items: [
+          { href: "/blog/ingiltere-3pl-nasil-secilir", title: "İngiltere'de 3PL nasıl seçilir?", text: "Sözleşmeden önce sorulacak 12 soru.", tag: "Rehber" },
+          { href: "/ingiltere-depo-fiyatlari", title: "İngiltere depo fiyatları", text: "5, 10 ve 20 palet için örnekler.", tag: "Fiyat" },
+          { href: "/ingiltere-depo-maliyet-hesaplama", title: "Depo maliyet hesaplama", text: "Palet × hafta × £3,50 + KDV.", tag: "Ücretsiz araç" },
+          { href: "/case-studies", title: "Vaka çalışmaları", text: "Essex depomuzda yürüyen gerçek operasyonlar.", tag: "Kanıt" },
+        ],
+      },
+    ],
+    faqs: [
+      { q: "İngiltere'de 3PL nedir?", a: "İngiltere'de 3PL (üçüncü taraf lojistik firması), stoğunuzu kendi İngiltere deposunda tutan ve mal kabul, sipariş karşılama ve teslimatı sizin adınıza yapan şirkettir. Stoğun sahibi siz kalırsınız; kullandığınız alan ve hizmet kadar ödersiniz." },
+      { q: "İngiltere'de 3PL ne kadar tutar?", a: "Maliyet depolama, mal kabul, pick & pack, ambalaj ve taşımadan oluşur. LondraDepo'da palet depolama haftalık £3,50 + KDV'den başlar; diğer kalemler ürününüze ve hacminize göre fiyatlanır." },
+      { q: "İngiltere 3PL hizmetinizde asgari hacim var mı?", a: "Sabit bir asgari hacim yok. Birçok müşterimiz İngiltere pazarını test etmek için tek deneme paletiyle başlıyor, satışlar oturdukça düzenli palet ve konteyner sevkiyatlarına geçiyor; depolama yalnızca kullanılan palet kadar faturalanır." },
+      { q: "Hem e-ticaret hem B2B siparişleri karşılıyor musunuz?", a: "Evet. Shopify ve Amazon FBM siparişlerini koli olarak gönderiyor, perakendeci, toptancı ve servisler için palet ve koli siparişlerini aynı stoktan hazırlıyoruz." },
+      { q: "3PL deponuz nerede?", a: "Unit 19 Arterial Park, Rayleigh, Essex SS6 7FY: London Gateway'e 13 mil, Tilbury'ye 16 mil ve Felixstowe'a yaklaşık 62 mil." },
+      { q: "Nakliye ve gümrüğü de ayarlayabiliyor musunuz?", a: "Evet. LondraDepo'yu işleten Arca Trade Group deniz, hava, kara ve demiryolu nakliyesi ile İngiltere gümrük beyannamesini yapar. Kendi nakliyecinizle çalışıp yalnızca depomuzu da kullanabilirsiniz." },
+    ],
+    related: [
+      { href: "/ingiltere-depo", label: "İngiltere Depo" },
+      { href: "/e-ticaret-fulfillment", label: "E-Ticaret Fulfillment" },
+      { href: "/siparis-toplama-paketleme", label: "Sipariş Toplama ve Paketleme" },
+      { href: "/palet-depolama", label: "Palet Depolama" },
+      { href: "/ingiltere-depo-fiyatlari", label: "İngiltere Depo Fiyatları" },
+      { href: "/teklif-al", label: "Teklif Al" },
+    ],
+    form: { id: "tr_3pl_quote", heading: "İngiltere 3PL Teklifi Alın", intro: "Ürününüzü, tahmini palet veya aylık sipariş sayınızı ve satış kanallarınızı yazın; depolama, sipariş karşılama ve teslimatı kalem kalem fiyatlandıralım.", services: ["Depolama", "Pick & Pack", "E-Ticaret Fulfillment"] },
+  },
   "/london-gateway-tilbury-depo": {
     path: "/london-gateway-tilbury-depo",
     kind: "service",
@@ -279,7 +366,7 @@ export const TR_PAGES: Record<string, TrPage> = {
     kind: "article",
     title: "İngiltere'de 3PL Depo Seçimi: 12 Soru | LondraDepo",
     description:
-      "İngiltere'de 3PL depo seçerken sorulacak 12 soru: konum, fiyat yapısı, stok görünürlüğü, satış kanalları, iade, minimum hacim, sözleşme, sigorta, gümrük desteği ve referanslar.",
+      "İngiltere'de 3PL depo seçerken sorulacak 12 soru: konum, fiyat yapısı, stok görünürlüğü, iade, minimum hacim, sözleşme, sigorta ve gümrük desteği.",
     crumb: "İngiltere 3PL Nasıl Seçilir",
     eyebrow: "Partner seçimi",
     h1: "İngiltere'de 3PL Depo Nasıl Seçilir? Sorulacak 12 Soru",
@@ -338,6 +425,7 @@ export const TR_PAGES: Record<string, TrPage> = {
       { q: "3PL ile hangi sözleşme şartlarını kontrol etmeliyim?", a: "Sözleşme süresini, fesih bildirim süresini ve ayrılırken stoğun nasıl teslim edileceğini, ayrıca aylık minimum ücret olup olmadığını ve ürünleriniz için hangi sigortanın geçerli olduğunu kontrol edin." },
     ],
     related: [
+      { href: "/ingiltere-3pl", label: "İngiltere 3PL Depo" },
       { href: "/ingiltere-depo", label: "İngiltere Depo" },
       { href: "/ingiltere-fulfillment", label: "İngiltere Fulfillment" },
       { href: "/ingiltere-depo-fiyatlari", label: "Depo Fiyatları" },
@@ -964,7 +1052,7 @@ export const TR_PAGES: Record<string, TrPage> = {
     serviceType: "Container unloading",
     title: "İngiltere Konteyner Boşaltma (FCL & LCL), Essex | LondraDepo",
     description:
-      "Rayleigh, Essex depomuzda konteyner boşaltma: 20ft, 40ft ve 40ft high-cube FCL ile LCL; sayım, hasar fotoğrafı, yeniden paletleme, Mintsoft WMS kaydı, depolama veya UK içi sevk.",
+      "Essex depomuzda 20ft, 40ft ve 40HC FCL ile LCL konteyner boşaltma: sayım, hasar fotoğrafı, yeniden paletleme, WMS kaydı, depolama veya UK içi sevk.",
     crumb: "Konteyner Boşaltma",
     eyebrow: "Essex · Tilbury, London Gateway ve Felixstowe hatları",
     h1: "İngiltere'de Konteyner Boşaltma (FCL ve LCL)",
@@ -1103,7 +1191,7 @@ export const TR_PAGES: Record<string, TrPage> = {
     serviceType: "Warehousing by industry",
     title: "Sektörlere Göre İngiltere Depo ve Fulfillment | LondraDepo",
     description:
-      "Sektörlere göre İngiltere depo ve fulfillment: gıda ve FMCG, ambalaj, otomotiv yedek parça, moda ve e-ticaret, büyük hacimli ürünler ve elektronik; Essex depomuzdan gerçek operasyon örnekleriyle.",
+      "Sektörlere göre İngiltere depo ve fulfillment: gıda, ambalaj, otomotiv yedek parça, moda, hacimli ürünler ve elektronik; gerçek operasyon örnekleriyle.",
     crumb: "Sektörler",
     hub: true,
     eyebrow: "Çalıştığımız sektörler",
@@ -1188,7 +1276,7 @@ export const TR_PAGES: Record<string, TrPage> = {
     serviceType: "Warehousing quote",
     title: "İngiltere Depo ve Fulfillment Teklifi Al | LondraDepo",
     description:
-      "İngiltere depolama, fulfillment, konteyner boşaltma, gümrükleme ve dağıtım için teklif isteyin: kısa formu doldurun, ekibimiz e-postayla size özel teklif hazırlasın. Türkçe destek.",
+      "İngiltere depolama, fulfillment, konteyner boşaltma, gümrükleme ve dağıtım için teklif isteyin: kısa formu doldurun, size özel teklif hazırlayalım.",
     crumb: "Teklif Al",
     eyebrow: "Yaklaşık 2 dakika",
     h1: "İngiltere Depo ve Fulfillment Teklifi Alın",
@@ -1246,7 +1334,7 @@ export const TR_PAGES: Record<string, TrPage> = {
     serviceType: "Import logistics",
     title: "İngiltere İthalat Lojistiği: Nakliyeden Depoya | LondraDepo",
     description:
-      "İngiltere'ye tek grupla ithalat: Arca Trade Group üzerinden deniz, hava, kara ve demiryolu nakliyesi ile gümrükleme; ardından Essex depomuzda boşaltma, depolama, fulfillment ve UK dağıtım.",
+      "İngiltere'ye tek grupla ithalat: deniz, hava, kara ve demiryolu nakliyesi, gümrükleme, ardından Essex'te boşaltma, depolama, fulfillment ve dağıtım.",
     crumb: "İngiltere İthalat Lojistiği",
     eyebrow: "İthalatçılar, üreticiler ve distribütörler için",
     h1: "İngiltere İthalat Lojistiği: Tedarikçiden UK Müşterisine",
@@ -1320,7 +1408,7 @@ export const TR_PAGES: Record<string, TrPage> = {
     serviceType: "Port-to-warehouse logistics",
     title: "Limandan Depoya Lojistik: Felixstowe, Tilbury | LondraDepo",
     description:
-      "Felixstowe, London Gateway ve Tilbury'ye gelen konteynerler için limandan depoya lojistik: doğrulanmış karayolu mesafeleri, gümrükleme, taşıma, boşaltma ve UK içi dağıtım.",
+      "Felixstowe, London Gateway ve Tilbury'ye gelen konteynerler için limandan Essex depoya lojistik: mesafeler, gümrük, taşıma, boşaltma ve UK dağıtımı.",
     crumb: "Limandan Depoya Lojistik",
     eyebrow: "Felixstowe · London Gateway · Tilbury",
     h1: "Felixstowe, London Gateway veya Tilbury'den Essex Depomuza",
@@ -1391,7 +1479,7 @@ export const TR_PAGES: Record<string, TrPage> = {
     serviceType: "Packaging warehousing and distribution",
     title: "Ambalaj ve Catering Depolama İngiltere | LondraDepo",
     description:
-      "Pizza kutusu, paket servis ambalajı ve catering sarf malzemeleri için İngiltere'de paletli depolama ve programlı B2B teslimat: lot takibi, düşük stok uyarısı, restoran ve toptancılara dağıtım.",
+      "Pizza kutusu, paket servis ambalajı ve catering sarf malzemeleri için İngiltere'de paletli depolama, lot takibi ve restoranlara programlı B2B teslimat.",
     crumb: "Ambalaj ve Catering Depolama",
     eyebrow: "Sektör · ambalaj ve restoran tedariki",
     h1: "Ambalaj ve Catering Ürünleri İçin İngiltere Depo ve Dağıtım",

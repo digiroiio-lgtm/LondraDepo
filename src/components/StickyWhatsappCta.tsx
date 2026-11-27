@@ -1,14 +1,12 @@
 "use client";
 
 import { trackWhatsappClick, waVariant } from "@/lib/gtag";
+import { UI } from "@/i18n/ui";
+import type { Locale } from "@/lib/locales";
 
-const TEXT = {
-  tr: { href: "https://wa.me/447554195190?text=Merhaba%2C%20depo%20teklifi%20almak%20istiyorum.", aria: "WhatsApp'tan yazın", label: "Hemen Yazın" },
-  en: { href: "https://wa.me/447554195190?text=Hello%2C%20I%27d%20like%20a%20warehousing%20quote.", aria: "Message us on WhatsApp", label: "WhatsApp Us" },
-} as const;
 
-export default function StickyWhatsappCta({ lang = "tr" }: { lang?: "tr" | "en" }) {
-  const t = TEXT[lang];
+export default function StickyWhatsappCta({ lang = "tr" }: { lang?: Locale }) {
+  const t = UI[lang].sticky;
   return (
     <a
       href={t.href}

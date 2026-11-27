@@ -1,9 +1,10 @@
 import { SITE_URL } from "@/lib/site";
-import { TR_TO_EN, EN_TO_TR } from "@/lib/i18n-pairs";
+import { pageSet } from "@/lib/i18n-pairs";
+import { LOCALES, LOCALE_ORDER, X_DEFAULT } from "@/lib/locales";
 
 /**
- * hreflang + canonical for both languages, built from the 1:1 pairs in i18n-pairs.ts.
- * Turkish pages without an English equivalent get a self-referencing tr-TR alternate only.
+ * hreflang + canonical for every language, built from the page sets in i18n-pairs.ts.
+ * A page that exists in one language only gets a self-referencing alternate and no x-default.
  */
 
 export function absolute(path: string): string {
@@ -12,22 +13,20 @@ export function absolute(path: string): string {
 
 export type Alternates = { canonical: string; languages: Record<string, string> };
 
-function pairLanguages(tr: string, en: string): Record<string, string> {
-  return { "tr-TR": absolute(tr), en: absolute(en), "x-default": absolute(en) };
+/** Canonical plus one hreflang per language version; x-default points to X_DEFAULT when it exists. */
+export function localeAlternates(path: string): Alternates {
+  const set = pageSet(path);
+  const languages: Record<string, string> = {};
+  for (const l of LOCALE_ORDER) {
+    const p = set[l];
+    if (p) languages[LOCALES[l].hreflang] = absolute(p);
+  }
+  const versions = Object.keys(languages).length;
+  const xd = set[X_DEFAULT];
+  if (versions > 1 && xd) languages["x-default"] = absolute(xd);
+  return { canonical: absolute(path), languages };
 }
 
-export function trAlternates(trPath: string): Alternates {
-  const en = TR_TO_EN.get(trPath);
-  return {
-    canonical: absolute(trPath),
-    languages: en ? pairLanguages(trPath, en) : { "tr-TR": absolute(trPath) },
-  };
-}
-
-export function enAlternates(enPath: string): Alternates {
-  const tr = EN_TO_TR.get(enPath);
-  return {
-    canonical: absolute(enPath),
-    languages: tr ? pairLanguages(tr, enPath) : { en: absolute(enPath) },
-  };
-}
+/** Kept for existing callers; both are the same as localeAlternates. */
+export const trAlternates = localeAlternates;
+export const enAlternates = localeAlternates;

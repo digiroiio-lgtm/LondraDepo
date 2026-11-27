@@ -1,4 +1,5 @@
 import Emoji from "@/components/visual/Emoji";
+import { ogLocale } from "@/lib/locales";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import TrClusterNav from "@/components/TrClusterNav";
 import type { Metadata } from "next";
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
     description: "Essex'te palet ve koli depolama, Mintsoft WMS stok takibi, konteyner boşaltma. Haftalık £3,50 + KDV'den.",
     url: `${SITE_URL}/depolama`,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    ...ogLocale("tr"),
     type: "website",
   },
 };

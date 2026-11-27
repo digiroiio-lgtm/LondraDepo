@@ -1,4 +1,5 @@
 import Emoji from "@/components/visual/Emoji";
+import { ogLocale } from "@/lib/locales";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import TrClusterNav from "@/components/TrClusterNav";
 import QuoteForm from "@/components/QuoteForm";
@@ -35,7 +36,7 @@ export const metadata: Metadata = {
     description: "Shopify UK depo ve sipariş karşılama. Ürün depolama, pick & pack, UK teslimat.",
     url: `${SITE_URL}/shopify-ingiltere-depo`,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    ...ogLocale("tr"),
     type: "website",
   },
 };

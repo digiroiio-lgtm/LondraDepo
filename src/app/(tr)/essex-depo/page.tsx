@@ -1,4 +1,5 @@
 import PageFaq from "@/components/PageFaq";
+import { ogLocale } from "@/lib/locales";
 import Emoji from "@/components/visual/Emoji";
 import type { Metadata } from "next";
 import RouteMap from "@/components/visual/RouteMap";
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
     description: "Essex, Londra yakını depo ve lojistik çözümleri. Türk ihracatçıları için UK warehouse operasyonu.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    ...ogLocale("tr"),
     type: "website",
   },
   robots: { index: true, follow: true },
@@ -42,7 +43,7 @@ const jsonLd = {
     {
       "@type": ["LocalBusiness", "WarehouseOrDistributionFacility"],
       name: "LondraDepo.com — Essex Warehouse",
-      provider: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
+      parentOrganization: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
       description: "Essex merkezli UK depo ve lojistik operasyonu. Türkiye'den gelen yükler için İngiltere depolama ve dağıtım.",
       address: {
         "@type": "PostalAddress",

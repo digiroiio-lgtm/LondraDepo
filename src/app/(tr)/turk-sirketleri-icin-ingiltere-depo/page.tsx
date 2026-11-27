@@ -1,4 +1,5 @@
 import Emoji from "@/components/visual/Emoji";
+import { ogLocale } from "@/lib/locales";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import TrClusterNav from "@/components/TrClusterNav";
 import TeamQuote from "@/components/TeamQuote";
@@ -19,7 +20,7 @@ const TEL = "tel:+447554195190";
 export const metadata: Metadata = {
   title: "Türk Şirketleri İçin İngiltere Depo ve Fulfillment | LondraDepo",
   description:
-    "UK'de şirket veya depo kurmadan İngiltere'de satış: Türkiye–İngiltere nakliye ve gümrükleme, Essex'te depolama ve fulfillment, Türkçe ekip. 1 deneme paletiyle başlayın; palet £3,50 + KDV/hafta.",
+    "İngiltere'de şirket veya depo kurmadan satış: Türkiye–İngiltere nakliye ve gümrük, Essex'te depolama ve fulfillment, Türkçe ekip. Palet £3,50 + KDV/hafta.",
   keywords: [
     "türk şirketleri için ingiltere depo",
     "türkiye ingiltere depo",
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
     description: "UK'de şirket kurmadan İngiltere'de satış ve depolama. Türk işletmeler için fulfilment.",
     url: `${SITE_URL}/turk-sirketleri-icin-ingiltere-depo`,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    ...ogLocale("tr"),
     type: "website",
   },
 };

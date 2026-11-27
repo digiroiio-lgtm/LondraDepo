@@ -59,4 +59,6 @@ export type EnPage = {
   modified?: string;
   /** Hub breadcrumb parent (blog or case studies). */
   parent?: string;
+  /** Quote button label and preset service; overrides the per-slug default in cta.ts (used by PL pages). */
+  quote?: { label: string; service: "storage" | "container-unloading" | "fulfilment" | "amazon-prep" | "distribution" | "repacking" | "freight-customs" | "other" };
 };

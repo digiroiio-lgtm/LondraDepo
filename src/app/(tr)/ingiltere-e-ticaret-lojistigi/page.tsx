@@ -1,4 +1,5 @@
 import Emoji from "@/components/visual/Emoji";
+import { ogLocale } from "@/lib/locales";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import TrClusterNav from "@/components/TrClusterNav";
 import type { Metadata } from "next";
@@ -36,7 +37,7 @@ export const metadata: Metadata = {
     description: "UK e-ticaret lojistiği ve sipariş karşılama. Shopify, Amazon ve online mağaza entegrasyonu.",
     url: `${SITE_URL}/ingiltere-e-ticaret-lojistigi`,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    ...ogLocale("tr"),
     type: "website",
   },
 };

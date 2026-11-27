@@ -1,4 +1,5 @@
 import Emoji from "@/components/visual/Emoji";
+import { ogLocale } from "@/lib/locales";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import RouteMap from "@/components/visual/RouteMap";
 import TrClusterNav from "@/components/TrClusterNav";
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
     description: "UK depolama, mal kabul, stok yönetimi ve sipariş karşılama. Essex merkezli İngiltere depo hizmeti.",
     url: `${SITE_URL}/ingiltere-depo`,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    ...ogLocale("tr"),
     type: "website",
   },
 };

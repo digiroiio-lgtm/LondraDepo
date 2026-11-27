@@ -10,6 +10,7 @@ const WAREHOUSING: Cluster = {
   h2: "Which warehousing page fits you?",
   items: [
     { href: "/en/uk-warehousing", title: "UK Warehousing", fit: "You want one UK partner to receive, store, fulfil and deliver your goods." },
+    { href: "/en/3pl-uk", title: "3PL UK", fit: "You are comparing UK 3PL providers and want to see what a 3PL covers and how it is priced." },
     { href: "/en/storage-services", title: "UK Storage Services", fit: "You mainly need storage capacity and want to know how goods-in, stock control and space work." },
     { href: "/en/pallet-storage", title: "Pallet Storage", fit: "You store palletised B2B stock and want the per-pallet weekly price." },
     { href: "/en/london-warehousing", title: "London Warehousing", fit: "Your customers or deliveries are in London and the South East." },

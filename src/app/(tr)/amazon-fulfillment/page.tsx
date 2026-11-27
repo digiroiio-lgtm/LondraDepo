@@ -1,4 +1,5 @@
 import Emoji from "@/components/visual/Emoji";
+import { ogLocale } from "@/lib/locales";
 import PageFaq from "@/components/PageFaq";
 import AmazonInboundTr from "@/components/AmazonInboundTr";
 import TrackedLink from "@/components/TrackedLink";
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
     description: "Amazon UK fulfillment. Stok depolama, pick & pack ve UK teslimat desteği.",
     url: `${SITE_URL}/amazon-fulfillment`,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    ...ogLocale("tr"),
     type: "website",
   },
 };

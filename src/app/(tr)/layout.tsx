@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { ogLocale } from "@/lib/locales";
 import CookieConsent from "@/components/CookieConsent";
 import ConditionalAnalytics from "@/components/ConditionalAnalytics";
 import GaConsentListener from "@/components/GoogleAnalytics";
@@ -48,7 +49,7 @@ export const metadata: Metadata = {
       "Türkiye'den İngiltere'ye ihracat için Londra depo, fulfillment ve dağıtım hizmetleri. Hızlı teklif için WhatsApp'tan yazın.",
     url: SITE_URL,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    ...ogLocale("tr"),
     type: "website",
   },
   icons: {

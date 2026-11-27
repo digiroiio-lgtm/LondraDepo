@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogLocale } from "@/lib/locales";
 import Link from "next/link";
 import HeaderEn from "@/components/HeaderEn";
 import FooterEn from "@/components/FooterEn";
@@ -13,13 +14,13 @@ import { SITE_URL } from "@/lib/site";
 const PATH = "/en/request-a-quote";
 const TITLE = "Request a UK Warehousing & Fulfilment Quote";
 const DESCRIPTION =
-  "Request a quote for UK warehousing, pallet storage, container unloading, fulfilment, Amazon prep or distribution from our Essex warehouse. Pallet storage from £3.50 + VAT per week.";
+  "Request a quote for UK warehousing, pallet storage, container unloading, fulfilment, Amazon prep or distribution from Essex. Pallets from £3.50 + VAT a week.";
 
 export const metadata: Metadata = {
   title: `${TITLE} | LondraDepo`,
   description: DESCRIPTION,
   alternates: enAlternates(PATH),
-  openGraph: { title: TITLE, description: DESCRIPTION, url: absolute(PATH), siteName: "LondraDepo.com", locale: "en_GB", type: "website" },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: absolute(PATH), siteName: "LondraDepo.com", ...ogLocale("en"), type: "website" },
 };
 
 const jsonLd = {

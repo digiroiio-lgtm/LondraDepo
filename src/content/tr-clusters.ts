@@ -9,6 +9,7 @@ const DEPO: TrCluster = {
   h2: "Hangi depo sayfası size uygun?",
   items: [
     { href: "/ingiltere-depo", title: "İngiltere Depo", fit: "Ürünlerinizin teslim alınmasını, depolanmasını, sipariş ve dağıtımını tek partnere vermek istiyorsunuz." },
+    { href: "/ingiltere-3pl", title: "İngiltere 3PL", fit: "İngiltere'deki 3PL firmalarını karşılaştırıyor, 3PL'in neleri kapsadığını ve nasıl fiyatlandığını görmek istiyorsunuz." },
     { href: "/depolama", title: "Depolama Hizmeti", fit: "Asıl ihtiyacınız depolama kapasitesi; mal kabul, stok takibi ve alanın nasıl işlediğini görmek istiyorsunuz." },
     { href: "/palet-depolama", title: "Palet Depolama", fit: "Paletli B2B stok tutacaksınız ve palet başına haftalık fiyatı arıyorsunuz." },
     { href: "/londra-depo", title: "Londra Depo", fit: "Müşterileriniz veya teslimatlarınız Londra ve Güneydoğu İngiltere'de." },

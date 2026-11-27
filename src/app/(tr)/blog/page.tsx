@@ -1,4 +1,5 @@
 import Emoji from "@/components/visual/Emoji";
+import { ogLocale } from "@/lib/locales";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import QuoteForm from "@/components/QuoteForm";
 import Icon from "@/components/visual/Icon";
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
       "UK depo, fulfillment ve Amazon prep rehberleri. Türkiye'den İngiltere'ye ihracat bilgi merkezi.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    ...ogLocale("tr"),
     type: "website",
   },
   robots: { index: true, follow: true },

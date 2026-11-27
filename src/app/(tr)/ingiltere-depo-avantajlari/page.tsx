@@ -1,4 +1,5 @@
 import Emoji from "@/components/visual/Emoji";
+import { ogLocale } from "@/lib/locales";
 import RelatedLinks from "@/components/RelatedLinks";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
       "Haftalık uygun maliyetli İngiltere depo çözümleri, Türkiye'den düzenli konteyner organizasyonu, GTIP danışmanlığı ve fulfillment operasyonları.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    ...ogLocale("tr"),
     type: "website",
   },
   robots: { index: true, follow: true },
@@ -473,7 +474,7 @@ export default function IngiltereDepoAvantajlariPage() {
             </div>
           </div>
         </section>
-        <RelatedLinks links={[{ href: "/ingiltere-depo", label: "İngiltere depo hizmeti" }, { href: "/palet-depolama", label: "Palet depolama" }, { href: "/ingiltere-depo-fiyatlari", label: "İngiltere depo fiyatları" }, { href: "/blog/ingiltere-depo-rehberi", label: "İngiltere depo rehberi" }, { href: "/case-studies", label: "Vaka çalışmaları" }, { href: "/teklif-al", label: "Teklif al", note: "24 saat içinde dönüş" }]} />
+        <RelatedLinks links={[{ href: "/ingiltere-depo", label: "İngiltere depo hizmeti" }, { href: "/palet-depolama", label: "Palet depolama" }, { href: "/ingiltere-depo-fiyatlari", label: "İngiltere depo fiyatları" }, { href: "/blog/ingiltere-depo-rehberi", label: "İngiltere depo rehberi" }, { href: "/case-studies", label: "Vaka çalışmaları" }, { href: "/teklif-al", label: "Teklif al", note: "Size özel fiyat ve plan" }]} />
       </main>
 
       <Footer />

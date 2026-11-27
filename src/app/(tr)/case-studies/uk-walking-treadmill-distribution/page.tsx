@@ -1,4 +1,5 @@
 import Emoji from "@/components/visual/Emoji";
+import { ogLocale } from "@/lib/locales";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -20,7 +21,7 @@ const WHATSAPP =
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Walking Treadmill İngiltere Depo & Dağıtım Operasyonu | LondraDepo",
+  title: "Walking Treadmill: İngiltere Depo ve Dağıtım | LondraDepo",
   description:
     "Yaşlı ve rehabilitasyon kullanıcılarına yönelik walking treadmill ürünlerinin İngiltere depo, fulfillment ve online satış operasyonu.",
   alternates: trAlternates("/case-studies/uk-walking-treadmill-distribution"),
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
       "Büyük hacimli walking treadmill ürünlerinin İngiltere deposu, online fulfillment ve discount store dağıtım operasyonu.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    ...ogLocale("tr"),
     type: "article",
   },
   twitter: {

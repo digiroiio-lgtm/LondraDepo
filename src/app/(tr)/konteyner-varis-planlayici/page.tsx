@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogLocale } from "@/lib/locales";
 import Link from "next/link";
 import TrBreadcrumb from "@/components/TrBreadcrumb";
 import Header from "@/components/Header";
@@ -13,13 +14,13 @@ import { trAlternates } from "@/lib/i18n";
 const PATH = "/konteyner-varis-planlayici";
 const TITLE = "Konteyner Varış Planlayıcı: Limandan Depoya";
 const DESCRIPTION =
-  "Konteynerinizin İngiltere'ye varışını planlayın: limanı, konteyner tipini, ETA'yı ve gümrükleme şeklini seçin; EORI'den ön bildirime, boşaltmadan stok kaydına tarihli kontrol listesi alın.";
+  "Konteynerinizin İngiltere'ye varışını planlayın: liman, konteyner tipi, ETA ve gümrük şeklini seçin; EORI'den stok kaydına tarihli kontrol listesi alın.";
 
 export const metadata: Metadata = {
   title: `${TITLE} | LondraDepo`,
   description: DESCRIPTION,
   alternates: trAlternates(PATH),
-  openGraph: { title: TITLE, description: DESCRIPTION, url: `${SITE_URL}${PATH}`, siteName: "LondraDepo.com", locale: "tr_TR", type: "website" },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: `${SITE_URL}${PATH}`, siteName: "LondraDepo.com", ...ogLocale("tr"), type: "website" },
 };
 
 const faqs = [

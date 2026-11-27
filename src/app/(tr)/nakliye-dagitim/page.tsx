@@ -1,4 +1,5 @@
 import Emoji from "@/components/visual/Emoji";
+import { ogLocale } from "@/lib/locales";
 import RelatedLinks from "@/components/RelatedLinks";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
@@ -13,7 +14,7 @@ import { trAlternates } from "@/lib/i18n";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20nakliye%20ve%20dağıtım%20hizmeti%20hakkında%20bilgi%20almak%20istiyorum.";
 
 export const metadata: Metadata = {
-  title: "İngiltere Nakliye ve Dağıtım Hizmeti | UK Distribution | LondraDepo",
+  title: "İngiltere Nakliye ve Dağıtım Hizmeti | LondraDepo",
   description:
     "İngiltere içi nakliye ve dağıtım hizmetleri. Ürün toplama, depo transferleri, yerel dağıtım ve UK geneli teslimat koordinasyonu. Essex merkezli operasyon.",
   alternates: trAlternates("/nakliye-dagitim"),
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
     description: "UK içi nakliye ve dağıtım koordinasyonu. Ürün toplama, yerel dağıtım, UK geneli teslimat.",
     url: `${SITE_URL}/nakliye-dagitim`,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    ...ogLocale("tr"),
     type: "website",
   },
 };
@@ -147,7 +148,7 @@ export default function NakliyeDagitimPage() {
         </section>
 
         <CtaCards />
-        <RelatedLinks links={[{ href: "/palet-depolama", label: "Palet depolama" }, { href: "/limandan-depoya-lojistik", label: "Limandan depoya lojistik" }, { href: "/ambalaj-catering-depolama", label: "Ambalaj ve catering depolama" }, { href: "/case-studies/tasinabilir-sarj-istasyonu-ingiltere-operasyonu", label: "Vaka: taşınabilir şarj istasyonu" }, { href: "/case-studies/uk-walking-treadmill-distribution", label: "Vaka: koşu bandı dağıtımı" }, { href: "/teklif-al", label: "Teklif al", note: "24 saat içinde dönüş" }]} />
+        <RelatedLinks links={[{ href: "/palet-depolama", label: "Palet depolama" }, { href: "/limandan-depoya-lojistik", label: "Limandan depoya lojistik" }, { href: "/ambalaj-catering-depolama", label: "Ambalaj ve catering depolama" }, { href: "/case-studies/tasinabilir-sarj-istasyonu-ingiltere-operasyonu", label: "Vaka: taşınabilir şarj istasyonu" }, { href: "/case-studies/uk-walking-treadmill-distribution", label: "Vaka: koşu bandı dağıtımı" }, { href: "/teklif-al", label: "Teklif al", note: "Size özel fiyat ve plan" }]} />
       </main>
       <Footer />
       <StickyWhatsappCta />

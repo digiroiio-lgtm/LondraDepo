@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogLocale } from "@/lib/locales";
 import Link from "next/link";
 import TrBreadcrumb from "@/components/TrBreadcrumb";
 import Header from "@/components/Header";
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
   title: `${TITLE} | LondraDepo`,
   description: DESCRIPTION,
   alternates: trAlternates(PATH),
-  openGraph: { title: TITLE, description: DESCRIPTION, url: `${SITE_URL}${PATH}`, siteName: "LondraDepo.com", locale: "tr_TR", type: "website" },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: `${SITE_URL}${PATH}`, siteName: "LondraDepo.com", ...ogLocale("tr"), type: "website" },
 };
 
 const faqs = [

@@ -2,35 +2,9 @@
 
 import { useEffect, useRef } from "react";
 import type { CookiePrefs } from "./CookieConsent";
+import { UI } from "@/i18n/ui";
+import type { Locale } from "@/lib/locales";
 
-const MODAL_TEXT = {
-  tr: {
-    title: "Çerez Tercihleri", close: "Kapat",
-    intro: "Hangi çerezlere izin vermek istediğinizi seçin. Tercihleriniz kaydedilir ve istediğiniz zaman footer alanındaki “Çerez Ayarları” bağlantısından değiştirilebilir.",
-    necessary: "Zorunlu Çerezler", always: "Her Zaman Aktif",
-    necessaryText: "Sitenin temel işlevleri için gereklidir. Oturum yönetimi, güvenlik ve form koruması gibi kritik işlevleri kapsar. Devre dışı bırakılamaz.",
-    analytics: "Analitik Çerezler",
-    analyticsText: "Site kullanımını anlamamıza ve geliştirmemize yardımcı olan anonim istatistiksel veriler toplar. Ziyaretçi sayısı, popüler sayfalar ve kullanım süresi gibi bilgiler içerir.",
-    analyticsAria: "Analitik çerezleri aç/kapat",
-    marketing: "Pazarlama Çerezleri",
-    marketingText: "İlgi alanlarınıza uygun reklamlar göstermek ve kampanya etkinliğini ölçmek için kullanılır. Reklam platformlarıyla (ör. Google Ads, Meta) paylaşılabilir.",
-    marketingAria: "Pazarlama çerezlerini aç/kapat",
-    save: "Tercihleri Kaydet", cancel: "Vazgeç",
-  },
-  en: {
-    title: "Cookie Preferences", close: "Close",
-    intro: "Choose which cookies you allow. Your choice is saved and can be changed at any time via “Cookie Settings” in the footer.",
-    necessary: "Necessary Cookies", always: "Always Active",
-    necessaryText: "Required for the site to work, including session handling, security and form protection. These cannot be switched off.",
-    analytics: "Analytics Cookies",
-    analyticsText: "Collect anonymous statistics that help us understand and improve the site, such as visitor numbers, popular pages and time on site.",
-    analyticsAria: "Toggle analytics cookies",
-    marketing: "Marketing Cookies",
-    marketingText: "Used to show relevant adverts and measure campaign performance. May be shared with advertising platforms such as Google Ads and Meta.",
-    marketingAria: "Toggle marketing cookies",
-    save: "Save Preferences", cancel: "Cancel",
-  },
-} as const;
 
 interface Props {
   open: boolean;
@@ -38,7 +12,7 @@ interface Props {
   onChange: (prefs: CookiePrefs) => void;
   onSave: () => void;
   onClose: () => void;
-  lang?: "tr" | "en";
+  lang?: Locale;
 }
 
 export default function CookiePreferencesModal({
@@ -49,7 +23,7 @@ export default function CookiePreferencesModal({
   onClose,
   lang = "tr",
 }: Props) {
-  const t = MODAL_TEXT[lang];
+  const t = UI[lang].prefs;
   const dialogRef = useRef<HTMLDivElement>(null);
 
   // Trap focus and close on Escape

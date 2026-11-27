@@ -1,6 +1,6 @@
 # LondraDepo.com — full reference for AI assistants
 
-Last updated: 2026-11-24. Generated from the live page content: every page in the sitemaps with its summary and its FAQs (the same text shown on the page). Index: https://www.londradepo.com/llms.txt
+Last updated: 2026-11-27. Generated from the live page content: every page in the sitemaps with its summary and its FAQs (the same text shown on the page). Index: https://www.londradepo.com/llms.txt
 
 ## Key facts (verified)
 
@@ -15,14 +15,14 @@ Last updated: 2026-11-24. Generated from the live page content: every page in th
 - Services: goods-in, pallet and carton storage, FCL/LCL container unloading, pick and pack, ecommerce fulfilment (Shopify, Amazon FBM, B2B), Amazon FBA prep, UK distribution. International freight and UK customs clearance are provided by Arca Trade Group.
 - Not a bonded (customs) warehouse: goods are stored after UK customs clearance.
 - Not an official Amazon or Shopify partner; LondraDepo provides independent storage and fulfilment.
-- Languages: Turkish site at /, English site at /en (UK spelling); every English page with a Turkish equivalent is linked by reciprocal hreflang.
+- Languages: Turkish site at /, English site at /en (UK spelling), Polish site at /pl; equivalent pages are linked by reciprocal hreflang.
 
 # English pages
 
-## UK Warehousing, Fulfilment & Distribution near London
+## UK Warehouse & Fulfilment near London (Essex 3PL)
 URL: https://www.londradepo.com/en
 Turkish version: https://www.londradepo.com
-Summary: UK 3PL warehouse in Rayleigh, Essex: pallet storage from £3.50 + VAT a week, container unloading, ecommerce fulfilment, Amazon prep and UK distribution, 13 miles from London Gateway.
+Summary: UK 3PL warehouse in Rayleigh, Essex: pallet storage from £3.50 + VAT a week, container unloading, ecommerce fulfilment, Amazon prep and UK distribution.
 Short answer: LondraDepo is a UK third-party logistics (3PL) warehouse at Unit 19 Arterial Park, Rayleigh, Essex. We unload containers, store goods on pallets or shelves from £3.50 + VAT per pallet per week, pick and pack orders and deliver across the UK, so international businesses can sell in the UK without opening their own warehouse or hiring UK staff.
 Q: Where is the LondraDepo warehouse?
 A: Our warehouse is at Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY, United Kingdom. By road it is about 13 miles from London Gateway, 16 miles from Tilbury, 37 miles from central London and 62 miles from Felixstowe.
@@ -53,10 +53,10 @@ A: Depending on the product group, we can guide you on English labelling, UK mar
 Q: What are the main benefits of a UK warehouse for overseas sellers?
 A: Holding stock in the UK lets overseas businesses offer domestic delivery times and simple UK returns, serve wholesale and online customers from one place and avoid shipping each order from abroad. LondraDepo provides this from Rayleigh, Essex.
 
-## UK Warehousing Pricing 2026 – Pallet Storage from £3.50
+## UK Warehousing Pricing 2026: Pallets from £3.50
 URL: https://www.londradepo.com/en/uk-warehousing-pricing
 Turkish version: https://www.londradepo.com/ingiltere-depo-fiyatlari
-Summary: UK warehouse and fulfilment pricing explained: pallet storage from £3.50 + VAT per pallet per week, worked examples for 5, 10 and 20 pallets, and the cost lines in a 3PL quote.
+Summary: UK warehouse and fulfilment pricing: pallet storage from £3.50 + VAT per pallet per week, examples for 5, 10 and 20 pallets and every line in a 3PL quote.
 Short answer: At LondraDepo, standard pallet storage starts from £3.50 + VAT per pallet per week. Storing 10 standard pallets for four weeks therefore starts at £140 + VAT. Goods-in, handling, pick and pack, labelling, returns, delivery and customs coordination are quoted separately, because they depend on your products and order profile.
 Q: How are UK warehouse prices calculated?
 A: Our standard pallet storage starts from £3.50 + VAT per pallet per week. Pallet size, storage duration, product type and any handling, loading, re-palletising, customs coordination or fulfilment services affect the total quote.
@@ -69,10 +69,10 @@ A: Product type, estimated pallets or cartons, monthly order volume, the service
 Q: Is there a monthly minimum charge?
 A: LondraDepo has no fixed minimum volume, and you can start with a single trial pallet. Storage starts from £3.50 + VAT per pallet per week; other services are quoted for your products and order profile.
 
-## UK Warehousing Services – Essex Warehouse near London
+## UK Warehousing Services: Essex, near London
 URL: https://www.londradepo.com/en/uk-warehousing
 Turkish version: https://www.londradepo.com/ingiltere-depo
-Summary: UK warehousing from Essex: goods-in, pallet and carton storage, Mintsoft WMS stock control, order fulfilment and UK-wide distribution. Pallet storage from £3.50 + VAT/week.
+Summary: UK warehousing from Essex: goods-in, pallet and carton storage, Mintsoft WMS stock control, fulfilment and UK distribution. Pallets from £3.50 + VAT a week.
 Short answer: LondraDepo provides UK warehousing from Rayleigh, Essex: we receive your goods, store them on pallets or as cartons, keep live stock records in Mintsoft WMS, fulfil orders and distribute across the UK. It gives overseas businesses a ready-made UK warehouse without the cost of leasing a site or employing staff.
 Q: Which areas does your UK warehouse serve?
 A: Our Essex warehouse serves the whole of the UK. We coordinate delivery to London, Birmingham, Manchester and every other region.
@@ -88,7 +88,7 @@ A: Once you accept the quote, you can ship goods to Unit 19 Arterial Park, Rayle
 ## London Warehousing: Essex, 40 Minutes from London
 URL: https://www.londradepo.com/en/london-warehousing
 Turkish version: https://www.londradepo.com/londra-depo
-Summary: Warehousing for London and the South East from Rayleigh, Essex: about 40 minutes from east London and 20–30 minutes from Tilbury on the M25 corridor. Pallets from £3.50 + VAT.
+Summary: Warehousing for London and the South East from Rayleigh, Essex: about 40 minutes from east London on the M25 corridor. Pallet storage from £3.50 + VAT a week.
 Short answer: Our warehouse is in Rayleigh, Essex, about 37 miles (59 km) by road from central London, around 40 minutes from east London, and 20–30 minutes from the Port of Tilbury. It is not inside London, but its position on the A127 and M25 routes makes it a practical base for storing stock and delivering quickly to London, the South East and the rest of the UK.
 Q: Can I get warehouse storage in London?
 A: Yes. Our warehouse is in Essex, close to London, about 40–50 km from the city and fully connected to UK logistics routes. You can store stock with us and fulfil orders across the UK.
@@ -104,7 +104,7 @@ A: No. The warehouse is in Rayleigh, Essex, about 37 miles from central London a
 ## UK Ecommerce Logistics: Stock, Delivery & Returns
 URL: https://www.londradepo.com/en/uk-ecommerce-logistics
 Turkish version: https://www.londradepo.com/ingiltere-e-ticaret-lojistigi
-Summary: End-to-end UK ecommerce logistics from Essex: stock storage, Mintsoft WMS, pick and pack, shipping labels, UK delivery and returns for Shopify, Amazon FBM and other online channels.
+Summary: End-to-end UK ecommerce logistics from Essex: storage, Mintsoft WMS, pick and pack, shipping labels, UK delivery and returns for Shopify, Amazon FBM and more.
 Short answer: UK ecommerce logistics covers everything that happens after an online customer clicks 'buy': holding stock in a UK warehouse, picking and packing the order, labelling it, delivering it and processing returns. LondraDepo runs this process from its Essex warehouse for Shopify, Amazon FBM and other online channels.
 Q: What is UK ecommerce logistics?
 A: It is the full process of picking, packing and delivering orders from an online store out of a UK warehouse. LondraDepo manages this process from its Essex warehouse.
@@ -117,10 +117,10 @@ A: Stock is tracked in Mintsoft WMS. Stock levels are monitored in real time and
 Q: How are returns handled in UK ecommerce logistics?
 A: Returned items come back to the Essex warehouse, where they are checked and either put back into stock or set aside, as you instruct. Returns are quoted per item as part of your fulfilment proposal.
 
-## Pick and Pack Services in the UK
+## Pick and Pack Services UK: Priced per Order
 URL: https://www.londradepo.com/en/pick-and-pack
 Turkish version: https://www.londradepo.com/siparis-toplama-paketleme
-Summary: UK pick and pack from our Essex warehouse: order picking, packing, shipping labels, order checks, returns processing and Mintsoft WMS stock sync. Priced per order.
+Summary: Pick and pack services from our Essex 3PL warehouse: picking, packing, shipping labels, order checks, returns and Mintsoft stock sync, priced per order.
 Short answer: Pick and pack is the warehouse process of taking the right items off the shelf for an order (pick), packing them securely (pack) and preparing the parcel for dispatch. At LondraDepo, our Essex team picks, packs, labels and ships your online orders, with every movement updating stock in Mintsoft WMS.
 Q: What is pick and pack?
 A: Pick and pack is the process of collecting the ordered items from warehouse shelves (pick) and then packing them ready for the carrier (pack).
@@ -177,7 +177,7 @@ A: Amazon sets FBM delivery time and performance requirements. Fulfilling from a
 Q: Can the same stock serve Amazon FBM and my other channels?
 A: Yes. Stock held at LondraDepo can fulfil Amazon FBM orders, be prepared and sent into Amazon FBA, and serve Shopify or wholesale orders, all from one UK warehouse in Essex.
 
-## UK Fulfilment Services for Brands Importing into the UK
+## UK Fulfilment Services for Importing Brands
 URL: https://www.londradepo.com/en/uk-fulfilment
 Turkish version: https://www.londradepo.com/ingiltere-fulfillment
 Summary: UK fulfilment services from Essex: order picking, branded packing, Amazon FBA prep, Shopify and Etsy order handling, returns management and regular stock reporting.
@@ -196,7 +196,7 @@ A: Storage starts from £3.50 + VAT per pallet per week. Goods-in, pick and pack
 ## Pallet Storage UK – From £3.50 per Pallet per Week
 URL: https://www.londradepo.com/en/pallet-storage
 Turkish version: https://www.londradepo.com/palet-depolama
-Summary: UK pallet storage in Essex near London from £3.50 + VAT per pallet per week. Container and part-load receiving, secure storage, weekly reporting and B2B dispatch preparation.
+Summary: Pallet storage in Essex near London from £3.50 + VAT per pallet per week: container and part-load receiving, secure storage, weekly reports and B2B dispatch.
 Short answer: LondraDepo offers pallet storage in Rayleigh, Essex, near London, from £3.50 + VAT per standard pallet per week. We receive container and part-load deliveries, store pallets in a locked, CCTV-monitored warehouse with controlled access, report stock movements and prepare pallets for B2B distribution.
 Q: How do I get a quote for 10 pallets in the UK?
 A: Share the number of pallets, pallet dimensions and approximate weights, product type, storage duration, delivery location and any goods-in or distribution services you need. Pricing is set according to the scope of the operation.
@@ -231,7 +231,7 @@ A: Yes. LondraDepo can store the balance of your stock in Essex from £3.50 + VA
 Q: Should I send stock to Amazon by parcel or by pallet?
 A: It depends on volume. A few cartons usually go as small parcel delivery (SPD); Amazon Freight describes less-than-truckload (LTL) as usually one to six pallets; larger regular loads can justify a full truck. We advise on the option for each shipment plan.
 
-## UK Storage Services: Goods-in, Stock Control & Capacity
+## UK Storage Services: Goods-in and Stock Control
 URL: https://www.londradepo.com/en/storage-services
 Turkish version: https://www.londradepo.com/depolama
 Summary: UK storage services: pallet and carton goods-in, real-time stock tracking in Mintsoft WMS, FCL container unloading, and short or long-term warehouse capacity in Essex.
@@ -263,7 +263,7 @@ A: Once clearance is complete, your goods are delivered to our warehouse address
 Q: Do I need a GB EORI number to clear goods into the UK?
 A: Yes. The importer needs an EORI number starting with GB to import goods into Great Britain. Arca Trade Group's customs team can lodge the declaration, but the importer remains responsible for duty and import VAT.
 
-## Cargo Handling UK – Unloading, Repacking & Relabelling
+## Cargo Handling UK: Unloading, Repacking, Relabelling
 URL: https://www.londradepo.com/en/cargo-handling
 Turkish version: https://www.londradepo.com/ellecleme
 Summary: UK cargo handling in Essex: vehicle and container unloading, loading, pallet and carton handling, sorting, repacking, labelling and relabelling, and shipment preparation.
@@ -279,10 +279,10 @@ A: Pricing depends on the type of task, the volume of goods and the scope of the
 Q: Can you relabel goods before they are sent to customers or Amazon?
 A: Yes. Relabelling, repacking and sorting by SKU are part of cargo handling at the Essex warehouse, including preparing labelled stock before it is sent to UK customers or into Amazon FBA.
 
-## UK Distribution & Collection Services
+## UK Distribution Services: Pallet & Parcel Delivery
 URL: https://www.londradepo.com/en/uk-distribution
 Turkish version: https://www.londradepo.com/nakliye-dagitim
-Summary: UK distribution coordination from Essex: collections from other UK locations, warehouse transfers, local delivery around London and Essex, and UK-wide pallet and parcel delivery.
+Summary: UK distribution from our Essex warehouse: collections, warehouse transfers, local delivery around London and Essex, and UK-wide pallet and parcel delivery.
 Short answer: LondraDepo coordinates transport within the UK: collecting goods from other UK sites, moving stock between warehouses, local delivery around London and Essex, and UK-wide delivery to London, Birmingham, Manchester and beyond. There is no fixed minimum, from a single carton to full pallet loads. Collecting goods from another UK location and bringing them to our warehouse.
 Q: Can you collect goods from another UK location?
 A: Yes. We coordinate collections from other UK sites and delivery to our Essex warehouse. Contact us on WhatsApp for details.
@@ -295,10 +295,10 @@ A: Pricing depends on shipment volume, distance and service scope. Message us on
 Q: Do you offer pallet and parcel delivery?
 A: Yes. From Essex we coordinate pallet deliveries to wholesale and trade customers and parcel deliveries to online shoppers across the UK, including regular delivery programmes for repeat B2B customers.
 
-## Ecommerce Fulfilment UK: From Online Order to Delivery
+## Ecommerce Fulfilment UK: Essex 3PL near London
 URL: https://www.londradepo.com/en/ecommerce-fulfilment
 Turkish version: https://www.londradepo.com/e-ticaret-fulfillment
-Summary: Ecommerce fulfilment in the UK: order management, Mintsoft WMS stock tracking, pick and pack, shipping labels, packing, UK dispatch and returns handling from Essex.
+Summary: Ecommerce fulfilment services in the UK from our Essex 3PL warehouse: Mintsoft WMS, pick and pack, packing, shipping labels, UK dispatch and returns handling.
 Short answer: Ecommerce fulfilment connects your online store to a physical warehouse. When an order arrives, LondraDepo's warehouse team takes over: picking the products, packing them, labelling the parcel and dispatching it to your UK customer, with returns handled in the same operation.
 Q: What does ecommerce fulfilment include?
 A: Order management, stock tracking in Mintsoft WMS, pick and pack, shipping labels, packing, UK dispatch and returns handling.
@@ -346,7 +346,7 @@ A: Standard pallet storage starts from £3.50 + VAT per pallet per week, so 10 p
 ## UK Import Logistics for Overseas Businesses
 URL: https://www.londradepo.com/en/uk-import-logistics
 Turkish version: https://www.londradepo.com/ingiltere-ithalat-lojistigi
-Summary: Import into the UK with one group: sea, air, road and rail freight and customs clearance through Arca Trade Group, then unloading, storage, fulfilment and UK distribution at our Essex warehouse.
+Summary: Import into the UK with one group: sea, air, road and rail freight plus customs clearance, then unloading, storage, fulfilment and UK distribution in Essex.
 Short answer: International businesses can import into the UK through one group. Arca Trade Group arranges sea, air, road or rail freight and completes the UK customs declaration; LondraDepo, its warehousing brand, unloads the goods in Rayleigh, Essex, stores them, fulfils orders and distributes them across the UK. You can also bring your own freight forwarder and use only the warehouse.
 Q: Can an overseas company import goods into the UK without a UK office?
 A: Yes. Many overseas businesses import into the UK using a GB EORI number and a UK warehouse partner. The right importer of record set-up depends on your sales model, so take tax advice before the first shipment.
@@ -362,7 +362,7 @@ A: No. LondraDepo is not an HMRC-authorised customs warehouse. Goods are stored 
 ## Container Unloading in Essex – FCL & LCL Devanning
 URL: https://www.londradepo.com/en/container-unloading
 Turkish version: https://www.londradepo.com/konteyner-bosaltma
-Summary: Container unloading at our Rayleigh, Essex warehouse: 20ft, 40ft and 40ft high-cube FCL plus LCL deliveries, counting, damage checks, re-palletising, WMS booking and storage or onward distribution.
+Summary: Container unloading at our Essex warehouse: 20ft, 40ft and 40ft high-cube FCL and LCL, counting, damage checks, re-palletising, WMS booking and storage.
 Short answer: LondraDepo unloads FCL and LCL deliveries at Unit 19 Arterial Park, Rayleigh, Essex, including 20ft, 40ft and 40ft high-cube containers. Each delivery is counted, checked for visible damage, re-palletised or labelled where needed and booked into Mintsoft WMS, then stored or prepared for onward UK distribution.
 Q: Which container sizes do you unload?
 A: We receive 20ft, 40ft and 40ft high-cube FCL containers as well as LCL and palletised part loads. Tell us the size and whether goods are palletised or loose-loaded when you request a quote.
@@ -378,7 +378,7 @@ A: Yes. Goods can be cross-docked to UK customers or Amazon, or stored and relea
 ## Packaging & Catering Supplies Warehousing UK
 URL: https://www.londradepo.com/en/industries/food-packaging
 Turkish version: https://www.londradepo.com/ambalaj-catering-depolama
-Summary: UK warehousing and scheduled B2B delivery for pizza boxes, takeaway packaging and catering disposables: palletised storage, lot tracking, low-stock alerts and delivery to restaurants and wholesalers.
+Summary: UK warehousing and scheduled B2B delivery for pizza boxes, takeaway packaging and catering disposables: pallet storage, lot tracking and low-stock alerts.
 Short answer: Pizza boxes, takeaway containers and catering disposables are bulky, low in value per pallet and needed on a predictable schedule. LondraDepo stores them by the pallet in Essex and runs fixed weekly or monthly deliveries to restaurants, chains and wholesalers across the UK, as we do for a pizza box manufacturer that ships from Turkey.
 Q: Can you deliver to restaurants on a fixed schedule?
 A: Yes. We build weekly or monthly delivery programmes based on your customer list and order frequency.
@@ -393,7 +393,8 @@ A: Yes. Arca Trade Group, which operates LondraDepo, can arrange freight and UK 
 
 ## UK Market Entry Without Your Own Warehouse
 URL: https://www.londradepo.com/en/uk-market-entry
-Summary: How international manufacturers and brands enter the UK market with outsourced warehousing: choose a sales model, set up imports, start with a trial pallet and scale to containers.
+Turkish version: https://www.londradepo.com/turkiyeden-ingiltereye-satis
+Summary: How international brands enter the UK market with outsourced warehousing: pick a sales model, set up imports, start with one pallet and scale to containers.
 Short answer: You do not need your own UK warehouse, staff or fleet to sell in the UK. International businesses can ship stock to LondraDepo in Essex, have it cleared and stored, and supply UK wholesale customers, online shoppers or Amazon from day one. One of our food clients started with a single trial pallet and now ships six 40ft high-cube containers a month.
 Q: Do I need a UK company to sell in the UK?
 A: Not necessarily. Many overseas businesses sell into the UK with a GB EORI number and an outsourced warehouse. The right structure depends on your sales model and VAT position, so take professional advice.
@@ -406,10 +407,28 @@ A: Yes. Support with an initial operating plan, warehouse and fulfilment model, 
 Q: Can I test the UK market before committing to large volumes?
 A: Yes. There is no fixed minimum, so you can start with a single trial pallet. The tortilla producer in our case studies entered the UK this way and now ships six 40ft high-cube containers a month.
 
+## 3PL Warehouse UK: Essex 3PL near London
+URL: https://www.londradepo.com/en/3pl-uk
+Turkish version: https://www.londradepo.com/ingiltere-3pl
+Summary: UK 3PL warehouse in Rayleigh, Essex: goods-in, pallet storage from £3.50 + VAT a week, pick and pack, ecommerce and B2B fulfilment, Amazon prep and UK delivery.
+Short answer: A UK 3PL (third-party logistics provider) receives your stock into its UK warehouse, stores it, fulfils your ecommerce and B2B orders and delivers them across the UK, so you sell in the UK without running a warehouse. LondraDepo is a 3PL in Rayleigh, Essex, 13 miles from London Gateway and 16 miles from Tilbury, operated by Arca Trade Group, a BIFA member that also handles international freight and UK customs. Pallet storage starts from £3.50 + VAT per pallet per week, with no fixed minimum.
+Q: What is a 3PL in the UK?
+A: A UK 3PL (third-party logistics provider) is a company that stores your stock in its UK warehouse and handles goods-in, order fulfilment and delivery for you. You keep ownership of the stock and pay for the space and services you use.
+Q: How much does a UK 3PL cost?
+A: Costs are built from storage, goods-in, pick and pack, packaging and carriage. At LondraDepo pallet storage starts from £3.50 + VAT per pallet per week; the other lines are quoted for your products and volumes.
+Q: Does your UK 3PL service have a minimum volume?
+A: No fixed minimum. Many clients start with one trial pallet and grow to regular containers.
+Q: Can you handle both ecommerce and B2B orders?
+A: Yes. We fulfil Shopify and Amazon FBM orders as parcels and prepare pallet and carton orders for retailers, wholesalers and workshops from the same stock.
+Q: Where is your 3PL warehouse?
+A: Unit 19 Arterial Park, Rayleigh, Essex SS6 7FY: 13 miles from London Gateway, 16 miles from Tilbury and about 62 miles from Felixstowe.
+Q: Can you also arrange freight and customs?
+A: Yes. Arca Trade Group, which operates LondraDepo, arranges sea, air, road and rail freight and UK customs declarations. You can also use your own forwarder and only our warehouse.
+
 ## Automotive Parts Warehousing & Distribution UK
 URL: https://www.londradepo.com/en/industries/automotive-parts
 Turkish version: https://www.londradepo.com/otomotiv-yedek-parca-depolama
-Summary: UK warehousing for OEM and aftermarket parts: pallet and shelf storage by SKU, photo-documented damage checks, protective packing and next-day delivery to dealers and workshops.
+Summary: UK warehousing for OEM and aftermarket car parts: storage by SKU, photo-documented damage checks, protective packing and next-day delivery to dealers.
 Short answer: Automotive parts are awkward to store and easy to damage: bumpers and panels are bulky, painted surfaces scratch and SKU counts run into the thousands. LondraDepo stores OEM and aftermarket parts and upholstery materials in Essex by SKU, photographs condition at goods-in and dispatch, packs parts protectively and ships next-day or 2-day to UK dealers, workshops and online customers.
 Q: Do you store large automotive parts?
 A: Yes. We store parts of all sizes, including front and rear bumpers and door panels, using pallet and shelving systems.
@@ -425,7 +444,7 @@ A: Yes. Parts are stored by SKU on pallets and shelving, with OEM and aftermarke
 ## UK Warehousing & Fulfilment for Turkish Exporters
 URL: https://www.londradepo.com/en/uk-warehousing-for-turkish-exporters
 Turkish version: https://www.londradepo.com/turk-sirketleri-icin-ingiltere-depo
-Summary: UK warehousing, fulfilment and distribution for Turkish manufacturers and brands: Turkish-speaking team, Turkey–UK freight and customs through Arca Trade Group, and an Essex warehouse near London.
+Summary: UK warehousing, fulfilment and distribution for Turkish manufacturers: Turkish-speaking team, Turkey–UK freight and customs, and an Essex warehouse.
 Short answer: Turkish manufacturers and brands can sell in the UK without setting up a UK company, leasing a warehouse or hiring staff. Arca Trade Group, which operates LondraDepo, specialises in the Turkey–UK & Ireland trade lane: it arranges freight and customs clearance, and LondraDepo stores, fulfils and distributes your goods from Essex, with a team that works in Turkish and English.
 Q: Can I sell in the UK without setting up a UK company?
 A: Yes, it is possible. You can store products in our UK warehouse and sell through platforms such as Shopify or Amazon or to wholesale buyers. We recommend independent advice on tax and company law.
@@ -442,10 +461,10 @@ A: Yes. The UK–Turkey trade agreement removes or reduces customs duty on many 
 Q: Should I use Amazon FBA or FBM?
 A: LondraDepo supports Amazon FBM, where stock stays in our warehouse and we fulfil Amazon orders from Essex, and also prepares stock for FBA. See our Amazon prep page for FBA.
 
-## Felixstowe, Tilbury & London Gateway to Essex Warehouse
+## UK Port to Warehouse Logistics: Felixstowe & Tilbury
 URL: https://www.londradepo.com/en/locations/port-to-warehouse-logistics
 Turkish version: https://www.londradepo.com/limandan-depoya-lojistik
-Summary: Port-to-warehouse logistics from Felixstowe, London Gateway and Tilbury: verified road distances to our Rayleigh warehouse, customs, haulage, unloading and UK distribution.
+Summary: Port-to-warehouse logistics from Felixstowe, London Gateway and Tilbury: distances to our Essex warehouse, customs, haulage, unloading and distribution.
 Short answer: Our warehouse at Unit 19 Arterial Park, Rayleigh (SS6 7FY) is not at a port, but it is close to three major ones: London Gateway is about 13 miles by road, the Port of Tilbury about 16 miles and the Port of Felixstowe about 62 miles. Containers arriving at any of them can be cleared, hauled to Rayleigh, unloaded and stored or sent straight on to UK customers.
 Q: How far is the warehouse from each UK container port?
 A: By road from Rayleigh, Essex, DP World London Gateway is about 13 miles, the Port of Tilbury about 16 miles and the Port of Felixstowe about 62 miles. London Gateway and Tilbury take around 20 minutes by car, Felixstowe around 1¼ hours.
@@ -461,7 +480,7 @@ A: The haulier or forwarder books a delivery slot with our warehouse after pre-a
 ## Warehouse near London Gateway & Tilbury
 URL: https://www.londradepo.com/en/london-gateway-tilbury-warehousing
 Turkish version: https://www.londradepo.com/london-gateway-tilbury-depo
-Summary: Essex warehouse 13 miles from DP World London Gateway and 16 miles from the Port of Tilbury: container unloading, pallet storage from £3.50 + VAT per week, fulfilment and UK distribution in Rayleigh.
+Summary: Essex warehouse 13 miles from London Gateway and 16 from Tilbury: container unloading, pallet storage from £3.50 + VAT a week, fulfilment and UK distribution.
 Short answer: LondraDepo's warehouse in Rayleigh, Essex, is about 13 miles (21 km) by road from DP World London Gateway and 16 miles (26 km) from the Port of Tilbury, around 20 minutes by car from each. Containers arriving at either Thames port can be cleared, hauled a short distance to our site, unloaded, counted and booked into stock, then stored from £3.50 + VAT per pallet per week or sent on to UK customers. The warehouse is not at the port and is not a bonded warehouse: goods are stored after customs clearance.
 Q: How far is the warehouse from London Gateway?
 A: About 13 miles (21 km) by road from DP World London Gateway, around 20 minutes by car in free-flowing traffic.
@@ -477,7 +496,7 @@ A: Once the import declaration is lodged and the container is released, a haulie
 ## Felixstowe Port Warehousing: Essex Warehouse
 URL: https://www.londradepo.com/en/felixstowe-port-warehousing
 Turkish version: https://www.londradepo.com/felixstowe-liman-depo
-Summary: Containers landing at Felixstowe: haulage about 62 miles to our Rayleigh, Essex warehouse, unloading, pallet storage from £3.50 + VAT per week, fulfilment and London distribution.
+Summary: Containers landing at Felixstowe: haulage about 62 miles to our Essex warehouse, unloading, pallets from £3.50 + VAT a week, fulfilment and distribution.
 Short answer: Felixstowe is the UK's largest container port, and many deep-sea services from Asia call there. LondraDepo's warehouse is not at the port: it is in Rayleigh, Essex, about 62 miles (99 km) by road, roughly 1¼ hours by car. Containers landing at Felixstowe can be cleared, hauled to our site, unloaded and booked into stock, then stored from £3.50 + VAT per pallet per week, fulfilled or distributed across the UK, with London about 37 miles away. We are not a bonded warehouse, so goods are stored after customs clearance.
 Q: How far is the warehouse from Felixstowe?
 A: About 62 miles (99 km) by road from the Port of Felixstowe to Rayleigh, Essex, roughly 1¼ hours by car in free-flowing traffic. Container lorries take longer.
@@ -525,7 +544,7 @@ A: No. It is a planning estimate. LondraDepo quotes goods-in, palletising, stora
 ## UK Pallet Storage Cost Calculator
 URL: https://www.londradepo.com/en/uk-storage-cost-calculator
 Turkish version: https://www.londradepo.com/ingiltere-depo-maliyet-hesaplama
-Summary: Calculate UK pallet storage costs in seconds: pallets × weeks at £3.50 + VAT per pallet per week, with VAT shown. Then request a full quote for handling, fulfilment and delivery.
+Summary: Calculate UK pallet storage costs in seconds: pallets × weeks at £3.50 + VAT per pallet per week, with VAT shown, then request a full quote.
 Short answer: Enter the number of standard pallets and how many weeks you need, and the calculator shows your UK storage cost at LondraDepo's published starting rate of £3.50 + VAT per pallet per week. Storing 10 pallets for 4 weeks, for example, starts at £140 + VAT (£168 including 20% VAT). Change the pallets and weeks. The estimate updates instantly; nothing is sent until you request a quote.
 Q: How much does it cost to store a pallet in the UK?
 A: At LondraDepo, standard pallet storage starts from £3.50 + VAT per pallet per week. For example, 10 pallets for 4 weeks start at £140 + VAT, or £168 including VAT.
@@ -541,7 +560,7 @@ A: Yes. The calculator shows the storage cost excluding VAT and adds VAT at the 
 ## Container Arrival Planner: Port to Essex Warehouse
 URL: https://www.londradepo.com/en/container-arrival-planner
 Turkish version: https://www.londradepo.com/konteyner-varis-planlayici
-Summary: Plan your container's arrival in the UK: choose the port, container size, ETA and customs route and get a dated checklist from EORI and pre-advice to unloading and stock booking in Essex.
+Summary: Plan your container's UK arrival: pick the port, container size, ETA and customs route, and get a dated checklist from EORI to unloading in Essex.
 Short answer: Choose your arrival port, container size, how it is loaded and the ETA, and the planner builds a dated checklist for getting the container from a UK port to our Rayleigh, Essex warehouse. It covers the GB EORI and commodity codes, the customs declaration, pre-advice to the warehouse, haulage, unloading, counting and booking stock into Mintsoft WMS.
 Q: What information does the warehouse need before a container arrives?
 A: The container number, ETA, packing list, carton counts per SKU and whether the goods are palletised or loose-loaded. With this, unloading can be planned and any palletising or labelling quoted before arrival.
@@ -604,11 +623,11 @@ A: The Amazon Prep UK guide explains the step-by-step process and the Amazon FBA
 Q: Are the guides written by warehouse operators?
 A: Yes. The guides are written from experience running LondraDepo's warehouse in Rayleigh, Essex, by Sertaç Yılmaz, founder and co-founder of Arca Trade Group, and reviewed by Operations Manager Yusuf Barış.
 
-## UK Warehousing Guide: How It Works
+## UK Warehousing Services Guide: How It Works
 URL: https://www.londradepo.com/en/blog/uk-warehousing-guide
 Turkish version: https://www.londradepo.com/blog/ingiltere-depo-rehberi
-Summary: A practical guide to UK warehousing for overseas sellers: what a UK warehouse service is, who needs one, how the process works step by step and how to choose the right partner.
-Short answer: A UK warehousing service stores your goods securely once they arrive in the UK and prepares them for dispatch to customers or sales channels when needed. Holding physical stock in the UK shortens delivery times, simplifies imports and supports sales on marketplaces such as Amazon and Etsy. This guide explains how it works and how to choose a partner.
+Summary: UK warehousing and logistics for overseas sellers: what warehousing services include, who needs them, how it works step by step and how to choose a partner.
+Short answer: UK warehousing services store your goods securely once they arrive in the UK and prepare them for dispatch to customers or sales channels when needed; most providers combine warehousing and logistics (goods-in, storage, fulfilment and delivery) under one contract. Holding physical stock in the UK shortens delivery times, simplifies imports and supports sales on marketplaces such as Amazon and Etsy. This guide explains how it works and how to choose a partner.
 Q: Who is a UK warehouse service suitable for?
 A: Exporting brands, ecommerce sellers, wholesalers, food producers and importers that need stock in the UK.
 Q: Do you accept palletised goods?
@@ -620,11 +639,11 @@ A: At LondraDepo, standard pallet storage starts from £3.50 + VAT per pallet pe
 Q: How do I choose a UK warehouse partner?
 A: Compare providers on location, how each cost line is priced, stock visibility, sales channels, returns, minimums, contract terms, insurance, customs support and references. Our 3PL guide lists 12 questions to ask.
 
-## What Is UK Fulfilment and How Does It Work?
+## UK Fulfilment Services Explained: How It Works
 URL: https://www.londradepo.com/en/blog/what-is-uk-fulfilment
 Turkish version: https://www.londradepo.com/blog/ingiltere-fulfillment-nedir
-Summary: UK fulfilment explained: what fulfilment and 3PL mean, the benefits of fulfilling from a UK warehouse, how 3PL differs from Amazon FBA and which products suit it.
-Short answer: Fulfilment is the whole operational process from receiving an ecommerce order to delivering it to the customer: order capture, picking the product from the warehouse, packing it and shipping it. UK fulfilment means this happens from a warehouse in the UK, usually run by a third-party logistics (3PL) provider.
+Summary: What UK fulfilment services and fulfilment centres do, why sellers fulfil from a UK warehouse, how a 3PL differs from Amazon FBA and which products suit it.
+Short answer: Fulfilment is the whole operational process from receiving an ecommerce order to delivering it to the customer: order capture, picking the product from the warehouse, packing it and shipping it. UK fulfilment services do this from a fulfilment centre in the UK, usually run by a third-party logistics (3PL) provider, so your customers get UK delivery times without you running a warehouse.
 Q: What is a UK fulfilment service?
 A: Fulfilment is the process of picking, packing and shipping customer orders from a warehouse. A UK fulfilment provider stores your products in the UK and sends orders to your customers.
 Q: Does LondraDepo support Amazon FBA?
@@ -655,7 +674,7 @@ A: Amazon FBA prep is quoted for your products, quantities and the tasks needed,
 ## What Is a UK Transit Warehouse (Cross-Dock)?
 URL: https://www.londradepo.com/en/blog/what-is-a-uk-transit-warehouse
 Turkish version: https://www.londradepo.com/blog/ingiltere-ara-depo-nedir
-Summary: What a UK transit warehouse or cross-dock is, how it differs from standard storage, how the process works and which businesses benefit from short-term transit warehousing.
+Summary: What a UK transit warehouse or cross-dock is, how it differs from standard storage, how the process works and which businesses benefit from it.
 Short answer: A transit warehouse, also called a cross-dock, is a logistics point where goods are held for a short time before being split and sent on to different destinations, rather than stored long term. In a UK transit operation, goods arrive at the warehouse, are sorted and labelled, and are dispatched to UK customers, other warehouses or Amazon.
 Q: What is the difference between a transit warehouse and a standard warehouse?
 A: A transit warehouse holds goods temporarily before sending them on to another destination. A standard warehouse holds stock long term and distributes it order by order.
@@ -671,7 +690,7 @@ A: Yes. At LondraDepo, part of a delivery can be cross-docked straight on while 
 ## UK Warehousing Prices 2026: A Full Cost Guide
 URL: https://www.londradepo.com/en/blog/uk-warehousing-prices-2026
 Turkish version: https://www.londradepo.com/blog/ingiltere-depo-fiyatlari-2026
-Summary: How UK warehouse and fulfilment costs are built in 2026: pallet storage from £3.50 + VAT per week, pick and pack, packaging, carriage, goods-in, Amazon prep and a worked example.
+Summary: How UK warehouse and fulfilment costs add up in 2026: pallet storage from £3.50 + VAT a week, pick and pack, packaging, carriage, goods-in and Amazon prep.
 Short answer: UK warehousing costs depend on the volume and weight of your goods, how long they stay in stock, the warehouse location, extra services and how often stock is accessed. At LondraDepo, standard pallet storage starts from £3.50 + VAT per pallet per week; fulfilment, goods-in, packaging and carriage are quoted on top.
 Q: How much does it cost to store one pallet in the UK?
 A: LondraDepo standard pallet storage starts from £3.50 + VAT per pallet per week. Extra services such as handling, loading and customs coordination are quoted separately.
@@ -684,10 +703,10 @@ A: The storage rate covers storage only. Goods-in, container unloading, re-palle
 Q: How can I estimate my monthly warehousing cost?
 A: Multiply your pallets by the number of weeks and the per-pallet weekly rate, then add the handling and delivery lines for your order profile. The storage cost calculator does the storage part for you.
 
-## UK Pallet Storage Costs 2026
+## Pallet Storage UK: Costs per Pallet in 2026
 URL: https://www.londradepo.com/en/blog/uk-pallet-storage-costs
 Turkish version: https://www.londradepo.com/blog/ingiltere-palet-depolama-maliyetleri
-Summary: UK pallet storage costs in 2026: weekly rates from £3.50 + VAT per pallet, what affects the price, a 10-pallet worked example and practical ways to reduce your total cost.
+Summary: Pallet storage costs in the UK for 2026: from £3.50 + VAT per pallet per week, what changes the price, a 10-pallet worked example and ways to cut your bill.
 Short answer: UK pallet storage is usually charged per pallet per week. At LondraDepo, the starting rate for a standard pallet is £3.50 + VAT per week, which covers storage only; goods-in, handling and pick and pack are charged separately. Pallet size and weight, product type, duration and access frequency all affect the final price.
 Q: What is the weekly cost of storing one pallet in the UK?
 A: At LondraDepo, standard pallet storage starts from £3.50 + VAT per pallet per week. This covers storage only; handling, loading, unloading, re-palletising and customs coordination are quoted separately.
@@ -722,7 +741,8 @@ A: A UK 3PL suits sellers with several channels, such as a website, marketplaces
 
 ## How to Import Goods into the UK: A Practical Guide
 URL: https://www.londradepo.com/en/blog/uk-importing-guide
-Summary: How to import goods into the UK: GB EORI, commodity codes and the UK Global Tariff, customs declarations, duty and import VAT, rules of origin and choosing a UK warehouse.
+Turkish version: https://www.londradepo.com/blog/turkiyeden-ingiltereye-ihracat-rehberi
+Summary: How to import goods into the UK: GB EORI, commodity codes, the UK Global Tariff, customs declarations, duty and import VAT, rules of origin and warehousing.
 Short answer: To import goods into Great Britain, the importer needs a GB EORI number, the correct commodity code for each product, a customs declaration lodged through HMRC's Customs Declaration Service, and payment or accounting of any customs duty and import VAT. Overseas businesses usually work with a freight forwarder or customs agent and a UK warehouse that receives the cleared goods.
 Q: Do I need an EORI number to import into the UK?
 A: Yes. The importer needs an EORI number starting with GB to import goods into Great Britain.
@@ -735,10 +755,10 @@ A: A customs agent or freight forwarder usually lodges it. Arca Trade Group, whi
 Q: Can LondraDepo handle the whole import?
 A: Yes. Arca Trade Group, which operates LondraDepo, can arrange freight and lodge the UK customs declaration, and LondraDepo unloads, stores and fulfils the goods in Essex. You can also use your own forwarder.
 
-## How to Choose a UK 3PL Warehouse: 12 Questions to Ask
+## How to Choose a UK 3PL: 12 Questions to Ask
 URL: https://www.londradepo.com/en/blog/how-to-choose-a-uk-3pl
 Turkish version: https://www.londradepo.com/blog/ingiltere-3pl-nasil-secilir
-Summary: A practical checklist for choosing a UK 3PL warehouse: location, pricing structure, stock visibility, channels, returns, minimums, contracts, insurance, customs support and references.
+Summary: Choosing a UK 3PL warehouse? 12 questions on location, pricing, stock visibility, channels, returns, minimums, contracts, insurance and customs support.
 Short answer: To choose a UK 3PL (third-party logistics) warehouse, compare providers on twelve points: where the warehouse is, how each cost line is priced, how you see your stock, which sales channels they fulfil, how returns work, whether there are minimums, the contract and notice terms, insurance, customs and freight support, communication, references and whether you can visit.
 Q: What is a 3PL warehouse?
 A: A 3PL (third-party logistics) warehouse stores your stock and handles goods-in, order picking, packing, delivery and returns for you, so you do not need your own warehouse or staff.
@@ -754,7 +774,7 @@ A: Check the contract length, the notice period and how stock is released if you
 ## UK Import Costs: Duty, VAT and Logistics
 URL: https://www.londradepo.com/en/blog/uk-import-costs
 Turkish version: https://www.londradepo.com/blog/ingiltere-ithalat-maliyetleri
-Summary: What it costs to import into the UK: freight, customs clearance, duty by commodity code, 20% import VAT, haulage, unloading, storage and fulfilment, with a worked example.
+Summary: What it costs to import into the UK: freight, customs clearance, duty by commodity code, 20% import VAT, haulage, unloading and storage, with an example.
 Short answer: The cost of importing goods into the UK has two parts. Government charges are customs duty, set by the commodity code and origin of each product, and import VAT, usually 20% of the value of the goods including duty and transport to the UK. Logistics costs are freight, customs clearance, port-to-warehouse haulage, unloading, storage and order fulfilment. VAT-registered importers can often use postponed VAT accounting, so import VAT does not have to be paid in cash at the border.
 Q: What rate of import VAT applies in the UK?
 A: Import VAT is usually charged at the standard rate of 20% on the value of the goods including duty and transport costs to the UK. Some goods have a 5% or 0% rate.
@@ -850,7 +870,7 @@ A: No. Under the ICC's Incoterms 2020, FOB, FAS, CFR and CIF are for sea and inl
 ## UK Warehouse & Fulfilment Case Studies
 URL: https://www.londradepo.com/en/case-studies
 Turkish version: https://www.londradepo.com/case-studies
-Summary: Live UK warehousing, fulfilment and distribution operations run from our Essex warehouse: food, B2B packaging, automotive, fashion, bulky goods and electronics, from one trial pallet to monthly containers.
+Summary: Live UK warehousing, fulfilment and distribution operations from our Essex warehouse: food, packaging, automotive, fashion, bulky goods and electronics.
 Short answer: These are live operations run from LondraDepo's warehouse in Rayleigh, Essex, for brands selling in the UK. Each case shows the starting point, how storage, fulfilment and distribution were set up and what changed, from a food producer that started with a single trial pallet and now ships six 40ft high-cube containers a month, to a fashion brand that moved UK orders from the Netherlands to Essex.
 Q: Can I start with a small volume?
 A: Yes. There is no fixed minimum. The tortilla producer in these case studies entered the UK with a single trial pallet and now ships six 40ft high-cube containers a month.
@@ -866,7 +886,7 @@ A: Share your product, expected volumes and sales channels using the quote form.
 ## Cruyff UK Fashion Fulfilment Case Study
 URL: https://www.londradepo.com/en/case-studies/cruyff-uk-fulfilment
 Turkish version: https://www.londradepo.com/case-studies/cruyff-uk-fulfillment
-Summary: How the Cruyff fashion brand moved UK online orders from the Netherlands to a UK warehouse in Essex: repackaging, hang-tag updates, ecommerce fulfilment and next-day or 2-day UK delivery.
+Summary: How the Cruyff fashion brand moved UK online orders from the Netherlands to our Essex warehouse: repackaging, hang-tags, fulfilment and fast UK delivery.
 Short answer: Cruyff, the fashion brand carrying Johan Cruyff's legacy, moved its UK online sales from shipping out of the Netherlands to fulfilment from LondraDepo's Essex warehouse. Storage, repackaging, stock management and ecommerce fulfilment are now run from one UK site, with next-day and 2-day delivery options and delivery times shortened by around 80% after the move.
 Q: What is UK fashion fulfilment?
 A: UK fashion fulfilment is storing fashion products in a UK warehouse, repackaging and labelling them, and preparing online orders for delivery to customers.
@@ -891,10 +911,10 @@ A: Yes. Bulky products such as pizza boxes and packaging materials are stored by
 Q: How did the pizza box operation change?
 A: The manufacturer moved from separate shipments for every order to palletised UK stock in Essex, with scheduled deliveries to restaurants, which gives customers consistent and predictable supply.
 
-## Tortilla Brand UK Warehouse & Distribution Case Study
+## Tortilla UK Warehousing & Distribution Case Study
 URL: https://www.londradepo.com/en/case-studies/tortilla-uk-distribution
 Turkish version: https://www.londradepo.com/case-studies/tortilla-uk-distribution
-Summary: How an Ankara-based tortilla and flatbread producer entered the UK with a single pallet and grew to six 40ft high-cube containers a month with UK warehousing, labelling guidance and distribution.
+Summary: How a Turkish tortilla producer entered the UK with one pallet and grew to six 40ft containers a month with UK warehousing and distribution.
 Short answer: An Ankara-based producer of tortillas, lavash and flatbread entered the UK market with a single trial pallet. With LondraDepo's support on commodity codes, UK labelling, warehousing, fulfilment and distribution, the operation has grown to six 40ft high-cube (40HC) containers a month. The producer wanted a low-risk test, so the plan started with one pallet. Several operational needs came up along the way:
 Q: Can a food brand start a UK operation with a small volume?
 A: Yes. This producer started with a single pallet and grew to container-based volumes as demand increased.
@@ -908,7 +928,7 @@ A: The Ankara-based producer entered the UK with a single trial pallet. With com
 ## OEM Auto Parts UK Warehouse Case Study
 URL: https://www.londradepo.com/en/case-studies/uk-auto-parts-warehouse
 Turkish version: https://www.londradepo.com/case-studies/uk-auto-parts-warehouse
-Summary: How a manufacturer of OEM and aftermarket parts for luxury cars set up UK stock, photo-documented damage checks, protective packing and next-day delivery to UK dealers and workshops.
+Summary: How an OEM and aftermarket car parts maker set up UK stock, photo-documented damage checks, protective packing and next-day delivery to dealers and workshops.
 Short answer: A manufacturer of OEM and aftermarket parts for luxury vehicles was shipping every UK order from Turkey. By holding stock in our Essex warehouse, with photo-documented damage checks at goods-in and dispatch, it now supplies UK dealers, workshops and online customers with next-day or 2-day delivery.
 Q: Can you store bulky auto parts such as bumpers and panels?
 A: Yes. We store automotive parts of all sizes, including front and rear bumpers and door panels, using pallet and shelving systems.
@@ -933,10 +953,10 @@ A: Yes. From our Essex warehouse we deliver to every region of the UK through co
 Q: Which channels does the treadmill operation serve?
 A: The walking treadmill operation serves online sales and retail distribution across the UK from the same Essex stock, including bulk deliveries to discount stores and retail chains.
 
-## Car Seat Cover & Faux Leather UK Warehousing Case Study
+## Car Seat Covers: UK Warehousing Case Study
 URL: https://www.londradepo.com/en/case-studies/car-seat-cover-uk-warehousing
 Turkish version: https://www.londradepo.com/case-studies/arac-koltuk-kaplama-ingiltere-depo
-Summary: How an automotive upholstery manufacturer stores faux leather rolls and seat covers in the UK, fulfils eBay and Amazon orders the same day and supplies UK workshops and dealers.
+Summary: How an automotive upholstery maker stores faux leather and seat covers in the UK, ships eBay and Amazon orders the same day and supplies UK workshops.
 Short answer: A manufacturer of car seat covers and faux leather could not keep up with UK workshop and dealer demand while shipping everything from Turkey. Its stock now sits in our Essex warehouse, sorted by material type; online orders from eBay, Amazon and its own website, plus B2B dealer orders, are processed the same day and shipped across the UK.
 Q: Can you store rolls and large-format materials?
 A: Yes. Faux leather rolls and large panels are stacked properly on pallets to minimise the risk of damage.
@@ -1010,7 +1030,7 @@ Short answer: These terms set out the general conditions for the warehousing, fu
 ## Request a UK Warehousing & Fulfilment Quote
 URL: https://www.londradepo.com/en/request-a-quote
 Turkish version: https://www.londradepo.com/teklif-al
-Summary: Request a quote for UK warehousing, pallet storage, container unloading, fulfilment, Amazon prep or distribution from our Essex warehouse. Pallet storage from £3.50 + VAT per week.
+Summary: Request a quote for UK warehousing, pallet storage, container unloading, fulfilment, Amazon prep or distribution from Essex. Pallets from £3.50 + VAT a week.
 Short answer: Tell us what you need to store, fulfil or distribute in the UK. LondraDepo runs a warehouse at Unit 19 Arterial Park, Rayleigh, Essex, about 40 minutes from east London. Standard pallet storage starts from £3.50 + VAT per pallet per week; goods-in, handling, fulfilment and delivery are quoted for your operation.
 Q: Is the quote free?
 A: Yes. A LondraDepo quote is free and does not commit you to anything. Fill in the form with your product, volumes and services and the team replies by email with a tailored proposal.
@@ -1094,6 +1114,24 @@ Q: İngiltere depo seçerken nelere dikkat etmeliyim?
 A: Limanlara ve Londra'ya mesafe, yazılı fiyat kalemleri, minimum hacim şartı, gerçek zamanlı stok görünürlüğü, gümrükleme desteği ve operasyon örnekleri en önemli ölçütlerdir. LondraDepo'nun Rayleigh, Essex deposu London Gateway'e 13 mil uzaklıktadır ve stok Mintsoft WMS'te izlenir.
 Q: Palet ve koli depolama kabul ediyor musunuz?
 A: Evet. Hem paletli hem de kolili ürünler için depolama hizmeti sunuyoruz. Kısa ve uzun dönemli depolama seçenekleri mevcuttur.
+
+## İngiltere 3PL Depo: Essex'te 3PL Hizmeti
+URL: https://www.londradepo.com/ingiltere-3pl
+English version: https://www.londradepo.com/en/3pl-uk
+Summary: İngiltere'de 3PL depo: Essex'te mal kabul, haftalık £3,50 + KDV'den palet depolama, pick & pack, e-ticaret ve B2B fulfillment, Amazon prep ve UK teslimat.
+Short answer: İngiltere'de bir 3PL (üçüncü taraf lojistik firması) stoğunuzu kendi deposuna kabul eder, depolar, e-ticaret ve B2B siparişlerinizi hazırlar ve İngiltere geneline teslim eder; siz depo işletmeden İngiltere'de satarsınız. LondraDepo, Rayleigh, Essex'te, London Gateway'e 13, Tilbury'ye 16 mil uzaklıkta bir 3PL'dir ve uluslararası nakliye ile İngiltere gümrüklemesini de yapan BIFA üyesi Arca Trade Group tarafından işletilir. Palet depolama haftalık £3,50 + KDV'den başlar; asgari hacim yoktur.
+Q: İngiltere'de 3PL nedir?
+A: İngiltere'de 3PL (üçüncü taraf lojistik firması), stoğunuzu kendi İngiltere deposunda tutan ve mal kabul, sipariş karşılama ve teslimatı sizin adınıza yapan şirkettir. Stoğun sahibi siz kalırsınız; kullandığınız alan ve hizmet kadar ödersiniz.
+Q: İngiltere'de 3PL ne kadar tutar?
+A: Maliyet depolama, mal kabul, pick & pack, ambalaj ve taşımadan oluşur. LondraDepo'da palet depolama haftalık £3,50 + KDV'den başlar; diğer kalemler ürününüze ve hacminize göre fiyatlanır.
+Q: İngiltere 3PL hizmetinizde asgari hacim var mı?
+A: Sabit bir asgari hacim yok. Birçok müşterimiz İngiltere pazarını test etmek için tek deneme paletiyle başlıyor, satışlar oturdukça düzenli palet ve konteyner sevkiyatlarına geçiyor; depolama yalnızca kullanılan palet kadar faturalanır.
+Q: Hem e-ticaret hem B2B siparişleri karşılıyor musunuz?
+A: Evet. Shopify ve Amazon FBM siparişlerini koli olarak gönderiyor, perakendeci, toptancı ve servisler için palet ve koli siparişlerini aynı stoktan hazırlıyoruz.
+Q: 3PL deponuz nerede?
+A: Unit 19 Arterial Park, Rayleigh, Essex SS6 7FY: London Gateway'e 13 mil, Tilbury'ye 16 mil ve Felixstowe'a yaklaşık 62 mil.
+Q: Nakliye ve gümrüğü de ayarlayabiliyor musunuz?
+A: Evet. LondraDepo'yu işleten Arca Trade Group deniz, hava, kara ve demiryolu nakliyesi ile İngiltere gümrük beyannamesini yapar. Kendi nakliyecinizle çalışıp yalnızca depomuzu da kullanabilirsiniz.
 
 ## Londra Depo: Doğu Londra'ya 40 Dakika, Essex
 URL: https://www.londradepo.com/londra-depo
@@ -1194,7 +1232,7 @@ A: Aynı stok Londra ve Güneydoğu müşterilerine, e-ticaret, Amazon veya topt
 ## İngiltere Konteyner Boşaltma (FCL & LCL), Essex
 URL: https://www.londradepo.com/konteyner-bosaltma
 English version: https://www.londradepo.com/en/container-unloading
-Summary: Rayleigh, Essex depomuzda konteyner boşaltma: 20ft, 40ft ve 40ft high-cube FCL ile LCL; sayım, hasar fotoğrafı, yeniden paletleme, Mintsoft WMS kaydı, depolama veya UK içi sevk.
+Summary: Essex depomuzda 20ft, 40ft ve 40HC FCL ile LCL konteyner boşaltma: sayım, hasar fotoğrafı, yeniden paletleme, WMS kaydı, depolama veya UK içi sevk.
 Short answer: LondraDepo, Unit 19 Arterial Park, Rayleigh, Essex'te 20ft, 40ft ve 40ft high-cube konteynerler dahil FCL ve LCL teslimatları boşaltır. Her teslimat sayılır, görünür hasar için kontrol edilir, gerekirse yeniden paletlenir veya etiketlenir ve Mintsoft WMS'e kaydedilir; ardından depolanır veya UK içinde sevke hazırlanır.
 Q: Hangi konteyner tiplerini boşaltıyorsunuz?
 A: 20ft, 40ft ve 40ft high-cube FCL konteynerler ile LCL ve paletli parsiyel yükleri kabul ediyoruz. Teklif isterken konteyner tipini ve ürünlerin paletli mi dökme mi olduğunu belirtin.
@@ -1226,7 +1264,7 @@ A: Evet. Parçalar palet ve raflarda SKU bazında depolanır, OEM ve yan sanayi 
 ## Sektörlere Göre İngiltere Depo ve Fulfillment
 URL: https://www.londradepo.com/sektorler
 English version: https://www.londradepo.com/en/industries
-Summary: Sektörlere göre İngiltere depo ve fulfillment: gıda ve FMCG, ambalaj, otomotiv yedek parça, moda ve e-ticaret, büyük hacimli ürünler ve elektronik; Essex depomuzdan gerçek operasyon örnekleriyle.
+Summary: Sektörlere göre İngiltere depo ve fulfillment: gıda, ambalaj, otomotiv yedek parça, moda, hacimli ürünler ve elektronik; gerçek operasyon örnekleriyle.
 Short answer: LondraDepo gıda ve FMCG, ambalaj, otomotiv yedek parça, moda ve e-ticaret, büyük hacimli ürünler ve tüketici elektroniği alanlarındaki üretici ve markalar için depolama, fulfillment ve dağıtım yapar. Aşağıdaki her sektör ilgili hizmet sayfasına ve Rayleigh, Essex'teki depomuzdan gerçek operasyon örneklerine bağlanır.
 Q: LondraDepo hangi sektörlerle çalışıyor?
 A: Gıda ve FMCG, ambalaj, otomotiv yedek parça ve döşeme malzemeleri, moda ve e-ticaret, walking treadmill gibi büyük hacimli ürünler ve taşınabilir şarj istasyonu gibi tüketici elektroniğinde canlı UK operasyonlarımız var.
@@ -1242,7 +1280,7 @@ A: Bu sayfadaki formu ürün tipiniz, ambalajınız, tahmini palet veya koli say
 ## İngiltere İthalat Lojistiği: Nakliyeden Depoya
 URL: https://www.londradepo.com/ingiltere-ithalat-lojistigi
 English version: https://www.londradepo.com/en/uk-import-logistics
-Summary: İngiltere'ye tek grupla ithalat: Arca Trade Group üzerinden deniz, hava, kara ve demiryolu nakliyesi ile gümrükleme; ardından Essex depomuzda boşaltma, depolama, fulfillment ve UK dağıtım.
+Summary: İngiltere'ye tek grupla ithalat: deniz, hava, kara ve demiryolu nakliyesi, gümrükleme, ardından Essex'te boşaltma, depolama, fulfillment ve dağıtım.
 Short answer: Yurt dışındaki işletmeler İngiltere'ye tek bir grup üzerinden ithalat yapabilir. Arca Trade Group deniz, hava, kara veya demiryolu nakliyesini ayarlar ve UK gümrük beyannamesini verir; depolama markası LondraDepo ürünleri Rayleigh, Essex'te boşaltır, depolar, siparişleri karşılar ve İngiltere geneline dağıtır. Dilerseniz kendi nakliyecinizle de çalışıp sadece depoyu kullanabilirsiniz.
 Q: Yurt dışındaki bir firma UK ofisi olmadan İngiltere'ye ithalat yapabilir mi?
 A: Evet. Birçok yurt dışı firma GB EORI numarası ve bir UK depo partneriyle ithalat yapar. Doğru ithalatçı yapısı satış modelinize bağlıdır; ilk sevkiyattan önce vergi danışmanlığı alın.
@@ -1258,7 +1296,7 @@ A: Hayır. LondraDepo HMRC onaylı bir gümrük antreposu değildir. Ürünler �
 ## Limandan Depoya Lojistik: Felixstowe, Tilbury
 URL: https://www.londradepo.com/limandan-depoya-lojistik
 English version: https://www.londradepo.com/en/locations/port-to-warehouse-logistics
-Summary: Felixstowe, London Gateway ve Tilbury'ye gelen konteynerler için limandan depoya lojistik: doğrulanmış karayolu mesafeleri, gümrükleme, taşıma, boşaltma ve UK içi dağıtım.
+Summary: Felixstowe, London Gateway ve Tilbury'ye gelen konteynerler için limandan Essex depoya lojistik: mesafeler, gümrük, taşıma, boşaltma ve UK dağıtımı.
 Short answer: Unit 19 Arterial Park, Rayleigh (SS6 7FY) adresindeki depomuz limanda değildir ama üç büyük limana yakındır: London Gateway karayoluyla yaklaşık 13 mil, Tilbury Limanı 16 mil, Felixstowe Limanı 62 mil uzaklıktadır. Bu limanlardan herhangi birine gelen konteynerler gümrükten çekilip Rayleigh'e taşınabilir, boşaltılıp depolanabilir veya doğrudan UK müşterilerine gönderilebilir.
 Q: Depo üç konteyner limanına ne kadar uzak?
 A: Rayleigh, Essex'ten karayoluyla DP World London Gateway yaklaşık 13 mil, Tilbury Limanı 16 mil ve Felixstowe Limanı 62 mil uzaklıktadır. London Gateway ve Tilbury araçla yaklaşık 20 dakika, Felixstowe yaklaşık 1 saat 15 dakika sürer.
@@ -1274,7 +1312,7 @@ A: Taşıyıcı veya nakliye firması, ön bildirimden sonra depomuzla teslim sa
 ## Ambalaj ve Catering Depolama İngiltere
 URL: https://www.londradepo.com/ambalaj-catering-depolama
 English version: https://www.londradepo.com/en/industries/food-packaging
-Summary: Pizza kutusu, paket servis ambalajı ve catering sarf malzemeleri için İngiltere'de paletli depolama ve programlı B2B teslimat: lot takibi, düşük stok uyarısı, restoran ve toptancılara dağıtım.
+Summary: Pizza kutusu, paket servis ambalajı ve catering sarf malzemeleri için İngiltere'de paletli depolama, lot takibi ve restoranlara programlı B2B teslimat.
 Short answer: Pizza kutuları, paket servis kapları ve catering sarf malzemeleri hacimlidir, palet başına değeri düşüktür ve düzenli bir programla ihtiyaç duyulur. LondraDepo bunları Essex'te paletli depolar ve İngiltere genelindeki restoran, zincir ve toptancılara sabit haftalık veya aylık teslimatlar yapar; operasyon örneklerimizdeki pizza kutusu üreticisi için yaptığımız gibi.
 Q: Restoranlara sabit programla teslimat yapabilir misiniz?
 A: Evet. Müşteri listenize ve sipariş sıklığınıza göre haftalık veya aylık teslimat programları kuruyoruz; ambalajlar Essex'te paletli tutulur ve her restoran ya da toptancıya belirlenen günlerde gönderilir.
@@ -1290,7 +1328,7 @@ A: Evet. LondraDepo'yu işleten Arca Trade Group yurt dışında üretilen ambal
 ## Türk Şirketleri İçin İngiltere Depo ve Fulfillment
 URL: https://www.londradepo.com/turk-sirketleri-icin-ingiltere-depo
 English version: https://www.londradepo.com/en/uk-warehousing-for-turkish-exporters
-Summary: UK'de şirket veya depo kurmadan İngiltere'de satış: Türkiye–İngiltere nakliye ve gümrükleme, Essex'te depolama ve fulfillment, Türkçe ekip. 1 deneme paletiyle başlayın; palet £3,50 + KDV/hafta.
+Summary: İngiltere'de şirket veya depo kurmadan satış: Türkiye–İngiltere nakliye ve gümrük, Essex'te depolama ve fulfillment, Türkçe ekip. Palet £3,50 + KDV/hafta.
 Short answer: Türk üreticiler ve markalar İngiltere'de şirket kurmadan, depo kiralamadan ve personel almadan UK'de satış yapabilir. LondraDepo'yu işleten Arca Trade Group Türkiye–İngiltere hattında nakliye ve gümrüklemeyi yapar; LondraDepo ürünlerinizi Essex'te depolar, siparişlerinizi hazırlar ve İngiltere geneline gönderir. Ekibimiz Türkçe çalışır, 1 deneme paletiyle başlayabilirsiniz.
 Q: İngiltere'de şirket kurmadan satış yapabilir miyim?
 A: Evet, mümkündür. LondraDepo üzerinden ürünlerinizi UK depomuzda saklayabilir, Shopify veya Amazon gibi platformlar üzerinden İngiltere'ye satış yapabilirsiniz. Vergi ve ticaret hukuku konularında bağımsız danışmanlık almanızı öneririz.
@@ -1307,7 +1345,7 @@ A: Evet. Türkiye–UK Serbest Ticaret Anlaşması birçok ürün grubunda gümr
 Q: Amazon FBA mı yoksa FBM mi kullanmalıyım?
 A: LondraDepo, Amazon FBM (Fulfilled by Merchant) modelini destekler: ürünleri bizim depomuzda saklayıp Amazon siparişlerini Essex'ten karşılarsınız. FBA hazırlığı için /amazon-prep-uk sayfamıza bakabilirsiniz.
 
-## Türkiye'den İngiltere'ye Lojistik | UK Ürün Gönderimi
+## Türkiye'den İngiltere'ye Lojistik ve Ürün Gönderimi
 URL: https://www.londradepo.com/turkiye-ingiltere-lojistik
 Summary: Türkiye'den İngiltere'ye lojistik ve ürün gönderimi: UK gümrük desteği, depolama ve sipariş karşılama. İhracat yapan işletmeler için rehber.
 Short answer: Türkiye'den UK'e ürün sevkiyatı, gümrükleme ve depolama sürecini anlayın. Nakliye ve gümrükleme Arca Trade Group, depolama ve sipariş karşılama LondraDepo tarafından tek grup içinde yönetilir.
@@ -1324,6 +1362,7 @@ A: Taşıma şekli hacminize, süre ihtiyacınıza ve bütçenize göre seçilir
 
 ## İngiltere'de Nasıl Satış Yapılır? 2026 Rehberi
 URL: https://www.londradepo.com/turkiyeden-ingiltereye-satis
+English version: https://www.londradepo.com/en/uk-market-entry
 Summary: Türkiye'den İngiltere'ye satış rehberi 2026: ürün gönderimi, gümrük, depolama, Amazon ve Shopify satışı, pick & pack ve UK lojistik. Adım adım.
 Short answer: Satış modeli seçiminden gümrüğe, depolamadan sipariş karşılamaya — Türkiye'den UK pazarına girmenin tüm adımlarını bu rehberde bulabilirsiniz.
 Q: Türkiye'den İngiltere'de satış yapmak için UK şirketi gerekir mi?
@@ -1444,7 +1483,7 @@ A: Standart palet depolama haftalık palet başına £3,50 + KDV'den başlar. Ko
 ## İngiltere Gümrükleme Hizmeti | UK İthalat Gümrüğü
 URL: https://www.londradepo.com/gumrukleme
 English version: https://www.londradepo.com/en/uk-customs-clearance
-Summary: İngiltere ithalatı için gümrükleme: Arca Trade Group gümrük ekibiyle beyanname, GTİP danışmanlığı ve gümrükten Essex depoya doğrudan teslim. Türkiye'den ihracat yapan işletmeler için.
+Summary: İngiltere ithalatı için gümrükleme: Arca Trade Group ekibiyle beyanname, GTİP danışmanlığı ve gümrükten Essex depomuza doğrudan teslim.
 Short answer: İngiltere'ye yapılan ithalatlarda gümrükleme, LondraDepo'yu işleten Arca Trade Group'un gümrükleme ekibi tarafından yapılır: beyanname müşteri adına verilir, GTİP ve gümrük prosedürleri konusunda danışmanlık sağlanır, gümrükten çekilen ürünler doğrudan Essex depomuza alınır. Arca Trade Group gümrük ekibi, ithalat beyannamenizi sizin adınıza verir.
 Q: UK gümrükleme sürecinde nasıl destek sağlıyorsunuz?
 A: Gümrük beyannameleri, LondraDepo'yu işleten Arca Trade Group'un gümrükleme ekibi tarafından müşteri adına verilir; gümrük prosedürleri, GTİP ve tercihli menşe konularında danışmanlık sağlanır. Dilerseniz kendi gümrük müşavirinizle de çalışabilirsiniz.
@@ -1473,7 +1512,7 @@ A: Fiyatlandırma işlem türüne, ürün hacmine ve hizmet kapsamına göre bel
 Q: Ürünler müşteriye veya Amazon'a gitmeden yeniden etiketlenebilir mi?
 A: Evet. Yeniden etiketleme, yeniden paketleme ve SKU'ya göre ayırma Essex deposundaki elleçleme hizmetinin parçasıdır; UK müşterilerine veya Amazon FBA'ya gönderilmeden önce etiketli stok hazırlanır.
 
-## İngiltere Nakliye ve Dağıtım Hizmeti | UK Distribution
+## İngiltere Nakliye ve Dağıtım Hizmeti
 URL: https://www.londradepo.com/nakliye-dagitim
 English version: https://www.londradepo.com/en/uk-distribution
 Summary: İngiltere içi nakliye ve dağıtım hizmetleri. Ürün toplama, depo transferleri, yerel dağıtım ve UK geneli teslimat koordinasyonu. Essex merkezli operasyon.
@@ -1577,7 +1616,7 @@ A: Evet. Hesaplayıcı depolama maliyetini KDV hariç gösterir ve İngiltere st
 ## Konteyner Varış Planlayıcı: Limandan Depoya
 URL: https://www.londradepo.com/konteyner-varis-planlayici
 English version: https://www.londradepo.com/en/container-arrival-planner
-Summary: Konteynerinizin İngiltere'ye varışını planlayın: limanı, konteyner tipini, ETA'yı ve gümrükleme şeklini seçin; EORI'den ön bildirime, boşaltmadan stok kaydına tarihli kontrol listesi alın.
+Summary: Konteynerinizin İngiltere'ye varışını planlayın: liman, konteyner tipi, ETA ve gümrük şeklini seçin; EORI'den stok kaydına tarihli kontrol listesi alın.
 Short answer: Varış limanını, konteyner tipini, yükleme şeklini ve ETA'yı seçin; planlayıcı konteynerinizin İngiltere limanından Rayleigh, Essex'teki depomuza ulaşması için tarihli bir kontrol listesi hazırlar. GB EORI ve gümrük tarife kodları, gümrük beyannamesi, depoya ön bildirim, taşıma, boşaltma, sayım ve stokların Mintsoft WMS'e kaydı dahildir.
 Q: Konteyner gelmeden önce depo hangi bilgilere ihtiyaç duyar?
 A: Konteyner numarası, ETA, ambalaj listesi, SKU başına koli sayısı ve ürünlerin paletli mi dökme mi yüklendiği. Bu bilgilerle boşaltma planlanır, gerekiyorsa paletleme ve etiketleme varıştan önce fiyatlandırılır.
@@ -1774,6 +1813,7 @@ A: Kendi ürünleriniz ve hacminiz için toplam maliyeti karşılaştırın: dep
 
 ## Türkiye'den İngiltere'ye İhracat Nasıl Yapılır? 2026
 URL: https://www.londradepo.com/blog/turkiyeden-ingiltereye-ihracat-rehberi
+English version: https://www.londradepo.com/en/blog/uk-importing-guide
 Summary: Türkiye'den İngiltere'ye ihracat 2026: GB EORI, GTİP, gümrük beyannamesi, menşe ispatı ve %20 ithalat KDV'si adım adım. Ücretsiz PDF kontrol listesini indirin.
 Short answer: Türkiye'den İngiltere'ye ihracatta UK'deki ithalatçının GB EORI numarası olmalı, her ürün için doğru gümrük tarife kodu (GTİP / commodity code) belirlenmeli ve ithalat beyannamesi HMRC'nin CDS sisteminde verilmelidir. Türkiye-UK Serbest Ticaret Anlaşması'ndan yararlanmak için menşe beyanı gerekir. Gümrük vergisi ve ithalat KDV'si (genellikle %20) ayrıca ödenir veya beyan edilir. Türkiye'den İngiltere'ye ihracat yapmak hem fırsatlarla hem bürokratik detaylarla dolu bir süreçtir. Bu rehberde gümrük, GTIP, nakliye, UK'da operasyon kurma ve depolama süreçlerini adım adım ele alıyoruz. Hedef: ürünleriniz Türkiye'den çıkıp İngiltere'deki müşteriye en verimli şekilde ulaşsın.
 Q: Türkiye'den İngiltere'ye ihracat nasıl yapılır?
@@ -1790,7 +1830,7 @@ A: Evet. LondraDepo'yu işleten Arca Trade Group Türkiye–İngiltere hattında
 ## İngiltere'de 3PL Depo Seçimi: 12 Soru
 URL: https://www.londradepo.com/blog/ingiltere-3pl-nasil-secilir
 English version: https://www.londradepo.com/en/blog/how-to-choose-a-uk-3pl
-Summary: İngiltere'de 3PL depo seçerken sorulacak 12 soru: konum, fiyat yapısı, stok görünürlüğü, satış kanalları, iade, minimum hacim, sözleşme, sigorta, gümrük desteği ve referanslar.
+Summary: İngiltere'de 3PL depo seçerken sorulacak 12 soru: konum, fiyat yapısı, stok görünürlüğü, iade, minimum hacim, sözleşme, sigorta ve gümrük desteği.
 Short answer: 3PL depo seçerken firmaları aynı 12 soruyla karşılaştırın: konum, her maliyet kaleminin fiyatı, stok görünürlüğü, satış kanalları, iade, minimum hacim, sözleşme, sigorta, gümrük desteği, iletişim dili, referanslar ve depo ziyareti. Teklifleri tek tek fiyatlara değil, kendi hacminiz için aylık toplama göre karşılaştırın. Sorulacak 12 soru Soru Neden önemli 1. Depo nerede; varış limanınıza ve müşterilerinize ne kadar uzak? Mesafe, özellikle konteyner ithalatında taşıma maliyetini ve teslimat süresini belirler. 2. Her maliyet kalemi nasıl fiyatlanıyor? Depolama, mal kabul, pick & pack, ambalaj, teslimat ve iade genellikle ayrı fiyatlanır; kendi hacminiz için toplamı karşılaştırın. 3. Stoğunuzu nasıl göreceksiniz? Hangi depo yönetim sistemini (WMS) kullandıklarını ve size hangi raporları verdiklerini sorun. 4. Hangi kanalları karşılayabiliyorlar? Shopify, Amazon FBA hazırlık veya FBM, pazaryerleri ve toptan palet siparişlerini, mümkünse aynı stoktan. 5. İadeler nasıl işleniyor? İade ürünlerin nasıl kontrol edildiğini, stoğa alındığını veya ayrıldığını ve size nasıl bildirildiğini sorun. 6. Minimum hacim veya ücret var mı? Aylık minimum ücretler küçük bir başlangıcı pahalı hale getirebilir. 7. Sözleşme ve fesih şartları neler? Sözleşme süresini, fesih bildirim süresini ve ayrılırken stoğun nasıl teslim edileceğini kontrol edin. 8. Ürünleriniz için hangi sigorta geçerli? Deponun neyi sigortaladığını, sizin neyi sigortalamanız gerektiğini sorun. 9. Nakliye ve gümrükte yardımcı olabiliyorlar mı? Nakliye, UK gümrüğü ve depoyu tek grubun yürütmesi el değiştirmeleri azaltır; beyannameyi kimin verdiğini netleştirin. 10. Kiminle, hangi dilde konuşacaksınız? Belirli bir muhatap ve ortak dil günlük operasyonu hızlandırır. 11. Benzer müşterilerini gösterebiliyorlar mı? Sektörünüzdeki vaka çalışmaları ürün tipinizi ve sipariş yapınızı yönetebildiklerini gösterir. 12. Depoyu ziyaret edebilir misiniz? Ziyaret veya görüntülü tur; raf düzenini, temizliği ve güvenliği gösterir. Teklifler nasıl adil karşılaştırılır? Her firmaya aynı bilgileri gönderin: ürün tipi ve ölçüleri, SKU sayısı, stoktaki palet veya koli, aylık sipariş ve sipariş başına ortalama ürün, satış kanalları, iade oranı ve teslimat bölgeleri. Ardından bu senaryo için aylık toplamı karşılaştırın; düşük depolama fiyatı, yüksek elleçleme veya teslimat ücretiyle dengelenebilir.
 Q: 3PL depo nedir?
 A: 3PL (üçüncü taraf lojistik) deposu stoğunuzu tutar; mal kabul, sipariş toplama, paketleme, teslimat ve iadeleri sizin yerinize yapar. Böylece kendi deponuza ve personelinize ihtiyaç kalmaz.
@@ -1983,7 +2023,7 @@ A: Evet. Boyalı ve hassas yüzeyli parçalar korumalı raf ve depolama alanınd
 Q: Stok seviyeleri düzenli olarak raporlanıyor mu?
 A: Evet. Mutabakat sağlanan periyotlarda stok raporu, hareket özeti ve düşük stok uyarıları Türkçe olarak iletilmektedir.
 
-## Walking Treadmill İngiltere Depo & Dağıtım Operasyonu
+## Walking Treadmill: İngiltere Depo ve Dağıtım
 URL: https://www.londradepo.com/case-studies/uk-walking-treadmill-distribution
 English version: https://www.londradepo.com/en/case-studies/uk-walking-treadmill-distribution
 Summary: Yaşlı ve rehabilitasyon kullanıcılarına yönelik walking treadmill ürünlerinin İngiltere depo, fulfillment ve online satış operasyonu.
@@ -2064,7 +2104,7 @@ A: Unit 19 Arterial Park, Rayleigh, Essex SS6 7FY adresindeki depomuzu ziyaret v
 ## İngiltere Depo ve Fulfillment Teklifi Al
 URL: https://www.londradepo.com/teklif-al
 English version: https://www.londradepo.com/en/request-a-quote
-Summary: İngiltere depolama, fulfillment, konteyner boşaltma, gümrükleme ve dağıtım için teklif isteyin: kısa formu doldurun, ekibimiz e-postayla size özel teklif hazırlasın. Türkçe destek.
+Summary: İngiltere depolama, fulfillment, konteyner boşaltma, gümrükleme ve dağıtım için teklif isteyin: kısa formu doldurun, size özel teklif hazırlayalım.
 Short answer: Ürününüzü, tahmini palet veya koli sayınızı, aylık sipariş hacminizi ve ihtiyacınız olan hizmetleri yazın; ekibimiz depolama, mal kabul, fulfillment, gümrükleme ve teslimatı operasyonunuza göre fiyatlandırıp size e-postayla dönsün. Palet depolama haftalık palet başına £3,50 + KDV'den başlar. Önce konuşmak isterseniz WhatsApp'tan yazabilir veya +44 7554 195190'ı arayabilirsiniz.
 Q: Teklif ücretli mi?
 A: Hayır. LondraDepo teklifi ücretsizdir ve sizi bağlamaz. Formu ürününüz, hacminiz ve ihtiyacınız olan hizmetlerle doldurun; ekibimiz size özel teklifle e-postayla döner.
@@ -2094,3 +2134,982 @@ URL: https://www.londradepo.com/sozlesme-kosullari
 English version: https://www.londradepo.com/en/terms-and-conditions
 Summary: LondraDepo.com hizmet sözleşmesi koşulları. Hizmet kapsamı, ödeme koşulları, sorumluluk sınırlamaları ve uygulanacak hukuk hakkında bilgi.
 Short answer: Bu sözleşme koşulları, Arca Trade Group Ltd (İngiltere ve Galler'de kayıtlı, şirket no: 13247691, KDV: GB353315322; kayıtlı ofis: Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY, İngiltere) tarafından LondraDepo.com markası altında sunulan depolama, fulfillment, elleçleme, gümrükleme koordinasyonu ve dağıtım hizmetlerine ilişkin genel koşulları düzenler.
+
+# Polish pages (Strony po polsku)
+
+## Magazyn i fulfillment w Wielkiej Brytanii
+URL: https://www.londradepo.com/pl
+English version: https://www.londradepo.com/en
+Summary: Magazyn 3PL w Essex pod Londynem: składowanie palet od 3,50 £ + VAT tygodniowo, rozładunek kontenerów, fulfillment e-commerce, Amazon FBA prep i dystrybucja w UK.
+Short answer: LondraDepo to magazyn 3PL w Rayleigh w hrabstwie Essex, 13 mil od portu London Gateway i ok. 37 mil od centrum Londynu. Przyjmujemy Twój towar w Wielkiej Brytanii, składujemy go na paletach lub półkach, realizujemy zamówienia e-commerce i B2B oraz dostarczamy je w całym kraju. Dzięki temu sprzedajesz klientom w UK z lokalnego zapasu, bez zakładania własnego magazynu. Składowanie palet zaczyna się od 3,50 £ + VAT za paletę tygodniowo, bez stałego minimum.
+Q: Gdzie znajduje się magazyn LondraDepo?
+A: Magazyn znajduje się pod adresem Unit 19 Arterial Park, Rayleigh, Essex SS6 7FY: 13 mil od portu London Gateway, 16 mil od Tilbury i około 37 mil od centrum Londynu.
+Q: Ile kosztuje składowanie palety w Wielkiej Brytanii?
+A: Składowanie palety zaczyna się od 3,50 £ + VAT tygodniowo. Przyjęcie towaru, kompletacja, opakowania i dostawa są wyceniane osobno, w zależności od produktu i wolumenu.
+Q: Czy jest minimalny wolumen?
+A: Nie ma stałego minimum. Wielu klientów zaczyna od jednej palety testowej, aby sprawdzić rynek brytyjski, a potem przechodzi na regularne dostawy palet i kontenerów.
+Q: Czy pomagacie w imporcie z Polski do Wielkiej Brytanii?
+A: Tak. Arca Trade Group, operator LondraDepo, organizuje transport z UE oraz brytyjskie zgłoszenie celne. Możesz też korzystać z własnego przewoźnika i agencji celnej, a od nas tylko z magazynu.
+Q: W jakim języku prowadzona jest obsługa?
+A: Zespół w Wielkiej Brytanii pracuje w języku angielskim i tureckim. Zapytania można wysyłać przez formularz po polsku lub po angielsku, a ofertę przygotowujemy po angielsku.
+
+## Magazyn w Wielkiej Brytanii: Essex pod Londynem
+URL: https://www.londradepo.com/pl/magazyn-w-wielkiej-brytanii
+English version: https://www.londradepo.com/en/uk-warehousing
+Summary: Magazyn w Wielkiej Brytanii w Essex: przyjęcie towaru, składowanie palet i kartonów, WMS Mintsoft, realizacja zamówień i dostawy w UK. Palety od 3,50 £ + VAT.
+Short answer: Magazyn w Wielkiej Brytanii pozwala trzymać zapas blisko klientów w UK i dostarczać zamówienia w krajowych terminach, bez wysyłania każdej paczki z Polski. LondraDepo przyjmuje towar w Rayleigh w Essex, składuje go na paletach lub półkach, prowadzi stany w systemie Mintsoft WMS, realizuje zamówienia B2B i e-commerce oraz organizuje dostawy w całym kraju. Składowanie zaczyna się od 3,50 £ + VAT za paletę tygodniowo.
+Q: Ile kosztuje magazyn w Wielkiej Brytanii?
+A: Składowanie palety zaczyna się od 3,50 £ + VAT tygodniowo. Pozostałe pozycje, takie jak przyjęcie towaru, kompletacja i dostawa, wyceniamy według produktu i wolumenu.
+Q: Czy mogę zacząć od jednej palety?
+A: Tak. Nie ma stałego minimum, więc można zacząć od jednej palety testowej i zwiększać wolumen wraz ze sprzedażą w Wielkiej Brytanii.
+Q: Czy widzę stany magazynowe na bieżąco?
+A: Tak. Stany i zamówienia są prowadzone w systemie Mintsoft WMS, a regularne raporty pokazują, ile towaru jest w magazynie i co zostało wysłane.
+Q: Czy towar może przyjechać bez odprawy celnej?
+A: Nie. Nie jesteśmy składem celnym, więc towar przyjmujemy po brytyjskiej odprawie celnej. Odprawę może wykonać Arca Trade Group lub Twoja agencja celna.
+Q: Jak daleko jest magazyn od portów?
+A: Magazyn w Rayleigh jest 13 mil od London Gateway, 16 mil od Tilbury i około 62 mile od Felixstowe, co skraca transport kontenerów z portu.
+
+## Magazyn 3PL w Wielkiej Brytanii (Essex)
+URL: https://www.londradepo.com/pl/3pl-wielka-brytania
+English version: https://www.londradepo.com/en/3pl-uk
+Summary: Operator 3PL w Wielkiej Brytanii: przyjęcie towaru, składowanie palet od 3,50 £ + VAT, kompletacja zamówień, fulfillment e-commerce i B2B, Amazon FBA prep i dostawy w UK.
+Short answer: Operator 3PL (third-party logistics) przyjmuje Twój towar do swojego magazynu w Wielkiej Brytanii, składuje go, realizuje zamówienia e-commerce i B2B oraz dostarcza je w całym kraju. Ty sprzedajesz w UK, nie prowadząc własnego magazynu. LondraDepo jest operatorem 3PL w Rayleigh w Essex, 13 mil od London Gateway, prowadzonym przez Arca Trade Group, członka BIFA, który zapewnia też transport międzynarodowy i odprawę celną. Składowanie palet od 3,50 £ + VAT tygodniowo, bez stałego minimum.
+Q: Czym jest 3PL w Wielkiej Brytanii?
+A: Operator 3PL to firma, która przechowuje Twój towar w swoim magazynie w Wielkiej Brytanii i w Twoim imieniu przyjmuje dostawy, realizuje zamówienia i organizuje dostawy. Towar pozostaje Twoją własnością.
+Q: Ile kosztuje 3PL w UK?
+A: Koszt składa się ze składowania, przyjęcia towaru, kompletacji, opakowań i transportu. W LondraDepo składowanie palety zaczyna się od 3,50 £ + VAT tygodniowo, a resztę wyceniamy według produktu i wolumenu.
+Q: Czy obsługujecie jednocześnie e-commerce i B2B?
+A: Tak. Zamówienia z Shopify i Amazon FBM wysyłamy jako paczki, a zamówienia paletowe i kartonowe dla sklepów, hurtowni i warsztatów przygotowujemy z tego samego zapasu.
+Q: Czy usługa 3PL ma minimalny wolumen?
+A: Nie ma stałego minimum. Wielu klientów zaczyna od jednej palety testowej, a po ustabilizowaniu sprzedaży przechodzi na regularne dostawy palet i kontenerów.
+Q: Czy możecie zorganizować transport z Polski?
+A: Tak. Arca Trade Group, operator LondraDepo, organizuje transport drogowy, morski, lotniczy i kolejowy oraz brytyjskie zgłoszenie celne. Możesz też korzystać z własnego przewoźnika.
+
+## Składowanie palet w UK od 3,50 £ tygodniowo
+URL: https://www.londradepo.com/pl/skladowanie-palet
+English version: https://www.londradepo.com/en/pallet-storage
+Summary: Składowanie palet w Essex pod Londynem od 3,50 £ + VAT za paletę tygodniowo: przyjęcie kontenerów i dostaw, bezpieczne składowanie, raporty i wysyłki B2B.
+Short answer: Składowanie palet w Wielkiej Brytanii rozlicza się zwykle za paletę tygodniowo. W LondraDepo stawka za standardową paletę zaczyna się od 3,50 £ + VAT tygodniowo i obejmuje samo składowanie; przyjęcie towaru, obsługa i kompletacja są wyceniane osobno. Przyjmujemy kontenery i dostawy częściowe w Rayleigh w Essex, prowadzimy stany w WMS i przygotowujemy palety do wysyłki do klientów B2B w całym kraju.
+Q: Ile kosztuje składowanie palety w UK?
+A: W LondraDepo standardowa paleta kosztuje od 3,50 £ + VAT tygodniowo. Stawka obejmuje tylko składowanie; przyjęcie towaru, obsługa i transport są wyceniane osobno.
+Q: Jak liczony jest koszt składowania?
+A: Koszt to liczba palet pomnożona przez liczbę tygodni i stawkę tygodniową. Przykładowo 10 palet przez 4 tygodnie to 140 £ netto za samo składowanie.
+Q: Czy przyjmujecie kontenery z paletami?
+A: Tak. Przyjmujemy kontenery FCL i LCL oraz dostawy częściowe, liczymy towar, sprawdzamy widoczne uszkodzenia i rejestrujemy go w systemie WMS.
+Q: Czy mogę wysyłać palety do moich klientów w UK?
+A: Tak. Przygotowujemy palety i kartony do wysyłki do sklepów, hurtowni i warsztatów w całej Wielkiej Brytanii, z dokumentacją wydania.
+Q: Czy jest minimalna liczba palet?
+A: Nie ma stałego minimum. Można zacząć od jednej palety, a wolumen zwiększać lub zmniejszać zależnie od sprzedaży i sezonu.
+
+## Fulfillment e-commerce w Wielkiej Brytanii
+URL: https://www.londradepo.com/pl/fulfillment-ecommerce
+English version: https://www.londradepo.com/en/ecommerce-fulfilment
+Summary: Fulfillment e-commerce w UK z magazynu 3PL w Essex: Mintsoft WMS, kompletacja, pakowanie, etykiety wysyłkowe, dostawy w UK i obsługa zwrotów dla sklepów online.
+Short answer: Fulfillment e-commerce to cały proces od otrzymania zamówienia ze sklepu internetowego do dostarczenia paczki klientowi: przyjęcie zamówienia, kompletacja, pakowanie i wysyłka. Gdy realizujesz go z magazynu w Wielkiej Brytanii, Twoi klienci w UK dostają krajowe terminy dostawy, a Ty unikasz wysyłki każdej paczki z Polski. LondraDepo obsługuje zamówienia z Shopify, Amazon FBM i własnych sklepów przez system Mintsoft WMS.
+Q: Czym jest fulfillment e-commerce?
+A: To realizacja zamówień ze sklepu internetowego przez operatora logistycznego: przyjęcie zamówienia, kompletacja, pakowanie, wysyłka i obsługa zwrotów, z zapasu składowanego w jego magazynie.
+Q: Jakie platformy obsługujecie?
+A: Zamówienia z Shopify, Amazon FBM i innych kanałów trafiają do systemu Mintsoft WMS, z którego realizujemy wysyłki i odsyłamy status do sklepu.
+Q: Ile kosztuje fulfillment w UK?
+A: Koszt składa się ze składowania (od 3,50 £ + VAT za paletę tygodniowo), opłaty za kompletację zamówienia, opakowań i transportu. Wycenę przygotowujemy według liczby zamówień i produktów.
+Q: Czy obsługujecie zwroty od klientów?
+A: Tak. Zwrócone produkty sprawdzamy, rejestrujemy w systemie i zgodnie z Twoimi zasadami przywracamy do sprzedaży lub odkładamy.
+Q: Czy mogę zacząć od małej liczby zamówień?
+A: Tak. Nie ma stałego minimum; wiele sklepów zaczyna od kilku palet zapasu i kilkudziesięciu zamówień miesięcznie, a potem zwiększa wolumen.
+
+## Amazon FBA prep w Wielkiej Brytanii
+URL: https://www.londradepo.com/pl/amazon-fba-prep
+English version: https://www.londradepo.com/en/amazon-prep-uk
+Summary: Amazon FBA prep w UK: przyjęcie towaru, etykiety FNSKU, pakowanie zgodne z wymogami Amazon i planowe dostawy do centrów Amazon UK z magazynu w Essex.
+Short answer: Zanim towar trafi do centrum logistycznego Amazon, musi zostać przygotowany zgodnie z wymogami Amazon: oznaczony etykietami FNSKU, odpowiednio zapakowany i wysłany w ramach planu dostawy. LondraDepo przyjmuje Twój zapas w Essex, około 16 mil od centrum Amazon LCY2 w Tilbury, przygotowuje go do FBA i wysyła partiami do centrów Amazon w Wielkiej Brytanii, trzymając resztę zapasu u nas.
+Q: Czym jest Amazon FBA prep?
+A: To przygotowanie towaru do wysyłki do centrów Amazon: oznaczenie etykietami FNSKU, pakowanie zgodne z wymogami Amazon i przygotowanie kartonów do planu dostawy.
+Q: Dlaczego trzymać zapas poza Amazon?
+A: Trzymając część zapasu w naszym magazynie, uzupełniasz stany w Amazon partiami, ograniczasz opłaty za długie składowanie w FBA i możesz obsługiwać inne kanały z tego samego towaru.
+Q: Jak daleko jest magazyn od centrów Amazon?
+A: Magazyn w Rayleigh jest około 16 mil od centrum Amazon LCY2 w Tilbury, a dostawy organizujemy do centrów wskazanych w planie wysyłki.
+Q: Czy realizujecie też zamówienia Amazon FBM?
+A: Tak. Zamówienia Amazon FBM możemy wysyłać bezpośrednio z naszego magazynu do klientów w Wielkiej Brytanii, obok przygotowania towaru do FBA.
+Q: Ile kosztuje FBA prep?
+A: Koszt zależy od liczby sztuk, rodzaju etykietowania i pakowania. Składowanie zapasu zaczyna się od 3,50 £ + VAT za paletę tygodniowo; resztę wyceniamy według Twojego planu.
+
+## Cennik magazynowania w UK 2026: palety od 3,50 £
+URL: https://www.londradepo.com/pl/cennik-magazynowania
+English version: https://www.londradepo.com/en/uk-warehousing-pricing
+Summary: Cennik magazynowania i fulfillmentu w Wielkiej Brytanii: składowanie palet od 3,50 £ + VAT tygodniowo, przykłady dla 5, 10 i 20 palet oraz pozycje oferty 3PL.
+Short answer: Koszt magazynu w Wielkiej Brytanii składa się z kilku pozycji: składowania, przyjęcia towaru, kompletacji, opakowań i transportu. W LondraDepo publikujemy stawkę za składowanie: od 3,50 £ + VAT za standardową paletę tygodniowo, bez stałego minimum. Pozostałe pozycje wyceniamy według Twojego produktu i wolumenu, każdą osobno, aby oferta była przejrzysta.
+Q: Ile kosztuje magazyn w Wielkiej Brytanii miesięcznie?
+A: Samo składowanie 10 palet przez 4 tygodnie kosztuje 140 £ netto przy stawce 3,50 £ + VAT za paletę tygodniowo. Do tego dochodzą przyjęcie towaru, obsługa i transport.
+Q: Czy ceny zawierają VAT?
+A: Nie. Ceny podajemy netto, a do faktur doliczany jest brytyjski VAT w wysokości 20%, zgodnie z przepisami w Wielkiej Brytanii.
+Q: Dlaczego nie publikujecie wszystkich cen?
+A: Koszt przyjęcia towaru, kompletacji i transportu zależy od produktu, opakowania i wolumenu. Dlatego publikujemy stawkę składowania, a pozostałe pozycje wyceniamy indywidualnie.
+Q: Czy jest minimalna kwota zamówienia?
+A: Nie ma stałego minimum. Płacisz za faktycznie zajęte miejsce i wykonane usługi, więc możesz zacząć od jednej palety testowej.
+Q: Jak szybko otrzymam wycenę?
+A: Po otrzymaniu formularza z opisem produktu, wolumenu i kanałów sprzedaży zespół przygotowuje ofertę i wysyła ją e-mailem, czasem po kilku pytaniach uzupełniających.
+
+## Import do Wielkiej Brytanii: transport i odprawa
+URL: https://www.londradepo.com/pl/import-do-wielkiej-brytanii
+English version: https://www.londradepo.com/en/uk-import-logistics
+Summary: Import do Wielkiej Brytanii z jednej ręki: transport z UE, brytyjska odprawa celna, rozładunek, składowanie, fulfillment i dystrybucja z magazynu w Essex.
+Short answer: Od wyjścia Wielkiej Brytanii z UE towary z Polski wymagają zgłoszenia celnego przy wwozie do UK. Arca Trade Group organizuje transport drogowy, morski, lotniczy lub kolejowy i składa brytyjskie zgłoszenie celne; LondraDepo, jej marka magazynowa, rozładowuje towar w Rayleigh w Essex, składuje go, realizuje zamówienia i dostarcza w całej Wielkiej Brytanii. Możesz też skorzystać z własnego spedytora, a od nas wziąć tylko magazyn.
+Q: Czy po Brexicie potrzebna jest odprawa celna z Polski do UK?
+A: Tak. Towary z UE wwożone do Wielkiej Brytanii wymagają zgłoszenia celnego. Zgłoszenie może złożyć zespół celny Arca Trade Group lub Twoja agencja celna.
+Q: Czy potrzebuję numeru GB EORI?
+A: Firma, która jest importerem do Wielkiej Brytanii, zwykle potrzebuje numeru GB EORI. Numer wnioskuje się w brytyjskim urzędzie HMRC przed pierwszą dostawą.
+Q: Kto płaci cło i VAT importowy?
+A: Cło i brytyjski VAT importowy (20%) płaci importer, zwykle Ty. LondraDepo nie staje się automatycznie importerem towaru, a koszty transportu wyceniamy osobno.
+Q: Czy mogę korzystać z własnego przewoźnika?
+A: Tak. Twój spedytor może dostarczyć towar na adres magazynu w Rayleigh, a od nas wziąć tylko rozładunek, składowanie, fulfillment i dystrybucję.
+Q: Czy przechowujecie towar przed odprawą?
+A: Nie. Nie jesteśmy składem celnym, więc przyjmujemy towar po brytyjskiej odprawie celnej i dopiero wtedy go składujemy.
+
+## Magazyn w UK dla polskich firm i producentów
+URL: https://www.londradepo.com/pl/magazyn-dla-polskich-firm
+Summary: Jak polskie firmy sprzedają w Wielkiej Brytanii po Brexicie: transport z Polski, odprawa, magazyn w Essex, fulfillment i dystrybucja. Palety od 3,50 £ + VAT.
+Short answer: Polskie firmy, które sprzedają do Wielkiej Brytanii, po Brexicie muszą liczyć się z odprawą celną każdej przesyłki. Zamiast wysyłać każde zamówienie z Polski, możesz raz przewieźć towar w większej partii, odprawić go i trzymać w magazynie w UK, a stamtąd dostarczać klientom w krajowych terminach. LondraDepo w Rayleigh w Essex przyjmuje dostawy z Polski i UE, składuje je od 3,50 £ + VAT za paletę tygodniowo i realizuje zamówienia B2B oraz e-commerce.
+Q: Dlaczego polskiej firmie opłaca się magazyn w UK?
+A: Po Brexicie każda przesyłka z Polski wymaga odprawy. Wysyłając większą partię i trzymając zapas w UK, odprawiasz towar raz, a klientom dostarczasz szybciej i taniej z lokalnego magazynu.
+Q: Czy muszę mieć firmę w Wielkiej Brytanii?
+A: Nie zawsze. Wiele firm z UE importuje do UK jako firma zagraniczna z numerem GB EORI. Szczegóły dotyczące VAT i roli importera warto sprawdzić z doradcą podatkowym.
+Q: Jak dostarczyć towar z Polski do magazynu?
+A: Arca Trade Group organizuje transport drogowy z Europy (drobnicę i całe ładunki) oraz odprawę celną. Możesz też korzystać z własnego przewoźnika.
+Q: Ile kosztuje składowanie?
+A: Składowanie palety zaczyna się od 3,50 £ + VAT tygodniowo, bez stałego minimum. Przyjęcie towaru, kompletację i transport wyceniamy według Twojego produktu i wolumenu.
+Q: Czy mogę napisać po polsku?
+A: Tak, formularz zapytania przyjmuje opis po polsku. Zespół w Wielkiej Brytanii pracuje w języku angielskim i tureckim, więc ofertę i dalszą komunikację prowadzimy po angielsku.
+
+## O nas: operator magazynu w Essex w UK
+URL: https://www.londradepo.com/pl/o-nas
+English version: https://www.londradepo.com/en/about-us
+Summary: LondraDepo prowadzi Arca Trade Group Ltd, członek BIFA działający od 2021 roku, z magazynem w Rayleigh w Essex dla marek międzynarodowych i e-commerce.
+Short answer: LondraDepo.com to marka magazynowa i fulfillmentowa firmy Arca Trade Group Ltd, spółki zarejestrowanej w Anglii i Walii (nr 13247691), działającej od 2021 roku. Prowadzimy fizyczny magazyn w Rayleigh w hrabstwie Essex i obsługujemy cały proces, od przyjęcia kontenera po dostawę w Wielkiej Brytanii, dla marek, które sprzedają na rynek brytyjski z zagranicy.
+Q: Kto prowadzi LondraDepo?
+A: LondraDepo to marka magazynowa Arca Trade Group Ltd, brytyjskiej spółki (nr 13247691) i członka BIFA. Założył ją Sertaç Yılmaz z 18-letnim doświadczeniem w logistyce, a bieżącą pracą magazynu kieruje Yusuf Barış, Operations Manager.
+Q: Pod jakim adresem działa LondraDepo?
+A: Magazyn LondraDepo mieści się pod adresem Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY, około 13 mil drogą od London Gateway, 16 mil od portu Tilbury i 37 mil od centrum Londynu.
+Q: Jakie usługi świadczy LondraDepo?
+A: LondraDepo zapewnia przyjęcie towaru i rozładunek kontenerów, składowanie palet i kartonów, kontrolę stanów w Mintsoft WMS, kompletację i pakowanie zamówień, Amazon FBA prep i dystrybucję w UK. Fracht międzynarodowy i odprawę celną zapewnia Arca Trade Group.
+Q: Czy mogę zweryfikować LondraDepo przed rozpoczęciem współpracy?
+A: Tak. Arca Trade Group Ltd figuruje w Companies House pod numerem 13247691, w katalogu członków BIFA i na LinkedIn. Przed wysłaniem towaru możesz też umówić 15-minutową rozmowę z zespołem.
+Q: Od kiedy działa operator LondraDepo?
+A: Arca Trade Group Ltd, spółka prowadząca LondraDepo, działa od 2021 roku. Została założona w Basildon w Essex, a dziś pracuje w tej samej lokalizacji w Rayleigh co magazyn LondraDepo.
+
+## Zalety magazynu partnerskiego w UK
+URL: https://www.londradepo.com/pl/zalety-magazynu-w-uk
+English version: https://www.londradepo.com/en/uk-warehousing-benefits
+Summary: Dlaczego magazyn 3PL w UK: niski koszt startu od 3,50 £ + VAT za paletę tygodniowo, dostawy paletowe, wskazówki dot. etykiet i wstępna weryfikacja kodów HS.
+Short answer: Partner magazynowy w Wielkiej Brytanii pozwala firmie z zagranicy trzymać zapas w UK, szybciej dostarczać towar brytyjskim klientom i testować rynek bez wynajmu hali i zatrudniania pracowników. W LondraDepo standardowe składowanie palet zaczyna się od 3,50 £ + VAT za paletę tygodniowo, a na start nie jest wymagany pełny ładunek ciężarówki.
+Q: Ile kosztuje magazyn partnerski w Wielkiej Brytanii?
+A: W LondraDepo standardowe składowanie palet zaczyna się od 3,50 £ + VAT za paletę tygodniowo. Obsługę, załadunek i rozładunek, ponowną paletyzację, koordynację celną i dystrybucję wyceniamy dla każdej dostawy.
+Q: Czy organizujecie transport międzynarodowy do UK?
+A: Usługa magazynowa LondraDepo zaczyna się, gdy towar dotrze do UK. Fracht morski, lotniczy, drogowy i kolejowy oraz odprawę celną zapewnia spółka macierzysta Arca Trade Group, więc transport i składowanie można wycenić razem. Możesz też korzystać z własnego spedytora.
+Q: Czy mogę przetestować rynek brytyjski małą dostawą?
+A: Tak. Przyjmujemy dostawy paletowe i częściowe, bez wymogu pełnego ładunku i bez stałego minimum, więc możesz zacząć od jednej palety testowej i zwiększać wolumen wraz ze sprzedażą w UK.
+Q: Czy pomagacie w zgodności etykiet z wymogami UK?
+A: Zależnie od grupy produktów udzielamy wskazówek dotyczących etykiet w języku angielskim, wymogów rynku brytyjskiego i przydatności operacyjnej. Za zgodność produktu z przepisami odpowiada sprzedawca.
+Q: Jakie są główne korzyści z magazynu w UK dla firm z zagranicy?
+A: Zapas w Wielkiej Brytanii pozwala oferować krajowe terminy dostaw i proste zwroty w UK, obsługiwać klientów hurtowych i internetowych z jednego miejsca oraz nie wysyłać każdego zamówienia z zagranicy. LondraDepo zapewnia to z Rayleigh w Essex.
+
+## Magazyn pod Londynem: Essex, 40 minut od miasta
+URL: https://www.londradepo.com/pl/magazyn-londyn
+English version: https://www.londradepo.com/en/london-warehousing
+Summary: Magazyn dla Londynu i południowo-wschodniej Anglii w Rayleigh w Essex, ok. 40 minut od wschodniego Londynu przy M25. Palety od 3,50 £ + VAT tygodniowo.
+Short answer: Nasz magazyn znajduje się w Rayleigh w Essex, około 37 mil (59 km) drogą od centrum Londynu, około 40 minut od wschodniego Londynu i 20–30 minut od portu Tilbury. Nie leży w samym Londynie, ale położenie przy trasach A127 i M25 czyni go praktyczną bazą do składowania towaru i szybkich dostaw do Londynu, południowo-wschodniej Anglii i reszty Wielkiej Brytanii.
+Q: Czy mogę składować towar w okolicach Londynu?
+A: Tak. Nasz magazyn jest w Essex, blisko Londynu, około 40–50 km od miasta i z dobrym połączeniem z brytyjskimi trasami logistycznymi. Możesz trzymać u nas zapas i realizować zamówienia w całej Wielkiej Brytanii.
+Q: Czy magazyn znajduje się w samym Londynie?
+A: Nie. Magazyn jest w Rayleigh w Essex, około 37 mil od centrum Londynu i około 40 minut od wschodniego Londynu. Położenie przy A127 i M25 pozwala obsługiwać Londyn i południowo-wschodnią Anglię.
+Q: Jak dostarczyć produkty do magazynu pod Londynem?
+A: Wyślij towar na adres magazynu przez własnego spedytora albo poproś Arca Trade Group o organizację transportu i odprawy celnej. Po dotarciu towar jest przyjmowany, liczony i rejestrowany w systemie.
+Q: Jak otrzymać wycenę magazynu pod Londynem?
+A: Skontaktuj się z nami przez formularz, WhatsApp lub telefonicznie i podaj rodzaj produktu, wolumen, szacowaną liczbę palet lub kartonów oraz potrzebne usługi, a przygotujemy wycenę.
+Q: Czy do magazynu łatwo dojadą ciężarówki i kontenery?
+A: Tak. Magazyn w Unit 19 Arterial Park w Rayleigh jest łatwo dostępny dla ciężarówek i przewoźników kontenerowych, a pełne kontenery FCL są rozładowywane bezpośrednio na miejscu.
+
+## Logistyka e-commerce w UK: zapas, dostawy, zwroty
+URL: https://www.londradepo.com/pl/logistyka-ecommerce-uk
+English version: https://www.londradepo.com/en/uk-ecommerce-logistics
+Summary: Logistyka e-commerce w UK z Essex: składowanie, Mintsoft WMS, kompletacja, etykiety, dostawy w UK i zwroty dla Shopify, Amazon FBM i innych kanałów.
+Short answer: Logistyka e-commerce w Wielkiej Brytanii obejmuje wszystko, co dzieje się po kliknięciu „kup” przez klienta: utrzymanie zapasu w brytyjskim magazynie, kompletację i pakowanie zamówienia, etykietowanie, dostawę i obsługę zwrotów. LondraDepo prowadzi ten proces ze swojego magazynu w Essex dla Shopify, Amazon FBM i innych kanałów online.
+Q: Czym jest logistyka e-commerce w UK?
+A: To cały proces kompletacji, pakowania i dostarczania zamówień ze sklepu internetowego z magazynu w Wielkiej Brytanii. LondraDepo prowadzi ten proces ze swojego magazynu w Essex.
+Q: Czym różni się fulfillment od logistyki?
+A: Logistyka obejmuje przemieszczanie i składowanie towaru. Fulfillment obejmuje całą ścieżkę zamówienia klienta: zarządzanie zapasem, kompletację i pakowanie, etykiety przewozowe i wysyłkę.
+Q: Czy jeden zapas w UK może obsłużyć Shopify, Amazon i inne kanały?
+A: Tak. Realizujemy zamówienia ze sklepów Shopify i Amazon FBM z naszego magazynu w Essex. Gdy wpływa zamówienie, zespół je kompletuje, pakuje i wysyła do klienta.
+Q: Jak zarządzany jest mój zapas w UK?
+A: Zapas jest śledzony w systemie Mintsoft WMS. Stany magazynowe są monitorowane na bieżąco, a każde przyjęcie i wydanie towaru jest rejestrowane w systemie.
+Q: Jak obsługiwane są zwroty w logistyce e-commerce w UK?
+A: Zwroty wracają do magazynu w Essex, gdzie są sprawdzane i zgodnie z Twoją instrukcją wracają na stan albo są odkładane. Zwroty wyceniamy za sztukę w ramach oferty fulfillmentu.
+
+## Kompletacja i pakowanie zamówień w UK
+URL: https://www.londradepo.com/pl/pick-and-pack
+English version: https://www.londradepo.com/en/pick-and-pack
+Summary: Kompletacja i pakowanie (pick and pack) w magazynie 3PL w Essex: etykiety, kontrola zamówień, zwroty i synchronizacja stanów w Mintsoft, z wyceną za zamówienie.
+Short answer: Kompletacja i pakowanie zamówień (ang. pick and pack) to proces magazynowy, w którym pobiera się z półki właściwe produkty do zamówienia (pick), bezpiecznie je pakuje (pack) i przygotowuje paczkę do wysyłki. W LondraDepo nasz zespół w Essex kompletuje, pakuje, etykietuje i wysyła Twoje zamówienia internetowe, a każdy ruch towaru aktualizuje stany w Mintsoft WMS.
+Q: Czym jest kompletacja i pakowanie zamówień (pick and pack)?
+A: To proces pobierania zamówionych produktów z półek magazynowych (pick), a następnie pakowania ich tak, aby były gotowe do przekazania przewoźnikowi (pack).
+Q: Jak działa kompletacja i pakowanie zamówień w Wielkiej Brytanii?
+A: Twój zapas jest w naszym magazynie w Essex. Zamówienie trafia do Mintsoft WMS, a nasz zespół je kompletuje, pakuje w odpowiednie opakowanie, tworzy etykietę przewozową i wysyła paczkę.
+Q: Kto dostarcza opakowania do wysyłki zamówień?
+A: Opcje opakowań ustalamy indywidualnie przy wycenie. Część klientów wysyła do magazynu w Essex własne opakowania z logo marki, których używamy przy pakowaniu ich zamówień.
+Q: Jak wyceniana jest kompletacja i pakowanie zamówień?
+A: Cena kompletacji i pakowania zależy od liczby zamówień, rodzaju produktu i wymagań dotyczących pakowania. Skontaktuj się z nami przez formularz lub WhatsApp, aby otrzymać indywidualną wycenę.
+Q: Czy kompletujecie zamówienia hurtowe oraz internetowe?
+A: Tak. Z tego samego zapasu kompletujemy paczki dla klientów internetowych oraz zamówienia paletowe i kartonowe dla klientów hurtowych, więc nie musisz dzielić towaru między kilku operatorów.
+
+## Fulfillment Shopify w UK: magazyn w Essex
+URL: https://www.londradepo.com/pl/fulfillment-shopify-uk
+English version: https://www.londradepo.com/en/shopify-fulfilment-uk
+Summary: Fulfillment Shopify w UK: składujemy towar w Essex, kompletujemy, pakujemy i wysyłamy zamówienia do klientów w UK, obsługujemy zwroty. Palety od 3,50 £ + VAT.
+Short answer: Fulfillment Shopify w Wielkiej Brytanii oznacza, że zewnętrzny magazyn przechowuje Twój zapas i w Twoim imieniu wysyła zamówienia ze sklepu Shopify do klientów w UK. LondraDepo robi to z Rayleigh w Essex, pod Londynem: przyjmujemy i składujemy towar, kompletujemy i pakujemy każde zamówienie, wysyłamy je do klienta i obsługujemy zwroty, dzięki czemu sprzedajesz w UK z dowolnego kraju bez otwierania własnego magazynu. Składowanie od 3,50 £ + VAT za paletę tygodniowo. LondraDepo nie jest oficjalnym partnerem Shopify. Zapewniamy magazynowanie i fulfillment firmom, które sprzedają przez Shopify.
+Q: Jak obsługiwane są zwroty Shopify w magazynie w UK?
+A: Klienci z UK odsyłają zwroty do magazynu LondraDepo w Rayleigh w Essex. Przypisujemy każdy zwrot do zamówienia, sprawdzamy stan, produkty do sprzedaży przywracamy na stan w Mintsoft WMS, uszkodzone odkładamy i raportujemy wynik, abyś mógł zwrócić pieniądze w Shopify.
+Q: Czy mogę realizować zamówienia Shopify z UE z magazynu w UK?
+A: Można, ale każda paczka z Wielkiej Brytanii do UE jest eksportem z dokumentami celnymi, cłem i VAT po stronie unijnej. Większość marek sprzedających na obu rynkach trzyma zapas brytyjski w magazynie w UK, takim jak LondraDepo, a osobny zapas w UE.
+Q: Czym jest fulfillment Shopify w Wielkiej Brytanii?
+A: To usługa, w której magazyn w UK przechowuje Twój zapas oraz kompletuje, pakuje i wysyła zamówienia ze sklepu Shopify do klientów w Wielkiej Brytanii. LondraDepo świadczy ją z Rayleigh w Essex, pod Londynem, razem z obsługą zwrotów.
+Q: Ile kosztuje fulfillment Shopify w UK?
+A: W LondraDepo składowanie zaczyna się od 3,50 £ + VAT za paletę tygodniowo. Przyjęcie towaru, kompletację i pakowanie, dostawę i zwroty wyceniamy osobno, na podstawie Twoich produktów i miesięcznej liczby zamówień.
+Q: Czy znajdę magazyn w UK dla mojego sklepu Shopify?
+A: Tak. LondraDepo oferuje składowanie zapasu i realizację zamówień w Essex dla firm sprzedających przez Shopify. Gdy wpływa zamówienie, nasz zespół je kompletuje, pakuje i wysyła do klienta w UK.
+Q: Czy LondraDepo jest oficjalnym partnerem Shopify?
+A: Nie. LondraDepo nie jest oficjalnym partnerem Shopify. Zapewniamy fulfillment i magazynowanie firmom, które sprzedają przez Shopify, z naszego magazynu w Essex.
+Q: Czy zamówienia Shopify są przetwarzane automatycznie?
+A: Opcje importu zamówień i integracji warto omówić z nami przed startem. Wspólnie planujemy proces operacyjny i potwierdzamy zakres automatyzacji przed przygotowaniem wyceny.
+Q: Czy realizujecie zamówienia Shopify i Amazon z tego samego zapasu?
+A: Tak. Ten sam zapas w UK może obsłużyć zamówienia Shopify, Amazon FBA prep lub zamówienia FBM oraz zamówienia paletowe B2B, więc nie potrzebujesz osobnego magazynu dla każdego kanału.
+Q: Czy fulfillment Shopify ma minimalny wolumen zamówień?
+A: Nie. LondraDepo nie stosuje stałego minimum dla fulfillmentu Shopify: część klientów zaczyna od jednej palety testowej w Essex i zwiększa skalę, ze składowaniem od 3,50 £ + VAT za paletę tygodniowo i fulfillmentem wycenianym według profilu zamówień.
+Q: Dlaczego trzymać zapas Shopify w UK zamiast wysyłać z zagranicy?
+A: Przy zapasie w magazynie LondraDepo w Essex towar przechodzi brytyjską odprawę raz, hurtowo, zamówienia wyjeżdżają krajowymi usługami paczkowymi, a zwroty wracają do Essex, zamiast każdej paczki przekraczającej granicę z własnymi dokumentami celnymi.
+Q: Mój sklep Shopify jest zarejestrowany poza UK. Czy mogę sprzedawać klientom w UK?
+A: Tak. Możesz sprzedawać do Wielkiej Brytanii ze sklepem zarejestrowanym w innym kraju. Potrzebujesz zapasu w magazynie w UK i spełnienia wymogów celnych przy imporcie towaru do Wielkiej Brytanii.
+
+## Fulfillment Amazon FBM w UK: magazyn w Essex
+URL: https://www.londradepo.com/pl/magazyn-dla-sprzedawcow-amazon
+English version: https://www.londradepo.com/en/amazon-seller-warehousing-uk
+Summary: Magazyn w UK dla sprzedawców Amazon: wysyłka zamówień FBM i FBA prep z Essex, blisko Londynu i Amazon LCY2 Tilbury. Bez minimum, start od jednej palety.
+Short answer: Jeśli sprzedajesz na Amazon.co.uk w modelu Fulfilled by Merchant (FBM), LondraDepo może być Twoim magazynem w Wielkiej Brytanii: składujemy towar w Essex oraz kompletujemy, pakujemy i wysyłamy każde zamówienie Amazon do klienta. Jeśli korzystasz z Fulfilled by Amazon (FBA), przygotowujemy towar i wysyłamy go do Amazon. LondraDepo nie jest oficjalnym partnerem Amazon. Zapewniamy niezależne magazynowanie i fulfillment firmom, które sprzedają na Amazon.
+Q: Czym jest Amazon FBM?
+A: FBM (Fulfilled by Merchant) to model, w którym sprzedawca Amazon lub magazyn zewnętrzny przechowuje zapas i wysyła każde zamówienie. LondraDepo zapewnia magazyn zewnętrzny dla sprzedawców FBM w Wielkiej Brytanii.
+Q: Dlaczego warto wybrać LondraDepo do Amazon FBM?
+A: FBM wymaga zapasu w Wielkiej Brytanii i szybkiej wysyłki zamówień. Zapewniamy kompletację, pakowanie i koordynację dostaw w UK z Essex, więc możesz prowadzić sprzedaż FBM bez własnego magazynu.
+Q: Czy LondraDepo jest oficjalnym partnerem Amazon przy zamówieniach FBM?
+A: Nie. LondraDepo nie jest oficjalnym partnerem Amazon. Zapewniamy niezależne magazynowanie i fulfillment firmom, które sprzedają na Amazon w modelu FBM.
+Q: Czy spełnię wymogi wydajności Amazon dla FBM?
+A: Amazon ustala terminy dostaw i wymogi wydajności dla FBM. Realizacja zamówień z magazynu w UK pomaga dotrzymać krajowych terminów dostaw, ale ostateczną ocenę wyników sprzedawcy przeprowadza Amazon.
+Q: Czy ten sam zapas obsłuży Amazon FBM i inne kanały?
+A: Tak. Zapas w LondraDepo może obsługiwać zamówienia Amazon FBM, zostać przygotowany i wysłany do Amazon FBA oraz obsługiwać zamówienia Shopify lub hurtowe, wszystko z jednego magazynu w Essex.
+
+## Fulfillment w Wielkiej Brytanii dla importerów
+URL: https://www.londradepo.com/pl/fulfillment-wielka-brytania
+English version: https://www.londradepo.com/en/uk-fulfilment
+Summary: Fulfillment w UK z Essex: kompletacja zamówień, pakowanie zgodne z marką, Amazon FBA prep, zamówienia z Shopify i Etsy, zwroty i raporty stanów.
+Short answer: Fulfillment w Wielkiej Brytanii oznacza, że Twój zapas leży w brytyjskim magazynie, a każde zamówienie klienta jest za Ciebie kompletowane, pakowane i wysyłane. LondraDepo prowadzi fulfillment z magazynu w Essex dla marek importujących towar do UK: kompletację, pakowanie, Amazon FBA prep, zamówienia wielokanałowe i zwroty. Składowanie palet zaczyna się od 3,50 £ + VAT tygodniowo.
+Q: Czy zamówienia z Shopify i Amazon mogą iść z jednego magazynu w UK?
+A: Tak, zamówienia z Shopify i wysyłki Amazon FBM można przygotowywać z tego samego magazynu, jeśli działa odpowiednia integracja i zarządzanie stanami. Amazon FBA prep, czyli etykietowanie i wysyłka do Amazon, to osobny proces dopasowywany do Twoich produktów.
+Q: Czym jest fulfillment w Wielkiej Brytanii?
+A: Fulfillment to kompletacja, pakowanie i wysyłka zamówień klientów z magazynu. Przechowujemy Twoje produkty w naszym magazynie w Wielkiej Brytanii, przygotowujemy zamówienia i wysyłamy je do Twoich klientów.
+Q: Czy wspieracie sprzedawców korzystających z Amazon FBA?
+A: Tak. W ramach usługi Amazon prep przygotowujemy produkty zgodnie z wymogami FBA, oznaczamy je etykietami i wysyłamy do centrum logistycznego Amazon wskazanego w planie dostawy.
+Q: Czy fulfillment wymaga minimalnego stanu magazynowego?
+A: Nie ma stałego minimalnego stanu magazynowego. Zakres usługi i wolumen dopasowujemy do Twoich potrzeb, więc można zacząć od niewielkiego zapasu i rosnąć wraz ze sprzedażą.
+Q: Jak wyceniany jest fulfillment w Wielkiej Brytanii?
+A: Składowanie zaczyna się od 3,50 £ + VAT za paletę tygodniowo. Przyjęcie towaru, kompletację i pakowanie, opakowania, dostawę i zwroty wyceniamy według produktów, miesięcznej liczby zamówień i średniej liczby sztuk w zamówieniu.
+
+## Usługi magazynowe w UK: przyjęcie i kontrola stanów
+URL: https://www.londradepo.com/pl/uslugi-magazynowe
+English version: https://www.londradepo.com/en/storage-services
+Summary: Usługi magazynowe w UK: przyjęcie palet i kartonów, rozładunek kontenerów FCL, stany w Mintsoft WMS i składowanie krótko- lub długoterminowe w Essex.
+Short answer: Nasze usługi magazynowe w Wielkiej Brytanii obejmują techniczną stronę przechowywania zapasu: przyjęcie palet i kartonów, rozładunek kontenerów FCL, bieżącą ewidencję stanów w systemie Mintsoft WMS oraz elastyczną powierzchnię na krótki lub długi okres w magazynie w Rayleigh w Essex. Standardowa paleta kosztuje od 3,50 £ + VAT tygodniowo.
+Q: Czy możliwe jest składowanie krótkoterminowe?
+A: Tak. Składowanie rozliczamy tygodniowo, od 3,50 £ + VAT za standardową paletę, więc możliwy jest zarówno pobyt na kilka tygodni, jak i długoterminowe składowanie, a także cross-dock dla towaru jadącego dalej.
+Q: Czy przyjmujecie towar na paletach i w kartonach?
+A: Tak. LondraDepo przyjmuje towar na paletach i w kartonach, także z dostaw kontenerowych FCL i LCL. Luźne kartony możemy przy przyjęciu spaletyzować i oznaczyć, zanim trafią do Mintsoft WMS.
+Q: Jak śledzone są stany magazynowe?
+A: Stany i ruchy towaru są rejestrowane w systemie Mintsoft WMS od chwili przyjęcia dostawy, więc wiesz, co leży na półkach, i otrzymujesz regularne raporty stanów magazynowych.
+Q: Czy przyjmujecie towar od zagranicznych dostawców?
+A: Tak. W magazynie w Rayleigh przyjmujemy towar od dowolnego dostawcy i z dowolnego kraju. Transport i brytyjską odprawę celną może zorganizować Arca Trade Group albo Twój własny spedytor.
+Q: Jak rozliczane jest składowanie kartonów i obsługa?
+A: Składowanie standardowej palety kosztuje od 3,50 £ + VAT tygodniowo. Składowanie kartonów, przyjęcie towaru, rozładunek kontenerów i obsługę wyceniamy według Twoich produktów i wolumenów.
+
+## Odprawa celna importu do Wielkiej Brytanii
+URL: https://www.londradepo.com/pl/odprawa-celna-uk
+English version: https://www.londradepo.com/en/uk-customs-clearance
+Summary: Odprawa celna importu do UK przez zespół Arca Trade Group: doradztwo w kodach towarowych, koordynacja przybycia i przekazanie towaru do magazynu w Essex.
+Short answer: Odprawę celną towarów importowanych do Wielkiej Brytanii prowadzi zespół celny Arca Trade Group, firmy będącej operatorem LondraDepo i członkiem BIFA. Zespół składa zgłoszenia w imieniu klientów i doradza w sprawie procedur celnych, kodów towarowych i preferencji. Po odprawie towar trafia do naszego magazynu w Essex, gdzie jest liczony i przyjmowany na stan.
+Q: Kto składa brytyjskie zgłoszenie celne?
+A: Zgłoszenia w imieniu klientów składa zespół celny Arca Trade Group, operatora LondraDepo. Możesz też pracować z własną agencją celną i po prostu dostarczyć odprawiony towar do naszego magazynu.
+Q: Czy odprawiacie towar wysłany z zagranicy?
+A: Tak. Arca Trade Group odprawia towary wysyłane do Wielkiej Brytanii z Europy, w tym z Polski, oraz z innych krajów, a także może zorganizować transport morski, lotniczy, drogowy lub kolejowy.
+Q: Czy LondraDepo jest składem celnym?
+A: Nie. LondraDepo nie jest składem celnym zatwierdzonym przez HMRC. Towar składujemy dopiero po jego odprawie i dopuszczeniu do swobodnego obrotu w Wielkiej Brytanii.
+Q: Jak przyjmowany jest towar po odprawie celnej?
+A: Po zakończeniu odprawy towar jest dostarczany na adres naszego magazynu w Rayleigh, liczony i przyjmowany na stan w systemie magazynowym Mintsoft WMS.
+Q: Jaki numer EORI jest potrzebny do odprawy w UK?
+A: Importer potrzebuje numeru EORI zaczynającego się od GB, aby importować towar do Wielkiej Brytanii. Zespół Arca Trade Group może złożyć zgłoszenie, ale za cło i VAT importowy odpowiada importer.
+
+## Obsługa ładunków w UK: rozładunek i przepakowanie
+URL: https://www.londradepo.com/pl/obsluga-ladunkow
+English version: https://www.londradepo.com/en/cargo-handling
+Summary: Obsługa ładunków w Essex: rozładunek pojazdów i kontenerów, załadunek, palety i kartony, sortowanie, przepakowanie, etykietowanie i przygotowanie wysyłek.
+Short answer: Obsługa ładunków to fizyczna praca z towarem w magazynie: rozładunek i załadunek pojazdów, przemieszczanie palet i kartonów, sortowanie, przepakowanie, etykietowanie lub ponowne etykietowanie oraz przygotowanie wysyłek. LondraDepo wykonuje te usługi w magazynie w Rayleigh w Essex, a cena zależy od rodzaju zadania, wolumenu i zakresu prac.
+Q: Jakie prace obejmuje obsługa ładunków?
+A: Obsługa ładunków obejmuje rozładunek i załadunek pojazdów, obsługę palet i kartonów, kontrolę przyjęcia, sortowanie, przepakowanie, etykietowanie oraz przygotowanie wysyłek w magazynie w Essex.
+Q: Czy przepakowujecie uszkodzony lub źle oznaczony towar?
+A: Tak. Wymieniamy uszkodzone opakowania, zastępujemy nieprawidłowe etykiety i przepakowujemy towar tak, aby spełniał wymagania sprzedażowe Twoich kanałów.
+Q: Czy przygotowujecie towar pod zamówienia z Amazon lub Shopify?
+A: Tak. Przygotowanie produktów, etykietowanie i przygotowanie wysyłek dla platform e-commerce wykonujemy obok naszej usługi fulfillmentu, z tego samego magazynu w Essex.
+Q: Jak wyceniana jest obsługa ładunków?
+A: Cena zależy od rodzaju zadania, wolumenu towaru i zakresu usługi. Skontaktuj się z nami przez WhatsApp lub formularz, aby otrzymać wycenę dla Twojej operacji.
+Q: Czy możecie ponownie oznaczyć towar przed wysyłką do klientów lub Amazon?
+A: Tak. Ponowne etykietowanie, przepakowanie i sortowanie według SKU należą do obsługi ładunków w magazynie w Essex, także przy przygotowaniu towaru do wysyłki do klientów w UK lub do Amazon FBA.
+
+## Dystrybucja w UK: dostawy palet i paczek
+URL: https://www.londradepo.com/pl/dystrybucja-uk
+English version: https://www.londradepo.com/en/uk-distribution
+Summary: Dystrybucja w UK z magazynu w Essex: odbiory towaru, przesunięcia między magazynami, dostawy w Londynie i Essex oraz palety i paczki w całym kraju.
+Short answer: LondraDepo koordynuje transport na terenie Wielkiej Brytanii: odbiór towaru z innych lokalizacji w UK, przesunięcia zapasu między magazynami, dostawy lokalne w Londynie i Essex oraz dostawy do Londynu, Birmingham, Manchesteru i dalej w całym kraju. Nie ma stałego minimum: od jednego kartonu do pełnych ładunków paletowych.
+Q: Czy możecie odebrać towar z innej lokalizacji w UK?
+A: Tak. Koordynujemy odbiory z innych miejsc w Wielkiej Brytanii i dostawę do naszego magazynu w Essex. Szczegóły ustalimy po kontakcie przez WhatsApp lub formularz.
+Q: Czy dostarczacie do każdej części Wielkiej Brytanii?
+A: Tak. Z Essex koordynujemy dostawy do Londynu, Birmingham, Manchesteru i pozostałych regionów Wielkiej Brytanii, zarówno paczkowe, jak i paletowe.
+Q: Czy jest minimalna wielkość przesyłki?
+A: Nie ma stałego minimum. Koordynujemy wszystko, od pojedynczych małych paczek po duże wysyłki paletowe, z magazynu w Rayleigh w Essex.
+Q: Jak wyceniana jest dystrybucja w UK?
+A: Cena zależy od wolumenu przesyłki, odległości i zakresu usługi. Napisz do nas przez WhatsApp lub formularz, a przygotujemy indywidualną wycenę dystrybucji.
+Q: Czy oferujecie dostawy paletowe i paczkowe?
+A: Tak. Z Essex koordynujemy dostawy paletowe do hurtowni i klientów branżowych oraz paczki do klientów sklepów internetowych w całej Wielkiej Brytanii, także regularne dostawy dla stałych klientów B2B.
+
+## Fulfillment Amazon w UK: FBA prep, FBM, magazyn
+URL: https://www.londradepo.com/pl/fulfillment-amazon-uk
+English version: https://www.londradepo.com/en/amazon-fulfilment-uk
+Summary: Fulfillment Amazon w UK: FBA prep, zamówienia FBM, składowanie od 3,50 £ + VAT za paletę tygodniowo, Mintsoft WMS i odprawa przez Arca. Bez minimum.
+Short answer: Sprzedawcy Amazon w Wielkiej Brytanii korzystają z jednego z dwóch modeli: Fulfilled by Amazon (FBA), w którym Amazon przechowuje i wysyła Twój towar, albo Fulfilled by Merchant (FBM), w którym każde zamówienie wysyłasz Ty lub Twój magazyn. LondraDepo wspiera firmy sprzedające na Amazon w UK: składowanie zapasu, obsługa zamówień, kompletacja i pakowanie, etykietowanie i dostawy w UK z Essex. Dla towaru wysyłanego do sieci Amazon nasza usługa Amazon FBA prep obejmuje etykiety FNSKU i zgodność z wymogami FBA. LondraDepo nie jest oficjalnym partnerem Amazon. Zapewniamy niezależne magazynowanie i fulfillment dla firm sprzedających na Amazon.
+Q: Czy LondraDepo jest oficjalnym partnerem Amazon?
+A: Nie. LondraDepo nie jest oficjalnym partnerem Amazon. Zapewniamy niezależne składowanie zapasu i wsparcie fulfillmentu dla firm sprzedających na Amazon w Wielkiej Brytanii.
+Q: Czy oferujecie także przygotowanie towaru do FBA?
+A: Tak. Usługa Amazon FBA prep obejmuje etykiety FNSKU, pakowanie zgodne z wymogami Amazon i przygotowanie wysyłek; szczegóły opisujemy na stronie Amazon FBA prep.
+Q: Czym różni się Amazon FBA od FBM?
+A: W FBA Amazon przechowuje Twój towar i wysyła zamówienia, więc towar musi być najpierw przygotowany według zasad Amazon. W FBM każde zamówienie wysyłasz Ty lub Twój magazyn. LondraDepo obsługuje oba modele z Essex.
+Q: Czy dostarczacie przygotowany towar do centrów Amazon w UK?
+A: Tak. LondraDepo etykietuje i pakuje Twój towar zgodnie z wymogami Amazon w Essex i dostarcza go do centrum logistycznego Amazon w UK wskazanego w Twoim planie dostawy.
+Q: Czy mogę jednocześnie korzystać z FBA i FBM?
+A: Tak. Część zapasu możesz trzymać w LondraDepo na potrzeby FBM i innych kanałów, a przygotowane partie wysyłać do Amazon FBA, dzięki czemu nie zależysz od jednego modelu fulfillmentu.
+
+## Magazyn w Essex pod Londynem: Rayleigh, SS6 7FY
+URL: https://www.londradepo.com/pl/magazyn-essex
+English version: https://www.londradepo.com/en/essex-warehouse
+Summary: Magazyn w Rayleigh w Essex (SS6 7FY): ok. 40 minut do wschodniego Londynu, 20–30 minut do Tilbury i London Gateway, przyjęcie FCL/LCL, palety od 3,50 £ + VAT.
+Short answer: Magazyn LondraDepo mieści się pod adresem Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY. Do wschodniego Londynu jest stąd około 40 minut drogą A127, do portów Tilbury i London Gateway 20–30 minut, a do Felixstowe około 62 mile (mniej więcej 1¼ godziny) drogą. Rampa załadunkowa i szeroka brama pozwalają na rozładunek kontenerów i dostaw paletowych.
+Q: Pod jakim adresem działa magazyn w Essex?
+A: Magazyn LondraDepo mieści się pod adresem Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY, z bezpośrednim dojazdem do A127 i M25. Obsługuje firmy importujące do UK i sprzedające w całej Wielkiej Brytanii.
+Q: Jak daleko jest magazyn w Essex od Londynu?
+A: Magazyn leży około 37 mil drogą od centrum Londynu i około 40 minut od wschodniego Londynu drogą A127. Nie jest w samym Londynie, ale jest dobrze położony do obsługi Londynu i południowo-wschodniej Anglii.
+Q: Które porty są najbliżej magazynu w Rayleigh?
+A: DP World London Gateway jest około 13 mil drogą, a port Tilbury około 16 mil, w obu przypadkach około 20 minut samochodem. Port Felixstowe znajduje się około 62 mile od magazynu.
+Q: Czy magazyn w Essex przyjmuje pełne kontenery?
+A: Tak. Magazyn przyjmuje kontenery FCL 20 ft, 40 ft i 40 ft high cube, a także dostawy LCL i częściowe ładunki paletowe. Każda dostawa jest liczona, sprawdzana pod kątem widocznych uszkodzeń i wprowadzana do Mintsoft WMS.
+Q: Ile kosztuje składowanie w magazynie w Essex?
+A: Składowanie standardowej palety zaczyna się od 3,50 £ + VAT tygodniowo, więc 10 palet przez 4 tygodnie kosztuje od 140 £ + VAT. Przyjęcie towaru, obsługę, fulfillment i dostawę wyceniamy dla Twojej operacji.
+
+## Rozładunek kontenerów w Essex: FCL i LCL
+URL: https://www.londradepo.com/pl/rozladunek-kontenerow
+English version: https://www.londradepo.com/en/container-unloading
+Summary: Rozładunek kontenerów 20ft, 40ft i 40ft HC (FCL i LCL) w Essex: liczenie, kontrola uszkodzeń, paletyzacja, rejestracja w WMS i składowanie w jednym miejscu.
+Short answer: Essex · blisko Tilbury, London Gateway i trasy do Felixstowe
+Q: Jakie rozmiary kontenerów rozładowujecie?
+A: Przyjmujemy kontenery FCL 20ft, 40ft i 40ft high-cube, a także dostawy LCL i częściowe ładunki paletowe. W zapytaniu podaj rozmiar kontenera i informację, czy towar jest na paletach czy luzem.
+Q: Czy rozładowujecie kontenery z kartonami luzem?
+A: Tak, ale prosimy o wcześniejszą informację o kartonach ładowanych luzem wraz z liczbą kartonów dla każdego SKU. Czas obsługi, paletyzację i ewentualne etykietowanie oceniamy przed przyjazdem kontenera i odpowiednio wyceniamy.
+Q: Co się dzieje, gdy towar przyjedzie uszkodzony lub niekompletny?
+A: Widoczne uszkodzenia fotografujemy, a braki lub nadwyżki względem listy pakunkowej zgłaszamy Tobie, aby można było złożyć reklamację u dostawcy lub przewoźnika.
+Q: Czy możecie zorganizować transport kontenera z portu?
+A: Tak. Arca Trade Group, firma prowadząca LondraDepo, może zorganizować transport z portu do naszego magazynu w Rayleigh. Dostawę może też zrealizować Twój własny spedytor.
+Q: Czy rozładowany towar może od razu pojechać dalej?
+A: Tak. Towar można przeładować w systemie cross-docking do klientów w UK lub do Amazon albo składować go i wydawać w miarę napływu zamówień.
+
+## Magazynowanie w UK według branży
+URL: https://www.londradepo.com/pl/branze
+English version: https://www.londradepo.com/en/industries
+Summary: Magazynowanie i fulfillment w UK według branży: żywność i FMCG, opakowania, części samochodowe, moda i e-commerce, towary gabarytowe i elektronika.
+Short answer: LondraDepo składuje, realizuje zamówienia i dystrybuuje towary producentów i marek z branży spożywczej i FMCG, opakowań i artykułów gastronomicznych, części samochodowych, mody i e-commerce, towarów wielkogabarytowych oraz elektroniki użytkowej. Każda branża poniżej prowadzi do odpowiedniej strony usługi i do studiów przypadków z naszego magazynu w Rayleigh w Essex, aby pokazać, jak firma podobna do Twojej działa w Wielkiej Brytanii.
+Q: Z jakimi branżami pracuje LondraDepo?
+A: Prowadzimy działające operacje w Wielkiej Brytanii dla firm z branży spożywczej i FMCG, opakowań i artykułów gastronomicznych, części samochodowych i materiałów tapicerskich, mody i e-commerce, towarów wielkogabarytowych, takich jak bieżnie do chodzenia, oraz elektroniki, takiej jak przenośne stacje zasilania.
+Q: Czy ten sam zapas może obsługiwać klientów B2B i internetowych?
+A: Tak. Ten sam zapas w Wielkiej Brytanii może zasilać dostawy paletowe do hurtowni i klientów branżowych oraz paczki dla klientów sklepów internetowych, więc nie trzeba dzielić towaru między kilku operatorów.
+Q: Mojej branży nie ma na liście. Czy możecie pomóc?
+A: Prawdopodobnie tak. Opisz produkt, opakowanie, wolumeny i kanały sprzedaży, a przed przygotowaniem wyceny potwierdzimy, czy nasz magazyn w Essex jest dla niego odpowiedni.
+Q: Czy macie studia przypadków z mojej branży?
+A: LondraDepo opublikowało studia przypadków z branży spożywczej i FMCG, opakowań B2B, części samochodowych, materiałów tapicerskich, mody, towarów wielkogabarytowych i elektroniki. Każda sekcja na tej stronie prowadzi do odpowiednich przykładów.
+Q: Jak uzyskać wycenę dla mojej branży?
+A: Wypełnij formularz zapytania, podając rodzaj produktu, opakowanie, szacowaną liczbę palet lub kartonów, miesięczną liczbę zamówień i kanały sprzedaży. Zespół odpowie e-mailem z propozycją składowania, obsługi i dostawy.
+
+## Magazyn opakowań i artykułów gastronomicznych UK
+URL: https://www.londradepo.com/pl/branze/zywnosc-i-opakowania
+English version: https://www.londradepo.com/en/industries/food-packaging
+Summary: Magazyn i planowe dostawy B2B w UK dla pudełek na pizzę, opakowań na wynos i jednorazówek: składowanie palet, ewidencja partii i alerty niskiego stanu.
+Short answer: Pudełka na pizzę, pojemniki na wynos i jednorazowe artykuły gastronomiczne są duże objętościowo, mają niską wartość na paletę i są potrzebne w przewidywalnym rytmie. LondraDepo składuje je na paletach w Essex i realizuje stałe cotygodniowe lub comiesięczne dostawy do restauracji, sieci i hurtowni w całej Wielkiej Brytanii, tak jak robimy to dla producenta pudełek na pizzę wysyłającego towar z Turcji.
+Q: Czy możecie dostarczać towar do restauracji według stałego harmonogramu?
+A: Tak. Układamy cotygodniowe lub comiesięczne programy dostaw na podstawie Twojej listy klientów i częstotliwości ich zamówień, a towar wydajemy z zapasu paletowego w Essex.
+Q: Czy składujecie opakowania przeznaczone do kontaktu z żywnością?
+A: Tak. Opakowania takie jak pudełka na pizzę i pojemniki na wynos składujemy na paletach jako towar niespożywczy. Ewentualne szczególne wymagania dotyczące składowania prosimy podać w zapytaniu ofertowym.
+Q: Czy jest minimalny wolumen składowania opakowań?
+A: Nie ma stałego minimum. Operacje paletowe oceniamy indywidualnie, dlatego prosimy o podanie szacowanej liczby palet i typowego rytmu zamówień Twoich klientów.
+Q: Czy możecie prowadzić stany opakowań na poziomie partii?
+A: Tak. Stany opakowań mogą być prowadzone na poziomie partii w Mintsoft WMS, co wspiera identyfikowalność i scenariusze wycofania, a alerty niskiego stanu pomagają uzupełnić zapas, zanim restauracjom zabraknie towaru.
+Q: Czy możecie zaimportować opakowania wyprodukowane za granicą?
+A: Tak. Arca Trade Group, operator LondraDepo, może zorganizować transport i brytyjską odprawę celną opakowań wyprodukowanych za granicą, a następnie towar jest składowany na paletach w Essex.
+
+## Magazyn i dystrybucja części samochodowych w UK
+URL: https://www.londradepo.com/pl/branze/czesci-samochodowe
+English version: https://www.londradepo.com/en/industries/automotive-parts
+Summary: Magazyn w UK dla części OEM i aftermarket: składowanie według SKU, kontrola uszkodzeń ze zdjęciami, ochronne pakowanie i dostawy do dealerów następnego dnia.
+Short answer: Części samochodowe są trudne w składowaniu i łatwo je uszkodzić: zderzaki i panele są duże, lakierowane powierzchnie się rysują, a liczba SKU sięga tysięcy. LondraDepo składuje w Essex części OEM i aftermarket oraz materiały tapicerskie według SKU, fotografuje ich stan przy przyjęciu i wydaniu, pakuje je ochronnie i wysyła z dostawą na następny dzień lub w 2 dni do dealerów, warsztatów i klientów internetowych w UK.
+Q: Czy składujecie duże części samochodowe?
+A: Tak. Składujemy części każdej wielkości, w tym przednie i tylne zderzaki oraz panele drzwi, wykorzystując systemy regałów paletowych i półkowych w naszym magazynie w Essex.
+Q: Jak chronicie lakierowane części przed uszkodzeniem?
+A: Każda część jest wizualnie sprawdzana i fotografowana przy przyjęciu oraz rejestrowana w systemie, a do wysyłki pakujemy ją w piankę, folię bąbelkową i sztywne kartony.
+Q: Czy dostarczacie części do warsztatów i dealerów w całym UK?
+A: Tak. Z Essex dostarczamy części do dealerów, warsztatów i klientów internetowych w całej Wielkiej Brytanii, z opcją dostawy na następny dzień lub w ciągu 2 dni.
+Q: Czy możecie sprowadzić dla nas części z zagranicy?
+A: Tak. Arca Trade Group, operator LondraDepo, może zorganizować transport międzynarodowy i odprawę celną, albo Twój własny spedytor może dostarczyć części bezpośrednio do naszego magazynu.
+Q: Czy części OEM i aftermarket są składowane oddzielnie?
+A: Tak. Części składujemy według SKU na paletach i półkach, a zapas OEM i aftermarket trzymamy oddzielnie, aby do każdego zamówienia dealera, warsztatu lub klienta internetowego trafił właściwy numer części.
+
+## Wejście na rynek brytyjski bez własnego magazynu
+URL: https://www.londradepo.com/pl/wejscie-na-rynek-brytyjski
+English version: https://www.londradepo.com/en/uk-market-entry
+Summary: Jak zagraniczne marki wchodzą na rynek UK z zewnętrznym magazynem: wybór modelu sprzedaży, import, start od jednej palety i wzrost do pełnych kontenerów.
+Short answer: Aby sprzedawać w Wielkiej Brytanii, nie potrzebujesz własnego magazynu, personelu ani floty. Firmy z zagranicy mogą wysłać towar do LondraDepo w Essex, odprawić go i składować, a od pierwszego dnia zaopatrywać brytyjskich klientów hurtowych, kupujących online lub Amazon. Jeden z naszych klientów z branży spożywczej zaczął od jednej palety testowej, a dziś wysyła sześć kontenerów 40ft high-cube miesięcznie.
+Q: Czy do sprzedaży w UK potrzebuję brytyjskiej spółki?
+A: Niekoniecznie. Wiele firm z zagranicy sprzedaje w Wielkiej Brytanii z numerem GB EORI i zewnętrznym magazynem. Właściwa struktura zależy od modelu sprzedaży i sytuacji VAT, dlatego warto zasięgnąć porady specjalisty.
+Q: Od jakiego najmniejszego wolumenu mogę zacząć?
+A: Nie ma stałego minimum. Test z wysyłką paletową lub częściowym ładunkiem to częsty pierwszy krok, zanim firma przejdzie na regularne pełne kontenery do Wielkiej Brytanii.
+Q: Czy pomagacie w oznakowaniu na rynek UK i kodach towarowych?
+A: Tak. Udzielamy wskazówek operacyjnych dotyczących oznakowania w UK i wstępnie sprawdzamy kody towarowe, a zespół celny Arca Trade Group doradza w klasyfikacji. Ostateczna zgodność pozostaje obowiązkiem importera.
+Q: Czy oferujecie doradztwo przy wejściu na rynek?
+A: Tak. Wsparcie przy wstępnym planie operacyjnym, modelu magazynu i fulfillmentu, konfiguracji marketplace'ów i dystrybucji w UK jest dostępne i wyceniane osobno od usług magazynowych.
+Q: Czy mogę przetestować rynek brytyjski przed dużymi zamówieniami?
+A: Tak. Bez stałego minimum możesz zacząć od jednej palety testowej. Producent tortilli z naszych studiów przypadków wszedł do UK w ten sposób, a dziś wysyła sześć kontenerów 40ft high-cube miesięcznie.
+
+## Logistyka z portu do magazynu: Felixstowe, Tilbury
+URL: https://www.londradepo.com/pl/lokalizacje/logistyka-port-magazyn
+English version: https://www.londradepo.com/en/locations/port-to-warehouse-logistics
+Summary: Logistyka z portów Felixstowe, London Gateway i Tilbury do magazynu w Essex: odległości drogowe, odprawa celna, transport, rozładunek i dystrybucja w UK.
+Short answer: Nasz magazyn w Unit 19 Arterial Park w Rayleigh (SS6 7FY) nie znajduje się w porcie, ale leży blisko trzech dużych portów: London Gateway jest około 13 mil drogą, port Tilbury około 16 mil, a port Felixstowe około 62 mil. Kontenery przypływające do każdego z nich można odprawić, przewieźć do Rayleigh, rozładować i składować albo od razu wysłać do klientów w Wielkiej Brytanii.
+Q: Jak daleko jest magazyn od poszczególnych portów kontenerowych w UK?
+A: Drogą z Rayleigh w Essex do DP World London Gateway jest około 13 mil, do portu Tilbury około 16 mil, a do portu Felixstowe około 62 mil. London Gateway i Tilbury to około 20 minut autem, Felixstowe około 1¼ godziny.
+Q: Czy magazyn znajduje się w porcie?
+A: Nie. Nasz magazyn jest w Rayleigh w Essex, około 13 mil od London Gateway i 16 mil od Tilbury. Kontenery są przewożone z portu do naszego obiektu, gdzie odbywa się rozładunek.
+Q: Czy organizujecie transport z Felixstowe, Tilbury lub London Gateway?
+A: Tak. Arca Trade Group, operator LondraDepo, może zorganizować odprawę celną i transport kontenera z portu, a alternatywnie towar może do nas dostarczyć Twój spedytor.
+Q: Czy możecie rozładować kontener w porcie?
+A: Nie. Rozładunek odbywa się w naszym magazynie w Rayleigh, gdzie towar można od razu składować i realizować z niego zamówienia bez dodatkowego przeładunku.
+Q: Kto rezerwuje termin dostawy do magazynu?
+A: Termin dostawy rezerwuje przewoźnik lub spedytor po awizacji. Prześlij numer kontenera, ETA, listę pakunkową i liczbę kartonów dla każdego SKU, aby można było zaplanować rozładunek z wyprzedzeniem.
+
+## Rodzaje kontenerów: 20ft, 40ft i 40ft HC
+URL: https://www.londradepo.com/pl/rodzaje-kontenerow
+English version: https://www.londradepo.com/en/shipping-container-types
+Summary: Kontenery 20ft, 40ft i 40ft high-cube w porównaniu: typowa objętość, liczba palet, FCL czy LCL oraz rozładunek w naszym magazynie w Essex pod Londynem.
+Short answer: Większość frachtu morskiego do Wielkiej Brytanii płynie w trzech rozmiarach kontenerów suchych: 20ft, 40ft i 40ft high-cube (40HC). Kontener 20ft ma typową objętość wewnętrzną ok. 33 m³ i mieści na podłodze ok. 10 standardowych palet brytyjskich; 40ft ma ok. 67 m³ i mieści ok. 20 palet; 40ft high-cube ma tę samą podłogę, ale jest ok.
+Q: Czym różni się kontener 40ft od 40ft high-cube?
+A: Kontener 40ft high-cube ma tę samą podłogę co standardowy 40ft, ale jest około 30 cm wyższy, więc jego typowa objętość wewnętrzna wynosi około 76 m³ wobec około 67 m³. Pasuje do lekkich, dużych kartonów; ciężkie towary zwykle wcześniej osiągają limit wagi.
+Q: Ile palet mieści kontener 20ft?
+A: Na podłodze kontenera 20ft mieści się w jednej warstwie około 10 standardowych palet brytyjskich (1200 × 1000 mm), a w kontenerze 40ft lub 40ft high-cube około 20. Rzeczywista liczba zależy od rozmiaru palet, wysokości i sposobu załadunku.
+Q: Kiedy wysyłać FCL zamiast LCL?
+A: Porównaj cenę LCL za Twoje metry sześcienne z pełnym kontenerem 20ft, gdy przesyłka osiąga około połowy kontenera 20ft, czyli mniej więcej 15 m³. Powyżej tej objętości FCL jest często tańszy, a towar płynie zaplombowany. LondraDepo przyjmuje w Essex zarówno FCL, jak i LCL.
+Q: Czy LondraDepo rozładowuje kontenery z towarem luzem?
+A: Tak. LondraDepo rozładowuje kontenery 20ft, 40ft i 40ft high-cube z kartonami luzem lub na paletach w magazynie w Rayleigh w Essex, liczy kartony według listy pakunkowej, fotografuje widoczne uszkodzenia i paletyzuje towar do składowania.
+Q: Ile mil dzieli magazyn w Rayleigh od portów kontenerowych?
+A: Magazyn LondraDepo w Rayleigh w Essex leży około 13 mil drogą od DP World London Gateway, 16 mil od portu Tilbury i 62 mile od portu Felixstowe, więc transport kontenera z portu jest krótki.
+
+## Magazyn blisko London Gateway i Tilbury
+URL: https://www.londradepo.com/pl/magazyn-london-gateway-tilbury
+English version: https://www.londradepo.com/en/london-gateway-tilbury-warehousing
+Summary: Magazyn w Essex 13 mil od London Gateway i 16 mil od Tilbury: rozładunek kontenerów, palety od 3,50 £ + VAT tygodniowo, fulfillment i dystrybucja w UK.
+Short answer: Magazyn LondraDepo w Rayleigh w Essex leży około 13 mil (21 km) drogą od DP World London Gateway i 16 mil (26 km) od portu Tilbury, czyli około 20 minut autem od każdego z nich. Kontenery przypływające do obu portów na Tamizie można odprawić, przewieźć na krótkim odcinku do naszego obiektu, rozładować, policzyć i zarejestrować w stanach, a następnie składować od 3,50 £ + VAT za paletę tygodniowo lub wysłać dalej do klientów w UK. Magazyn nie znajduje się w porcie i nie jest składem celnym: towar składujemy po odprawie celnej.
+Q: Jak daleko jest magazyn od London Gateway?
+A: Magazyn w Rayleigh leży około 13 mil (21 km) drogą od DP World London Gateway, co przy płynnym ruchu oznacza około 20 minut jazdy samochodem osobowym.
+Q: Jak daleko jest magazyn od portu Tilbury?
+A: Około 16 mil (26 km) drogą, czyli około 20 minut autem przy płynnym ruchu. Ciężarówki z kontenerami potrzebują na ten odcinek więcej czasu.
+Q: Czy magazyn blisko London Gateway jest składem celnym?
+A: Nie. LondraDepo nie jest składem celnym. Towar z London Gateway lub Tilbury jest odprawiany przez brytyjskie służby celne, zanim trafi do składowania w Rayleigh.
+Q: Czy odbieracie kontenery z London Gateway lub Tilbury?
+A: Tak. Arca Trade Group, operator LondraDepo, może zorganizować odprawę celną i transport z obu portów, a alternatywnie Twój spedytor może dostarczyć kontener do naszego magazynu.
+Q: Co się dzieje po przypłynięciu kontenera do London Gateway lub Tilbury?
+A: Po złożeniu zgłoszenia importowego i zwolnieniu kontenera przewoźnik przywozi go 13–16 mil do Rayleigh. Rozładowujemy go, liczymy towar według listy pakunkowej, fotografujemy widoczne uszkodzenia i rejestrujemy stany w Mintsoft WMS.
+
+## Magazyn dla portu Felixstowe w Essex
+URL: https://www.londradepo.com/pl/magazyn-port-felixstowe
+English version: https://www.londradepo.com/en/felixstowe-port-warehousing
+Summary: Kontenery z Felixstowe: transport ok. 62 mil do magazynu w Essex, rozładunek, palety od 3,50 £ + VAT tygodniowo, fulfillment i dystrybucja w całym UK.
+Short answer: Felixstowe to największy port kontenerowy w Wielkiej Brytanii, do którego zawija wiele serwisów oceanicznych z Azji. Magazyn LondraDepo nie znajduje się w porcie: leży w Rayleigh w Essex, około 62 mil (99 km) drogą, czyli około 1¼ godziny autem. Kontenery przypływające do Felixstowe można odprawić, przewieźć do naszego obiektu, rozładować i zarejestrować w stanach, a następnie składować od 3,50 £ + VAT za paletę tygodniowo, realizować z nich zamówienia lub dystrybuować w całej Wielkiej Brytanii; Londyn jest oddalony o około 37 mil. Nie jesteśmy składem celnym, więc towar składujemy po odprawie.
+Q: Jak daleko jest magazyn od Felixstowe?
+A: Z portu Felixstowe do Rayleigh w Essex jest około 62 mil (99 km) drogą, czyli około 1¼ godziny autem przy płynnym ruchu. Ciężarówki z kontenerami potrzebują więcej czasu.
+Q: Czy wasz magazyn znajduje się w porcie Felixstowe?
+A: Nie. Nasz magazyn jest w Rayleigh w Essex. Kontenery są przewożone z Felixstowe do naszego obiektu, gdzie odbywa się rozładunek, składowanie i realizacja zamówień.
+Q: Czy oferujecie składowanie w składzie celnym dla kontenerów z Felixstowe?
+A: Nie. LondraDepo nie jest składem celnym. Towar z Felixstowe musi przejść brytyjską odprawę celną, zanim zostanie u nas składowany, a zgłoszenie może złożyć Arca Trade Group lub Twoja agencja.
+Q: Czy zorganizujecie transport i odprawę z Felixstowe?
+A: Tak. Arca Trade Group, operator LondraDepo, może zorganizować odprawę celną i transport z Felixstowe, a alternatywnie Twój własny spedytor może dostarczyć kontener do naszego magazynu.
+Q: Dlaczego wybrać magazyn w Essex dla kontenerów z Felixstowe?
+A: Magazyn w Essex sprawdza się u importerów, których zapas obsługuje też klientów w Londynie i na południowym wschodzie, e-commerce, Amazon lub hurt, ponieważ towar jest rozładowywany raz w Rayleigh, około 37 mil od centrum Londynu.
+
+## Centra Amazon w UK: kody i odległości
+URL: https://www.londradepo.com/pl/centra-amazon-w-uk
+English version: https://www.londradepo.com/en/amazon-uk-fulfilment-centres
+Summary: Kody i lokalizacje centrów logistycznych Amazon w UK, od LCY2 Tilbury i LCY1 Londyn po MAN1, z odległościami od naszego magazynu FBA prep i zasadami dostaw.
+Short answer: Amazon prowadzi centra logistyczne (fulfilment centres) w całej Wielkiej Brytanii, a każde z nich ma kod, np. LCY2 (Tilbury, Essex), LCY1 (wschodni Londyn), LTN1 (Bedfordshire), BHX1 (Staffordshire) czy MAN1 (lotnisko Manchester). Nie wybierasz centrum samodzielnie: Amazon przypisuje je w planie wysyłki w Seller Central, czasem dzieląc jeden plan na kilka lokalizacji.
+Q: Czym różni się magazyn Amazon od centrum logistycznego (fulfilment centre)?
+A: Fulfilment centre to nazwa, jaką Amazon nadaje magazynom przyjmującym, składującym i wysyłającym towar sprzedawców FBA. Sieć Amazon obejmuje też inne obiekty, np. sortownie i stacje doręczeń, które nie przyjmują zapasu sprzedawców, dlatego towar FBA wysyłaj tylko do centrum wskazanego w planie wysyłki.
+Q: Gdzie znajdują się centra logistyczne Amazon w Wielkiej Brytanii?
+A: Centra Amazon w UK są rozmieszczone w Anglii, Szkocji i Walii, np. LCY2 w Tilbury, LCY1 we wschodnim Londynie, LTN1 w Bedfordshire, EUK5 w Peterborough, BHX1 w Staffordshire, MAN1 przy lotnisku Manchester i CWL1 w Swansea. Dokładny adres podaje plan wysyłki.
+Q: Które centrum Amazon jest najbliżej Londynu?
+A: LCY1 znajduje się w Bow we wschodnim Londynie, a LCY2 w Tilbury w Essex nad Tamizą. Z magazynu LondraDepo w Rayleigh do LCY2 jest około 16 mil drogą, a do LCY1 około 32 mil, więc przygotowany u nas towar szybko trafia do obu.
+Q: Czy mogę wybrać centrum Amazon, do którego trafi mój towar?
+A: Nie. Amazon przypisuje centrum docelowe przy tworzeniu planu wysyłki w Seller Central i może podzielić jeden plan na kilka centrów. LondraDepo etykietuje i wysyła każdą część planu do centrum wskazanego przez Amazon.
+Q: Czy dostawa do centrum Amazon w UK wymaga rezerwacji terminu?
+A: Tak. Według brytyjskich wytycznych Amazon Freight dostawy do centrów Amazon odbywają się w umówionych terminach, a ładunki poza oknem lub niezgodne z rezerwacją mogą zostać odrzucone i obciążone kosztem ponownej dostawy. Przygotowujemy towar w Essex zgodnie z planem wysyłki przed odbiorem.
+Q: Jak daleko jest LondraDepo od Amazon LCY2 Tilbury?
+A: Z magazynu w Unit 19 Arterial Park, Rayleigh, Essex SS6 7FY do obiektu Amazon LCY2 w Tilbury jest około 16 mil (25 km) drogą, czyli około 20 minut autem, według routingu drogowego z listopada 2026.
+
+## Studia przypadków: magazyn i fulfillment w UK
+URL: https://www.londradepo.com/pl/studia-przypadkow
+English version: https://www.londradepo.com/en/case-studies
+Summary: Działające operacje magazynowania, fulfillmentu i dystrybucji w UK z magazynu w Essex: żywność, opakowania, motoryzacja, moda, gabaryty i elektronika.
+Short answer: To działające operacje prowadzone z magazynu LondraDepo w Rayleigh w Essex dla marek sprzedających w Wielkiej Brytanii. Każde studium pokazuje punkt wyjścia, sposób zorganizowania składowania, fulfillmentu i dystrybucji oraz efekty: od producenta żywności, który zaczął od jednej palety testowej, a dziś wysyła sześć kontenerów 40 ft high cube miesięcznie, po markę modową, która przeniosła realizację brytyjskich zamówień z Holandii do Essex.
+Q: Czy mogę zacząć od niewielkiej partii towaru?
+A: Tak. Nie ma stałego minimum. Producent tortilli opisany w tych studiach wszedł na rynek brytyjski z jedną paletą testową, a dziś wysyła sześć kontenerów 40 ft high cube miesięcznie.
+Q: Z jakimi branżami pracujecie?
+A: Działające operacje obejmują żywność i FMCG, opakowania B2B, części samochodowe i tapicerkę, modę, towary gabarytowe, takie jak bieżnie do chodzenia, oraz elektronikę użytkową. Więcej na stronie branż.
+Q: Czy ten sam zapas może obsługiwać klientów online i B2B?
+A: Tak. Kilka z opisanych operacji realizuje zamówienia e-commerce oraz dostawy hurtowe i dla klientów biznesowych z tego samego zapasu w magazynie w Essex.
+Q: Czy to prawdziwe operacje?
+A: Tak. Każde studium przypadku opisuje działającą operację prowadzoną z magazynu LondraDepo w Rayleigh w Essex: punkt wyjścia, organizację składowania, fulfillmentu i dystrybucji oraz efekty.
+Q: Jak uruchomić podobną operację?
+A: Opisz produkt, przewidywane wolumeny i kanały sprzedaży w formularzu zapytania. Możesz zacząć od jednej palety testowej, a zespół zaplanuje z Tobą przyjęcie towaru, składowanie i obieg zamówień.
+
+## Cruyff: fulfillment mody w UK – studium przypadku
+URL: https://www.londradepo.com/pl/studia-przypadkow/cruyff-fulfillment-uk
+English version: https://www.londradepo.com/en/case-studies/cruyff-uk-fulfilment
+Summary: Jak marka Cruyff przeniosła wysyłkę zamówień z Holandii do magazynu w Essex: przepakowanie, metki, fulfillment e-commerce i szybkie dostawy w UK.
+Short answer: Autor: Sertaç Yılmaz · Weryfikacja: Yusuf Barış, Operations Manager · Aktualizacja 10 listopada 2026 · 4 min czytania Cruyff, marka modowa kontynuująca dziedzictwo Johana Cruyffa, zamiast wysyłać zamówienia brytyjskich klientów z Holandii, realizuje je teraz z magazynu LondraDepo w Essex. Składowanie, przepakowanie, zarządzanie zapasem i fulfillment e-commerce odbywają się w jednym miejscu w UK, z opcją dostawy na następny dzień lub w 2 dni, a czas dostawy po zmianie skrócił się o około 80%.
+Q: Na czym polega fulfillment mody w Wielkiej Brytanii?
+A: Fulfillment mody w UK to składowanie produktów odzieżowych w brytyjskim magazynie, ich przepakowanie i etykietowanie oraz przygotowanie zamówień internetowych do dostawy do klientów.
+Q: Czy oferujecie przepakowanie odzieży?
+A: Tak. Zapewniamy pełne przepakowanie i ponowne etykietowanie, w tym opakowania w standardzie marki, wymianę metek i aktualizację etykiet produktów modowych.
+Q: Czy dostawa w UK na następny dzień jest możliwa?
+A: Tak. Z magazynu w Essex oferujemy dostawy na następny dzień lub w 2 dni na terenie całej Wielkiej Brytanii, korzystając z usług brytyjskich przewoźników.
+Q: Dlaczego Cruyff przeniósł fulfillment do magazynu w UK?
+A: Wysyłka zamówień brytyjskich klientów z Holandii wydłużała dostawy i podnosiła koszty. Po przeniesieniu fulfillmentu do magazynu LondraDepo w Essex marka oferuje dostawę na następny dzień lub w 2 dni, a dostawy w UK są o około 80% szybsze.
+Q: Jak kontrolowany jest zapas kolekcji Cruyff?
+A: Każdy artykuł jest liczony i sprawdzany przy przyjęciu, a marka otrzymuje regularne raporty stanów i ruchów magazynowych, ze śledzeniem zapasu na poziomie poszczególnych kolekcji.
+
+## Pudełka na pizzę: dystrybucja B2B w UK
+URL: https://www.londradepo.com/pl/studia-przypadkow/dystrybucja-pudelek-na-pizze
+English version: https://www.londradepo.com/en/case-studies/pizza-box-distribution-uk
+Summary: Jak producent pudełek na pizzę uruchomił składowanie paletowe w UK i stałe dostawy B2B do restauracji, ze śledzeniem partii i alertami niskiego stanu.
+Short answer: Autor: Sertaç Yılmaz · Weryfikacja: Yusuf Barış, Operations Manager · Aktualizacja 10 listopada 2026 · 3 min czytania Producent pudełek na pizzę z siedzibą w Turcji potrzebował niezawodnych, regularnych dostaw do restauracji w Wielkiej Brytanii. Zamiast wysyłać towar z Turcji przy każdym zamówieniu, trzyma teraz zapas na paletach w naszym magazynie w Essex i zaopatruje restauracje według stałego harmonogramu dostaw, z alertami o niskim stanie, zanim potrzebne będzie uzupełnienie.
+Q: Czym różni się fulfillment B2B od B2C?
+A: Fulfillment B2B obejmuje zamówienia hurtowe dla firm, z wysyłkami paletowymi, stałymi harmonogramami dostaw i rozliczeniem na fakturę. B2C to pojedyncze zamówienia dla klientów indywidualnych.
+Q: Czy możecie zorganizować regularne dostawy do restauracji?
+A: Tak. Układamy tygodniowe lub miesięczne programy dostaw na podstawie listy klientów i ustalonej częstotliwości, a zamówienia przygotowujemy z zapasu w Essex.
+Q: Czy składujecie opakowania na paletach?
+A: Tak. Produkty o dużej objętości, takie jak pudełka na pizzę i materiały opakowaniowe, składujemy na paletach, ewidencjonujemy w stanach i przygotowujemy do dystrybucji zgodnie z zamówieniami.
+Q: Co zmieniło się w operacji pudełek na pizzę?
+A: Producent przeszedł z osobnych wysyłek przy każdym zamówieniu na zapas paletowy w Essex i dostawy do restauracji według harmonogramu, co daje klientom stałe i przewidywalne zaopatrzenie.
+Q: Jak unikacie braków towaru u klientów B2B?
+A: Stany są kontrolowane na bieżąco, a po spadku poniżej ustalonego minimalnego progu klient otrzymuje alert, dzięki czemu może zaplanować uzupełnienie zapasu, zanim zabraknie towaru.
+
+## Tortille: magazyn i dystrybucja w UK
+URL: https://www.londradepo.com/pl/studia-przypadkow/dystrybucja-tortilli-uk
+English version: https://www.londradepo.com/en/case-studies/tortilla-uk-distribution
+Summary: Turecki producent tortilli wszedł na rynek brytyjski z jedną paletą i doszedł do sześciu kontenerów 40 ft miesięcznie dzięki magazynowi i dystrybucji w UK.
+Short answer: Autor: Sertaç Yılmaz · Weryfikacja: Yusuf Barış, Operations Manager · Aktualizacja 10 listopada 2026 · 4 min czytania Producent tortilli, lawaszu i płaskich chlebów z Ankary wszedł na rynek brytyjski z jedną paletą testową. Dzięki wsparciu LondraDepo w zakresie kodów taryfowych, brytyjskiego etykietowania, magazynowania, fulfillmentu i dystrybucji operacja urosła do sześciu kontenerów 40 ft high cube (40HC) miesięcznie.
+Q: Czy marka spożywcza może zacząć w UK od małego wolumenu?
+A: Tak. Ten producent zaczął od jednej palety i w miarę wzrostu popytu przeszedł na wolumeny kontenerowe, bez stałego minimum na starcie.
+Q: Czy pomagacie w etykietowaniu żywności na rynek brytyjski?
+A: Tak. Udzielamy wskazówek i wsparcia operacyjnego w zakresie brytyjskich wymogów etykietowania. Za prawną zgodność etykiety odpowiada jednak producent.
+Q: Czy pomagacie w klasyfikacji kodów taryfowych?
+A: Tak. Doradzamy przy przypisaniu produktów do właściwego kodu taryfowego, który jest podstawą importu do UK. Ostateczna klasyfikacja należy do importera.
+Q: Jak producent tortilli rozwinął sprzedaż w UK?
+A: Producent z Ankary wszedł do Wielkiej Brytanii z jedną paletą testową. Po uporządkowaniu kodów taryfowych, etykietowania, fulfillmentu i dystrybucji operacja urosła do sześciu kontenerów 40 ft high cube miesięcznie.
+Q: Jakimi kanałami trafiają tortille do klientów w UK?
+A: Z magazynu w Essex towar trafia zarówno do kanałów B2B, jak i B2C przez brytyjską sieć dystrybucji, a każda dostawa jest przyjmowana, liczona i sprawdzana jakościowo.
+
+## Części samochodowe OEM: magazyn w UK
+URL: https://www.londradepo.com/pl/studia-przypadkow/magazyn-czesci-samochodowych
+English version: https://www.londradepo.com/en/case-studies/uk-auto-parts-warehouse
+Summary: Producent części OEM i aftermarket: zapas w UK, kontrola uszkodzeń ze zdjęciami, ochronne pakowanie i dostawy na następny dzień do dealerów i warsztatów.
+Short answer: Autor: Sertaç Yılmaz · Weryfikacja: Yusuf Barış, Operations Manager · Aktualizacja 10 listopada 2026 · 3 min czytania Producent części OEM i aftermarket do samochodów luksusowych wysyłał każde brytyjskie zamówienie z Turcji. Dziś trzyma zapas w naszym magazynie w Essex, z kontrolą uszkodzeń dokumentowaną zdjęciami przy przyjęciu i wydaniu, i zaopatruje brytyjskich dealerów, warsztaty oraz klientów internetowych z dostawą na następny dzień lub w 2 dni.
+Q: Czy składujecie gabarytowe części, takie jak zderzaki i panele?
+A: Tak. Składujemy części samochodowe każdej wielkości, w tym przednie i tylne zderzaki oraz panele drzwi, na paletach i w regałach półkowych.
+Q: Czy sprawdzacie części pod kątem uszkodzeń?
+A: Tak. Każda część jest oglądana i fotografowana przy przyjęciu oraz rejestrowana w systemie. O każdym stwierdzonym uszkodzeniu informujemy klienta.
+Q: Czy dystrybuujecie części samochodowe w całej Wielkiej Brytanii?
+A: Tak. Z magazynu w Essex dostarczamy części do dealerów, warsztatów i klientów internetowych w całym UK, na następny dzień lub w 2 dni, z ochronnym pakowaniem lakierowanych i wrażliwych powierzchni.
+Q: Jak dokumentujecie stan części?
+A: Każda część jest sprawdzana i fotografowana przy przyjęciu i wydaniu, więc ma własną historię stanu. Takie śledzenie uszkodzeń ze zdjęciami ułatwia reklamacje i chroni lakierowane powierzchnie.
+Q: Jak rozdzielacie części OEM i aftermarket w magazynie?
+A: Części OEM i aftermarket są składowane osobno, według SKU, a klient otrzymuje okresowe raporty stanów oraz alerty, gdy zapas danej pozycji spada do niskiego poziomu.
+
+## Bieżnie do chodzenia: dystrybucja w UK
+URL: https://www.londradepo.com/pl/studia-przypadkow/dystrybucja-biezni-uk
+English version: https://www.londradepo.com/en/case-studies/uk-walking-treadmill-distribution
+Summary: Jak bieżnie do chodzenia dla seniorów i rehabilitacji są składowane, wysyłane do klientów online i dostarczane do dyskontów w UK z jednego magazynu w Essex.
+Short answer: Autor: Sertaç Yılmaz · Weryfikacja: Yusuf Barış, Operations Manager · Aktualizacja 10 listopada 2026 · 4 min czytania Bieżnie do chodzenia dla seniorów, osób w trakcie rehabilitacji i do ćwiczeń w domu są gabarytowe, wymagają ostrożnej obsługi i sprzedają się w dwóch zupełnie różnych kanałach. LondraDepo obsługuje oba z jednego magazynu w Essex: zamówienia internetowe są kompletowane, pakowane i wysyłane kurierem, a hurtowe dostawy paletowe trafiają do sieci dyskontów i sklepów w całej Wielkiej Brytanii.
+Q: Czy realizujecie zamówienia na produkty gabarytowe?
+A: Tak. Dla dużych i ciężkich produktów, takich jak bieżnie do chodzenia, zapewniamy dedykowaną przestrzeń składowania, procedury przyjęcia towaru i fulfillment zamówień.
+Q: Czy dostarczacie towar do sieci dyskontów?
+A: Tak. Organizujemy hurtowe wysyłki i dystrybucję do sieci dyskontów i sklepów detalicznych w całej Wielkiej Brytanii, z zapasu składowanego w Essex.
+Q: Czy dostarczacie do każdego regionu Wielkiej Brytanii?
+A: Tak. Z magazynu w Essex dostarczamy towar do wszystkich regionów Wielkiej Brytanii, koordynując przesyłki kurierskie i transport paletowy.
+Q: Jakie kanały obsługuje operacja bieżni?
+A: Operacja bieżni do chodzenia obsługuje sprzedaż internetową i dystrybucję detaliczną w całym UK z tego samego zapasu w Essex, w tym hurtowe dostawy do dyskontów i sieci sklepów.
+Q: Jak sprawdzane są dostawy bieżni do magazynu?
+A: Każda dostawa jest liczona, kontrolowana pod kątem uszkodzeń i weryfikowana według SKU, a stany są ewidencjonowane z alertami niskiego zapasu i okresowymi raportami.
+
+## Pokrowce samochodowe: magazyn w UK
+URL: https://www.londradepo.com/pl/studia-przypadkow/magazyn-pokrowcow-samochodowych
+English version: https://www.londradepo.com/en/case-studies/car-seat-cover-uk-warehousing
+Summary: Jak producent tapicerki samochodowej składuje ekoskórę i pokrowce w UK, wysyła zamówienia z eBay i Amazon tego samego dnia i zaopatruje brytyjskie warsztaty.
+Short answer: Autor: Sertaç Yılmaz · Weryfikacja: Yusuf Barış, Operations Manager · Aktualizacja 10 listopada 2026 · 3 min czytania Producent pokrowców na fotele samochodowe i ekoskóry nie nadążał z obsługą popytu brytyjskich warsztatów i dealerów, wysyłając wszystko z Turcji. Jego zapas znajduje się teraz w naszym magazynie w Essex, posortowany według rodzaju materiału; zamówienia internetowe z eBay, Amazon i własnej strony oraz zamówienia B2B od dealerów są realizowane tego samego dnia i wysyłane w całej Wielkiej Brytanii.
+Q: Czy składujecie rolki i materiały wielkoformatowe?
+A: Tak. Rolki ekoskóry i duże panele układamy prawidłowo na paletach, aby ograniczyć ryzyko uszkodzeń podczas składowania i obsługi.
+Q: Czy dostarczacie B2B do warsztatów w Wielkiej Brytanii?
+A: Tak. Z Essex dostarczamy towar do warsztatów, dealerów i tapicerów w całej Wielkiej Brytanii, na paletach lub w pojedynczych sztukach.
+Q: Czy obsługujecie zamówienia z kanałów internetowych?
+A: Tak. Realizujemy pojedyncze zamówienia z eBay, Amazon i Twojego sklepu internetowego, z wysyłką tego samego lub następnego dnia.
+Q: Jak szybko realizowane są zamówienia na pokrowce?
+A: W tej działającej operacji zamówienia z eBay, Amazon i od warsztatów B2B są realizowane tego samego dnia z magazynu w Essex, a rolki i materiały wielkoformatowe są składowane na paletach.
+Q: Co dzieje się, gdy w dostawie materiałów brakuje towaru?
+A: Przy każdej dostawie sprawdzamy ilość i stan materiałów, a wykryte braki zgłaszamy klientowi, zanim towar zostanie włączony do stanów magazynowych.
+
+## Przenośne stacje zasilania: operacja w UK
+URL: https://www.londradepo.com/pl/studia-przypadkow/stacje-zasilania-uk
+English version: https://www.londradepo.com/en/case-studies/portable-power-station-uk-operations
+Summary: Jak przenośne stacje zasilania są testowane, wyposażane w brytyjskie karty SIM, ładowane i wysyłane na następny dzień do użytkowników w UK z magazynu w Essex.
+Short answer: Autor: Sertaç Yılmaz · Weryfikacja: Yusuf Barış, Operations Manager · Aktualizacja 10 listopada 2026 · 3 min czytania Producent przenośnych stacji zasilania potrzebował do wejścia na rynek brytyjski czegoś więcej niż składowania: każde urządzenie wymagało testu elektrycznego, aktywacji brytyjskiej karty SIM i naładowania przed wysyłką. LondraDepo wykonuje te czynności w swoim magazynie w Essex i wysyła gotowe do użycia urządzenia do użytkowników końcowych w UK z dostawą na następny dzień.
+Q: Czy wykonujecie czynności techniczne przy elektronice?
+A: Tak. Zapewniamy aktywację kart SIM, kontrolę ładowania i techniczne przygotowanie przed wysyłką. Każde urządzenie przechodzi uzgodnione testy, zanim opuści magazyn.
+Q: Czy karty SIM można aktywować w magazynie w UK?
+A: Tak. Aktywację brytyjskich kart SIM przeprowadzamy w naszym magazynie, a każda aktywacja jest rejestrowana i raportowana klientowi.
+Q: Czy wysyłacie urządzenia bezpośrednio do użytkowników końcowych?
+A: Tak. Przygotowane urządzenia wysyłamy do użytkowników końcowych w całej Wielkiej Brytanii, z dostawą na następny dzień lub w 2 dni.
+Q: Jakie przygotowanie techniczne odbywa się przed wysyłką?
+A: Przenośne stacje zasilania są składowane w Essex i przed wysyłką przechodzą test elektryczny, aktywację karty SIM i ładowanie, a następnie trafiają do użytkowników w całym UK.
+Q: Co dzieje się z urządzeniami, które nie przejdą testu?
+A: Podczas kontroli elektrycznej sprawdzamy połączenie i pojemność ładowania każdej stacji, a wadliwe sztuki odkładamy osobno, aby nie trafiły do wysyłki do użytkowników końcowych.
+
+## Magazynowanie w UK: jak to działa (przewodnik)
+URL: https://www.londradepo.com/pl/blog/przewodnik-magazynowanie-uk
+English version: https://www.londradepo.com/en/blog/uk-warehousing-guide
+Summary: Magazynowanie w Wielkiej Brytanii dla firm z zagranicy: co obejmują usługi magazynowe, dla kogo są, jak działają krok po kroku i jak wybrać partnera.
+Short answer: Autor: Sertaç Yılmaz · Weryfikacja: Yusuf Barış, Operations Manager · Aktualizacja 10 listopada 2026 · 6 min czytania Usługi magazynowe w Wielkiej Brytanii polegają na bezpiecznym składowaniu towaru po jego przybyciu do UK i przygotowaniu go do wysyłki do klientów lub kanałów sprzedaży, gdy jest potrzebny. Większość operatorów łączy magazynowanie i logistykę (przyjęcie towaru, składowanie, fulfillment i dostawę) w ramach jednej umowy.
+Q: Dla kogo jest usługa magazynowa w Wielkiej Brytanii?
+A: Dla marek eksportujących do UK, sprzedawców e-commerce, hurtowników, producentów żywności i importerów, którzy potrzebują zapasu towaru na miejscu w Wielkiej Brytanii.
+Q: Czy przyjmujecie towar na paletach?
+A: Tak. LondraDepo oferuje składowanie palet dla firm, które go potrzebują, w cenie od 3,50 £ + VAT za paletę tygodniowo.
+Q: Czy tylko składujecie towar, czy także go dystrybuujecie?
+A: Jedno i drugie. Oprócz składowania LondraDepo zapewnia kompletację i pakowanie zamówień, fulfillment e-commerce, Amazon FBA prep oraz dystrybucję paczek i palet w UK, wszystko z jednego magazynu w Rayleigh w Essex.
+Q: Ile zwykle kosztuje magazynowanie w Wielkiej Brytanii?
+A: W LondraDepo standardowe składowanie palet zaczyna się od 3,50 £ + VAT za paletę tygodniowo, więc 10 palet przez 4 tygodnie to od 140 £ + VAT. Przyjęcie towaru, fulfillment i dostawa są wyceniane osobno.
+Q: Jak wybrać partnera magazynowego w UK?
+A: Porównaj operatorów pod kątem lokalizacji, wyceny poszczególnych pozycji, wglądu w stany, obsługiwanych kanałów sprzedaży, zwrotów, minimów, warunków umowy, ubezpieczenia, wsparcia celnego i referencji. Nasz przewodnik po wyborze 3PL zawiera 12 pytań do zadania.
+
+## Fulfillment w Wielkiej Brytanii: jak to działa
+URL: https://www.londradepo.com/pl/blog/czym-jest-fulfillment-w-uk
+English version: https://www.londradepo.com/en/blog/what-is-uk-fulfilment
+Summary: Czym jest fulfillment w UK, po co realizować zamówienia z brytyjskiego magazynu, czym 3PL różni się od Amazon FBA i jakie produkty pasują do tego modelu.
+Short answer: Autor: Sertaç Yılmaz · Weryfikacja: Yusuf Barış, Operations Manager · Aktualizacja 10 listopada 2026 · 5 min czytania Fulfillment to cały proces operacyjny od przyjęcia zamówienia e-commerce do doręczenia go klientowi: rejestracja zamówienia, pobranie produktu z magazynu, zapakowanie i wysyłka. Usługi fulfillmentu w UK realizuje centrum fulfillmentu w Wielkiej Brytanii, zwykle prowadzone przez zewnętrznego operatora logistycznego (3PL). Dzięki temu Twoi klienci otrzymują przesyłki w krajowych terminach, a Ty nie musisz prowadzić własnego magazynu.
+Q: Czym jest usługa fulfillmentu w Wielkiej Brytanii?
+A: Fulfillment to kompletacja, pakowanie i wysyłka zamówień klientów z magazynu. Operator fulfillmentu w UK przechowuje Twoje produkty w Wielkiej Brytanii i wysyła zamówienia do Twoich klientów.
+Q: Czy LondraDepo obsługuje Amazon FBA?
+A: Tak. W ramach usługi Amazon prep dostosowujemy produkty do wymogów FBA, etykietujemy je i wysyłamy do centrum logistycznego Amazon.
+Q: Czy realizujecie zamówienia z Shopify i Etsy?
+A: Tak. Zamówienia z Shopify, Etsy i innych platform e-commerce mogą zostać włączone do naszego procesu fulfillmentu w magazynie w Essex.
+Q: Jakie pozycje składają się na koszt fulfillmentu w UK?
+A: Składowanie w LondraDepo zaczyna się od 3,50 £ + VAT za paletę tygodniowo. Kompletacja i pakowanie, materiały, dostawa i zwroty są wyceniane za zamówienie i sztukę, według Twoich produktów i miesięcznych wolumenów.
+Q: Czym fulfillment różni się od magazynowania?
+A: Magazynowanie to przyjęcie i składowanie zapasu. Fulfillment dodaje to, co dzieje się po zamówieniu klienta: kompletację, pakowanie, etykietowanie, wysyłkę i zwroty. LondraDepo zapewnia oba z tego samego magazynu w Essex.
+
+## Amazon prep w UK: przewodnik krok po kroku
+URL: https://www.londradepo.com/pl/blog/amazon-prep-uk-przewodnik
+English version: https://www.londradepo.com/en/blog/amazon-prep-uk-guide
+Summary: Amazon FBA prep w Wielkiej Brytanii krok po kroku: po co jest prep, siedem etapów od przyjęcia towaru do przyjęcia w Amazon, etykiety FNSKU i sposób wyceny.
+Short answer: Autor: Sertaç Yılmaz · Weryfikacja: Yusuf Barış, Operations Manager · Aktualizacja 10 listopada 2026 · 7 min czytania Amazon prep to zestaw czynności przygotowawczych, które produkty muszą przejść, zanim centrum logistyczne Amazon UK je przyjmie: kontrola, etykietowanie FNSKU, sprawdzenie opakowań, plan wysyłki i dostawa. Współpraca z partnerem od prepu w UK zmniejsza ryzyko odrzucenia dostawy lub naliczenia dodatkowych opłat.
+Q: Czy mogę wysłać towar prosto z fabryki do waszego magazynu w UK?
+A: Tak. Możesz wysłać produkty bezpośrednio do naszego magazynu w Wielkiej Brytanii; wykonujemy prep i przekazujemy zapas dalej do centrum Amazon.
+Q: Czy pomagacie przy planach wysyłki do Amazon?
+A: Tak. Prowadzimy Cię przez tworzenie planów wysyłki w Amazon Seller Central i ustalamy, kto tworzy każdy plan, aby oznakowany towar trafił do centrum Amazon UK wskazanego przez Amazon.
+Q: Czy prep dla Amazon ma minimalną liczbę sztuk?
+A: Nie ma stałego minimum. Pracujemy zarówno z małymi partiami towaru, jak i z operacjami obejmującymi pełne kontenery przyjmowane w naszym magazynie w Essex.
+Q: Co się stanie, jeśli towar nie spełni zasad Amazon?
+A: Amazon może odrzucić towar niezgodny z jego wymogami etykietowania i pakowania albo naliczyć dodatkową opłatę za poprawki. Przygotowanie towaru w magazynie w UK przed dostawą pozwala usunąć problemy, zanim trafi on do Amazon.
+Q: Jak LondraDepo wycenia Amazon prep?
+A: Amazon FBA prep wyceniamy dla Twoich produktów, ilości i potrzebnych czynności, takich jak etykietowanie FNSKU, pakowanie ochronne i przygotowanie kartonów. Prześlij listę SKU i wolumeny, aby otrzymać wycenę.
+
+## Magazyn tranzytowy w UK (cross-docking)
+URL: https://www.londradepo.com/pl/blog/magazyn-tranzytowy-w-uk
+English version: https://www.londradepo.com/en/blog/what-is-a-uk-transit-warehouse
+Summary: Czym jest magazyn tranzytowy (cross-dock) w Wielkiej Brytanii, czym różni się od zwykłego składowania, jak przebiega proces i którym firmom się opłaca.
+Short answer: Autor: Sertaç Yılmaz · Weryfikacja: Yusuf Barış, Operations Manager · Aktualizacja 10 listopada 2026 · 5 min czytania Magazyn tranzytowy, nazywany też cross-dockiem, to punkt logistyczny, w którym towar zatrzymuje się na krótko, zanim zostanie podzielony i wysłany do różnych miejsc docelowych, zamiast trafić do długoterminowego składowania. W operacji tranzytowej w UK towar przyjeżdża do magazynu, jest sortowany i etykietowany, a następnie wysyłany do klientów w Wielkiej Brytanii, do innych magazynów lub do Amazon.
+Q: Czym różni się magazyn tranzytowy od standardowego?
+A: Magazyn tranzytowy przechowuje towar tymczasowo, zanim zostanie wysłany do kolejnego miejsca docelowego. Magazyn standardowy utrzymuje zapas długoterminowo i wydaje go zamówienie po zamówieniu.
+Q: Czy obsługę tranzytową można połączyć z Amazon prep?
+A: Tak. Gdy towar dotrze do naszego magazynu w Essex, obsługę tranzytową i przygotowanie do Amazon można zrealizować w ramach jednej operacji.
+Q: Czym jest cross-docking w Wielkiej Brytanii?
+A: Cross-docking to krótkie zatrzymanie towaru w magazynie w UK, jego posortowanie i oznakowanie, a potem wysyłka do klientów, innych magazynów lub Amazon zamiast długiego składowania. LondraDepo oferuje taką obsługę w Essex.
+Q: Komu opłaca się magazyn tranzytowy?
+A: Magazyn tranzytowy pasuje firmom, które wysyłają do UK duże dostawy hurtowe, ale sprzedają mniejsze ilości lub do wielu odbiorców, i chcą szybko podzielić towar i wysłać go dalej zamiast go składować.
+Q: Czy część towaru z tranzytu można zostawić na składzie?
+A: Tak. W LondraDepo część dostawy może od razu pojechać dalej w cross-dockingu, a reszta zostaje na składzie od 3,50 £ + VAT za paletę tygodniowo i jest wydawana w miarę napływu zamówień.
+
+## Ceny magazynowania w UK 2026: pełny przewodnik
+URL: https://www.londradepo.com/pl/blog/ceny-magazynowania-uk-2026
+English version: https://www.londradepo.com/en/blog/uk-warehousing-prices-2026
+Summary: Koszty magazynu i fulfillmentu w UK w 2026: palety od 3,50 £ + VAT tygodniowo, kompletacja, opakowania, dostawa, przyjęcie towaru i Amazon prep.
+Short answer: Autor: Sertaç Yılmaz · Weryfikacja: Yusuf Barış, Operations Manager · Aktualizacja 10 listopada 2026 · 7 min czytania Koszty magazynowania w Wielkiej Brytanii zależą od objętości i wagi towaru, czasu, przez jaki zostaje na stanie, lokalizacji magazynu, usług dodatkowych i częstotliwości dostępu do zapasu. W LondraDepo standardowe składowanie palet zaczyna się od 3,50 £ + VAT za paletę tygodniowo; fulfillment, przyjęcie towaru, opakowania i dostawa są wyceniane dodatkowo.
+Q: Jaka jest cena wyjściowa składowania palety w UK?
+A: Standardowe składowanie palet w LondraDepo zaczyna się od 3,50 £ + VAT za paletę tygodniowo. Usługi dodatkowe, takie jak obsługa, załadunek i koordynacja celna, są wyceniane osobno.
+Q: Jak oblicza się koszt fulfillmentu w UK?
+A: Koszt fulfillmentu to suma składowania, kompletacji i pakowania za zamówienie, materiałów opakowaniowych oraz dostawy do klienta; każdą z tych pozycji wycenia się osobno.
+Q: Czy mogę połączyć Amazon prep i fulfillment?
+A: Tak. LondraDepo oferuje Amazon prep i fulfillment 3PL w ramach jednej operacji, dzięki czemu nie płacisz za podwójną obsługę tego samego towaru.
+Q: Czego nie obejmuje cena składowania palety?
+A: Stawka za składowanie obejmuje tylko składowanie. Przyjęcie towaru, rozładunek kontenera, ponowna paletyzacja, etykietowanie, kompletacja zamówień, opakowania, dostawa, zwroty i odprawa celna są wyceniane osobno dla Twojej operacji.
+Q: Jak oszacować miesięczny koszt magazynowania?
+A: Pomnóż liczbę palet przez liczbę tygodni i tygodniową stawkę za paletę, a następnie dodaj pozycje za obsługę i dostawę wynikające z profilu Twoich zamówień.
+
+## Składowanie palet w UK: koszt palety w 2026
+URL: https://www.londradepo.com/pl/blog/koszty-skladowania-palet-uk
+English version: https://www.londradepo.com/en/blog/uk-pallet-storage-costs
+Summary: Składowanie palet w UK w 2026: od 3,50 £ + VAT za paletę tygodniowo, co wpływa na cenę, przykład dla 10 palet i sposoby na niższy rachunek.
+Short answer: Autor: Sertaç Yılmaz · Weryfikacja: Yusuf Barış, Operations Manager · Aktualizacja 10 listopada 2026 · 5 min czytania Składowanie palet w Wielkiej Brytanii rozlicza się zwykle za paletę tygodniowo. W LondraDepo stawka wyjściowa za standardową paletę to 3,50 £ + VAT tygodniowo i obejmuje samo składowanie; przyjęcie towaru, obsługa oraz kompletacja i pakowanie są rozliczane osobno. Na ostateczną cenę wpływają rozmiar i waga palety, rodzaj produktu, czas składowania i częstotliwość dostępu.
+Q: Jaki jest tygodniowy koszt składowania jednej palety w UK?
+A: W LondraDepo standardowe składowanie palet zaczyna się od 3,50 £ + VAT za paletę tygodniowo. Stawka obejmuje samo składowanie; obsługa, załadunek, rozładunek, ponowna paletyzacja i koordynacja celna są wyceniane osobno.
+Q: Od czego zależy cena składowania palet?
+A: Cena zależy od rozmiaru i wagi palety, rodzaju produktu, czasu składowania, częstotliwości dostępu do towaru, lokalizacji magazynu oraz ewentualnych usług dodatkowych, takich jak przepakowanie czy etykietowanie.
+Q: Czy do składowania palet w UK wymagana jest minimalna ilość?
+A: W LondraDepo nie ma stałego minimum. Warunki przyjęcia towaru potwierdzamy na etapie wyceny, na podstawie Twoich produktów i potrzeb operacyjnych.
+Q: Ile kosztuje składowanie 10 palet przez miesiąc?
+A: W LondraDepo 10 standardowych palet przez 4 tygodnie to od 140 £ + VAT, czyli 168 £ z 20% VAT, według opublikowanej stawki 3,50 £ + VAT za paletę tygodniowo.
+Q: Czy do składowania palet doliczany jest VAT?
+A: Tak. Ceny podajemy bez VAT, a VAT jest doliczany według brytyjskiej stawki podstawowej 20%. Firmy zarejestrowane jako podatnicy VAT w UK zwykle mogą go odzyskać.
+
+## Amazon FBA czy fulfillment 3PL w UK?
+URL: https://www.londradepo.com/pl/blog/amazon-fba-czy-fulfillment-uk
+English version: https://www.londradepo.com/en/blog/amazon-fba-vs-uk-fulfilment
+Summary: Amazon FBA a niezależny fulfillment 3PL w Wielkiej Brytanii: porównanie kosztów, kanałów, opakowań, kontroli i Prime oraz kiedy opłaca się model hybrydowy.
+Short answer: Autor: Sertaç Yılmaz · Weryfikacja: Yusuf Barış, Operations Manager · Aktualizacja 11 listopada 2026 · 9 min czytania Amazon FBA sprawdza się najlepiej u sprzedawców skupionych na kanale Amazon, którym zależy na Prime i minimum pracy operacyjnej. Niezależny fulfillment 3PL w UK jest bardziej elastyczny dla marek sprzedających w kilku kanałach, które chcą kontrolować zapas, opakowania i koszty. Wiele rozwijających się marek korzysta z obu rozwiązań w modelu hybrydowym.
+Q: Ile wynoszą opłaty Amazon FBA w Wielkiej Brytanii?
+A: Amazon publikuje opłaty FBA dla UK na swojej stronie z cennikiem: opłatę za fulfillment za sztukę według rozmiaru i wagi, miesięczne opłaty za składowanie, ewentualne opłaty za składowanie długoterminowe i prowizję od sprzedaży. Amazon regularnie je zmienia, więc sprawdź aktualną stronę i porównaj ze składowaniem 3PL od 3,50 £ + VAT za paletę tygodniowo w LondraDepo.
+Q: Czy zapas z centrum Amazon w UK można sprzedawać na rynkach Amazon w UE?
+A: Nie bez przekroczenia granicy celnej. Przesunięcie towaru z Wielkiej Brytanii do UE to eksport z UK i import do UE, ze zgłoszeniami, cłem i VAT. Większość sprzedawców utrzymuje osobne zapasy w UK i w UE; LondraDepo obsługuje stronę brytyjską z Essex.
+Q: Jaka jest przewaga fulfillmentu 3PL nad Amazon FBA?
+A: W fulfillmencie 3PL możesz obsługiwać kanały poza Amazon, takie jak własny sklep, Etsy i klienci B2B, z jednego magazynu, dopasować opakowania i uniknąć opłat Amazon za składowanie długoterminowe.
+Q: Czy można korzystać jednocześnie z Amazon FBA i 3PL w UK?
+A: Tak. W modelu hybrydowym część produktów jest w FBA, a część realizuje operator 3PL, co może pomóc zarówno w kosztach, jak i w zasięgu sprzedaży.
+Q: Czy LondraDepo wykonuje Amazon prep obok fulfillmentu?
+A: Tak. FBA prep (etykietowanie, pakowanie, foliowanie w woreczki i podobne czynności) oferujemy razem z naszą operacją fulfillmentu 3PL w magazynie w Essex.
+Q: Kiedy Amazon FBA jest lepszym wyborem?
+A: Amazon FBA sprawdza się, jeśli sprzedajesz głównie na Amazon i chcesz mieć Prime dzięki własnej sieci Amazon. Towar musi zostać przygotowany zgodnie z zasadami Amazon, zanim zostanie wysłany.
+Q: Kiedy lepszym wyborem jest 3PL w UK?
+A: Operator 3PL w UK pasuje sprzedawcom z kilkoma kanałami, takimi jak własny sklep, marketplace'y i hurt, bo jeden zapas w magazynie w UK obsłuży je wszystkie, a Ty zachowujesz kontrolę nad opakowaniami i zwrotami.
+
+## Przewodniki: magazyn, fulfillment i import do UK
+URL: https://www.londradepo.com/pl/blog
+English version: https://www.londradepo.com/en/blog
+Summary: Praktyczne przewodniki o sprzedaży w UK: koszty magazynowania i składowania palet, fulfillment, Amazon FBA prep, import, cło i VAT oraz wybór operatora 3PL.
+Short answer: Te przewodniki odpowiadają na pytania, które firmy z zagranicy zadają, zanim zaczną trzymać towar w Wielkiej Brytanii: jak działa magazynowanie w UK i ile kosztuje, jak przebiega fulfillment i Amazon FBA prep, jak importować towar i rozliczyć cło oraz VAT importowy, a także jak wybrać operatora 3PL w UK. Każdy powstał na podstawie doświadczeń z prowadzenia naszego magazynu w Rayleigh w Essex i odsyła do odpowiedniej usługi.
+Q: Od którego przewodnika zacząć, jeśli magazynowanie w UK to dla mnie nowość?
+A: Zacznij od przewodnika po magazynowaniu w UK, który wyjaśnia, jak to działa, potem przeczytaj przewodnik po cenach magazynowania w 2026 roku, a na koniec poradnik o wyborze 3PL z pytaniami do operatorów.
+Q: Który przewodnik wyjaśnia cło i VAT importowy?
+A: Przewodnik o kosztach importu do UK wyjaśnia cło, VAT importowy wynoszący zwykle 20% wartości z cłem i transportem oraz odroczone rozliczenie VAT. Przewodnik o imporcie omawia GB EORI, kody towarów i zgłoszenia celne.
+Q: Który przewodnik opisuje przygotowanie towaru do Amazon FBA?
+A: Przewodnik Amazon prep opisuje proces krok po kroku, a lista kontrolna Amazon FBA prep obejmuje przygotowanie sztuk, etykiety kartonów i dostawę do centrów Amazon w Wielkiej Brytanii.
+Q: Kto pisze przewodniki LondraDepo?
+A: Przewodniki powstają na podstawie doświadczeń z prowadzenia magazynu LondraDepo w Rayleigh w Essex. Autorem jest Sertaç Yılmaz, założyciel i współzałożyciel Arca Trade Group, a recenzentem kierownik operacyjny Yusuf Barış.
+Q: Który przewodnik pomoże porównać ceny składowania palet?
+A: Przewodnik o kosztach składowania palet w UK wyjaśnia, z czego składa się cena, a LondraDepo podaje stawkę od 3,50 £ + VAT za paletę tygodniowo, bez stałego minimum. Przyjęcie towaru i wysyłka są wyceniane osobno.
+
+## Import towarów do Wielkiej Brytanii: przewodnik
+URL: https://www.londradepo.com/pl/blog/import-do-uk-przewodnik
+English version: https://www.londradepo.com/en/blog/uk-importing-guide
+Summary: Jak importować towary do Wielkiej Brytanii: GB EORI, kody towarowe, taryfa celna UK, zgłoszenie w CDS, cło i VAT importowy, reguły pochodzenia i magazyn.
+Short answer: Autor: Sertaç Yılmaz · Weryfikacja: Yusuf Barış, Operations Manager · Aktualizacja 10 listopada 2026 · 9 min czytania Aby wwieźć towar do Wielkiej Brytanii, importer potrzebuje numeru GB EORI, prawidłowego kodu towarowego dla każdego produktu, zgłoszenia celnego złożonego w systemie CDS brytyjskiego urzędu HMRC oraz zapłaty lub rozliczenia cła i VAT importowego. Firmy z zagranicy zwykle współpracują ze spedytorem lub agencją celną oraz z magazynem w UK, który przyjmuje towar po odprawie.
+Q: Jaki numer EORI jest potrzebny przy imporcie do Wielkiej Brytanii?
+A: Importer potrzebuje numeru EORI zaczynającego się od GB. Bez niego nie można złożyć zgłoszenia importowego dla towarów wwożonych do Wielkiej Brytanii, dlatego warto złożyć wniosek na GOV.UK przed pierwszą dostawą.
+Q: Ile wynosi VAT importowy w Wielkiej Brytanii?
+A: VAT importowy jest zwykle naliczany według stawki podstawowej 20% od wartości towaru powiększonej o cło i koszty transportu do UK, choć niektóre towary mają stawki obniżone. Firmy zarejestrowane do VAT często mogą korzystać z odroczonego rozliczenia VAT.
+Q: Czy firma z zagranicy może być importerem towaru do UK?
+A: Tak. Firma zagraniczna z numerem GB EORI może działać jako importer, ale obowiązki w zakresie VAT i podatków zależą od sposobu sprzedaży w Wielkiej Brytanii. Przed pierwszą wysyłką warto skonsultować się z doradcą.
+Q: Kto może złożyć za mnie zgłoszenie celne w UK?
+A: Zgłoszenie importowe zwykle składa agencja celna lub spedytor. Arca Trade Group, operator LondraDepo, składa zgłoszenia importowe w imieniu klientów, a Ty możesz też skorzystać z własnej agencji celnej.
+Q: Czy LondraDepo może obsłużyć cały proces importu?
+A: Tak. Arca Trade Group, operator LondraDepo, może zorganizować transport i złożyć brytyjskie zgłoszenie celne, a LondraDepo rozładowuje, składuje i wysyła towar z magazynu w Essex. Możesz też korzystać z własnego spedytora.
+
+## Jak wybrać magazyn 3PL w UK: 12 pytań
+URL: https://www.londradepo.com/pl/blog/jak-wybrac-3pl-w-uk
+English version: https://www.londradepo.com/en/blog/how-to-choose-a-uk-3pl
+Summary: Wybierasz magazyn 3PL w Wielkiej Brytanii? 12 pytań o lokalizację, ceny, wgląd w stany, kanały sprzedaży, zwroty, minima, umowę, ubezpieczenie i odprawę.
+Short answer: Autor: Sertaç Yılmaz · Weryfikacja: Yusuf Barış, Operations Manager · Aktualizacja 10 listopada 2026 · 7 min czytania Wybierając magazyn 3PL (third-party logistics) w Wielkiej Brytanii, porównaj operatorów w dwunastu punktach: gdzie jest magazyn, jak wyceniana jest każda pozycja kosztów, jak widzisz swoje stany, jakie kanały sprzedaży obsługuje, jak działają zwroty, czy są minima, jakie są warunki umowy i wypowiedzenia, ubezpieczenie, wsparcie w transporcie i odprawie celnej, komunikacja, referencje oraz czy można odwiedzić magazyn.
+Q: Czym jest magazyn 3PL?
+A: Magazyn 3PL (third-party logistics) przechowuje Twój zapas i w Twoim imieniu przyjmuje dostawy, kompletuje i pakuje zamówienia, wysyła je oraz obsługuje zwroty, więc nie potrzebujesz własnego magazynu ani pracowników.
+Q: Jakie informacje wysłać operatorowi 3PL, aby otrzymać dokładną wycenę?
+A: Podaj rodzaj i wymiary produktów, liczbę SKU, liczbę palet lub kartonów w zapasie, miesięczną liczbę zamówień i średnią liczbę sztuk w zamówieniu, kanały sprzedaży, przewidywany odsetek zwrotów i regiony dostaw.
+Q: Czy najniższa stawka składowania oznacza najlepszą ofertę?
+A: Niekoniecznie. Składowanie, przyjęcie towaru, kompletacja i pakowanie, opakowania, dostawa i zwroty są zwykle wyceniane osobno, dlatego porównuj miesięczną sumę kosztów dla swoich rzeczywistych wolumenów.
+Q: Czy warto odwiedzić magazyn 3PL przed wyborem?
+A: Tak, jeśli to możliwe. Wizyta lub wideoprezentacja pokazuje regały, porządek i zabezpieczenia oraz pozwala poznać zespół, który będzie na co dzień obsługiwał Twój towar.
+Q: Jakie warunki umowy z 3PL warto sprawdzić?
+A: Sprawdź długość umowy, okres wypowiedzenia i sposób wydania towaru w razie rezygnacji, a także ewentualne minimalne opłaty miesięczne i zakres ubezpieczenia Twojego towaru w magazynie.
+
+## Koszty importu do UK: cło, VAT i logistyka
+URL: https://www.londradepo.com/pl/blog/koszty-importu-do-uk
+English version: https://www.londradepo.com/en/blog/uk-import-costs
+Summary: Ile kosztuje import do Wielkiej Brytanii: transport, odprawa celna, cło według kodu towarowego, 20% VAT importowy, dowóz z portu, rozładunek i składowanie.
+Short answer: Autor: Sertaç Yılmaz · Weryfikacja: Yusuf Barış, Operations Manager · Aktualizacja 10 listopada 2026 · 7 min czytania Koszt importu towarów do Wielkiej Brytanii składa się z dwóch części. Opłaty państwowe to cło, zależne od kodu towarowego i pochodzenia produktu, oraz VAT importowy, zwykle 20% wartości towaru powiększonej o cło i transport do UK.
+Q: Jaka stawka VAT importowego obowiązuje w Wielkiej Brytanii?
+A: VAT importowy jest zwykle naliczany według stawki podstawowej 20% od wartości towaru powiększonej o cło i koszty transportu do UK. Niektóre towary objęte są stawką 5% lub 0%.
+Q: Jak oblicza się cło w Wielkiej Brytanii?
+A: Cło to procent wartości celnej, określony przez kod towarowy produktu w brytyjskiej taryfie. Towary spełniające reguły pochodzenia z umowy handlowej UK mogą korzystać z obniżonej lub zerowej stawki, jeśli importer ma dowód pochodzenia.
+Q: Na czym polega odroczone rozliczenie VAT (postponed VAT accounting)?
+A: Pozwala importerom zarejestrowanym do VAT rozliczyć VAT importowy w deklaracji VAT zamiast płacić go na granicy, co poprawia płynność finansową firmy przy każdej dostawie do Wielkiej Brytanii.
+Q: Ile do kosztów importu dodaje magazyn w UK?
+A: W LondraDepo składowanie zaczyna się od 3,50 £ + VAT za paletę tygodniowo. Rozładunek, przyjęcie towaru, fulfillment i dostawę wyceniamy osobno, według Twoich wolumenów i produktów.
+Q: Czy magazyn lub agencja celna stają się importerem towaru?
+A: Nie. Cło płaci i VAT importowy rozlicza importer (importer of record), a nie magazyn. Korzystanie z LondraDepo lub usług celnych Arca Trade Group nie czyni ich importerem Twojego towaru.
+
+## Amazon FBA prep: lista kontrolna dla UK
+URL: https://www.londradepo.com/pl/blog/lista-kontrolna-amazon-fba-prep
+English version: https://www.londradepo.com/en/blog/amazon-fba-prep-checklist
+Summary: Lista kontrolna Amazon FBA prep dla sprzedawców w UK: plan wysyłki, etykiety FNSKU, zaklejanie kodów, opakowania, zestawy, etykiety kartonów, wysyłka.
+Short answer: Autor: Sertaç Yılmaz · Weryfikacja: Yusuf Barış, Operations Manager · Aktualizacja 10 listopada 2026 · 5 min czytania Zanim towar trafi do brytyjskich centrów logistycznych Amazon, każda sztuka musi być możliwa do zidentyfikowania i zapakowana zgodnie z zasadami Amazon: utwórz plan wysyłki w Seller Central, oznacz każdą sztukę kodem FNSKU, zaklej inne skanowalne kody kreskowe, zapakuj produkty tak, by dotarły nieuszkodzone, oznacz zestawy, opisz etykietą każdy karton i dostarcz towar do centrum wskazanego przez Amazon.
+Q: Na czym polega przygotowanie towaru do Amazon FBA?
+A: To etykietowanie, pakowanie i przygotowanie produktów, których Amazon wymaga przed przyjęciem ich do swoich centrów logistycznych, np. etykiety FNSKU, opakowania ochronne i etykiety na kartonach.
+Q: Czy każda sztuka potrzebuje etykiety FNSKU?
+A: Zwykle tak. Każda sztuka potrzebuje kodu kreskowego Amazon, najczęściej FNSKU, chyba że produkt może korzystać z kodu kreskowego producenta. Sprawdź ustawienia produktu w Seller Central przed wysyłką.
+Q: Czy magazyn w UK może wykonać za mnie FBA prep?
+A: Tak. LondraDepo przyjmuje Twój zapas w Essex, przygotowuje go zgodnie z wymaganiami Amazon i dostarcza do wskazanego centrum logistycznego Amazon w Wielkiej Brytanii.
+Q: Czy zasady przygotowania towaru w Amazon się zmieniają?
+A: Tak. Amazon aktualizuje wymagania dotyczące przygotowania i pakowania, więc przed wysyłką sprawdzaj bieżące zasady w Seller Central dla każdego produktu, nawet jeśli wysyłałeś już podobny towar.
+Q: Czy zapas przygotowany do FBA może obsługiwać też inne kanały?
+A: Tak. W LondraDepo ten sam zapas, z którego przygotowujemy dostawy do Amazon FBA, może obsługiwać zamówienia Shopify, Amazon FBM i zamówienia hurtowe wysyłane z magazynu w Essex.
+
+## Amazon private label czy wholesale: magazyn w UK
+URL: https://www.londradepo.com/pl/blog/amazon-private-label-i-wholesale-uk
+English version: https://www.londradepo.com/en/blog/amazon-private-label-wholesale-uk
+Summary: Jak sprzedawcy Amazon private label, wholesale i arbitrage dostarczają towar do UK, co robi dla nich magazyn prep i jak planować składowanie i partie FBA.
+Short answer: Autor: Sertaç Yılmaz · Weryfikacja: Yusuf Barış, Operations Manager · Aktualizacja 13 listopada 2026 · 6 min czytania Sprzedawcy Amazon działają w trzech głównych modelach i każdy z nich dostarcza towar do magazynu w UK inaczej. Sprzedawcy private label importują własne produkty markowe, często całymi kontenerami, więc potrzebują rozładunku, etykiet FNSKU i składowania, a do Amazon wysyłają towar partiami.
+Q: Czym różni się Amazon private label od wholesale?
+A: Sprzedawcy private label sprzedają własną markę, produkowaną na zamówienie przez producenta, i zwykle importują ją kontenerami. Sprzedawcy wholesale kupują istniejące marki od dystrybutorów i odsprzedają je w Amazon, zwykle otrzymując mieszane palety z wieloma SKU.
+Q: Czy produkty wholesale potrzebują etykiet FNSKU?
+A: To zależy od oferty. Niektóre oferty wholesale mogą korzystać z kodu kreskowego producenta, inne wymagają etykiety FNSKU na każdej sztuce; ustawienie wybiera się w Seller Central. LondraDepo etykietuje każde SKU według Twoich instrukcji.
+Q: Czy mogę składować kontener private label w UK i wysyłać go do Amazon partiami?
+A: Tak. LondraDepo rozładowuje kontenery w Rayleigh w Essex, składuje zapas od 3,50 £ + VAT za paletę tygodniowo i przygotowuje partie do Amazon w miarę sprzedaży, więc wolno rotujący towar nie zalega w magazynach Amazon.
+Q: Czy LondraDepo współpracuje ze sprzedawcami online arbitrage?
+A: LondraDepo jest przygotowane głównie na wolumeny kontenerowe, paletowe i kartonowe, co najlepiej pasuje do private label i wholesale. Towar z arbitrażu przychodzi jako wiele małych paczek, więc najpierw podaj tygodniową liczbę paczek, a potwierdzimy, czy to pasuje.
+Q: Który model Amazon pasuje do producenta z Polski lub innego kraju UE?
+A: Producent sprzedający własną markę w Amazon UK działa w modelu private label: importuje własne produkty kontenerami lub paletami, odprawia je w brytyjskim urzędzie celnym i trzyma zapas w magazynie w UK, takim jak LondraDepo, wysyłając partie do Amazon i obsługując inne kanały.
+
+## Dokumenty importowe UK: faktura, packing list, B/L
+URL: https://www.londradepo.com/pl/blog/dokumenty-importowe-uk
+English version: https://www.londradepo.com/en/blog/uk-import-documents
+Summary: Dokumenty do importu towarów do UK: faktura handlowa, lista pakunkowa, konosament lub lotniczy list przewozowy i dowód pochodzenia oraz darmowy szablon.
+Short answer: Autor: Sertaç Yılmaz · Weryfikacja: Yusuf Barış, Operations Manager · Aktualizacja 13 listopada 2026 · 6 min czytania Do importu towarów do Wielkiej Brytanii potrzebujesz czterech podstawowych dokumentów: faktury handlowej z wartością towaru, listy pakunkowej (packing list) z zawartością każdego kartonu, dokumentu przewozowego (konosamentu przy transporcie morskim lub lotniczego listu przewozowego przy lotniczym) oraz dowodu pochodzenia, jeśli ubiegasz się o niższą stawkę cła na podstawie umowy handlowej UK.
+Q: Jakie dokumenty są potrzebne do importu towarów do UK?
+A: Zwykle potrzebujesz faktury handlowej, listy pakunkowej, dokumentu przewozowego, takiego jak konosament lub lotniczy list przewozowy, oraz dowodu pochodzenia, jeśli ubiegasz się o niższą stawkę cła. Zgłoszenie importowe wymaga też numeru GB EORI, kodu towarowego i wartości towaru.
+Q: Czym różni się faktura handlowa od listy pakunkowej?
+A: Faktura handlowa pokazuje wartość towaru, na podstawie której urząd celny oblicza cło i VAT importowy. Lista pakunkowa pokazuje fizyczną zawartość każdego kartonu i palety, według której urząd celny i magazyn sprawdzają przesyłkę.
+Q: Czy przy imporcie z UE potrzebny jest dowód pochodzenia?
+A: Tylko jeśli chcesz skorzystać z preferencyjnej, niższej stawki cła na podstawie umowy handlowej. Według GOV.UK musisz mieć ważny dowód pochodzenia i przechowywać go wraz z dokumentacją co najmniej 4 lata. Bez niego obowiązuje standardowa stawka cła.
+Q: Dlaczego magazyn potrzebuje mojej listy pakunkowej?
+A: LondraDepo liczy każdą dostawę według listy pakunkowej po przybyciu do Rayleigh w Essex, zapisuje rozbieżności i przyjmuje towar do Mintsoft WMS według SKU. Lista z numerami kartonów, SKU i liczbą sztuk w kartonie przyspiesza przyjęcie i zwiększa jego dokładność.
+Q: Czy jest dostępny darmowy szablon listy pakunkowej?
+A: Tak. LondraDepo udostępnia darmowy szablon listy pakunkowej w pliku CSV, z kolumnami na numer kartonu, SKU, liczbę sztuk, wymiary, wagi, numer palety i kraj pochodzenia. Otwiera się w Excelu lub Arkuszach Google.
+
+## Skład celny czy magazyn towaru oclonego?
+URL: https://www.londradepo.com/pl/blog/sklad-celny-czy-towar-oclony
+English version: https://www.londradepo.com/en/blog/bonded-warehouse-vs-duty-paid-storage
+Summary: Czym jest skład celny, kiedy cło i VAT importowy są zawieszone i kiedy prostszy jest magazyn towaru oclonego z odroczonym rozliczeniem VAT.
+Short answer: Autor: Sertaç Yılmaz · Weryfikacja: Yusuf Barış, Operations Manager · Aktualizacja 11 listopada 2026 · 6 min czytania Skład celny (ang. bonded warehouse) to miejsce objęte procedurą składowania celnego (w UK: customs warehousing), zatwierdzone przez HMRC, w którym importowany towar można składować z zawieszonym cłem i VAT importowym; należności powstają dopiero przy dopuszczeniu towaru do obrotu w UK, a towar ponownie wywieziony ze składu może ich nigdy nie zapłacić.
+Q: Co to jest skład celny?
+A: Skład celny (ang. bonded warehouse, w terminologii HMRC customs warehouse) to zatwierdzone miejsce, w którym importowany towar jest składowany z zawieszonym cłem i VAT importowym. Należności powstają przy dopuszczeniu towaru do obrotu w UK i nie są należne, jeśli towar zostanie ponownie wywieziony.
+Q: Czy angielskie „bonded warehouse” oznacza skład celny?
+A: Tak, w brytyjskiej praktyce. HMRC używa terminu customs warehousing dla procedury specjalnej prowadzonej przez zatwierdzonych i nadzorowanych przez siebie prowadzących skład. Bonded warehouse to potoczna nazwa tego samego, używana też dla towarów akcyzowych, np. alkoholu.
+Q: Czy LondraDepo oferuje składowanie w składzie celnym?
+A: Nie. LondraDepo w Rayleigh w Essex to magazyn towaru oclonego: towar przechodzi brytyjską odprawę celną, zanim go przyjmiemy. Arca Trade Group, operator LondraDepo, może przygotować zgłoszenie importowe i zorganizować odbiór z portu.
+Q: Czy potrzebuję składu celnego, aby odroczyć płatność VAT importowego?
+A: Zwykle nie. Według GOV.UK importerzy zarejestrowani do VAT w Wielkiej Brytanii mogą korzystać z odroczonego rozliczenia VAT, deklarując i odliczając VAT importowy w tej samej deklaracji, bez potrzeby uzyskiwania zgody. Skład celny służy głównie zawieszeniu cła.
+Q: Kiedy skład celny się opłaca?
+A: Skład celny warto rozważyć dla towarów z wysokimi stawkami cła, towarów akcyzowych takich jak alkohol, zapasu składowanego wiele miesięcy przed sprzedażą lub towarów, które mogą zostać ponownie wywiezione. Dla zapasu sprzedawanego w UK szybko po przybyciu magazyn towaru oclonego jest zwykle prostszy.
+
+## Incoterms przy imporcie do UK: EXW, FOB, DAP, DDP
+URL: https://www.londradepo.com/pl/blog/incoterms-import-do-uk
+English version: https://www.londradepo.com/en/blog/incoterms-for-uk-imports
+Summary: Incoterms 2020 przy wysyłce towarów do UK: kto płaci za transport, ubezpieczenie, odprawę, cło i VAT importowy przy regułach EXW, FCA, FOB, CIF, DAP i DDP.
+Short answer: Autor: Sertaç Yılmaz · Weryfikacja: Yusuf Barış, Operations Manager · Aktualizacja 11 listopada 2026 · 6 min czytania Incoterms to standardowe reguły handlowe Międzynarodowej Izby Handlowej (ICC), które określają, gdzie kończy się odpowiedzialność sprzedającego za towar, koszty i ryzyko, a zaczyna odpowiedzialność kupującego; obecna edycja, Incoterms 2020, obowiązuje od 1 stycznia 2020 r.
+Q: Czym są Incoterms?
+A: Incoterms to standardowe reguły handlowe Międzynarodowej Izby Handlowej (ICC), które określają, gdzie kończy się odpowiedzialność sprzedającego za dostawę, koszty i ryzyko, a zaczyna kupującego. Obecna edycja, Incoterms 2020, obowiązuje od 1 stycznia 2020 r.
+Q: Kto płaci brytyjskie cło i VAT przy FOB lub CIF?
+A: Kupujący. Przy FOB i CIF obowiązki sprzedającego kończą się po załadunku towaru na statek w porcie wyjścia, więc kupujący w UK odprawia towar w imporcie i płaci cło oraz VAT importowy lub korzysta z odroczonego rozliczenia VAT, jeśli jest zarejestrowany do VAT.
+Q: Czym różni się DAP od DDP?
+A: Przy DAP i DDP sprzedający dostarcza towar do nazwanego miejsca w Wielkiej Brytanii. Przy DAP kupujący odprawia towar w imporcie i płaci cło oraz VAT importowy; przy DDP robi to sprzedający, działając jako importer w UK lub wyznaczając importera.
+Q: Która reguła Incoterms jest najlepsza przy imporcie do UK?
+A: Wielu importerów w UK wybiera FOB dla frachtu morskiego lub FCA dla kontenerów przekazywanych na terminalu, bo kontrolują wtedy główny transport, port przybycia i agencję celną. Arca Trade Group, operator LondraDepo, może zorganizować transport i odprawę na tych warunkach.
+Q: Czy reguły FOB można używać w transporcie lotniczym lub drogowym?
+A: Nie. Zgodnie z regułami ICC Incoterms 2020 FOB, FAS, CFR i CIF są przeznaczone wyłącznie dla transportu morskiego i śródlądowego. Przy transporcie lotniczym lub drogowym stosuj np. FCA, CPT, CIP, DAP lub DDP.
+
+## Kontakt: magazyn LondraDepo w Essex
+URL: https://www.londradepo.com/pl/kontakt
+English version: https://www.londradepo.com/en/contact
+Summary: Skontaktuj się z LondraDepo: formularz wyceny, WhatsApp +44 7554 195190, e-mail support@londradepo.com i adres magazynu w Rayleigh, Essex SS6 7FY.
+Short answer: Najszybciej odpowiadamy przez WhatsApp pod numerem +44 7554 195190. Możesz też wysłać zapytanie ofertowe przez formularz, napisać na support@londradepo.com lub zadzwonić do biura Arca Trade Group w godzinach 07:45–17:30 czasu brytyjskiego. Zespół pracuje w języku angielskim i tureckim.
+Q: Jak najszybciej uzyskać odpowiedź?
+A: Najszybciej odpowiadamy przez WhatsApp pod numerem +44 7554 195190. Szczegółową wycenę przygotowujemy po otrzymaniu formularza z opisem produktu i wolumenu.
+Q: W jakich godzinach działa biuro?
+A: Biuro Arca Trade Group pracuje w godzinach 07:45–17:30 czasu brytyjskiego, w dni robocze, pod numerem +44 1268 203 283.
+Q: Czy mogę odwiedzić magazyn?
+A: Tak, po wcześniejszym umówieniu wizyty. Magazyn znajduje się pod adresem Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY.
+Q: W jakim języku mogę napisać?
+A: Możesz napisać po polsku lub po angielsku. Zespół w Wielkiej Brytanii pracuje w języku angielskim i tureckim, więc ofertę przygotowujemy po angielsku.
+
+## Polityka prywatności
+URL: https://www.londradepo.com/pl/polityka-prywatnosci
+English version: https://www.londradepo.com/en/privacy-policy
+Summary: Jak LondraDepo.com (Arca Trade Group Ltd) zbiera, wykorzystuje i chroni dane osobowe zgodnie z UK GDPR i PECR oraz jak skorzystać ze swoich praw.
+Short answer: Niniejsza polityka wyjaśnia, jak LondraDepo.com, prowadzone przez Arca Trade Group Ltd, zbiera i wykorzystuje dane osobowe, gdy odwiedzasz naszą stronę lub kontaktujesz się z nami, oraz jakie prawa przysługują Ci na podstawie UK GDPR. Wersją wiążącą jest wersja angielska. Administratorem danych jest Arca Trade Group Ltd (nr firmy 13247691, VAT GB353315322), spółka zarejestrowana w Anglii i Walii, prowadząca markę LondraDepo.com. Przestrzegamy UK GDPR, Data Protection Act 2018 oraz PECR.
+
+## Polityka cookies
+URL: https://www.londradepo.com/pl/polityka-cookies
+English version: https://www.londradepo.com/en/cookie-policy
+Summary: Jakie pliki cookie i zapisy w przeglądarce stosuje LondraDepo.com (niezbędne i analityczne), jak przechowujemy zgodę i jak zmienić ustawienia plików cookie.
+Short answer: Ta polityka wyjaśnia, czym są pliki cookie, jakich plików cookie używa LondraDepo.com i jak w każdej chwili zmienić swoje ustawienia. Wersją wiążącą jest wersja angielska. Pliki cookie to małe pliki tekstowe zapisywane przez przeglądarkę na Twoim urządzeniu. Służą do zapamiętywania ustawień, poprawnego działania strony i analizy korzystania z niej.
+
+## Regulamin usług
+URL: https://www.londradepo.com/pl/regulamin
+English version: https://www.londradepo.com/en/terms-and-conditions
+Summary: Ogólne warunki usług magazynowania, fulfillmentu, obsługi towaru, koordynacji odprawy celnej i dystrybucji świadczonych przez Arca Trade Group Ltd pod marką LondraDepo.
+Short answer: Niniejsze warunki określają ogólne zasady usług magazynowania, fulfillmentu, obsługi towaru, koordynacji odprawy celnej i dystrybucji świadczonych przez Arca Trade Group Ltd pod marką LondraDepo.com. Wersją wiążącą jest wersja angielska (Terms and Conditions). Usługi świadczy Arca Trade Group Ltd, spółka zarejestrowana w Anglii i Walii (nr firmy 13247691, VAT GB353315322; siedziba: Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY, Wielka Brytania).
+
+## Zapytanie ofertowe: magazyn w Wielkiej Brytanii
+URL: https://www.londradepo.com/pl/zapytanie-ofertowe
+English version: https://www.londradepo.com/en/request-a-quote
+Summary: Poproś o wycenę magazynowania, składowania palet, rozładunku kontenerów, fulfillmentu, Amazon FBA prep lub dystrybucji w UK. Palety od 3,50 £ + VAT tygodniowo.
+Short answer: Opisz, co chcesz składować, realizować lub dystrybuować w Wielkiej Brytanii. LondraDepo prowadzi magazyn pod adresem Unit 19 Arterial Park, Rayleigh, Essex. Składowanie standardowej palety zaczyna się od 3,50 £ + VAT tygodniowo; przyjęcie towaru, obsługę, fulfillment i dostawę wyceniamy dla Twojej operacji.
+Q: Czy wycena jest bezpłatna?
+A: Tak. Wycena LondraDepo jest bezpłatna i do niczego nie zobowiązuje. Wypełnij formularz z opisem produktu, wolumenu i usług, a zespół odpowie e-mailem z ofertą.
+Q: Jakie informacje są potrzebne do wyceny?
+A: Rodzaj i wymiary produktu, szacowana liczba palet lub kartonów, liczba zamówień miesięcznie, kanały sprzedaży i kraj nadania. Im więcej szczegółów, tym dokładniejsza wycena.
+Q: Czy jest minimalny wolumen do wyceny?
+A: Nie ma stałego minimum. Można zacząć od jednej palety testowej, tak jak jeden z producentów żywności opisanych w naszych studiach przypadków, i zwiększać wolumen.
+Q: Czy wycena może obejmować transport i odprawę celną?
+A: Tak. Arca Trade Group, operator LondraDepo, może wycenić transport międzynarodowy i brytyjską odprawę celną razem z magazynem; możesz też wycenić tylko magazyn.
+Q: W jakim języku mogę wypełnić formularz?
+A: Opis możesz napisać po polsku lub po angielsku. Zespół w Wielkiej Brytanii pracuje w języku angielskim i tureckim, więc ofertę przygotowujemy po angielsku.

@@ -22,24 +22,35 @@ const HERO_BOOKING = new Set([
   "/en/amazon-prep-uk", "/en/amazon-fulfilment-uk", "/en/amazon-seller-warehousing-uk", "/en/amazon-uk-fulfilment-centres", "/en/shopify-fulfilment-uk",
 ]);
 
+/** Pages that state the published pallet rate get it as Offer markup on their Service node. */
+const PALLET_OFFER = new Set([
+  "/en/uk-warehousing-pricing", "/en/pallet-storage", "/en/uk-warehousing", "/en/3pl-uk", "/en/uk-storage-cost-calculator",
+]);
+
 /** Highest-intent pages get the quote form inline (CRO plan, weeks 11–13). */
 const INLINE_FORM = new Set([
-  "/en/uk-import-logistics", "/en/container-unloading", "/en/uk-warehousing-pricing", "/en/pallet-storage", "/en/uk-warehousing",
+  "/en/3pl-uk", "/en/uk-import-logistics", "/en/container-unloading", "/en/uk-warehousing-pricing", "/en/pallet-storage", "/en/uk-warehousing",
   "/en/shopify-fulfilment-uk", "/en/uk-fulfilment", "/en/ecommerce-fulfilment", "/en/uk-ecommerce-logistics", "/en/pick-and-pack",
   "/en/amazon-fulfilment-uk", "/en/amazon-seller-warehousing-uk", "/en/amazon-prep-uk", "/en/amazon-uk-fulfilment-centres", "/en/uk-distribution",
   "/en/london-gateway-tilbury-warehousing", "/en/felixstowe-port-warehousing", "/en/uk-warehousing-for-turkish-exporters",
   "/en/case-studies", "/en/industries", "/en/blog",
+  "/pl/magazyn-dla-polskich-firm",
 ]);
 import HeaderEn from "@/components/HeaderEn";
 import FooterEn from "@/components/FooterEn";
 import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import { getEnPage } from "@/content/en";
+import { getPlPage } from "@/content/pl";
+import { VIEW, type ViewLocale } from "@/i18n/view";
+import { UI } from "@/i18n/ui";
+import { LOCALES, localeOf } from "@/lib/locales";
+import { pageSet } from "@/lib/i18n-pairs";
 import type { EnPage, Section } from "@/content/en/types";
 import { absolute } from "@/lib/i18n";
 import { SITE_URL } from "@/lib/site";
+import { palletOffer } from "@/lib/offers";
 
-const WHATSAPP = "https://wa.me/447554195190?text=Hello%2C%20I%27d%20like%20a%20warehousing%20quote.";
 const TEL = "tel:+447554195190";
 const MAPS = "https://maps.google.com/?q=Unit+19+Arterial+Park+Arterial+Road+Rayleigh+Essex+SS6+7FY";
 
@@ -52,17 +63,33 @@ function modifiedOf(page: EnPage): string {
   return page.article?.modified ?? page.modified ?? EN_PUBLISHED;
 }
 
-function formatDate(iso: string): string {
-  return new Date(`${iso}T12:00:00Z`).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
+/** Template language of a page (EN or PL). */
+function langOf(page: Pick<EnPage, "slug">): ViewLocale {
+  return localeOf(page.slug) === "pl" ? "pl" : "en";
+}
+
+/** English equivalent of a PL page (per-page settings below are keyed by the English slug). */
+function enKey(slug: string): string {
+  return localeOf(slug) === "pl" ? (pageSet(slug).en ?? slug) : slug;
+}
+
+/** Any template-language page by slug (parents and related links stay within the site's languages). */
+function getPage(slug: string): EnPage | undefined {
+  return getEnPage(slug) ?? getPlPage(slug);
+}
+
+function formatDate(iso: string, lang: ViewLocale = "en"): string {
+  return new Date(`${iso}T12:00:00Z`).toLocaleDateString(VIEW[lang].dateLocale, { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
 }
 
 function breadcrumbs(page: EnPage) {
-  const crumbs = [{ name: "Home", path: "/en" }];
+  const lang = langOf(page);
+  const crumbs: { name: string; path: string }[] = [{ name: VIEW[lang].home, path: LOCALES[lang].home }];
   if (page.parent) {
-    const parent = getEnPage(page.parent);
+    const parent = getPage(page.parent);
     if (parent) crumbs.push({ name: parent.label, path: parent.slug });
   }
-  if (page.slug !== "/en") crumbs.push({ name: page.label, path: page.slug });
+  if (page.slug !== LOCALES[lang].home) crumbs.push({ name: page.label, path: page.slug });
   return crumbs;
 }
 
@@ -76,7 +103,7 @@ function jsonLd(page: EnPage) {
       url,
       name: page.title,
       description: page.description,
-      inLanguage: "en",
+      inLanguage: LOCALES[langOf(page)].htmlLang,
       isPartOf: { "@id": `${SITE_URL}/en#website` },
       about: ORG,
       datePublished: page.article?.published ?? EN_PUBLISHED,
@@ -109,6 +136,7 @@ function jsonLd(page: EnPage) {
       provider: ORG,
       areaServed: { "@type": "Country", name: "United Kingdom" },
       url,
+      ...(PALLET_OFFER.has(enKey(page.slug)) ? { offers: palletOffer(langOf(page)) } : {}),
     });
   }
   if (page.kind === "home") {
@@ -118,7 +146,7 @@ function jsonLd(page: EnPage) {
       "@id": `${url}#article`,
       headline: page.h1,
       description: page.description,
-      inLanguage: "en",
+      inLanguage: LOCALES[langOf(page)].htmlLang,
       datePublished: EN_PUBLISHED,
       dateModified: modifiedOf(page),
       author: { "@type": "Organization", name: "Arca Trade Group Ltd", url: "https://arcatrade.co.uk/" },
@@ -132,7 +160,7 @@ function jsonLd(page: EnPage) {
       "@type": page.kind === "case" ? "Article" : "BlogPosting",
       headline: page.h1,
       description: page.description,
-      inLanguage: "en",
+      inLanguage: LOCALES[langOf(page)].htmlLang,
       datePublished: page.article.published,
       dateModified: page.article.modified,
       author: { "@type": "Person", name: "Sertaç Yılmaz", jobTitle: "Co-founder, Arca Trade Group" },
@@ -144,7 +172,7 @@ function jsonLd(page: EnPage) {
   return { "@context": "https://schema.org", "@graph": graph };
 }
 
-function SectionView({ s }: { s: Section }) {
+function SectionView({ s, lang }: { s: Section; lang: ViewLocale }) {
   const h2 = "h2" in s && s.h2 ? <h2 className="text-2xl font-bold text-[#0b2545] mb-4">{s.h2}</h2> : null;
   switch (s.type) {
     case "text":
@@ -248,7 +276,7 @@ function SectionView({ s }: { s: Section }) {
               <>
                 {" "}·{" "}
                 <a href={s.sourceHref} target="_blank" rel="noopener noreferrer" className="underline">
-                  {s.sourceLabel ?? "Source"}
+                  {s.sourceLabel ?? VIEW[lang].sourceLabel}
                 </a>
               </>
             )}
@@ -323,17 +351,22 @@ function SectionView({ s }: { s: Section }) {
 }
 
 export default function EnPageView({ page }: { page: EnPage }) {
+  const lang = langOf(page);
+  const v = VIEW[lang];
+  const WHATSAPP = UI[lang].sticky.href;
   const crumbs = breadcrumbs(page);
-  const related = (page.related ?? []).map((s) => getEnPage(s)).filter((p): p is EnPage => Boolean(p));
+  const related = (page.related ?? []).map((s) => getPage(s)).filter((p): p is EnPage => Boolean(p));
   const quote = ctaFor(page);
-  const inlineForm = INLINE_FORM.has(page.slug);
-  const cluster = clusterFor(page.slug);
-  const qHref = inlineForm ? "#quote" : quoteHref(quote.service, page.slug);
-  const cta = page.cta ?? { h2: "Get a UK warehousing quote", text: "Tell us your product, volumes and channels and we will prepare a tailored quote." };
+  const key = enKey(page.slug);
+  const inlineForm = INLINE_FORM.has(key);
+  // Cluster boxes are written in English only.
+  const cluster = lang === "en" ? clusterFor(page.slug) : undefined;
+  const qHref = inlineForm ? "#quote" : quoteHref(quote.service, page.slug, lang);
+  const cta = page.cta ?? v.ctaDefault;
 
   return (
     <>
-      <HeaderEn />
+      <HeaderEn lang={lang} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd(page)).replace(/</g, "\\u003c") }} />
       {page.faqs && <FaqJsonLd faqs={page.faqs} />}
       <main className="bg-white">
@@ -354,15 +387,15 @@ export default function EnPageView({ page }: { page: EnPage }) {
             <h1 className="text-3xl sm:text-4xl font-extrabold text-[#0b2545] leading-tight mb-5 max-w-3xl">{page.h1}</h1>
             {page.article && (
               <p className="text-sm text-slate-500 mb-4">
-                By Sertaç Yılmaz · Reviewed by Yusuf Barış, Operations Manager · Updated{" "}
-                <time dateTime={page.article.modified}>{formatDate(page.article.modified)}</time>
-                {" "}· {page.article.readMins} min read
+                {v.byline(page.article.modified, page.article.readMins)}{" "}
+                <time dateTime={page.article.modified}>{formatDate(page.article.modified, lang)}</time>
+                {" "}· {page.article.readMins} {v.readMins}
               </p>
             )}
-            {page.updated && <p className="text-sm text-slate-500 mb-4">Last updated: {page.updated}</p>}
+            {page.updated && <p className="text-sm text-slate-500 mb-4">{v.lastUpdated} {page.updated}</p>}
             {!page.updated && !page.article && (
               <p className="text-sm text-slate-500 mb-4">
-                Last updated: <time dateTime={modifiedOf(page)}>{formatDate(modifiedOf(page))}</time>
+                {v.lastUpdated} <time dateTime={modifiedOf(page)}>{formatDate(modifiedOf(page), lang)}</time>
               </p>
             )}
             {readable([page.lead]).map((t, i) => (
@@ -374,11 +407,11 @@ export default function EnPageView({ page }: { page: EnPage }) {
                   {quote.label}
                 </TrackedLink>
                 <TrackedLink kind="whatsapp" source="hero" href={WHATSAPP} className="bg-green-700 hover:bg-green-800 text-white font-semibold px-6 py-3 rounded-full transition">
-                  WhatsApp us
+                  {v.whatsapp}
                 </TrackedLink>
-                {HERO_BOOKING.has(page.slug) && (
+                {HERO_BOOKING.has(key) && (
                   <TrackedLink kind="booking" source="hero" href={bookingUrl("en", page.slug)} className="border border-[#0b2545] text-[#0b2545] font-semibold px-6 py-3 rounded-full hover:bg-[#0b2545] hover:text-white transition">
-                    Book a 15-minute call
+                    {v.book}
                   </TrackedLink>
                 )}
                 <TrackedLink kind="phone" source="hero" href={TEL} className="border border-[#0b2545] text-[#0b2545] font-semibold px-6 py-3 rounded-full hover:bg-[#0b2545] hover:text-white transition">
@@ -389,14 +422,14 @@ export default function EnPageView({ page }: { page: EnPage }) {
             </div>
             {page.kind !== "home" && page.kind !== "legal" && page.kind !== "contact" && (
               <div className="hidden lg:block">
-                <HeroArt theme={themeFor(page.slug, page.kind)} />
+                <HeroArt theme={themeFor(key, page.kind)} />
               </div>
             )}
             {page.kind === "home" && (
               <div className="mt-10 rounded-2xl overflow-hidden shadow-2xl lg:col-span-2">
                 <Image
                   src="/londradepo.jpeg"
-                  alt="LondraDepo UK warehouse and fulfilment centre in Rayleigh, Essex"
+                  alt={v.heroAlt}
                   width={2158}
                   height={1260}
                   sizes="(max-width: 1152px) 100vw, 1152px"
@@ -408,13 +441,13 @@ export default function EnPageView({ page }: { page: EnPage }) {
           </div>
         </div>
 
-        {(page.kind === "home" || page.slug === "/en/about-us") && <WarehouseGallery lang="en" />}
+        {lang === "en" && (page.kind === "home" || page.slug === "/en/about-us") && <WarehouseGallery lang="en" />}
 
         <div className="max-w-6xl mx-auto px-4 py-12">
           {page.note && <p className="mb-10 rounded-xl border border-amber-200 bg-amber-50 p-5 text-sm text-amber-900">{page.note}</p>}
           {page.facts && (
             <section aria-labelledby="facts-heading" className="mb-12 rounded-xl border border-slate-200 bg-slate-50 p-6">
-              <h2 id="facts-heading" className="text-lg font-bold text-[#0b2545] mb-3">At a glance</h2>
+              <h2 id="facts-heading" className="text-lg font-bold text-[#0b2545] mb-3">{v.atAGlance}</h2>
               <ul className="grid gap-2 sm:grid-cols-2 text-sm text-slate-700">
                 {page.facts.map((f) => (
                   <li key={f} className="flex gap-2.5">
@@ -428,7 +461,7 @@ export default function EnPageView({ page }: { page: EnPage }) {
 
           {page.sections.map((s, i) => (
             <div key={i}>
-              <SectionView s={s} />
+              <SectionView s={s} lang={lang} />
               {i === 0 && cluster && (
                 <nav aria-labelledby="cluster-heading" className="mb-12 rounded-xl border border-slate-200 p-6">
                   <h2 id="cluster-heading" className="text-lg font-bold text-[#0b2545] mb-4">{cluster.h2}</h2>
@@ -436,14 +469,14 @@ export default function EnPageView({ page }: { page: EnPage }) {
                     {cluster.items.map((c) =>
                       c.href === page.slug ? (
                         <li key={c.href} aria-current="page" className="rounded-lg border-2 border-[#0b2545] bg-slate-50 p-4">
-                          <span className="block font-semibold text-[#0b2545]">{c.title} <span className="text-xs font-normal text-slate-500">(this page)</span></span>
-                          <span className="block text-sm text-slate-600 mt-1">Best if: {c.fit}</span>
+                          <span className="block font-semibold text-[#0b2545]">{c.title} <span className="text-xs font-normal text-slate-500">{v.thisPage}</span></span>
+                          <span className="block text-sm text-slate-600 mt-1">{v.bestIf} {c.fit}</span>
                         </li>
                       ) : (
                         <li key={c.href}>
                           <Link href={c.href} className="block h-full rounded-lg border border-slate-200 p-4 hover:border-[#0b2545] transition">
                             <span className="block font-semibold text-[#0b2545]">{c.title} →</span>
-                            <span className="block text-sm text-slate-600 mt-1">Best if: {c.fit}</span>
+                            <span className="block text-sm text-slate-600 mt-1">{v.bestIf} {c.fit}</span>
                           </Link>
                         </li>
                       ),
@@ -457,22 +490,21 @@ export default function EnPageView({ page }: { page: EnPage }) {
           {inlineForm && (
             <section id="quote" aria-labelledby="quote-heading" className="mb-12 scroll-mt-24">
               <h2 id="quote-heading" className="text-2xl font-bold text-[#0b2545] mb-2">{quote.label}</h2>
-              <p className="text-slate-600 mb-4">Takes about two minutes. We reply by email with a tailored proposal.</p>
+              <p className="text-slate-600 mb-4">{v.inlineIntro}</p>
               <ul className="mb-5 grid gap-2 sm:grid-cols-2 text-sm text-slate-700">
-                <li className="flex gap-2"><span className="text-green-700" aria-hidden="true"><Emoji e="✓" /></span>Warehouse at Unit 19 Arterial Park, Rayleigh, Essex SS6 7FY</li>
-                <li className="flex gap-2"><span className="text-green-700" aria-hidden="true"><Emoji e="✓" /></span>Operated by Arca Trade Group Ltd (Company No. 13247691), BIFA member</li>
-                <li className="flex gap-2"><span className="text-green-700" aria-hidden="true"><Emoji e="✓" /></span>Storage from £3.50 + VAT per pallet per week</li>
-                <li className="flex gap-2"><span className="text-green-700" aria-hidden="true"><Emoji e="✓" /></span>English and Turkish spoken</li>
+                {v.trust.map((t) => (
+                  <li key={t} className="flex gap-2"><span className="text-green-700" aria-hidden="true"><Emoji e="✓" /></span>{t}</li>
+                ))}
               </ul>
-              <QuoteFormEn defaultService={quote.service} formId="en_inline_quote" />
+              <QuoteFormEn defaultService={quote.service} formId={`${lang}_inline_quote`} lang={lang} />
               <p className="mt-4 text-sm text-slate-600">
-                Prefer to talk first?{" "}
+                {v.preferTalk}{" "}
                 <TrackedLink kind="booking" source="inline_quote" href={bookingUrl("en", page.slug)} className="font-semibold text-[#0b2545] underline">
-                  Book a 15-minute call
+                  {v.book}
                 </TrackedLink>{" "}
-                or{" "}
+                {v.or}{" "}
                 <TrackedLink kind="whatsapp" source="inline_quote" href={WHATSAPP} className="font-semibold text-green-700 underline">
-                  message us on WhatsApp
+                  {v.messageWhatsapp}
                 </TrackedLink>
                 .
               </p>
@@ -481,7 +513,7 @@ export default function EnPageView({ page }: { page: EnPage }) {
 
           {!inlineForm && page.kind !== "legal" && page.kind !== "contact" && (
             <aside className="mb-12 flex flex-col sm:flex-row sm:items-center justify-between gap-4 rounded-xl border border-[#e63946]/30 bg-red-50 p-6">
-              <p className="font-semibold text-[#0b2545]">Tell us your product, volumes and channels. We will prepare a tailored proposal.</p>
+              <p className="font-semibold text-[#0b2545]">{v.midPage}</p>
               <TrackedLink kind="cta" source="mid_page" href={qHref} className="shrink-0 text-center bg-[#d62839] hover:bg-[#c1121f] text-white font-semibold px-6 py-3 rounded-full transition">
                 {quote.label}
               </TrackedLink>
@@ -490,36 +522,36 @@ export default function EnPageView({ page }: { page: EnPage }) {
 
           {page.kind === "contact" && (
             <section className="mb-12 grid gap-4 sm:grid-cols-3">
-              <TrackedLink kind="cta" source="contact_card" href="/en/request-a-quote?from=%2Fen%2Fcontact" className="rounded-xl border border-[#e63946] p-5 hover:bg-red-50 transition">
-                <h2 className="font-semibold text-[#0b2545] mb-1">Request a quote online</h2>
-                <p className="text-sm text-slate-600">Short form: service, product and volumes</p>
+              <TrackedLink kind="cta" source="contact_card" href={`${UI[lang].header.quoteHref}?from=${encodeURIComponent(page.slug)}`} className="rounded-xl border border-[#e63946] p-5 hover:bg-red-50 transition">
+                <h2 className="font-semibold text-[#0b2545] mb-1">{v.contact.quoteTitle}</h2>
+                <p className="text-sm text-slate-600">{v.contact.quoteText}</p>
               </TrackedLink>
               <TrackedLink kind="whatsapp" source="contact_card" href={WHATSAPP} className="rounded-xl border border-slate-200 p-5 hover:border-green-500 transition">
                 <h2 className="font-semibold text-[#0b2545] mb-1">WhatsApp</h2>
-                <p className="text-sm text-slate-600">+44 7554 195190 · fastest response</p>
+                <p className="text-sm text-slate-600">{v.contact.whatsappText}</p>
               </TrackedLink>
               <TrackedLink kind="phone" source="contact_card" href={TEL} className="rounded-xl border border-slate-200 p-5 hover:border-[#0b2545] transition">
-                <h2 className="font-semibold text-[#0b2545] mb-1">Phone</h2>
-                <p className="text-sm text-slate-600">+44 7554 195190 · English and Turkish</p>
+                <h2 className="font-semibold text-[#0b2545] mb-1">{v.contact.phoneTitle}</h2>
+                <p className="text-sm text-slate-600">{v.contact.phoneText}</p>
               </TrackedLink>
               <TrackedLink kind="email" source="contact_card" href="mailto:support@londradepo.com" className="rounded-xl border border-slate-200 p-5 hover:border-[#0b2545] transition">
-                <h2 className="font-semibold text-[#0b2545] mb-1">Email</h2>
-                <p className="text-sm text-slate-600">support@londradepo.com · replies during UK office hours</p>
+                <h2 className="font-semibold text-[#0b2545] mb-1">{v.contact.emailTitle}</h2>
+                <p className="text-sm text-slate-600">{v.contact.emailText}</p>
               </TrackedLink>
               <TrackedLink kind="phone" source="contact_card_office" href="tel:+441268203283" className="rounded-xl border border-slate-200 p-5 hover:border-[#0b2545] transition">
-                <h2 className="font-semibold text-[#0b2545] mb-1">Arca Trade Group office</h2>
-                <p className="text-sm text-slate-600">+44 1268 203 283 · Sales@arcatrade.co.uk · 07:45–17:30 UK time</p>
+                <h2 className="font-semibold text-[#0b2545] mb-1">{v.contact.officeTitle}</h2>
+                <p className="text-sm text-slate-600">{v.contact.officeText}</p>
               </TrackedLink>
               <a href={MAPS} target="_blank" rel="noopener noreferrer" className="rounded-xl border border-slate-200 p-5 hover:border-[#0b2545] transition sm:col-span-2">
-                <h2 className="font-semibold text-[#0b2545] mb-1">Warehouse address</h2>
-                <p className="text-sm text-slate-600">Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY · Open in Google Maps</p>
+                <h2 className="font-semibold text-[#0b2545] mb-1">{v.contact.addressTitle}</h2>
+                <p className="text-sm text-slate-600">{v.contact.addressText}</p>
               </a>
             </section>
           )}
 
           {page.faqs && (
             <section aria-labelledby="faq-heading" className="mb-12">
-              <h2 id="faq-heading" className="text-2xl font-bold text-[#0b2545] mb-4">Frequently asked questions</h2>
+              <h2 id="faq-heading" className="text-2xl font-bold text-[#0b2545] mb-4">{v.faq}</h2>
               <div className="divide-y divide-slate-200 rounded-xl border border-slate-200">
                 {page.faqs.map((f) => (
                   <div key={f.q} className="p-5">
@@ -533,7 +565,7 @@ export default function EnPageView({ page }: { page: EnPage }) {
 
           {related.length > 0 && (
             <nav aria-labelledby="related-heading" className="mb-12">
-              <h2 id="related-heading" className="text-xl font-bold text-[#0b2545] mb-4">Related pages</h2>
+              <h2 id="related-heading" className="text-xl font-bold text-[#0b2545] mb-4">{v.related}</h2>
               <ul className="flex flex-wrap gap-3">
                 {related.map((r) => (
                   <li key={r.slug}>
@@ -555,18 +587,18 @@ export default function EnPageView({ page }: { page: EnPage }) {
                   {quote.label}
                 </TrackedLink>
                 <TrackedLink kind="whatsapp" source="footer_cta" href={WHATSAPP} className="inline-block bg-green-700 hover:bg-green-800 text-white font-semibold px-7 py-3 rounded-full transition">
-                  Message us on WhatsApp
+                  {v.whatsappLong}
                 </TrackedLink>
                 <TrackedLink kind="booking" source="footer_cta" href={bookingUrl("en", page.slug)} className="inline-block border border-white/60 hover:bg-white/10 text-white font-semibold px-7 py-3 rounded-full transition">
-                  Book a 15-min call
+                  {v.bookShort}
                 </TrackedLink>
               </div>
             </section>
           )}
         </div>
       </main>
-      <FooterEn />
-      <StickyWhatsappCta lang="en" />
+      <FooterEn lang={lang} />
+      <StickyWhatsappCta lang={lang} />
     </>
   );
 }

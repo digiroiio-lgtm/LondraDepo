@@ -1,4 +1,5 @@
 import FaqJsonLd from "@/components/FaqJsonLd";
+import { ogLocale } from "@/lib/locales";
 import { GuideNextLinks, GuideQuote } from "@/components/GuideNext";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
     description: "Amazon FBA ve 3PL UK fulfillment karşılaştırması — hangisi daha avantajlı?",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    ...ogLocale("tr"),
     type: "article",
   },
   robots: { index: true, follow: true },

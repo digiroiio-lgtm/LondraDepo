@@ -52,9 +52,9 @@ export const servicePages: EnPage[] = [
     tr: "/ingiltere-depo",
     kind: "service",
     serviceType: "Warehousing",
-    title: "UK Warehousing Services – Essex Warehouse near London",
+    title: "UK Warehousing Services: Essex, near London",
     description:
-      "UK warehousing from Essex: goods-in, pallet and carton storage, Mintsoft WMS stock control, order fulfilment and UK-wide distribution. Pallet storage from £3.50 + VAT/week.",
+      "UK warehousing from Essex: goods-in, pallet and carton storage, Mintsoft WMS stock control, fulfilment and UK distribution. Pallets from £3.50 + VAT a week.",
     label: "UK Warehousing",
     eyebrow: "Essex, near London",
     h1: "UK Warehousing and Storage Services",
@@ -98,7 +98,7 @@ export const servicePages: EnPage[] = [
       { q: "Do you only store goods, or fulfil orders too?", a: "Both. We offer storage and full order fulfilment: when an order arrives we pick, pack, label and dispatch it to your UK customer." },
       { q: "How quickly can I start using the UK warehouse?", a: "Once you accept the quote, you can ship goods to Unit 19 Arterial Park, Rayleigh. Send the packing list and SKU details before arrival so goods-in can be planned and stock booked into Mintsoft WMS on arrival." },
     ],
-    related: ["/en/blog/how-to-choose-a-uk-3pl", "/en/storage-services", "/en/pallet-storage", "/en/container-unloading", "/en/uk-import-logistics", "/en/ecommerce-fulfilment", "/en/essex-warehouse", "/en/uk-warehousing-pricing", "/en/uk-warehousing-benefits", "/en/blog/uk-warehousing-guide", "/en/industries"],
+    related: ["/en/3pl-uk", "/en/blog/how-to-choose-a-uk-3pl", "/en/storage-services", "/en/pallet-storage", "/en/container-unloading", "/en/uk-import-logistics", "/en/ecommerce-fulfilment", "/en/essex-warehouse", "/en/uk-warehousing-pricing", "/en/uk-warehousing-benefits", "/en/blog/uk-warehousing-guide", "/en/industries"],
     cta: { h2: "Sell in the UK without your own warehouse", text: "Use our ready-made warehouse and team, and focus on sales." },
   },
   {
@@ -108,7 +108,7 @@ export const servicePages: EnPage[] = [
     serviceType: "Warehousing",
     title: "London Warehousing: Essex, 40 Minutes from London",
     description:
-      "Warehousing for London and the South East from Rayleigh, Essex: about 40 minutes from east London and 20–30 minutes from Tilbury on the M25 corridor. Pallets from £3.50 + VAT.",
+      "Warehousing for London and the South East from Rayleigh, Essex: about 40 minutes from east London on the M25 corridor. Pallet storage from £3.50 + VAT a week.",
     label: "London Warehousing",
     eyebrow: "Near London, Essex",
     h1: "London Warehousing on the M25 Corridor",
@@ -160,7 +160,7 @@ export const servicePages: EnPage[] = [
     serviceType: "Ecommerce logistics",
     title: "UK Ecommerce Logistics: Stock, Delivery & Returns",
     description:
-      "End-to-end UK ecommerce logistics from Essex: stock storage, Mintsoft WMS, pick and pack, shipping labels, UK delivery and returns for Shopify, Amazon FBM and other online channels.",
+      "End-to-end UK ecommerce logistics from Essex: storage, Mintsoft WMS, pick and pack, shipping labels, UK delivery and returns for Shopify, Amazon FBM and more.",
     label: "UK Ecommerce Logistics",
     h1: "UK Ecommerce Logistics: Planning Stock, Delivery and Returns",
     lead:
@@ -196,11 +196,11 @@ export const servicePages: EnPage[] = [
     tr: "/siparis-toplama-paketleme",
     kind: "service",
     serviceType: "Pick and pack",
-    title: "Pick and Pack Services in the UK",
+    title: "Pick and Pack Services UK: Priced per Order",
     description:
-      "UK pick and pack from our Essex warehouse: order picking, packing, shipping labels, order checks, returns processing and Mintsoft WMS stock sync. Priced per order.",
+      "Pick and pack services from our Essex 3PL warehouse: picking, packing, shipping labels, order checks, returns and Mintsoft stock sync, priced per order.",
     label: "Pick and Pack",
-    h1: "Pick and Pack Services in the UK",
+    h1: "Pick and Pack Services UK: Priced per Order",
     lead:
       "Pick and pack is the warehouse process of taking the right items off the shelf for an order (pick), packing them securely (pack) and preparing the parcel for dispatch. At LondraDepo, our Essex team picks, packs, labels and ships your online orders, with every movement updating stock in Mintsoft WMS.",
     facts: [
@@ -463,7 +463,7 @@ export const servicePages: EnPage[] = [
     modified: "2026-11-10",
     kind: "service",
     serviceType: "Fulfilment",
-    title: "UK Fulfilment Services for Brands Importing into the UK",
+    title: "UK Fulfilment Services for Importing Brands",
     description:
       "UK fulfilment services from Essex: order picking, branded packing, Amazon FBA prep, Shopify and Etsy order handling, returns management and regular stock reporting.",
     label: "UK Fulfilment",
@@ -496,7 +496,7 @@ export const servicePages: EnPage[] = [
       { q: "Is there a minimum stock level for fulfilment?", a: "There is no fixed minimum stock requirement. We offer flexible solutions based on your needs." },
       { q: "How is UK fulfilment priced?", a: "Storage starts from £3.50 + VAT per pallet per week. Goods-in, pick and pack, packaging, delivery and returns are quoted for your products, monthly orders and average items per order." },
     ],
-    related: ["/en/shopify-fulfilment-uk", "/en/blog/how-to-choose-a-uk-3pl", "/en/pallet-storage", "/en/amazon-prep-uk", "/en/uk-warehousing-benefits", "/en/blog/what-is-uk-fulfilment"],
+    related: ["/en/3pl-uk", "/en/shopify-fulfilment-uk", "/en/blog/how-to-choose-a-uk-3pl", "/en/pallet-storage", "/en/amazon-prep-uk", "/en/uk-warehousing-benefits", "/en/blog/what-is-uk-fulfilment"],
   },
   {
     slug: "/en/pallet-storage",
@@ -505,7 +505,7 @@ export const servicePages: EnPage[] = [
     serviceType: "Pallet storage",
     title: "Pallet Storage UK – From £3.50 per Pallet per Week",
     description:
-      "UK pallet storage in Essex near London from £3.50 + VAT per pallet per week. Container and part-load receiving, secure storage, weekly reporting and B2B dispatch preparation.",
+      "Pallet storage in Essex near London from £3.50 + VAT per pallet per week: container and part-load receiving, secure storage, weekly reports and B2B dispatch.",
     label: "Pallet Storage",
     h1: "UK Pallet Storage in Essex",
     lead:
@@ -623,7 +623,7 @@ export const servicePages: EnPage[] = [
     modified: "2026-11-10",
     kind: "service",
     serviceType: "Storage",
-    title: "UK Storage Services: Goods-in, Stock Control & Capacity",
+    title: "UK Storage Services: Goods-in and Stock Control",
     description:
       "UK storage services: pallet and carton goods-in, real-time stock tracking in Mintsoft WMS, FCL container unloading, and short or long-term warehouse capacity in Essex.",
     label: "Storage Services",
@@ -699,7 +699,7 @@ export const servicePages: EnPage[] = [
     tr: "/ellecleme",
     kind: "service",
     serviceType: "Cargo handling",
-    title: "Cargo Handling UK – Unloading, Repacking & Relabelling",
+    title: "Cargo Handling UK: Unloading, Repacking, Relabelling",
     description:
       "UK cargo handling in Essex: vehicle and container unloading, loading, pallet and carton handling, sorting, repacking, labelling and relabelling, and shipment preparation.",
     label: "Cargo Handling",
@@ -737,11 +737,11 @@ export const servicePages: EnPage[] = [
     tr: "/nakliye-dagitim",
     kind: "service",
     serviceType: "UK distribution",
-    title: "UK Distribution & Collection Services",
+    title: "UK Distribution Services: Pallet & Parcel Delivery",
     description:
-      "UK distribution coordination from Essex: collections from other UK locations, warehouse transfers, local delivery around London and Essex, and UK-wide pallet and parcel delivery.",
+      "UK distribution from our Essex warehouse: collections, warehouse transfers, local delivery around London and Essex, and UK-wide pallet and parcel delivery.",
     label: "UK Distribution",
-    h1: "UK Distribution and Collection Services",
+    h1: "UK Distribution Services: Collections, Pallet and Parcel Delivery",
     lead:
       "LondraDepo coordinates transport within the UK: collecting goods from other UK sites, moving stock between warehouses, local delivery around London and Essex, and UK-wide delivery to London, Birmingham, Manchester and beyond. There is no fixed minimum, from a single carton to full pallet loads.",
     sections: [
@@ -773,9 +773,9 @@ export const servicePages: EnPage[] = [
     modified: "2026-11-10",
     kind: "service",
     serviceType: "Ecommerce fulfilment",
-    title: "Ecommerce Fulfilment UK: From Online Order to Delivery",
+    title: "Ecommerce Fulfilment UK: Essex 3PL near London",
     description:
-      "Ecommerce fulfilment in the UK: order management, Mintsoft WMS stock tracking, pick and pack, shipping labels, packing, UK dispatch and returns handling from Essex.",
+      "Ecommerce fulfilment services in the UK from our Essex 3PL warehouse: Mintsoft WMS, pick and pack, packing, shipping labels, UK dispatch and returns handling.",
     label: "Ecommerce Fulfilment",
     h1: "Ecommerce Fulfilment in the UK: From Order to Doorstep",
     lead:
@@ -803,7 +803,7 @@ export const servicePages: EnPage[] = [
       { q: "How much does ecommerce fulfilment cost?", a: "Storage starts from £3.50 + VAT per pallet per week. Pick and pack, packaging, delivery and returns are quoted per order and item, based on your products and monthly order volume." },
       { q: "Do I need my own UK company for ecommerce fulfilment?", a: "Not necessarily. Many overseas sellers hold stock in a UK warehouse and sell to UK customers with their existing company and a GB EORI number. Take tax advice on the right structure for your business." },
     ],
-    related: ["/en/pick-and-pack", "/en/uk-ecommerce-logistics", "/en/shopify-fulfilment-uk", "/en/uk-warehousing-pricing", "/en/blog/how-to-choose-a-uk-3pl"],
+    related: ["/en/3pl-uk", "/en/pick-and-pack", "/en/uk-ecommerce-logistics", "/en/shopify-fulfilment-uk", "/en/uk-warehousing-pricing", "/en/blog/how-to-choose-a-uk-3pl"],
   },
   {
     slug: "/en/amazon-fulfilment-uk",

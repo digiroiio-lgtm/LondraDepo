@@ -1,4 +1,5 @@
 import Emoji from "@/components/visual/Emoji";
+import { ogLocale } from "@/lib/locales";
 import TrackedLink from "@/components/TrackedLink";
 import { bookingUrl } from "@/lib/booking";
 import FaqJsonLd from "@/components/FaqJsonLd";
@@ -36,7 +37,7 @@ export const metadata: Metadata = {
     description: "Amazon FBM UK: Essex depomuzdan Amazon siparişi karşılama. FBM vs FBA rehberi.",
     url: `${SITE_URL}/amazon-ingiltere-depo`,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    ...ogLocale("tr"),
     type: "website",
   },
 };

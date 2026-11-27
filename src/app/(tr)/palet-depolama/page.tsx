@@ -1,4 +1,6 @@
 import Icon, { iconFor } from "@/components/visual/Icon";
+import { ogLocale } from "@/lib/locales";
+import { palletOffer } from "@/lib/offers";
 import ProcessFlow from "@/components/visual/ProcessFlow";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import TrClusterNav from "@/components/TrClusterNav";
@@ -26,7 +28,7 @@ export const metadata: Metadata = {
       "UK'da palet bazında depolama. İthalatçılar ve toptancılar için maliyet kontrollü İngiltere pallet storage.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    ...ogLocale("tr"),
     type: "website",
   },
   robots: { index: true, follow: true },
@@ -50,6 +52,7 @@ const jsonLd = {
       description: "UK'da palet bazında depolama hizmeti. Toptancı, ithalatçı ve üreticiler için maliyet kontrollü pallet storage.",
       areaServed: { "@type": "Country", name: "United Kingdom" },
       url: PAGE_URL,
+      offers: palletOffer("tr"),
     },
   ],
 };

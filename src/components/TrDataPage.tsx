@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { ogLocale } from "@/lib/locales";
+import { palletOffer } from "@/lib/offers";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -25,7 +27,7 @@ export function trPageMetadata(p: TrPage): Metadata {
     title: p.title,
     description: p.description,
     alternates: trAlternates(p.path),
-    openGraph: { title: p.title, description: p.description, url: `${SITE_URL}${p.path}`, siteName: "LondraDepo.com", locale: "tr_TR", type: p.kind === "article" ? "article" : "website" },
+    openGraph: { title: p.title, description: p.description, url: `${SITE_URL}${p.path}`, siteName: "LondraDepo.com", ...ogLocale("tr"), type: p.kind === "article" ? "article" : "website" },
   };
 }
 
@@ -72,6 +74,7 @@ function jsonLd(p: TrPage) {
       provider: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
       areaServed: { "@type": "Country", name: "United Kingdom" },
       url,
+      ...(p.path === "/ingiltere-3pl" ? { offers: palletOffer("tr") } : {}),
     });
   }
   return { "@context": "https://schema.org", "@graph": graph };

@@ -1,4 +1,5 @@
 import Emoji from "@/components/visual/Emoji";
+import { ogLocale } from "@/lib/locales";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import RouteMap from "@/components/visual/RouteMap";
 import TrClusterNav from "@/components/TrClusterNav";
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
     description: "Londra yakını Essex depomuzda ürün depolama, stok yönetimi ve sipariş karşılama.",
     url: `${SITE_URL}/londra-depo`,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    ...ogLocale("tr"),
     type: "website",
   },
 };

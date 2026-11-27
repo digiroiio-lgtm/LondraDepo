@@ -73,10 +73,12 @@ const BY_SLUG: Record<string, Cta> = {
   "/en/blog/what-is-uk-fulfilment": FULFIL,
 };
 
-export function ctaFor(page: Pick<EnPage, "slug">): Cta {
-  return BY_SLUG[page.slug] ?? STORAGE;
+export function ctaFor(page: Pick<EnPage, "slug" | "quote">): Cta {
+  return page.quote ?? BY_SLUG[page.slug] ?? STORAGE;
 }
 
-export function quoteHref(service: QuoteService, from: string): string {
-  return `/en/request-a-quote?service=${service}&from=${encodeURIComponent(from)}`;
+/** Quote page link with the service preset and the page it came from, in the page's language. */
+export function quoteHref(service: QuoteService, from: string, lang: "en" | "pl" = "en"): string {
+  const base = lang === "pl" ? "/pl/zapytanie-ofertowe" : "/en/request-a-quote";
+  return `${base}?service=${service}&from=${encodeURIComponent(from)}`;
 }

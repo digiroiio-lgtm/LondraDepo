@@ -1,4 +1,6 @@
 import Emoji from "@/components/visual/Emoji";
+import { ogLocale } from "@/lib/locales";
+import { palletOffer } from "@/lib/offers";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -35,7 +37,7 @@ export const metadata: Metadata = {
     description: "UK depolama ve fulfillment maliyet kalemleri. Özel teklif için iletişime geçin.",
     url: `${SITE_URL}/ingiltere-depo-fiyatlari`,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    ...ogLocale("tr"),
     type: "website",
   },
 };
@@ -59,6 +61,7 @@ const jsonLd = {
         "İngiltere depo ve fulfillment hizmet fiyatları. Mal kabul, depolama, pick & pack, kargo ve iade için maliyet kalemleri.",
       areaServed: { "@type": "Country", name: "United Kingdom" },
       url: `${SITE_URL}/ingiltere-depo-fiyatlari`,
+      offers: palletOffer("tr"),
     },
   ],
 };

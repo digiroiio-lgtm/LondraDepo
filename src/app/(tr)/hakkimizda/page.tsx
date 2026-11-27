@@ -1,4 +1,5 @@
 import PageFaq from "@/components/PageFaq";
+import { ogLocale } from "@/lib/locales";
 import RelatedLinks from "@/components/RelatedLinks";
 import Emoji from "@/components/visual/Emoji";
 import type { Metadata } from "next";
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
     description: "Essex merkezli UK depo ve lojistik operasyonumuz hakkında bilgi alın.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    ...ogLocale("tr"),
     type: "website",
   },
   robots: { index: true, follow: true },
@@ -216,7 +217,7 @@ export default function HakkimizdaPage() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <PageFaq faqs={faqs} />
-        <RelatedLinks links={[{ href: "/essex-depo", label: "Essex depomuz" }, { href: "/case-studies", label: "Vaka çalışmaları" }, { href: "/sektorler", label: "Hizmet verdiğimiz sektörler" }, { href: "/turk-sirketleri-icin-ingiltere-depo", label: "Türk şirketleri için İngiltere depo" }, { href: "/ingiltere-depo-fiyatlari", label: "Fiyatlar" }, { href: "/teklif-al", label: "Teklif al", note: "24 saat içinde dönüş" }]} />
+        <RelatedLinks links={[{ href: "/essex-depo", label: "Essex depomuz" }, { href: "/case-studies", label: "Vaka çalışmaları" }, { href: "/sektorler", label: "Hizmet verdiğimiz sektörler" }, { href: "/turk-sirketleri-icin-ingiltere-depo", label: "Türk şirketleri için İngiltere depo" }, { href: "/ingiltere-depo-fiyatlari", label: "Fiyatlar" }, { href: "/teklif-al", label: "Teklif al", note: "Size özel fiyat ve plan" }]} />
       </main>
       <Footer />
       <StickyWhatsappCta />

@@ -1,4 +1,5 @@
 import Emoji from "@/components/visual/Emoji";
+import { ogLocale } from "@/lib/locales";
 import RelatedLinks from "@/components/RelatedLinks";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
@@ -15,14 +16,14 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20UK%20gümrükleme
 export const metadata: Metadata = {
   title: "İngiltere Gümrükleme Hizmeti | UK İthalat Gümrüğü | LondraDepo",
   description:
-    "İngiltere ithalatı için gümrükleme: Arca Trade Group gümrük ekibiyle beyanname, GTİP danışmanlığı ve gümrükten Essex depoya doğrudan teslim. Türkiye'den ihracat yapan işletmeler için.",
+    "İngiltere ithalatı için gümrükleme: Arca Trade Group ekibiyle beyanname, GTİP danışmanlığı ve gümrükten Essex depomuza doğrudan teslim.",
   alternates: trAlternates("/gumrukleme"),
   openGraph: {
     title: "İngiltere Gümrükleme Desteği | LondraDepo",
     description: "UK ithalat gümrüklemesi ve depoya teslim. Türkiye'den İngiltere'ye ihracat için.",
     url: `${SITE_URL}/gumrukleme`,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    ...ogLocale("tr"),
     type: "website",
   },
 };
@@ -151,7 +152,7 @@ export default function GumruklernePage() {
         </section>
 
         <CtaCards />
-        <RelatedLinks links={[{ href: "/ingiltere-ithalat-lojistigi", label: "İngiltere ithalat lojistiği", note: "Limandan depoya tüm süreç" }, { href: "/blog/ithalat-belgeleri", label: "İthalat belgeleri rehberi" }, { href: "/blog/antrepo-nedir", label: "Antrepo nedir?", note: "Vergisi ödenmemiş depolama farkı" }, { href: "/blog/incoterms-rehberi", label: "Incoterms rehberi" }, { href: "/blog/ingiltere-ithalat-maliyetleri", label: "İthalat maliyetleri", note: "Gümrük vergisi ve KDV" }, { href: "/teklif-al", label: "Teklif al", note: "24 saat içinde dönüş" }]} />
+        <RelatedLinks links={[{ href: "/ingiltere-ithalat-lojistigi", label: "İngiltere ithalat lojistiği", note: "Limandan depoya tüm süreç" }, { href: "/blog/ithalat-belgeleri", label: "İthalat belgeleri rehberi" }, { href: "/blog/antrepo-nedir", label: "Antrepo nedir?", note: "Vergisi ödenmemiş depolama farkı" }, { href: "/blog/incoterms-rehberi", label: "Incoterms rehberi" }, { href: "/blog/ingiltere-ithalat-maliyetleri", label: "İthalat maliyetleri", note: "Gümrük vergisi ve KDV" }, { href: "/teklif-al", label: "Teklif al", note: "Size özel fiyat ve plan" }]} />
       </main>
       <Footer />
       <StickyWhatsappCta />

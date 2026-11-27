@@ -1,4 +1,5 @@
 import Emoji from "@/components/visual/Emoji";
+import { ogLocale } from "@/lib/locales";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import QuoteForm from "@/components/QuoteForm";
 import ProcessFlow from "@/components/visual/ProcessFlow";
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
       "İngiltere'de depo altyapısı, fulfillment ve dağıtım operasyonu kuran markaların gerçek operasyon örnekleri.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    ...ogLocale("tr"),
     type: "website",
   },
   robots: { index: true, follow: true },

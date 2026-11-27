@@ -1,4 +1,5 @@
 import Emoji from "@/components/visual/Emoji";
+import { ogLocale } from "@/lib/locales";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
       "Johan Cruyff markasının Hollanda'dan UK fulfillment operasyonuna geçişi: warehouse, repackaging ve ecommerce distribution.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    ...ogLocale("tr"),
     type: "article",
   },
   twitter: {

@@ -1,4 +1,5 @@
 import FaqJsonLd from "@/components/FaqJsonLd";
+import { ogLocale } from "@/lib/locales";
 import TrClusterNav from "@/components/TrClusterNav";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
       "Amazon, Etsy ve Shopify satıcıları için İngiltere fulfillment ve sipariş hazırlama. Essex merkezli UK operasyon.",
     url: PAGE_URL,
     siteName: "LondraDepo.com",
-    locale: "tr_TR",
+    ...ogLocale("tr"),
     type: "website",
   },
   robots: { index: true, follow: true },

@@ -1052,6 +1052,11 @@ URL: https://www.londradepo.com/en/terms-and-conditions
 Summary: General terms for storage, fulfilment, handling, customs coordination and distribution services provided by Arca Trade Group Ltd under the LondraDepo.com brand.
 Short answer: These terms set out the general conditions for the warehousing, fulfilment, handling, customs coordination and distribution services provided by Arca Trade Group Ltd under the LondraDepo.com brand. These terms govern the storage, fulfilment, handling, customs clearance coordination and distribution services provided under the LondraDepo.com brand by Arca Trade Group Ltd, registered in England and Wales (company no. 13247691, VAT GB353315322; registered office: Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY, United Kingdom).
 
+## Imprint: Arca Trade Group Ltd, LondraDepo
+URL: https://www.londradepo.com/en/imprint
+Summary: Company details of Arca Trade Group Ltd, operator of LondraDepo.com: registered office, company and VAT numbers, director, contact details and warehouse specification.
+Short answer: LondraDepo.com is operated by Arca Trade Group Ltd, registered in England and Wales. Below are the company details, how to reach us and the specification of our warehouse in Rayleigh, Essex. Areas are gross internal areas from the building's letting brochure.
+
 ## Request a UK Warehousing & Fulfilment Quote
 URL: https://www.londradepo.com/en/request-a-quote
 Summary: Request a quote for UK warehousing, pallet storage, container unloading, fulfilment, Amazon prep or distribution from Essex. Pallets from £3.50 + VAT a week.
@@ -2233,6 +2238,12 @@ English version: https://www.londradepo.com/en/terms-and-conditions
 Summary: LondraDepo.com hizmet sözleşmesi koşulları. Hizmet kapsamı, ödeme koşulları, sorumluluk sınırlamaları ve uygulanacak hukuk hakkında bilgi.
 Short answer: Bu sözleşme koşulları, Arca Trade Group Ltd (İngiltere ve Galler'de kayıtlı, şirket no: 13247691, KDV: GB353315322; kayıtlı ofis: Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY, İngiltere) tarafından LondraDepo.com markası altında sunulan depolama, fulfillment, elleçleme, gümrükleme koordinasyonu ve dağıtım hizmetlerine ilişkin genel koşulları düzenler.
 
+## Künye: Arca Trade Group Ltd ve LondraDepo
+URL: https://www.londradepo.com/kunye
+English version: https://www.londradepo.com/en/imprint
+Summary: LondraDepo.com'u işleten Arca Trade Group Ltd'nin şirket bilgileri: kayıtlı adres, şirket numarası, KDV numarası, yönetici, iletişim ve depo teknik bilgileri.
+Short answer: LondraDepo.com, İngiltere ve Galler'de kayıtlı Arca Trade Group Ltd tarafından işletilir. Şirket bilgileri, iletişim kanalları ve Rayleigh, Essex'teki deponun teknik özellikleri aşağıdadır.
+
 # Polish pages (Strony po polsku)
 
 ## Magazyn i fulfillment w Wielkiej Brytanii
@@ -3286,6 +3297,12 @@ English version: https://www.londradepo.com/en/terms-and-conditions
 Summary: Ogólne warunki usług magazynowania, fulfillmentu, obsługi towaru, odprawy celnej i dystrybucji świadczonych przez Arca Trade Group Ltd (marka LondraDepo).
 Short answer: Niniejsze warunki określają ogólne zasady usług magazynowania, fulfillmentu, obsługi towaru, koordynacji odprawy celnej i dystrybucji świadczonych przez Arca Trade Group Ltd pod marką LondraDepo.com. Wersją wiążącą jest wersja angielska (Terms and Conditions). Usługi świadczy Arca Trade Group Ltd, spółka zarejestrowana w Anglii i Walii (nr firmy 13247691, VAT GB353315322; siedziba: Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY, Wielka Brytania).
 
+## Dane firmy: Arca Trade Group Ltd i LondraDepo
+URL: https://www.londradepo.com/pl/dane-firmy
+English version: https://www.londradepo.com/en/imprint
+Summary: Dane firmy Arca Trade Group Ltd, operatora LondraDepo.com: adres siedziby, numer spółki i VAT, dyrektor, dane kontaktowe oraz parametry techniczne magazynu.
+Short answer: LondraDepo.com prowadzi Arca Trade Group Ltd, spółka zarejestrowana w Anglii i Walii. Poniżej znajdziesz dane firmy, dane kontaktowe i parametry techniczne magazynu w Rayleigh w Essex. Powierzchnie to powierzchnie wewnętrzne brutto według prospektu budynku.
+
 ## Zapytanie ofertowe: magazyn w Wielkiej Brytanii
 URL: https://www.londradepo.com/pl/zapytanie-ofertowe
 English version: https://www.londradepo.com/en/request-a-quote
@@ -3550,6 +3567,12 @@ URL: https://www.londradepo.com/de/agb
 English version: https://www.londradepo.com/en/terms-and-conditions
 Summary: Allgemeine Bedingungen für Lagerung, Fulfillment, Warenhandling, Zollkoordination und Distribution der Arca Trade Group Ltd unter der Marke LondraDepo.com.
 Short answer: Diese Bedingungen regeln die allgemeinen Konditionen für Lagerung, Fulfillment, Warenhandling, Koordination der Zollabfertigung und Distribution, die die Arca Trade Group Ltd unter der Marke LondraDepo.com erbringt. Rechtlich verbindlich ist die englische Fassung (Terms and Conditions, /en/terms-and-conditions); diese deutsche Fassung dient nur der Information.
+
+## Impressum: Arca Trade Group Ltd und LondraDepo
+URL: https://www.londradepo.com/de/impressum
+English version: https://www.londradepo.com/en/imprint
+Summary: Impressum von LondraDepo.com: Arca Trade Group Ltd, Sitz, Handelsregister- und USt-Nummer, Geschäftsführer, Kontaktdaten und technische Daten des Lagers in Essex.
+Short answer: LondraDepo.com wird von der Arca Trade Group Ltd betrieben, eingetragen in England und Wales. Hier finden Sie die Angaben zum Unternehmen, die Kontaktdaten und die technischen Daten unseres Lagers in Rayleigh, Essex. Flächenangaben sind Brutto-Innenflächen laut Vermietungsbroschüre des Gebäudes.
 
 ## Angebot anfordern: Lager in Großbritannien
 URL: https://www.londradepo.com/de/angebot-anfordern

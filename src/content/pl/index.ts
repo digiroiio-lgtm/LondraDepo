@@ -7,9 +7,10 @@ import { plBlogA } from "./blog-a";
 import { plBlogB } from "./blog-b";
 import { plCases } from "./cases";
 import { PAGE_SETS } from "@/lib/i18n-pairs";
+import { imprintPage } from "../imprint";
 
 /** Polish pages rendered by EnPageView. The quote page has its own route (/pl/zapytanie-ofertowe). */
-export const PL_PAGES: EnPage[] = [...plPages, ...plCoreServicesA, ...plServicesB, ...plGrowth, ...plCases, ...plBlogA, ...plBlogB, ...plLegalPages];
+export const PL_PAGES: EnPage[] = [...plPages, ...plCoreServicesA, ...plServicesB, ...plGrowth, ...plCases, ...plBlogA, ...plBlogB, ...plLegalPages, imprintPage("pl")];
 
 const bySlug = new Map(PL_PAGES.map((p) => [p.slug, p]));
 

@@ -2,7 +2,7 @@
 
 > UK warehousing, pallet storage, container unloading, ecommerce fulfilment, Amazon FBA prep and UK distribution from Rayleigh, Essex, near London, for Turkish and international businesses. Operated by Arca Trade Group Ltd. Turkish site at /, English at /en, Polish at /pl, German at /de.
 
-Last updated: 2026-11-28. 226 pages. Full text with every page's summary and FAQs: https://www.londradepo.com/llms-full.txt
+Last updated: 2026-11-28. 230 pages. Full text with every page's summary and FAQs: https://www.londradepo.com/llms-full.txt
 
 ## Key facts
 
@@ -107,6 +107,7 @@ Last updated: 2026-11-28. 226 pages. Full text with every page's summary and FAQ
 - [Privacy Policy](https://www.londradepo.com/en/privacy-policy): How LondraDepo.com (Arca Trade Group Ltd) collects, uses and protects personal data under UK GDPR and PECR, and how to exercise your rights.
 - [Cookie Policy](https://www.londradepo.com/en/cookie-policy): Which cookies LondraDepo.com uses (necessary, analytics and marketing), how consent is stored and how to change your cookie preferences.
 - [Terms and Conditions](https://www.londradepo.com/en/terms-and-conditions): General terms for storage, fulfilment, handling, customs coordination and distribution services provided by Arca Trade Group Ltd under the LondraDepo.com brand.
+- [Imprint: Arca Trade Group Ltd, LondraDepo](https://www.londradepo.com/en/imprint): Company details of Arca Trade Group Ltd, operator of LondraDepo.com: registered office, company and VAT numbers, director, contact details and warehouse specification.
 - [Request a UK Warehousing & Fulfilment Quote](https://www.londradepo.com/en/request-a-quote): Request a quote for UK warehousing, pallet storage, container unloading, fulfilment, Amazon prep or distribution from Essex. Pallets from £3.50 + VAT a week.
 
 ## Turkish pages (/)
@@ -199,6 +200,7 @@ Last updated: 2026-11-28. 226 pages. Full text with every page's summary and FAQ
 - [Gizlilik Politikası](https://www.londradepo.com/privacy-policy): LondraDepo.com gizlilik politikası. Kişisel verilerinizin nasıl toplandığı, kullanıldığı, korunduğu ve UK GDPR kapsamındaki haklarınız hakkında bilgi. (pair: https://www.londradepo.com/en/privacy-policy)
 - [Çerez Politikası](https://www.londradepo.com/cookie-policy): LondraDepo.com çerez politikası. Sitemizde kullandığımız çerez türleri, amaçları ve çerez tercihlerinizi nasıl yönetebileceğiniz hakkında bilgi. (pair: https://www.londradepo.com/en/cookie-policy)
 - [Sözleşme Koşulları](https://www.londradepo.com/sozlesme-kosullari): LondraDepo.com hizmet sözleşmesi koşulları. Hizmet kapsamı, ödeme koşulları, sorumluluk sınırlamaları ve uygulanacak hukuk hakkında bilgi. (pair: https://www.londradepo.com/en/terms-and-conditions)
+- [Künye: Arca Trade Group Ltd ve LondraDepo](https://www.londradepo.com/kunye): LondraDepo.com'u işleten Arca Trade Group Ltd'nin şirket bilgileri: kayıtlı adres, şirket numarası, KDV numarası, yönetici, iletişim ve depo teknik bilgileri. (pair: https://www.londradepo.com/en/imprint)
 
 ## Polish pages (/pl)
 
@@ -279,6 +281,7 @@ Last updated: 2026-11-28. 226 pages. Full text with every page's summary and FAQ
 - [Polityka prywatności](https://www.londradepo.com/pl/polityka-prywatnosci): Jak LondraDepo.com (Arca Trade Group Ltd) zbiera, wykorzystuje i chroni dane osobowe zgodnie z UK GDPR i PECR oraz jak skorzystać ze swoich praw. (pair: https://www.londradepo.com/en/privacy-policy)
 - [Polityka cookies](https://www.londradepo.com/pl/polityka-cookies): Jakie pliki cookie i zapisy w przeglądarce stosuje LondraDepo.com (niezbędne i analityczne), jak przechowujemy zgodę i jak zmienić ustawienia plików cookie. (pair: https://www.londradepo.com/en/cookie-policy)
 - [Regulamin usług](https://www.londradepo.com/pl/regulamin): Ogólne warunki usług magazynowania, fulfillmentu, obsługi towaru, odprawy celnej i dystrybucji świadczonych przez Arca Trade Group Ltd (marka LondraDepo). (pair: https://www.londradepo.com/en/terms-and-conditions)
+- [Dane firmy: Arca Trade Group Ltd i LondraDepo](https://www.londradepo.com/pl/dane-firmy): Dane firmy Arca Trade Group Ltd, operatora LondraDepo.com: adres siedziby, numer spółki i VAT, dyrektor, dane kontaktowe oraz parametry techniczne magazynu. (pair: https://www.londradepo.com/en/imprint)
 - [Zapytanie ofertowe: magazyn w Wielkiej Brytanii](https://www.londradepo.com/pl/zapytanie-ofertowe): Poproś o wycenę magazynowania, składowania palet, rozładunku kontenerów, fulfillmentu, Amazon FBA prep lub dystrybucji w UK. Palety od 3,50 £ + VAT tygodniowo. (pair: https://www.londradepo.com/en/request-a-quote)
 
 ## German pages (/de)
@@ -308,4 +311,5 @@ Last updated: 2026-11-28. 226 pages. Full text with every page's summary and FAQ
 - [Datenschutzerklärung](https://www.londradepo.com/de/datenschutz): Wie LondraDepo.com (Arca Trade Group Ltd) personenbezogene Daten nach UK GDPR und PECR erhebt, nutzt und schützt und wie Sie Ihre Rechte wahrnehmen. (pair: https://www.londradepo.com/en/privacy-policy)
 - [Cookie-Richtlinie](https://www.londradepo.com/de/cookie-richtlinie): Welche Cookies LondraDepo.com verwendet (notwendig, Analyse, Marketing), wie Ihre Einwilligung gespeichert wird und wie Sie Ihre Einstellungen ändern. (pair: https://www.londradepo.com/en/cookie-policy)
 - [Allgemeine Geschäftsbedingungen](https://www.londradepo.com/de/agb): Allgemeine Bedingungen für Lagerung, Fulfillment, Warenhandling, Zollkoordination und Distribution der Arca Trade Group Ltd unter der Marke LondraDepo.com. (pair: https://www.londradepo.com/en/terms-and-conditions)
+- [Impressum: Arca Trade Group Ltd und LondraDepo](https://www.londradepo.com/de/impressum): Impressum von LondraDepo.com: Arca Trade Group Ltd, Sitz, Handelsregister- und USt-Nummer, Geschäftsführer, Kontaktdaten und technische Daten des Lagers in Essex. (pair: https://www.londradepo.com/en/imprint)
 - [Angebot anfordern: Lager in Großbritannien](https://www.londradepo.com/de/angebot-anfordern): Angebot für Lagerung, Palettenlager, Containerentladung, Fulfillment, Amazon FBA Prep oder Distribution in UK. Paletten ab 3,50 £ zzgl. MwSt. pro Woche. (pair: https://www.londradepo.com/en/request-a-quote)

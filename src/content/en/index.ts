@@ -5,9 +5,10 @@ import { servicePages } from "./services";
 import { casePages, caseHub } from "./cases";
 import { blogPages, blogHub } from "./blog";
 import { legalPages } from "./legal";
+import { imprintPage } from "../imprint";
 import { growthPages, growthPagesP2, calculatorPages, portPages, industryHub } from "./growth";
 
-export const EN_PAGES: EnPage[] = [...corePages, ...servicePages, ...growthPages, ...growthPagesP2, ...calculatorPages, ...portPages, industryHub, caseHub, ...casePages, blogHub, ...blogPages, ...legalPages];
+export const EN_PAGES: EnPage[] = [...corePages, ...servicePages, ...growthPages, ...growthPagesP2, ...calculatorPages, ...portPages, industryHub, caseHub, ...casePages, blogHub, ...blogPages, ...legalPages, imprintPage("en")];
 
 const bySlug = new Map(EN_PAGES.map((p) => [p.slug, p]));
 

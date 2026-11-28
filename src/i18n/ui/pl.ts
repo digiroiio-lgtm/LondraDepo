@@ -12,6 +12,7 @@ export const pl: UiStrings = {
       { href: "/pl/polityka-prywatnosci", label: "Polityka prywatności" },
       { href: "/pl/polityka-cookies", label: "Polityka cookies" },
       { href: "/pl/regulamin", label: "Regulamin" },
+      { href: "/pl/dane-firmy", label: "Dane firmy" },
     ],
     cookieSettings: "Ustawienia cookies",
     bifa: "Członek BIFA",

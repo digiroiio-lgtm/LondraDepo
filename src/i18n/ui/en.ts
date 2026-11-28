@@ -12,6 +12,7 @@ export const en: UiStrings = {
       { href: "/en/privacy-policy", label: "Privacy Policy" },
       { href: "/en/cookie-policy", label: "Cookie Policy" },
       { href: "/en/terms-and-conditions", label: "Terms and Conditions" },
+      { href: "/en/imprint", label: "Imprint" },
     ],
     cookieSettings: "Cookie Settings",
     bifa: "BIFA Member",

@@ -364,6 +364,7 @@ export const growthPages: EnPage[] = [
       { q: "Can you handle both ecommerce and B2B orders?", a: "Yes. We fulfil Shopify and Amazon FBM orders as parcels and prepare pallet and carton orders for retailers, wholesalers and workshops from the same stock." },
       { q: "Where is your 3PL warehouse?", a: "Unit 19 Arterial Park, Rayleigh, Essex SS6 7FY: 13 miles from London Gateway, 16 miles from Tilbury and about 62 miles from Felixstowe." },
       { q: "Can you also arrange freight and customs?", a: "Yes. Arca Trade Group, which operates LondraDepo, arranges sea, air, road and rail freight and UK customs declarations. You can also use your own forwarder and only our warehouse." },
+      { q: "What do 3PL services in the UK usually include?", a: "UK 3PL services usually cover goods-in, pallet and carton storage, stock control, order picking and packing, Amazon prep, returns and UK delivery. LondraDepo provides these from Essex, with stock tracked in Mintsoft WMS." },
     ],
     related: ["/en/uk-warehousing", "/en/ecommerce-fulfilment", "/en/pick-and-pack", "/en/pallet-storage", "/en/uk-warehousing-pricing", "/en/blog/how-to-choose-a-uk-3pl", "/en/request-a-quote"],
   },

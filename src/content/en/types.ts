@@ -59,6 +59,8 @@ export type EnPage = {
   modified?: string;
   /** Hub breadcrumb parent (blog or case studies). */
   parent?: string;
+  /** Informational pages: a card near the top sending searchers with commercial intent to the matching service page. */
+  serviceBox?: { href: string; title: string; text: string; cta: string };
   /** Quote button label and preset service; overrides the per-slug default in cta.ts (used by PL pages). */
   quote?: { label: string; service: "storage" | "container-unloading" | "fulfilment" | "amazon-prep" | "distribution" | "repacking" | "freight-customs" | "other" };
 };

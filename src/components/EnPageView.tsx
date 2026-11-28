@@ -359,8 +359,7 @@ export default function EnPageView({ page }: { page: EnPage }) {
   const quote = ctaFor(page);
   const key = enKey(page.slug);
   const inlineForm = INLINE_FORM.has(key);
-  // Cluster boxes are written in English only.
-  const cluster = lang === "en" ? clusterFor(page.slug) : undefined;
+  const cluster = clusterFor(page.slug);
   const qHref = inlineForm ? "#quote" : quoteHref(quote.service, page.slug, lang);
   const cta = page.cta ?? v.ctaDefault;
 
@@ -445,6 +444,17 @@ export default function EnPageView({ page }: { page: EnPage }) {
 
         <div className="max-w-6xl mx-auto px-4 py-12">
           {page.note && <p className="mb-10 rounded-xl border border-amber-200 bg-amber-50 p-5 text-sm text-amber-900">{page.note}</p>}
+          {page.serviceBox && (
+            <aside aria-label={page.serviceBox.title} className="mb-10 rounded-xl border-2 border-[#0b2545] bg-white p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center gap-4 justify-between">
+              <div>
+                <p className="text-lg font-bold text-[#0b2545] mb-1">{page.serviceBox.title}</p>
+                <p className="text-sm text-slate-700 leading-relaxed">{page.serviceBox.text}</p>
+              </div>
+              <TrackedLink kind="cta" source="service_box" href={page.serviceBox.href} className="shrink-0 text-center bg-[#0b2545] hover:bg-[#13315c] text-white font-semibold px-6 py-3 rounded-full transition">
+                {page.serviceBox.cta}
+              </TrackedLink>
+            </aside>
+          )}
           {page.facts && (
             <section aria-labelledby="facts-heading" className="mb-12 rounded-xl border border-slate-200 bg-slate-50 p-6">
               <h2 id="facts-heading" className="text-lg font-bold text-[#0b2545] mb-3">{v.atAGlance}</h2>

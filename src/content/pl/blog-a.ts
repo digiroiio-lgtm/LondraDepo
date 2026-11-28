@@ -13,6 +13,7 @@ const DATE = { published: "2026-11-10", modified: "2026-11-10" };
 export const plBlogA: EnPage[] = [
   {
     slug: "/pl/blog/przewodnik-magazynowanie-uk",
+    serviceBox: { href: "/pl/magazyn-w-wielkiej-brytanii", title: "Szukasz magazynu w Wielkiej Brytanii?", text: "Przyjmujemy, składujemy, realizujemy i dostarczamy towar z magazynu w Essex, 13 mil od London Gateway i ok. 37 mil od centrum Londynu.", cta: "Magazyn w UK" },
     kind: "article",
     parent: "/pl/blog",
     article: { ...DATE, readMins: 6, section: "Magazynowanie" },
@@ -90,6 +91,7 @@ export const plBlogA: EnPage[] = [
   },
   {
     slug: "/pl/blog/czym-jest-fulfillment-w-uk",
+    serviceBox: { href: "/pl/fulfillment-wielka-brytania", title: "Szukasz fulfillmentu w Wielkiej Brytanii?", text: "Kompletujemy, pakujemy i wysyłamy zamówienia online, detaliczne i B2B z zapasu w naszym magazynie w Essex, ze stanami w Mintsoft WMS.", cta: "Fulfillment w UK" },
     kind: "article",
     parent: "/pl/blog",
     article: { ...DATE, readMins: 5, section: "Fulfillment" },
@@ -152,6 +154,7 @@ export const plBlogA: EnPage[] = [
   },
   {
     slug: "/pl/blog/amazon-prep-uk-przewodnik",
+    serviceBox: { href: "/pl/amazon-fba-prep", title: "Potrzebujesz centrum Amazon prep w UK?", text: "Etykietujemy, sprawdzamy, pakujemy i dostarczamy towar FBA z Essex, ok. 16 mil od Amazon LCY2, bez stałego minimum.", cta: "Amazon FBA prep w UK" },
     kind: "article",
     parent: "/pl/blog",
     article: { ...DATE, readMins: 7, section: "Amazon" },
@@ -223,6 +226,7 @@ export const plBlogA: EnPage[] = [
   },
   {
     slug: "/pl/blog/magazyn-tranzytowy-w-uk",
+    serviceBox: { href: "/pl/magazyn-w-wielkiej-brytanii", title: "Potrzebujesz magazynu dla towaru przychodzącego do UK?", text: "Przyjmujemy kontenery i palety po odprawie celnej, składujemy je w Essex i dostarczamy w całej Wielkiej Brytanii.", cta: "Magazyn w UK" },
     kind: "article",
     parent: "/pl/blog",
     article: { ...DATE, readMins: 5, section: "Magazynowanie" },
@@ -360,6 +364,7 @@ export const plBlogA: EnPage[] = [
   },
   {
     slug: "/pl/blog/koszty-skladowania-palet-uk",
+    serviceBox: { href: "/pl/skladowanie-palet", title: "Szukasz składowania palet w Wielkiej Brytanii?", text: "LondraDepo składuje palety w Rayleigh w Essex, niedaleko Londynu, od 3,50 £ + VAT za paletę tygodniowo, bez stałego minimum.", cta: "Składowanie palet w UK" },
     kind: "article",
     parent: "/pl/blog",
     article: { ...DATE, readMins: 5, section: "Magazynowanie" },

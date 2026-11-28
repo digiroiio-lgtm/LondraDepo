@@ -83,6 +83,7 @@ export const plBlogB: EnPage[] = [
   },
   {
     slug: "/pl/blog/jak-wybrac-3pl-w-uk",
+    serviceBox: { href: "/pl/3pl-wielka-brytania", title: "Porównujesz operatorów 3PL w UK?", text: "Zobacz, co LondraDepo oferuje jako 3PL w Essex: przyjęcie towaru, składowanie, fulfillment, Amazon FBA prep i dostawy w UK, ze stanami w Mintsoft WMS.", cta: "3PL w Wielkiej Brytanii" },
     kind: "article",
     parent: "/pl/blog",
     article: { ...DATE, readMins: 7, section: "Wybór partnera" },
@@ -218,6 +219,7 @@ export const plBlogB: EnPage[] = [
   },
   {
     slug: "/pl/blog/lista-kontrolna-amazon-fba-prep",
+    serviceBox: { href: "/pl/amazon-fba-prep", title: "Wolisz zlecić przygotowanie towaru?", text: "W Essex wykonujemy etykietowanie FNSKU, kontrolę, pakowanie i dostawę do centrów Amazon w UK, bez stałego minimum.", cta: "Amazon FBA prep w UK" },
     kind: "article",
     parent: "/pl/blog",
     article: { ...DATE, readMins: 5, section: "Amazon" },
@@ -454,6 +456,7 @@ export const plBlogB: EnPage[] = [
   },
   {
     slug: "/pl/blog/sklad-celny-czy-towar-oclony",
+    serviceBox: { href: "/pl/odprawa-celna-uk", title: "Składujesz towar po odprawie w UK?", text: "LondraDepo to magazyn towaru oclonego, a nie skład celny. Arca Trade Group może przeprowadzić brytyjską odprawę celną, a my składujemy i dostarczamy towar.", cta: "Odprawa celna w UK" },
     kind: "article",
     parent: "/pl/blog",
     article: { published: "2026-11-11", modified: "2026-11-11", readMins: 6, section: "Import" },

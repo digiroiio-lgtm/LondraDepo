@@ -415,7 +415,7 @@ export const plGrowth: EnPage[] = [
       { q: "Czy możecie rozładować kontener w porcie?", a: "Nie. Rozładunek odbywa się w naszym magazynie w Rayleigh, gdzie towar można od razu składować i realizować z niego zamówienia bez dodatkowego przeładunku." },
       { q: "Kto rezerwuje termin dostawy do magazynu?", a: "Termin dostawy rezerwuje przewoźnik lub spedytor po awizacji. Prześlij numer kontenera, ETA, listę pakunkową i liczbę kartonów dla każdego SKU, aby można było zaplanować rozładunek z wyprzedzeniem." },
     ],
-    related: ["/pl/magazyn-london-gateway-tilbury", "/pl/magazyn-port-felixstowe", "/pl/rozladunek-kontenerow", "/pl/import-do-wielkiej-brytanii", "/pl/magazyn-essex"],
+    related: ["/pl/magazyn-london-gateway-tilbury", "/pl/magazyn-port-felixstowe", "/pl/rozladunek-kontenerow", "/pl/import-do-wielkiej-brytanii", "/pl/magazyn-essex", "/pl/rodzaje-kontenerow"],
     cta: { h2: "Zaplanuj przewóz z portu do magazynu", text: "Podaj port przeznaczenia, rozmiar kontenera, ETA i co ma się stać z towarem dalej." },
     quote: { label: "Poproś o wycenę transportu z portu", service: "container-unloading" },
   },

@@ -359,8 +359,7 @@ export default function EnPageView({ page }: { page: EnPage }) {
   const quote = ctaFor(page);
   const key = enKey(page.slug);
   const inlineForm = INLINE_FORM.has(key);
-  // Cluster boxes are written in English only.
-  const cluster = lang === "en" ? clusterFor(page.slug) : undefined;
+  const cluster = clusterFor(page.slug);
   const qHref = inlineForm ? "#quote" : quoteHref(quote.service, page.slug, lang);
   const cta = page.cta ?? v.ctaDefault;
 

@@ -21,7 +21,7 @@ export type LocaleInfo = {
 };
 
 export const LOCALES = {
-  tr: { htmlLang: "tr", hreflang: "tr-TR", og: "tr_TR", prefix: "", home: "/", label: "Türkçe", short: "TR" },
+  tr: { htmlLang: "tr", hreflang: "tr", og: "tr_TR", prefix: "", home: "/", label: "Türkçe", short: "TR" },
   en: { htmlLang: "en", hreflang: "en", og: "en_GB", prefix: "/en", home: "/en", label: "English", short: "EN" },
   pl: { htmlLang: "pl", hreflang: "pl", og: "pl_PL", prefix: "/pl", home: "/pl", label: "Polski", short: "PL" },
 } as const satisfies Record<string, LocaleInfo>;

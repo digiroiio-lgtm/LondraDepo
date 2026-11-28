@@ -123,7 +123,7 @@ export const plPages: EnPage[] = [
       { q: "Czy towar może przyjechać bez odprawy celnej?", a: "Nie. Nie jesteśmy składem celnym, więc towar przyjmujemy po brytyjskiej odprawie celnej. Odprawę może wykonać Arca Trade Group lub Twoja agencja celna." },
       { q: "Jak daleko jest magazyn od portów?", a: "Magazyn w Rayleigh jest 13 mil od London Gateway, 16 mil od Tilbury i około 62 mile od Felixstowe, co skraca transport kontenerów z portu." },
     ],
-    related: ["/pl/3pl-wielka-brytania", "/pl/skladowanie-palet", "/pl/cennik-magazynowania", "/pl/import-do-wielkiej-brytanii", "/pl/zapytanie-ofertowe"],
+    related: ["/pl/3pl-wielka-brytania", "/pl/skladowanie-palet", "/pl/cennik-magazynowania", "/pl/import-do-wielkiej-brytanii", "/pl/zapytanie-ofertowe", "/pl/blog/jak-wybrac-3pl-w-uk"],
     quote: { label: "Poproś o wycenę magazynowania", service: "storage" },
   },
   {
@@ -178,7 +178,7 @@ export const plPages: EnPage[] = [
       { q: "Czy usługa 3PL ma minimalny wolumen?", a: "Nie ma stałego minimum. Wielu klientów zaczyna od jednej palety testowej, a po ustabilizowaniu sprzedaży przechodzi na regularne dostawy palet i kontenerów." },
       { q: "Czy możecie zorganizować transport z Polski?", a: "Tak. Arca Trade Group, operator LondraDepo, organizuje transport drogowy, morski, lotniczy i kolejowy oraz brytyjskie zgłoszenie celne. Możesz też korzystać z własnego przewoźnika." },
     ],
-    related: ["/pl/magazyn-w-wielkiej-brytanii", "/pl/fulfillment-ecommerce", "/pl/skladowanie-palet", "/pl/cennik-magazynowania", "/pl/zapytanie-ofertowe"],
+    related: ["/pl/magazyn-w-wielkiej-brytanii", "/pl/fulfillment-ecommerce", "/pl/skladowanie-palet", "/pl/cennik-magazynowania", "/pl/zapytanie-ofertowe", "/pl/blog/jak-wybrac-3pl-w-uk"],
     quote: { label: "Poproś o wycenę 3PL", service: "storage" },
   },
   {
@@ -363,7 +363,7 @@ export const plPages: EnPage[] = [
       { q: "Czy jest minimalna kwota zamówienia?", a: "Nie ma stałego minimum. Płacisz za faktycznie zajęte miejsce i wykonane usługi, więc możesz zacząć od jednej palety testowej." },
       { q: "Jak szybko otrzymam wycenę?", a: "Po otrzymaniu formularza z opisem produktu, wolumenu i kanałów sprzedaży zespół przygotowuje ofertę i wysyła ją e-mailem, czasem po kilku pytaniach uzupełniających." },
     ],
-    related: ["/pl/skladowanie-palet", "/pl/3pl-wielka-brytania", "/pl/magazyn-w-wielkiej-brytanii", "/pl/zapytanie-ofertowe"],
+    related: ["/pl/skladowanie-palet", "/pl/3pl-wielka-brytania", "/pl/magazyn-w-wielkiej-brytanii", "/pl/zapytanie-ofertowe", "/pl/blog/jak-wybrac-3pl-w-uk"],
     quote: { label: "Poproś o wycenę", service: "storage" },
   },
   {
@@ -411,7 +411,7 @@ export const plPages: EnPage[] = [
       { q: "Czy mogę korzystać z własnego przewoźnika?", a: "Tak. Twój spedytor może dostarczyć towar na adres magazynu w Rayleigh, a od nas wziąć tylko rozładunek, składowanie, fulfillment i dystrybucję." },
       { q: "Czy przechowujecie towar przed odprawą?", a: "Nie. Nie jesteśmy składem celnym, więc przyjmujemy towar po brytyjskiej odprawie celnej i dopiero wtedy go składujemy." },
     ],
-    related: ["/pl/magazyn-dla-polskich-firm", "/pl/magazyn-w-wielkiej-brytanii", "/pl/zapytanie-ofertowe"],
+    related: ["/pl/magazyn-dla-polskich-firm", "/pl/magazyn-w-wielkiej-brytanii", "/pl/zapytanie-ofertowe", "/pl/rodzaje-kontenerow"],
     quote: { label: "Porozmawiajmy o imporcie", service: "freight-customs" },
   },
   {

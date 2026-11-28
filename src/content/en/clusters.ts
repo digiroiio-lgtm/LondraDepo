@@ -37,7 +37,39 @@ const AMAZON: Cluster = {
   ],
 };
 
-const ALL = [WAREHOUSING, FULFILMENT, AMAZON];
+// Polish versions of the same clusters (PL pages rendered by EnPageView).
+const PL_WAREHOUSING: Cluster = {
+  h2: "Która strona o magazynowaniu jest dla Ciebie?",
+  items: [
+    { href: "/pl/magazyn-w-wielkiej-brytanii", title: "Magazyn w Wielkiej Brytanii", fit: "Chcesz jednego partnera w UK, który przyjmie, zeskładuje, zrealizuje i dostarczy Twój towar." },
+    { href: "/pl/3pl-wielka-brytania", title: "3PL w Wielkiej Brytanii", fit: "Porównujesz operatorów 3PL w UK i chcesz wiedzieć, co obejmuje usługa i jak jest wyceniana." },
+    { href: "/pl/uslugi-magazynowe", title: "Usługi magazynowe", fit: "Potrzebujesz głównie powierzchni i chcesz wiedzieć, jak działa przyjęcie towaru i kontrola stanów." },
+    { href: "/pl/skladowanie-palet", title: "Składowanie palet", fit: "Składujesz towar B2B na paletach i chcesz poznać tygodniową stawkę za paletę." },
+    { href: "/pl/magazyn-londyn", title: "Magazyn pod Londynem", fit: "Twoi klienci lub dostawy są w Londynie i na południowym wschodzie Anglii." },
+  ],
+};
+
+const PL_FULFILMENT: Cluster = {
+  h2: "Która strona o fulfillmencie jest dla Ciebie?",
+  items: [
+    { href: "/pl/fulfillment-wielka-brytania", title: "Fulfillment w Wielkiej Brytanii", fit: "Importujesz do UK i chcesz, aby każde zamówienie, online, detaliczne i B2B, obsługiwał jeden operator." },
+    { href: "/pl/fulfillment-ecommerce", title: "Fulfillment e-commerce", fit: "Prowadzisz sklep internetowy i chcesz zobaczyć drogę zamówienia od koszyka do klienta." },
+    { href: "/pl/logistyka-ecommerce-uk", title: "Logistyka e-commerce w UK", fit: "Planujesz cały model w UK: lokalizację zapasu, dostawy, zwroty i kilka kanałów sprzedaży." },
+    { href: "/pl/pick-and-pack", title: "Kompletacja i pakowanie", fit: "Potrzebujesz tylko kompletacji i pakowania zamówień, wycenianych za zamówienie." },
+    { href: "/pl/fulfillment-shopify-uk", title: "Fulfillment Shopify", fit: "Twój sklep działa na Shopify." },
+  ],
+};
+
+const PL_AMAZON: Cluster = {
+  h2: "Która strona o Amazon jest dla Ciebie?",
+  items: [
+    { href: "/pl/fulfillment-amazon-uk", title: "Fulfillment Amazon w UK", fit: "Nie wiesz jeszcze, czy dla Twoich produktów lepsze jest FBA czy FBM." },
+    { href: "/pl/amazon-fba-prep", title: "Amazon FBA prep", fit: "Amazon składuje i wysyła Twój towar, a wcześniej musi on zostać oznakowany i spakowany zgodnie z zasadami Amazon." },
+    { href: "/pl/magazyn-dla-sprzedawcow-amazon", title: "Magazyn dla sprzedawców Amazon (FBM)", fit: "Sam realizujesz zamówienia Amazon (FBM) i chcesz wysyłać je z naszego magazynu w Essex." },
+  ],
+};
+
+const ALL = [WAREHOUSING, FULFILMENT, AMAZON, PL_WAREHOUSING, PL_FULFILMENT, PL_AMAZON];
 
 export function clusterFor(slug: string): Cluster | undefined {
   return ALL.find((c) => c.items.some((i) => i.href === slug));

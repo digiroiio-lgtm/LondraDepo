@@ -3,6 +3,7 @@
 import { useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { trackCtaClick, trackFormStart, trackWhatsappClick, waVariant } from "@/lib/gtag";
+import { quoteLink } from "@/lib/quote-params";
 
 /**
  * Carton → CBM, weight, estimated pallets and container fill. Planning estimate only.
@@ -75,7 +76,7 @@ export default function CbmCalculator({ lang = "en" }: { lang?: "en" | "tr" }) {
   const weight = kg * qty;
   const perPalletKg = weight / pallets;
 
-  const quoteHref = lang === "en" ? `/en/request-a-quote?service=storage&pallets=${pallets}&from=%2Fen%2Fcbm-pallet-calculator` : "#teklif";
+  const quoteHref = lang === "en" ? quoteLink("/en/request-a-quote", { service: "storage", pallets, from: "/en/cbm-pallet-calculator" }) : "#teklif";
   const waHref = `https://wa.me/447554195190?text=${encodeURIComponent(t.waText(qty, fmt.format(cbm), pallets))}`;
   const input = "w-full rounded-xl border border-slate-300 px-4 py-3 text-base text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#0b2545]";
 

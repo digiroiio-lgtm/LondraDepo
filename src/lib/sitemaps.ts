@@ -4,7 +4,6 @@ import type { PageKind } from "@/content/en/types";
 import { enAlternates, localeAlternates, trAlternates, type Alternates } from "@/lib/i18n";
 import { SITE_URL } from "@/lib/site";
 import { TR_ARTICLES } from "@/content/tr-articles";
-import { TR_LASTMOD } from "@/content/tr-lastmod";
 
 type Freq = "weekly" | "monthly" | "yearly";
 type Entry = { path: string; changefreq: Freq; priority: number; alternates: Alternates; lastmod?: string };
@@ -111,8 +110,8 @@ export function trEntries(): Entry[] {
     changefreq,
     priority,
     alternates: trAlternates(path),
-    // Editorial article date or the last git change of the page (scripts/gen-tr-lastmod.py), whichever is later.
-    lastmod: latest(TR_ARTICLES[path]?.modified, TR_LASTMOD[path]),
+    // Only pages that publish a maintained dateModified (articles) get a lastmod; scripts/verify-seo.py checks they match.
+    lastmod: TR_ARTICLES[path]?.modified,
   }));
 }
 

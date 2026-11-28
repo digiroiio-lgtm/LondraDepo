@@ -7,6 +7,7 @@ import { trackCtaClick, trackPhoneClick } from "@/lib/gtag";
 import { NAV } from "@/i18n/nav";
 import { UI } from "@/i18n/ui";
 import type { ViewLocale } from "@/i18n/view";
+import { quoteLink } from "@/lib/quote-params";
 
 const TEL = "tel:+447554195190";
 
@@ -37,7 +38,7 @@ export default function HeaderEn({ lang = "en" }: { lang?: ViewLocale }) {
         <div className="flex items-center gap-2 flex-shrink-0">
           <LangSwitch />
           <Link
-            href={`${ui.quoteHref}?from=header`}
+            href={quoteLink(ui.quoteHref, { from: "header" })}
             onClick={() => trackCtaClick(ui.quoteHref, "header")}
             className="hidden sm:inline-flex items-center bg-[#0b2545] hover:bg-[#13315c] text-white text-sm font-semibold px-4 py-2.5 rounded-full transition"
           >
@@ -88,7 +89,7 @@ export default function HeaderEn({ lang = "en" }: { lang?: ViewLocale }) {
             </Link>
           ))}
           <Link
-            href={`${ui.quoteHref}?from=header_mobile`}
+            href={quoteLink(ui.quoteHref, { from: "header_mobile" })}
             className="block mt-2 py-2.5 px-3 rounded-lg text-sm font-semibold text-white bg-[#d62839] text-center"
             onClick={() => { trackCtaClick(ui.quoteHref, "header_mobile"); setOpen(false); }}
           >

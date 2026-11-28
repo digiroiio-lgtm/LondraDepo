@@ -45,7 +45,7 @@ BASE=os.environ.get('SEO_BASE_URL', 'http://localhost:3100').rstrip('/'); SITE='
 XHTML='{http://www.w3.org/1999/xhtml}'
 index=get(BASE+'/sitemap.xml')
 children=[x.text for x in ET.fromstring(index['body']).findall('{*}sitemap/{*}loc')]
-legacy=get(BASE+'/sitemap.xml')
+legacy=get(BASE+'/sitemap_index.xml')
 sm_alt={}; sm_lang={}; sm_lastmod={}; urls=[]; sm={'body':index['body']}; tr_body=''
 for child in children:
  doc=get(BASE+urllib.parse.urlsplit(child).path)
@@ -55,13 +55,14 @@ for child in children:
  for u in ET.fromstring(doc['body']).findall('{*}url'):
   loc=u.find('{*}loc').text; urls.append(loc)
   sm_alt[loc]={l.get('hreflang'):l.get('href') for l in u.findall(XHTML+'link')}
-  sm_lang[loc]='en' if child.endswith('-en.xml') else 'tr'
+  # Language comes from the child sitemap name: sitemap-tr.xml / sitemap-en.xml / sitemap-pl.xml (add a file, it is picked up).
+  sm_lang[loc]=re.search(r'-([a-z]{2})\.xml$',child).group(1)
   lm=u.find('{*}lastmod')
   if lm is not None: sm_lastmod[loc]=lm.text
 
 rows=[get(BASE+urllib.parse.urlsplit(u).path) for u in urls]
 failures=[]
-if legacy.get('body')!=index['body']: failures.append(['/sitemap.xml','does not serve the sitemap index'])
+if not legacy.get('chain') or legacy['chain'][0]['status'] not in (301,308) or not legacy['chain'][-1]['location'].endswith('/sitemap.xml'): failures.append(['/sitemap_index.xml','does not redirect to /sitemap.xml',legacy.get('chain')])
 if len(urls)!=len(set(urls)): failures.append(['sitemaps','duplicate loc'])
 robots = get(BASE + '/robots.txt')
 rules = urllib.robotparser.RobotFileParser()
@@ -112,9 +113,10 @@ for host,proto in HOSTS:
   req=urllib.request.Request(f'https://{host}{p}') if LIVE else urllib.request.Request(BASE+p,headers={'Host':host,'X-Forwarded-Proto':proto})
   try:r=op.open(req);status=r.status
   except urllib.error.HTTPError as e:r=e;status=e.code
-  loc=r.headers.get('Location'); expected=308 if host=='londradepo.com' or (host=='www.londradepo.com' and proto=='http') else 200
+  loc=r.headers.get('Location'); expected=308 if host=='londradepo.com' or (LIVE and host=='www.londradepo.com' and proto=='http') else 200  # www http→https is Vercel's edge, not Next: only testable live
   redirects.append({'host':host,'protocol':proto,'path':p,'status':status,'location':loc})
-  if status!=expected or (expected==308 and loc!=SITE+p):failures.append([host,proto,p,'redirect',status,loc])
+  # '/' may come back as the bare origin (https://www.londradepo.com), which is the same URL.
+  if status!=expected or (expected==308 and loc not in (SITE+p, (SITE+p).rstrip('/'))):failures.append([host,proto,p,'redirect',status,loc])
 for src,dst in [('/uk-warehousing-fulfilment','/en'),('/shopify-fulfillment','/en/shopify-fulfilment-uk')]:
  try:op.open(BASE+src);failures.append([src,'expected 301'])
  except urllib.error.HTTPError as e:
@@ -127,6 +129,8 @@ for r in rows:
    # Downloadable static files (templates, PDFs, images) are not pages and are not in the sitemaps.
    if re.search(r'\.(csv|pdf|png|jpe?g|svg|webp|xlsx)$', path): continue
    if path not in paths: failures.append([r['target'], 'noncanonical internal link', link])
+   # Quote hand-off data goes in the #fragment, never ?query (keeps ?service=&from= variants out of Google).
+   elif '?' in link and re.search(r'/(request-a-quote|zapytanie-ofertowe|teklif-al)$', path): failures.append([r['target'], 'quote link with query string', link])
  path=urllib.parse.urlsplit(r['target']).path or '/'
  sources=[s['target'] for s in rows if s['target']!=r['target'] and any((urllib.parse.urlsplit(a).path or '/')==path for a in s['links'] if a.startswith('/') or a.startswith(SITE))]
  r['incoming_sources']=sources

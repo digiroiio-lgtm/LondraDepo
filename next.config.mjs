@@ -15,6 +15,8 @@ const nextConfig = {
       { source: "/shopify-fulfillment", destination: "https://www.londradepo.com/en/shopify-fulfilment-uk", statusCode: 301 },
       // Old case-study slug (typo) → the published Cruyff case study, permanently.
       { source: "/case-studies/krufy-uk-fashion-fulfillment", destination: "https://www.londradepo.com/case-studies/cruyff-uk-fulfillment", statusCode: 301 },
+      // One sitemap index only: the old /sitemap_index.xml URL points to /sitemap.xml (listed in robots.txt and GSC).
+      { source: "/sitemap_index.xml", destination: "https://www.londradepo.com/sitemap.xml", statusCode: 301 },
       // Canonical host is www (see src/lib/site.ts). Apex requests go to www with a permanent 308.
       {
         source: "/:path*",

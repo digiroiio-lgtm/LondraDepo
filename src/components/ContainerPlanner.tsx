@@ -4,6 +4,7 @@ import Emoji from "@/components/visual/Emoji";
 import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { trackCtaClick, trackFormStart, trackWhatsappClick, waVariant } from "@/lib/gtag";
+import { quoteLink } from "@/lib/quote-params";
 
 /**
  * Container arrival planner. Produces a suggested planning timeline from the ETA.
@@ -160,7 +161,7 @@ export default function ContainerPlanner({ lang = "en" }: { lang?: "en" | "tr" }
   ].join(". ");
   const quoteHref =
     lang === "en"
-      ? `/en/request-a-quote?service=container-unloading${load === "pallets" ? `&pallets=${pallets}` : ""}&note=${encodeURIComponent(`Container planner: ${summary}.`)}&from=%2Fen%2Fcontainer-arrival-planner`
+      ? quoteLink("/en/request-a-quote", { service: "container-unloading", pallets: load === "pallets" && pallets, note: `Container planner: ${summary}.`, from: "/en/container-arrival-planner" })
       : "#teklif";
   const waHref = `https://wa.me/447554195190?text=${encodeURIComponent(
     (lang === "en" ? "Hello, I'd like to plan a container delivery: " : "Merhaba, konteyner teslimatı planlamak istiyorum: ") + summary + ".",

@@ -19,7 +19,7 @@ export const tr: UiStrings = {
   cookie: {
     aria: "Çerez kullanım bildirimi",
     title: "Çerez Kullanımı",
-    body: "Bu sitenin düzgün çalışmasını sağlamak ve kullanımını analiz ederek geliştirmek amacıyla sınırlı sayıda çerez kullanıyoruz. Analitik ve pazarlama çerezleri yalnızca onay vermeniz halinde aktif olur. Tercihinizi istediğiniz zaman footer alanındaki “Çerez Ayarları” bağlantısından değiştirebilirsiniz.",
+    body: "Bu sitenin düzgün çalışmasını sağlamak ve kullanımını analiz ederek geliştirmek amacıyla sınırlı sayıda çerez kullanıyoruz. Analitik çerezler yalnızca onay vermeniz halinde aktif olur; pazarlama çerezi kullanmıyoruz. Tercihinizi istediğiniz zaman footer alanındaki “Çerez Ayarları” bağlantısından değiştirebilirsiniz.",
     cookie: "Çerez Politikası",
     cookieHref: "/cookie-policy",
     and: "ve",

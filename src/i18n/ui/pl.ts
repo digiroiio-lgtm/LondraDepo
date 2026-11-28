@@ -19,7 +19,7 @@ export const pl: UiStrings = {
   cookie: {
     aria: "Informacja o plikach cookie",
     title: "Pliki cookie",
-    body: "Używamy niewielkiej liczby plików cookie, aby strona działała poprawnie i abyśmy rozumieli, jak jest używana. Analityczne i marketingowe pliki cookie włączamy tylko za Twoją zgodą. Wybór możesz zmienić w każdej chwili w „Ustawieniach cookies” w stopce. Zobacz naszą",
+    body: "Używamy niewielkiej liczby plików cookie, aby strona działała poprawnie i abyśmy rozumieli, jak jest używana. Analityczne pliki cookie włączamy tylko za Twoją zgodą; nie używamy marketingowych plików cookie. Wybór możesz zmienić w każdej chwili w „Ustawieniach cookies” w stopce. Zobacz naszą",
     cookie: "Politykę cookies",
     cookieHref: "/pl/polityka-cookies",
     and: "i",

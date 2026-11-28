@@ -19,7 +19,7 @@ export const en: UiStrings = {
   cookie: {
     aria: "Cookie notice",
     title: "Cookies",
-    body: "We use a small number of cookies to keep this site working and to understand how it is used. Analytics and marketing cookies are only activated with your consent. You can change your choice at any time via “Cookie Settings” in the footer. See our",
+    body: "We use a small number of cookies to keep this site working and to understand how it is used. Analytics cookies are only activated with your consent; we do not use marketing cookies. You can change your choice at any time via “Cookie Settings” in the footer. See our",
     cookie: "Cookie Policy",
     cookieHref: "/en/cookie-policy",
     and: "and",

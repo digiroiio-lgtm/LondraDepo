@@ -11,6 +11,7 @@ import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 
 import { SITE_URL } from "@/lib/site";
 import { trAlternates } from "@/lib/i18n";
+import QuoteForm from "@/components/QuoteForm";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20elleçleme%20hizmeti%20hakkında%20bilgi%20almak%20istiyorum.";
 
 export const metadata: Metadata = {
@@ -153,6 +154,7 @@ export default function EllecelermePage() {
 
         <CtaCards />
         <RelatedLinks links={[{ href: "/konteyner-bosaltma", label: "Konteyner boşaltma" }, { href: "/palet-depolama", label: "Palet depolama", note: "£3.50 + KDV / palet / hafta" }, { href: "/amazon-prep-uk", label: "Amazon prep (FBA hazırlık)" }, { href: "/otomotiv-yedek-parca-depolama", label: "Otomotiv yedek parça depolama" }, { href: "/case-studies/uk-walking-treadmill-distribution", label: "Vaka: koşu bandı dağıtımı" }, { href: "/teklif-al", label: "Teklif al", note: "Size özel fiyat ve plan" }]} />
+        <QuoteForm formId="tr_inline_quote" heading="Elleçleme Teklifi Alın" intro="Ürün türünüzü, yaklaşık palet veya koli sayınızı ve ihtiyacınız olan hizmetleri yazın; ekibimiz size özel teklif hazırlasın. Standart palet depolama haftalık £3,50 + KDV'den başlar." presetServices={["Ürün Elleçleme"]} />
       </main>
       <Footer />
       <StickyWhatsappCta />

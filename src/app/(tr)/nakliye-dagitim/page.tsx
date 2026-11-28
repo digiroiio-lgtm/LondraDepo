@@ -11,6 +11,7 @@ import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 
 import { SITE_URL } from "@/lib/site";
 import { trAlternates } from "@/lib/i18n";
+import QuoteForm from "@/components/QuoteForm";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20nakliye%20ve%20dağıtım%20hizmeti%20hakkında%20bilgi%20almak%20istiyorum.";
 
 export const metadata: Metadata = {
@@ -149,6 +150,7 @@ export default function NakliyeDagitimPage() {
 
         <CtaCards />
         <RelatedLinks links={[{ href: "/palet-depolama", label: "Palet depolama" }, { href: "/limandan-depoya-lojistik", label: "Limandan depoya lojistik" }, { href: "/ambalaj-catering-depolama", label: "Ambalaj ve catering depolama" }, { href: "/case-studies/tasinabilir-sarj-istasyonu-ingiltere-operasyonu", label: "Vaka: taşınabilir şarj istasyonu" }, { href: "/case-studies/uk-walking-treadmill-distribution", label: "Vaka: koşu bandı dağıtımı" }, { href: "/teklif-al", label: "Teklif al", note: "Size özel fiyat ve plan" }]} />
+        <QuoteForm formId="tr_inline_quote" heading="Nakliye ve Dağıtım Teklifi Alın" intro="Ürün türünüzü, yaklaşık palet veya koli sayınızı ve ihtiyacınız olan hizmetleri yazın; ekibimiz size özel teklif hazırlasın. Standart palet depolama haftalık £3,50 + KDV'den başlar." presetServices={["Nakliye", "Dağıtım"]} />
       </main>
       <Footer />
       <StickyWhatsappCta />

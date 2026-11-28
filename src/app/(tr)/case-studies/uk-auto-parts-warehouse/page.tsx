@@ -14,6 +14,7 @@ import RelatedCases from "@/components/RelatedCases";
 
 import { SITE_URL } from "@/lib/site";
 import { trAlternates } from "@/lib/i18n";
+import QuoteForm from "@/components/QuoteForm";
 const ARTICLE = TR_ARTICLES["/case-studies/uk-auto-parts-warehouse"];
 const PAGE_URL = `${SITE_URL}/case-studies/uk-auto-parts-warehouse`;
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20otomotiv%20yedek%20parca%20depolama%20hakkinda%20bilgi%20almak%20istiyorum.";
@@ -309,6 +310,7 @@ export default function AutoPartsCaseStudyPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <QuoteForm formId="tr_case_quote" heading="Benzer Bir Operasyon İçin Teklif Alın" intro="Ürün türünüzü, yaklaşık palet veya koli sayınızı ve ihtiyacınız olan hizmetleri yazın; ekibimiz size özel teklif hazırlasın. Standart palet depolama haftalık £3,50 + KDV'den başlar." presetServices={["Depolama"]} />
       </main>
       <Footer />
       <StickyWhatsappCta />

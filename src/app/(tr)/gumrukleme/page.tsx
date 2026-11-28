@@ -11,6 +11,7 @@ import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 
 import { SITE_URL } from "@/lib/site";
 import { trAlternates } from "@/lib/i18n";
+import QuoteForm from "@/components/QuoteForm";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20UK%20gümrükleme%20desteği%20hakkında%20bilgi%20almak%20istiyorum.";
 
 export const metadata: Metadata = {
@@ -153,6 +154,7 @@ export default function GumruklernePage() {
 
         <CtaCards />
         <RelatedLinks links={[{ href: "/ingiltere-ithalat-lojistigi", label: "İngiltere ithalat lojistiği", note: "Limandan depoya tüm süreç" }, { href: "/blog/ithalat-belgeleri", label: "İthalat belgeleri rehberi" }, { href: "/blog/antrepo-nedir", label: "Antrepo nedir?", note: "Vergisi ödenmemiş depolama farkı" }, { href: "/blog/incoterms-rehberi", label: "Incoterms rehberi" }, { href: "/blog/ingiltere-ithalat-maliyetleri", label: "İthalat maliyetleri", note: "Gümrük vergisi ve KDV" }, { href: "/teklif-al", label: "Teklif al", note: "Size özel fiyat ve plan" }]} />
+        <QuoteForm formId="tr_inline_quote" heading="Gümrükleme Teklifi Alın" intro="Ürün türünüzü, yaklaşık palet veya koli sayınızı ve ihtiyacınız olan hizmetleri yazın; ekibimiz size özel teklif hazırlasın. Standart palet depolama haftalık £3,50 + KDV'den başlar." presetServices={["Gümrükleme Koordinasyonu"]} />
       </main>
       <Footer />
       <StickyWhatsappCta />

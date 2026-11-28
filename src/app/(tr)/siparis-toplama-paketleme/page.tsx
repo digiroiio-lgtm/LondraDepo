@@ -10,6 +10,7 @@ import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 
 import { SITE_URL } from "@/lib/site";
 import { trAlternates } from "@/lib/i18n";
+import QuoteForm from "@/components/QuoteForm";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20sipariş%20toplama%20ve%20paketleme%20hizmeti%20hakkında%20bilgi%20almak%20istiyorum.";
 const TEL = "tel:+447554195190";
 
@@ -286,6 +287,7 @@ export default function SiparisToplama() {
           </div>
         </section>
         <TrClusterNav path="/siparis-toplama-paketleme" />
+        <QuoteForm formId="tr_inline_quote" heading="Pick & Pack Teklifi Alın" intro="Ürün türünüzü, yaklaşık palet veya koli sayınızı ve ihtiyacınız olan hizmetleri yazın; ekibimiz size özel teklif hazırlasın. Standart palet depolama haftalık £3,50 + KDV'den başlar." presetServices={["Pick & Pack"]} />
       </main>
       <Footer />
       <StickyWhatsappCta />

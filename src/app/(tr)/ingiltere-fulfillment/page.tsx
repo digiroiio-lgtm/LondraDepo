@@ -10,6 +10,7 @@ import CtaCards from "@/components/CtaCards";
 
 import { SITE_URL } from "@/lib/site";
 import { trAlternates } from "@/lib/i18n";
+import QuoteForm from "@/components/QuoteForm";
 const PAGE_URL = `${SITE_URL}/ingiltere-fulfillment`;
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20fulfillment%20teklifi%20almak%20istiyorum.";
 
@@ -160,6 +161,7 @@ export default function FulfillmentPage() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <TrClusterNav path="/ingiltere-fulfillment" />
+        <QuoteForm formId="tr_inline_quote" heading="Fulfillment Teklifi Alın" intro="Ürün türünüzü, yaklaşık palet veya koli sayınızı ve ihtiyacınız olan hizmetleri yazın; ekibimiz size özel teklif hazırlasın. Standart palet depolama haftalık £3,50 + KDV'den başlar." presetServices={["E-Ticaret Fulfillment", "Pick & Pack"]} />
       </main>
       <Footer />
       <StickyWhatsappCta />

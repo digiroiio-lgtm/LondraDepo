@@ -3,6 +3,7 @@
 import { useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { trackCtaClick, trackFormStart, trackWhatsappClick, waVariant } from "@/lib/gtag";
+import { quoteLink } from "@/lib/quote-params";
 
 /** Published starting rate. Everything else is quoted per operation and never estimated here. */
 const RATE_GBP = 3.5;
@@ -99,7 +100,7 @@ export default function CostCalculator({ lang = "en" }: { lang?: "en" | "tr" }) 
   const summary = `${pallets} ${lang === "en" ? "pallets" : "palet"} × ${weeks} ${lang === "en" ? "weeks" : "hafta"} = ${gbp.format(total)} + ${t.vatWord}`;
   const quoteHref =
     lang === "en"
-      ? `/en/request-a-quote?service=${extras.includes("pickPack") ? "fulfilment" : extras.includes("amazon") ? "amazon-prep" : "storage"}&pallets=${pallets}&from=%2Fen%2Fuk-storage-cost-calculator`
+      ? quoteLink("/en/request-a-quote", { service: extras.includes("pickPack") ? "fulfilment" : extras.includes("amazon") ? "amazon-prep" : "storage", pallets, from: "/en/uk-storage-cost-calculator" })
       : "#teklif";
   const waHref = `https://wa.me/447554195190?text=${encodeURIComponent(t.waText(pallets, weeks, gbp.format(total)))}`;
 

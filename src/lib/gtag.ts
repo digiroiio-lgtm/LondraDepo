@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import { readQuoteParams } from "@/lib/quote-params";
 
 /*
  * Advanced Consent Mode: gtag.js loads for every visitor. Without analytics consent, Consent Mode sends
@@ -25,8 +26,8 @@ function send(event: string, params: Params, opts: { beacon?: boolean } = {}) {
   if (typeof window === "undefined") return;
   const page_lang = typeof document !== "undefined" ? document.documentElement.lang : undefined;
   const page_path = typeof location !== "undefined" ? location.pathname : undefined;
-  // On the standalone quote page, attribute to the page the visitor came from (?from=/en/amazon-prep-uk).
-  const from = typeof location !== "undefined" ? new URLSearchParams(location.search).get("from") : null;
+  // On the standalone quote page, attribute to the page the visitor came from (#from=/en/amazon-prep-uk, or legacy ?from=).
+  const from = typeof location !== "undefined" ? readQuoteParams().get("from") : null;
   const page_group = from ? pageGroup(from) : page_path ? pageGroup(page_path) : undefined;
   (window as any).gtag?.("event", event, { page_lang, page_path, page_group, ...params, ...(opts.beacon ? { transport_type: "beacon" } : {}) });
 }

@@ -7,6 +7,7 @@ import { useFormTracking } from "@/components/useFormTracking";
 import { QUOTE_SERVICES, type QuoteService } from "@/content/en/cta";
 import { QF } from "@/i18n/quote-form";
 import type { ViewLocale } from "@/i18n/view";
+import { readQuoteParams } from "@/lib/quote-params";
 
 const FORMSPREE_ID = "xoejvawy";
 
@@ -68,7 +69,7 @@ export default function QuoteFormEn({ defaultService, formId = "en_request_a_quo
 
   // Read service preset and attribution from the URL on the client (keeps the page static).
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
+    const params = readQuoteParams();
     const preset = params.get("service");
     if (preset && preset in QUOTE_SERVICES) setF((x) => ({ ...x, service: preset as QuoteService }));
     // Calculator hand-off: map a pallet count to the storage band.

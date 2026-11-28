@@ -1,4 +1,5 @@
 import type { EnPage } from "./types";
+import { quoteLink } from "@/lib/quote-params";
 
 /** Services offered in the English quote form (value -> label). */
 export const QUOTE_SERVICES = {
@@ -80,5 +81,5 @@ export function ctaFor(page: Pick<EnPage, "slug" | "quote">): Cta {
 /** Quote page link with the service preset and the page it came from, in the page's language. */
 export function quoteHref(service: QuoteService, from: string, lang: "en" | "pl" = "en"): string {
   const base = lang === "pl" ? "/pl/zapytanie-ofertowe" : "/en/request-a-quote";
-  return `${base}?service=${service}&from=${encodeURIComponent(from)}`;
+  return quoteLink(base, { service, from });
 }

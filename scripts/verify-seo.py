@@ -43,9 +43,9 @@ from pathlib import Path
 import os
 BASE=os.environ.get('SEO_BASE_URL', 'http://localhost:3100').rstrip('/'); SITE='https://www.londradepo.com'
 XHTML='{http://www.w3.org/1999/xhtml}'
-index=get(BASE+'/sitemap_index.xml')
+index=get(BASE+'/sitemap.xml')
 children=[x.text for x in ET.fromstring(index['body']).findall('{*}sitemap/{*}loc')]
-legacy=get(BASE+'/sitemap.xml')
+legacy=get(BASE+'/sitemap_index.xml')
 sm_alt={}; sm_lang={}; sm_lastmod={}; urls=[]; sm={'body':index['body']}; tr_body=''
 for child in children:
  doc=get(BASE+urllib.parse.urlsplit(child).path)
@@ -61,12 +61,12 @@ for child in children:
 
 rows=[get(BASE+urllib.parse.urlsplit(u).path) for u in urls]
 failures=[]
-if legacy.get('body')!=index['body']: failures.append(['/sitemap.xml','does not serve the sitemap index'])
+if not legacy.get('chain') or legacy['chain'][0]['status'] not in (301,308) or not legacy['chain'][-1]['location'].endswith('/sitemap.xml'): failures.append(['/sitemap_index.xml','does not redirect to /sitemap.xml',legacy.get('chain')])
 if len(urls)!=len(set(urls)): failures.append(['sitemaps','duplicate loc'])
 robots = get(BASE + '/robots.txt')
 rules = urllib.robotparser.RobotFileParser()
 rules.parse(robots['body'].splitlines())
-if 'Sitemap: '+SITE + '/sitemap_index.xml' not in robots['body']:
+if 'Sitemap: '+SITE + '/sitemap.xml' not in robots['body']:
  failures.append(['robots.txt', 'sitemap origin mismatch'])
 def norm(t):return ' '.join(unicodedata.normalize('NFKC',t).replace('’',"'").replace('–','-').replace('—','-').split())
 for u,r in zip(urls,rows):

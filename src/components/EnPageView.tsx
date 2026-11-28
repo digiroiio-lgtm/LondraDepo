@@ -50,6 +50,7 @@ import type { EnPage, Section } from "@/content/en/types";
 import { absolute } from "@/lib/i18n";
 import { SITE_URL } from "@/lib/site";
 import { palletOffer } from "@/lib/offers";
+import { quoteLink } from "@/lib/quote-params";
 
 const TEL = "tel:+447554195190";
 const MAPS = "https://maps.google.com/?q=Unit+19+Arterial+Park+Arterial+Road+Rayleigh+Essex+SS6+7FY";
@@ -532,7 +533,7 @@ export default function EnPageView({ page }: { page: EnPage }) {
 
           {page.kind === "contact" && (
             <section className="mb-12 grid gap-4 sm:grid-cols-3">
-              <TrackedLink kind="cta" source="contact_card" href={`${UI[lang].header.quoteHref}?from=${encodeURIComponent(page.slug)}`} className="rounded-xl border border-[#e63946] p-5 hover:bg-red-50 transition">
+              <TrackedLink kind="cta" source="contact_card" href={quoteLink(UI[lang].header.quoteHref, { from: page.slug })} className="rounded-xl border border-[#e63946] p-5 hover:bg-red-50 transition">
                 <h2 className="font-semibold text-[#0b2545] mb-1">{v.contact.quoteTitle}</h2>
                 <p className="text-sm text-slate-600">{v.contact.quoteText}</p>
               </TrackedLink>

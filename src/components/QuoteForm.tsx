@@ -5,6 +5,7 @@ import { useForm } from "@formspree/react";
 import { trackCtaClick } from "@/lib/gtag";
 import { useFormTracking } from "@/components/useFormTracking";
 import { bookingUrl } from "@/lib/booking";
+import { readQuoteParams } from "@/lib/quote-params";
 
 const WA_NUMBER = "447554195190";
 const FORMSPREE_ID = "xoejvawy";
@@ -58,7 +59,7 @@ export default function QuoteForm({
 
   // Attribution captured on the client so pages stay static.
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
+    const params = readQuoteParams();
     const t: Record<string, string> = {};
     for (const k of TRACKING_KEYS) {
       const v = params.get(k);

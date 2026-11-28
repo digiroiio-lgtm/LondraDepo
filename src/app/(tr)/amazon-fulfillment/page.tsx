@@ -165,7 +165,7 @@ export default function AmazonFulfillmentPage() {
         </section>
 
         <TrClusterNav path="/amazon-fulfillment" />
-        <PageFaq faqs={faqs} />
+        <PageFaq title="Amazon UK Fulfillment: Sık Sorulan Sorular" faqs={faqs} />
         <CtaCards />
         <QuoteForm formId="tr_inline_quote" heading="Amazon Fulfillment Teklifi Alın" intro="Ürün türünüzü, yaklaşık palet veya koli sayınızı ve ihtiyacınız olan hizmetleri yazın; ekibimiz size özel teklif hazırlasın. Standart palet depolama haftalık £3,50 + KDV'den başlar." presetServices={["E-Ticaret Fulfillment", "Pick & Pack"]} />
       </main>

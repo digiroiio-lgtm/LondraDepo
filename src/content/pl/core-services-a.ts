@@ -30,7 +30,7 @@ export const plCoreServicesA: EnPage[] = [
     title: "O nas: operator magazynu w Essex w UK",
     description: "LondraDepo prowadzi Arca Trade Group Ltd, członek BIFA działający od 2021 roku, z magazynem w Rayleigh w Essex dla marek międzynarodowych i e-commerce.",
     label: "O nas",
-    h1: "O LondraDepo",
+    h1: "O LondraDepo: operator magazynu w Essex",
     lead:
       "LondraDepo.com to marka magazynowa i fulfillmentowa firmy Arca Trade Group Ltd, spółki zarejestrowanej w Anglii i Walii (nr 13247691), działającej od 2021 roku. Prowadzimy fizyczny magazyn w Rayleigh w hrabstwie Essex i obsługujemy cały proces, od przyjęcia kontenera po dostawę w Wielkiej Brytanii, dla marek, które sprzedają na rynek brytyjski z zagranicy.",
     facts: [

@@ -122,7 +122,7 @@ export default function KonteynerPlanlayiciPage() {
 
         <section className="py-12 px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl font-extrabold text-[#0b2545] mb-6">Sık Sorulan Sorular</h2>
+            <h2 className="text-2xl font-extrabold text-[#0b2545] mb-6">{"Konteyner Varış Planlayıcı: Sık Sorulan Sorular"}</h2>
             <div className="space-y-4">
               {faqs.map((f) => (
                 <div key={f.q} className="border border-slate-200 rounded-xl p-5">

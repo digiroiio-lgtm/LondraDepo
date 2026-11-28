@@ -230,7 +230,7 @@ export default function TrDataPage({ p, children }: { p: TrPage; children?: Reac
             {children}
             {isArticle && <div className="article-body"><ArticleSources path={p.path} /></div>}
             <section className="mb-10">
-              <h2 className="text-2xl font-extrabold text-[#0b2545] mb-6">Sık Sorulan Sorular</h2>
+              <h2 className="text-2xl font-extrabold text-[#0b2545] mb-6">{p.crumb}: Sık Sorulan Sorular</h2>
               <div className="space-y-4">
                 {p.faqs.map((f) => (
                   <div key={f.q} className="border border-slate-200 rounded-xl p-5">

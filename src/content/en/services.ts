@@ -49,6 +49,7 @@ const ORDER_STEPS = [
 export const servicePages: EnPage[] = [
   {
     slug: "/en/uk-warehousing",
+    modified: "2026-11-28",
     tr: "/ingiltere-depo",
     kind: "service",
     serviceType: "Warehousing",
@@ -460,7 +461,7 @@ export const servicePages: EnPage[] = [
   {
     slug: "/en/uk-fulfilment",
     tr: "/ingiltere-fulfillment",
-    modified: "2026-11-10",
+    modified: "2026-11-28",
     kind: "service",
     serviceType: "Fulfilment",
     title: "Fulfilment Services UK for Importing Brands",
@@ -500,6 +501,7 @@ export const servicePages: EnPage[] = [
   },
   {
     slug: "/en/pallet-storage",
+    modified: "2026-11-28",
     tr: "/palet-depolama",
     kind: "service",
     serviceType: "Pallet storage",
@@ -554,7 +556,7 @@ export const servicePages: EnPage[] = [
     tr: "/amazon-prep-uk",
     kind: "service",
     serviceType: "Amazon FBA prep",
-    modified: "2026-11-10",
+    modified: "2026-11-28",
     title: "Amazon Prep Centre UK: FBA Prep in Essex, No Minimum",
     description:
       "Amazon FBA prep in Essex: FNSKU labelling, checks, packing and parcel or pallet delivery to Amazon UK, 16 miles from Amazon LCY2 Tilbury. No fixed minimum.",
@@ -809,7 +811,7 @@ export const servicePages: EnPage[] = [
   {
     slug: "/en/amazon-fulfilment-uk",
     tr: "/amazon-fulfillment",
-    modified: "2026-11-10",
+    modified: "2026-11-28",
     kind: "service",
     serviceType: "Amazon fulfilment",
     title: "Amazon Fulfilment UK: FBA or FBM from Essex",

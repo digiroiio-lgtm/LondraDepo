@@ -85,7 +85,7 @@ export default function IletisimPage() {
         <section className="py-16 px-4 bg-white">
           <div className="max-w-3xl mx-auto">
             <h1 className="text-3xl md:text-4xl font-extrabold text-[#0b2545] mb-4">
-              İletişim
+              İletişim: LondraDepo İngiltere Depo Ekibi
             </h1>
             <p className="text-lg text-slate-600 mb-10 leading-relaxed">
               İngiltere depo, fulfillment veya UK lojistik hizmetlerimiz hakkında bilgi almak için WhatsApp veya telefon aracılığıyla doğrudan ulaşabilirsiniz. Türkçe destek veriyoruz.

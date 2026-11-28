@@ -273,7 +273,7 @@ export default function TurkiyeILandingPage() {
         {/* FAQ */}
         <section className="py-16 px-4 bg-[#f6f8fb]">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl font-extrabold text-[#0b2545] mb-8 text-center">Sık Sorulan Sorular</h2>
+            <h2 className="text-2xl font-extrabold text-[#0b2545] mb-8 text-center">{"Türkiye'den İngiltere'ye Depolama: Sık Sorulan Sorular"}</h2>
             <div className="space-y-4">
               {faqs.map((faq) => (
                 <div key={faq.q} className="bg-white border border-slate-200 rounded-xl p-5">

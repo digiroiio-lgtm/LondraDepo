@@ -183,13 +183,14 @@ export const corePages: EnPage[] = [
   },
   {
     slug: "/en/about-us",
+    modified: "2026-11-28",
     tr: "/hakkimizda",
     kind: "service",
     title: "About Us – Essex UK Warehouse Operator",
     description:
       "LondraDepo is operated by Arca Trade Group Ltd, a BIFA member trading since 2021, running a UK warehouse in Rayleigh, Essex for international and ecommerce brands.",
     label: "About Us",
-    h1: "About LondraDepo",
+    h1: "About LondraDepo: UK Warehouse Operator in Essex",
     lead:
       "LondraDepo.com is the UK warehousing and fulfilment brand of Arca Trade Group Ltd, a company registered in England and Wales (No. 13247691) and operating since 2021. We run a physical warehouse in Rayleigh, Essex, handling everything from container receiving to UK delivery for brands that sell into the UK from abroad.",
     facts: [
@@ -256,13 +257,14 @@ export const corePages: EnPage[] = [
   },
   {
     slug: "/en/contact",
+    modified: "2026-11-28",
     tr: "/iletisim",
     kind: "contact",
     title: "Contact Us – UK Warehouse Quote",
     description:
       "Contact LondraDepo for UK warehousing, fulfilment or distribution. WhatsApp or call +44 7554 195190. Warehouse: Unit 19 Arterial Park, Rayleigh, Essex SS6 7FY.",
     label: "Contact",
-    h1: "Contact LondraDepo",
+    h1: "Contact LondraDepo: UK Warehouse in Essex",
     lead:
       "The fastest way to reach us is WhatsApp or phone on +44 7554 195190. Tell us your product type, volume and the services you need, and we will come back with a tailored quote. Support is available in English and Turkish.",
     facts: [

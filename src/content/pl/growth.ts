@@ -768,7 +768,7 @@ export const plGrowth: EnPage[] = [
     description: "Wyślij pełny kontener do UK, a my przechowamy towar jako zapas buforowy w Essex i dostarczymy go klientowi co tydzień lub na żądanie. Palety od 3,50 £ + VAT.",
     label: "Zapas buforowy i dostawy",
     eyebrow: "Zapas buforowy i centrum dystrybucji w UK",
-    h1: "Zapas buforowy w Wielkiej Brytanii: wysyłasz hurtowo, dostarczamy według potrzeb",
+    h1: "Zapas buforowy w UK i dostawy według harmonogramu",
     lead:
       "Wielu brytyjskich klientów zużywa jedną lub dwie palety tygodniowo, ale nie ma miejsca na przyjęcie całego kontenera. W modelu call-off stock producent wysyła towar hurtowo, LondraDepo przechowuje go jako zapas buforowy w Rayleigh w Essex, a my dostarczamy go klientowi w UK według stałego harmonogramu lub na jego wezwanie. Producent zachowuje efektywny eksport kontenerowy, a odbiorca dostaje tylko tyle, ile potrzebuje. Składowanie zaczyna się od 3,50 £ + VAT za paletę tygodniowo, bez stałego minimum.",
     facts: [
@@ -863,7 +863,7 @@ export const plGrowth: EnPage[] = [
     description: "Jedna wysyłka zbiorcza do UK zamiast setek paczek. Odprawiamy, liczymy, etykietujemy i doręczamy do odbiorców B2B i B2C w UK. Palety od 3,50 £ + VAT.",
     label: "Wysyłka zbiorcza i dystrybucja",
     eyebrow: "Jedna wysyłka zbiorcza, dostawy w całej Wielkiej Brytanii",
-    h1: "Wysyłka zbiorcza do UK oraz dystrybucja paczek i palet w Wielkiej Brytanii",
+    h1: "Wysyłka zbiorcza do UK i dystrybucja w Wielkiej Brytanii",
     lead:
       "Zamiast wysyłać setki osobnych paczek międzynarodowych z Polski, wysyłasz towar do UK raz, jako jedną przesyłkę zbiorczą na paletach lub w kartonach. Przesyłka przechodzi odprawę celną w UK, a LondraDepo przyjmuje ją i przelicza w magazynie w Rayleigh w Essex, a następnie kompletuje, pakuje i etykietuje zamówienia według Twojego pliku adresowego i przekazuje je krajowym przewoźnikom w UK lub dostarcza jako palety do odbiorców biznesowych. Otrzymujesz raport z doręczeń, a pozostały towar zostaje na stanie od 3,50 £ + VAT za paletę tygodniowo, bez stałego minimum.",
     facts: [
@@ -955,7 +955,7 @@ export const plGrowth: EnPage[] = [
     description: "Wyślij próbki do UK jedną wysyłką zbiorczą, a my spakujemy imienne paczki z Twojej listy adresowej i roześlemy je w UK. Palety od 3,50 £ + VAT.",
     label: "Dystrybucja próbek w UK",
     eyebrow: "Wysyłki próbek i premiery produktów w UK",
-    h1: "Dystrybucja próbek w Wielkiej Brytanii: jedna wysyłka zbiorcza, setki imiennych paczek",
+    h1: "Dystrybucja próbek w Wielkiej Brytanii",
     lead:
       "Zamiast nadawać setki osobnych paczek międzynarodowych, wysyłasz próbki do UK jedną wysyłką zbiorczą, a LondraDepo pakuje je i rozsyła do każdego odbiorcy z Twojej listy adresowej. Towar przechodzi odprawę celną w UK, przyjmujemy go i liczymy w magazynie w Rayleigh w Essex, a następnie etykietujemy i pakujemy paczka po paczce i przekazujemy krajowym przewoźnikom w UK. Pozostałe próbki zostają na stanie na kolejne zapytania, a Ty otrzymujesz raport dostaw z całej wysyłki. Składowanie zaczyna się od 3,50 £ + VAT za paletę tygodniowo, bez stałego minimum.",
     facts: [
@@ -1048,7 +1048,7 @@ export const plGrowth: EnPage[] = [
     description: "Wyślij prezenty firmowe do UK jedną partią, a my skompletujemy zestawy, dołożymy kartki i doręczymy je odbiorcom w UK z raportem. Palety od 3,50 £ + VAT.",
     label: "Fulfillment prezentów firmowych",
     eyebrow: "Fulfillment prezentów i materiałów promocyjnych w UK",
-    h1: "Fulfillment prezentów firmowych w UK: jedna wysyłka zbiorcza, każdy odbiorca obsłużony",
+    h1: "Fulfillment prezentów firmowych w Wielkiej Brytanii",
     lead:
       "Zamiast setek osobnych paczek międzynarodowych wysyłasz prezenty i materiały promocyjne do UK jedną partią. LondraDepo przyjmuje je i przelicza w Rayleigh w Essex, kompletuje zestawy, dokłada dostarczone przez Ciebie kartki lub wkładki, pakuje każdą przesyłkę i wysyła ją na adresy z Twojej listy w UK, a na koniec przekazuje raport doręczeń. Z jednego zapasu obsłużysz biura, klientów, pracowników i uczestników wydarzeń, a nadwyżki zostają w magazynie. Składowanie zaczyna się od 3,50 £ + VAT za paletę tygodniowo, bez stałego minimum.",
     facts: [

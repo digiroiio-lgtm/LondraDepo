@@ -351,7 +351,7 @@ export default function AracKoltukKaplamaCaseStudyPage() {
             {/* FAQ */}
             <section className="mb-10">
               <h2 className="text-2xl font-extrabold text-[#0b2545] mb-6">
-                Sık Sorulan Sorular
+                {"Araç Koltuk Kaplama Operasyonu: Sık Sorulan Sorular"}
               </h2>
               <div className="space-y-4">
                 {faqs.map((faq) => (

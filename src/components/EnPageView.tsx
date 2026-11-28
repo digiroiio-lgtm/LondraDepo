@@ -60,7 +60,7 @@ const ORG = { "@id": `${SITE_URL}/#organization` };
 const EN_PUBLISHED = "2026-11-10";
 
 function modifiedOf(page: EnPage): string {
-  return page.article?.modified ?? page.modified ?? EN_PUBLISHED;
+  return [page.article?.modified, page.modified, EN_PUBLISHED].filter((d): d is string => Boolean(d)).sort().at(-1) as string;
 }
 
 /** Template language of a page (EN or PL). */
@@ -361,7 +361,9 @@ export default function EnPageView({ page }: { page: EnPage }) {
   const inlineForm = INLINE_FORM.has(key);
   const cluster = clusterFor(page.slug);
   const qHref = inlineForm ? "#quote" : quoteHref(quote.service, page.slug, lang);
-  const cta = page.cta ?? v.ctaDefault;
+  // Topic-specific closing heading for services and case studies (avoids one generic H2 on dozens of pages).
+  const cta = page.cta ?? (page.kind === "service" || page.kind === "case" ? { ...v.ctaDefault, h2: quote.label } : v.ctaDefault);
+  const topical = page.kind !== "home" && page.kind !== "contact" && page.kind !== "legal";
 
   return (
     <>
@@ -561,7 +563,7 @@ export default function EnPageView({ page }: { page: EnPage }) {
 
           {page.faqs && (
             <section aria-labelledby="faq-heading" className="mb-12">
-              <h2 id="faq-heading" className="text-2xl font-bold text-[#0b2545] mb-4">{v.faq}</h2>
+              <h2 id="faq-heading" className="text-2xl font-bold text-[#0b2545] mb-4">{topical ? `${page.label}: ${v.faq}` : v.faq}</h2>
               <div className="divide-y divide-slate-200 rounded-xl border border-slate-200">
                 {page.faqs.map((f) => (
                   <div key={f.q} className="p-5">

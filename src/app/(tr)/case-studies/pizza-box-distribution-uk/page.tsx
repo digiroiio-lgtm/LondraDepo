@@ -275,7 +275,7 @@ export default function PizzaBoxCaseStudyPage() {
 
             {/* FAQ */}
             <section className="mb-10">
-              <h2 className="text-2xl font-extrabold text-[#0b2545] mb-6">Sık Sorulan Sorular</h2>
+              <h2 className="text-2xl font-extrabold text-[#0b2545] mb-6">{"Pizza Kutusu Dağıtımı: Sık Sorulan Sorular"}</h2>
               <div className="space-y-4">
                 {faqs.map((faq) => (
                   <div key={faq.q} className="border border-slate-200 rounded-xl p-5">

@@ -68,7 +68,7 @@ export const plServicesB: EnPage[] = [
     description: "Usługi magazynowe w UK: przyjęcie palet i kartonów, rozładunek kontenerów FCL, stany w Mintsoft WMS i składowanie krótko- lub długoterminowe w Essex.",
     label: "Usługi magazynowe",
     eyebrow: "Składowanie w Wielkiej Brytanii",
-    h1: "Usługi magazynowe w UK: przyjęcie towaru, kontrola stanów i elastyczna powierzchnia",
+    h1: "Usługi magazynowe w UK: przyjęcie towaru i kontrola stanów",
     lead:
       "Nasze usługi magazynowe w Wielkiej Brytanii obejmują techniczną stronę przechowywania zapasu: przyjęcie palet i kartonów, rozładunek kontenerów FCL, bieżącą ewidencję stanów w systemie Mintsoft WMS oraz elastyczną powierzchnię na krótki lub długi okres w magazynie w Rayleigh w Essex. Standardowa paleta kosztuje od 3,50 £ + VAT tygodniowo.",
     facts: [

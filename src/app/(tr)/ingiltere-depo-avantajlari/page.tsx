@@ -439,7 +439,7 @@ export default function IngiltereDepoAvantajlariPage() {
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-extrabold text-[#0b2545] mb-3">
-                Sık Sorulan Sorular
+                {"İngiltere Depo Avantajları: Sık Sorulan Sorular"}
               </h2>
               <p className="text-slate-600">
                 İngiltere depo avantajları ve operasyon süreçleri hakkında

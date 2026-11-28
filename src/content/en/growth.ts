@@ -276,6 +276,7 @@ export const growthPages: EnPage[] = [
   },
   {
     slug: "/en/3pl-uk",
+    modified: "2026-11-28",
     tr: "/ingiltere-3pl",
     kind: "service",
     serviceType: "Third-party logistics (3PL)",
@@ -476,7 +477,7 @@ export const growthPagesP2: EnPage[] = [
     description: "Send your samples to the UK in one bulk shipment; we pack personalised parcels from your address list and send them across the UK. Pallets from £3.50 + VAT.",
     label: "UK Sample Distribution",
     eyebrow: "Sample mailings and product launches in the UK",
-    h1: "UK Sample Distribution: One Bulk Shipment, Hundreds of Personalised Parcels",
+    h1: "UK Sample Distribution: One Bulk Shipment, Personal Parcels",
     lead:
       "Instead of posting hundreds of separate international parcels, you send your samples to the UK in one bulk shipment, and LondraDepo packs and sends them to every recipient on your address list. The goods are cleared into the UK, received and counted at our warehouse in Rayleigh, Essex, then labelled and packed parcel by parcel and handed to UK domestic carriers. Leftover samples stay in stock for later requests, and you receive a delivery report for the whole mailing. Storage starts from £3.50 + VAT per pallet per week, with no fixed minimum.",
     facts: [
@@ -570,7 +571,7 @@ export const growthPagesP2: EnPage[] = [
     description: "Ship corporate gifts to the UK in bulk; we build kits, add your cards, pack and deliver to each UK recipient with a delivery report. Pallets from £3.50 + VAT.",
     label: "Corporate Gift Fulfilment",
     eyebrow: "Gift and promotional fulfilment in the UK",
-    h1: "Corporate Gift Fulfilment in the UK: One Bulk Shipment, Every Recipient Reached",
+    h1: "Corporate Gift Fulfilment in the UK",
     lead:
       "Instead of sending hundreds of separate international parcels, you ship your gifts and promotional items to the UK in one bulk shipment. LondraDepo receives and counts them in Rayleigh, Essex, builds the kits, adds the cards or inserts you supply, packs each one and sends it to your UK recipient list, then reports back on every delivery. Offices, clients, employees and event attendees can all be served from the same stock, and anything left over stays in storage. Storage starts from £3.50 + VAT per pallet per week, with no fixed minimum.",
     facts: [

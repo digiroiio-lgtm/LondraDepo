@@ -172,7 +172,7 @@ export default function AraDepoNedirPage() {
 
               <ArticleSources path="/blog/ingiltere-ara-depo-nedir" />
 
-              <h2>Sık Sorulan Sorular</h2>
+              <h2>{"Transit Depo: Sık Sorulan Sorular"}</h2>
               {faqs.map((f) => (
                 <div key={f.q}>
                   <h3>{f.q}</h3>

@@ -353,7 +353,7 @@ export default function TurkiyedenIngiltereye() {
             </div>
           </div>
         </section>
-        <PageFaq faqs={faqs} />
+        <PageFaq title="İngiltere'de Satış: Sık Sorulan Sorular" faqs={faqs} />
         <TrClusterNav path="/turkiyeden-ingiltereye-satis" />
         <QuoteForm formId="tr_inline_quote" heading="İngiltere Pazarı İçin Teklif Alın" intro="Ürün türünüzü, yaklaşık palet veya koli sayınızı ve ihtiyacınız olan hizmetleri yazın; ekibimiz size özel teklif hazırlasın. Standart palet depolama haftalık £3,50 + KDV'den başlar." presetServices={["Depolama", "E-Ticaret Fulfillment"]} />
       </main>

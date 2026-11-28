@@ -152,7 +152,7 @@ export default function ETicaretFulfillmentPage() {
           </div>
         </section>
 
-        <PageFaq faqs={faqs} />
+        <PageFaq title="E-Ticaret Fulfillment: Sık Sorulan Sorular" faqs={faqs} />
         <TrClusterNav path="/e-ticaret-fulfillment" />
         <CtaCards />
         <QuoteForm formId="tr_inline_quote" heading="E-Ticaret Fulfillment Teklifi Alın" intro="Ürün türünüzü, yaklaşık palet veya koli sayınızı ve ihtiyacınız olan hizmetleri yazın; ekibimiz size özel teklif hazırlasın. Standart palet depolama haftalık £3,50 + KDV'den başlar." presetServices={["E-Ticaret Fulfillment", "Pick & Pack"]} />

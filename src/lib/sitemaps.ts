@@ -4,6 +4,7 @@ import type { PageKind } from "@/content/en/types";
 import { enAlternates, localeAlternates, trAlternates, type Alternates } from "@/lib/i18n";
 import { SITE_URL } from "@/lib/site";
 import { TR_ARTICLES } from "@/content/tr-articles";
+import { TR_LASTMOD } from "@/content/tr-lastmod";
 
 type Freq = "weekly" | "monthly" | "yearly";
 type Entry = { path: string; changefreq: Freq; priority: number; alternates: Alternates; lastmod?: string };
@@ -99,15 +100,27 @@ const EN_ONLY: ReadonlyArray<readonly [string, Freq, number]> = [["/en/request-a
 /** All English pages were published on this date; later edits update content dates. */
 const EN_PUBLISHED = "2026-11-10";
 
+/** Latest of several ISO dates (undefined entries ignored). */
+function latest(...dates: (string | undefined)[]): string | undefined {
+  return dates.filter((d): d is string => Boolean(d)).sort().at(-1);
+}
+
 export function trEntries(): Entry[] {
-  return TR.map(([path, changefreq, priority]) => ({ path, changefreq, priority, alternates: trAlternates(path), lastmod: TR_ARTICLES[path]?.modified }));
+  return TR.map(([path, changefreq, priority]) => ({
+    path,
+    changefreq,
+    priority,
+    alternates: trAlternates(path),
+    // Editorial article date or the last git change of the page (scripts/gen-tr-lastmod.py), whichever is later.
+    lastmod: latest(TR_ARTICLES[path]?.modified, TR_LASTMOD[path]),
+  }));
 }
 
 export function enEntries(): Entry[] {
   return [
     ...EN_PAGES.map((p) => {
       const [changefreq, priority] = EN_PRIORITY[p.kind];
-      return { path: p.slug, changefreq, priority, alternates: enAlternates(p.slug), lastmod: p.article?.modified ?? EN_PUBLISHED };
+      return { path: p.slug, changefreq, priority, alternates: enAlternates(p.slug), lastmod: latest(p.article?.modified, p.modified, EN_PUBLISHED) };
     }),
     ...EN_ONLY.map(([path, changefreq, priority]) => ({ path, changefreq, priority, alternates: enAlternates(path), lastmod: EN_PUBLISHED })),
   ];
@@ -146,12 +159,16 @@ export function urlset(entries: Entry[]): string {
 }
 
 export const CHILD_SITEMAPS = ["/sitemap-tr.xml", "/sitemap-en.xml", "/sitemap-pl.xml"];
+const CHILD_ENTRIES: Record<string, () => Entry[]> = { "/sitemap-tr.xml": trEntries, "/sitemap-en.xml": enEntries, "/sitemap-pl.xml": plEntries };
 
 export function sitemapIndex(): string {
   return [
     '<?xml version="1.0" encoding="UTF-8"?>',
     '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
-    ...CHILD_SITEMAPS.map((p) => `  <sitemap>\n    <loc>${SITE_URL}${p}</loc>\n  </sitemap>`),
+    ...CHILD_SITEMAPS.map((p) => {
+      const mod = latest(...(CHILD_ENTRIES[p]?.() ?? []).map((e) => e.lastmod));
+      return `  <sitemap>\n    <loc>${SITE_URL}${p}</loc>${mod ? `\n    <lastmod>${mod}</lastmod>` : ""}\n  </sitemap>`;
+    }),
     "</sitemapindex>",
     "",
   ].join("\n");

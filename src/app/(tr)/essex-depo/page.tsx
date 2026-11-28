@@ -187,7 +187,7 @@ export default function EssexDepoPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <PageFaq faqs={faqs} />
+        <PageFaq title="Essex Depo: Sık Sorulan Sorular" faqs={faqs} />
         <QuoteForm formId="tr_inline_quote" heading="Essex Depo Teklifi Alın" intro="Ürün türünüzü, yaklaşık palet veya koli sayınızı ve ihtiyacınız olan hizmetleri yazın; ekibimiz size özel teklif hazırlasın. Standart palet depolama haftalık £3,50 + KDV'den başlar." presetServices={["Depolama"]} />
       </main>
       <Footer />

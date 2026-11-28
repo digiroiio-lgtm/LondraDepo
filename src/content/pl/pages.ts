@@ -135,7 +135,7 @@ export const plPages: EnPage[] = [
     description: "Operator 3PL w Wielkiej Brytanii: przyjęcie towaru, składowanie palet od 3,50 £ + VAT, kompletacja zamówień, fulfillment e-commerce i B2B, Amazon FBA prep i dostawy w UK.",
     label: "3PL w Wielkiej Brytanii",
     eyebrow: "Logistyka zewnętrzna w UK",
-    h1: "Magazyn 3PL w Wielkiej Brytanii: logistyka zewnętrzna z Essex pod Londynem",
+    h1: "Magazyn 3PL w Wielkiej Brytanii, Essex pod Londynem",
     lead:
       "Operator 3PL (third-party logistics) przyjmuje Twój towar do swojego magazynu w Wielkiej Brytanii, składuje go, realizuje zamówienia e-commerce i B2B oraz dostarcza je w całym kraju. Ty sprzedajesz w UK, nie prowadząc własnego magazynu. LondraDepo jest operatorem 3PL w Rayleigh w Essex, 13 mil od London Gateway, prowadzonym przez Arca Trade Group, członka BIFA, który zapewnia też transport międzynarodowy i odprawę celną. Składowanie palet od 3,50 £ + VAT tygodniowo, bez stałego minimum.",
     facts: [
@@ -190,7 +190,7 @@ export const plPages: EnPage[] = [
     description: "Składowanie palet w Essex pod Londynem od 3,50 £ + VAT za paletę tygodniowo: przyjęcie kontenerów i dostaw, bezpieczne składowanie, raporty i wysyłki B2B.",
     label: "Składowanie palet",
     eyebrow: "Palety w Wielkiej Brytanii",
-    h1: "Składowanie palet w Wielkiej Brytanii: od 3,50 £ + VAT za paletę tygodniowo",
+    h1: "Składowanie palet w UK od 3,50 £ + VAT tygodniowo",
     lead:
       "Składowanie palet w Wielkiej Brytanii rozlicza się zwykle za paletę tygodniowo. W LondraDepo stawka za standardową paletę zaczyna się od 3,50 £ + VAT tygodniowo i obejmuje samo składowanie; przyjęcie towaru, obsługa i kompletacja są wyceniane osobno. Przyjmujemy kontenery i dostawy częściowe w Rayleigh w Essex, prowadzimy stany w WMS i przygotowujemy palety do wysyłki do klientów B2B w całym kraju.",
     facts: [
@@ -280,7 +280,7 @@ export const plPages: EnPage[] = [
     description: "Amazon FBA prep w UK: przyjęcie towaru, etykiety FNSKU, pakowanie zgodne z wymogami Amazon i planowe dostawy do centrów Amazon UK z magazynu w Essex.",
     label: "Amazon FBA prep",
     eyebrow: "Dla sprzedawców Amazon UK",
-    h1: "Amazon FBA prep w Wielkiej Brytanii: przygotowanie i dostawy do Amazon UK",
+    h1: "Amazon FBA prep w Wielkiej Brytanii",
     lead:
       "Zanim towar trafi do centrum logistycznego Amazon, musi zostać przygotowany zgodnie z wymogami Amazon: oznaczony etykietami FNSKU, odpowiednio zapakowany i wysłany w ramach planu dostawy. LondraDepo przyjmuje Twój zapas w Essex, około 16 mil od centrum Amazon LCY2 w Tilbury, przygotowuje go do FBA i wysyła partiami do centrów Amazon w Wielkiej Brytanii, trzymając resztę zapasu u nas.",
     facts: [

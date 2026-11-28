@@ -140,7 +140,7 @@ export default function EllecelermePage() {
         {/* FAQ */}
         <section className="py-16 px-4 bg-slate-50">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl font-extrabold text-[#0b2545] mb-8 text-center">Sık Sorulan Sorular</h2>
+            <h2 className="text-2xl font-extrabold text-[#0b2545] mb-8 text-center">{"İngiltere Elleçleme: Sık Sorulan Sorular"}</h2>
             <dl className="space-y-4">
               {faqs.map(({ q, a }) => (
                 <div key={q} className="bg-white rounded-2xl p-6 border border-slate-200">

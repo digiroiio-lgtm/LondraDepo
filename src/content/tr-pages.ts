@@ -140,7 +140,7 @@ export const TR_PAGES: Record<string, TrPage> = {
     description: "Konteyneri İngiltere'ye toplu gönderin, Essex depomuzda tampon stok olarak tutalım, İngiliz müşterinize haftalık veya talep üzerine teslim edelim. Palet £3,50 + KDV.",
     crumb: "Stoktan Planlı Teslimat",
     eyebrow: "İngiltere'de tampon stok ve dağıtım merkezi",
-    h1: "İngiltere'de Stoktan Planlı Teslimat: Toplu Gönderin, İhtiyaç Kadar Teslim Edelim",
+    h1: "İngiltere'de Stoktan Planlı Teslimat (Call-Off Stok)",
     lead: "Birçok İngiliz müşteri haftada bir iki palet ürün kullanır ama bir konteyneri teslim alacak yeri yoktur. Call-off stok modelinde üretici malı toplu gönderir, LondraDepo ürünü Rayleigh, Essex'teki depoda tampon stok olarak tutar ve İngiliz müşteriye sabit bir planla ya da müşteri istedikçe teslim eder. Üretici konteyner bazında verimli ihracatını sürdürür, alıcı yalnızca ihtiyacı kadar ürün teslim alır. Palet depolama haftalık £3,50 + KDV'den başlar; asgari hacim yoktur.",
     facts: [
       "Depo: Unit 19 Arterial Park, Rayleigh, Essex SS6 7FY",
@@ -338,7 +338,7 @@ export const TR_PAGES: Record<string, TrPage> = {
     description: "Numunelerinizi İngiltere'ye tek toplu sevkiyatla gönderin; adres listenize göre kişiye özel paketleri hazırlayıp İngiltere'de dağıtalım. Palet £3,50 + KDV.",
     crumb: "Numune Dağıtımı",
     eyebrow: "İngiltere'de numune gönderimi ve ürün lansmanı",
-    h1: "İngiltere'de Numune Dağıtımı: Tek Toplu Sevkiyat, Yüzlerce Kişiye Özel Paket",
+    h1: "İngiltere'de Numune Dağıtımı: Tek Sevkiyat, Kişiye Özel Paket",
     lead: "Yüzlerce ayrı uluslararası kargo göndermek yerine numunelerinizi İngiltere'ye tek bir toplu sevkiyatla gönderirsiniz; LondraDepo da adres listenizdeki her alıcıya paketleyip gönderir. Mal İngiltere'de gümrüklenir, Rayleigh, Essex'teki depomuzda kabul edilip sayılır, ardından paket paket etiketlenip hazırlanır ve İngiltere içi kargo firmalarına teslim edilir. Artan numuneler sonraki talepler için stokta kalır, tüm gönderim için size teslimat raporu iletilir. Palet depolama haftalık £3,50 + KDV'den başlar; asgari hacim yoktur.",
     facts: [
       "Depo: Unit 19 Arterial Park, Rayleigh, Essex SS6 7FY",
@@ -436,7 +436,7 @@ export const TR_PAGES: Record<string, TrPage> = {
     description: "Kurumsal hediyeleri İngiltere'ye toplu gönderin; setleri hazırlayalım, kartlarınızı ekleyelim, her alıcıya teslim edip raporlayalım. Palet £3,50 + KDV'den.",
     crumb: "Kurumsal Hediye Dağıtımı",
     eyebrow: "İngiltere'de hediye ve promosyon fulfillment",
-    h1: "İngiltere'de Kurumsal Hediye ve Promosyon Dağıtımı: Tek Toplu Sevkiyat, Her Alıcıya Teslim",
+    h1: "İngiltere'de Kurumsal Hediye ve Promosyon Dağıtımı",
     lead: "Yüzlerce ayrı uluslararası koli göndermek yerine hediye ve promosyon ürünlerinizi İngiltere'ye tek bir toplu sevkiyatla gönderirsiniz. LondraDepo ürünleri Rayleigh, Essex'te teslim alıp sayar, setleri hazırlar, sizin gönderdiğiniz kart veya insertleri ekler, her paketi hazırlayıp İngiltere'deki alıcı listenize gönderir ve her teslimatı size raporlar. Ofisler, müşteriler, çalışanlar ve etkinlik katılımcıları aynı stoktan beslenir; artan ürünler depoda kalır. Palet depolama haftalık £3,50 + KDV'den başlar; asgari hacim yoktur.",
     facts: [
       "Depo: Unit 19 Arterial Park, Rayleigh, Essex SS6 7FY",
@@ -901,7 +901,7 @@ export const TR_PAGES: Record<string, TrPage> = {
       "Private label, toptan ve arbitraj Amazon satıcılarında stok İngiltere'ye nasıl gelir, prep deposu ne yapar, depolama ve FBA partileri nasıl planlanır?",
     crumb: "Amazon Private Label ve Toptan",
     eyebrow: "Amazon",
-    h1: "Amazon Private Label, Toptan ve Arbitraj: Her Model UK Deposundan Ne İster?",
+    h1: "Amazon Private Label, Toptan ve Arbitraj İçin UK Depo",
     lead:
       "Amazon satıcıları üç ana modelde çalışır ve her model stoğu İngiltere'deki depoya farklı gönderir. Private label (kendi markası) satıcıları kendi markalı ürünlerini çoğunlukla konteynerle ithal eder; boşaltma, FNSKU etiketleme ve depolama ile stoğu Amazon'a partiler halinde gönderme ihtiyacı vardır. Toptan (wholesale) satıcılar markalı ürünleri distribütörlerden çok SKU'lu karışık paletlerle alır; doğru sayım, koli içi adet (case pack) yönetimi ve gerektiğinde etiketleme ister. Online arbitraj satıcıları perakendecilerden alır; stok çok sayıda küçük koli olarak gelir. LondraDepo Essex'te konteyner, palet ve koli hacimlerine göre kuruludur; en iyi private label ve toptan modeline uyar.",
     readTime: "6 dakika",

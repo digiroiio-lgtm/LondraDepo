@@ -22,7 +22,7 @@ export const plBlogA: EnPage[] = [
     description:
       "Magazynowanie w Wielkiej Brytanii dla firm z zagranicy: co obejmują usługi magazynowe, dla kogo są, jak działają krok po kroku i jak wybrać partnera.",
     label: "Przewodnik po magazynowaniu w UK",
-    h1: "Usługi magazynowe w Wielkiej Brytanii: kompletny przewodnik dla firm z zagranicy",
+    h1: "Magazynowanie w Wielkiej Brytanii: przewodnik dla firm z zagranicy",
     lead:
       "Usługi magazynowe w Wielkiej Brytanii polegają na bezpiecznym składowaniu towaru po jego przybyciu do UK i przygotowaniu go do wysyłki do klientów lub kanałów sprzedaży, gdy jest potrzebny. Większość operatorów łączy magazynowanie i logistykę (przyjęcie towaru, składowanie, fulfillment i dostawę) w ramach jednej umowy. Fizyczny zapas w UK skraca czas dostawy, upraszcza import i ułatwia sprzedaż na platformach takich jak Amazon i Etsy. Ten przewodnik wyjaśnia, jak to działa i jak wybrać partnera.",
     sections: [
@@ -301,7 +301,7 @@ export const plBlogA: EnPage[] = [
     description:
       "Koszty magazynu i fulfillmentu w UK w 2026: palety od 3,50 £ + VAT tygodniowo, kompletacja, opakowania, dostawa, przyjęcie towaru i Amazon prep.",
     label: "Ceny magazynowania w UK 2026",
-    h1: "Ceny magazynowania w Wielkiej Brytanii w 2026 roku: pełny przewodnik po kosztach",
+    h1: "Ceny magazynowania w Wielkiej Brytanii w 2026 roku",
     lead:
       "Koszty magazynowania w Wielkiej Brytanii zależą od objętości i wagi towaru, czasu, przez jaki zostaje na stanie, lokalizacji magazynu, usług dodatkowych i częstotliwości dostępu do zapasu. W LondraDepo standardowe składowanie palet zaczyna się od 3,50 £ + VAT za paletę tygodniowo; fulfillment, przyjęcie towaru, opakowania i dostawa są wyceniane dodatkowo.",
     sections: [
@@ -510,7 +510,7 @@ export const plBlogA: EnPage[] = [
       "Praktyczne przewodniki o sprzedaży w UK: koszty magazynowania i składowania palet, fulfillment, Amazon FBA prep, import, cło i VAT oraz wybór operatora 3PL.",
     label: "Przewodniki",
     eyebrow: "Baza wiedzy",
-    h1: "Przewodniki po magazynowaniu, fulfillmencie i imporcie do Wielkiej Brytanii",
+    h1: "Przewodniki: magazyn, fulfillment i import do UK",
     lead:
       "Te przewodniki odpowiadają na pytania, które firmy z zagranicy zadają, zanim zaczną trzymać towar w Wielkiej Brytanii: jak działa magazynowanie w UK i ile kosztuje, jak przebiega fulfillment i Amazon FBA prep, jak importować towar i rozliczyć cło oraz VAT importowy, a także jak wybrać operatora 3PL w UK. Każdy powstał na podstawie doświadczeń z prowadzenia naszego magazynu w Rayleigh w Essex i odsyła do odpowiedniej usługi.",
     facts: [

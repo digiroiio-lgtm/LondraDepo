@@ -20,7 +20,7 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20Amazon%20fulfillm
 export const metadata: Metadata = {
   title: "Amazon UK Fulfillment: FBA Prep, FBM ve Depolama | LondraDepo",
   description:
-    "Amazon UK için Essex'te FBA prep, FBM sipariş karşılama ve haftalık £3,50 + KDV'den palet depolama; gümrükleme Arca üzerinden. Sabit minimum yok, 1 deneme paleti.",
+    "Amazon UK için Essex'te FBA prep, FBM sipariş karşılama ve haftalık £3,50 + KDV'den palet depolama; gümrükleme Arca'dan. Sabit minimum yok.",
   alternates: trAlternates("/amazon-fulfillment"),
   openGraph: {
     title: "Amazon İngiltere Fulfillment | LondraDepo",

@@ -662,7 +662,7 @@ export const growthPagesP2: EnPage[] = [
     modified: "2026-11-28",
     serviceType: "Call-off stock and scheduled delivery",
     title: "Call-Off Stock UK: Bulk Import, Scheduled Delivery",
-    description: "Ship a full container to the UK, keep it as buffer stock in our Essex warehouse and deliver to your UK customer weekly or on call-off. Pallets from £3.50 + VAT.",
+    description: "Ship a full container to the UK, hold it as buffer stock in our Essex warehouse and deliver to your UK customer weekly or on call-off. From £3.50 + VAT.",
     label: "Call-Off Stock UK",
     eyebrow: "UK buffer stock and distribution hub",
     h1: "Call-Off Stock in the UK: Ship in Bulk, Deliver on Schedule",
@@ -1045,7 +1045,7 @@ export const calculatorPages: EnPage[] = [
     modified: "2026-11-11",
     title: "CBM Calculator: Cartons to Pallets and Containers",
     description:
-      "Free CBM calculator: enter carton size and quantity to get cubic metres, weight, estimated UK or Euro pallets and how much of a 20ft, 40ft or 40ft HC container you fill.",
+      "Free CBM calculator: enter carton size and quantity to get cubic metres, weight, UK or Euro pallets and how much of a 20ft, 40ft or 40HC container you fill.",
     label: "CBM and Pallet Calculator",
     eyebrow: "Free tool",
     h1: "CBM Calculator: Cartons to Pallets and Containers",
@@ -1431,7 +1431,7 @@ export const portPages: EnPage[] = [
     modified: "2026-11-10",
     title: "Amazon UK Fulfilment Centres: Codes and Distances",
     description:
-      "Amazon UK fulfilment centre codes and locations, from LCY2 Tilbury and LCY1 London to MAN1, with road distances from our Essex FBA prep warehouse and delivery rules.",
+      "Amazon UK fulfilment centre codes and locations, from LCY2 Tilbury and LCY1 London to MAN1, with distances from our Essex FBA prep warehouse.",
     label: "Amazon UK Fulfilment Centres",
     eyebrow: "Amazon FBA · UK fulfilment centre guide",
     h1: "Amazon UK Fulfilment Centres: Codes, Locations and Distances",
@@ -1535,7 +1535,7 @@ export const industryHub: EnPage = {
   modified: "2026-11-10",
   title: "UK Warehousing by Industry",
   description:
-    "UK warehousing and fulfilment by industry: food and FMCG, packaging, automotive parts, fashion and ecommerce, bulky goods and electronics, with live case studies.",
+    "UK warehousing and fulfilment by industry: food and FMCG, packaging, automotive parts, fashion and ecommerce, bulky goods and electronics, with case studies.",
   label: "Industries",
   eyebrow: "Sectors we work with",
   h1: "UK Warehousing and Fulfilment by Industry",

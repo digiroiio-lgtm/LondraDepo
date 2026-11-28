@@ -14,7 +14,7 @@ import { trAlternates } from "@/lib/i18n";
 const PATH = "/ingiltere-depo-maliyet-hesaplama";
 const TITLE = "İngiltere Palet Depolama Maliyet Hesaplama";
 const DESCRIPTION =
-  "İngiltere'de palet depolama maliyetinizi saniyeler içinde hesaplayın: palet × hafta × £3,50 + KDV. KDV dahil toplamı görün, elleçleme ve fulfillment için teklif isteyin.";
+  "İngiltere palet depolama maliyetinizi hesaplayın: palet × hafta × £3,50 + KDV. KDV dahil toplamı görün, elleçleme ve fulfillment için teklif isteyin.";
 
 export const metadata: Metadata = {
   title: `${TITLE} | LondraDepo`,

@@ -137,7 +137,7 @@ export const TR_PAGES: Record<string, TrPage> = {
     kind: "service",
     serviceType: "Call-off stok ve planlı teslimat",
     title: "İngiltere'de Stoktan Planlı Teslimat (Call-Off) | LondraDepo",
-    description: "Konteyneri İngiltere'ye toplu gönderin, Essex depomuzda tampon stok olarak tutalım, İngiliz müşterinize haftalık veya talep üzerine teslim edelim. Palet £3,50 + KDV.",
+    description: "Konteyneri İngiltere'ye toplu gönderin; Essex'te tampon stok olarak tutalım, İngiliz müşterinize haftalık veya talebe göre teslim edelim. Palet £3,50 + KDV.",
     crumb: "Stoktan Planlı Teslimat",
     eyebrow: "İngiltere'de tampon stok ve dağıtım merkezi",
     h1: "İngiltere'de Stoktan Planlı Teslimat (Call-Off Stok)",
@@ -532,7 +532,7 @@ export const TR_PAGES: Record<string, TrPage> = {
     serviceType: "Port warehousing for London Gateway and Tilbury",
     title: "London Gateway ve Tilbury Yakını Depo | LondraDepo",
     description:
-      "DP World London Gateway'e 13 mil, Tilbury Limanı'na 16 mil uzaklıkta Essex deposu: konteyner boşaltma, palet depolama haftalık £3,50 + KDV'den, fulfillment ve UK dağıtım.",
+      "London Gateway'e 13, Tilbury'ye 16 mil uzaklıkta Essex deposu: konteyner boşaltma, haftalık £3,50 + KDV'den palet depolama, fulfillment ve UK dağıtım.",
     crumb: "London Gateway & Tilbury Depo",
     eyebrow: "Thames limanları · karayoluyla ~20 dakika",
     h1: "London Gateway ve Tilbury Yakınında Depo",
@@ -603,7 +603,7 @@ export const TR_PAGES: Record<string, TrPage> = {
     serviceType: "Amazon FBA prep and delivery to Amazon UK fulfilment centres",
     title: "Amazon İngiltere Depo Konumları: Kodlar ve Mesafeler | LondraDepo",
     description:
-      "Amazon UK depo kodları ve konumları: LCY2 Tilbury, LCY1 Londra'dan MAN1'e kadar; Essex FBA prep depomuza karayolu mesafeleri, palet kuralları ve randevulu teslim.",
+      "Amazon UK depo kodları ve konumları: LCY2 Tilbury, LCY1 Londra'dan MAN1'e; Essex FBA prep depomuza mesafeler, palet kuralları ve randevulu teslim.",
     crumb: "Amazon İngiltere Depo Konumları",
     eyebrow: "Amazon FBA · İngiltere depo rehberi",
     h1: "Amazon İngiltere Depo Konumları: Kodlar ve Mesafeler",
@@ -981,7 +981,7 @@ export const TR_PAGES: Record<string, TrPage> = {
     kind: "article",
     title: "İngiltere İthalat Belgeleri: Fatura, Ambalaj Listesi, B/L",
     description:
-      "İngiltere'ye ithalat için gereken belgeler: ticari fatura, ambalaj listesi, konşimento veya hava yolu senedi ve menşe ispatı; ücretsiz ambalaj listesi şablonuyla.",
+      "İngiltere'ye ithalat belgeleri: ticari fatura, ambalaj listesi, konşimento veya hava yolu senedi ve menşe ispatı; ücretsiz ambalaj listesi şablonuyla.",
     crumb: "İthalat Belgeleri",
     eyebrow: "İhracat",
     h1: "İngiltere İthalat Belgeleri: Neler Gerekir, Her Biri Neyi Göstermeli?",
@@ -1067,7 +1067,7 @@ export const TR_PAGES: Record<string, TrPage> = {
     kind: "article",
     title: "Antrepo (Bonded Warehouse) Nedir? Gümrüklü Depo Farkı",
     description:
-      "İngiltere'de antrepo (bonded / customs warehouse) nedir, gümrük vergisi ve ithalat KDV'si ne zaman askıya alınır; ertelenmiş KDV ile gümrüklenmiş depo ne zaman yeterli?",
+      "İngiltere'de antrepo nedir, gümrük vergisi ve ithalat KDV'si ne zaman askıya alınır; ertelenmiş KDV ile gümrüklenmiş depo ne zaman yeterli?",
     crumb: "Antrepo Nedir?",
     eyebrow: "İthalat",
     h1: "Antrepo (Bonded Warehouse) Nedir? Gümrüklenmiş Depodan Farkı",
@@ -1309,7 +1309,7 @@ export const TR_PAGES: Record<string, TrPage> = {
     serviceType: "CBM and pallet calculator",
     title: "CBM Hesaplama: Koliden Palete ve Konteynere | LondraDepo",
     description:
-      "Ücretsiz CBM hesaplama: koli ölçüsünü ve adedini girin; metreküp, ağırlık, tahmini UK veya Euro palet sayısı ve 20ft, 40ft, 40HC konteyner doluluk oranını görün.",
+      "Ücretsiz CBM hesaplama: koli ölçüsü ve adedini girin; metreküp, ağırlık, UK veya Euro palet sayısı ve 20ft, 40ft, 40HC konteyner doluluğunu görün.",
     crumb: "CBM ve Palet Hesaplama",
     eyebrow: "Ücretsiz araç",
     h1: "CBM Hesaplama: Koliden Palete ve Konteynere",

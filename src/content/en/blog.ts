@@ -137,7 +137,7 @@ export const blogPages: EnPage[] = [
     article: { ...DATE, readMins: 7, section: "Amazon" },
     title: "Amazon Prep UK: A Step-by-Step Guide",
     description:
-      "A step-by-step guide to Amazon FBA prep in the UK: why prep is needed, the seven stages from goods-in to Amazon check-in, FNSKU labelling and how prep is priced.",
+      "A step-by-step guide to Amazon FBA prep in the UK: why prep is needed, the seven stages from goods-in to check-in, FNSKU labelling and how prep is priced.",
     label: "Amazon Prep UK Guide",
     h1: "Amazon Prep UK: A Step-by-Step Guide",
     lead:
@@ -660,7 +660,7 @@ export const blogPages: EnPage[] = [
     article: { ...DATE, readMins: 5, section: "Amazon" },
     title: "Amazon FBA Prep Checklist for UK Sellers",
     description:
-      "Amazon FBA prep checklist for UK sellers: shipment plan, FNSKU labels, covering old barcodes, packaging, sets and bundles, carton labels and delivery to Amazon UK.",
+      "Amazon FBA prep checklist for UK sellers: shipment plan, FNSKU labels, covering old barcodes, packaging, bundles, carton labels and delivery to Amazon UK.",
     label: "Amazon FBA Prep Checklist",
     h1: "Amazon FBA Prep Checklist for UK Sellers",
     lead:
@@ -1062,7 +1062,7 @@ export const blogHub: EnPage = {
   modified: "2026-11-10",
   title: "UK Warehousing, Fulfilment & Import Guides",
   description:
-    "Practical guides for selling into the UK: warehousing and pallet storage costs, fulfilment, Amazon FBA prep, importing, duty and VAT, and how to choose a UK 3PL.",
+    "Practical guides for selling into the UK: warehousing and pallet costs, fulfilment, Amazon FBA prep, importing, duty and VAT, and choosing a UK 3PL.",
   label: "Guides",
   eyebrow: "Knowledge centre",
   h1: "UK Warehousing, Fulfilment and Import Guides",

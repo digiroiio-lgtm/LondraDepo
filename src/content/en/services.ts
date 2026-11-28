@@ -241,7 +241,7 @@ export const servicePages: EnPage[] = [
     modified: "2026-11-17",
     title: "Shopify Fulfillment UK: Shopify Fulfilment in Essex",
     description:
-      "Shopify fulfillment UK: we store stock in Essex, pick, pack and ship Shopify orders to UK customers and handle returns. Storage from £3.50 + VAT per pallet a week.",
+      "Shopify fulfillment UK: we store stock in Essex, pick, pack and ship Shopify orders to UK customers and handle returns. Pallets from £3.50 + VAT a week.",
     label: "Shopify Fulfilment UK",
     eyebrow: "Shopify fulfillment · UK warehouse",
     h1: "Shopify Fulfilment UK: Fulfillment for Shopify Stores",
@@ -395,7 +395,7 @@ export const servicePages: EnPage[] = [
     serviceType: "Amazon FBM fulfilment",
     title: "Amazon FBM Fulfilment UK: Essex Seller Warehouse",
     description:
-      "UK warehouse for Amazon sellers: FBM pick, pack and dispatch plus FBA prep from Essex, near London and Amazon LCY2 Tilbury. No fixed minimum; start with one pallet.",
+      "UK warehouse for Amazon sellers: FBM pick, pack and dispatch plus FBA prep from Essex, near Amazon LCY2 Tilbury. No fixed minimum; start with one pallet.",
     label: "Amazon Seller Warehousing",
     h1: "Amazon FBM Fulfilment: UK Warehouse for Amazon Sellers",
     lead:
@@ -466,7 +466,7 @@ export const servicePages: EnPage[] = [
     serviceType: "Fulfilment",
     title: "Fulfilment Services UK for Importing Brands",
     description:
-      "UK fulfilment services from Essex: order picking, branded packing, Amazon FBA prep, Shopify and Etsy order handling, returns management and regular stock reporting.",
+      "Fulfilment services UK from Essex: order picking, branded packing, Amazon FBA prep, Shopify and Etsy orders, returns management and regular stock reports.",
     label: "UK Fulfilment",
     h1: "Fulfilment Services UK for Importing Brands",
     lead:
@@ -628,7 +628,7 @@ export const servicePages: EnPage[] = [
     serviceType: "Storage",
     title: "UK Storage Services: Goods-in and Stock Control",
     description:
-      "UK storage services: pallet and carton goods-in, real-time stock tracking in Mintsoft WMS, FCL container unloading, and short or long-term warehouse capacity in Essex.",
+      "UK storage services: pallet and carton goods-in, real-time stock in Mintsoft WMS, FCL container unloading and short or long-term space in Essex.",
     label: "Storage Services",
     h1: "UK Storage Services: Goods-in, Stock Control and Capacity",
     lead:
@@ -669,7 +669,7 @@ export const servicePages: EnPage[] = [
     serviceType: "Customs clearance",
     title: "UK Customs Clearance for Imports",
     description:
-      "UK import customs clearance through Arca Trade Group's customs team, with commodity code advice, arrival coordination and direct handover into our Essex warehouse.",
+      "UK import customs clearance by Arca Trade Group's customs team: commodity code advice, arrival coordination and direct handover into our Essex warehouse.",
     label: "UK Customs Clearance",
     h1: "UK Customs Clearance for Imports",
     lead:
@@ -704,7 +704,7 @@ export const servicePages: EnPage[] = [
     serviceType: "Cargo handling",
     title: "Cargo Handling UK: Unloading, Repacking, Relabelling",
     description:
-      "UK cargo handling in Essex: vehicle and container unloading, loading, pallet and carton handling, sorting, repacking, labelling and relabelling, and shipment preparation.",
+      "UK cargo handling in Essex: container and vehicle unloading, loading, pallet and carton handling, sorting, repacking, relabelling and shipment preparation.",
     label: "Cargo Handling",
     h1: "UK Cargo Handling Services",
     lead:
@@ -862,7 +862,7 @@ export const servicePages: EnPage[] = [
     serviceType: "Warehousing",
     title: "Essex Warehouse near London – Rayleigh, SS6 7FY",
     description:
-      "Our Essex warehouse in Rayleigh (SS6 7FY): about 40 minutes to east London, 20–30 minutes to Tilbury and London Gateway, FCL/LCL receiving and storage from £3.50 + VAT.",
+      "Our Essex warehouse in Rayleigh (SS6 7FY): about 40 minutes to east London, 20–30 minutes to Tilbury and London Gateway. Storage from £3.50 + VAT.",
     label: "Essex Warehouse",
     h1: "Essex Warehouse near London",
     lead:

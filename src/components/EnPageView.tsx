@@ -162,7 +162,7 @@ function jsonLd(page: EnPage) {
       description: page.description,
       inLanguage: LOCALES[langOf(page)].htmlLang,
       datePublished: page.article.published,
-      dateModified: page.article.modified,
+      dateModified: modifiedOf(page),
       author: { "@type": "Person", name: "Sertaç Yılmaz", jobTitle: "Co-founder, Arca Trade Group" },
       publisher: ORG,
       mainEntityOfPage: url,
@@ -388,8 +388,8 @@ export default function EnPageView({ page }: { page: EnPage }) {
             <h1 className="text-3xl sm:text-4xl font-extrabold text-[#0b2545] leading-tight mb-5 max-w-3xl">{page.h1}</h1>
             {page.article && (
               <p className="text-sm text-slate-500 mb-4">
-                {v.byline(page.article.modified, page.article.readMins)}{" "}
-                <time dateTime={page.article.modified}>{formatDate(page.article.modified, lang)}</time>
+                {v.byline(modifiedOf(page), page.article.readMins)}{" "}
+                <time dateTime={modifiedOf(page)}>{formatDate(modifiedOf(page), lang)}</time>
                 {" "}· {page.article.readMins} {v.readMins}
               </p>
             )}

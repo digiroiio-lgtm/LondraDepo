@@ -188,7 +188,7 @@ export const corePages: EnPage[] = [
     kind: "service",
     title: "About Us – Essex UK Warehouse Operator",
     description:
-      "LondraDepo is operated by Arca Trade Group Ltd, a BIFA member trading since 2021, running a UK warehouse in Rayleigh, Essex for international and ecommerce brands.",
+      "LondraDepo is run by Arca Trade Group Ltd, a BIFA member trading since 2021, with a UK warehouse in Rayleigh, Essex for international and ecommerce brands.",
     label: "About Us",
     h1: "About LondraDepo: UK Warehouse Operator in Essex",
     lead:

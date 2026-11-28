@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "İngiltere Palet Depolama | UK Pallet Storage | LondraDepo",
   description:
-    "İngiltere'de standart palet depolama haftalık £3,50 + KDV'den başlar. Essex merkezli depo; elleçleme, yükleme ve gümrükleme işlemleri duruma göre fiyatlandırılır.",
+    "İngiltere'de standart palet depolama haftalık £3,50 + KDV'den başlar. Essex'teki depo; elleçleme, yükleme ve gümrükleme ihtiyaca göre fiyatlandırılır.",
   alternates: trAlternates("/palet-depolama"),
   openGraph: {
     title: "İngiltere Palet Depolama | LondraDepo",

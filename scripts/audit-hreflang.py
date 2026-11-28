@@ -30,7 +30,7 @@ def get(u):
     except urllib.error.HTTPError as e:
         return e.code, e.headers.get("Location") or ""
 
-index = get("/sitemap_index.xml")[1]
+index = get("/sitemap.xml")[1]
 sm = {}
 for child in re.findall(r"<loc>[^<]*(/sitemap-[^<]+\.xml)</loc>", index):
     for blk in re.findall(r"<url>(.*?)</url>", get(child)[1], re.S):

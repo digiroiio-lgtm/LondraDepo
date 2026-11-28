@@ -33,8 +33,8 @@ const INLINE_FORM = new Set([
   "/en/shopify-fulfilment-uk", "/en/uk-fulfilment", "/en/ecommerce-fulfilment", "/en/uk-ecommerce-logistics", "/en/pick-and-pack",
   "/en/amazon-fulfilment-uk", "/en/amazon-seller-warehousing-uk", "/en/amazon-prep-uk", "/en/amazon-uk-fulfilment-centres", "/en/uk-distribution",
   "/en/london-gateway-tilbury-warehousing", "/en/felixstowe-port-warehousing", "/en/uk-warehousing-for-turkish-exporters",
-  "/en/case-studies", "/en/industries", "/en/blog", "/en/call-off-stock-uk", "/en/bulk-shipping-uk-distribution", "/en/uk-sample-distribution", "/en/corporate-gift-fulfilment-uk",
-  "/pl/magazyn-dla-polskich-firm",
+  "/en/case-studies", "/en/industries", "/en/blog", "/en/call-off-stock-uk", "/en/bulk-shipping-uk-distribution", "/en/uk-sample-distribution", "/en/corporate-gift-fulfilment-uk", "/en/uk-warehouse-partner-for-freight-forwarders",
+  "/pl/magazyn-dla-polskich-firm", "/de/lager-fuer-deutsche-unternehmen",
 ]);
 import HeaderEn from "@/components/HeaderEn";
 import FooterEn from "@/components/FooterEn";
@@ -42,6 +42,7 @@ import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import { getEnPage } from "@/content/en";
 import { getPlPage } from "@/content/pl";
+import { getDePage } from "@/content/de";
 import { VIEW, type ViewLocale } from "@/i18n/view";
 import { UI } from "@/i18n/ui";
 import { LOCALES, localeOf } from "@/lib/locales";
@@ -66,17 +67,19 @@ function modifiedOf(page: EnPage): string {
 
 /** Template language of a page (EN or PL). */
 function langOf(page: Pick<EnPage, "slug">): ViewLocale {
-  return localeOf(page.slug) === "pl" ? "pl" : "en";
+  const l = localeOf(page.slug);
+  return (l in VIEW ? l : "en") as ViewLocale;
 }
 
 /** English equivalent of a PL page (per-page settings below are keyed by the English slug). */
 function enKey(slug: string): string {
-  return localeOf(slug) === "pl" ? (pageSet(slug).en ?? slug) : slug;
+  const l = localeOf(slug);
+  return l !== "en" && l in VIEW ? (pageSet(slug).en ?? slug) : slug;
 }
 
 /** Any template-language page by slug (parents and related links stay within the site's languages). */
 function getPage(slug: string): EnPage | undefined {
-  return getEnPage(slug) ?? getPlPage(slug);
+  return getEnPage(slug) ?? getPlPage(slug) ?? getDePage(slug);
 }
 
 function formatDate(iso: string, lang: ViewLocale = "en"): string {

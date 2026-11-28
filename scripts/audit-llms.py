@@ -9,7 +9,7 @@ BANNED = [r"prep partneri", r"Dartford", r"\bis an official (Amazon|Shopify) par
 get = lambda p: urllib.request.urlopen(B + p).read().decode()
 
 urls = set()
-for sm in ["/sitemap-tr.xml", "/sitemap-en.xml", "/sitemap-pl.xml"]:
+for sm in ["/sitemap-tr.xml", "/sitemap-en.xml", "/sitemap-pl.xml", "/sitemap-de.xml"]:
     urls |= {u.rstrip("/") or SITE for u in re.findall(r"<loc>([^<]+)</loc>", get(sm))}
 problems = []
 for f in ["/llms.txt", "/llms-full.txt"]:

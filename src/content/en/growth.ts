@@ -74,7 +74,7 @@ export const growthPages: EnPage[] = [
       { q: "Is LondraDepo the importer of record?", a: "No, not by default. Using our warehouse or our group's customs service does not make LondraDepo or Arca Trade Group the importer of record, and duty and import VAT remain the importer's responsibility." },
       { q: "Is your warehouse a bonded warehouse?", a: "No. LondraDepo is not an HMRC-authorised customs warehouse. Goods are stored after they have been cleared into free circulation." },
     ],
-    related: ["/en/blog/uk-import-documents", "/en/blog/uk-import-costs", "/en/container-unloading", "/en/locations/port-to-warehouse-logistics", "/en/blog/uk-importing-guide", "/en/uk-customs-clearance", "/en/uk-market-entry", "/en/pallet-storage", "/en/blog/bonded-warehouse-vs-duty-paid-storage", "/en/uk-warehousing-for-turkish-exporters", "/en/call-off-stock-uk"],
+    related: ["/en/blog/uk-import-documents", "/en/blog/uk-import-costs", "/en/container-unloading", "/en/locations/port-to-warehouse-logistics", "/en/blog/uk-importing-guide", "/en/uk-customs-clearance", "/en/uk-market-entry", "/en/pallet-storage", "/en/blog/bonded-warehouse-vs-duty-paid-storage", "/en/uk-warehousing-for-turkish-exporters", "/en/call-off-stock-uk", "/en/uk-warehouse-partner-for-freight-forwarders"],
     cta: { h2: "Plan your next UK import", text: "Tell us the product, origin, volumes and how the goods will arrive. We will quote freight, customs, unloading and storage together or separately." },
   },
   {
@@ -140,7 +140,7 @@ export const growthPages: EnPage[] = [
       { q: "Can you arrange haulage from the port?", a: "Yes. Arca Trade Group, the company that operates LondraDepo, can arrange transport from the port to our warehouse, or your own forwarder can deliver." },
       { q: "Can unloaded goods go straight out again?", a: "Yes. Goods can be cross-docked to UK customers or Amazon, or stored and released as orders arrive." },
     ],
-    related: ["/en/shipping-container-types", "/en/london-gateway-tilbury-warehousing", "/en/felixstowe-port-warehousing", "/en/container-arrival-planner", "/en/uk-import-logistics", "/en/locations/port-to-warehouse-logistics", "/en/pallet-storage", "/en/essex-warehouse", "/en/cargo-handling", "/en/industries/automotive-parts", "/en/call-off-stock-uk"],
+    related: ["/en/shipping-container-types", "/en/london-gateway-tilbury-warehousing", "/en/felixstowe-port-warehousing", "/en/container-arrival-planner", "/en/uk-import-logistics", "/en/locations/port-to-warehouse-logistics", "/en/pallet-storage", "/en/essex-warehouse", "/en/cargo-handling", "/en/industries/automotive-parts", "/en/call-off-stock-uk", "/en/uk-warehouse-partner-for-freight-forwarders"],
     cta: { h2: "Book a container unloading quote", text: "Send the container size, ETA, packing list and whether goods are palletised or loose-loaded." },
   },
   {
@@ -375,6 +375,83 @@ export const growthPages: EnPage[] = [
 // centroids (SS6 7FY → port admin postcodes); times are free-flow car times, HGVs and traffic take longer.
 export const growthPagesP2: EnPage[] = [
   {
+    slug: "/en/uk-warehouse-partner-for-freight-forwarders",
+    tr: "/nakliyeciler-icin-ingiltere-depo-ortakligi",
+    kind: "service",
+    modified: "2026-11-28",
+    serviceType: "UK warehouse partner for freight forwarders and European distributors",
+    title: "UK Warehouse Partner for Freight Forwarders",
+    description: "UK warehouse partner in Essex for European forwarders and distributors: FCL, LCL and groupage receiving, storage, cross-docking and UK hand-off. £3.50 + VAT.",
+    label: "Warehouse Partner for Forwarders",
+    eyebrow: "One UK-side partner for your customers' goods",
+    h1: "UK Warehouse Partner for Freight Forwarders and European Distributors",
+    lead:
+      "European freight forwarders, groupage operators and distributors moving goods to the UK, for example from Rotterdam or Antwerp, can use LondraDepo as their UK-side warehouse partner in Rayleigh, Essex. We receive FCL, LCL and groupage, unload, count and check the goods, store them short term or on an ongoing basis, cross-dock them and hand them off for UK delivery, with stock recorded in Mintsoft WMS. You stay the main contact for your customer, and we work to your instructions. Pallet storage starts from £3.50 + VAT per pallet per week, with no fixed minimum.",
+    facts: [
+      "Warehouse: Unit 19 Arterial Park, Rayleigh, Essex SS6 7FY",
+      "13 miles from London Gateway, 16 miles from Tilbury, about 62 miles from Felixstowe",
+      "Pallet storage from £3.50 + VAT per pallet per week, no fixed minimum",
+      "Receiving, stock and every despatch recorded in Mintsoft WMS",
+      "UK customs via Arca Trade Group, operator of LondraDepo and a BIFA member",
+      "Handling and storage rates and service levels agreed in writing before the first consignment",
+    ],
+    sections: [
+      {
+        type: "cards",
+        h2: "What we handle for forwarders",
+        intro: "You keep the freight and the customer relationship; we provide the UK warehouse end of the chain.",
+        items: [
+          { title: "FCL, LCL and groupage receiving", text: "Full containers, part loads and groupage consignments received at our Essex warehouse after pre-advice." },
+          { title: "Unloading, counting and checks", text: "We unload, count cartons and pallets against your packing list and report any discrepancy or visible damage to you." },
+          { title: "Short-term or ongoing storage", text: "Goods held for a few days before onward delivery, or stored on an ongoing basis, from £3.50 + VAT per pallet per week." },
+          { title: "Cross-docking and UK hand-off", text: "Consignments split, re-palletised where needed and handed off for UK delivery to the recipients you name." },
+          { title: "Stock visibility in Mintsoft WMS", text: "Receipts, stock levels and despatches are recorded in Mintsoft WMS, so you can report accurately to your customer." },
+          { title: "UK customs via Arca Trade Group", text: "Arca Trade Group, which operates LondraDepo and is a BIFA member, can lodge UK customs declarations, forwarder to forwarder." },
+        ],
+      },
+      {
+        type: "steps",
+        h2: "How the partnership works",
+        items: [
+          { title: "Enquiry", text: "Tell us about your lanes, typical consignments, volumes and the kind of goods your customers move to the UK." },
+          { title: "Rates and service levels in writing", text: "We agree handling and storage rates and service levels with you in writing, so both sides know what is included." },
+          { title: "First consignment", text: "You pre-advise the first consignment; we receive, count and check it and report back to you." },
+          { title: "Regular flow", text: "Further consignments follow the same agreed process, whether goods are cross-docked or held in stock." },
+          { title: "Reporting", text: "You get receiving reports, stock levels and despatch records from Mintsoft WMS to share with your customer as you see fit." },
+        ],
+      },
+      {
+        type: "list",
+        h2: "What we need from you",
+        intro: "For each consignment, send us the following before it arrives:",
+        items: [
+          "Consignment details: packing list, number of cartons and pallets, dimensions, weights and the type of goods",
+          "Arrival port and ETA, plus container or trailer number when known",
+          "Customs status and the UK importer of record, or whether you want Arca Trade Group to handle the UK customs declaration",
+          "Delivery instructions: store, cross-dock or deliver, with recipient addresses and any booking requirements",
+        ],
+        outro: "LondraDepo is not a bonded warehouse, so goods arrive cleared and duty paid. Customs points on this page are general information, not tax or legal advice.",
+      },
+    ],
+    faqs: [
+      { q: "Do we stay the main contact for our customer if we use LondraDepo?", a: "Yes. You stay the main contact for your customer and we work to your instructions, from receiving through storage to UK hand-off." },
+      { q: "Can you receive groupage consignments with goods for several of our customers?", a: "Yes. We receive groupage, count and check each part against your packing list and keep each customer's goods separate in Mintsoft WMS." },
+      { q: "Do you offer commission, white-label or exclusive arrangements to forwarders?", a: "No. We agree handling and storage rates and service levels with you in writing; we do not offer commission, revenue share or exclusivity." },
+      { q: "Who clears a forwarder's consignment through UK customs before it reaches you?", a: "That is agreed per consignment. Your own customs agent can clear it, or Arca Trade Group, a BIFA member that operates LondraDepo, can lodge the UK declaration." },
+      { q: "Can you cross-dock a consignment instead of storing it?", a: "Yes. We can receive, check and split a consignment and hand it off for UK delivery to the recipients you name, without long-term storage." },
+      { q: "What reporting do we get to pass on to our customer?", a: "You receive receiving reports, stock levels and despatch records from Mintsoft WMS, which you can share with your customer in your own format." },
+    ],
+    related: [
+      "/en/container-unloading",
+      "/en/uk-import-logistics",
+      "/en/call-off-stock-uk",
+      "/en/bulk-shipping-uk-distribution",
+      "/en/uk-customs-clearance",
+      "/en/pallet-storage",
+    ],
+    quote: { label: "Get a partner quote", service: "distribution" },
+  },
+  {
     slug: "/en/bulk-shipping-uk-distribution",
     tr: "/ingiltereye-toplu-gonderim-ve-dagitim",
     kind: "service",
@@ -464,7 +541,7 @@ export const growthPagesP2: EnPage[] = [
       { q: "What happens to goods left over after the distribution run?", a: "Leftover goods stay in our Rayleigh warehouse, recorded in Mintsoft WMS, ready for the next orders. Pallet storage starts from £3.50 + VAT per pallet per week, with no fixed minimum." },
       { q: "Can I test the UK market with a small first bulk shipment?", a: "Yes. A Turkish tortilla producer started with one pallet and grew to six 40HC containers a month. LondraDepo is the logistics partner and does not buy or sell your goods." },
     ],
-    related: ["/en/uk-distribution", "/en/ecommerce-fulfilment", "/en/call-off-stock-uk", "/en/uk-customs-clearance", "/en/case-studies/tortilla-uk-distribution", "/en/uk-sample-distribution", "/en/corporate-gift-fulfilment-uk"],
+    related: ["/en/uk-distribution", "/en/ecommerce-fulfilment", "/en/call-off-stock-uk", "/en/uk-customs-clearance", "/en/case-studies/tortilla-uk-distribution", "/en/uk-sample-distribution", "/en/corporate-gift-fulfilment-uk", "/en/uk-warehouse-partner-for-freight-forwarders"],
     quote: { label: "Get a bulk shipping quote", service: "distribution" },
   },
   {
@@ -748,7 +825,7 @@ export const growthPagesP2: EnPage[] = [
       { q: "Can deliveries be weekly or on demand?", a: "Yes. Deliveries can follow a fixed weekly or fortnightly plan, or be booked when an authorised person calls off stock. Every release is recorded in Mintsoft WMS." },
       { q: "Is call-off stock held in a bonded warehouse?", a: "No. LondraDepo is a duty-paid warehouse, so goods are cleared through UK customs before they are stored with us. Arca Trade Group can handle the clearance." },
     ],
-    related: ["/en/uk-distribution", "/en/container-unloading", "/en/pallet-storage", "/en/uk-import-logistics", "/en/industries", "/en/uk-customs-clearance", "/en/bulk-shipping-uk-distribution"],
+    related: ["/en/uk-distribution", "/en/container-unloading", "/en/pallet-storage", "/en/uk-import-logistics", "/en/industries", "/en/uk-customs-clearance", "/en/bulk-shipping-uk-distribution", "/en/uk-warehouse-partner-for-freight-forwarders"],
     quote: { label: "Get a call-off stock quote", service: "distribution" },
   },
   {

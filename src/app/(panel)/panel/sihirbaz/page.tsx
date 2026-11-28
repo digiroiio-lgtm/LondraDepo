@@ -1,11 +1,12 @@
 import PanelShell, { Card, ErrorBox, NotConnected, Stat, Table } from "@/components/panel/PanelShell";
 import CopyButton from "@/components/panel/CopyButton";
 import TargetForm from "@/components/panel/TargetForm";
+import FitCalculator from "@/components/panel/FitCalculator";
 import { kvConfigured } from "@/lib/panel/kv";
 import { fmtDate, safe } from "@/lib/panel/safe";
 import {
   COLUMNS, PALLET_MONTH_GBP, REGIONS, SEGMENTS, STATUSES, TEMPLATE_GROUPS,
-  allocate, buildPrompt, emailTemplate, mixProgress, nextSearch, segmentById, segmentPerformance, targetFrom,
+  OPPORTUNITY_CRITERIA, allocate, buildPrompt, emailTemplate, opportunityScore, mixProgress, nextSearch, segmentById, segmentPerformance, targetFrom,
   type Lead, type Status, type Tier,
 } from "@/lib/panel/wizard";
 import { contactedDomains } from "@/lib/panel/webcontact-store";
@@ -31,9 +32,24 @@ function PriorityCell({ l }: { l: Lead }) {
     <div className="min-w-[6rem]">
       <span className={`inline-block rounded-full px-2 py-0.5 font-bold ${TIER_CLASS[l.tier]}`}>{l.tier} · {l.priority}</span>
       <div className="text-xs text-slate-500 mt-1">uygunluk {l.fit} · hacim {l.value}{l.agent != null ? ` · ajan ${l.agent}` : ""}</div>
+      <OpportunityLine l={l} />
       {l.revenue != null && <div className="text-xs text-green-800 mt-1">~{gbp(l.revenue)}/ay depolama</div>}
       {l.flags.map((f) => <div key={f} className="text-xs text-amber-700 mt-1">⚠ {f}</div>)}
     </div>
+  );
+}
+
+/** Company Opportunity Score with the criteria behind it (details element: no JS needed). */
+function OpportunityLine({ l }: { l: Lead }) {
+  const o = opportunityScore(l);
+  const met = new Set<string>(o.met);
+  return (
+    <details className="text-xs mt-1">
+      <summary className="cursor-pointer"><span className={`rounded-full px-1.5 font-semibold ${TIER_CLASS[o.grade]}`}>Fırsat {o.score}/100 · {o.grade}</span></summary>
+      <ul className="mt-1 space-y-0.5">
+        {OPPORTUNITY_CRITERIA.map((c) => <li key={c.id} className={met.has(c.id) ? "text-green-800" : "text-slate-400"}>{met.has(c.id) ? "✓" : "–"} {c.label} (+{c.points})</li>)}
+      </ul>
+    </details>
   );
 }
 
@@ -102,7 +118,9 @@ export default async function WizardPage({ searchParams }: { searchParams: Promi
   const ft = one(sp.ft) as Tier | "";
   const fg = one(sp.fg);
   const fq = one(sp.fq).toLowerCase();
-  const shown = leads
+  const so = one(sp.so) === "firsat" ? "firsat" : "oncelik";
+  const shown = [...leads]
+    .sort((a, b) => (so === "firsat" ? opportunityScore(b).score - opportunityScore(a).score || b.priority - a.priority : 0))
     .filter((l) => (!fs || l.status === fs) && (!ft || l.tier === ft) && (!fg || l.segment === fg))
     .filter((l) => !fq || [l.company, l.domain, l.sector, l.country, l.products, l.reason, l.decision_maker_title].join(" ").toLowerCase().includes(fq));
 
@@ -163,6 +181,11 @@ export default async function WizardPage({ searchParams }: { searchParams: Promi
         </Card>
       )}
 
+      <Card title="Firma fırsat skoru (elle hesapla)">
+        <p className="text-sm text-slate-600 mb-3">Görüşme sırasında bildiklerinizi işaretleyin. En değerli profil: İngiltere&apos;ye satış yapan ama orada deposu olmayan firma.</p>
+        <FitCalculator />
+      </Card>
+
       <Card title="1. Hedefi seç">
         <TargetForm t={t} hidden={<input type="hidden" name="go" value="1" />} />
       </Card>
@@ -207,12 +230,13 @@ export default async function WizardPage({ searchParams }: { searchParams: Promi
         <div id="liste" />
         {!db ? <p className="text-sm text-slate-500">Veritabanı bağlı değil.</p> : !leadsR?.ok ? <ErrorBox message={leadsR?.error ?? "?"} /> : (
           <>
-            <form method="get" className="grid sm:grid-cols-5 gap-3 mb-4 items-end" role="search">
+            <form method="get" className="grid sm:grid-cols-6 gap-3 mb-4 items-end" role="search">
               <label className="text-sm sm:col-span-2">Ara<input name="fq" defaultValue={fq} placeholder="Şirket, ürün, ülke, karar verici…" className={input} /></label>
               <label className="text-sm">Öncelik<select name="ft" defaultValue={ft} className={input}><option value="">Tümü</option><option value="A">A</option><option value="B">B</option><option value="C">C</option></select></label>
               <label className="text-sm">Durum<select name="fs" defaultValue={fs} className={input}><option value="">Tümü</option>{Object.entries(STATUSES).map(([k, v]) => <option key={k} value={k}>{v}</option>)}</select></label>
               <label className="text-sm">Segment<select name="fg" defaultValue={fg} className={input}><option value="">Tümü</option>{SEGMENTS.map((s) => <option key={s.id} value={s.id}>{s.label}</option>)}</select></label>
-              <div className="sm:col-span-5 flex flex-wrap gap-3">
+              <label className="text-sm">Sırala<select name="so" defaultValue={so} className={input}><option value="oncelik">Öncelik skoru</option><option value="firsat">Fırsat skoru</option></select></label>
+              <div className="sm:col-span-6 flex flex-wrap gap-3">
                 <button className={btn}>Filtrele</button>
                 <a href="/api/panel/sihirbaz/csv" className="pnl-btn-ghost">Tümünü CSV indir</a>
               </div>

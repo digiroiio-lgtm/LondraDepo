@@ -496,7 +496,7 @@ export const servicePages: EnPage[] = [
       { q: "Is there a minimum stock level for fulfilment?", a: "There is no fixed minimum stock requirement. We offer flexible solutions based on your needs." },
       { q: "How is UK fulfilment priced?", a: "Storage starts from £3.50 + VAT per pallet per week. Goods-in, pick and pack, packaging, delivery and returns are quoted for your products, monthly orders and average items per order." },
     ],
-    related: ["/en/3pl-uk", "/en/shopify-fulfilment-uk", "/en/blog/how-to-choose-a-uk-3pl", "/en/pallet-storage", "/en/amazon-prep-uk", "/en/uk-warehousing-benefits", "/en/blog/what-is-uk-fulfilment"],
+    related: ["/en/3pl-uk", "/en/shopify-fulfilment-uk", "/en/blog/how-to-choose-a-uk-3pl", "/en/pallet-storage", "/en/amazon-prep-uk", "/en/uk-warehousing-benefits", "/en/blog/what-is-uk-fulfilment", "/en/corporate-gift-fulfilment-uk"],
   },
   {
     slug: "/en/pallet-storage",
@@ -731,7 +731,7 @@ export const servicePages: EnPage[] = [
       { q: "How is handling priced?", a: "Pricing depends on the type of task, the volume of goods and the scope of the service. Contact us on WhatsApp for a quote for your operation." },
       { q: "Can you relabel goods before they are sent to customers or Amazon?", a: "Yes. Relabelling, repacking and sorting by SKU are part of cargo handling at the Essex warehouse, including preparing labelled stock before it is sent to UK customers or into Amazon FBA." },
     ],
-    related: ["/en/container-unloading", "/en/uk-warehousing", "/en/pallet-storage", "/en/uk-distribution"],
+    related: ["/en/container-unloading", "/en/uk-warehousing", "/en/pallet-storage", "/en/uk-distribution", "/en/corporate-gift-fulfilment-uk", "/en/uk-sample-distribution"],
   },
   {
     slug: "/en/uk-distribution",
@@ -766,7 +766,7 @@ export const servicePages: EnPage[] = [
       { q: "How is distribution priced?", a: "Pricing depends on shipment volume, distance and service scope. Message us on WhatsApp for a bespoke quote." },
       { q: "Do you offer pallet and parcel delivery?", a: "Yes. From Essex we coordinate pallet deliveries to wholesale and trade customers and parcel deliveries to online shoppers across the UK, including regular delivery programmes for repeat B2B customers." },
     ],
-    related: ["/en/cargo-handling", "/en/uk-warehousing", "/en/essex-warehouse", "/en/industries/food-packaging", "/en/industries/automotive-parts", "/en/industries", "/en/call-off-stock-uk"],
+    related: ["/en/cargo-handling", "/en/uk-warehousing", "/en/essex-warehouse", "/en/industries/food-packaging", "/en/industries/automotive-parts", "/en/industries", "/en/call-off-stock-uk", "/en/bulk-shipping-uk-distribution"],
   },
   {
     slug: "/en/ecommerce-fulfilment",
@@ -804,7 +804,7 @@ export const servicePages: EnPage[] = [
       { q: "How much does ecommerce fulfilment cost?", a: "Storage starts from £3.50 + VAT per pallet per week. Pick and pack, packaging, delivery and returns are quoted per order and item, based on your products and monthly order volume." },
       { q: "Do I need my own UK company for ecommerce fulfilment?", a: "Not necessarily. Many overseas sellers hold stock in a UK warehouse and sell to UK customers with their existing company and a GB EORI number. Take tax advice on the right structure for your business." },
     ],
-    related: ["/en/3pl-uk", "/en/pick-and-pack", "/en/uk-ecommerce-logistics", "/en/shopify-fulfilment-uk", "/en/uk-warehousing-pricing", "/en/blog/how-to-choose-a-uk-3pl"],
+    related: ["/en/3pl-uk", "/en/pick-and-pack", "/en/uk-ecommerce-logistics", "/en/shopify-fulfilment-uk", "/en/uk-warehousing-pricing", "/en/blog/how-to-choose-a-uk-3pl", "/en/bulk-shipping-uk-distribution", "/en/uk-sample-distribution"],
   },
   {
     slug: "/en/amazon-fulfilment-uk",

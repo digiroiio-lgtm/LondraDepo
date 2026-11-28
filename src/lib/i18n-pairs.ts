@@ -18,6 +18,9 @@ export const PAGE_SETS: ReadonlyArray<PageSet> = [
   { tr: "/ingiltere-depo", en: "/en/uk-warehousing", pl: "/pl/magazyn-w-wielkiej-brytanii" },
   { tr: "/ingiltere-3pl", en: "/en/3pl-uk", pl: "/pl/3pl-wielka-brytania" },
   { tr: "/ingiltere-stoktan-planli-teslimat", en: "/en/call-off-stock-uk", pl: "/pl/zapasy-buforowe-i-dostawy-uk" },
+  { tr: "/ingiltereye-toplu-gonderim-ve-dagitim", en: "/en/bulk-shipping-uk-distribution", pl: "/pl/wysylka-zbiorcza-i-dystrybucja-uk" },
+  { tr: "/ingiltere-numune-dagitimi", en: "/en/uk-sample-distribution", pl: "/pl/dystrybucja-probek-uk" },
+  { tr: "/kurumsal-hediye-ve-promosyon-dagitimi", en: "/en/corporate-gift-fulfilment-uk", pl: "/pl/fulfillment-prezentow-firmowych-uk" },
   // Same question, audience-appropriate angle: selling into the UK (TR exporters) ↔ entering the UK market.
   { tr: "/turkiyeden-ingiltereye-satis", en: "/en/uk-market-entry", pl: "/pl/wejscie-na-rynek-brytyjski" },
   // Same process from both ends: exporting from Turkey to the UK ↔ importing goods into the UK.

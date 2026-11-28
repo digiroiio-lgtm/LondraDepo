@@ -105,6 +105,7 @@ function Block({ s }: { s: TrSection }) {
               </li>
             ))}
           </ul>
+          {s.outro && <p className="text-sm text-slate-500 mt-3">{s.outro}</p>}
         </section>
       );
     case "steps":

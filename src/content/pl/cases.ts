@@ -216,7 +216,7 @@ const plCasePages: EnPage[] = [
       { q: "Jak producent tortilli rozwinął sprzedaż w UK?", a: "Producent z Ankary wszedł do Wielkiej Brytanii z jedną paletą testową. Po uporządkowaniu kodów taryfowych, etykietowania, fulfillmentu i dystrybucji operacja urosła do sześciu kontenerów 40 ft high cube miesięcznie." },
       { q: "Jakimi kanałami trafiają tortille do klientów w UK?", a: "Z magazynu w Essex towar trafia zarówno do kanałów B2B, jak i B2C przez brytyjską sieć dystrybucji, a każda dostawa jest przyjmowana, liczona i sprawdzana jakościowo." },
     ],
-    related: ["/pl/wejscie-na-rynek-brytyjski", "/pl/rozladunek-kontenerow", "/pl/skladowanie-palet", "/pl/studia-przypadkow/dystrybucja-pudelek-na-pizze"],
+    related: ["/pl/wejscie-na-rynek-brytyjski", "/pl/rozladunek-kontenerow", "/pl/skladowanie-palet", "/pl/studia-przypadkow/dystrybucja-pudelek-na-pizze", "/pl/wysylka-zbiorcza-i-dystrybucja-uk"],
     quote: { label: "Poproś o wycenę magazynu i dystrybucji", service: "distribution" },
   },
   {

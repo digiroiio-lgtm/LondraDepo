@@ -405,6 +405,57 @@ A: Yes. Arca Trade Group, which operates LondraDepo, arranges sea, air, road and
 Q: What do 3PL services in the UK usually include?
 A: UK 3PL services usually cover goods-in, pallet and carton storage, stock control, order picking and packing, Amazon prep, returns and UK delivery. LondraDepo provides these from Essex, with stock tracked in Mintsoft WMS.
 
+## Bulk Shipping to the UK and UK Parcel Distribution
+URL: https://www.londradepo.com/en/bulk-shipping-uk-distribution
+Summary: Send one bulk shipment to the UK instead of hundreds of parcels. We clear, count, label and deliver to UK B2B and B2C recipients. Pallets from £3.50 + VAT.
+Short answer: Instead of sending hundreds of separate international parcels from your own country, you ship the goods to the UK once, as one bulk consignment of pallets or cartons. The shipment is cleared into the UK, received and counted at LondraDepo in Rayleigh, Essex, then labelled and packed from your address file and handed to UK domestic carriers, or delivered as pallets to business recipients. You get a delivery report back, and any goods left over stay in stock from £3.50 + VAT per pallet per week, with no fixed minimum.
+Q: How is one bulk shipment different from posting parcels to the UK from abroad?
+A: With separate parcels, every item crosses the border on its own. With a bulk shipment, the goods travel once as pallets or cartons, are cleared in one go and are then delivered from our Essex warehouse.
+Q: Can one bulk shipment serve both business and consumer recipients?
+A: Yes. From the same stock we can send parcels to consumers through UK domestic carriers and deliver pallets to business customers. Every despatch is recorded in Mintsoft WMS.
+Q: What format should the recipient address file be in?
+A: A CSV or Excel file works best, with one line per recipient showing the name, full UK address and the quantity each recipient should receive. We check the file with you before labelling starts.
+Q: Who clears the bulk shipment through UK customs and pays import VAT?
+A: The UK importer of record clears the goods and accounts for import VAT and duty. That can be the manufacturer with a UK VAT registration, the UK buyer, or customs representation through Arca Trade Group, agreed before the first shipment.
+Q: What happens to goods left over after the distribution run?
+A: Leftover goods stay in our Rayleigh warehouse, recorded in Mintsoft WMS, ready for the next orders. Pallet storage starts from £3.50 + VAT per pallet per week, with no fixed minimum.
+Q: Can I test the UK market with a small first bulk shipment?
+A: Yes. A Turkish tortilla producer started with one pallet and grew to six 40HC containers a month. LondraDepo is the logistics partner and does not buy or sell your goods.
+
+## UK Sample Distribution and Product Launch Mailings
+URL: https://www.londradepo.com/en/uk-sample-distribution
+Summary: Send your samples to the UK in one bulk shipment; we pack personalised parcels from your address list and send them across the UK. Pallets from £3.50 + VAT.
+Short answer: Instead of posting hundreds of separate international parcels, you send your samples to the UK in one bulk shipment, and LondraDepo packs and sends them to every recipient on your address list. The goods are cleared into the UK, received and counted at our warehouse in Rayleigh, Essex, then labelled and packed parcel by parcel and handed to UK domestic carriers. Leftover samples stay in stock for later requests, and you receive a delivery report for the whole mailing. Storage starts from £3.50 + VAT per pallet per week, with no fixed minimum.
+Q: Why send samples to the UK in bulk instead of posting each parcel?
+A: One bulk shipment means one international transport and one customs clearance, instead of hundreds of separate parcels crossing the border. We then pack and send each parcel inside the UK from Essex.
+Q: Who clears the bulk shipment of samples through UK customs?
+A: The UK importer of record clears the shipment and accounts for import VAT and duty. That can be the manufacturer with UK VAT registration or a UK buyer, and Arca Trade Group can provide customs representation.
+Q: Can each parcel be personalised for its recipient?
+A: Yes. We import your address file and pack each parcel with the agreed contents, such as a personal letter, leaflet or a different product mix for each recipient group.
+Q: What happens to the samples left over after the mailing?
+A: They stay in stock in our Rayleigh warehouse, recorded in Mintsoft WMS. When a new request comes in, we pack and send it from stock without another international shipment.
+Q: Can you send food samples to UK distributors?
+A: Yes, provided the food samples follow UK food import and labelling rules. We agree the product details and labelling with you before the bulk shipment leaves.
+Q: Do I get confirmation of which recipients received their parcel?
+A: Yes. After the mailing you receive a delivery report showing what was sent to which recipient, so your sales team can follow up with each contact.
+
+## Corporate Gift Fulfilment UK: Kitting and Delivery
+URL: https://www.londradepo.com/en/corporate-gift-fulfilment-uk
+Summary: Ship corporate gifts to the UK in bulk; we build kits, add your cards, pack and deliver to each UK recipient with a delivery report. Pallets from £3.50 + VAT.
+Short answer: Instead of sending hundreds of separate international parcels, you ship your gifts and promotional items to the UK in one bulk shipment. LondraDepo receives and counts them in Rayleigh, Essex, builds the kits, adds the cards or inserts you supply, packs each one and sends it to your UK recipient list, then reports back on every delivery.
+Q: Can you build gift kits from items supplied by different manufacturers?
+A: Yes. Items from several suppliers can arrive separately or together; we count each one in Mintsoft WMS and assemble the kits only once every component is in stock.
+Q: Can you add our printed cards or personalised inserts to each gift?
+A: Yes. You supply the cards, letters or inserts and tell us how they match the address file, and we place the right one in each kit before it is packed.
+Q: Can you guarantee delivery before a specific date such as Christmas?
+A: We do not promise delivery by a fixed date. We plan the timing with you, based on when the goods arrive, how many kits are needed and where the recipients are.
+Q: Can one campaign include both home addresses and office deliveries?
+A: Yes. Individual gifts go out as parcels through UK domestic carriers, while larger quantities for offices or event venues can be sent as pallet deliveries from the same stock.
+Q: Who clears the bulk shipment of gifts through UK customs?
+A: The UK importer of record clears the consignment and accounts for import VAT and duty. That can be your company with a UK VAT registration or a UK buyer, and Arca Trade Group can provide customs representation.
+Q: What happens to leftover gifts and promotional stock after the campaign?
+A: Leftover items and spare kits stay in our Essex warehouse, recorded in Mintsoft WMS, ready for late additions or the next campaign. Pallet storage starts from £3.50 + VAT per week.
+
 ## Call-Off Stock UK: Bulk Import, Scheduled Delivery
 URL: https://www.londradepo.com/en/call-off-stock-uk
 Summary: Ship a full container to the UK, keep it as buffer stock in our Essex warehouse and deliver to your UK customer weekly or on call-off. Pallets from £3.50 + VAT.
@@ -1106,6 +1157,60 @@ Q: Teslimatlar haftalık veya talebe göre olabilir mi?
 A: Evet. Teslimatlar sabit haftalık veya iki haftalık bir plana göre yapılabilir ya da yetkili kişi stok çağırdığında planlanabilir. Her çıkış Mintsoft WMS'te kaydedilir.
 Q: Call-off stok antrepoda mı tutuluyor?
 A: Hayır. LondraDepo gümrüğü ödenmiş mal deposudur; ürünler depomuza gelmeden önce İngiltere'de gümrüklenir. Gümrüklemeyi Arca Trade Group yapabilir.
+
+## İngiltere'ye Toplu Gönderim ve Dağıtım
+URL: https://www.londradepo.com/ingiltereye-toplu-gonderim-ve-dagitim
+English version: https://www.londradepo.com/en/bulk-shipping-uk-distribution
+Summary: Yüzlerce koli yerine İngiltere'ye tek toplu sevkiyat gönderin; gümrükleyelim, sayalım, etiketleyelim, B2B ve B2C alıcılara teslim edelim. Palet £3,50 + KDV.
+Short answer: Yüzlerce ayrı uluslararası koliyi Türkiye'den tek tek göndermek yerine ürünlerinizi İngiltere'ye bir kez, palet veya koli halinde tek bir toplu sevkiyatla gönderirsiniz. Sevkiyat İngiltere'de gümrüklenir, LondraDepo'nun Rayleigh, Essex'teki deposunda teslim alınıp sayılır, ardından adres listenize göre paketlenip etiketlenir ve İngiltere içi kargo firmalarına verilir ya da kurumsal alıcılara palet olarak teslim edilir. Size teslimat raporu gönderilir; kalan ürün haftalık palet başı £3,50 + KDV'den depoda kalır, asgari hacim yoktur.
+Q: Tek toplu sevkiyat, yurt dışından İngiltere'ye koli göndermekten nasıl farklı?
+A: Ayrı kolilerde her ürün sınırı tek başına geçer. Toplu sevkiyatta ürün palet veya koli halinde bir kez gelir, tek seferde gümrüklenir ve ardından Essex'teki depomuzdan alıcılara teslim edilir.
+Q: Aynı toplu sevkiyattan hem şirketlere hem bireysel alıcılara teslimat yapılabilir mi?
+A: Evet. Aynı stoktan bireysel alıcılara İngiltere içi kargo firmalarıyla koli gönderir, kurumsal müşterilere palet teslim ederiz. Her sevkiyat Mintsoft WMS'te kayıt altına alınır.
+Q: Alıcı adres listesini hangi formatta hazırlamalıyım?
+A: En pratik yol, her satırda bir alıcının adı, İngiltere'deki tam adresi ve o alıcıya gidecek miktarın yer aldığı bir CSV veya Excel dosyasıdır. Etiketlemeye başlamadan önce dosyayı sizinle birlikte kontrol ederiz.
+Q: Toplu sevkiyatı İngiltere'de kim gümrükler ve ithalat KDV'sini kim öder?
+A: Ürünü İngiltere'deki ithalatçı gümrükler; ithalat KDV'si ve gümrük vergisi de ona aittir. Bu, İngiltere KDV kaydı olan üretici, İngiliz alıcı veya Arca Trade Group üzerinden gümrük temsilciliği olabilir ve ilk sevkiyattan önce belirlenir.
+Q: Dağıtımdan sonra kalan ürünlere ne olur?
+A: Kalan ürünler Rayleigh'deki depomuzda, Mintsoft WMS'te kayıtlı olarak sonraki siparişler için bekler. Palet depolama haftalık £3,50 + KDV'den başlar ve asgari hacim yoktur.
+Q: İngiltere pazarını küçük bir ilk toplu sevkiyatla test edebilir miyim?
+A: Evet. Türk bir tortilla üreticisi tek paletle başladı ve ayda 6 × 40HC konteynere ulaştı. LondraDepo lojistik ortağıdır; ürününüzü satın almaz veya satmaz.
+
+## İngiltere'de Numune Dağıtımı ve Lansman Gönderileri
+URL: https://www.londradepo.com/ingiltere-numune-dagitimi
+English version: https://www.londradepo.com/en/uk-sample-distribution
+Summary: Numunelerinizi İngiltere'ye tek toplu sevkiyatla gönderin; adres listenize göre kişiye özel paketleri hazırlayıp İngiltere'de dağıtalım. Palet £3,50 + KDV.
+Short answer: Yüzlerce ayrı uluslararası kargo göndermek yerine numunelerinizi İngiltere'ye tek bir toplu sevkiyatla gönderirsiniz; LondraDepo da adres listenizdeki her alıcıya paketleyip gönderir. Mal İngiltere'de gümrüklenir, Rayleigh, Essex'teki depomuzda kabul edilip sayılır, ardından paket paket etiketlenip hazırlanır ve İngiltere içi kargo firmalarına teslim edilir. Artan numuneler sonraki talepler için stokta kalır, tüm gönderim için size teslimat raporu iletilir. Palet depolama haftalık £3,50 + KDV'den başlar; asgari hacim yoktur.
+Q: Numuneleri İngiltere'ye neden tek tek kargolamak yerine toplu göndermeliyim?
+A: Tek toplu sevkiyat, sınırı ayrı ayrı geçen yüzlerce paket yerine tek uluslararası taşıma ve tek gümrükleme demektir. Ardından her paketi Essex'ten İngiltere içinde hazırlayıp göndeririz.
+Q: Toplu numune sevkiyatını İngiltere gümrüğünden kim geçirir?
+A: Sevkiyatı, ithalat KDV'si ve gümrük vergisini ödeyen İngiltere'deki ithalatçı gümrükler. Bu, İngiltere KDV kaydı olan üretici veya İngiliz alıcı olabilir; Arca Trade Group gümrük temsilciliği sağlayabilir.
+Q: Her paket alıcıya özel hazırlanabilir mi?
+A: Evet. Adres dosyanızı sisteme aktarır ve her paketi anlaşılan içerikle hazırlarız; örneğin kişiye özel mektup, broşür veya alıcı grubuna göre farklı ürün kombinasyonu.
+Q: Gönderimden sonra artan numunelere ne olur?
+A: Rayleigh'deki depomuzda, Mintsoft WMS'te kayıtlı olarak stokta kalır. Yeni bir talep geldiğinde, yeniden uluslararası sevkiyat yapmadan paketi stoktan hazırlayıp göndeririz.
+Q: İngiliz distribütörlere gıda numunesi gönderebilir misiniz?
+A: Evet, gıda numuneleri İngiltere'nin gıda ithalatı ve etiketleme kurallarına uyduğu sürece gönderebiliriz. Ürün bilgisi ve etiketlemeyi toplu sevkiyat yola çıkmadan önce sizinle netleştiririz.
+Q: Hangi alıcının paketini teslim aldığını öğrenebilir miyim?
+A: Evet. Gönderimden sonra kime ne gönderildiğini gösteren bir teslimat raporu alırsınız; satış ekibiniz böylece her kişiyle ayrı ayrı iletişime geçebilir.
+
+## İngiltere'de Kurumsal Hediye Dağıtımı
+URL: https://www.londradepo.com/kurumsal-hediye-ve-promosyon-dagitimi
+English version: https://www.londradepo.com/en/corporate-gift-fulfilment-uk
+Summary: Kurumsal hediyeleri İngiltere'ye toplu gönderin; setleri hazırlayalım, kartlarınızı ekleyelim, her alıcıya teslim edip raporlayalım. Palet £3,50 + KDV'den.
+Short answer: Yüzlerce ayrı uluslararası koli göndermek yerine hediye ve promosyon ürünlerinizi İngiltere'ye tek bir toplu sevkiyatla gönderirsiniz. LondraDepo ürünleri Rayleigh, Essex'te teslim alıp sayar, setleri hazırlar, sizin gönderdiğiniz kart veya insertleri ekler, her paketi hazırlayıp İngiltere'deki alıcı listenize gönderir ve her teslimatı size raporlar. Ofisler, müşteriler, çalışanlar ve etkinlik katılımcıları aynı stoktan beslenir; artan ürünler depoda kalır. Palet depolama haftalık £3,50 + KDV'den başlar; asgari hacim yoktur.
+Q: Farklı üreticilerden gelen ürünlerle hediye seti hazırlayabilir misiniz?
+A: Evet. Farklı tedarikçilerin ürünleri ayrı ayrı veya birlikte gelebilir; her birini Mintsoft WMS'e kaydeder, setleri ancak tüm parçalar stoğa girdiğinde hazırlarız.
+Q: Her hediyeye kendi basılı kartlarımızı veya kişiye özel insertleri ekleyebilir misiniz?
+A: Evet. Kart, mektup veya insertleri siz gönderir, adres dosyasıyla nasıl eşleşeceğini belirtirsiniz; biz de paketlemeden önce her sete doğru olanı koyarız.
+Q: Yılbaşı gibi belirli bir tarihten önce teslimatı garanti ediyor musunuz?
+A: Sabit bir tarihte teslimat sözü vermiyoruz. Zamanlamayı ürünlerin varış tarihine, gereken set sayısına ve alıcıların bulunduğu yerlere göre sizinle birlikte planlıyoruz.
+Q: Aynı kampanyada hem ev adreslerine hem ofislere gönderim yapılabilir mi?
+A: Evet. Bireysel hediyeler İngiltere içi kargo firmalarıyla koli olarak gider; ofisler veya etkinlik mekânları için büyük miktarlar aynı stoktan palet olarak gönderilebilir.
+Q: Hediyelerin toplu sevkiyatını İngiltere gümrüğünden kim geçirir?
+A: Partiyi İngiltere'deki ithalatçı gümrükler ve ithalat KDV'si ile gümrük vergisini öder. Bu, İngiltere KDV kaydı olan şirketiniz veya İngiliz alıcı olabilir; Arca Trade Group gümrük temsilciliği sağlayabilir.
+Q: Kampanyadan sonra artan hediye ve promosyon ürünlerine ne olur?
+A: Artan ürünler ve yedek setler Essex'teki depomuzda, Mintsoft WMS'te kayıtlı olarak kalır; sonradan eklenen alıcılar veya bir sonraki kampanya için hazır bekler. Palet depolama haftalık £3,50 + KDV'den başlar.
 
 ## Londra Depo: Doğu Londra'ya 40 Dakika, Essex
 URL: https://www.londradepo.com/londra-depo
@@ -2669,6 +2774,60 @@ Q: Czy dostawy mogą być cotygodniowe lub na żądanie?
 A: Tak. Dostawy mogą odbywać się według stałego planu tygodniowego lub dwutygodniowego albo być zlecane, gdy upoważniona osoba zgłosi zapotrzebowanie. Każde wydanie jest rejestrowane w Mintsoft WMS.
 Q: Czy zapas buforowy jest przechowywany w składzie celnym?
 A: Nie. LondraDepo to magazyn towaru oclonego, więc towar przechodzi odprawę celną w UK, zanim trafi do nas. Odprawę może przeprowadzić Arca Trade Group.
+
+## Wysyłka zbiorcza do UK i dystrybucja paczek w UK
+URL: https://www.londradepo.com/pl/wysylka-zbiorcza-i-dystrybucja-uk
+English version: https://www.londradepo.com/en/bulk-shipping-uk-distribution
+Summary: Jedna wysyłka zbiorcza do UK zamiast setek paczek. Odprawiamy, liczymy, etykietujemy i doręczamy do odbiorców B2B i B2C w UK. Palety od 3,50 £ + VAT.
+Short answer: Zamiast wysyłać setki osobnych paczek międzynarodowych z Polski, wysyłasz towar do UK raz, jako jedną przesyłkę zbiorczą na paletach lub w kartonach. Przesyłka przechodzi odprawę celną w UK, a LondraDepo przyjmuje ją i przelicza w magazynie w Rayleigh w Essex, a następnie kompletuje, pakuje i etykietuje zamówienia według Twojego pliku adresowego i przekazuje je krajowym przewoźnikom w UK lub dostarcza jako palety do odbiorców biznesowych. Otrzymujesz raport z doręczeń, a pozostały towar zostaje na stanie od 3,50 £ + VAT za paletę tygodniowo, bez stałego minimum.
+Q: Czym jedna wysyłka zbiorcza różni się od nadawania paczek do UK z zagranicy?
+A: Przy osobnych paczkach każda z nich przekracza granicę oddzielnie. Przy wysyłce zbiorczej towar jedzie raz na paletach lub w kartonach, jest odprawiany jednorazowo, a potem doręczany z naszego magazynu w Essex.
+Q: Czy z jednej wysyłki zbiorczej można obsłużyć odbiorców biznesowych i konsumentów?
+A: Tak. Z tego samego zapasu wysyłamy paczki do konsumentów przez krajowych przewoźników w UK i dostarczamy palety do klientów biznesowych. Każda wysyłka jest rejestrowana w Mintsoft WMS.
+Q: W jakim formacie przygotować plik adresowy odbiorców?
+A: Najlepiej sprawdza się plik CSV lub Excel z jednym wierszem na odbiorcę: nazwa, pełny adres w UK i ilość dla danego odbiorcy. Przed etykietowaniem sprawdzamy plik razem z Tobą.
+Q: Kto odprawia wysyłkę zbiorczą w brytyjskim urzędzie celnym i płaci VAT importowy?
+A: Towar odprawia importer w UK, który rozlicza VAT importowy i cło. Może to być producent z rejestracją VAT w UK, brytyjski odbiorca lub przedstawicielstwo celne przez Arca Trade Group, ustalone przed pierwszą wysyłką.
+Q: Co dzieje się z towarem, który zostanie po dystrybucji?
+A: Pozostały towar zostaje w naszym magazynie w Rayleigh, zarejestrowany w Mintsoft WMS i gotowy do kolejnych zamówień. Składowanie palet zaczyna się od 3,50 £ + VAT za paletę tygodniowo, bez stałego minimum.
+Q: Czy mogę przetestować rynek UK z małą pierwszą wysyłką zbiorczą?
+A: Tak. Turecki producent tortilli zaczął od jednej palety i doszedł do sześciu kontenerów 40HC miesięcznie. LondraDepo jest partnerem logistycznym i nie kupuje ani nie sprzedaje Twojego towaru.
+
+## Dystrybucja próbek w UK i wysyłki premierowe
+URL: https://www.londradepo.com/pl/dystrybucja-probek-uk
+English version: https://www.londradepo.com/en/uk-sample-distribution
+Summary: Wyślij próbki do UK jedną wysyłką zbiorczą, a my spakujemy imienne paczki z Twojej listy adresowej i roześlemy je w UK. Palety od 3,50 £ + VAT.
+Short answer: Zamiast nadawać setki osobnych paczek międzynarodowych, wysyłasz próbki do UK jedną wysyłką zbiorczą, a LondraDepo pakuje je i rozsyła do każdego odbiorcy z Twojej listy adresowej. Towar przechodzi odprawę celną w UK, przyjmujemy go i liczymy w magazynie w Rayleigh w Essex, a następnie etykietujemy i pakujemy paczka po paczce i przekazujemy krajowym przewoźnikom w UK.
+Q: Dlaczego warto wysłać próbki do UK zbiorczo zamiast nadawać każdą paczkę osobno?
+A: Jedna wysyłka zbiorcza to jeden transport międzynarodowy i jedna odprawa celna zamiast setek paczek przekraczających granicę osobno. Następnie pakujemy i wysyłamy każdą paczkę na terenie UK z Essex.
+Q: Kto odprawia zbiorczą wysyłkę próbek w brytyjskim urzędzie celnym?
+A: Wysyłkę odprawia importer w UK, który rozlicza VAT importowy i cło. Może to być producent z rejestracją VAT w UK lub brytyjski odbiorca, a Arca Trade Group może zapewnić przedstawicielstwo celne.
+Q: Czy każda paczka może być spersonalizowana dla odbiorcy?
+A: Tak. Importujemy Twoją listę adresową i kompletujemy każdą paczkę z uzgodnioną zawartością, na przykład z imiennym listem, ulotką lub innym zestawem produktów dla każdej grupy odbiorców.
+Q: Co się dzieje z próbkami, które zostaną po wysyłce?
+A: Zostają na stanie w naszym magazynie w Rayleigh, zarejestrowane w Mintsoft WMS. Gdy pojawi się nowe zapytanie, pakujemy i wysyłamy paczkę z zapasu bez kolejnej wysyłki międzynarodowej.
+Q: Czy możecie wysyłać próbki żywności do dystrybutorów w UK?
+A: Tak, pod warunkiem że próbki żywności spełniają brytyjskie przepisy dotyczące importu i etykietowania żywności. Dane produktu i etykiety uzgadniamy z Tobą przed wysłaniem towaru.
+Q: Czy dostanę potwierdzenie, którzy odbiorcy otrzymali paczki?
+A: Tak. Po wysyłce otrzymujesz raport dostaw pokazujący, co i do którego odbiorcy wysłano, więc Twój dział sprzedaży może skontaktować się z każdą osobą.
+
+## Fulfillment prezentów firmowych i gadżetów w UK
+URL: https://www.londradepo.com/pl/fulfillment-prezentow-firmowych-uk
+English version: https://www.londradepo.com/en/corporate-gift-fulfilment-uk
+Summary: Wyślij prezenty firmowe do UK jedną partią, a my skompletujemy zestawy, dołożymy kartki i doręczymy je odbiorcom w UK z raportem. Palety od 3,50 £ + VAT.
+Short answer: Zamiast setek osobnych paczek międzynarodowych wysyłasz prezenty i materiały promocyjne do UK jedną partią. LondraDepo przyjmuje je i przelicza w Rayleigh w Essex, kompletuje zestawy, dokłada dostarczone przez Ciebie kartki lub wkładki, pakuje każdą przesyłkę i wysyła ją na adresy z Twojej listy w UK, a na koniec przekazuje raport doręczeń.
+Q: Czy możecie kompletować zestawy z artykułów od różnych producentów?
+A: Tak. Artykuły od kilku dostawców mogą przyjechać osobno lub razem; każdy rejestrujemy w Mintsoft WMS, a zestawy kompletujemy dopiero wtedy, gdy wszystkie elementy są na stanie.
+Q: Czy możecie dołożyć do każdego prezentu nasze kartki lub spersonalizowane wkładki?
+A: Tak. Dostarczasz kartki, listy lub wkładki i wskazujesz, jak przypisać je do pliku adresowego, a my umieszczamy właściwą w każdym zestawie przed zapakowaniem.
+Q: Czy gwarantujecie doręczenie przed konkretną datą, np. przed świętami?
+A: Nie obiecujemy doręczenia na sztywną datę. Harmonogram planujemy razem z Tobą, biorąc pod uwagę termin dostawy towaru, liczbę zestawów i lokalizację odbiorców.
+Q: Czy jedna kampania może obejmować adresy domowe i dostawy do biur?
+A: Tak. Pojedyncze prezenty wysyłamy jako paczki przez krajowych przewoźników w UK, a większe ilości do biur lub obiektów eventowych mogą jechać na paletach z tego samego zapasu.
+Q: Kto odprawia zbiorczą wysyłkę prezentów przez brytyjskie cło?
+A: Partię odprawia importer w UK, który rozlicza VAT importowy i cło. Może to być Twoja firma z rejestracją VAT w UK lub brytyjski odbiorca, a Arca Trade Group może zapewnić przedstawicielstwo celne.
+Q: Co dzieje się z pozostałymi prezentami i materiałami promocyjnymi po kampanii?
+A: Nadwyżki i zapasowe zestawy zostają w naszym magazynie w Essex, zarejestrowane w Mintsoft WMS, gotowe na dodatkowe wysyłki lub kolejną kampanię. Składowanie palet od 3,50 £ + VAT tygodniowo.
 
 ## Studia przypadków: magazyn i fulfillment w UK
 URL: https://www.londradepo.com/pl/studia-przypadkow

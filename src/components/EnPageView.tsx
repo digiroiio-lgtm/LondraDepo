@@ -33,7 +33,7 @@ const INLINE_FORM = new Set([
   "/en/shopify-fulfilment-uk", "/en/uk-fulfilment", "/en/ecommerce-fulfilment", "/en/uk-ecommerce-logistics", "/en/pick-and-pack",
   "/en/amazon-fulfilment-uk", "/en/amazon-seller-warehousing-uk", "/en/amazon-prep-uk", "/en/amazon-uk-fulfilment-centres", "/en/uk-distribution",
   "/en/london-gateway-tilbury-warehousing", "/en/felixstowe-port-warehousing", "/en/uk-warehousing-for-turkish-exporters",
-  "/en/case-studies", "/en/industries", "/en/blog", "/en/call-off-stock-uk",
+  "/en/case-studies", "/en/industries", "/en/blog", "/en/call-off-stock-uk", "/en/bulk-shipping-uk-distribution", "/en/uk-sample-distribution", "/en/corporate-gift-fulfilment-uk",
   "/pl/magazyn-dla-polskich-firm",
 ]);
 import HeaderEn from "@/components/HeaderEn";

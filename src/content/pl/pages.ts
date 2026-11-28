@@ -268,7 +268,7 @@ export const plPages: EnPage[] = [
       { q: "Czy obsługujecie zwroty od klientów?", a: "Tak. Zwrócone produkty sprawdzamy, rejestrujemy w systemie i zgodnie z Twoimi zasadami przywracamy do sprzedaży lub odkładamy." },
       { q: "Czy mogę zacząć od małej liczby zamówień?", a: "Tak. Nie ma stałego minimum; wiele sklepów zaczyna od kilku palet zapasu i kilkudziesięciu zamówień miesięcznie, a potem zwiększa wolumen." },
     ],
-    related: ["/pl/3pl-wielka-brytania", "/pl/amazon-fba-prep", "/pl/magazyn-w-wielkiej-brytanii", "/pl/zapytanie-ofertowe"],
+    related: ["/pl/3pl-wielka-brytania", "/pl/amazon-fba-prep", "/pl/magazyn-w-wielkiej-brytanii", "/pl/zapytanie-ofertowe", "/pl/wysylka-zbiorcza-i-dystrybucja-uk", "/pl/dystrybucja-probek-uk"],
     quote: { label: "Poproś o wycenę fulfillmentu", service: "fulfilment" },
   },
   {

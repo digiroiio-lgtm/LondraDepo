@@ -143,7 +143,7 @@ export const casePages: EnPage[] = [
       { q: "Do you help with commodity code classification?", a: "Yes. We offer guidance on placing products in the correct commodity code, which is the basis of the UK import operation. The final classification is the importer's responsibility." },
       { q: "How did the tortilla producer grow in the UK?", a: "The Ankara-based producer entered the UK with a single trial pallet. With commodity code guidance, labelling, fulfilment and distribution in place, the operation grew to six 40ft high-cube containers a month." },
     ],
-    related: ["/en/uk-market-entry", "/en/uk-warehousing-for-turkish-exporters", "/en/container-unloading", "/en/pallet-storage", "/en/case-studies/pizza-box-distribution-uk"],
+    related: ["/en/uk-market-entry", "/en/uk-warehousing-for-turkish-exporters", "/en/container-unloading", "/en/pallet-storage", "/en/case-studies/pizza-box-distribution-uk", "/en/bulk-shipping-uk-distribution"],
   },
   {
     slug: "/en/case-studies/uk-auto-parts-warehouse",

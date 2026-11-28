@@ -695,7 +695,7 @@ export const servicePages: EnPage[] = [
       { q: "How are goods received after customs?", a: "Once clearance is complete, your goods are delivered to our warehouse address, counted and booked into the warehouse system." },
       { q: "Do I need a GB EORI number to clear goods into the UK?", a: "Yes. The importer needs an EORI number starting with GB to import goods into Great Britain. Arca Trade Group's customs team can lodge the declaration, but the importer remains responsible for duty and import VAT." },
     ],
-    related: ["/en/blog/uk-import-documents", "/en/blog/uk-import-costs", "/en/uk-import-logistics", "/en/blog/uk-importing-guide", "/en/container-unloading", "/en/uk-warehousing", "/en/essex-warehouse", "/en/blog/bonded-warehouse-vs-duty-paid-storage"],
+    related: ["/en/blog/uk-import-documents", "/en/blog/uk-import-costs", "/en/uk-import-logistics", "/en/blog/uk-importing-guide", "/en/container-unloading", "/en/uk-warehousing", "/en/essex-warehouse", "/en/blog/bonded-warehouse-vs-duty-paid-storage", "/en/uk-warehouse-partner-for-freight-forwarders"],
   },
   {
     slug: "/en/cargo-handling",

@@ -411,7 +411,7 @@ export const plPages: EnPage[] = [
       { q: "Czy mogę korzystać z własnego przewoźnika?", a: "Tak. Twój spedytor może dostarczyć towar na adres magazynu w Rayleigh, a od nas wziąć tylko rozładunek, składowanie, fulfillment i dystrybucję." },
       { q: "Czy przechowujecie towar przed odprawą?", a: "Nie. Nie jesteśmy składem celnym, więc przyjmujemy towar po brytyjskiej odprawie celnej i dopiero wtedy go składujemy." },
     ],
-    related: ["/pl/magazyn-dla-polskich-firm", "/pl/magazyn-w-wielkiej-brytanii", "/pl/zapytanie-ofertowe", "/pl/rodzaje-kontenerow", "/pl/zapasy-buforowe-i-dostawy-uk"],
+    related: ["/pl/magazyn-dla-polskich-firm", "/pl/magazyn-w-wielkiej-brytanii", "/pl/zapytanie-ofertowe", "/pl/rodzaje-kontenerow", "/pl/zapasy-buforowe-i-dostawy-uk", "/pl/partner-magazynowy-dla-spedytorow-uk"],
     quote: { label: "Porozmawiajmy o imporcie", service: "freight-customs" },
   },
   {

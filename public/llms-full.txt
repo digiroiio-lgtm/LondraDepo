@@ -15,7 +15,7 @@ Last updated: 2026-11-28. Generated from the live page content: every page in th
 - Services: goods-in, pallet and carton storage, FCL/LCL container unloading, pick and pack, ecommerce fulfilment (Shopify, Amazon FBM, B2B), Amazon FBA prep, UK distribution. International freight and UK customs clearance are provided by Arca Trade Group.
 - Not a bonded (customs) warehouse: goods are stored after UK customs clearance.
 - Not an official Amazon or Shopify partner; LondraDepo provides independent storage and fulfilment.
-- Languages: Turkish site at /, English site at /en (UK spelling), Polish site at /pl; equivalent pages are linked by reciprocal hreflang.
+- Languages: Turkish site at /, English site at /en (UK spelling), Polish site at /pl, German site at /de; equivalent pages are linked by reciprocal hreflang.
 
 # English pages
 
@@ -404,6 +404,23 @@ Q: Can you also arrange freight and customs?
 A: Yes. Arca Trade Group, which operates LondraDepo, arranges sea, air, road and rail freight and UK customs declarations. You can also use your own forwarder and only our warehouse.
 Q: What do 3PL services in the UK usually include?
 A: UK 3PL services usually cover goods-in, pallet and carton storage, stock control, order picking and packing, Amazon prep, returns and UK delivery. LondraDepo provides these from Essex, with stock tracked in Mintsoft WMS.
+
+## UK Warehouse Partner for Freight Forwarders
+URL: https://www.londradepo.com/en/uk-warehouse-partner-for-freight-forwarders
+Summary: UK warehouse partner in Essex for European forwarders and distributors: FCL, LCL and groupage receiving, storage, cross-docking and UK hand-off. £3.50 + VAT.
+Short answer: European freight forwarders, groupage operators and distributors moving goods to the UK, for example from Rotterdam or Antwerp, can use LondraDepo as their UK-side warehouse partner in Rayleigh, Essex. We receive FCL, LCL and groupage, unload, count and check the goods, store them short term or on an ongoing basis, cross-dock them and hand them off for UK delivery, with stock recorded in Mintsoft WMS. You stay the main contact for your customer, and we work to your instructions. Pallet storage starts from £3.50 + VAT per pallet per week, with no fixed minimum.
+Q: Do we stay the main contact for our customer if we use LondraDepo?
+A: Yes. You stay the main contact for your customer and we work to your instructions, from receiving through storage to UK hand-off.
+Q: Can you receive groupage consignments with goods for several of our customers?
+A: Yes. We receive groupage, count and check each part against your packing list and keep each customer's goods separate in Mintsoft WMS.
+Q: Do you offer commission, white-label or exclusive arrangements to forwarders?
+A: No. We agree handling and storage rates and service levels with you in writing; we do not offer commission, revenue share or exclusivity.
+Q: Who clears a forwarder's consignment through UK customs before it reaches you?
+A: That is agreed per consignment. Your own customs agent can clear it, or Arca Trade Group, a BIFA member that operates LondraDepo, can lodge the UK declaration.
+Q: Can you cross-dock a consignment instead of storing it?
+A: Yes. We can receive, check and split a consignment and hand it off for UK delivery to the recipients you name, without long-term storage.
+Q: What reporting do we get to pass on to our customer?
+A: You receive receiving reports, stock levels and despatch records from Mintsoft WMS, which you can share with your customer in your own format.
 
 ## Bulk Shipping to the UK and UK Parcel Distribution
 URL: https://www.londradepo.com/en/bulk-shipping-uk-distribution
@@ -1212,6 +1229,24 @@ A: Partiyi İngiltere'deki ithalatçı gümrükler ve ithalat KDV'si ile gümrü
 Q: Kampanyadan sonra artan hediye ve promosyon ürünlerine ne olur?
 A: Artan ürünler ve yedek setler Essex'teki depomuzda, Mintsoft WMS'te kayıtlı olarak kalır; sonradan eklenen alıcılar veya bir sonraki kampanya için hazır bekler. Palet depolama haftalık £3,50 + KDV'den başlar.
 
+## Nakliyeciler için İngiltere Depo Ortaklığı
+URL: https://www.londradepo.com/nakliyeciler-icin-ingiltere-depo-ortakligi
+English version: https://www.londradepo.com/en/uk-warehouse-partner-for-freight-forwarders
+Summary: Avrupalı nakliyeci ve distribütörler için Essex'te İngiltere depo ortağı: FCL, LCL ve parsiyel mal kabul, depolama, cross-dock ve teslimat. Palet £3,50 + KDV.
+Short answer: Avrupa'dan, örneğin Rotterdam veya Antwerp üzerinden İngiltere'ye yük taşıyan nakliyeciler, parsiyel (groupage) operatörleri ve distribütörler, LondraDepo'yu Rayleigh, Essex'te İngiltere tarafındaki depo ortağı olarak kullanabilir. FCL, LCL ve parsiyel yükü kabul eder, boşaltır, sayar ve kontrol ederiz; kısa süreli veya sürekli depolar, cross-dock yapar ve İngiltere içi teslimata devrederiz; stok Mintsoft WMS'te kayıt altındadır. Müşterinizin ana muhatabı siz kalırsınız, biz sizin talimatlarınızla çalışırız. Palet depolama haftalık £3,50 + KDV'den başlar; asgari hacim yoktur.
+Q: LondraDepo ile çalışırsak müşterimizin ana muhatabı biz mi kalırız?
+A: Evet. Müşterinizin ana muhatabı siz kalırsınız; mal kabulden depolamaya ve İngiltere içi teslimata devre kadar sizin talimatlarınızla çalışırız.
+Q: Birden fazla müşterimizin yükünü taşıyan parsiyel sevkiyatları kabul ediyor musunuz?
+A: Evet. Parsiyel yükü kabul eder, her bölümü çeki listenize göre sayar ve kontrol eder, her müşterinin ürününü Mintsoft WMS'te ayrı tutarız.
+Q: Nakliyecilere komisyon, white label veya münhasırlık sunuyor musunuz?
+A: Hayır. Elleçleme ve depolama ücretlerini ve hizmet seviyelerini sizinle yazılı olarak belirleriz; komisyon, gelir paylaşımı veya münhasırlık sunmayız.
+Q: Nakliyecinin sevkiyatını depoya gelmeden önce İngiltere'de kim gümrükler?
+A: Bu her sevkiyat için belirlenir. Kendi gümrük müşaviriniz gümrükleyebilir ya da LondraDepo'yu işleten BIFA üyesi Arca Trade Group İngiltere beyannamesini verebilir.
+Q: Sevkiyatı depolamak yerine cross-dock yapabilir misiniz?
+A: Evet. Sevkiyatı kabul eder, kontrol eder ve böleriz, ardından uzun süre depolamadan belirttiğiniz İngiltere'deki alıcılara teslimat için devrederiz.
+Q: Müşterimize iletmek için hangi raporları alırız?
+A: Mintsoft WMS'ten mal kabul raporlarını, stok seviyelerini ve çıkış kayıtlarını alırsınız; bunları müşterinizle kendi formatınızda paylaşabilirsiniz.
+
 ## Londra Depo: Doğu Londra'ya 40 Dakika, Essex
 URL: https://www.londradepo.com/londra-depo
 English version: https://www.londradepo.com/en/london-warehousing
@@ -1542,22 +1577,6 @@ Q: Stoğumu depoda tutup Amazon'a parça parça gönderebilir miyim?
 A: Evet. LondraDepo stoğunuzun kalanını Essex'te palet başına haftalık £3,50 + KDV'den depolar ve Amazon stokunuz eridikçe yeni partileri hazırlayıp gönderir; böylece yavaş satan ürünler Amazon depolama ücretine takılmaz.
 Q: Amazon'a koli olarak mı, palet olarak mı göndermeliyim?
 A: Hacme bağlıdır. Birkaç koli genellikle koli kargo (SPD) ile gider; Amazon Freight parsiyel paleti (LTL) genellikle 1–6 palet olarak tanımlar; düzenli büyük yüklerde tam tır mantıklı olabilir. Her sevkiyat planı için uygun seçeneği LondraDepo ekibi önerir.
-
-## İngiltere Depolama: Palet & Koli, £3,50/Palet
-URL: https://www.londradepo.com/depolama
-English version: https://www.londradepo.com/en/storage-services
-Summary: Essex'te palet ve koli depolama: mal kabul, FCL konteyner boşaltma, Mintsoft WMS ile anlık stok takibi, kısa ve uzun vadeli depo. Haftalık £3,50 + KDV'den.
-Short answer: Palet ve koli bazında mal kabul, Mintsoft WMS üzerinde gerçek zamanlı stok takibi, FCL konteyner boşaltma ve kısa/uzun vadeli depo kapasitesi. İngiltere depolama operasyonunun teknik altyapısı. Geçici veya sezonluk stok ihtiyaçları için esnek kısa vadeli depolama. UK pazarınızdaki kalıcı stok için güvenli uzun vadeli depo alanı.
-Q: Kısa vadeli depolama mümkün mü?
-A: Evet. Depolama haftalık palet başına £3,50 + KDV'den ücretlendirildiği için birkaç haftalık kısa süreli ve uzun süreli depolama mümkündür; doğrudan sevk edilecek ürünler için cross-dock da yapılabilir.
-Q: Palet depolama kabul ediyor musunuz?
-A: Evet. FCL ve LCL konteyner teslimatları dahil paletli ve kolili ürünleri kabul ediyoruz. Dökme koliler mal kabulde paletlenip etiketlenebilir ve ardından Mintsoft WMS'e kaydedilir.
-Q: Stok takibi nasıl yapılıyor?
-A: Stok seviyeleri ve ürün hareketleri, ürünler mal kabulde sisteme alındığı andan itibaren Mintsoft depo yönetim yazılımında (WMS) kayıt altına alınır; rafta ne olduğunu görür ve düzenli stok raporu alırsınız.
-Q: Türkiye'den gelen ürünleri kabul ediyor musunuz?
-A: Evet. Türkiye veya herhangi bir ülkedeki tedarikçiden gelen ürünleri Rayleigh'deki depomuzda kabul ediyoruz. Nakliye ve UK gümrüklemesi Arca Trade Group üzerinden yapılabilir ya da kendi nakliyeciniz teslim edebilir.
-Q: Depolama nasıl ücretlendiriliyor?
-A: Standart palet depolama haftalık palet başına £3,50 + KDV'den başlar. Koli depolama, mal kabul, konteyner boşaltma ve elleçleme ürünlerinize ve hacminize göre ayrıca tekliflendirilir.
 
 ## İngiltere Gümrükleme Hizmeti | UK İthalat Gümrüğü
 URL: https://www.londradepo.com/gumrukleme
@@ -2829,6 +2848,24 @@ A: Partię odprawia importer w UK, który rozlicza VAT importowy i cło. Może t
 Q: Co dzieje się z pozostałymi prezentami i materiałami promocyjnymi po kampanii?
 A: Nadwyżki i zapasowe zestawy zostają w naszym magazynie w Essex, zarejestrowane w Mintsoft WMS, gotowe na dodatkowe wysyłki lub kolejną kampanię. Składowanie palet od 3,50 £ + VAT tygodniowo.
 
+## Partner magazynowy w UK dla spedytorów
+URL: https://www.londradepo.com/pl/partner-magazynowy-dla-spedytorow-uk
+English version: https://www.londradepo.com/en/uk-warehouse-partner-for-freight-forwarders
+Summary: Partner magazynowy w Essex dla spedytorów i dystrybutorów z Europy: przyjęcie FCL, LCL i drobnicy, składowanie, cross-docking i dostawy w UK. Od 3,50 £ + VAT.
+Short answer: Spedytorzy, operatorzy drobnicy (groupage) i dystrybutorzy z Europy, którzy przewożą towary do UK, np. z Rotterdamu lub Antwerpii, mogą korzystać z LondraDepo jako partnera magazynowego po stronie brytyjskiej, w Rayleigh w hrabstwie Essex. Przyjmujemy kontenery FCL, przesyłki LCL i drobnicę, rozładowujemy, liczymy i sprawdzamy towar, składujemy go krótko lub na stałe, wykonujemy cross-docking i przekazujemy towar do dostawy w UK, a stany rejestrujemy w Mintsoft WMS. To Ty pozostajesz głównym kontaktem dla swojego klienta, a my działamy według Twoich dyspozycji. Składowanie palet zaczyna się od 3,50 £ + VAT za paletę tygodniowo, bez stałego minimum.
+Q: Czy jako spedytor pozostaję głównym kontaktem dla swojego klienta?
+A: Tak. To Ty pozostajesz głównym kontaktem dla swojego klienta, a my działamy według Twoich dyspozycji, od przyjęcia towaru przez składowanie po przekazanie do dostawy w UK.
+Q: Czy przyjmujecie przesyłki drobnicowe z towarem kilku naszych klientów?
+A: Tak. Przyjmujemy drobnicę, liczymy i sprawdzamy każdą część według listy pakunkowej i prowadzimy towar każdego klienta osobno w Mintsoft WMS.
+Q: Czy oferujecie spedytorom prowizje, white label lub wyłączność?
+A: Nie. Uzgadniamy z Tobą na piśmie stawki za obsługę i składowanie oraz poziom usług; nie oferujemy prowizji, podziału przychodów ani wyłączności.
+Q: Kto odprawia przesyłkę spedytora w UK, zanim trafi do Waszego magazynu?
+A: Ustalamy to dla każdej przesyłki. Może ją odprawić Twoja agencja celna albo Arca Trade Group, członek BIFA i operator LondraDepo, który złoży zgłoszenie celne w UK.
+Q: Czy możecie wykonać cross-docking zamiast składowania?
+A: Tak. Możemy przyjąć, sprawdzić i podzielić przesyłkę, a następnie przekazać ją do dostawy wskazanym odbiorcom w UK, bez długiego składowania.
+Q: Jakie raporty otrzymamy, aby przekazać je klientowi?
+A: Otrzymujesz raporty przyjęć, stany magazynowe i potwierdzenia wydań z Mintsoft WMS, które możesz przekazać klientowi we własnym formacie.
+
 ## Studia przypadków: magazyn i fulfillment w UK
 URL: https://www.londradepo.com/pl/studia-przypadkow
 English version: https://www.londradepo.com/en/case-studies
@@ -3264,3 +3301,268 @@ Q: Czy wycena może obejmować transport i odprawę celną?
 A: Tak. Arca Trade Group, operator LondraDepo, może wycenić transport międzynarodowy i brytyjską odprawę celną razem z magazynem; możesz też wycenić tylko magazyn.
 Q: W jakim języku mogę wypełnić formularz?
 A: Opis możesz napisać po polsku lub po angielsku. Zespół w Wielkiej Brytanii pracuje w języku angielskim i tureckim, więc ofertę przygotowujemy po angielsku.
+
+# German pages (Deutsche Seiten)
+
+## Lager und Fulfillment in Großbritannien
+URL: https://www.londradepo.com/de
+English version: https://www.londradepo.com/en
+Summary: 3PL-Lager in Essex bei London: Palettenlagerung ab 3,50 £ zzgl. MwSt. pro Woche, Containerentladung, Fulfillment, Amazon FBA Prep und Distribution in UK.
+Short answer: LondraDepo ist ein 3PL-Lager in Rayleigh in der Grafschaft Essex, 13 Meilen vom Hafen London Gateway und ca. 37 Meilen vom Londoner Zentrum entfernt. Wir nehmen Ihre Ware in Großbritannien an, lagern sie auf Paletten oder in Regalen, wickeln E-Commerce- und B2B-Aufträge ab und liefern im ganzen Land aus.
+Q: Wo befindet sich das Lager von LondraDepo?
+A: Das Lager liegt in Unit 19 Arterial Park, Rayleigh, Essex SS6 7FY: 13 Meilen vom Hafen London Gateway, 16 Meilen von Tilbury und ca. 37 Meilen vom Londoner Zentrum entfernt.
+Q: Was kostet die Lagerung einer Palette in Großbritannien?
+A: Die Palettenlagerung beginnt bei 3,50 £ zzgl. MwSt. pro Palette und Woche. Wareneingang, Kommissionierung, Verpackungsmaterial und Zustellung kalkulieren wir separat nach Produkt und Volumen.
+Q: Gibt es eine Mindestmenge für den Start?
+A: Nein, es gibt keine feste Mindestmenge. Viele Kunden beginnen mit einer einzigen Testpalette, um den britischen Markt zu prüfen, und steigern danach auf regelmäßige Paletten- oder Containerlieferungen.
+Q: Unterstützen Sie beim Import aus Deutschland nach Großbritannien?
+A: Ja. Arca Trade Group, der Betreiber von LondraDepo, organisiert den Transport aus der EU und die britische Zollanmeldung. Sie können auch Ihren eigenen Spediteur und Zollagenten nutzen und bei uns nur das Lager buchen.
+Q: In welcher Sprache läuft die Betreuung?
+A: Unser Team in Großbritannien arbeitet auf Englisch und Türkisch. Anfragen können Sie über das Formular auf Deutsch oder Englisch senden; das Angebot erstellen wir auf Englisch.
+
+## İngiltere Depolama: Palet & Koli, £3,50/Palet
+URL: https://www.londradepo.com/depolama
+English version: https://www.londradepo.com/en/storage-services
+Summary: Essex'te palet ve koli depolama: mal kabul, FCL konteyner boşaltma, Mintsoft WMS ile anlık stok takibi, kısa ve uzun vadeli depo. Haftalık £3,50 + KDV'den.
+Short answer: Palet ve koli bazında mal kabul, Mintsoft WMS üzerinde gerçek zamanlı stok takibi, FCL konteyner boşaltma ve kısa/uzun vadeli depo kapasitesi. İngiltere depolama operasyonunun teknik altyapısı. Geçici veya sezonluk stok ihtiyaçları için esnek kısa vadeli depolama. UK pazarınızdaki kalıcı stok için güvenli uzun vadeli depo alanı.
+Q: Kısa vadeli depolama mümkün mü?
+A: Evet. Depolama haftalık palet başına £3,50 + KDV'den ücretlendirildiği için birkaç haftalık kısa süreli ve uzun süreli depolama mümkündür; doğrudan sevk edilecek ürünler için cross-dock da yapılabilir.
+Q: Palet depolama kabul ediyor musunuz?
+A: Evet. FCL ve LCL konteyner teslimatları dahil paletli ve kolili ürünleri kabul ediyoruz. Dökme koliler mal kabulde paletlenip etiketlenebilir ve ardından Mintsoft WMS'e kaydedilir.
+Q: Stok takibi nasıl yapılıyor?
+A: Stok seviyeleri ve ürün hareketleri, ürünler mal kabulde sisteme alındığı andan itibaren Mintsoft depo yönetim yazılımında (WMS) kayıt altına alınır; rafta ne olduğunu görür ve düzenli stok raporu alırsınız.
+Q: Türkiye'den gelen ürünleri kabul ediyor musunuz?
+A: Evet. Türkiye veya herhangi bir ülkedeki tedarikçiden gelen ürünleri Rayleigh'deki depomuzda kabul ediyoruz. Nakliye ve UK gümrüklemesi Arca Trade Group üzerinden yapılabilir ya da kendi nakliyeciniz teslim edebilir.
+Q: Depolama nasıl ücretlendiriliyor?
+A: Standart palet depolama haftalık palet başına £3,50 + KDV'den başlar. Koli depolama, mal kabul, konteyner boşaltma ve elleçleme ürünlerinize ve hacminize göre ayrıca tekliflendirilir.
+
+## Lager in Großbritannien: Essex bei London
+URL: https://www.londradepo.com/de/lager-in-grossbritannien
+English version: https://www.londradepo.com/en/uk-warehousing
+Summary: Lager in England und Großbritannien: Wareneingang, Paletten- und Kartonlagerung, Mintsoft WMS, Auftragsabwicklung und Versand in UK. Ab 3,50 £ zzgl. MwSt.
+Short answer: Mit einem Lager in Großbritannien halten Sie Ihren Bestand nah an Ihren Kunden in UK und liefern mit inländischen Versanddiensten, statt jede Sendung aus Deutschland zu verschicken. LondraDepo nimmt Ihre Ware in Rayleigh in Essex an, lagert sie auf Paletten oder in Regalen, führt die Bestände im Mintsoft WMS, wickelt B2B- und E-Commerce-Aufträge ab und organisiert die Zustellung im ganzen Land. Die Lagerung beginnt bei 3,50 £ zzgl. MwSt. pro Palette und Woche.
+Q: Was kostet ein Lager in Großbritannien?
+A: Die Palettenlagerung beginnt bei 3,50 £ zzgl. MwSt. pro Woche. Weitere Positionen wie Wareneingang, Kommissionierung und Zustellung kalkulieren wir nach Produkt und Volumen.
+Q: Kann ich mit einer einzigen Palette beginnen?
+A: Ja. Es gibt keine feste Mindestmenge, Sie können also mit einer Testpalette starten und das Volumen mit Ihrem Absatz in Großbritannien steigern.
+Q: Sehe ich meine Lagerbestände jederzeit?
+A: Ja. Bestände und Aufträge werden im Mintsoft WMS geführt, und regelmäßige Berichte zeigen, wie viel Ware im Lager ist und was versendet wurde.
+Q: Kann die Ware unverzollt bei Ihnen eingelagert werden?
+A: Nein. Wir sind kein Zolllager und nehmen Ware erst nach der britischen Zollabfertigung an. Die Abfertigung kann Arca Trade Group oder Ihr eigener Zollagent übernehmen.
+Q: Wie weit ist das Lager von den Häfen entfernt?
+A: Das Lager in Rayleigh liegt 13 Meilen von London Gateway, 16 Meilen von Tilbury und ca. 62 Meilen von Felixstowe entfernt, was die Containerwege vom Hafen kurz hält.
+
+## 3PL-Logistik in Großbritannien (Essex)
+URL: https://www.londradepo.com/de/3pl-logistik-grossbritannien
+English version: https://www.londradepo.com/en/3pl-uk
+Summary: Ihr Logistikpartner in England: Wareneingang, Palettenlagerung ab 3,50 £ zzgl. MwSt., Kommissionierung, E-Commerce- und B2B-Fulfillment und Amazon FBA Prep.
+Short answer: Ein 3PL-Dienstleister (Third-Party Logistics) nimmt Ihre Ware in sein Lager in Großbritannien auf, lagert sie, wickelt Ihre E-Commerce- und B2B-Aufträge ab und liefert sie im ganzen Land aus. Sie verkaufen in UK, ohne selbst ein Lager zu betreiben. LondraDepo ist ein 3PL-Lager in Rayleigh in Essex, 13 Meilen von London Gateway, betrieben von Arca Trade Group, einem BIFA-Mitglied, das auch internationale Transporte und die Zollabfertigung übernimmt. Palettenlagerung ab 3,50 £ zzgl. MwSt. pro Woche, ohne feste Mindestmenge.
+Q: Was ist ein 3PL in Großbritannien?
+A: Ein 3PL ist ein Unternehmen, das Ihre Ware in seinem Lager in Großbritannien aufbewahrt und in Ihrem Auftrag Lieferungen annimmt, Bestellungen abwickelt und die Zustellung organisiert. Die Ware bleibt Ihr Eigentum.
+Q: Was kostet ein 3PL-Dienstleister in UK?
+A: Die Kosten setzen sich aus Lagerung, Wareneingang, Kommissionierung, Verpackungsmaterial und Transport zusammen. Bei LondraDepo beginnt die Palettenlagerung bei 3,50 £ zzgl. MwSt. pro Woche, den Rest kalkulieren wir individuell.
+Q: Können Sie E-Commerce- und B2B-Aufträge gleichzeitig abwickeln?
+A: Ja. Bestellungen aus Shopify und Amazon FBM versenden wir als Pakete, und Paletten- oder Kartonaufträge für Händler, Großhändler und Werkstätten bereiten wir aus demselben Bestand vor.
+Q: Hat die 3PL-Leistung ein Mindestvolumen?
+A: Nein, es gibt keine feste Mindestmenge. Viele Kunden beginnen mit einer Testpalette und wechseln nach einer stabilen Anlaufphase zu regelmäßigen Paletten- und Containerlieferungen.
+Q: Organisieren Sie auch den Transport aus Deutschland?
+A: Ja. Arca Trade Group, der Betreiber von LondraDepo, organisiert Transporte per Lkw, See, Luft und Bahn sowie die britische Zollanmeldung. Sie können aber auch Ihren eigenen Spediteur einsetzen.
+
+## Palettenlager England ab 3,50 £ pro Woche
+URL: https://www.londradepo.com/de/palettenlager-england
+English version: https://www.londradepo.com/en/pallet-storage
+Summary: Palettenlager in England, in Essex bei London: ab 3,50 £ zzgl. MwSt. pro Palette und Woche, Annahme von Containern und Teilladungen, Berichte und B2B-Versand.
+Short answer: Palettenlagerung wird in Großbritannien meist pro Palette und Woche abgerechnet. Bei LondraDepo beginnt der Preis für eine Standardpalette bei 3,50 £ zzgl. MwSt. pro Woche und umfasst die reine Lagerung; Wareneingang, Handling und Kommissionierung werden separat kalkuliert. Wir nehmen Container und Teilladungen in Rayleigh in Essex an, führen die Bestände im WMS und bereiten Paletten für den Versand an B2B-Kunden in ganz Großbritannien vor.
+Q: Was kostet ein Palettenstellplatz in England?
+A: Bei LondraDepo kostet eine Standardpalette ab 3,50 £ zzgl. MwSt. pro Woche. Der Preis umfasst nur die Lagerung; Wareneingang, Handling und Transport werden separat kalkuliert.
+Q: Wie werden die Kosten für die Palettenlagerung berechnet?
+A: Die Lagerkosten ergeben sich aus der Anzahl der Paletten, multipliziert mit der Anzahl der Wochen und dem Wochenpreis. Abgerechnet wird wöchentlich, Sie lagern also so lange wie nötig.
+Q: Nehmen Sie Container mit Paletten an?
+A: Ja. Wir nehmen FCL- und LCL-Container sowie Teilladungen an, zählen die Ware, prüfen sie auf sichtbare Schäden und erfassen sie im WMS.
+Q: Können Sie Paletten an meine Kunden in UK versenden?
+A: Ja. Wir bereiten Paletten und Kartons für den Versand an Händler, Großhändler und Werkstätten in ganz Großbritannien vor, inklusive Auslieferungsdokumenten.
+Q: Gibt es eine Mindestanzahl an Paletten?
+A: Nein, es gibt keine feste Mindestmenge. Sie können mit einer Palette beginnen und das Volumen je nach Absatz und Saison erhöhen oder verringern.
+
+## Fulfillment Großbritannien: Versandlager in Essex
+URL: https://www.londradepo.com/de/fulfillment-grossbritannien
+English version: https://www.londradepo.com/en/ecommerce-fulfilment
+Summary: Fulfillment in Großbritannien aus unserem Versandlager in Essex: Mintsoft WMS, Kommissionierung, Verpackung, Versandetiketten und Retourenmanagement in UK.
+Short answer: E-Commerce-Fulfillment umfasst den gesamten Weg von der Bestellung im Online-Shop bis zum Paket beim Kunden: Auftragsübernahme, Kommissionierung, Verpackung, Versand und Retouren. Wenn Sie diesen Prozess aus einem Versandlager in Großbritannien abwickeln, erhalten Ihre Kunden in UK ihre Pakete über inländische Versanddienste, und Sie verschicken nicht mehr jede Sendung aus Deutschland. LondraDepo bearbeitet Bestellungen aus Shopify, Amazon FBM und eigenen Shops über das Mintsoft WMS.
+Q: Was umfasst E-Commerce-Fulfillment?
+A: Fulfillment ist die Abwicklung von Online-Bestellungen durch einen Logistikdienstleister: Auftragsübernahme, Kommissionierung, Verpackung, Versand und Retourenbearbeitung, jeweils aus dem Bestand in seinem Lager.
+Q: Welche Plattformen können Sie anbinden?
+A: Bestellungen aus Shopify, Amazon FBM, Ihrem eigenen Shop und weiteren Kanälen werden an das Mintsoft WMS übergeben. Die Art der Anbindung stimmen wir vor dem Start mit Ihnen ab.
+Q: Was kostet Fulfillment in Großbritannien?
+A: Die Kosten bestehen aus Lagerung (ab 3,50 £ zzgl. MwSt. pro Palette und Woche), einer Gebühr pro kommissioniertem Auftrag, Verpackungsmaterial und Transport. Wir kalkulieren nach Auftragsvolumen und Produkten.
+Q: Übernehmen Sie das Retourenmanagement in UK?
+A: Ja. Rücksendungen von Kunden in Großbritannien gehen an unser Lager in Essex, werden geprüft, im System erfasst und nach Ihren Vorgaben wieder verkauft oder aussortiert.
+Q: Brauche ich für das Fulfillment eine eigene Firma in UK?
+A: Nicht unbedingt. Viele ausländische Händler lagern Ware in einem britischen Lager und verkaufen mit ihrem bestehenden Unternehmen und einer GB-EORI-Nummer. Lassen Sie die passende Struktur steuerlich prüfen.
+
+## Amazon FBA Prep in Großbritannien (Essex)
+URL: https://www.londradepo.com/de/amazon-fba-prep-uk
+English version: https://www.londradepo.com/en/amazon-prep-uk
+Summary: Amazon FBA Prep in UK: Wareneingang, FNSKU-Etiketten, Verpackung nach Amazon-Vorgaben und geplante Lieferungen an Amazon-Logistikzentren in UK aus Essex.
+Short answer: Bevor Ware in ein Amazon-Logistikzentrum geht, muss sie nach den Vorgaben von Amazon vorbereitet werden: mit FNSKU-Etiketten versehen, passend verpackt und im Rahmen eines Versandplans geliefert. LondraDepo nimmt Ihren Bestand in Essex an, ca. 16 Meilen vom Amazon-Standort LCY2 entfernt, bereitet ihn für FBA vor und liefert ihn in Teilmengen an die Amazon-Logistikzentren in Großbritannien. Der restliche Bestand bleibt bei uns. LondraDepo ist kein offizieller Amazon-Partner.
+Q: Was versteht man unter Amazon FBA Prep?
+A: FBA Prep ist die Vorbereitung der Ware für die Lieferung an Amazon-Logistikzentren: FNSKU-Etiketten, Verpackung nach Amazon-Vorgaben und das Vorbereiten der Kartons für den Versandplan.
+Q: Warum sollte ich Bestand außerhalb von Amazon lagern?
+A: Wenn ein Teil des Bestands bei uns liegt, füllen Sie Ihre Amazon-Bestände in Teilmengen auf, halten langsam drehende Ware aus den Amazon-Lagergebühren heraus und bedienen weitere Kanäle aus demselben Bestand.
+Q: Wie weit ist Ihr Lager von den Amazon-Standorten entfernt?
+A: Das Lager in Rayleigh liegt ca. 16 Meilen vom Amazon-Logistikzentrum LCY2 entfernt. Wir liefern an die Logistikzentren, die Amazon im jeweiligen Versandplan zuweist.
+Q: Wickeln Sie auch Amazon-FBM-Bestellungen ab?
+A: Ja. Bestellungen über Amazon FBM können wir direkt aus unserem Lager an Kunden in Großbritannien versenden, zusätzlich zur Vorbereitung der Ware für FBA.
+Q: Was kostet FBA Prep bei Ihnen?
+A: FBA Prep ist nicht kostenlos; der Preis richtet sich nach Stückzahl, Art der Etikettierung und Verpackung. Die Lagerung des Bestands beginnt bei 3,50 £ zzgl. MwSt. pro Palette und Woche.
+
+## Lagerkosten in Großbritannien 2026: ab 3,50 £
+URL: https://www.londradepo.com/de/lagerkosten-grossbritannien
+English version: https://www.londradepo.com/en/uk-warehousing-pricing
+Summary: Lagerkosten in Großbritannien: Palettenlagerung ab 3,50 £ zzgl. MwSt. pro Woche, alle Positionen eines 3PL-Angebots und welche Faktoren den Preis bestimmen.
+Short answer: Die Kosten für ein Lager in Großbritannien setzen sich aus mehreren Positionen zusammen: Lagerung, Wareneingang, Kommissionierung, Verpackungsmaterial und Transport. Bei LondraDepo veröffentlichen wir den Preis für die Lagerung: ab 3,50 £ zzgl. MwSt. pro Standardpalette und Woche, ohne feste Mindestmenge. Alle anderen Positionen kalkulieren wir einzeln nach Ihrem Produkt und Volumen, damit das Angebot nachvollziehbar bleibt.
+Q: Wie werden Lagerpreise in Großbritannien berechnet?
+A: Die Lagerung wird pro Palette und Woche berechnet, bei uns ab 3,50 £ zzgl. MwSt. Palettengröße, Lagerdauer, Warenart sowie Handling, Umschlag und Fulfillment bestimmen den Gesamtpreis.
+Q: Sind die Preise inklusive Mehrwertsteuer?
+A: Nein. Wir nennen Nettopreise; auf die Rechnungen wird die britische Mehrwertsteuer nach den in Großbritannien geltenden Vorschriften aufgeschlagen.
+Q: Warum veröffentlichen Sie nicht alle Preise?
+A: Wareneingang, Kommissionierung und Transport hängen stark von Produkt, Verpackung und Volumen ab. Deshalb veröffentlichen wir den Lagerpreis und kalkulieren die übrigen Positionen individuell.
+Q: Gibt es einen monatlichen Mindestbetrag?
+A: Es gibt keine feste Mindestmenge. Sie bezahlen den tatsächlich belegten Platz und die erbrachten Leistungen und können daher mit einer einzigen Testpalette beginnen.
+Q: Wie erhalte ich ein Angebot für meine Lagerlogistik?
+A: Senden Sie uns über das Formular Produktbeschreibung, Volumen und Vertriebskanäle. Das Team erstellt das Angebot auf Englisch und schickt es per E-Mail, manchmal nach einigen Rückfragen.
+
+## Import nach Großbritannien: Transport und Zoll
+URL: https://www.londradepo.com/de/import-nach-grossbritannien
+English version: https://www.londradepo.com/en/uk-import-logistics
+Summary: Import nach Großbritannien aus einer Hand: Transport aus der EU, britische Zollabfertigung, Entladung, Lagerung, Fulfillment und Distribution aus Essex.
+Short answer: Seit dem Austritt Großbritanniens aus der EU benötigen Waren aus Deutschland bei der Einfuhr nach UK eine Zollanmeldung. Arca Trade Group organisiert den Transport per Lkw, See, Luft oder Bahn und übernimmt die britische Zollanmeldung; LondraDepo, die Lagermarke der Gruppe, entlädt die Ware in Rayleigh in Essex, lagert sie, wickelt Aufträge ab und liefert in ganz Großbritannien aus. Sie können auch Ihren eigenen Spediteur einsetzen und bei uns nur das Lager nutzen.
+Q: Ist nach dem Brexit eine Zollabfertigung von Deutschland nach UK nötig?
+A: Ja. Waren aus der EU benötigen bei der Einfuhr nach Großbritannien eine Zollanmeldung. Diese kann das Zollteam von Arca Trade Group oder Ihr eigener Zollagent abgeben.
+Q: Brauche ich eine GB-EORI-Nummer?
+A: Das Unternehmen, das als Importeur nach Großbritannien auftritt, benötigt in der Regel eine GB-EORI-Nummer. Sie wird vor der ersten Lieferung bei der britischen Behörde HMRC beantragt.
+Q: Wer zahlt Zoll und Einfuhrumsatzsteuer?
+A: Zoll und britische Einfuhrumsatzsteuer trägt der Importeur, in der Regel Sie. LondraDepo und Arca Trade Group werden nicht automatisch Importeur der Ware; Transportkosten kalkulieren wir separat.
+Q: Kann ich meinen eigenen Spediteur nutzen?
+A: Ja. Ihr Spediteur kann die Ware an unsere Lageradresse in Rayleigh liefern, und Sie buchen bei uns nur Entladung, Lagerung, Fulfillment und Distribution.
+Q: Lagern Sie Ware vor der Zollabfertigung ein?
+A: Nein. LondraDepo ist kein Zolllager. Wir nehmen Ware erst nach der britischen Zollabfertigung an und lagern sie dann als verzollte Ware ein.
+
+## Pufferlager in UK und Abruflieferungen
+URL: https://www.londradepo.com/de/konsignationslager-abruflieferung-uk
+English version: https://www.londradepo.com/en/call-off-stock-uk
+Summary: Senden Sie einen vollen Container nach UK: Wir lagern die Ware als Pufferlager in Essex und liefern wöchentlich oder auf Abruf. Paletten ab 3,50 £ zzgl. MwSt.
+Short answer: Viele britische Kunden verbrauchen ein oder zwei Paletten pro Woche, haben aber keinen Platz für einen ganzen Container. Beim Abruflager verschickt der Hersteller die Ware in großen Mengen, LondraDepo lagert sie als Pufferbestand in Rayleigh in Essex, und wir liefern an den Kunden in UK nach festem Plan oder auf Abruf.
+Q: Was ist ein Abruflager?
+A: Ein Abruflager ist ein Bestand in einem Lager nahe beim Kunden, der in vereinbarten Mengen auf dessen Abruf geliefert wird. LondraDepo lagert den Bestand in Essex und liefert in ganz Großbritannien.
+Q: Kauft oder verkauft LondraDepo die Ware?
+A: Nein. LondraDepo ist Logistikpartner: Wir nehmen die Ware an, lagern sie und liefern sie aus. Verkaufs- und Zahlungsbedingungen bleiben eine Sache zwischen Hersteller und britischem Abnehmer.
+Q: Wer zahlt Einfuhrumsatzsteuer und Zoll in UK?
+A: Das übernimmt der Importeur in UK. Das kann der Hersteller mit eigener britischer USt-Registrierung oder der britische Abnehmer sein; Arca Trade Group kann eine Zollvertretung stellen. Das wird vor der ersten Sendung festgelegt.
+Q: Was kostet die Lagerung des Pufferbestands?
+A: Die Palettenlagerung beginnt bei 3,50 £ zzgl. MwSt. pro Palette und Woche, ohne feste Mindestmenge. Wareneingang, Handling und jede Lieferung kalkulieren wir separat nach Produkt, Volumen und Lieferplan.
+Q: Sind wöchentliche Lieferungen oder Lieferungen auf Abruf möglich?
+A: Ja. Lieferungen können nach festem wöchentlichem oder vierzehntägigem Plan erfolgen oder gebucht werden, wenn eine berechtigte Person Ware abruft. Jede Auslagerung wird im Mintsoft WMS erfasst.
+Q: Wird der Pufferbestand in einem Zolllager gehalten?
+A: Nein. LondraDepo lagert ausschließlich verzollte Ware, die Abfertigung in UK erfolgt also vor der Einlagerung bei uns. Die Zollabfertigung kann Arca Trade Group übernehmen.
+
+## Sammelversand nach UK und Distribution in UK
+URL: https://www.londradepo.com/de/sammelversand-und-distribution-uk
+English version: https://www.londradepo.com/en/bulk-shipping-uk-distribution
+Summary: Eine Sammelsendung nach UK statt Hunderter Einzelpakete: Wir zählen, etikettieren und liefern an B2B- und B2C-Empfänger in UK. Paletten ab 3,50 £ zzgl. MwSt.
+Short answer: Statt Hunderte einzelner internationaler Pakete aus Deutschland zu verschicken, senden Sie die Ware einmal als Sammelsendung auf Paletten oder in Kartons nach Großbritannien. Die Sendung wird in UK verzollt, von LondraDepo in Rayleigh in Essex angenommen und gezählt, dann nach Ihrer Adressliste kommissioniert, verpackt, etikettiert und an inländische Versanddienste übergeben oder als Palette an Geschäftskunden geliefert. Sie erhalten einen Zustellbericht, und übrige Ware bleibt ab 3,50 £ zzgl. MwSt. pro Palette und Woche auf Lager.
+Q: Worin unterscheidet sich eine Sammelsendung vom Paketversand aus dem Ausland?
+A: Bei Einzelpaketen passiert jedes Paket die Grenze separat. Bei einer Sammelsendung reist die Ware einmal auf Paletten oder in Kartons, wird einmal verzollt und dann aus unserem Lager in Essex zugestellt.
+Q: Kann eine Sammelsendung Geschäfts- und Privatkunden bedienen?
+A: Ja. Aus demselben Bestand versenden wir Pakete über inländische Versanddienste an Verbraucher und liefern Paletten an Geschäftskunden. Jeder Versand wird im Mintsoft WMS erfasst.
+Q: In welchem Format sollte die Adressliste vorliegen?
+A: Am besten eignet sich eine CSV- oder Excel-Datei mit einer Zeile pro Empfänger: Name, vollständige Adresse in UK und die Menge für diesen Empfänger. Wir prüfen die Datei vor dem Etikettieren gemeinsam mit Ihnen.
+Q: Wer verzollt die Sammelsendung und zahlt die Einfuhrumsatzsteuer?
+A: Der Importeur in UK verzollt die Ware und rechnet Einfuhrumsatzsteuer und Zoll ab. Das kann der Hersteller mit britischer USt-Registrierung, der britische Abnehmer oder eine Zollvertretung über Arca Trade Group sein.
+Q: Was passiert mit Ware, die nach der Verteilung übrig bleibt?
+A: Übrige Ware bleibt in unserem Lager in Rayleigh, im Mintsoft WMS erfasst und bereit für weitere Aufträge. Die Palettenlagerung beginnt bei 3,50 £ zzgl. MwSt. pro Palette und Woche.
+Q: Kann ich den britischen Markt mit einer kleinen ersten Sammelsendung testen?
+A: Ja. Es gibt keine feste Mindestmenge, Sie können also mit einer Testpalette beginnen. LondraDepo ist Logistikpartner und kauft oder verkauft Ihre Ware nicht.
+
+## Lager in UK für deutsche Unternehmen
+URL: https://www.londradepo.com/de/lager-fuer-deutsche-unternehmen
+Summary: Wie deutsche Hersteller, Marken und Amazon-Händler ohne eigenes Lager an Kunden in UK verkaufen: Transport, Zoll, Lager in Essex, Fulfillment, Distribution.
+Short answer: Hersteller, Marken und Amazon-Händler aus Deutschland und Österreich
+Q: Warum lohnt sich ein Lager in UK für ein deutsches Unternehmen?
+A: Seit dem Brexit braucht jede Sendung aus Deutschland eine Zollabfertigung. Wenn Sie eine größere Partie senden und den Bestand in UK halten, verzollen Sie einmal und beliefern Ihre Kunden aus dem lokalen Lager.
+Q: Muss ich eine Firma in Großbritannien gründen?
+A: Nicht immer. Viele EU-Unternehmen importieren als ausländisches Unternehmen mit einer GB-EORI-Nummer nach UK. Fragen zur Umsatzsteuer und zur Rolle als Importeur sollten Sie mit einem Steuerberater klären.
+Q: Wie kommt die Ware aus Deutschland in Ihr Lager?
+A: Arca Trade Group organisiert Lkw-Transporte aus Europa, sowohl Sammelgut als auch Komplettladungen, und die Zollabfertigung. Sie können aber auch Ihren eigenen Spediteur beauftragen.
+Q: Eignet sich das Lager auch für österreichische Unternehmen?
+A: Ja. Die Abläufe gelten für Lieferungen aus der gesamten EU, also auch für Hersteller, Marken und Amazon-Händler aus Österreich, die ohne eigenes Lager an Kunden in UK verkaufen.
+Q: Kann ich meine Anfrage auf Deutsch stellen?
+A: Ja, das Formular nimmt Ihre Beschreibung auf Deutsch an. Unser Team in Großbritannien arbeitet auf Englisch und Türkisch, daher erstellen wir das Angebot und die weitere Kommunikation auf Englisch.
+
+## UK-Lagerpartner für Spediteure
+URL: https://www.londradepo.com/de/lagerpartner-fuer-spediteure-uk
+English version: https://www.londradepo.com/en/uk-warehouse-partner-for-freight-forwarders
+Summary: Lagerpartner in Essex für europäische Spediteure und Distributoren: Wareneingang FCL, LCL und Sammelgut, Lagerung, Cross-Docking. Ab 3,50 £ zzgl. MwSt.
+Short answer: Europäische Spediteure, Sammelgutoperateure und Distributoren, die Ware nach Großbritannien bringen, etwa über Rotterdam oder Antwerpen, können LondraDepo in Rayleigh, Essex, als Lagerpartner auf britischer Seite nutzen. Wir übernehmen den Wareneingang von FCL, LCL und Sammelgut, entladen, zählen und prüfen die Ware, lagern sie kurzfristig oder dauerhaft, führen Cross-Docking durch und übergeben sie zur Zustellung im Vereinigten Königreich; der Bestand wird in Mintsoft WMS erfasst. Sie bleiben der Hauptansprechpartner Ihres Kunden, wir arbeiten nach Ihren Anweisungen. Die Palettenlagerung beginnt bei 3,50 £ zzgl. MwSt. pro Palette und Woche, ohne feste Mindestmenge.
+Q: Bleiben wir als Spediteur der Hauptansprechpartner unseres Kunden?
+A: Ja. Sie bleiben der Hauptansprechpartner Ihres Kunden, und wir arbeiten nach Ihren Anweisungen, vom Wareneingang über die Lagerung bis zur Übergabe zur Zustellung im Vereinigten Königreich.
+Q: Nehmen Sie Sammelgutsendungen mit Ware mehrerer unserer Kunden an?
+A: Ja. Wir nehmen Sammelgut an, zählen und prüfen jede Position gegen Ihre Packliste und führen die Ware jedes Kunden getrennt in Mintsoft WMS.
+Q: Bieten Sie Spediteuren Provisionen, White-Label-Modelle oder Exklusivität an?
+A: Nein. Wir vereinbaren Handling- und Lagerpreise sowie Servicelevels schriftlich mit Ihnen; Provisionen, Umsatzbeteiligungen oder Exklusivität bieten wir nicht an.
+Q: Wer verzollt die Sendung eines Spediteurs in Großbritannien, bevor sie bei Ihnen ankommt?
+A: Das wird je Sendung festgelegt. Ihr eigener Zollagent kann die Sendung abfertigen, oder Arca Trade Group, BIFA-Mitglied und Betreiber von LondraDepo, gibt die britische Zollanmeldung ab.
+Q: Können Sie eine Sendung im Cross-Docking abwickeln, statt sie einzulagern?
+A: Ja. Wir nehmen die Sendung an, prüfen und teilen sie und übergeben sie ohne längere Lagerung zur Zustellung an die von Ihnen genannten Empfänger im Vereinigten Königreich.
+Q: Welche Berichte erhalten wir, um sie an unseren Kunden weiterzugeben?
+A: Sie erhalten Eingangsberichte, Bestandsübersichten und Ausgangsnachweise aus Mintsoft WMS, die Sie in Ihrem eigenen Format an Ihren Kunden weitergeben können.
+
+## Kontakt: LondraDepo Lager in Essex
+URL: https://www.londradepo.com/de/kontakt
+English version: https://www.londradepo.com/en/contact
+Summary: Kontaktieren Sie LondraDepo: Angebotsformular, WhatsApp +44 7554 195190, E-Mail support@londradepo.com und Lageradresse in Rayleigh, Essex SS6 7FY.
+Short answer: Am schnellsten erreichen Sie uns per WhatsApp oder Telefon unter +44 7554 195190. Sie können auch eine Angebotsanfrage über das Formular senden, an support@londradepo.com schreiben oder das Büro von Arca Trade Group zwischen 07:45 und 17:30 Uhr britischer Zeit anrufen. Unser Team arbeitet auf Englisch und Türkisch; Anfragen können Sie auf Deutsch oder Englisch schreiben.
+Q: Wie erhalte ich am schnellsten eine Antwort?
+A: Am schnellsten antworten wir per WhatsApp unter +44 7554 195190. Ein detailliertes Angebot erstellen wir, sobald das Formular mit Produktbeschreibung und Volumen bei uns eingegangen ist.
+Q: Zu welchen Zeiten ist das Büro erreichbar?
+A: Das Büro von Arca Trade Group ist von 07:45 bis 17:30 Uhr britischer Zeit unter +44 1268 203 283 erreichbar. Nachrichten außerhalb dieser Zeiten beantworten wir nach Büroöffnung.
+Q: Kann ich das Lager besichtigen?
+A: Ja, nach vorheriger Terminabsprache. Das Lager befindet sich in Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY in Großbritannien.
+Q: In welcher Sprache kann ich schreiben?
+A: Sie können auf Deutsch oder Englisch schreiben. Unser Team in Großbritannien arbeitet auf Englisch und Türkisch, daher erstellen wir das Angebot auf Englisch.
+Q: Welche Angaben brauchen Sie für ein erstes Angebot?
+A: Hilfreich sind Warenart, geschätzte Paletten- oder Kartonzahl, monatliches Auftragsvolumen, Vertriebskanäle und die gewünschten Leistungen wie Lagerung, Fulfillment oder Distribution.
+
+## Datenschutzerklärung
+URL: https://www.londradepo.com/de/datenschutz
+English version: https://www.londradepo.com/en/privacy-policy
+Summary: Wie LondraDepo.com (Arca Trade Group Ltd) personenbezogene Daten nach UK GDPR und PECR erhebt, nutzt und schützt und wie Sie Ihre Rechte wahrnehmen.
+Short answer: Diese Datenschutzerklärung erläutert, wie LondraDepo.com, betrieben von der Arca Trade Group Ltd, personenbezogene Daten erhebt und verwendet, wenn Sie unsere Website besuchen oder mit uns Kontakt aufnehmen, und welche Rechte Ihnen nach UK GDPR zustehen. Rechtlich verbindlich ist die englische Fassung (Privacy Policy, /en/privacy-policy); diese deutsche Fassung dient nur der Information.
+
+## Cookie-Richtlinie
+URL: https://www.londradepo.com/de/cookie-richtlinie
+English version: https://www.londradepo.com/en/cookie-policy
+Summary: Welche Cookies LondraDepo.com verwendet (notwendig, Analyse, Marketing), wie Ihre Einwilligung gespeichert wird und wie Sie Ihre Einstellungen ändern.
+Short answer: Diese Richtlinie erklärt, was Cookies sind, welche Cookies LondraDepo.com verwendet und wie Sie Ihre Einstellungen jederzeit ändern können. Rechtlich verbindlich ist die englische Fassung (Cookie Policy, /en/cookie-policy); diese deutsche Fassung dient nur der Information. Cookies sind kleine Textdateien, die Ihr Browser beim Besuch einer Website auf Ihrem Gerät speichert. Sie dienen dazu, Ihre Einstellungen zu speichern, die Website korrekt funktionieren zu lassen und ihre Nutzung zu analysieren.
+
+## Allgemeine Geschäftsbedingungen
+URL: https://www.londradepo.com/de/agb
+English version: https://www.londradepo.com/en/terms-and-conditions
+Summary: Allgemeine Bedingungen für Lagerung, Fulfillment, Warenhandling, Zollkoordination und Distribution der Arca Trade Group Ltd unter der Marke LondraDepo.com.
+Short answer: Diese Bedingungen regeln die allgemeinen Konditionen für Lagerung, Fulfillment, Warenhandling, Koordination der Zollabfertigung und Distribution, die die Arca Trade Group Ltd unter der Marke LondraDepo.com erbringt. Rechtlich verbindlich ist die englische Fassung (Terms and Conditions, /en/terms-and-conditions); diese deutsche Fassung dient nur der Information.
+
+## Angebot anfordern: Lager in Großbritannien
+URL: https://www.londradepo.com/de/angebot-anfordern
+English version: https://www.londradepo.com/en/request-a-quote
+Summary: Angebot für Lagerung, Palettenlager, Containerentladung, Fulfillment, Amazon FBA Prep oder Distribution in UK. Paletten ab 3,50 £ zzgl. MwSt. pro Woche.
+Short answer: Beschreiben Sie, was Sie in Großbritannien lagern, versenden oder verteilen möchten. LondraDepo betreibt ein Lager in Unit 19 Arterial Park, Rayleigh, Essex. Die Lagerung einer Standardpalette beginnt bei 3,50 £ zzgl. MwSt. pro Woche; Wareneingang, Handling, Fulfillment und Zustellung kalkulieren wir für Ihren konkreten Ablauf.
+Q: Ist das Angebot kostenlos?
+A: Ja. Das Angebot von LondraDepo ist kostenlos und unverbindlich. Füllen Sie das Formular mit Angaben zu Produkt, Mengen und Leistungen aus, und unser Team antwortet per E-Mail mit einem Angebot.
+Q: Welche Angaben brauchen Sie für ein Angebot?
+A: Produktart und Abmessungen, geschätzte Anzahl an Paletten oder Kartons, Aufträge pro Monat, Vertriebskanäle und das Versandland. Je mehr Details Sie angeben, desto genauer wird das Angebot.
+Q: Gibt es eine Mindestmenge für ein Angebot?
+A: Es gibt keine feste Mindestmenge. Sie können mit einer einzelnen Testpalette beginnen, den Ablauf im Lager kennenlernen und die Menge anschließend schrittweise erhöhen.
+Q: Kann das Angebot auch Transport und Zollabfertigung umfassen?
+A: Ja. Die Arca Trade Group, Betreiber von LondraDepo und BIFA-Mitglied, kann internationalen Transport per See, Luft, Straße oder Schiene und die britische Zollabfertigung zusammen mit dem Lager anbieten. Sie können auch nur die Lagerung anfragen.
+Q: In welcher Sprache kann ich das Formular ausfüllen?
+A: Sie können Ihre Anfrage auf Deutsch oder Englisch schreiben. Unser Team in Großbritannien arbeitet auf Englisch und Türkisch, daher erstellen wir das Angebot auf Englisch.

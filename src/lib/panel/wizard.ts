@@ -521,6 +521,48 @@ export function valueScore(l: Record<Col, string>, seg: Segment | undefined): nu
 
 export const tierOf = (p: number): Tier => (p >= 75 ? "A" : p >= 60 ? "B" : "C");
 
+/**
+ * Company Opportunity Score (0–100): an explainable checklist of what makes an ideal LondraDepo customer,
+ * shown next to the priority score. Unknown answers score 0 (not a penalty), so the score rises as research fills in.
+ */
+export const OPPORTUNITY_CRITERIA = [
+  { id: "uk_sales", label: "İngiltere'ye aktif satış yapıyor", points: 25 },
+  { id: "no_uk_wh", label: "İngiltere'de kendi deposu yok", points: 20 },
+  { id: "regular_flow", label: "Düzenli palet / koli sevkiyatı", points: 15 },
+  { id: "online", label: "Amazon UK, Shopify veya DTC satışı", points: 10 },
+  { id: "storable", label: "Gıda dışı, standart depolanabilir ürün", points: 10 },
+  { id: "growth", label: "İngiltere'ye giriş veya büyüme planı", points: 10 },
+  { id: "ports", label: "Essex limanlarına uygun rota / ülke", points: 10 },
+] as const;
+export type OpportunityId = (typeof OPPORTUNITY_CRITERIA)[number]["id"];
+
+export const opportunityGrade = (score: number): Tier => (score >= 75 ? "A" : score >= 55 ? "B" : "C");
+
+/** Score from a set of met criteria (used by the panel's manual calculator too). */
+export function opportunityFrom(met: Iterable<OpportunityId>): { score: number; grade: Tier } {
+  const ids = new Set(met);
+  const score = OPPORTUNITY_CRITERIA.reduce((a, c) => a + (ids.has(c.id) ? c.points : 0), 0);
+  return { score, grade: opportunityGrade(score) };
+}
+
+const PORT_COUNTRIES = /netherlands|hollanda|nederland|belgium|belçika|belcika|germany|almanya|deutschland|poland|polonya|polska|france|fransa|türkiye|turkey|turkiye/i;
+const FOOD = /food|gıda|gida|chilled|frozen|soğuk|dondurulmuş|beverage|içecek|meat|dairy/i;
+const GROWTH = /expan|launch|enter|entry|growth|grow|new market|büyü|giriş|açılış|genişle|yeni pazar/i;
+
+/** Which criteria a researched lead meets, from the wizard columns. */
+export function opportunityScore(l: Record<Col, string>): { score: number; grade: Tier; met: OpportunityId[] } {
+  const met: OpportunityId[] = [];
+  const ukEvidence = l.uk_evidence.trim() && !/^(unknown|no|yok|-)$/i.test(l.uk_evidence.trim());
+  if (ukEvidence) met.push("uk_sales");
+  if (no(l.uk_warehouse)) met.push("no_uk_wh");
+  if (yes(l.palletisable) || (low(l.est_pallets) ?? 0) > 0 || (low(l.containers_per_year) ?? 0) > 0) met.push("regular_flow");
+  if (yes(l.amazon_uk) || isUrl(l.ecommerce_url)) met.push("online");
+  if (yes(l.palletisable) && !FOOD.test(`${l.sector} ${l.products}`)) met.push("storable");
+  if (GROWTH.test(`${l.reason} ${l.uk_evidence}`)) met.push("growth");
+  if (PORT_COUNTRIES.test(l.country) || /london gateway|tilbury|felixstowe/i.test(`${l.volume_evidence} ${l.reason}`)) met.push("ports");
+  return { ...opportunityFrom(met), met };
+}
+
 /** Conservative monthly storage revenue: lower bound of the pallet estimate × £15.17 (storage only, ex VAT). */
 export const storageRevenue = (l: Pick<Lead, "est_pallets">): number | null => {
   const p = low(l.est_pallets);
@@ -630,8 +672,8 @@ const TPL: Record<Exclude<Group, "other">, { tr: [string, string, string]; en: [
     en: ["Pallet stock and distribution in the UK", " supplies [packaging / parts] to UK customers.", "We store your products on pallets in the UK and deliver regularly from local stock to your customers, dealers and workshops."],
   },
   forwarder: {
-    tr: ["İngiltere'de depo partneri: Essex", "'in İngiltere'ye düzenli yük taşıdığını gördük.", "Müşterilerinizin İngiltere'ye gelen yükleri için boşaltma, depolama ve İngiltere içi dağıtımda Essex'te yerel depo partneriniz olabiliriz. London Gateway'e yaklaşık 13 mil, Tilbury'ye 16 mil uzaktayız."],
-    en: ["A warehouse partner in Essex for your UK loads", " moves freight into the UK.", "We can be your local warehouse partner in Essex for your customers' UK loads: unloading, storage and UK distribution. We are about 13 miles from London Gateway and 16 miles from Tilbury."],
+    tr: ["İngiltere'de depo partneri: Essex", "'in İngiltere'ye düzenli yük taşıdığını gördük.", "Müşterilerinizin İngiltere'ye gelen yükleri için boşaltma, depolama ve İngiltere içi dağıtımda Essex'te yerel depo partneriniz olabiliriz. London Gateway'e yaklaşık 13 mil, Tilbury'ye 16 mil uzaktayız. Ayrıntılar: https://www.londradepo.com/nakliyeciler-icin-ingiltere-depo-ortakligi"],
+    en: ["A warehouse partner in Essex for your UK loads", " moves freight into the UK.", "We can be your local warehouse partner in Essex for your customers' UK loads: unloading, storage and UK distribution. We are about 13 miles from London Gateway and 16 miles from Tilbury. How it works: https://www.londradepo.com/en/uk-warehouse-partner-for-freight-forwarders"],
   },
 };
 

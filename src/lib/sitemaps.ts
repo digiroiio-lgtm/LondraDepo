@@ -1,5 +1,6 @@
 import { EN_PAGES } from "@/content/en";
 import { PL_PAGES } from "@/content/pl";
+import { DE_PAGES } from "@/content/de";
 import type { PageKind } from "@/content/en/types";
 import { enAlternates, localeAlternates, trAlternates, type Alternates } from "@/lib/i18n";
 import { SITE_URL } from "@/lib/site";
@@ -20,6 +21,7 @@ const TR: ReadonlyArray<readonly [string, Freq, number]> = [
   ["/ingiltereye-toplu-gonderim-ve-dagitim", "monthly", 0.9],
   ["/ingiltere-numune-dagitimi", "monthly", 0.8],
   ["/kurumsal-hediye-ve-promosyon-dagitimi", "monthly", 0.8],
+  ["/nakliyeciler-icin-ingiltere-depo-ortakligi", "monthly", 0.8],
   ["/londra-depo", "monthly", 0.9],
   ["/ingiltere-e-ticaret-lojistigi", "monthly", 0.9],
   ["/siparis-toplama-paketleme", "monthly", 0.9],
@@ -136,6 +138,20 @@ export function plEntries(): Entry[] {
   ];
 }
 
+/** German pages plus the standalone quote page. */
+export function deEntries(): Entry[] {
+  return [
+    ...DE_PAGES.map((p) => {
+      const [changefreq, priority] = EN_PRIORITY[p.kind];
+      return { path: p.slug, changefreq, priority, alternates: localeAlternates(p.slug), lastmod: p.modified };
+    }),
+    { path: "/de/angebot-anfordern", changefreq: "monthly" as Freq, priority: 0.8, alternates: localeAlternates("/de/angebot-anfordern"), lastmod: DE_QUOTE_MODIFIED },
+  ];
+}
+
+/** Content date of the German quote page (src/app/(de)/de/angebot-anfordern). */
+const DE_QUOTE_MODIFIED = "2026-11-28";
+
 const esc = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
 export function urlset(entries: Entry[]): string {
@@ -157,8 +173,8 @@ export function urlset(entries: Entry[]): string {
   ].join("\n");
 }
 
-export const CHILD_SITEMAPS = ["/sitemap-tr.xml", "/sitemap-en.xml", "/sitemap-pl.xml"];
-const CHILD_ENTRIES: Record<string, () => Entry[]> = { "/sitemap-tr.xml": trEntries, "/sitemap-en.xml": enEntries, "/sitemap-pl.xml": plEntries };
+export const CHILD_SITEMAPS = ["/sitemap-tr.xml", "/sitemap-en.xml", "/sitemap-pl.xml", "/sitemap-de.xml"];
+const CHILD_ENTRIES: Record<string, () => Entry[]> = { "/sitemap-tr.xml": trEntries, "/sitemap-en.xml": enEntries, "/sitemap-pl.xml": plEntries, "/sitemap-de.xml": deEntries };
 
 export function sitemapIndex(): string {
   return [

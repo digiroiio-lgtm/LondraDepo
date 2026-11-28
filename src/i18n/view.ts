@@ -4,7 +4,7 @@ import type { Locale } from "@/lib/locales";
  * Texts of the content-page template (EnPageView) for the languages rendered with it.
  * TR pages use their own templates, so only the template languages are listed.
  */
-export type ViewLocale = Extract<Locale, "en" | "pl">;
+export type ViewLocale = Extract<Locale, "en" | "pl" | "de">;
 
 export type ViewStrings = {
   dateLocale: string;
@@ -119,5 +119,44 @@ export const VIEW: Record<ViewLocale, ViewStrings> = {
       addressTitle: "Adres magazynu", addressText: "Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY · Otwórz w Mapach Google",
     },
     sourceLabel: "Źródło",
+  },
+  de: {
+    dateLocale: "de-DE",
+    home: "Startseite",
+    lastUpdated: "Zuletzt aktualisiert:",
+    atAGlance: "Auf einen Blick",
+    thisPage: "(diese Seite)",
+    bestIf: "Ideal, wenn:",
+    byline: () => "Autor: Sertaç Yılmaz · Geprüft von: Yusuf Barış, Operations Manager · Aktualisiert",
+    readMins: "Min. Lesezeit",
+    whatsapp: "Auf WhatsApp schreiben",
+    whatsappLong: "Schreiben Sie uns auf WhatsApp",
+    book: "15-minütiges Gespräch buchen",
+    bookShort: "Gespräch buchen (15 Min.)",
+    ctaDefault: { h2: "Angebot für Lagerung in Großbritannien anfordern", text: "Beschreiben Sie Produkt, Mengen und Vertriebskanäle, und wir erstellen ein auf Ihr Unternehmen zugeschnittenes Angebot." },
+    inlineIntro: "Dauert etwa zwei Minuten. Wir antworten per E-Mail mit einem auf Sie zugeschnittenen Angebot.",
+    trust: [
+      "Lager: Unit 19 Arterial Park, Rayleigh, Essex SS6 7FY",
+      "Betreiber: Arca Trade Group Ltd (Company No. 13247691), BIFA-Mitglied",
+      "Lagerung ab 3,50 £ zzgl. MwSt. pro Palette und Woche",
+      "Betreut auf Englisch und Türkisch",
+    ],
+    preferTalk: "Lieber zuerst sprechen?",
+    or: "oder",
+    messageWhatsapp: "schreiben Sie uns auf WhatsApp",
+    midPage: "Beschreiben Sie Produkt, Mengen und Vertriebskanäle. Wir erstellen ein auf Ihr Unternehmen zugeschnittenes Angebot.",
+    faq: "Häufig gestellte Fragen",
+    related: "Verwandte Seiten",
+    heroAlt: "Lager und Fulfillment-Center von LondraDepo in Rayleigh, Essex (Vereinigtes Königreich)",
+    defaultQuote: "Angebot für Lagerung anfordern",
+    contact: {
+      quoteTitle: "Angebot online anfordern", quoteText: "Kurzes Formular: Leistung, Produkt und Mengen",
+      whatsappText: "+44 7554 195190 · schnellste Antwort",
+      phoneTitle: "Telefon", phoneText: "+44 7554 195190 · auf Englisch",
+      emailTitle: "E-Mail", emailText: "support@londradepo.com · Antwort während der britischen Bürozeiten",
+      officeTitle: "Büro der Arca Trade Group", officeText: "+44 1268 203 283 · Sales@arcatrade.co.uk · 07:45–17:30 Uhr britischer Zeit",
+      addressTitle: "Lageradresse", addressText: "Unit 19 Arterial Park, Arterial Road, Rayleigh, Essex SS6 7FY · In Google Maps öffnen",
+    },
+    sourceLabel: "Quelle",
   },
 };

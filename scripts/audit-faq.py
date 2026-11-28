@@ -7,9 +7,9 @@
 import json, os, re, sys, urllib.request, collections
 
 B = os.environ.get("SEO_BASE_URL", "http://localhost:3100").rstrip("/")
-LEGAL = re.compile(r"/(en/)?(privacy-policy|cookie-policy|terms-and-conditions|sozlesme-kosullari)$|^/pl/(polityka-prywatnosci|polityka-cookies|regulamin)$")
+LEGAL = re.compile(r"/(en/)?(privacy-policy|cookie-policy|terms-and-conditions|sozlesme-kosullari)$|^/pl/(polityka-prywatnosci|polityka-cookies|regulamin)$|^/de/(datenschutz|cookie-richtlinie|agb)$")
 CASE = re.compile(r"/case-studies/.+")
-SMALL = re.compile(r"^/(en/)?(about-us|contact|hakkimizda|iletisim)$|^/pl/kontakt$")
+SMALL = re.compile(r"^/(en/)?(about-us|contact|hakkimizda|iletisim)$|^/pl/kontakt$|^/de/kontakt$")
 
 def target(path):
     if LEGAL.search(path): return 0
@@ -18,7 +18,7 @@ def target(path):
     return 5
 
 locs = []
-for sm in ["/sitemap-tr.xml", "/sitemap-en.xml", "/sitemap-pl.xml"]:
+for sm in ["/sitemap-tr.xml", "/sitemap-en.xml", "/sitemap-pl.xml", "/sitemap-de.xml"]:
     locs += re.findall(r"<loc>https://www\.londradepo\.com([^<]*)</loc>", urllib.request.urlopen(B + sm).read().decode())
 
 below, short, multi = [], [], []

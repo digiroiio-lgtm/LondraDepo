@@ -16,6 +16,10 @@ const TR: ReadonlyArray<readonly [string, Freq, number]> = [
   ["/iletisim", "monthly", 0.8],
   ["/ingiltere-depo", "monthly", 0.9],
   ["/ingiltere-3pl", "monthly", 0.9],
+  ["/ingiltere-stoktan-planli-teslimat", "monthly", 0.9],
+  ["/ingiltereye-toplu-gonderim-ve-dagitim", "monthly", 0.9],
+  ["/ingiltere-numune-dagitimi", "monthly", 0.8],
+  ["/kurumsal-hediye-ve-promosyon-dagitimi", "monthly", 0.8],
   ["/londra-depo", "monthly", 0.9],
   ["/ingiltere-e-ticaret-lojistigi", "monthly", 0.9],
   ["/siparis-toplama-paketleme", "monthly", 0.9],
@@ -95,15 +99,27 @@ const EN_ONLY: ReadonlyArray<readonly [string, Freq, number]> = [["/en/request-a
 /** All English pages were published on this date; later edits update content dates. */
 const EN_PUBLISHED = "2026-11-10";
 
+/** Latest of several ISO dates (undefined entries ignored). */
+function latest(...dates: (string | undefined)[]): string | undefined {
+  return dates.filter((d): d is string => Boolean(d)).sort().at(-1);
+}
+
 export function trEntries(): Entry[] {
-  return TR.map(([path, changefreq, priority]) => ({ path, changefreq, priority, alternates: trAlternates(path), lastmod: TR_ARTICLES[path]?.modified }));
+  return TR.map(([path, changefreq, priority]) => ({
+    path,
+    changefreq,
+    priority,
+    alternates: trAlternates(path),
+    // Only pages that publish a maintained dateModified (articles) get a lastmod; scripts/verify-seo.py checks they match.
+    lastmod: TR_ARTICLES[path]?.modified,
+  }));
 }
 
 export function enEntries(): Entry[] {
   return [
     ...EN_PAGES.map((p) => {
       const [changefreq, priority] = EN_PRIORITY[p.kind];
-      return { path: p.slug, changefreq, priority, alternates: enAlternates(p.slug), lastmod: p.article?.modified ?? EN_PUBLISHED };
+      return { path: p.slug, changefreq, priority, alternates: enAlternates(p.slug), lastmod: latest(p.article?.modified, p.modified, EN_PUBLISHED) };
     }),
     ...EN_ONLY.map(([path, changefreq, priority]) => ({ path, changefreq, priority, alternates: enAlternates(path), lastmod: EN_PUBLISHED })),
   ];
@@ -142,12 +158,16 @@ export function urlset(entries: Entry[]): string {
 }
 
 export const CHILD_SITEMAPS = ["/sitemap-tr.xml", "/sitemap-en.xml", "/sitemap-pl.xml"];
+const CHILD_ENTRIES: Record<string, () => Entry[]> = { "/sitemap-tr.xml": trEntries, "/sitemap-en.xml": enEntries, "/sitemap-pl.xml": plEntries };
 
 export function sitemapIndex(): string {
   return [
     '<?xml version="1.0" encoding="UTF-8"?>',
     '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
-    ...CHILD_SITEMAPS.map((p) => `  <sitemap>\n    <loc>${SITE_URL}${p}</loc>\n  </sitemap>`),
+    ...CHILD_SITEMAPS.map((p) => {
+      const mod = latest(...(CHILD_ENTRIES[p]?.() ?? []).map((e) => e.lastmod));
+      return `  <sitemap>\n    <loc>${SITE_URL}${p}</loc>${mod ? `\n    <lastmod>${mod}</lastmod>` : ""}\n  </sitemap>`;
+    }),
     "</sitemapindex>",
     "",
   ].join("\n");

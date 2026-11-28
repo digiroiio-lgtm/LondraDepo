@@ -49,6 +49,7 @@ const ORDER_STEPS = [
 export const servicePages: EnPage[] = [
   {
     slug: "/en/uk-warehousing",
+    modified: "2026-11-28",
     tr: "/ingiltere-depo",
     kind: "service",
     serviceType: "Warehousing",
@@ -240,7 +241,7 @@ export const servicePages: EnPage[] = [
     modified: "2026-11-17",
     title: "Shopify Fulfillment UK: Shopify Fulfilment in Essex",
     description:
-      "Shopify fulfillment UK: we store stock in Essex, pick, pack and ship Shopify orders to UK customers and handle returns. Storage from £3.50 + VAT per pallet a week.",
+      "Shopify fulfillment UK: we store stock in Essex, pick, pack and ship Shopify orders to UK customers and handle returns. Pallets from £3.50 + VAT a week.",
     label: "Shopify Fulfilment UK",
     eyebrow: "Shopify fulfillment · UK warehouse",
     h1: "Shopify Fulfilment UK: Fulfillment for Shopify Stores",
@@ -394,7 +395,7 @@ export const servicePages: EnPage[] = [
     serviceType: "Amazon FBM fulfilment",
     title: "Amazon FBM Fulfilment UK: Essex Seller Warehouse",
     description:
-      "UK warehouse for Amazon sellers: FBM pick, pack and dispatch plus FBA prep from Essex, near London and Amazon LCY2 Tilbury. No fixed minimum; start with one pallet.",
+      "UK warehouse for Amazon sellers: FBM pick, pack and dispatch plus FBA prep from Essex, near Amazon LCY2 Tilbury. No fixed minimum; start with one pallet.",
     label: "Amazon Seller Warehousing",
     h1: "Amazon FBM Fulfilment: UK Warehouse for Amazon Sellers",
     lead:
@@ -460,12 +461,12 @@ export const servicePages: EnPage[] = [
   {
     slug: "/en/uk-fulfilment",
     tr: "/ingiltere-fulfillment",
-    modified: "2026-11-10",
+    modified: "2026-11-28",
     kind: "service",
     serviceType: "Fulfilment",
     title: "Fulfilment Services UK for Importing Brands",
     description:
-      "UK fulfilment services from Essex: order picking, branded packing, Amazon FBA prep, Shopify and Etsy order handling, returns management and regular stock reporting.",
+      "Fulfilment services UK from Essex: order picking, branded packing, Amazon FBA prep, Shopify and Etsy orders, returns management and regular stock reports.",
     label: "UK Fulfilment",
     h1: "Fulfilment Services UK for Importing Brands",
     lead:
@@ -496,10 +497,11 @@ export const servicePages: EnPage[] = [
       { q: "Is there a minimum stock level for fulfilment?", a: "There is no fixed minimum stock requirement. We offer flexible solutions based on your needs." },
       { q: "How is UK fulfilment priced?", a: "Storage starts from £3.50 + VAT per pallet per week. Goods-in, pick and pack, packaging, delivery and returns are quoted for your products, monthly orders and average items per order." },
     ],
-    related: ["/en/3pl-uk", "/en/shopify-fulfilment-uk", "/en/blog/how-to-choose-a-uk-3pl", "/en/pallet-storage", "/en/amazon-prep-uk", "/en/uk-warehousing-benefits", "/en/blog/what-is-uk-fulfilment"],
+    related: ["/en/3pl-uk", "/en/shopify-fulfilment-uk", "/en/blog/how-to-choose-a-uk-3pl", "/en/pallet-storage", "/en/amazon-prep-uk", "/en/uk-warehousing-benefits", "/en/blog/what-is-uk-fulfilment", "/en/corporate-gift-fulfilment-uk"],
   },
   {
     slug: "/en/pallet-storage",
+    modified: "2026-11-28",
     tr: "/palet-depolama",
     kind: "service",
     serviceType: "Pallet storage",
@@ -547,14 +549,14 @@ export const servicePages: EnPage[] = [
       { q: "Can you store pallets short term?", a: "Yes. Pallet storage is charged weekly from £3.50 + VAT per pallet, so you can store for a few weeks or long term. Short stays such as cross-dock before delivery are also possible." },
       { q: "What does the weekly pallet storage price include?", a: "The rate from £3.50 + VAT per standard pallet per week covers storage only. Goods-in, container unloading, handling, pick and pack and delivery are quoted separately, based on your products and volumes." },
     ],
-    related: ["/en/uk-warehousing-pricing", "/en/container-unloading", "/en/blog/uk-pallet-storage-costs", "/en/uk-fulfilment", "/en/essex-warehouse", "/en/industries/food-packaging", "/en/blog/uk-warehousing-guide"],
+    related: ["/en/uk-warehousing-pricing", "/en/container-unloading", "/en/blog/uk-pallet-storage-costs", "/en/uk-fulfilment", "/en/essex-warehouse", "/en/industries/food-packaging", "/en/blog/uk-warehousing-guide", "/en/call-off-stock-uk"],
   },
   {
     slug: "/en/amazon-prep-uk",
     tr: "/amazon-prep-uk",
     kind: "service",
     serviceType: "Amazon FBA prep",
-    modified: "2026-11-10",
+    modified: "2026-11-28",
     title: "Amazon Prep Centre UK: FBA Prep in Essex, No Minimum",
     description:
       "Amazon FBA prep in Essex: FNSKU labelling, checks, packing and parcel or pallet delivery to Amazon UK, 16 miles from Amazon LCY2 Tilbury. No fixed minimum.",
@@ -626,7 +628,7 @@ export const servicePages: EnPage[] = [
     serviceType: "Storage",
     title: "UK Storage Services: Goods-in and Stock Control",
     description:
-      "UK storage services: pallet and carton goods-in, real-time stock tracking in Mintsoft WMS, FCL container unloading, and short or long-term warehouse capacity in Essex.",
+      "UK storage services: pallet and carton goods-in, real-time stock in Mintsoft WMS, FCL container unloading and short or long-term space in Essex.",
     label: "Storage Services",
     h1: "UK Storage Services: Goods-in, Stock Control and Capacity",
     lead:
@@ -667,7 +669,7 @@ export const servicePages: EnPage[] = [
     serviceType: "Customs clearance",
     title: "UK Customs Clearance for Imports",
     description:
-      "UK import customs clearance through Arca Trade Group's customs team, with commodity code advice, arrival coordination and direct handover into our Essex warehouse.",
+      "UK import customs clearance by Arca Trade Group's customs team: commodity code advice, arrival coordination and direct handover into our Essex warehouse.",
     label: "UK Customs Clearance",
     h1: "UK Customs Clearance for Imports",
     lead:
@@ -702,7 +704,7 @@ export const servicePages: EnPage[] = [
     serviceType: "Cargo handling",
     title: "Cargo Handling UK: Unloading, Repacking, Relabelling",
     description:
-      "UK cargo handling in Essex: vehicle and container unloading, loading, pallet and carton handling, sorting, repacking, labelling and relabelling, and shipment preparation.",
+      "UK cargo handling in Essex: container and vehicle unloading, loading, pallet and carton handling, sorting, repacking, relabelling and shipment preparation.",
     label: "Cargo Handling",
     h1: "UK Cargo Handling Services",
     lead:
@@ -731,7 +733,7 @@ export const servicePages: EnPage[] = [
       { q: "How is handling priced?", a: "Pricing depends on the type of task, the volume of goods and the scope of the service. Contact us on WhatsApp for a quote for your operation." },
       { q: "Can you relabel goods before they are sent to customers or Amazon?", a: "Yes. Relabelling, repacking and sorting by SKU are part of cargo handling at the Essex warehouse, including preparing labelled stock before it is sent to UK customers or into Amazon FBA." },
     ],
-    related: ["/en/container-unloading", "/en/uk-warehousing", "/en/pallet-storage", "/en/uk-distribution"],
+    related: ["/en/container-unloading", "/en/uk-warehousing", "/en/pallet-storage", "/en/uk-distribution", "/en/corporate-gift-fulfilment-uk", "/en/uk-sample-distribution"],
   },
   {
     slug: "/en/uk-distribution",
@@ -766,7 +768,7 @@ export const servicePages: EnPage[] = [
       { q: "How is distribution priced?", a: "Pricing depends on shipment volume, distance and service scope. Message us on WhatsApp for a bespoke quote." },
       { q: "Do you offer pallet and parcel delivery?", a: "Yes. From Essex we coordinate pallet deliveries to wholesale and trade customers and parcel deliveries to online shoppers across the UK, including regular delivery programmes for repeat B2B customers." },
     ],
-    related: ["/en/cargo-handling", "/en/uk-warehousing", "/en/essex-warehouse", "/en/industries/food-packaging", "/en/industries/automotive-parts", "/en/industries"],
+    related: ["/en/cargo-handling", "/en/uk-warehousing", "/en/essex-warehouse", "/en/industries/food-packaging", "/en/industries/automotive-parts", "/en/industries", "/en/call-off-stock-uk", "/en/bulk-shipping-uk-distribution"],
   },
   {
     slug: "/en/ecommerce-fulfilment",
@@ -804,12 +806,12 @@ export const servicePages: EnPage[] = [
       { q: "How much does ecommerce fulfilment cost?", a: "Storage starts from £3.50 + VAT per pallet per week. Pick and pack, packaging, delivery and returns are quoted per order and item, based on your products and monthly order volume." },
       { q: "Do I need my own UK company for ecommerce fulfilment?", a: "Not necessarily. Many overseas sellers hold stock in a UK warehouse and sell to UK customers with their existing company and a GB EORI number. Take tax advice on the right structure for your business." },
     ],
-    related: ["/en/3pl-uk", "/en/pick-and-pack", "/en/uk-ecommerce-logistics", "/en/shopify-fulfilment-uk", "/en/uk-warehousing-pricing", "/en/blog/how-to-choose-a-uk-3pl"],
+    related: ["/en/3pl-uk", "/en/pick-and-pack", "/en/uk-ecommerce-logistics", "/en/shopify-fulfilment-uk", "/en/uk-warehousing-pricing", "/en/blog/how-to-choose-a-uk-3pl", "/en/bulk-shipping-uk-distribution", "/en/uk-sample-distribution"],
   },
   {
     slug: "/en/amazon-fulfilment-uk",
     tr: "/amazon-fulfillment",
-    modified: "2026-11-10",
+    modified: "2026-11-28",
     kind: "service",
     serviceType: "Amazon fulfilment",
     title: "Amazon Fulfilment UK: FBA or FBM from Essex",
@@ -860,7 +862,7 @@ export const servicePages: EnPage[] = [
     serviceType: "Warehousing",
     title: "Essex Warehouse near London – Rayleigh, SS6 7FY",
     description:
-      "Our Essex warehouse in Rayleigh (SS6 7FY): about 40 minutes to east London, 20–30 minutes to Tilbury and London Gateway, FCL/LCL receiving and storage from £3.50 + VAT.",
+      "Our Essex warehouse in Rayleigh (SS6 7FY): about 40 minutes to east London, 20–30 minutes to Tilbury and London Gateway. Storage from £3.50 + VAT.",
     label: "Essex Warehouse",
     h1: "Essex Warehouse near London",
     lead:

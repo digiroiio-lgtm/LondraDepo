@@ -56,7 +56,7 @@ export const plServicesB: EnPage[] = [
       { q: "Czy fulfillment wymaga minimalnego stanu magazynowego?", a: "Nie ma stałego minimalnego stanu magazynowego. Zakres usługi i wolumen dopasowujemy do Twoich potrzeb, więc można zacząć od niewielkiego zapasu i rosnąć wraz ze sprzedażą." },
       { q: "Jak wyceniany jest fulfillment w Wielkiej Brytanii?", a: "Składowanie zaczyna się od 3,50 £ + VAT za paletę tygodniowo. Przyjęcie towaru, kompletację i pakowanie, opakowania, dostawę i zwroty wyceniamy według produktów, miesięcznej liczby zamówień i średniej liczby sztuk w zamówieniu." },
     ],
-    related: ["/pl/3pl-wielka-brytania", "/pl/fulfillment-shopify-uk", "/pl/blog/jak-wybrac-3pl-w-uk", "/pl/skladowanie-palet", "/pl/amazon-fba-prep", "/pl/zalety-magazynu-w-uk", "/pl/blog/czym-jest-fulfillment-w-uk"],
+    related: ["/pl/3pl-wielka-brytania", "/pl/fulfillment-shopify-uk", "/pl/blog/jak-wybrac-3pl-w-uk", "/pl/skladowanie-palet", "/pl/amazon-fba-prep", "/pl/zalety-magazynu-w-uk", "/pl/blog/czym-jest-fulfillment-w-uk", "/pl/fulfillment-prezentow-firmowych-uk"],
     quote: { label: "Poproś o wycenę fulfillmentu", service: "fulfilment" },
   },
   {
@@ -68,7 +68,7 @@ export const plServicesB: EnPage[] = [
     description: "Usługi magazynowe w UK: przyjęcie palet i kartonów, rozładunek kontenerów FCL, stany w Mintsoft WMS i składowanie krótko- lub długoterminowe w Essex.",
     label: "Usługi magazynowe",
     eyebrow: "Składowanie w Wielkiej Brytanii",
-    h1: "Usługi magazynowe w UK: przyjęcie towaru, kontrola stanów i elastyczna powierzchnia",
+    h1: "Usługi magazynowe w UK: przyjęcie towaru i kontrola stanów",
     lead:
       "Nasze usługi magazynowe w Wielkiej Brytanii obejmują techniczną stronę przechowywania zapasu: przyjęcie palet i kartonów, rozładunek kontenerów FCL, bieżącą ewidencję stanów w systemie Mintsoft WMS oraz elastyczną powierzchnię na krótki lub długi okres w magazynie w Rayleigh w Essex. Standardowa paleta kosztuje od 3,50 £ + VAT tygodniowo.",
     facts: [
@@ -173,7 +173,7 @@ export const plServicesB: EnPage[] = [
       { q: "Jak wyceniana jest obsługa ładunków?", a: "Cena zależy od rodzaju zadania, wolumenu towaru i zakresu usługi. Skontaktuj się z nami przez WhatsApp lub formularz, aby otrzymać wycenę dla Twojej operacji." },
       { q: "Czy możecie ponownie oznaczyć towar przed wysyłką do klientów lub Amazon?", a: "Tak. Ponowne etykietowanie, przepakowanie i sortowanie według SKU należą do obsługi ładunków w magazynie w Essex, także przy przygotowaniu towaru do wysyłki do klientów w UK lub do Amazon FBA." },
     ],
-    related: ["/pl/rozladunek-kontenerow", "/pl/magazyn-w-wielkiej-brytanii", "/pl/skladowanie-palet", "/pl/dystrybucja-uk"],
+    related: ["/pl/rozladunek-kontenerow", "/pl/magazyn-w-wielkiej-brytanii", "/pl/skladowanie-palet", "/pl/dystrybucja-uk", "/pl/fulfillment-prezentow-firmowych-uk", "/pl/dystrybucja-probek-uk"],
     quote: { label: "Poproś o wycenę obsługi ładunków", service: "repacking" },
   },
   {
@@ -209,7 +209,7 @@ export const plServicesB: EnPage[] = [
       { q: "Jak wyceniana jest dystrybucja w UK?", a: "Cena zależy od wolumenu przesyłki, odległości i zakresu usługi. Napisz do nas przez WhatsApp lub formularz, a przygotujemy indywidualną wycenę dystrybucji." },
       { q: "Czy oferujecie dostawy paletowe i paczkowe?", a: "Tak. Z Essex koordynujemy dostawy paletowe do hurtowni i klientów branżowych oraz paczki do klientów sklepów internetowych w całej Wielkiej Brytanii, także regularne dostawy dla stałych klientów B2B." },
     ],
-    related: ["/pl/obsluga-ladunkow", "/pl/magazyn-w-wielkiej-brytanii", "/pl/magazyn-essex", "/pl/branze/zywnosc-i-opakowania", "/pl/branze/czesci-samochodowe", "/pl/branze"],
+    related: ["/pl/obsluga-ladunkow", "/pl/magazyn-w-wielkiej-brytanii", "/pl/magazyn-essex", "/pl/branze/zywnosc-i-opakowania", "/pl/branze/czesci-samochodowe", "/pl/branze", "/pl/zapasy-buforowe-i-dostawy-uk", "/pl/wysylka-zbiorcza-i-dystrybucja-uk"],
     quote: { label: "Poproś o wycenę dystrybucji", service: "distribution" },
   },
   {

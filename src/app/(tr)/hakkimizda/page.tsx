@@ -11,6 +11,7 @@ import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 
 import { SITE_URL } from "@/lib/site";
 import { trAlternates } from "@/lib/i18n";
+import QuoteForm from "@/components/QuoteForm";
 const PAGE_URL = `${SITE_URL}/hakkimizda`;
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20depo%20hizmeti%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.";
 
@@ -218,6 +219,7 @@ export default function HakkimizdaPage() {
         />
         <PageFaq faqs={faqs} />
         <RelatedLinks links={[{ href: "/essex-depo", label: "Essex depomuz" }, { href: "/case-studies", label: "Vaka çalışmaları" }, { href: "/sektorler", label: "Hizmet verdiğimiz sektörler" }, { href: "/turk-sirketleri-icin-ingiltere-depo", label: "Türk şirketleri için İngiltere depo" }, { href: "/ingiltere-depo-fiyatlari", label: "Fiyatlar" }, { href: "/teklif-al", label: "Teklif al", note: "Size özel fiyat ve plan" }]} />
+        <QuoteForm formId="tr_inline_quote" heading="LondraDepo'dan Teklif Alın" intro="Ürün türünüzü, yaklaşık palet veya koli sayınızı ve ihtiyacınız olan hizmetleri yazın; ekibimiz size özel teklif hazırlasın. Standart palet depolama haftalık £3,50 + KDV'den başlar." presetServices={["Depolama"]} />
       </main>
       <Footer />
       <StickyWhatsappCta />

@@ -21,7 +21,7 @@ const TEL = "tel:+447554195190";
 export const metadata: Metadata = {
   title: "İngiltere Depo: Essex'te Palet £3,50/Hafta | LondraDepo",
   description:
-    "İngiltere depo hizmeti: Rayleigh, Essex'te mal kabul, palet ve koli depolama, Mintsoft WMS, pick & pack ve UK dağıtım. Palet haftalık £3,50 + KDV'den. Türkçe destek.",
+    "İngiltere depo hizmeti: Essex'te mal kabul, palet ve koli depolama, Mintsoft WMS, pick & pack ve UK dağıtım. Palet haftalık £3,50 + KDV'den. Türkçe destek.",
   keywords: [
     "ingiltere depo",
     "ingiltere depo hizmeti",
@@ -477,7 +477,7 @@ export default function IngiltereDepoPage() {
         <section className="py-16 px-4 bg-white">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-2xl font-extrabold text-[#0b2545] mb-8 text-center">
-              Sık Sorulan Sorular
+              {"İngiltere Depo: Sık Sorulan Sorular"}
             </h2>
             <div className="space-y-4">
               {faqs.map((faq) => (

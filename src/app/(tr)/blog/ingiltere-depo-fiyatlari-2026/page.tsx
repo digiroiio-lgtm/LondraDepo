@@ -195,7 +195,7 @@ export default function DepoFiyatlariPage() {
 
               <ArticleSources path="/blog/ingiltere-depo-fiyatlari-2026" />
 
-              <h2>Sık Sorulan Sorular</h2>
+              <h2>{"İngiltere Depo Fiyatları 2026: Sık Sorulan Sorular"}</h2>
 
               {faqs.map(({ q, a }) => (
                 <div key={q}>

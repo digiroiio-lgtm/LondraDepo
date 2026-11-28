@@ -171,7 +171,7 @@ export default function DepoRehberiPage() {
 
               <ArticleSources path="/blog/ingiltere-depo-rehberi" />
 
-              <h2>Sık Sorulan Sorular</h2>
+              <h2>{"İngiltere Depo Rehberi: Sık Sorulan Sorular"}</h2>
               {faqs.map((f) => (
                 <div key={f.q}>
                   <h3>{f.q}</h3>

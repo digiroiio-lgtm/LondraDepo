@@ -44,7 +44,15 @@ export function localeOf(path: string): Locale {
   return best ?? (LOCALE_ORDER.find((l) => LOCALES[l].prefix === "") as Locale);
 }
 
-/** Open Graph locale plus every other language as og:locale:alternate. */
-export function ogLocale(l: Locale): { locale: string; alternateLocale: string[] } {
-  return { locale: LOCALES[l].og, alternateLocale: LOCALE_ORDER.filter((x) => x !== l).map((x) => LOCALES[x].og) };
+/** Default share image (src/app/opengraph-image.tsx); every page's openGraph gets it through ogLocale(). */
+export const OG_IMAGE = {
+  url: "https://www.londradepo.com/opengraph-image",
+  width: 1200,
+  height: 630,
+  alt: "LondraDepo.com: UK warehousing, fulfilment and distribution near London, Essex",
+} as const;
+
+/** Open Graph locale plus every other language as og:locale:alternate, and the default share image. */
+export function ogLocale(l: Locale): { locale: string; alternateLocale: string[]; images: (typeof OG_IMAGE)[] } {
+  return { locale: LOCALES[l].og, alternateLocale: LOCALE_ORDER.filter((x) => x !== l).map((x) => LOCALES[x].og), images: [OG_IMAGE] };
 }

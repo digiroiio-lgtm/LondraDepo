@@ -10,6 +10,7 @@ import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 
 import { SITE_URL } from "@/lib/site";
 import { trAlternates } from "@/lib/i18n";
+import QuoteForm from "@/components/QuoteForm";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20İngiltere%20e-ticaret%20lojistiği%20hakkında%20bilgi%20almak%20istiyorum.";
 const TEL = "tel:+447554195190";
 
@@ -272,7 +273,7 @@ export default function IngiltereETicaretLojistigi() {
         {/* FAQ */}
         <section className="py-16 px-4 bg-white">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl font-extrabold text-[#0b2545] mb-8">Sık Sorulan Sorular</h2>
+            <h2 className="text-2xl font-extrabold text-[#0b2545] mb-8">{"İngiltere E-Ticaret Lojistiği: Sık Sorulan Sorular"}</h2>
             <div className="space-y-4">
               {faqs.map((faq) => (
                 <div key={faq.q} className="border border-slate-200 rounded-xl p-5">
@@ -309,6 +310,7 @@ export default function IngiltereETicaretLojistigi() {
           </div>
         </section>
         <TrClusterNav path="/ingiltere-e-ticaret-lojistigi" />
+        <QuoteForm formId="tr_inline_quote" heading="E-Ticaret Lojistiği Teklifi Alın" intro="Ürün türünüzü, yaklaşık palet veya koli sayınızı ve ihtiyacınız olan hizmetleri yazın; ekibimiz size özel teklif hazırlasın. Standart palet depolama haftalık £3,50 + KDV'den başlar." presetServices={["E-Ticaret Fulfillment", "Pick & Pack"]} />
       </main>
       <Footer />
       <StickyWhatsappCta />

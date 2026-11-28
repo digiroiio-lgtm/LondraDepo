@@ -14,7 +14,7 @@ import { trAlternates } from "@/lib/i18n";
 const PATH = "/ingiltere-depo-maliyet-hesaplama";
 const TITLE = "İngiltere Palet Depolama Maliyet Hesaplama";
 const DESCRIPTION =
-  "İngiltere'de palet depolama maliyetinizi saniyeler içinde hesaplayın: palet × hafta × £3,50 + KDV. KDV dahil toplamı görün, elleçleme ve fulfillment için teklif isteyin.";
+  "İngiltere palet depolama maliyetinizi hesaplayın: palet × hafta × £3,50 + KDV. KDV dahil toplamı görün, elleçleme ve fulfillment için teklif isteyin.";
 
 export const metadata: Metadata = {
   title: `${TITLE} | LondraDepo`,
@@ -111,7 +111,7 @@ export default function MaliyetHesaplamaPage() {
 
         <section className="py-12 px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl font-extrabold text-[#0b2545] mb-6">Sık Sorulan Sorular</h2>
+            <h2 className="text-2xl font-extrabold text-[#0b2545] mb-6">{"Depo Maliyet Hesaplama: Sık Sorulan Sorular"}</h2>
             <div className="space-y-4">
               {faqs.map((f) => (
                 <div key={f.q} className="border border-slate-200 rounded-xl p-5">

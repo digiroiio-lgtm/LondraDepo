@@ -33,7 +33,7 @@ const INLINE_FORM = new Set([
   "/en/shopify-fulfilment-uk", "/en/uk-fulfilment", "/en/ecommerce-fulfilment", "/en/uk-ecommerce-logistics", "/en/pick-and-pack",
   "/en/amazon-fulfilment-uk", "/en/amazon-seller-warehousing-uk", "/en/amazon-prep-uk", "/en/amazon-uk-fulfilment-centres", "/en/uk-distribution",
   "/en/london-gateway-tilbury-warehousing", "/en/felixstowe-port-warehousing", "/en/uk-warehousing-for-turkish-exporters",
-  "/en/case-studies", "/en/industries", "/en/blog",
+  "/en/case-studies", "/en/industries", "/en/blog", "/en/call-off-stock-uk", "/en/bulk-shipping-uk-distribution", "/en/uk-sample-distribution", "/en/corporate-gift-fulfilment-uk",
   "/pl/magazyn-dla-polskich-firm",
 ]);
 import HeaderEn from "@/components/HeaderEn";
@@ -61,7 +61,7 @@ const ORG = { "@id": `${SITE_URL}/#organization` };
 const EN_PUBLISHED = "2026-11-10";
 
 function modifiedOf(page: EnPage): string {
-  return page.article?.modified ?? page.modified ?? EN_PUBLISHED;
+  return [page.article?.modified, page.modified, EN_PUBLISHED].filter((d): d is string => Boolean(d)).sort().at(-1) as string;
 }
 
 /** Template language of a page (EN or PL). */
@@ -163,7 +163,7 @@ function jsonLd(page: EnPage) {
       description: page.description,
       inLanguage: LOCALES[langOf(page)].htmlLang,
       datePublished: page.article.published,
-      dateModified: page.article.modified,
+      dateModified: modifiedOf(page),
       author: { "@type": "Person", name: "Sertaç Yılmaz", jobTitle: "Co-founder, Arca Trade Group" },
       publisher: ORG,
       mainEntityOfPage: url,
@@ -362,7 +362,9 @@ export default function EnPageView({ page }: { page: EnPage }) {
   const inlineForm = INLINE_FORM.has(key);
   const cluster = clusterFor(page.slug);
   const qHref = inlineForm ? "#quote" : quoteHref(quote.service, page.slug, lang);
-  const cta = page.cta ?? v.ctaDefault;
+  // Topic-specific closing heading for services and case studies (avoids one generic H2 on dozens of pages).
+  const cta = page.cta ?? (page.kind === "service" || page.kind === "case" ? { ...v.ctaDefault, h2: quote.label } : v.ctaDefault);
+  const topical = page.kind !== "home" && page.kind !== "contact" && page.kind !== "legal";
 
   return (
     <>
@@ -387,8 +389,8 @@ export default function EnPageView({ page }: { page: EnPage }) {
             <h1 className="text-3xl sm:text-4xl font-extrabold text-[#0b2545] leading-tight mb-5 max-w-3xl">{page.h1}</h1>
             {page.article && (
               <p className="text-sm text-slate-500 mb-4">
-                {v.byline(page.article.modified, page.article.readMins)}{" "}
-                <time dateTime={page.article.modified}>{formatDate(page.article.modified, lang)}</time>
+                {v.byline(modifiedOf(page), page.article.readMins)}{" "}
+                <time dateTime={modifiedOf(page)}>{formatDate(modifiedOf(page), lang)}</time>
                 {" "}· {page.article.readMins} {v.readMins}
               </p>
             )}
@@ -562,7 +564,7 @@ export default function EnPageView({ page }: { page: EnPage }) {
 
           {page.faqs && (
             <section aria-labelledby="faq-heading" className="mb-12">
-              <h2 id="faq-heading" className="text-2xl font-bold text-[#0b2545] mb-4">{v.faq}</h2>
+              <h2 id="faq-heading" className="text-2xl font-bold text-[#0b2545] mb-4">{topical ? `${page.label}: ${v.faq}` : v.faq}</h2>
               <div className="divide-y divide-slate-200 rounded-xl border border-slate-200">
                 {page.faqs.map((f) => (
                   <div key={f.q} className="p-5">

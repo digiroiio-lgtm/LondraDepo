@@ -16,7 +16,7 @@ export const plPages: EnPage[] = [
     kind: "home",
     modified: MODIFIED,
     title: "Magazyn i fulfillment w Wielkiej Brytanii",
-    description: "Magazyn 3PL w Essex pod Londynem: składowanie palet od 3,50 £ + VAT tygodniowo, rozładunek kontenerów, fulfillment e-commerce, Amazon FBA prep i dystrybucja w UK.",
+    description: "Magazyn 3PL w Essex pod Londynem: palety od 3,50 £ + VAT tygodniowo, rozładunek kontenerów, fulfillment e-commerce, Amazon FBA prep i dystrybucja w UK.",
     label: "Strona główna",
     eyebrow: "Magazyn w Wielkiej Brytanii dla firm z Polski i UE",
     h1: "Magazyn, fulfillment i dystrybucja w Wielkiej Brytanii",
@@ -132,10 +132,10 @@ export const plPages: EnPage[] = [
     serviceType: "Logistyka kontraktowa (3PL)",
     modified: MODIFIED,
     title: "Magazyn 3PL w Wielkiej Brytanii (Essex)",
-    description: "Operator 3PL w Wielkiej Brytanii: przyjęcie towaru, składowanie palet od 3,50 £ + VAT, kompletacja zamówień, fulfillment e-commerce i B2B, Amazon FBA prep i dostawy w UK.",
+    description: "Operator 3PL w UK: przyjęcie towaru, składowanie palet od 3,50 £ + VAT, kompletacja zamówień, fulfillment e-commerce i B2B, Amazon FBA prep i dostawy.",
     label: "3PL w Wielkiej Brytanii",
     eyebrow: "Logistyka zewnętrzna w UK",
-    h1: "Magazyn 3PL w Wielkiej Brytanii: logistyka zewnętrzna z Essex pod Londynem",
+    h1: "Magazyn 3PL w Wielkiej Brytanii, Essex pod Londynem",
     lead:
       "Operator 3PL (third-party logistics) przyjmuje Twój towar do swojego magazynu w Wielkiej Brytanii, składuje go, realizuje zamówienia e-commerce i B2B oraz dostarcza je w całym kraju. Ty sprzedajesz w UK, nie prowadząc własnego magazynu. LondraDepo jest operatorem 3PL w Rayleigh w Essex, 13 mil od London Gateway, prowadzonym przez Arca Trade Group, członka BIFA, który zapewnia też transport międzynarodowy i odprawę celną. Składowanie palet od 3,50 £ + VAT tygodniowo, bez stałego minimum.",
     facts: [
@@ -190,7 +190,7 @@ export const plPages: EnPage[] = [
     description: "Składowanie palet w Essex pod Londynem od 3,50 £ + VAT za paletę tygodniowo: przyjęcie kontenerów i dostaw, bezpieczne składowanie, raporty i wysyłki B2B.",
     label: "Składowanie palet",
     eyebrow: "Palety w Wielkiej Brytanii",
-    h1: "Składowanie palet w Wielkiej Brytanii: od 3,50 £ + VAT za paletę tygodniowo",
+    h1: "Składowanie palet w UK od 3,50 £ + VAT tygodniowo",
     lead:
       "Składowanie palet w Wielkiej Brytanii rozlicza się zwykle za paletę tygodniowo. W LondraDepo stawka za standardową paletę zaczyna się od 3,50 £ + VAT tygodniowo i obejmuje samo składowanie; przyjęcie towaru, obsługa i kompletacja są wyceniane osobno. Przyjmujemy kontenery i dostawy częściowe w Rayleigh w Essex, prowadzimy stany w WMS i przygotowujemy palety do wysyłki do klientów B2B w całym kraju.",
     facts: [
@@ -226,7 +226,7 @@ export const plPages: EnPage[] = [
       { q: "Czy mogę wysyłać palety do moich klientów w UK?", a: "Tak. Przygotowujemy palety i kartony do wysyłki do sklepów, hurtowni i warsztatów w całej Wielkiej Brytanii, z dokumentacją wydania." },
       { q: "Czy jest minimalna liczba palet?", a: "Nie ma stałego minimum. Można zacząć od jednej palety, a wolumen zwiększać lub zmniejszać zależnie od sprzedaży i sezonu." },
     ],
-    related: ["/pl/cennik-magazynowania", "/pl/magazyn-w-wielkiej-brytanii", "/pl/3pl-wielka-brytania", "/pl/zapytanie-ofertowe"],
+    related: ["/pl/cennik-magazynowania", "/pl/magazyn-w-wielkiej-brytanii", "/pl/3pl-wielka-brytania", "/pl/zapytanie-ofertowe", "/pl/zapasy-buforowe-i-dostawy-uk"],
     quote: { label: "Poproś o wycenę składowania palet", service: "storage" },
   },
   {
@@ -268,7 +268,7 @@ export const plPages: EnPage[] = [
       { q: "Czy obsługujecie zwroty od klientów?", a: "Tak. Zwrócone produkty sprawdzamy, rejestrujemy w systemie i zgodnie z Twoimi zasadami przywracamy do sprzedaży lub odkładamy." },
       { q: "Czy mogę zacząć od małej liczby zamówień?", a: "Tak. Nie ma stałego minimum; wiele sklepów zaczyna od kilku palet zapasu i kilkudziesięciu zamówień miesięcznie, a potem zwiększa wolumen." },
     ],
-    related: ["/pl/3pl-wielka-brytania", "/pl/amazon-fba-prep", "/pl/magazyn-w-wielkiej-brytanii", "/pl/zapytanie-ofertowe"],
+    related: ["/pl/3pl-wielka-brytania", "/pl/amazon-fba-prep", "/pl/magazyn-w-wielkiej-brytanii", "/pl/zapytanie-ofertowe", "/pl/wysylka-zbiorcza-i-dystrybucja-uk", "/pl/dystrybucja-probek-uk"],
     quote: { label: "Poproś o wycenę fulfillmentu", service: "fulfilment" },
   },
   {
@@ -280,7 +280,7 @@ export const plPages: EnPage[] = [
     description: "Amazon FBA prep w UK: przyjęcie towaru, etykiety FNSKU, pakowanie zgodne z wymogami Amazon i planowe dostawy do centrów Amazon UK z magazynu w Essex.",
     label: "Amazon FBA prep",
     eyebrow: "Dla sprzedawców Amazon UK",
-    h1: "Amazon FBA prep w Wielkiej Brytanii: przygotowanie i dostawy do Amazon UK",
+    h1: "Amazon FBA prep w Wielkiej Brytanii",
     lead:
       "Zanim towar trafi do centrum logistycznego Amazon, musi zostać przygotowany zgodnie z wymogami Amazon: oznaczony etykietami FNSKU, odpowiednio zapakowany i wysłany w ramach planu dostawy. LondraDepo przyjmuje Twój zapas w Essex, około 16 mil od centrum Amazon LCY2 w Tilbury, przygotowuje go do FBA i wysyła partiami do centrów Amazon w Wielkiej Brytanii, trzymając resztę zapasu u nas.",
     facts: [
@@ -411,7 +411,7 @@ export const plPages: EnPage[] = [
       { q: "Czy mogę korzystać z własnego przewoźnika?", a: "Tak. Twój spedytor może dostarczyć towar na adres magazynu w Rayleigh, a od nas wziąć tylko rozładunek, składowanie, fulfillment i dystrybucję." },
       { q: "Czy przechowujecie towar przed odprawą?", a: "Nie. Nie jesteśmy składem celnym, więc przyjmujemy towar po brytyjskiej odprawie celnej i dopiero wtedy go składujemy." },
     ],
-    related: ["/pl/magazyn-dla-polskich-firm", "/pl/magazyn-w-wielkiej-brytanii", "/pl/zapytanie-ofertowe", "/pl/rodzaje-kontenerow"],
+    related: ["/pl/magazyn-dla-polskich-firm", "/pl/magazyn-w-wielkiej-brytanii", "/pl/zapytanie-ofertowe", "/pl/rodzaje-kontenerow", "/pl/zapasy-buforowe-i-dostawy-uk"],
     quote: { label: "Porozmawiajmy o imporcie", service: "freight-customs" },
   },
   {
@@ -552,7 +552,7 @@ export const plLegalPages: EnPage[] = [
     updated: "28 listopada 2026",
     modified: MODIFIED,
     title: "Regulamin usług",
-    description: "Ogólne warunki usług magazynowania, fulfillmentu, obsługi towaru, koordynacji odprawy celnej i dystrybucji świadczonych przez Arca Trade Group Ltd pod marką LondraDepo.",
+    description: "Ogólne warunki usług magazynowania, fulfillmentu, obsługi towaru, odprawy celnej i dystrybucji świadczonych przez Arca Trade Group Ltd (marka LondraDepo).",
     label: "Regulamin",
     h1: "Regulamin usług",
     lead: "Niniejsze warunki określają ogólne zasady usług magazynowania, fulfillmentu, obsługi towaru, koordynacji odprawy celnej i dystrybucji świadczonych przez Arca Trade Group Ltd pod marką LondraDepo.com. Wersją wiążącą jest wersja angielska (Terms and Conditions).",

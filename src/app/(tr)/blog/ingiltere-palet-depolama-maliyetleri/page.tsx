@@ -184,7 +184,7 @@ export default function PaletDepolamaPage() {
 
               <ArticleSources path="/blog/ingiltere-palet-depolama-maliyetleri" />
 
-              <h2>Sık Sorulan Sorular</h2>
+              <h2>{"Palet Depolama Maliyetleri: Sık Sorulan Sorular"}</h2>
 
               {faqs.map(({ q, a }) => (
                 <div key={q}>

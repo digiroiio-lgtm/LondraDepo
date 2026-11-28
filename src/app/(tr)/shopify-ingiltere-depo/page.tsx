@@ -17,7 +17,7 @@ const TEL = "tel:+447554195190";
 export const metadata: Metadata = {
   title: "Shopify İngiltere Depo ve Fulfillment | LondraDepo",
   description:
-    "Shopify için İngiltere fulfillment: stoğunuz Essex'te; siparişleri toplayıp paketliyor, UK müşterilerinize gönderiyor, iadeleri işliyoruz. Palet £3,50 + KDV/hafta'dan.",
+    "Shopify için İngiltere fulfillment: stok Essex'te; siparişleri toplayıp paketliyor, UK müşterilerine gönderiyor, iadeleri işliyoruz. Palet £3,50 + KDV/hafta.",
   keywords: [
     "ingiltere shopify depo",
     "shopify sipariş karşılama ingiltere",
@@ -309,7 +309,7 @@ export default function ShopifyIngiltereDepo() {
         {/* FAQ */}
         <section className="py-16 px-4 bg-white">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl font-extrabold text-[#0b2545] mb-8">Sık Sorulan Sorular</h2>
+            <h2 className="text-2xl font-extrabold text-[#0b2545] mb-8">{"Shopify İngiltere Depo: Sık Sorulan Sorular"}</h2>
             <div className="space-y-4">
               {faqs.map((faq) => (
                 <div key={faq.q} className="border border-slate-200 rounded-xl p-5">

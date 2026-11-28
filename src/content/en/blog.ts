@@ -5,6 +5,7 @@ const DATE = { published: "2026-11-10", modified: "2026-11-10" };
 export const blogPages: EnPage[] = [
   {
     slug: "/en/blog/uk-warehousing-guide",
+    modified: "2026-11-28",
     serviceBox: { href: "/en/uk-warehousing", title: "Looking for UK warehousing services?", text: "We receive, store, fulfil and deliver goods from our Essex warehouse, 13 miles from London Gateway and about 37 miles from central London.", cta: "UK warehousing services" },
     tr: "/blog/ingiltere-depo-rehberi",
     kind: "article",
@@ -72,6 +73,7 @@ export const blogPages: EnPage[] = [
   },
   {
     slug: "/en/blog/what-is-uk-fulfilment",
+    modified: "2026-11-28",
     serviceBox: { href: "/en/uk-fulfilment", title: "Looking for fulfilment services in the UK?", text: "We pick, pack and ship online, retail and B2B orders from stock held in our Essex warehouse, tracked in Mintsoft WMS.", cta: "Fulfilment services UK" },
     tr: "/blog/ingiltere-fulfillment-nedir",
     kind: "article",
@@ -127,6 +129,7 @@ export const blogPages: EnPage[] = [
   },
   {
     slug: "/en/blog/amazon-prep-uk-guide",
+    modified: "2026-11-28",
     serviceBox: { href: "/en/amazon-prep-uk", title: "Need an Amazon prep centre in the UK?", text: "We label, check, pack and deliver FBA stock from Essex, about 16 miles from Amazon LCY2, with no fixed minimum.", cta: "Amazon prep centre UK" },
     tr: "/blog/amazon-prep-uk-rehberi",
     kind: "article",
@@ -134,7 +137,7 @@ export const blogPages: EnPage[] = [
     article: { ...DATE, readMins: 7, section: "Amazon" },
     title: "Amazon Prep UK: A Step-by-Step Guide",
     description:
-      "A step-by-step guide to Amazon FBA prep in the UK: why prep is needed, the seven stages from goods-in to Amazon check-in, FNSKU labelling and how prep is priced.",
+      "A step-by-step guide to Amazon FBA prep in the UK: why prep is needed, the seven stages from goods-in to check-in, FNSKU labelling and how prep is priced.",
     label: "Amazon Prep UK Guide",
     h1: "Amazon Prep UK: A Step-by-Step Guide",
     lead:
@@ -193,6 +196,7 @@ export const blogPages: EnPage[] = [
   },
   {
     slug: "/en/blog/what-is-a-uk-transit-warehouse",
+    modified: "2026-11-28",
     serviceBox: { href: "/en/uk-warehousing", title: "Need a UK warehouse for incoming goods?", text: "We receive containers and pallets after customs clearance, store them in Essex and deliver across the UK.", cta: "UK warehousing services" },
     tr: "/blog/ingiltere-ara-depo-nedir",
     kind: "article",
@@ -315,6 +319,7 @@ export const blogPages: EnPage[] = [
   },
   {
     slug: "/en/blog/uk-pallet-storage-costs",
+    modified: "2026-11-28",
     serviceBox: { href: "/en/pallet-storage", title: "Need pallet storage in the UK?", text: "LondraDepo stores pallets in Rayleigh, Essex, near London, from £3.50 + VAT per pallet per week, with no fixed minimum.", cta: "Pallet storage UK" },
     tr: "/blog/ingiltere-palet-depolama-maliyetleri",
     kind: "article",
@@ -512,6 +517,7 @@ export const blogPages: EnPage[] = [
   },
   {
     slug: "/en/blog/how-to-choose-a-uk-3pl",
+    modified: "2026-11-28",
     serviceBox: { href: "/en/3pl-uk", title: "Comparing 3PL providers in the UK?", text: "See what LondraDepo covers as an Essex 3PL: goods-in, storage, fulfilment, Amazon prep and UK delivery, with stock in Mintsoft WMS.", cta: "3PL UK" },
     tr: "/blog/ingiltere-3pl-nasil-secilir",
     kind: "article",
@@ -646,6 +652,7 @@ export const blogPages: EnPage[] = [
   },
   {
     slug: "/en/blog/amazon-fba-prep-checklist",
+    modified: "2026-11-28",
     serviceBox: { href: "/en/amazon-prep-uk", title: "Want the prep done for you?", text: "Our Essex prep centre handles FNSKU labelling, checks, packing and delivery to Amazon UK fulfilment centres, with no fixed minimum.", cta: "Amazon prep centre UK" },
     tr: "/blog/amazon-fba-prep-kontrol-listesi",
     kind: "article",
@@ -653,7 +660,7 @@ export const blogPages: EnPage[] = [
     article: { ...DATE, readMins: 5, section: "Amazon" },
     title: "Amazon FBA Prep Checklist for UK Sellers",
     description:
-      "Amazon FBA prep checklist for UK sellers: shipment plan, FNSKU labels, covering old barcodes, packaging, sets and bundles, carton labels and delivery to Amazon UK.",
+      "Amazon FBA prep checklist for UK sellers: shipment plan, FNSKU labels, covering old barcodes, packaging, bundles, carton labels and delivery to Amazon UK.",
     label: "Amazon FBA Prep Checklist",
     h1: "Amazon FBA Prep Checklist for UK Sellers",
     lead:
@@ -719,7 +726,7 @@ export const blogPages: EnPage[] = [
     description:
       "How private label, wholesale and arbitrage Amazon sellers get stock into the UK, what a prep warehouse does for each, and how to plan storage and FBA batches.",
     label: "Private Label vs Wholesale on Amazon UK",
-    h1: "Amazon Private Label, Wholesale and Arbitrage: What Each Needs from a UK Warehouse",
+    h1: "Amazon Private Label, Wholesale and Arbitrage: UK Warehousing",
     lead:
       "Amazon sellers fall into three main models, and each sends stock to a UK warehouse differently. Private label sellers import their own branded products, often by the container, so they need unloading, FNSKU labelling and storage with stock sent to Amazon in batches. Wholesale sellers buy branded goods from distributors on mixed pallets with many SKUs, so they need accurate counting, case-pack handling and labelling where required. Online arbitrage sellers buy from retailers, so stock arrives as many small parcels. LondraDepo in Essex is set up for container, pallet and carton volumes, which fits private label and wholesale best.",
     facts: [
@@ -881,6 +888,7 @@ export const blogPages: EnPage[] = [
   },
   {
     slug: "/en/blog/bonded-warehouse-vs-duty-paid-storage",
+    modified: "2026-11-28",
     serviceBox: { href: "/en/uk-customs-clearance", title: "Storing goods after UK customs?", text: "LondraDepo is a duty-paid warehouse, not a bonded one. Arca Trade Group can handle UK customs clearance, then we store and deliver your goods.", cta: "UK customs clearance" },
     tr: "/blog/antrepo-nedir",
     kind: "article",
@@ -1054,7 +1062,7 @@ export const blogHub: EnPage = {
   modified: "2026-11-10",
   title: "UK Warehousing, Fulfilment & Import Guides",
   description:
-    "Practical guides for selling into the UK: warehousing and pallet storage costs, fulfilment, Amazon FBA prep, importing, duty and VAT, and how to choose a UK 3PL.",
+    "Practical guides for selling into the UK: warehousing and pallet costs, fulfilment, Amazon FBA prep, importing, duty and VAT, and choosing a UK 3PL.",
   label: "Guides",
   eyebrow: "Knowledge centre",
   h1: "UK Warehousing, Fulfilment and Import Guides",

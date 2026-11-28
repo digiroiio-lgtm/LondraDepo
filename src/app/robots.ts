@@ -2,8 +2,11 @@ import { MetadataRoute } from "next";
 
 import { SITE_URL } from "@/lib/site";
 
-/** Disallows repeated in every group: a crawler follows only the most specific group that names it. */
-const PRIVATE = ["/_next/", "/api/", "/panel"];
+/**
+ * Disallows repeated in every group: a crawler follows only the most specific group that names it.
+ * /_next/ stays crawlable: Google needs its CSS, JS and optimised images (/_next/image) to render pages.
+ */
+const PRIVATE = ["/api/", "/panel"];
 
 export default function robots(): MetadataRoute.Robots {
   return {

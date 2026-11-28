@@ -12,6 +12,7 @@ import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 
 import { SITE_URL } from "@/lib/site";
 import { trAlternates } from "@/lib/i18n";
+import QuoteForm from "@/components/QuoteForm";
 const PAGE_URL = `${SITE_URL}/iletisim`;
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20depo%20teklifi%20almak%20istiyorum.";
 const TEL = "tel:+447554195190";
@@ -84,7 +85,7 @@ export default function IletisimPage() {
         <section className="py-16 px-4 bg-white">
           <div className="max-w-3xl mx-auto">
             <h1 className="text-3xl md:text-4xl font-extrabold text-[#0b2545] mb-4">
-              İletişim
+              İletişim: LondraDepo İngiltere Depo Ekibi
             </h1>
             <p className="text-lg text-slate-600 mb-10 leading-relaxed">
               İngiltere depo, fulfillment veya UK lojistik hizmetlerimiz hakkında bilgi almak için WhatsApp veya telefon aracılığıyla doğrudan ulaşabilirsiniz. Türkçe destek veriyoruz.
@@ -185,6 +186,7 @@ export default function IletisimPage() {
         />
         <PageFaq faqs={faqs} />
         <RelatedLinks links={[{ href: "/ingiltere-depo-fiyatlari", label: "İngiltere depo fiyatları" }, { href: "/ingiltere-depo-maliyet-hesaplama", label: "Depo maliyet hesaplama" }, { href: "/essex-depo", label: "Essex depomuz", note: "Adres ve ulaşım" }, { href: "/case-studies", label: "Vaka çalışmaları" }, { href: "/sektorler", label: "Sektörler" }, { href: "/teklif-al", label: "Teklif al", note: "Size özel fiyat ve plan" }]} />
+        <QuoteForm formId="tr_inline_quote" heading="Teklif Formu" intro="Ürün türünüzü, yaklaşık palet veya koli sayınızı ve ihtiyacınız olan hizmetleri yazın; ekibimiz size özel teklif hazırlasın. Standart palet depolama haftalık £3,50 + KDV'den başlar." presetServices={["Depolama"]} />
       </main>
       <Footer />
       <StickyWhatsappCta />

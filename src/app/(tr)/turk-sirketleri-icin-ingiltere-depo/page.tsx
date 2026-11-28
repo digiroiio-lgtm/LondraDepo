@@ -337,7 +337,7 @@ export default function TurkSirketleri() {
         {/* FAQ */}
         <section className="py-16 px-4 bg-white">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl font-extrabold text-[#0b2545] mb-8">Sık Sorulan Sorular</h2>
+            <h2 className="text-2xl font-extrabold text-[#0b2545] mb-8">{"Türk Şirketleri İçin İngiltere Depo: Sık Sorulan Sorular"}</h2>
             <div className="space-y-4">
               {faqs.map((faq) => (
                 <div key={faq.q} className="border border-slate-200 rounded-xl p-5">

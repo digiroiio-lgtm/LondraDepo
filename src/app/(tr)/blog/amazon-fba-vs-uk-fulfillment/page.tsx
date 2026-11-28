@@ -201,7 +201,7 @@ export default function FbaVsFulfillmentPage() {
 
               <ArticleSources path="/blog/amazon-fba-vs-uk-fulfillment" />
 
-              <h2>Sık Sorulan Sorular</h2>
+              <h2>{"Amazon FBA ve UK Fulfillment: Sık Sorulan Sorular"}</h2>
               {faqs.map((f) => (
                 <div key={f.q}>
                   <h3>{f.q}</h3>

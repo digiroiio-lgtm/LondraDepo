@@ -17,7 +17,7 @@ const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20depolama%20hizmet
 export const metadata: Metadata = {
   title: "İngiltere Depolama: Palet & Koli, £3,50/Palet | LondraDepo",
   description:
-    "Essex'te palet ve koli depolama: mal kabul, FCL konteyner boşaltma, Mintsoft WMS ile gerçek zamanlı stok takibi, kısa ve uzun vadeli depo. Haftalık £3,50 + KDV'den.",
+    "Essex'te palet ve koli depolama: mal kabul, FCL konteyner boşaltma, Mintsoft WMS ile anlık stok takibi, kısa ve uzun vadeli depo. Haftalık £3,50 + KDV'den.",
   alternates: trAlternates("/depolama"),
   openGraph: {
     title: "İngiltere Depolama: Palet ve Koli Depolama",
@@ -138,7 +138,7 @@ export default function DepolamaPage() {
         {/* FAQ */}
         <section className="py-16 px-4 bg-[#f6f8fb]">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl font-extrabold text-[#0b2545] mb-8">Sık Sorulan Sorular</h2>
+            <h2 className="text-2xl font-extrabold text-[#0b2545] mb-8">{"İngiltere Depolama: Sık Sorulan Sorular"}</h2>
             <div className="space-y-4">
               {faqs.map((faq) => (
                 <div key={faq.q} className="bg-white border border-slate-200 rounded-xl p-5">

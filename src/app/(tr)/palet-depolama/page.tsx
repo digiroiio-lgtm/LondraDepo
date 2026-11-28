@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "İngiltere Palet Depolama | UK Pallet Storage | LondraDepo",
   description:
-    "İngiltere'de standart palet depolama haftalık £3,50 + KDV'den başlar. Essex merkezli depo; elleçleme, yükleme ve gümrükleme işlemleri duruma göre fiyatlandırılır.",
+    "İngiltere'de standart palet depolama haftalık £3,50 + KDV'den başlar. Essex'teki depo; elleçleme, yükleme ve gümrükleme ihtiyaca göre fiyatlandırılır.",
   alternates: trAlternates("/palet-depolama"),
   openGraph: {
     title: "İngiltere Palet Depolama | LondraDepo",
@@ -184,7 +184,7 @@ export default function PaletDepolamaPage() {
             </div>
 
             <section>
-              <h2 className="text-2xl font-extrabold text-[#0b2545] mb-6">Sık Sorulan Sorular</h2>
+              <h2 className="text-2xl font-extrabold text-[#0b2545] mb-6">{"Palet Depolama: Sık Sorulan Sorular"}</h2>
               <div className="space-y-4">
                 {faqs.map((faq) => (
                   <div key={faq.q} className="border border-slate-200 rounded-xl p-5">

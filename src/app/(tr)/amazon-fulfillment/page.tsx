@@ -14,12 +14,13 @@ import StickyWhatsappCta from "@/components/StickyWhatsappCta";
 
 import { SITE_URL } from "@/lib/site";
 import { trAlternates } from "@/lib/i18n";
+import QuoteForm from "@/components/QuoteForm";
 const WHATSAPP = "https://wa.me/447554195190?text=Merhaba%2C%20Amazon%20fulfillment%20hizmeti%20hakkında%20bilgi%20almak%20istiyorum.";
 
 export const metadata: Metadata = {
   title: "Amazon UK Fulfillment: FBA Prep, FBM ve Depolama | LondraDepo",
   description:
-    "Amazon UK için Essex'te FBA prep, FBM sipariş karşılama ve haftalık £3,50 + KDV'den palet depolama; gümrükleme Arca üzerinden. Sabit minimum yok, 1 deneme paleti.",
+    "Amazon UK için Essex'te FBA prep, FBM sipariş karşılama ve haftalık £3,50 + KDV'den palet depolama; gümrükleme Arca'dan. Sabit minimum yok.",
   alternates: trAlternates("/amazon-fulfillment"),
   openGraph: {
     title: "Amazon İngiltere Fulfillment | LondraDepo",
@@ -164,8 +165,9 @@ export default function AmazonFulfillmentPage() {
         </section>
 
         <TrClusterNav path="/amazon-fulfillment" />
-        <PageFaq faqs={faqs} />
+        <PageFaq title="Amazon UK Fulfillment: Sık Sorulan Sorular" faqs={faqs} />
         <CtaCards />
+        <QuoteForm formId="tr_inline_quote" heading="Amazon Fulfillment Teklifi Alın" intro="Ürün türünüzü, yaklaşık palet veya koli sayınızı ve ihtiyacınız olan hizmetleri yazın; ekibimiz size özel teklif hazırlasın. Standart palet depolama haftalık £3,50 + KDV'den başlar." presetServices={["E-Ticaret Fulfillment", "Pick & Pack"]} />
       </main>
       <Footer />
       <StickyWhatsappCta />

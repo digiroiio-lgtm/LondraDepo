@@ -292,7 +292,7 @@ export const plBlogB: EnPage[] = [
     description:
       "Jak sprzedawcy Amazon private label, wholesale i arbitrage dostarczają towar do UK, co robi dla nich magazyn prep i jak planować składowanie i partie FBA.",
     label: "Private label i wholesale w Amazon UK",
-    h1: "Amazon private label, wholesale i arbitrage: czego każdy model potrzebuje od magazynu w UK",
+    h1: "Amazon private label, wholesale i arbitrage: magazyn w UK",
     lead:
       "Sprzedawcy Amazon działają w trzech głównych modelach i każdy z nich dostarcza towar do magazynu w UK inaczej. Sprzedawcy private label importują własne produkty markowe, często całymi kontenerami, więc potrzebują rozładunku, etykiet FNSKU i składowania, a do Amazon wysyłają towar partiami. Sprzedawcy wholesale kupują markowe produkty od dystrybutorów na mieszanych paletach z wieloma SKU, więc potrzebują dokładnego liczenia, obsługi opakowań zbiorczych i etykietowania tam, gdzie jest wymagane. Sprzedawcy online arbitrage kupują w sklepach detalicznych, więc towar przychodzi jako wiele małych paczek. LondraDepo w Essex jest przygotowane na wolumeny kontenerowe, paletowe i kartonowe, co najlepiej pasuje do private label i wholesale.",
     facts: [
@@ -376,7 +376,7 @@ export const plBlogB: EnPage[] = [
     description:
       "Dokumenty do importu towarów do UK: faktura handlowa, lista pakunkowa, konosament lub lotniczy list przewozowy i dowód pochodzenia oraz darmowy szablon.",
     label: "Dokumenty importowe UK",
-    h1: "Dokumenty importowe w Wielkiej Brytanii: co jest potrzebne i co musi zawierać",
+    h1: "Dokumenty importowe w Wielkiej Brytanii: co jest potrzebne",
     lead:
       "Do importu towarów do Wielkiej Brytanii potrzebujesz czterech podstawowych dokumentów: faktury handlowej z wartością towaru, listy pakunkowej (packing list) z zawartością każdego kartonu, dokumentu przewozowego (konosamentu przy transporcie morskim lub lotniczego listu przewozowego przy lotniczym) oraz dowodu pochodzenia, jeśli ubiegasz się o niższą stawkę cła na podstawie umowy handlowej UK. Agencja celna wykorzystuje je w zgłoszeniu importowym, które wymaga też numeru GB EORI, kodu towarowego i wartości towaru. LondraDepo przyjmuje towar w magazynie w Essex według tej samej listy pakunkowej, więc czytelna lista oszczędza czas na obu etapach.",
     facts: [

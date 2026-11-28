@@ -35,6 +35,10 @@ export default function Footer() {
             <li><a href="/ingiltere-depo-fiyatlari" className="hover:text-white transition">İngiltere Depo Fiyatları</a></li>
             <li><a href="/ingiltere-ithalat-lojistigi" className="hover:text-white transition">İngiltere İthalat Lojistiği</a></li>
             <li><a href="/konteyner-bosaltma" className="hover:text-white transition">Konteyner Boşaltma</a></li>
+            <li><a href="/ingiltere-stoktan-planli-teslimat" className="hover:text-white transition">Stoktan Planlı Teslimat</a></li>
+            <li><a href="/ingiltereye-toplu-gonderim-ve-dagitim" className="hover:text-white transition">Toplu Gönderim ve Dağıtım</a></li>
+            <li><a href="/ingiltere-numune-dagitimi" className="hover:text-white transition">Numune Dağıtımı</a></li>
+            <li><a href="/kurumsal-hediye-ve-promosyon-dagitimi" className="hover:text-white transition">Kurumsal Hediye Dağıtımı</a></li>
             <li><a href="/limandan-depoya-lojistik" className="hover:text-white transition">Limandan Depoya Lojistik</a></li>
             <li><a href="/ambalaj-catering-depolama" className="hover:text-white transition">Ambalaj ve Catering Depolama</a></li>
             <li><a href="/otomotiv-yedek-parca-depolama" className="hover:text-white transition">Otomotiv Yedek Parça Depolama</a></li>

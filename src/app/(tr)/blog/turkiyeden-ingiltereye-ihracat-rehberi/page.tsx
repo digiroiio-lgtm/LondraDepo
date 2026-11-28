@@ -199,7 +199,7 @@ export default function IhracatRehberiPage() {
 
               <ArticleSources path="/blog/turkiyeden-ingiltereye-ihracat-rehberi" />
 
-              <h2>Sık Sorulan Sorular</h2>
+              <h2>{"İngiltere'ye İhracat: Sık Sorulan Sorular"}</h2>
 
               {faqs.map(({ q, a }) => (
                 <div key={q}>

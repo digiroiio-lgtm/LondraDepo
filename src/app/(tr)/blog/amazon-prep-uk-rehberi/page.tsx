@@ -187,7 +187,7 @@ export default function AmazonPrepRehberiPage() {
 
               <ArticleSources path="/blog/amazon-prep-uk-rehberi" />
 
-              <h2>Sık Sorulan Sorular</h2>
+              <h2>{"Amazon Prep UK Rehberi: Sık Sorulan Sorular"}</h2>
               {faqs.map((f) => (
                 <div key={f.q}>
                   <h3>{f.q}</h3>

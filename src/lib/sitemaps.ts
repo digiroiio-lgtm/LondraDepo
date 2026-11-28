@@ -83,6 +83,7 @@ const TR: ReadonlyArray<readonly [string, Freq, number]> = [
   ["/privacy-policy", "yearly", 0.4],
   ["/cookie-policy", "yearly", 0.4],
   ["/sozlesme-kosullari", "yearly", 0.5],
+  ["/kunye", "yearly", 0.5],
 ];
 
 const EN_PRIORITY: Record<PageKind, [Freq, number]> = {

@@ -1,4 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
+import { warehouseRows } from "@/lib/warehouse";
+import { IMPRINT_PATHS } from "@/content/imprint";
 
 type GalleryLang = "tr" | "en" | "pl" | "de";
 
@@ -69,6 +72,13 @@ const PHOTOS = [
   },
 ] as const;
 
+const SPECS: Record<GalleryLang, { h3: string; more: string }> = {
+  tr: { h3: "Depo teknik bilgileri", more: "Şirket bilgileri ve künye" },
+  en: { h3: "Warehouse specification", more: "Company details and imprint" },
+  pl: { h3: "Parametry techniczne magazynu", more: "Dane firmy" },
+  de: { h3: "Technische Daten des Lagers", more: "Unternehmensangaben und Impressum" },
+};
+
 const TEXT: Record<GalleryLang, { h2: string; p: string }> = {
   tr: {
     h2: "İngiltere'de Gerçek Operasyon Altyapısı",
@@ -125,6 +135,20 @@ export default function WarehouseGallery({ lang = "tr" }: { lang?: GalleryLang }
               />
             </div>
           ))}
+        </div>
+
+        {/* Building facts (E-E-A-T): the same figures as the imprint page and the Organization schema. */}
+        <div className="mt-10 rounded-2xl border border-slate-200 p-6">
+          <h3 className="text-lg font-bold text-[#0b2545] mb-4">{SPECS[lang].h3}</h3>
+          <dl className="grid gap-x-8 gap-y-3 sm:grid-cols-2 text-sm">
+            {warehouseRows(lang).map(([k, v]) => (
+              <div key={k} className="flex justify-between gap-4 border-b border-slate-100 pb-2">
+                <dt className="text-slate-500">{k}</dt>
+                <dd className="font-semibold text-[#0b2545] text-right">{v}</dd>
+              </div>
+            ))}
+          </dl>
+          <p className="mt-4 text-sm"><Link href={IMPRINT_PATHS[lang]} className="underline text-[#0b2545]">{SPECS[lang].more}</Link></p>
         </div>
       </div>
     </section>

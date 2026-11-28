@@ -1,9 +1,10 @@
 import type { EnPage } from "../en/types";
 import { deLegalPages, dePages } from "./pages";
 import { PAGE_SETS } from "@/lib/i18n-pairs";
+import { imprintPage } from "../imprint";
 
 /** German pages rendered by EnPageView. The quote page has its own route (/de/angebot-anfordern). */
-export const DE_PAGES: EnPage[] = [...dePages, ...deLegalPages];
+export const DE_PAGES: EnPage[] = [...dePages, ...deLegalPages, imprintPage("de")];
 
 const bySlug = new Map(DE_PAGES.map((p) => [p.slug, p]));
 

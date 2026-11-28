@@ -60,6 +60,7 @@ export const PAGE_SETS: ReadonlyArray<PageSet> = [
   { tr: "/privacy-policy", en: "/en/privacy-policy", pl: "/pl/polityka-prywatnosci", de: "/de/datenschutz" },
   { tr: "/cookie-policy", en: "/en/cookie-policy", pl: "/pl/polityka-cookies", de: "/de/cookie-richtlinie" },
   { tr: "/sozlesme-kosullari", en: "/en/terms-and-conditions", pl: "/pl/regulamin", de: "/de/agb" },
+  { tr: "/kunye", en: "/en/imprint", pl: "/pl/dane-firmy", de: "/de/impressum" },
   { tr: "/turk-sirketleri-icin-ingiltere-depo", en: "/en/uk-warehousing-for-turkish-exporters" },
   { tr: "/ingiltere-depo-maliyet-hesaplama", en: "/en/uk-storage-cost-calculator" },
   { tr: "/konteyner-varis-planlayici", en: "/en/container-arrival-planner" },

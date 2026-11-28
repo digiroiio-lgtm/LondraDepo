@@ -7,7 +7,7 @@
 import json, os, re, sys, urllib.request, collections
 
 B = os.environ.get("SEO_BASE_URL", "http://localhost:3100").rstrip("/")
-LEGAL = re.compile(r"/(en/)?(privacy-policy|cookie-policy|terms-and-conditions|sozlesme-kosullari)$|^/pl/(polityka-prywatnosci|polityka-cookies|regulamin)$|^/de/(datenschutz|cookie-richtlinie|agb)$")
+LEGAL = re.compile(r"/(en/)?(privacy-policy|cookie-policy|terms-and-conditions|sozlesme-kosullari)$|^/pl/(polityka-prywatnosci|polityka-cookies|regulamin)$|^/de/(datenschutz|cookie-richtlinie|agb|impressum)$|^/(kunye|en/imprint|pl/dane-firmy)$")
 CASE = re.compile(r"/case-studies/.+")
 SMALL = re.compile(r"^/(en/)?(about-us|contact|hakkimizda|iletisim)$|^/pl/kontakt$|^/de/kontakt$")
 

@@ -12,6 +12,7 @@ export const de: UiStrings = {
       { href: "/de/datenschutz", label: "Datenschutz" },
       { href: "/de/cookie-richtlinie", label: "Cookie-Richtlinie" },
       { href: "/de/agb", label: "AGB" },
+      { href: "/de/impressum", label: "Impressum" },
     ],
     cookieSettings: "Cookie-Einstellungen",
     bifa: "BIFA-Mitglied",

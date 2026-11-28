@@ -12,6 +12,7 @@ export const tr: UiStrings = {
       { href: "/privacy-policy", label: "Gizlilik Politikası" },
       { href: "/cookie-policy", label: "Çerez Politikası" },
       { href: "/sozlesme-kosullari", label: "Sözleşme Koşulları" },
+      { href: "/kunye", label: "Künye" },
     ],
     cookieSettings: "Çerez Ayarları",
     bifa: "BIFA Üyesi",

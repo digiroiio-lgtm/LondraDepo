@@ -1,4 +1,5 @@
 import { SITE_URL } from "@/lib/site";
+import { warehouseProperties } from "@/lib/warehouse";
 
 /**
  * Single source for the Organization / LocalBusiness node, used by both the TR and EN layouts so the
@@ -23,7 +24,9 @@ export function orgNode(lang: "en" | "tr") {
     logo: { "@type": "ImageObject", url: `${SITE_URL}/logo.svg` },
     image: `${SITE_URL}/arterial-park-arterial-road-rayleigh_depoici.jpeg`,
     description: DESCRIPTION[lang],
-    foundingDate: "2021",
+    foundingDate: "2021-03-05",
+    founder: { "@type": "Person", name: "Sertaç Yılmaz", jobTitle: "Director" },
+    identifier: { "@type": "PropertyValue", propertyID: "Companies House company number", value: "13247691" },
     areaServed: ["London", "Essex", "Birmingham", "Manchester", "United Kingdom"],
     address: {
       "@type": "PostalAddress",
@@ -46,6 +49,8 @@ export function orgNode(lang: "en" | "tr") {
     telephone: "+447554195190",
     email: "support@londradepo.com",
     vatID: "GB353315322",
+    // Building facts from the Unit 19 letting brochure (see src/lib/warehouse.ts).
+    additionalProperty: warehouseProperties(),
     knowsAbout: ["UK warehousing", "Ecommerce fulfilment", "Pallet storage", "Container unloading", "Amazon FBA prep", "UK distribution", "Customs clearance coordination"],
     knowsLanguage: ["en", "tr"],
     contactPoint: [

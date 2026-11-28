@@ -29,7 +29,7 @@ GROUPS = [
     ("Tools", re.compile(r"hesapla|calculator|planner|planlayici")),
     ("Case studies", re.compile(r"/case-studies")),
     ("Guides and blog", re.compile(r"/blog|guide|rehber|konteyner-tipleri|container-types|amazon-uk-fulfilment-centres|depo-konumlari")),
-    ("Company and legal", re.compile(r"about|hakkimizda|contact|iletisim|privacy|cookie|terms|sozlesme|teklif-al|request-a-quote|kontakt|polityka|regulamin|zapytanie-ofertowe|datenschutz|cookie-richtlinie|/de/agb|angebot-anfordern")),
+    ("Company and legal", re.compile(r"about|hakkimizda|contact|iletisim|privacy|cookie|terms|sozlesme|teklif-al|request-a-quote|kontakt|polityka|regulamin|zapytanie-ofertowe|datenschutz|cookie-richtlinie|/de/agb|angebot-anfordern|imprint|impressum|kunye|dane-firmy")),
     ("Services and locations", re.compile(r".")),
 ]
 

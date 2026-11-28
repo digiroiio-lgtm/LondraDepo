@@ -55,7 +55,8 @@ for child in children:
  for u in ET.fromstring(doc['body']).findall('{*}url'):
   loc=u.find('{*}loc').text; urls.append(loc)
   sm_alt[loc]={l.get('hreflang'):l.get('href') for l in u.findall(XHTML+'link')}
-  sm_lang[loc]='en' if child.endswith('-en.xml') else 'tr'
+  # Language comes from the child sitemap name: sitemap-tr.xml / sitemap-en.xml / sitemap-pl.xml (add a file, it is picked up).
+  sm_lang[loc]=re.search(r'-([a-z]{2})\.xml$',child).group(1)
   lm=u.find('{*}lastmod')
   if lm is not None: sm_lastmod[loc]=lm.text
 
@@ -112,9 +113,10 @@ for host,proto in HOSTS:
   req=urllib.request.Request(f'https://{host}{p}') if LIVE else urllib.request.Request(BASE+p,headers={'Host':host,'X-Forwarded-Proto':proto})
   try:r=op.open(req);status=r.status
   except urllib.error.HTTPError as e:r=e;status=e.code
-  loc=r.headers.get('Location'); expected=308 if host=='londradepo.com' or (host=='www.londradepo.com' and proto=='http') else 200
+  loc=r.headers.get('Location'); expected=308 if host=='londradepo.com' or (LIVE and host=='www.londradepo.com' and proto=='http') else 200  # www http→https is Vercel's edge, not Next: only testable live
   redirects.append({'host':host,'protocol':proto,'path':p,'status':status,'location':loc})
-  if status!=expected or (expected==308 and loc!=SITE+p):failures.append([host,proto,p,'redirect',status,loc])
+  # '/' may come back as the bare origin (https://www.londradepo.com), which is the same URL.
+  if status!=expected or (expected==308 and loc not in (SITE+p, (SITE+p).rstrip('/'))):failures.append([host,proto,p,'redirect',status,loc])
 for src,dst in [('/uk-warehousing-fulfilment','/en'),('/shopify-fulfillment','/en/shopify-fulfilment-uk')]:
  try:op.open(BASE+src);failures.append([src,'expected 301'])
  except urllib.error.HTTPError as e:
@@ -127,6 +129,8 @@ for r in rows:
    # Downloadable static files (templates, PDFs, images) are not pages and are not in the sitemaps.
    if re.search(r'\.(csv|pdf|png|jpe?g|svg|webp|xlsx)$', path): continue
    if path not in paths: failures.append([r['target'], 'noncanonical internal link', link])
+   # Quote hand-off data goes in the #fragment, never ?query (keeps ?service=&from= variants out of Google).
+   elif '?' in link and re.search(r'/(request-a-quote|zapytanie-ofertowe|teklif-al)$', path): failures.append([r['target'], 'quote link with query string', link])
  path=urllib.parse.urlsplit(r['target']).path or '/'
  sources=[s['target'] for s in rows if s['target']!=r['target'] and any((urllib.parse.urlsplit(a).path or '/')==path for a in s['links'] if a.startswith('/') or a.startswith(SITE))]
  r['incoming_sources']=sources

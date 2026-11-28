@@ -74,7 +74,7 @@ export const growthPages: EnPage[] = [
       { q: "Is LondraDepo the importer of record?", a: "No, not by default. Using our warehouse or our group's customs service does not make LondraDepo or Arca Trade Group the importer of record, and duty and import VAT remain the importer's responsibility." },
       { q: "Is your warehouse a bonded warehouse?", a: "No. LondraDepo is not an HMRC-authorised customs warehouse. Goods are stored after they have been cleared into free circulation." },
     ],
-    related: ["/en/blog/uk-import-documents", "/en/blog/uk-import-costs", "/en/container-unloading", "/en/locations/port-to-warehouse-logistics", "/en/blog/uk-importing-guide", "/en/uk-customs-clearance", "/en/uk-market-entry", "/en/pallet-storage", "/en/blog/bonded-warehouse-vs-duty-paid-storage", "/en/uk-warehousing-for-turkish-exporters"],
+    related: ["/en/blog/uk-import-documents", "/en/blog/uk-import-costs", "/en/container-unloading", "/en/locations/port-to-warehouse-logistics", "/en/blog/uk-importing-guide", "/en/uk-customs-clearance", "/en/uk-market-entry", "/en/pallet-storage", "/en/blog/bonded-warehouse-vs-duty-paid-storage", "/en/uk-warehousing-for-turkish-exporters", "/en/call-off-stock-uk"],
     cta: { h2: "Plan your next UK import", text: "Tell us the product, origin, volumes and how the goods will arrive. We will quote freight, customs, unloading and storage together or separately." },
   },
   {
@@ -140,7 +140,7 @@ export const growthPages: EnPage[] = [
       { q: "Can you arrange haulage from the port?", a: "Yes. Arca Trade Group, the company that operates LondraDepo, can arrange transport from the port to our warehouse, or your own forwarder can deliver." },
       { q: "Can unloaded goods go straight out again?", a: "Yes. Goods can be cross-docked to UK customers or Amazon, or stored and released as orders arrive." },
     ],
-    related: ["/en/shipping-container-types", "/en/london-gateway-tilbury-warehousing", "/en/felixstowe-port-warehousing", "/en/container-arrival-planner", "/en/uk-import-logistics", "/en/locations/port-to-warehouse-logistics", "/en/pallet-storage", "/en/essex-warehouse", "/en/cargo-handling", "/en/industries/automotive-parts"],
+    related: ["/en/shipping-container-types", "/en/london-gateway-tilbury-warehousing", "/en/felixstowe-port-warehousing", "/en/container-arrival-planner", "/en/uk-import-logistics", "/en/locations/port-to-warehouse-logistics", "/en/pallet-storage", "/en/essex-warehouse", "/en/cargo-handling", "/en/industries/automotive-parts", "/en/call-off-stock-uk"],
     cta: { h2: "Book a container unloading quote", text: "Send the container size, ETA, packing list and whether goods are palletised or loose-loaded." },
   },
   {
@@ -373,6 +373,102 @@ export const growthPages: EnPage[] = [
 // Weeks 7–10 (P2). Road distances verified 10.11.2026 with OSRM car routing between postcode
 // centroids (SS6 7FY → port admin postcodes); times are free-flow car times, HGVs and traffic take longer.
 export const growthPagesP2: EnPage[] = [
+  {
+    slug: "/en/call-off-stock-uk",
+    tr: "/ingiltere-stoktan-planli-teslimat",
+    kind: "service",
+    modified: "2026-11-28",
+    serviceType: "Call-off stock and scheduled delivery",
+    title: "Call-Off Stock UK: Bulk Import, Scheduled Delivery",
+    description: "Ship a full container to the UK, keep it as buffer stock in our Essex warehouse and deliver to your UK customer weekly or on call-off. Pallets from £3.50 + VAT.",
+    label: "Call-Off Stock UK",
+    eyebrow: "UK buffer stock and distribution hub",
+    h1: "Call-Off Stock in the UK: Ship in Bulk, Deliver on Schedule",
+    lead:
+      "Many UK customers use a pallet or two a week but have no room to receive a full container. With call-off stock, the manufacturer ships in bulk, LondraDepo holds the goods as buffer stock in Rayleigh, Essex, and we deliver to the UK customer on a fixed schedule or whenever they call off stock. The manufacturer keeps efficient container exports, and the buyer receives only what it needs. Storage starts from £3.50 + VAT per pallet per week, with no fixed minimum.",
+    facts: [
+      "Warehouse: Unit 19 Arterial Park, Rayleigh, Essex SS6 7FY",
+      "13 miles from London Gateway, 16 miles from Tilbury, about 62 miles from Felixstowe",
+      "Pallet storage from £3.50 + VAT per pallet per week, no fixed minimum",
+      "Stock levels and every release recorded in Mintsoft WMS",
+      "Freight and UK customs via Arca Trade Group, a BIFA member",
+      "Weekly, fortnightly or on-demand deliveries across the UK",
+    ],
+    sections: [
+      {
+        type: "steps",
+        h2: "How call-off stock works",
+        items: [
+          { title: "Bulk shipment", text: "The manufacturer ships a full or part container to the UK, by its own forwarder or through Arca Trade Group." },
+          { title: "Customs clearance", text: "The goods are cleared into the UK before they reach us; Arca Trade Group can handle the customs declaration." },
+          { title: "Goods-in and storage", text: "We unload, count and check the goods, record them in Mintsoft WMS and store them as buffer stock." },
+          { title: "Scheduled call-off", text: "We deliver to the UK customer on the agreed schedule, or when an authorised person calls off stock." },
+          { title: "Stock reporting", text: "Both sides can see what has been delivered and what remains, so the next container is planned in time." },
+        ],
+      },
+      {
+        type: "table",
+        h2: "Example: 10 pallets, one pallet a week",
+        intro: "An illustration of a simple call-off plan. Real schedules follow the customer's consumption.",
+        head: ["Week", "Delivered to the UK customer", "Pallets left in stock"],
+        rows: [
+          ["Arrival", "10 pallets received and checked", "10"],
+          ["Week 1", "1 pallet", "9"],
+          ["Week 2", "1 pallet", "8"],
+          ["Week 3", "1 pallet", "7"],
+          ["Weeks 4–9", "1 pallet each week", "6 → 1"],
+          ["Week 10", "1 pallet; next container already planned", "0"],
+        ],
+        note: "Storage is charged per pallet per week, so the cost falls as stock is called off.",
+      },
+      {
+        type: "cards",
+        h2: "Who call-off stock suits",
+        intro: "It works best for goods that UK businesses use regularly and reorder in predictable amounts.",
+        items: [
+          { title: "Corrugated and industrial packaging", text: "Boxes, sheets and packaging materials used every week on production or packing lines." },
+          { title: "Paper and plastic packaging", text: "Rolls, bags and films that are bulky to store but consumed steadily." },
+          { title: "Automotive parts", text: "Fast-moving parts delivered to workshops, distributors or assembly sites." },
+          { title: "Industrial and construction consumables", text: "Fixings, tapes, gloves and site supplies reordered every week." },
+          { title: "Cleaning and hygiene products", text: "Regular deliveries to distributors, facilities and contract cleaners." },
+          { title: "Furniture components and textile materials", text: "Components and raw materials called off as production needs them." },
+        ],
+      },
+      {
+        type: "table",
+        h2: "Terms you may hear",
+        head: ["Term", "What it means"],
+        rows: [
+          ["Buffer stock", "Stock held close to the customer to absorb delays and demand changes"],
+          ["Call-off stock", "Stock released to the customer in agreed quantities when it asks for it"],
+          ["Scheduled replenishment", "Deliveries on a fixed plan, for example one pallet every Monday"],
+          ["UK distribution hub", "One UK location that receives bulk imports and supplies UK customers"],
+        ],
+      },
+      {
+        type: "list",
+        h2: "What to agree before the first shipment",
+        items: [
+          "Who acts as UK importer of record and accounts for import VAT: the manufacturer with its own UK VAT registration, the UK buyer, or customs representation arranged through Arca Trade Group",
+          "Who owns the stock while it is in our warehouse, and when ownership passes to the buyer",
+          "Who may call off stock, and how release instructions reach us",
+          "The delivery schedule, delivery address and service level",
+          "Minimum and maximum stock levels that trigger the next shipment",
+        ],
+        outro: "We agree these points in writing with both sides before the first container leaves. This page is general information, not tax or legal advice.",
+      },
+    ],
+    faqs: [
+      { q: "What is call-off stock?", a: "Call-off stock is stock held in a warehouse near the customer and released in agreed quantities when the customer asks for it. LondraDepo holds the stock in Essex and delivers it across the UK." },
+      { q: "Does LondraDepo buy or sell the goods?", a: "No. LondraDepo is the logistics partner: we receive, store and deliver the goods. The sale and payment terms stay between the manufacturer and the UK buyer." },
+      { q: "Who pays UK import VAT and duty?", a: "The UK importer of record does. That can be the manufacturer with its own UK VAT registration or the UK buyer, and Arca Trade Group can provide customs representation. It is agreed before the first shipment." },
+      { q: "How much does call-off stock storage cost?", a: "Pallet storage starts from £3.50 + VAT per pallet per week, with no fixed minimum. Goods-in, handling and each delivery are quoted separately, based on the products, volumes and delivery schedule." },
+      { q: "Can deliveries be weekly or on demand?", a: "Yes. Deliveries can follow a fixed weekly or fortnightly plan, or be booked when an authorised person calls off stock. Every release is recorded in Mintsoft WMS." },
+      { q: "Is call-off stock held in a bonded warehouse?", a: "No. LondraDepo is a duty-paid warehouse, so goods are cleared through UK customs before they are stored with us. Arca Trade Group can handle the clearance." },
+    ],
+    related: ["/en/uk-distribution", "/en/container-unloading", "/en/pallet-storage", "/en/uk-import-logistics", "/en/industries", "/en/uk-customs-clearance"],
+    quote: { label: "Get a call-off stock quote", service: "distribution" },
+  },
   {
     slug: "/en/industries/automotive-parts",
     tr: "/otomotiv-yedek-parca-depolama",
@@ -1236,6 +1332,6 @@ export const industryHub: EnPage = {
     { q: "Do you have case studies for my sector?", a: "LondraDepo has published case studies in food and FMCG, B2B packaging, automotive parts, upholstery materials, fashion, bulky goods and consumer electronics. Each industry section on this page links to the relevant cases." },
     { q: "How do I get a quote for my sector?", a: "Use the quote form on this page with your product type, packaging, expected pallets or cartons, monthly orders and channels. The team replies by email with a proposal for storage, handling and delivery." },
   ],
-  related: ["/en/uk-warehousing", "/en/uk-fulfilment", "/en/case-studies", "/en/uk-market-entry"],
+  related: ["/en/uk-warehousing", "/en/uk-fulfilment", "/en/case-studies", "/en/uk-market-entry", "/en/call-off-stock-uk"],
   cta: { h2: "Tell us about your products", text: "Share your sector, product type, volumes and channels, and we will propose a UK set-up." },
 };

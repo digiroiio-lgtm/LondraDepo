@@ -57,6 +57,7 @@ export const NAV: Record<ViewLocale, NavConfig> = {
         ["/en/uk-customs-clearance", "Customs Clearance Support"],
         ["/en/cargo-handling", "Cargo Handling"],
         ["/en/uk-distribution", "UK Distribution"],
+        ["/en/call-off-stock-uk", "Call-Off Stock UK"],
       ],
       company: [
         ["/en/about-us", "About Us"],
@@ -120,6 +121,7 @@ export const NAV: Record<ViewLocale, NavConfig> = {
         ["/pl/import-do-wielkiej-brytanii", "Import do Wielkiej Brytanii"],
         ["/pl/rozladunek-kontenerow", "Rozładunek kontenerów"],
         ["/pl/dystrybucja-uk", "Dystrybucja w UK"],
+        ["/pl/zapasy-buforowe-i-dostawy-uk", "Zapas buforowy i dostawy"],
         ["/pl/odprawa-celna-uk", "Odprawa celna w UK"],
       ],
       company: [

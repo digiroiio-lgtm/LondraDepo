@@ -209,7 +209,7 @@ export const plServicesB: EnPage[] = [
       { q: "Jak wyceniana jest dystrybucja w UK?", a: "Cena zależy od wolumenu przesyłki, odległości i zakresu usługi. Napisz do nas przez WhatsApp lub formularz, a przygotujemy indywidualną wycenę dystrybucji." },
       { q: "Czy oferujecie dostawy paletowe i paczkowe?", a: "Tak. Z Essex koordynujemy dostawy paletowe do hurtowni i klientów branżowych oraz paczki do klientów sklepów internetowych w całej Wielkiej Brytanii, także regularne dostawy dla stałych klientów B2B." },
     ],
-    related: ["/pl/obsluga-ladunkow", "/pl/magazyn-w-wielkiej-brytanii", "/pl/magazyn-essex", "/pl/branze/zywnosc-i-opakowania", "/pl/branze/czesci-samochodowe", "/pl/branze"],
+    related: ["/pl/obsluga-ladunkow", "/pl/magazyn-w-wielkiej-brytanii", "/pl/magazyn-essex", "/pl/branze/zywnosc-i-opakowania", "/pl/branze/czesci-samochodowe", "/pl/branze", "/pl/zapasy-buforowe-i-dostawy-uk"],
     quote: { label: "Poproś o wycenę dystrybucji", service: "distribution" },
   },
   {

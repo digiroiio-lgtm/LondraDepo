@@ -17,6 +17,7 @@ export const PAGE_SETS: ReadonlyArray<PageSet> = [
   { tr: "/ingiltere-depo-fiyatlari", en: "/en/uk-warehousing-pricing", pl: "/pl/cennik-magazynowania" },
   { tr: "/ingiltere-depo", en: "/en/uk-warehousing", pl: "/pl/magazyn-w-wielkiej-brytanii" },
   { tr: "/ingiltere-3pl", en: "/en/3pl-uk", pl: "/pl/3pl-wielka-brytania" },
+  { tr: "/ingiltere-stoktan-planli-teslimat", en: "/en/call-off-stock-uk", pl: "/pl/zapasy-buforowe-i-dostawy-uk" },
   // Same question, audience-appropriate angle: selling into the UK (TR exporters) ↔ entering the UK market.
   { tr: "/turkiyeden-ingiltereye-satis", en: "/en/uk-market-entry", pl: "/pl/wejscie-na-rynek-brytyjski" },
   // Same process from both ends: exporting from Turkey to the UK ↔ importing goods into the UK.

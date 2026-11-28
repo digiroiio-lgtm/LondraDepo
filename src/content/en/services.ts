@@ -547,7 +547,7 @@ export const servicePages: EnPage[] = [
       { q: "Can you store pallets short term?", a: "Yes. Pallet storage is charged weekly from £3.50 + VAT per pallet, so you can store for a few weeks or long term. Short stays such as cross-dock before delivery are also possible." },
       { q: "What does the weekly pallet storage price include?", a: "The rate from £3.50 + VAT per standard pallet per week covers storage only. Goods-in, container unloading, handling, pick and pack and delivery are quoted separately, based on your products and volumes." },
     ],
-    related: ["/en/uk-warehousing-pricing", "/en/container-unloading", "/en/blog/uk-pallet-storage-costs", "/en/uk-fulfilment", "/en/essex-warehouse", "/en/industries/food-packaging", "/en/blog/uk-warehousing-guide"],
+    related: ["/en/uk-warehousing-pricing", "/en/container-unloading", "/en/blog/uk-pallet-storage-costs", "/en/uk-fulfilment", "/en/essex-warehouse", "/en/industries/food-packaging", "/en/blog/uk-warehousing-guide", "/en/call-off-stock-uk"],
   },
   {
     slug: "/en/amazon-prep-uk",
@@ -766,7 +766,7 @@ export const servicePages: EnPage[] = [
       { q: "How is distribution priced?", a: "Pricing depends on shipment volume, distance and service scope. Message us on WhatsApp for a bespoke quote." },
       { q: "Do you offer pallet and parcel delivery?", a: "Yes. From Essex we coordinate pallet deliveries to wholesale and trade customers and parcel deliveries to online shoppers across the UK, including regular delivery programmes for repeat B2B customers." },
     ],
-    related: ["/en/cargo-handling", "/en/uk-warehousing", "/en/essex-warehouse", "/en/industries/food-packaging", "/en/industries/automotive-parts", "/en/industries"],
+    related: ["/en/cargo-handling", "/en/uk-warehousing", "/en/essex-warehouse", "/en/industries/food-packaging", "/en/industries/automotive-parts", "/en/industries", "/en/call-off-stock-uk"],
   },
   {
     slug: "/en/ecommerce-fulfilment",

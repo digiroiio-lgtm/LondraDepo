@@ -405,6 +405,23 @@ A: Yes. Arca Trade Group, which operates LondraDepo, arranges sea, air, road and
 Q: What do 3PL services in the UK usually include?
 A: UK 3PL services usually cover goods-in, pallet and carton storage, stock control, order picking and packing, Amazon prep, returns and UK delivery. LondraDepo provides these from Essex, with stock tracked in Mintsoft WMS.
 
+## Call-Off Stock UK: Bulk Import, Scheduled Delivery
+URL: https://www.londradepo.com/en/call-off-stock-uk
+Summary: Ship a full container to the UK, keep it as buffer stock in our Essex warehouse and deliver to your UK customer weekly or on call-off. Pallets from £3.50 + VAT.
+Short answer: Many UK customers use a pallet or two a week but have no room to receive a full container. With call-off stock, the manufacturer ships in bulk, LondraDepo holds the goods as buffer stock in Rayleigh, Essex, and we deliver to the UK customer on a fixed schedule or whenever they call off stock. The manufacturer keeps efficient container exports, and the buyer receives only what it needs. Storage starts from £3.50 + VAT per pallet per week, with no fixed minimum.
+Q: What is call-off stock?
+A: Call-off stock is stock held in a warehouse near the customer and released in agreed quantities when the customer asks for it. LondraDepo holds the stock in Essex and delivers it across the UK.
+Q: Does LondraDepo buy or sell the goods?
+A: No. LondraDepo is the logistics partner: we receive, store and deliver the goods. The sale and payment terms stay between the manufacturer and the UK buyer.
+Q: Who pays UK import VAT and duty?
+A: The UK importer of record does. That can be the manufacturer with its own UK VAT registration or the UK buyer, and Arca Trade Group can provide customs representation. It is agreed before the first shipment.
+Q: How much does call-off stock storage cost?
+A: Pallet storage starts from £3.50 + VAT per pallet per week, with no fixed minimum. Goods-in, handling and each delivery are quoted separately, based on the products, volumes and delivery schedule.
+Q: Can deliveries be weekly or on demand?
+A: Yes. Deliveries can follow a fixed weekly or fortnightly plan, or be booked when an authorised person calls off stock. Every release is recorded in Mintsoft WMS.
+Q: Is call-off stock held in a bonded warehouse?
+A: No. LondraDepo is a duty-paid warehouse, so goods are cleared through UK customs before they are stored with us. Arca Trade Group can handle the clearance.
+
 ## Automotive Parts Warehousing & Distribution UK
 URL: https://www.londradepo.com/en/industries/automotive-parts
 Summary: UK warehousing for OEM and aftermarket car parts: storage by SKU, photo-documented damage checks, protective packing and next-day delivery to dealers.
@@ -1071,6 +1088,24 @@ Q: 3PL deponuz nerede?
 A: Unit 19 Arterial Park, Rayleigh, Essex SS6 7FY: London Gateway'e 13 mil, Tilbury'ye 16 mil ve Felixstowe'a yaklaşık 62 mil.
 Q: Nakliye ve gümrüğü de ayarlayabiliyor musunuz?
 A: Evet. LondraDepo'yu işleten Arca Trade Group deniz, hava, kara ve demiryolu nakliyesi ile İngiltere gümrük beyannamesini yapar. Kendi nakliyecinizle çalışıp yalnızca depomuzu da kullanabilirsiniz.
+
+## İngiltere'de Stoktan Planlı Teslimat (Call-Off)
+URL: https://www.londradepo.com/ingiltere-stoktan-planli-teslimat
+English version: https://www.londradepo.com/en/call-off-stock-uk
+Summary: Konteyneri İngiltere'ye toplu gönderin, Essex depomuzda tampon stok olarak tutalım, İngiliz müşterinize haftalık veya talep üzerine teslim edelim. Palet £3,50 + KDV.
+Short answer: Birçok İngiliz müşteri haftada bir iki palet ürün kullanır ama bir konteyneri teslim alacak yeri yoktur. Call-off stok modelinde üretici malı toplu gönderir, LondraDepo ürünü Rayleigh, Essex'teki depoda tampon stok olarak tutar ve İngiliz müşteriye sabit bir planla ya da müşteri istedikçe teslim eder. Üretici konteyner bazında verimli ihracatını sürdürür, alıcı yalnızca ihtiyacı kadar ürün teslim alır. Palet depolama haftalık £3,50 + KDV'den başlar; asgari hacim yoktur.
+Q: Call-off stok nedir?
+A: Call-off stok, müşteriye yakın bir depoda tutulan ve müşteri istedikçe anlaşılan miktarlarda teslim edilen stoktur. LondraDepo stoğu Essex'te tutar ve İngiltere geneline teslim eder.
+Q: LondraDepo ürünü alıp satıyor mu?
+A: Hayır. LondraDepo lojistik ortağıdır: ürünü kabul eder, depolar ve teslim eder. Satış ve ödeme koşulları üretici ile İngiliz alıcı arasında kalır.
+Q: Call-off modelinde ithalat KDV'sini ve gümrük vergisini kim öder?
+A: İngiltere'deki ithalatçı öder. Bu, kendi İngiltere KDV kaydı olan üretici veya İngiliz alıcı olabilir; Arca Trade Group gümrük temsilciliği sağlayabilir. İlk sevkiyattan önce yazılı olarak belirlenir.
+Q: Call-off stok depolaması ne kadar tutar?
+A: Palet depolama haftalık £3,50 + KDV'den başlar ve asgari hacim yoktur. Mal kabul, elleçleme ve her teslimat ürüne, hacme ve teslimat takvimine göre ayrıca fiyatlandırılır.
+Q: Teslimatlar haftalık veya talebe göre olabilir mi?
+A: Evet. Teslimatlar sabit haftalık veya iki haftalık bir plana göre yapılabilir ya da yetkili kişi stok çağırdığında planlanabilir. Her çıkış Mintsoft WMS'te kaydedilir.
+Q: Call-off stok antrepoda mı tutuluyor?
+A: Hayır. LondraDepo gümrüğü ödenmiş mal deposudur; ürünler depomuza gelmeden önce İngiltere'de gümrüklenir. Gümrüklemeyi Arca Trade Group yapabilir.
 
 ## Londra Depo: Doğu Londra'ya 40 Dakika, Essex
 URL: https://www.londradepo.com/londra-depo
@@ -2616,6 +2651,24 @@ Q: Czy dostawa do centrum Amazon w UK wymaga rezerwacji terminu?
 A: Tak. Według brytyjskich wytycznych Amazon Freight dostawy do centrów Amazon odbywają się w umówionych terminach, a ładunki poza oknem lub niezgodne z rezerwacją mogą zostać odrzucone i obciążone kosztem ponownej dostawy. Przygotowujemy towar w Essex zgodnie z planem wysyłki przed odbiorem.
 Q: Jak daleko jest LondraDepo od Amazon LCY2 Tilbury?
 A: Z magazynu w Unit 19 Arterial Park, Rayleigh, Essex SS6 7FY do obiektu Amazon LCY2 w Tilbury jest około 16 mil (25 km) drogą, czyli około 20 minut autem, według routingu drogowego z listopada 2026.
+
+## Zapas buforowy w UK i dostawy według harmonogramu
+URL: https://www.londradepo.com/pl/zapasy-buforowe-i-dostawy-uk
+English version: https://www.londradepo.com/en/call-off-stock-uk
+Summary: Wyślij pełny kontener do UK, a my przechowamy towar jako zapas buforowy w Essex i dostarczymy go klientowi co tydzień lub na żądanie. Palety od 3,50 £ + VAT.
+Short answer: Wielu brytyjskich klientów zużywa jedną lub dwie palety tygodniowo, ale nie ma miejsca na przyjęcie całego kontenera. W modelu call-off stock producent wysyła towar hurtowo, LondraDepo przechowuje go jako zapas buforowy w Rayleigh w Essex, a my dostarczamy go klientowi w UK według stałego harmonogramu lub na jego wezwanie.
+Q: Czym jest call-off stock?
+A: Call-off stock to zapas przechowywany w magazynie blisko klienta i wydawany w uzgodnionych ilościach na jego wezwanie. LondraDepo przechowuje zapas w Essex i dostarcza go w całej Wielkiej Brytanii.
+Q: Czy LondraDepo kupuje lub sprzedaje towar?
+A: Nie. LondraDepo jest partnerem logistycznym: przyjmujemy, składujemy i dostarczamy towar. Warunki sprzedaży i płatności pozostają między producentem a odbiorcą w UK.
+Q: Kto płaci VAT importowy i cło w UK?
+A: Płaci je importer w UK. Może to być producent z własną rejestracją VAT w UK albo brytyjski odbiorca, a Arca Trade Group może zapewnić przedstawicielstwo celne. Ustala się to przed pierwszą wysyłką.
+Q: Ile kosztuje składowanie zapasu buforowego?
+A: Składowanie palet zaczyna się od 3,50 £ + VAT za paletę tygodniowo, bez stałego minimum. Przyjęcie towaru, obsługa i każda dostawa są wyceniane osobno, zależnie od produktów, wolumenu i harmonogramu.
+Q: Czy dostawy mogą być cotygodniowe lub na żądanie?
+A: Tak. Dostawy mogą odbywać się według stałego planu tygodniowego lub dwutygodniowego albo być zlecane, gdy upoważniona osoba zgłosi zapotrzebowanie. Każde wydanie jest rejestrowane w Mintsoft WMS.
+Q: Czy zapas buforowy jest przechowywany w składzie celnym?
+A: Nie. LondraDepo to magazyn towaru oclonego, więc towar przechodzi odprawę celną w UK, zanim trafi do nas. Odprawę może przeprowadzić Arca Trade Group.
 
 ## Studia przypadków: magazyn i fulfillment w UK
 URL: https://www.londradepo.com/pl/studia-przypadkow

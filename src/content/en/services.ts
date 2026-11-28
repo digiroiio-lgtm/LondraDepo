@@ -52,14 +52,14 @@ export const servicePages: EnPage[] = [
     tr: "/ingiltere-depo",
     kind: "service",
     serviceType: "Warehousing",
-    title: "UK Warehousing Services: Essex, near London",
+    title: "UK Warehousing Services near London | Essex 3PL",
     description:
       "UK warehousing from Essex: goods-in, pallet and carton storage, Mintsoft WMS stock control, fulfilment and UK distribution. Pallets from £3.50 + VAT a week.",
     label: "UK Warehousing",
     eyebrow: "Essex, near London",
-    h1: "UK Warehousing and Storage Services",
+    h1: "UK Warehousing Services: Storage, Fulfilment and Distribution",
     lead:
-      "LondraDepo provides UK warehousing from Rayleigh, Essex: we receive your goods, store them on pallets or as cartons, keep live stock records in Mintsoft WMS, fulfil orders and distribute across the UK. It gives overseas businesses a ready-made UK warehouse without the cost of leasing a site or employing staff.",
+      "LondraDepo provides UK warehousing services from Rayleigh, Essex: we receive your goods, store them on pallets or as cartons, keep live stock records in Mintsoft WMS, fulfil orders and distribute across the UK. It gives overseas businesses a ready-made UK warehouse without the cost of leasing a site or employing staff.",
     facts: [
       "Goods-in, pallet storage, carton storage, stock control, order fulfilment, UK distribution",
       "Pallet storage from £3.50 + VAT per pallet per week",
@@ -463,13 +463,13 @@ export const servicePages: EnPage[] = [
     modified: "2026-11-10",
     kind: "service",
     serviceType: "Fulfilment",
-    title: "UK Fulfilment Services for Importing Brands",
+    title: "Fulfilment Services UK for Importing Brands",
     description:
       "UK fulfilment services from Essex: order picking, branded packing, Amazon FBA prep, Shopify and Etsy order handling, returns management and regular stock reporting.",
     label: "UK Fulfilment",
-    h1: "UK Fulfilment Services for Importing Brands",
+    h1: "Fulfilment Services UK for Importing Brands",
     lead:
-      "UK fulfilment means storing your stock in a UK warehouse and having each customer order picked, packed and shipped for you. LondraDepo runs fulfilment from its Essex operation for brands that import into the UK, covering picking, packing, Amazon FBA prep, multichannel orders and returns.",
+      "UK fulfilment means storing your stock in a UK warehouse and having each customer order picked, packed and shipped for you. LondraDepo provides fulfilment services in the UK from its Essex operation for brands that import into the UK, covering picking, packing, Amazon FBA prep, multichannel orders and returns.",
     facts: [
       "No fixed minimum stock requirement",
       "Shopify orders and Amazon FBM can be fulfilled from the same warehouse",
@@ -507,9 +507,9 @@ export const servicePages: EnPage[] = [
     description:
       "Pallet storage in Essex near London from £3.50 + VAT per pallet per week: container and part-load receiving, secure storage, weekly reports and B2B dispatch.",
     label: "Pallet Storage",
-    h1: "UK Pallet Storage in Essex",
+    h1: "Pallet Storage UK: Essex Warehouse near London",
     lead:
-      "LondraDepo offers pallet storage in Rayleigh, Essex, near London, from £3.50 + VAT per standard pallet per week. We receive container and part-load deliveries, store pallets in a locked, CCTV-monitored warehouse with controlled access, report stock movements and prepare pallets for B2B distribution.",
+      "LondraDepo offers pallet storage in the UK from Rayleigh, Essex, near London, from £3.50 + VAT per standard pallet per week. We receive container and part-load deliveries, store pallets in a locked, CCTV-monitored warehouse with controlled access, report stock movements and prepare pallets for B2B distribution.",
     facts: [
       "From £3.50 + VAT per standard pallet per week",
       "4 weeks, storage only: 5 pallets £70, 10 pallets £140, 20 pallets £280 (+ VAT)",
@@ -545,6 +545,7 @@ export const servicePages: EnPage[] = [
       { q: "What is the minimum number of pallets?", a: "There is no fixed minimum. We work with everyone from small businesses to large-volume importers." },
       { q: "How are pallets kept secure?", a: "The warehouse is locked with controlled access. Every pallet is numbered and tracked in the stock system." },
       { q: "Can you store pallets short term?", a: "Yes. Pallet storage is charged weekly from £3.50 + VAT per pallet, so you can store for a few weeks or long term. Short stays such as cross-dock before delivery are also possible." },
+      { q: "What does the weekly pallet storage price include?", a: "The rate from £3.50 + VAT per standard pallet per week covers storage only. Goods-in, container unloading, handling, pick and pack and delivery are quoted separately, based on your products and volumes." },
     ],
     related: ["/en/uk-warehousing-pricing", "/en/container-unloading", "/en/blog/uk-pallet-storage-costs", "/en/uk-fulfilment", "/en/essex-warehouse", "/en/industries/food-packaging", "/en/blog/uk-warehousing-guide"],
   },
@@ -554,11 +555,11 @@ export const servicePages: EnPage[] = [
     kind: "service",
     serviceType: "Amazon FBA prep",
     modified: "2026-11-10",
-    title: "Amazon FBA Prep UK: Essex Prep Centre, No Minimum",
+    title: "Amazon Prep Centre UK: FBA Prep in Essex, No Minimum",
     description:
       "Amazon FBA prep in Essex: FNSKU labelling, checks, packing and parcel or pallet delivery to Amazon UK, 16 miles from Amazon LCY2 Tilbury. No fixed minimum.",
-    label: "Amazon Prep UK",
-    h1: "Amazon Prep UK: FBA Prep Service",
+    label: "Amazon Prep Centre UK",
+    h1: "Amazon Prep Centre UK: FBA Prep Service in Essex",
     lead:
       "Amazon FBA prep is the labelling, packing and preparation work products need before Amazon will accept them into its fulfilment centres. LondraDepo does this from Essex: FNSKU labelling, compliance checks, packing, shipment plan support and delivery to the Amazon UK fulfilment centre Amazon assigns. " + NOT_PARTNER_AMAZON,
     facts: [
@@ -811,7 +812,7 @@ export const servicePages: EnPage[] = [
     modified: "2026-11-10",
     kind: "service",
     serviceType: "Amazon fulfilment",
-    title: "Amazon Fulfilment UK: FBA Prep, FBM, Storage",
+    title: "Amazon Fulfilment UK: FBA or FBM from Essex",
     description:
       "Amazon fulfilment in the UK: FBA prep, FBM order fulfilment, storage from £3.50 + VAT per pallet a week, Mintsoft WMS and customs via Arca. No fixed minimum.",
     label: "Amazon Fulfilment UK",

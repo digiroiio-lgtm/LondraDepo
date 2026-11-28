@@ -66,10 +66,10 @@ A: Product type, estimated pallets or cartons, monthly order volume, the service
 Q: Is there a monthly minimum charge?
 A: LondraDepo has no fixed minimum volume, and you can start with a single trial pallet. Storage starts from £3.50 + VAT per pallet per week; other services are quoted for your products and order profile.
 
-## UK Warehousing Services: Essex, near London
+## UK Warehousing Services near London | Essex 3PL
 URL: https://www.londradepo.com/en/uk-warehousing
 Summary: UK warehousing from Essex: goods-in, pallet and carton storage, Mintsoft WMS stock control, fulfilment and UK distribution. Pallets from £3.50 + VAT a week.
-Short answer: LondraDepo provides UK warehousing from Rayleigh, Essex: we receive your goods, store them on pallets or as cartons, keep live stock records in Mintsoft WMS, fulfil orders and distribute across the UK. It gives overseas businesses a ready-made UK warehouse without the cost of leasing a site or employing staff.
+Short answer: LondraDepo provides UK warehousing services from Rayleigh, Essex: we receive your goods, store them on pallets or as cartons, keep live stock records in Mintsoft WMS, fulfil orders and distribute across the UK. It gives overseas businesses a ready-made UK warehouse without the cost of leasing a site or employing staff.
 Q: Which areas does your UK warehouse serve?
 A: Our Essex warehouse serves the whole of the UK. We coordinate delivery to London, Birmingham, Manchester and every other region.
 Q: Can I ship goods from overseas straight to your warehouse?
@@ -168,10 +168,10 @@ A: Amazon sets FBM delivery time and performance requirements. Fulfilling from a
 Q: Can the same stock serve Amazon FBM and my other channels?
 A: Yes. Stock held at LondraDepo can fulfil Amazon FBM orders, be prepared and sent into Amazon FBA, and serve Shopify or wholesale orders, all from one UK warehouse in Essex.
 
-## UK Fulfilment Services for Importing Brands
+## Fulfilment Services UK for Importing Brands
 URL: https://www.londradepo.com/en/uk-fulfilment
 Summary: UK fulfilment services from Essex: order picking, branded packing, Amazon FBA prep, Shopify and Etsy order handling, returns management and regular stock reporting.
-Short answer: UK fulfilment means storing your stock in a UK warehouse and having each customer order picked, packed and shipped for you. LondraDepo runs fulfilment from its Essex operation for brands that import into the UK, covering picking, packing, Amazon FBA prep, multichannel orders and returns.
+Short answer: UK fulfilment means storing your stock in a UK warehouse and having each customer order picked, packed and shipped for you. LondraDepo provides fulfilment services in the UK from its Essex operation for brands that import into the UK, covering picking, packing, Amazon FBA prep, multichannel orders and returns.
 Q: Can I manage Shopify and Amazon orders from one UK warehouse?
 A: Shopify orders and Amazon FBM shipments can be prepared from the same warehouse where the right integration and stock management are in place. Amazon FBA prep, labelling and dispatch to Amazon is a separate process. Suitability is confirmed against your products and operating needs.
 Q: What is UK fulfilment?
@@ -186,7 +186,7 @@ A: Storage starts from £3.50 + VAT per pallet per week. Goods-in, pick and pack
 ## Pallet Storage UK – From £3.50 per Pallet per Week
 URL: https://www.londradepo.com/en/pallet-storage
 Summary: Pallet storage in Essex near London from £3.50 + VAT per pallet per week: container and part-load receiving, secure storage, weekly reports and B2B dispatch.
-Short answer: LondraDepo offers pallet storage in Rayleigh, Essex, near London, from £3.50 + VAT per standard pallet per week. We receive container and part-load deliveries, store pallets in a locked, CCTV-monitored warehouse with controlled access, report stock movements and prepare pallets for B2B distribution.
+Short answer: LondraDepo offers pallet storage in the UK from Rayleigh, Essex, near London, from £3.50 + VAT per standard pallet per week. We receive container and part-load deliveries, store pallets in a locked, CCTV-monitored warehouse with controlled access, report stock movements and prepare pallets for B2B distribution.
 Q: How do I get a quote for 10 pallets in the UK?
 A: Share the number of pallets, pallet dimensions and approximate weights, product type, storage duration, delivery location and any goods-in or distribution services you need. Pricing is set according to the scope of the operation.
 Q: How is UK pallet storage priced?
@@ -197,8 +197,10 @@ Q: How are pallets kept secure?
 A: The warehouse is locked with controlled access. Every pallet is numbered and tracked in the stock system.
 Q: Can you store pallets short term?
 A: Yes. Pallet storage is charged weekly from £3.50 + VAT per pallet, so you can store for a few weeks or long term. Short stays such as cross-dock before delivery are also possible.
+Q: What does the weekly pallet storage price include?
+A: The rate from £3.50 + VAT per standard pallet per week covers storage only. Goods-in, container unloading, handling, pick and pack and delivery are quoted separately, based on your products and volumes.
 
-## Amazon FBA Prep UK: Essex Prep Centre, No Minimum
+## Amazon Prep Centre UK: FBA Prep in Essex, No Minimum
 URL: https://www.londradepo.com/en/amazon-prep-uk
 Summary: Amazon FBA prep in Essex: FNSKU labelling, checks, packing and parcel or pallet delivery to Amazon UK, 16 miles from Amazon LCY2 Tilbury. No fixed minimum.
 Short answer: Amazon FBA prep is the labelling, packing and preparation work products need before Amazon will accept them into its fulfilment centres. LondraDepo does this from Essex: FNSKU labelling, compliance checks, packing, shipment plan support and delivery to the Amazon UK fulfilment centre Amazon assigns. LondraDepo is not an official Amazon partner. We provide independent storage and fulfilment for businesses that sell on Amazon.
@@ -294,7 +296,7 @@ A: Storage starts from £3.50 + VAT per pallet per week. Pick and pack, packagin
 Q: Do I need my own UK company for ecommerce fulfilment?
 A: Not necessarily. Many overseas sellers hold stock in a UK warehouse and sell to UK customers with their existing company and a GB EORI number. Take tax advice on the right structure for your business.
 
-## Amazon Fulfilment UK: FBA Prep, FBM, Storage
+## Amazon Fulfilment UK: FBA or FBM from Essex
 URL: https://www.londradepo.com/en/amazon-fulfilment-uk
 Summary: Amazon fulfilment in the UK: FBA prep, FBM order fulfilment, storage from £3.50 + VAT per pallet a week, Mintsoft WMS and customs via Arca. No fixed minimum.
 Short answer: Amazon sellers in the UK use one of two models: Fulfilled by Amazon (FBA), where Amazon stores and ships your stock, or Fulfilled by Merchant (FBM), where you or your warehouse ship each order. LondraDepo supports businesses selling on Amazon in the UK with stock storage, order handling, pick and pack, labelling and UK delivery from Essex.
@@ -400,6 +402,8 @@ Q: Where is your 3PL warehouse?
 A: Unit 19 Arterial Park, Rayleigh, Essex SS6 7FY: 13 miles from London Gateway, 16 miles from Tilbury and about 62 miles from Felixstowe.
 Q: Can you also arrange freight and customs?
 A: Yes. Arca Trade Group, which operates LondraDepo, arranges sea, air, road and rail freight and UK customs declarations. You can also use your own forwarder and only our warehouse.
+Q: What do 3PL services in the UK usually include?
+A: UK 3PL services usually cover goods-in, pallet and carton storage, stock control, order picking and packing, Amazon prep, returns and UK delivery. LondraDepo provides these from Essex, with stock tracked in Mintsoft WMS.
 
 ## Automotive Parts Warehousing & Distribution UK
 URL: https://www.londradepo.com/en/industries/automotive-parts
@@ -620,7 +624,7 @@ A: Warehousing is receiving and storing stock. Fulfilment adds what happens when
 ## Amazon Prep UK: A Step-by-Step Guide
 URL: https://www.londradepo.com/en/blog/amazon-prep-uk-guide
 Summary: A step-by-step guide to Amazon FBA prep in the UK: why prep is needed, the seven stages from goods-in to Amazon check-in, FNSKU labelling and how prep is priced.
-Short answer: Amazon prep is the set of preparation steps your products must complete before an Amazon UK fulfilment centre will accept them: inspection, FNSKU labelling, packaging checks, shipment planning and delivery. Working with a UK prep partner reduces the risk of rejected or surcharged inbound shipments. FBA (Fulfilment by Amazon) is the programme in which Amazon stores your products, prepares orders and delivers them once you have sent stock to its warehouse. FBA listings are generally eligible for Prime and benefit from Amazon's logistics network.
+Short answer: Amazon prep is the set of preparation steps your products must complete before an Amazon UK fulfilment centre will accept them: inspection, FNSKU labelling, packaging checks, shipment planning and delivery. Working with a UK prep partner reduces the risk of rejected or surcharged inbound shipments.
 Q: Can I send stock straight from my factory to your UK warehouse?
 A: Yes. You can ship products directly to our UK warehouse; we carry out the prep and send the stock on to Amazon.
 Q: Do you help with shipment plans?
@@ -786,9 +790,9 @@ A: LondraDepo counts every delivery against the packing list when it arrives in 
 Q: Is there a free packing list template?
 A: Yes. LondraDepo offers a free packing list template as a CSV file with columns for carton number, SKU, units, dimensions, weights, pallet number and country of origin. It opens in Excel or Google Sheets, in English or Turkish.
 
-## Bonded Warehouse Meaning: Customs vs Duty-Paid
+## Bonded Warehouse UK: Meaning and Duty-Paid Option
 URL: https://www.londradepo.com/en/blog/bonded-warehouse-vs-duty-paid-storage
-Summary: What a bonded (customs) warehouse is, when duty and import VAT are suspended, and when duty-paid storage with postponed VAT accounting is the simpler choice.
+Summary: What a bonded warehouse in the UK is, when duty and import VAT are suspended, and why duty-paid storage with postponed VAT is often simpler for importers.
 Short answer: A bonded warehouse, which HMRC calls a customs warehouse, is an HMRC-authorised site where imported goods can be stored with customs duty and import VAT suspended; the charges fall due only when the goods are released into free circulation in the UK, and goods re-exported from the warehouse may never pay them.
 Q: What does bonded warehouse mean?
 A: A bonded warehouse, called a customs warehouse by HMRC, is an authorised site where imported goods are stored with customs duty and import VAT suspended. The charges become due when the goods are released into free circulation in the UK, and are not due if the goods are re-exported.

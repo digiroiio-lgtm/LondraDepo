@@ -5,6 +5,7 @@ const DATE = { published: "2026-11-10", modified: "2026-11-10" };
 export const blogPages: EnPage[] = [
   {
     slug: "/en/blog/uk-warehousing-guide",
+    serviceBox: { href: "/en/uk-warehousing", title: "Looking for UK warehousing services?", text: "We receive, store, fulfil and deliver goods from our Essex warehouse, 13 miles from London Gateway and about 37 miles from central London.", cta: "UK warehousing services" },
     tr: "/blog/ingiltere-depo-rehberi",
     kind: "article",
     parent: "/en/blog",
@@ -71,6 +72,7 @@ export const blogPages: EnPage[] = [
   },
   {
     slug: "/en/blog/what-is-uk-fulfilment",
+    serviceBox: { href: "/en/uk-fulfilment", title: "Looking for fulfilment services in the UK?", text: "We pick, pack and ship online, retail and B2B orders from stock held in our Essex warehouse, tracked in Mintsoft WMS.", cta: "Fulfilment services UK" },
     tr: "/blog/ingiltere-fulfillment-nedir",
     kind: "article",
     parent: "/en/blog",
@@ -125,6 +127,7 @@ export const blogPages: EnPage[] = [
   },
   {
     slug: "/en/blog/amazon-prep-uk-guide",
+    serviceBox: { href: "/en/amazon-prep-uk", title: "Need an Amazon prep centre in the UK?", text: "We label, check, pack and deliver FBA stock from Essex, about 16 miles from Amazon LCY2, with no fixed minimum.", cta: "Amazon prep centre UK" },
     tr: "/blog/amazon-prep-uk-rehberi",
     kind: "article",
     parent: "/en/blog",
@@ -190,6 +193,7 @@ export const blogPages: EnPage[] = [
   },
   {
     slug: "/en/blog/what-is-a-uk-transit-warehouse",
+    serviceBox: { href: "/en/uk-warehousing", title: "Need a UK warehouse for incoming goods?", text: "We receive containers and pallets after customs clearance, store them in Essex and deliver across the UK.", cta: "UK warehousing services" },
     tr: "/blog/ingiltere-ara-depo-nedir",
     kind: "article",
     parent: "/en/blog",
@@ -311,6 +315,7 @@ export const blogPages: EnPage[] = [
   },
   {
     slug: "/en/blog/uk-pallet-storage-costs",
+    serviceBox: { href: "/en/pallet-storage", title: "Need pallet storage in the UK?", text: "LondraDepo stores pallets in Rayleigh, Essex, near London, from £3.50 + VAT per pallet per week, with no fixed minimum.", cta: "Pallet storage UK" },
     tr: "/blog/ingiltere-palet-depolama-maliyetleri",
     kind: "article",
     parent: "/en/blog",
@@ -507,6 +512,7 @@ export const blogPages: EnPage[] = [
   },
   {
     slug: "/en/blog/how-to-choose-a-uk-3pl",
+    serviceBox: { href: "/en/3pl-uk", title: "Comparing 3PL providers in the UK?", text: "See what LondraDepo covers as an Essex 3PL: goods-in, storage, fulfilment, Amazon prep and UK delivery, with stock in Mintsoft WMS.", cta: "3PL UK" },
     tr: "/blog/ingiltere-3pl-nasil-secilir",
     kind: "article",
     parent: "/en/blog",
@@ -640,6 +646,7 @@ export const blogPages: EnPage[] = [
   },
   {
     slug: "/en/blog/amazon-fba-prep-checklist",
+    serviceBox: { href: "/en/amazon-prep-uk", title: "Want the prep done for you?", text: "Our Essex prep centre handles FNSKU labelling, checks, packing and delivery to Amazon UK fulfilment centres, with no fixed minimum.", cta: "Amazon prep centre UK" },
     tr: "/blog/amazon-fba-prep-kontrol-listesi",
     kind: "article",
     parent: "/en/blog",
@@ -874,13 +881,14 @@ export const blogPages: EnPage[] = [
   },
   {
     slug: "/en/blog/bonded-warehouse-vs-duty-paid-storage",
+    serviceBox: { href: "/en/uk-customs-clearance", title: "Storing goods after UK customs?", text: "LondraDepo is a duty-paid warehouse, not a bonded one. Arca Trade Group can handle UK customs clearance, then we store and deliver your goods.", cta: "UK customs clearance" },
     tr: "/blog/antrepo-nedir",
     kind: "article",
     parent: "/en/blog",
     article: { published: "2026-11-11", modified: "2026-11-11", readMins: 6, section: "Importing" },
-    title: "Bonded Warehouse Meaning: Customs vs Duty-Paid",
+    title: "Bonded Warehouse UK: Meaning and Duty-Paid Option",
     description:
-      "What a bonded (customs) warehouse is, when duty and import VAT are suspended, and when duty-paid storage with postponed VAT accounting is the simpler choice.",
+      "What a bonded warehouse in the UK is, when duty and import VAT are suspended, and why duty-paid storage with postponed VAT is often simpler for importers.",
     label: "Bonded Warehouse vs Duty-Paid Storage",
     h1: "Bonded Warehouse Meaning: Customs Warehouse or Duty-Paid Storage?",
     lead:

@@ -19,7 +19,7 @@ export const de: UiStrings = {
   cookie: {
     aria: "Hinweis zu Cookies",
     title: "Cookies",
-    body: "Wir verwenden nur wenige Cookies, damit die Website richtig funktioniert und wir verstehen, wie sie genutzt wird. Analyse- und Marketing-Cookies aktivieren wir nur mit Ihrer Einwilligung. Sie können Ihre Auswahl jederzeit über „Cookie-Einstellungen“ in der Fußzeile ändern. Weitere Informationen finden Sie in unserer",
+    body: "Wir verwenden nur wenige Cookies, damit die Website richtig funktioniert und wir verstehen, wie sie genutzt wird. Analyse-Cookies aktivieren wir nur mit Ihrer Einwilligung; Marketing-Cookies verwenden wir nicht. Sie können Ihre Auswahl jederzeit über „Cookie-Einstellungen“ in der Fußzeile ändern. Weitere Informationen finden Sie in unserer",
     cookie: "Cookie-Richtlinie",
     cookieHref: "/de/cookie-richtlinie",
     and: "und",

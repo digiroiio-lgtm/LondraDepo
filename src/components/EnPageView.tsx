@@ -22,6 +22,9 @@ const HERO_BOOKING = new Set([
   "/en/amazon-prep-uk", "/en/amazon-fulfilment-uk", "/en/amazon-seller-warehousing-uk", "/en/amazon-uk-fulfilment-centres", "/en/shopify-fulfilment-uk",
 ]);
 
+/** Pages that show the warehouse photo gallery besides the home pages (EN slugs; PL/DE equivalents follow via enKey). */
+const GALLERY = new Set(["/en/about-us", "/pl/magazyn-dla-polskich-firm", "/de/lager-fuer-deutsche-unternehmen"]);
+
 /** Pages that state the published pallet rate get it as Offer markup on their Service node. */
 const PALLET_OFFER = new Set([
   "/en/uk-warehousing-pricing", "/en/pallet-storage", "/en/uk-warehousing", "/en/3pl-uk", "/en/uk-storage-cost-calculator",
@@ -446,7 +449,7 @@ export default function EnPageView({ page }: { page: EnPage }) {
           </div>
         </div>
 
-        {lang === "en" && (page.kind === "home" || page.slug === "/en/about-us") && <WarehouseGallery lang="en" />}
+        {(page.kind === "home" || GALLERY.has(enKey(page.slug))) && <WarehouseGallery lang={lang} />}
 
         <div className="max-w-6xl mx-auto px-4 py-12">
           {page.note && <p className="mb-10 rounded-xl border border-amber-200 bg-amber-50 p-5 text-sm text-amber-900">{page.note}</p>}
